@@ -16,15 +16,6 @@
 Before you begin integrating with this SDK, follow these steps: 
 
 ## Step 0: Partner Intake Form
-<!-- 
-1. Navigate to the [Adobe Developer Console](https://developer.adobe.com/console). 
-2. Login with a T1 (personal) account.
-3. Choose create project.
-4. Click add API. 
-5. Choose any Library which offers Android integration because it provides PKCE flow. 
-6. Client ID will be created
-7. **Share the client ID with an Adobe employee**. 
-8. **Share redirect URL you'd like to specify with an Adobe employee**.  -->
 
 Make sure you fill out this [Partner Intake Form]( https://forms.office.com/r/JzEsxvM3jv).
 

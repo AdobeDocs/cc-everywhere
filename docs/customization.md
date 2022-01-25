@@ -13,7 +13,7 @@
 # 
 
 ## Locale
-The CCX SDK lets you customize the locale during initialization. The default value is 'en_US'. 
+The CC Everywhere SDK lets you customize the locale during initialization. The default value is 'en_US'. 
 | Locale | Description
 | :-- | :--
 | 'en_US' | English 

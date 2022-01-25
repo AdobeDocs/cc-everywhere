@@ -1,4 +1,4 @@
-# Overview
+# CC Everywhere SDK
 
 ## Table of Contents
 * [Overview](README.md)
@@ -12,7 +12,7 @@
 * [Customization](docs/customization.md)
 #
 
-CCX SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CCX capabilities to all applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. 
+CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CC Express (CCX) capabilities to all applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. 
 
 This SDK will allow you to integrate a CCX editor with your website. It provides the following components: 
 * CCX Editor
@@ -39,6 +39,6 @@ When a user is done within the editor, they can click the **Save** button. The e
 ##  Get Started
 1. Follow the steps in the [configuration page](docs/configuration.md) to sign up for an API key and register redirect URI patterns. 
 
-2. Get started with the CCX SDK by following the steps in our [Quick Start](docs/quickstart.md) guide.
+2. Get started with the CC Everywhere SDK by following the steps in our [Quick Start](docs/quickstart.md) guide.
 
 

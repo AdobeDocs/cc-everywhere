@@ -12,7 +12,7 @@
 * [Customization](customization.md)
 #
 
-CCX SDK lets you launch a CCX editor within your own application. This guide explains how to start using the SDK in your own app.
+CC Everywhere SDK lets you launch a CCX editor within your own application. This guide explains how to start using the SDK in your own app.
 
 > [Step 1: Get an API Key](#step-1-sign-up-for-api-key)
 
@@ -81,7 +81,7 @@ This method returns a `CCEverywhere` object, with two methods:
 These methods are the ones you will use to create a new project or edit an existing one in the CCX editor. To learn more about these methods, visit the [API references](api_ref.md) page.
 
 ## Next Steps: Explore the SDK
-The CCX SDK can be initialized with a customized locale. The [customization](customization.md) documentation along with the [API references](api_ref.md) can help you start working with the SDK in a way that best suits your needs.
+The CC Everywhere SDK can be initialized with a customized locale. The [customization](customization.md) documentation along with the [API references](api_ref.md) can help you start working with the SDK in a way that best suits your needs.
 
 Read more about: 
 * How to [create a project](create_project.md) in the editor 

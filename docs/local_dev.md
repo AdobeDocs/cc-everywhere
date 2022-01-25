@@ -12,7 +12,7 @@
 * [Customization](customization.md)
 #
 
-The CCX SDK expects requests to come from: 
+The CC Everywhere SDK expects requests to come from: 
 * express.adobe.com
 * localhost
 * a domain that matches specified redirect URIs 
