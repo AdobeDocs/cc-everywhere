@@ -14,8 +14,8 @@
 
 CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CC Express (CCX) capabilities to all applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. 
 
-This SDK will allow you to integrate a CCX editor with your website. It provides the following components: 
-* CCX Editor
+This SDK allows you to integrate CCX components within your website. It provides the following components: 
+* CCX Editor Component
   * [Create Project API](docs/create_project.md):
     * Launch a CCX editor to create a new design
     * Save design to CCX and my app
