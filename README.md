@@ -1,42 +1,44 @@
-# Adobe I/O Documentation Template
+# Overview
 
-This is a site template built with the [Adobe I/O Theme](https://github.com/adobe/aio-theme).
+## Table of Contents
+* [Overview](README.md)
+* [Configuration](docs/configuration.md)
+* [Local Development](docs/local_dev.md)
+* [Quick Start](docs/quickstart.md)
+* CCX Editor Component
+  * [Create Project API](docs/create_project.md)
+  * [Open Project API](docs/edit_project.md)
+* [API References](docs/api_ref.md)
+* [Customization](docs/customization.md)
+#
 
-View the [demo](https://adobedocs.github.io/dev-site-documentation-template/) running on Github Pages.  
+CCX SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CCX capabilities to all applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. 
 
-## Where to ask for help
+This SDK will allow you to integrate a CCX editor with your website. It provides the following components: 
+* CCX Editor
+  * [Create Project API](docs/create_project.md):
+    * Launch a CCX editor to create a new design
+    * Save design to CCX and my app
+  * [Open Project API](docs/edit_project.md):
+    * Launch a CCX editor to edit an old design
+    * Save edited design to CCX and my app
 
-The slack channel #adobeio-onsite-onboarding is our main point of contact for help. Feel free to join the channel and ask any questions. 
 
-## How to develop
+## What is CCX?
+[Creative Cloud Express](https://www.adobe.com/express/)  (CCX) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, CCX users can create standout content from wherever they work. 
 
-For local development, simply use :
-```
-$ npm install
-$ npm run dev
-```
 
-For the documentation developer, please read these sections on how to:
-- [Arrange the structure content of your docs](https://github.com/adobe/aio-theme#content-structure)
-- [Linking to pages](https://github.com/adobe/aio-theme#links)
-- [Using assets](https://github.com/adobe/aio-theme-aio#assets)
-- [Setting Global Navigation](https://github.com/adobe/aio-theme#global-navigation)
-- [Setting Side Navigation](https://github.com/adobe/aio-theme#side-navigation)
-- [Using content blocks](https://github.com/adobe/aio-theme#jsx-blocks)
-- [Notes on using Markdown](https://github.com/adobe/aio-theme#writing-enhanced-markdown)
+## How will users experience the CCX editor component
+Once you embed the CCX editor to your own app using the SDK, users can click on a button and launch the CCX editor. If the user is not already logged into CCX, they must log in or create an account. Now, users can access CCX's huge template and asset library and begin designing a new project. 
 
-For more in-depth [instructions](https://github.com/adobe/aio-theme#getting-started).
+When a user is done within the editor, they can click the **Save** button. The editor closes and the project is saved in CCX inside a folder with the 'appName' that the SDK is initialized with.
 
-## How to deploy
 
-For any team that wishes to deploy to the adobe.io and stage.adobe.io website, they must be in contact with the dev-site team. Teams will be given a path that will follow the pattern `adobe.io/{product}/`. This will allow doc developers to setup their subpaths to look something like:
-```
-adobe.io/{product}/docs
-adobe.io/{product}/community
-adobe.io/{product}/community/code_of_conduct
-adobe.io/{product}/community/contribute
-```
 
-### Launching a deploy
 
-You can deploy using the GitHub actions deploy workflow see [deploy instructions](https://github.com/adobe/aio-theme#deploy-to-azure-storage-static-websites).
+##  Get Started
+1. Follow the steps in the [configuration page](docs/configuration.md) to sign up for an API key and register redirect URI patterns. 
+
+2. Get started with the CCX SDK by following the steps in our [Quick Start](docs/quickstart.md) guide.
+
+

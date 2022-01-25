@@ -1,6 +1,6 @@
 # Customization 
 ## Table of Contents
-* [Overview](overview.md)
+* [Overview](../README.md)
 * [Configuration](configuration.md)
 * [Local Development](local_dev.md)
 * [Quick Start](quickstart.md)
@@ -14,91 +14,93 @@
 
 ## Locale
 The CCX SDK lets you customize the locale during initialization. The default value is 'en_US'. 
-| Locale | Value (string)
+| Locale | Description
 | :-- | :--
-| English | en_US
-| French  | fr_FR
-| German  | de_DE
-| Japanese | ja_JP
-| Italian | it_IT
-| Spanish | es_ES
-| Portuguese | pt_BR
-| Korean  | ko_JR
-| Danish  | da_DK
-| Dutch   | nl_NL
-| Norwegian | nb_NO
-| Swedish | sv_SE
-| Finnish | fi_FI
-| Chinese (simplified) | zh_Hans_CN
-| Chinese (traditional)| zh_Hant_TW
+| 'en_US' | English 
+| 'fr_FR' | French
+| 'de_DE' | German  
+| 'ja_JP' | Japanese
+| 'it_IT'| Italian 
+| 'es_ES'| Spanish 
+| 'pt_BR'| Portuguese 
+| 'ko_JR'| Korean  
+| 'da_DK'| Danish 
+| 'nl_NL'| Dutch  
+| 'nb_NO'| Norwegian 
+| 'sv_SE'| Swedish 
+| 'fi_FI'| Finnish
+| 'zh_Hans_CN' | Chinese (simplified)
+| 'zh_Hant_TW'| Chinese (traditional)
 
 
 #
-## Input Parameters 
+## Create Project API Customization
 ### Template Layout Ratio: `canvasAspectId`
-| Template Layout Ratio | Value 
+This property allows you to specify a string value that initializes the CCX editor loaded with templates that fit that layout ratio. 
+| Template Layout Ratio | Description
 | :-- | :--
-|INSTAGRAM | 'Instagram'
-| INSTAGRAM_STORY | 'InstagramStory'
-|INSTAGRAM_PORTRAIT | 'InstagramPortrait'
-|INSTAGRAM_LANDSCAPE | 'InstagramLandscape'
-|FACEBOOK | 'facebook'
-|FACEBOOK_PROFILE_COVER | 'FacebookProfileCover'
-|FACEBOOK_PAGE_COVER | 'FacebookPageCover'
-|FACEBOOK_EVENT_COVER |'FacebookEventCover'
-|TWITTER | 'Twitter'
-|TWITTER_HEADER | 'TwitterHeader'
-|YOUTUBE_CHANNEL_ART | 'YouTubeChannelArt'
-|YOUTUBE_THUMBNAIL | 'YoutubeThumbnail'
-|LINKEDIN_BLOGPOST | 'LinkedInBlogPost'
-|LINKEDIN_PROFILE_COVER | 'LinkedInProfileCover'
-|SPARK_VIDEO_SLIDE | 'SparkVideoSlide'
-|SPARK_VIDEO_SLIDE_SQUARE | 'SparkVideoSlideSquare'
-|SNAPCHAT_STORY | 'SnapchatStory'
-|KINDLE_COVER | 'KindleCover'
-|PINTEREST | 'Pinterest'
-|BLOG_POST | 'BlogPost'
-|TWITCH_BANNER | 'TwitchBanner'
-|ETSY_COVER |'EtsyCover'
-|EVENTBRITE_EVENT_IMAGE | 'EventbriteEventImage'
-|SQUARE | 'Square'
-|IPHONE | 'iPhone'
-|LETTER | 'Letter'
-|Poster |'Poster'
-|Card | 'Card'
-|A3 = 'A3'
-|A4 = 'A4'
-|A5 = 'A5'
-|ASPECT1x2 | '1:2'
-| ASPECT2x1 | '2:1'
-|  ASPECT2x3 | '2:3'
-|  ASPECT3x1 | '3:1'
-|  ASPECT3x2  '3:2'
-| ASPECT4x3 | '4:3'
-| ASPECT16x9 | '16:9'
+| 'Instagram' | Instagram post
+| 'InstagramStory' | Instagram story
+| 'InstagramPortrait' | Instagram portrait
+| 'InstagramLandscape' | Instagram post (landscape) 
+| 'facebook' | Facebook post
+| 'FacebookProfileCover' | Facebook profile cover
+| 'FacebookPageCover' | Facebook covers
+| 'FacebookEventCover' | Facebook event cover
+| 'Twitter' | Twitter post
+| 'TwitterHeader' | Twitter header
+| 'YouTubeChannelArt' | YouTube channel art 
+| 'YoutubeThumbnail' | YouTube thumbnail
+| 'LinkedInBlogPost' | LinkedIn blog post
+| 'LinkedInProfileCover' | LinkedIn Profile Cover Picture
+| 'SparkVideoSlide' | Spark Video slide
+| 'SparkVideoSlideSquare' | Spark video slide (square)
+| 'SnapchatStory' | Snapchat Story
+| 'KindleCover' | Kindle cover
+| 'Pinterest' | Pinterest post
+| 'BlogPost' | Blog post post
+| Twitch banner | Twitch banner
+|'EtsyCover' | Etsy cover
+ 'EventbriteEventImage' | Eventbrite event image
+| 'Square' | Square
+| 'iPhone' | iPhone
+| 'Letter' | Letter
+|'Poster' | Poster
+| 'Card' | Card
+| 'A3'  | A3
+| 'A4'  | A4
+| 'A5'  | A5
+|'1:2' | aspect ratio of 1:2
+| '2:1' | aspect ratio of 2:1
+| '2:3' | aspect ratio of 2:3
+| '3:1' | aspect ratio of 3:1
+| '3:2' | aspect ratio of 3:2
+| '4:3' | aspect ratio of 4:3
+| '16:9' | aspect ratio of 16:9
 <br></br>
 
-### Template Type: `templateType`
-| Template Type | Value 
+### Template Type
+Developers can pass the Create Project API a `templateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on CCX to get an ideal of each category.
+| Template Type | CCX Template Category 
 | :-- | :--
-|FLYERS | 'Flyers'
-|INSTAGRAM_POST | 'Instagram_Post'
-|INSTAGRAM_STORY | 'Instagram_Story'
-|LOGO | 'Logo'
-|YOUTUBE_THUMBNAIL | 'Youtube_Thumbnail'
-|COLLAGE | 'Collage'
-|FACEBOOK_POST |'Facebook_Post'
-|FACEBOOK_COVER | 'Facebook_Cover'
-|CARD | 'Card'
-|INVITATION | 'Invitation'
-|BUSINESS_CARD | 'Business_Card'
-|MENU |'Menu'
-|BROCHURE | 'Brochure'
-|RESUME | 'Resume'
-|POSTER | 'Poster'
-|DESKTOP_WALLPAPER | 'Desktop_Wallpaper'
-|PRESENTATION_GRAPHIC |'Presentation_Graphic'
-|ALBUM_COVER |'Album_Cover'
-|BOOK_COVER | 'Book_Cover'
-|WORK_SHEET | 'Worksheet'
+| 'Flyers' | Flyers
+| 'Instagram_Post' | Instagram posts
+| 'Instagram_Story' | Instagram Stories
+| 'Logo' | Logos
+| 'Youtube_Thumbnail' | YouTube thumbnails
+| 'Collage' | Collages
+|'Facebook_Post' | Facebook posts
+| 'Facebook_Cover' | Facebook covers
+| 'Card' | Cards
+| 'Invitation' | Invitations
+| 'Business_Card' | Business cards
+| 'Menu' | Menus
+| 'Brochure' | Brochures
+| 'Resume' | Resumes
+| 'Poster' | Posters
+| 'Desktop_Wallpaper' | Wallpapers
+|'Presentation_Graphic' | Presentation Graphics
+|'Album_Cover' | Album covers
+| 'Book_Cover' | Book covers
+| 'Worksheet' | Worksheets
 

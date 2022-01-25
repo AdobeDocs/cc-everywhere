@@ -1,7 +1,7 @@
 # CCX Editor: Editing an existing project
 
 ## Table of Contents
-* [Overview](overview.md)
+* [Overview](../README.md)
 * [Configuration](configuration.md)
 * [Local Development](local_dev.md)
 * [Quick Start](quickstart.md)
@@ -12,19 +12,24 @@
 * [Customization](customization.md)
 #
 ## Edit Project in CCX Editor: Edit Project API
-Users are able to keep working on existing projects within the editor, using our Edit Project API. 
+Users are able to keep working on existing projects within the editor, using our Edit Project API. The CCEverywhere Object exposes a `editDesign()` method. 
+* The CCX project ID is the `project` property of `publishParams` from the `onPublish` callback. 
+* To call this API, you must pass the associated CCX project ID to `editDesignParams`.
 
-  
-  - [Callbacks](#callbacks)
-  - [Example](#example)
+>`editDesign(editDesignParams: EditDesignParams) => void`
 
-The CCEverywhere Object exposes a `editDesign()` method. The CCX project ID is the `project` property of `publishParams` from the `onPublish` callback. To call the `editDesign` method, you need to pass it the associated CCX project ID.
+This function edits an existing design using CCEverywhere and takes an object of parameters, `editDesignParams`:
+* [modalParams](api_ref.md#modalparams): determines size of CCX editor modal
+* [inputParams](api_ref.md#editinputparams): projectId
+* [outputParams](api_ref.md#ccxoutputparams): output type
+* [Callbacks](api_ref.md#callbacks) 
 
 ```
 ccEverywhere.editDesign(
     {
+        // inputParams is the only REQUIRED parameter
         inputParams: { 
-            projectId: PROJECT_ID 
+            projectId: CCX_PROJECT_ID 
         },
         callbacks: {
             onCancel: () => {},
@@ -33,7 +38,7 @@ ccEverywhere.editDesign(
         },
         modalParams: {},
         outputParams: { 
-            fileType: [FORMAT]
+            outputType: "base64"
         },
     }
 );
@@ -41,37 +46,50 @@ ccEverywhere.editDesign(
 Read more about each parameter in the [API references](api_ref.md).
 #
 ## Callbacks
+1. `onClose` 
+   
+    Whenever the user closes the CCX editor, this callback is triggered and the host application can receive .
+2. `onPublish` 
 
+    Whenever the user saves a project, onPublish is called with a PublishParams object. onPublish is passed the project ID that was used for generating the asset, and the final asset that has been edited. 
+      * The Asset object will have properties for type (asset format), dataType (base64 or URL) 
+      * As of right now, only base64 is supported.
+
+3. `onError` 
+
+    Any time there is an API error or authentication error, onError will be called with the associated error code.
 
 #
 ## Example
-__Notes__:
-* inputParams is a required field
-<br></br>
+When the "editDesign" button is clicked, the Edit Project API is passed the current projectId saved as a global variable and the CCX editor launches that project in a modal.
 ```
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script type="text/javascript" src="./CCEverywhere.js"></script>
-    <body>
+    <title>Edit Project Sample</title>
+  </head>  
+  <body>
     <button id="editDesign">Edit project</button>
     <img id="savedDesign" height="420" width="420" />
 
+    <script type="text/javascript" src="./CCEverywhere.js"></script>
     <script type="text/javascript">
-        var PROJECT_ID = null;
-        var IMAGE_DATA = document.getElementById("savedDesign");
+        var projectId = [[set by createDesign onPublish earlier]]
+        var imageData = document.getElementById("savedDesign");
 
         const editButton = document.getElementById("editDesign");
         editButton.onclick = () => {
             const editDesignCallback = {
                 onCancel: () => {},
                 onPublish: (publishParams) => {
+                    // User clicked "Save" - done modifying project
+                    // Save modified image data and projectId 
                     const localData = { 
                         project: publishParams.projectId, 
                         image: publishParams.asset.data 
                     };
-                    IMAGE_DATA.src = localData.image;
-                    PROJECT_ID = localData.project;
+                    imageData.src = localData.image;
+                    projectId = localData.project;
                 },
                 onError: (err) => {
                     console.error('Error received is', err.toString());
@@ -79,7 +97,7 @@ __Notes__:
             };
             ccEverywhere.editDesign(
                 {
-                    inputParams: { projectId: PROJECT_ID },
+                    inputParams: { projectId: projectId },
                     callbacks: editDesignCallback
                 }
             );

@@ -1,7 +1,7 @@
 # Quick Start
 
 ## Table of Contents
-* [Overview](overview.md)
+* [Overview](../README.md)
 * [Configuration](configuration.md)
 * [Local Development](local_dev.md)
 * [Quick Start](quickstart.md)
@@ -29,8 +29,7 @@ CCX SDK lets you launch a CCX editor within your own application. This guide exp
 - Follow the steps on the [Configuration](configuration.md) page to get an API key.
    
 - Register a redirect URL by emailing marichaec@adobe.com and finnegan@adobe.com. 
-<br></br>
-
+---
 
 ## Step 2: Embed the SDK 
 
@@ -38,12 +37,14 @@ We are in the process of distributing this SDK as a CDN. During this alpha phase
 
 > **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally via localhost. To learn more, refer to the [local development set-up guide](local_dev.md) first.
 
-Save it to the root of your project folder, and include the path to the SDK entrypoint in a script tag using either HTML or JavaScript syntax. 
-<br></br>
+Save them to the root of your project folder, and include the path to the SDK entrypoint in a script tag using either HTML or JavaScript syntax. The other two files included in the folder contain dependencies, and should be saved in the same directory as `CCEverywhere.js`. 
+
 
 ### HTML Example:
-`<script type="text/javascript" src="./CCEverywhere.js"></script>`
-<br></br>
+```
+<script type="text/javascript" src="./CCEverywhere.js"></script>
+```
+
 
 ### JavaScript Example:
 ```
@@ -58,9 +59,7 @@ function embedSDK = (document, pathToSDK) => {
 
 embedSDK(document, "./CCEverywhere.js");
 ```
-The other two files included in the folder contain dependencies, and should be saved in the same directory as `CCEverywhere.js`. 
-<br></br>
-
+---
 
 ## Step 3: Initialize the SDK
 To initialize the SDK, call the default method `initialize()`:
@@ -78,15 +77,11 @@ const ccEverywhere = CCEverywhere.default.initialize(
 This method returns a `CCEverywhere` object, with two methods: 
 * `createDesign()`
 * `editDesign()`
-* `exchangeAuthCodeForToken()` (to-do should not be exposed)
 
 These methods are the ones you will use to create a new project or edit an existing one in the CCX editor. To learn more about these methods, visit the [API references](api_ref.md) page.
-<br></br>
 
 ## Next Steps: Explore the SDK
-
-The CCX SDK can be initialized with several customizations, including locale and theme. The [customization](customization.md) documentation and the [API references](api_ref.md) can help you start working with the SDK in a way that best suits your needs.
-<br></br>
+The CCX SDK can be initialized with a customized locale. The [customization](customization.md) documentation along with the [API references](api_ref.md) can help you start working with the SDK in a way that best suits your needs.
 
 Read more about: 
 * How to [create a project](create_project.md) in the editor 

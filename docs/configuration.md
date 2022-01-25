@@ -1,7 +1,7 @@
 # Configuration Steps
 
 ## Table of Contents
-* [Overview](overview.md)
+* [Overview](../README.md)
 * [Configuration](configuration.md)
 * [Local Development](local_dev.md)
 * [Quick Start](quickstart.md)
