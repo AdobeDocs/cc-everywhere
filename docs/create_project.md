@@ -78,17 +78,46 @@ When the "createDesign" button is clicked, the Create Project API is called and 
 
     <script type="text/javascript" src="./CCEverywhere.js"></script>
     <script type="text/javascript">
-        // Initialize to null until it gets set by onPublish callback
+        // Initialize projectId to null until it gets set by onPublish callback
         var projectId = null;
+        // Set to null until CCEverywhere object is initialized
+        var ccEverywhere = null;
         var imageData = document.getElementById("savedDesign");
         const createButton = document.getElementById("createDesign");
+        onload = () => {
+            // checks if SDK has been initialized
+            if (ccEverywhere == null){
+                ccEverywhere = CCEverywhere.default.initialize(
+                    {
+                        clientId: YOUR_CLIENT_ID
+                        appName: PROJECT_NAME,
+                        appVersion: { major: 1, minor: 0 },
+                        platformCategory: 'web'
+                    }
+                );
+            }
+            // When the window reloads, check if code is returned. 
+            // IF Y, exchange code for token for user so they don't have to log in again
+            // If N, print error.
+            const urlParams = new URLSearchParams(window.location.href);
+            const authCode = urlParams.get('code');
+            const error = urlParams.get('error');
+            if (authCode || error ) {
+                if (error){
+                    console.log('Error present:', error)
+                }
+                // exchange auth code for token 
+                ccEverywhere.exchangeAuthCodeForToken();
+            }
+        }
 
         createButton.onclick = () => {
             const createDesignCallback = {
                 onCancel: () => {},
                 onPublish: (publishParams) => {
                     // User clicked "Save"
-                    // Save image data to render in sample, save projectId for editing later
+                    // Save image data to render in sample
+                    // Save projectId for editing later
                     const localData = { 
                         project: publishParams.projectId, 
                         image: publishParams.asset.data 
