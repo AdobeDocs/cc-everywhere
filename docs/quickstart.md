@@ -37,7 +37,7 @@ We are in the process of distributing this SDK as a CDN. During this alpha phase
 
 > **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally via localhost. To learn more, refer to the [local development set-up guide](local_dev.md) first.
 
-Save all 3 files to the root of your project folder, and include the path to the SDK entrypoint (`CCEverywhere.js`) in a script tag using either HTML or JavaScript syntax. The other two files included in the folder contain dependencies, and should be saved in the same directory. 
+Save all 3 files, and include the path to the SDK entrypoint (`CCEverywhere.js`) in a script tag using either HTML or JavaScript syntax. The other two files included in the folder contain dependencies, and should be saved in the same directory. 
 
 
 ### HTML Example:
