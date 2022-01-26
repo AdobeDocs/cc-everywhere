@@ -89,7 +89,7 @@ When the "createDesign" button is clicked, the Create Project API is called and 
             if (ccEverywhere == null){
                 ccEverywhere = CCEverywhere.default.initialize(
                     {
-                        clientId: YOUR_CLIENT_ID
+                        clientId: YOUR_CLIENT_ID,
                         appName: PROJECT_NAME,
                         appVersion: { major: 1, minor: 0 },
                         platformCategory: 'web'
