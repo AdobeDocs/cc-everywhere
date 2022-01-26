@@ -35,7 +35,7 @@ CC Everywhere SDK lets you launch a CCX editor within your own application. This
 
 We are in the process of distributing this SDK as a CDN. During this alpha phase, you can embed the SDK into your app by downloading the bundled SDK at this [repo](https://github.com/AdobeDocs/cc-everywhere). 
 
-> **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally via localhost. To learn more, refer to the [local development set-up guide](local_dev.md) first.
+> **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](local_dev.md).
 
 Save them to the root of your project folder, and include the path to the SDK entrypoint in a script tag using either HTML or JavaScript syntax. The other two files included in the folder contain dependencies, and should be saved in the same directory as `CCEverywhere.js`. 
 
