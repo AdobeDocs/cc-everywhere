@@ -80,6 +80,11 @@ This method returns a `CCEverywhere` object, with two methods:
 
 These methods are the ones you will use to create a new project or edit an existing one in the CCX editor. To learn more about these methods, visit the [API references](api_ref.md) page.
 
+When the log in is finished, the editor will redirect to the redirect URL you provide us with. Now you call the following line: 
+```
+ccEverywhere.exchangeAuthCodeForToken();
+```
+
 ## Next Steps: Explore the SDK
 The CC Everywhere SDK can be initialized with a customized locale. The [customization](customization.md) documentation along with the [API references](api_ref.md) can help you start working with the SDK in a way that best suits your needs.
 

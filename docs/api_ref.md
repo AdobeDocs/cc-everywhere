@@ -4,7 +4,6 @@
   - [initialize()](#initialize)
     - [HostInfo](#hostinfo)
     - [ConfigParams](#configparams)
-  - [CCEverywhere: Class Constructor](#cceverywhere-class-constructor)
   - [createDesign()](#createdesign)
   - [editDesign()](#editdesign)
 - [Shared Types](#shared-types)
@@ -59,16 +58,6 @@ This is an optional field, and defaults to 'en_US' if nothing is specified.
     }
 ```
 See [customization](customization.md) for full locale list. 
-
-
-## CCEverywhere: Class Constructor 
-A CCEverywhere object can also be initialized and returned using a constructor.
-* `new CCEverywhere(hostInfo: HostInfo, configParams: ConfigParams)  => CCEverywhere`
-
-The CCEverywhere object exposes two APIs via the following methods: 
-* Create Project API - [createDesign()](#createdesign)
-* Edit Project API - [editDesign()](#editdesign)
-
 
 
 ---
@@ -154,9 +143,6 @@ Allows you to define the UI constraints of the CCX editor modal dialog. All the 
 |size | { width: #, height: #, unit: "px"/"in"/"mm"}
 | padding | number
 | borderRadius | number
-| colorTheme | "lightest", "light", "dark" or "darkest"
-| spectrumTheme | "spectrum", "express"
-| scale | "medium", "large"
 <br></br>
 
 ---
@@ -188,8 +174,8 @@ You get this `projectId` from `publishParams` after you save a project. Refer to
 All properties are optional. As of this version, the only supported output type is a base64 rendition of the project. 
 | Property | Value |
 | :-- | :--|
-| outputType | "base64"
-| fileType | "jpeg", "png", "gif", or "pdf"
+<!-- | outputType | "base64" -->
+| fileType | "jpeg", "png", or "pdf"
 <br></br>
 
 ---
