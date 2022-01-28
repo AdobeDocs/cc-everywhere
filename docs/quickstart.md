@@ -85,11 +85,15 @@ These methods are the ones you will use to create a new project or edit an exist
 ---
 ## Step 4: Exchange Code for Access Token
 
-When the login is finished,  CCX will redirect to the redirect URL you provide us with, and send an authorization code. We can exchange that code from an access token with the following line: 
+After a user logs in, make sure you get the user's access token using the `exchangeAuthCodeForToken()` API. 
+
+When you call this API, what happens is the Adobe IMS Server stores the code and redirects the user back to the application's specified redirect URL with an authorization code, which is good for one use.
+
+We can exchange that code from an access token with the following line: 
 ```
 ccEverywhere.exchangeAuthCodeForToken();
 ```
-Make sure you call this after you initialize the SDK. 
+Make sure you call this after you initialize the SDK. After you exchange the authorization code for an access token, you can store and use that token for future requests to the SDK during this session.
 
 ---
 
