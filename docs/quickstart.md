@@ -20,6 +20,8 @@ CC Everywhere SDK lets you launch a CCX editor within your own application. This
 
 > [Step 3: Initialize the SDK](#step-3-initialize-the-sdk)
 
+> [Step 4: Exchange Auth Code for Token](#step-4-exchange-code-for-access-token)
+
 > [Next Steps](#next-steps-explore-the-sdk)
 
 
