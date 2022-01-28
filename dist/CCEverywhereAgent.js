@@ -1346,7 +1346,7 @@ eval("\n\nvar GetIntrinsic = __webpack_require__(/*! get-intrinsic */ \"./node_m
 /***/ ((module) => {
 
 "use strict";
-eval("module.exports = JSON.parse('{\"name\":\"@cc-everywhere/shared\",\"version\":\"1.1.0\",\"description\":\"A JavaScript shared library for SDK and Agent which integrates with Adobe\\'s CCX and QA.\",\"main\":\"dist/CCEverywhere.js\",\"engines\":{\"node\":\">=12.17.0\"},\"publishConfig\":{\"registry\":\"https://artifactory.corp.adobe.com/artifactory/api/npm/npm-adobe-release-local\"},\"author\":\"Adobe Inc.\",\"license\":\"Apache-2.0\",\"dependencies\":{\"@cchome/ingest-react\":\"^0.9.11\",\"assert\":\"^2.0.0\",\"ajv\":\"^8.8.2\",\"change-case\":\"^4.1.2\",\"fetch-retry-ts\":\"^1.1.25\",\"semver\":\"^7.3.5\",\"store2\":\"^2.12.0\"}}');\n\n//# sourceURL=webpack://%5Bname%5D/./packages/shared/package.json?");
+eval("module.exports = JSON.parse('{\"name\":\"@cc-everywhere/shared\",\"version\":\"1.1.1\",\"description\":\"A JavaScript shared library for SDK and Agent which integrates with Adobe\\'s CCX and QA.\",\"main\":\"dist/CCEverywhere.js\",\"engines\":{\"node\":\">=12.17.0\"},\"publishConfig\":{\"registry\":\"https://artifactory.corp.adobe.com/artifactory/api/npm/npm-adobe-release-local\"},\"author\":\"Adobe Inc.\",\"license\":\"Apache-2.0\",\"dependencies\":{\"@cchome/ingest-react\":\"^0.9.11\",\"assert\":\"^2.0.0\",\"ajv\":\"^8.8.2\",\"change-case\":\"^4.1.2\",\"fetch-retry-ts\":\"^1.1.25\",\"semver\":\"^7.3.5\",\"store2\":\"^2.12.0\"}}');\n\n//# sourceURL=webpack://%5Bname%5D/./packages/shared/package.json?");
 
 /***/ })
 
