@@ -43,10 +43,9 @@ Send the email addresses you created in [Step 1](#step-1-create-test-accounts) t
 4.  Click **Add API** and choose **Creative Cloud Libraries**.
 5.  Click **Next** and choose **Android**. 
 6.  Save the API configuration and a Client ID (API key) will be generated and displayed on the next page. Copy it. 
-7.  Name your project. 
+7.  (Optional) Name your project. 
 
 
 Share the following with marichaec@adobe.com and finnegan@adobe.com:
 1. Your client ID
-2. Your project name 
-3. Your redirect URL 
+2. Your redirect URL 
