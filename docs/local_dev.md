@@ -34,11 +34,7 @@ Homebrew is another package installer that you can use: follow [these steps](htt
 
 Install it using either `npm install mkcert` or `brew install mkcert`.
 
-Once it's installed, run the following line to configure the tool: 
-```
-mkcert -install
-```
-Then navigate back to the project folder and run:
+Navigate back to the project folder and run:
 ```
 mkcert localhost 
 ```

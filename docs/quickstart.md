@@ -20,6 +20,8 @@ CC Everywhere SDK lets you launch a CCX editor within your own application. This
 
 > [Step 3: Initialize the SDK](#step-3-initialize-the-sdk)
 
+> [Step 4: Exchange Auth Code for Token](#step-4-exchange-code-for-access-token)
+
 > [Next Steps](#next-steps-explore-the-sdk)
 
 
@@ -79,6 +81,21 @@ This method returns a `CCEverywhere` object, with two methods:
 * `editDesign()`
 
 These methods are the ones you will use to create a new project or edit an existing one in the CCX editor. To learn more about these methods, visit the [API references](api_ref.md) page.
+
+---
+## Step 4: Exchange Code for Access Token
+
+After a user logs in, make sure you get the user's access token using the `exchangeAuthCodeForToken()` API. 
+
+When you call this API, what happens is the Adobe IMS Server stores the code and redirects the user back to the application's specified redirect URL with an authorization code, which is good for one use.
+
+We can exchange that code from an access token with the following line: 
+```
+ccEverywhere.exchangeAuthCodeForToken();
+```
+Make sure you call this after you initialize the SDK. After you exchange the authorization code for an access token, you can store and use that token for future requests to the SDK during this session.
+
+---
 
 ## Next Steps: Explore the SDK
 The CC Everywhere SDK can be initialized with a customized locale. The [customization](customization.md) documentation along with the [API references](api_ref.md) can help you start working with the SDK in a way that best suits your needs.
