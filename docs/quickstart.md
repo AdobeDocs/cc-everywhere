@@ -14,11 +14,15 @@
 
 CC Everywhere SDK lets you launch a CCX editor within your own application. This guide explains how to start using the SDK in your own app.
 
-* [Step 1: Get an API Key](#step-1-get-an-api-key)
-* [Step 2: Embed the SDK](#step-2-embed-the-sdk)
-* [Step 3: Initialize the SDK](#step-3-initialize-the-sdk)
-* [Step 4: Exchange Auth Code for Token](#step-4-exchange-code-for-access-token)
-* [Next Steps](#next-steps-explore-the-sdk)
+- [Quick Start](#quick-start)
+  - [Table of Contents](#table-of-contents)
+  - [Step 1: Get an API Key](#step-1-get-an-api-key)
+  - [Step 2: Embed the SDK](#step-2-embed-the-sdk)
+    - [HTML Example](#html-example)
+    - [JavaScript Example](#javascript-example)
+  - [Step 3: Initialize the SDK](#step-3-initialize-the-sdk)
+  - [Step 4: Exchange Code for Access Token](#step-4-exchange-code-for-access-token)
+  - [Next Steps: Explore the SDK](#next-steps-explore-the-sdk)
 
 ## Step 1: Get an API Key
 
@@ -34,7 +38,6 @@ We are in the process of distributing this SDK as a CDN. During this alpha phase
 
 > **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](local_dev.md).
 
-Save all 3 files, and include the path to the SDK entrypoint (`CCEverywhere.js`) in a script tag using either HTML or JavaScript syntax. The other two files included in the folder contain dependencies, and should be saved in the same directory.
 
 ### HTML Example
 

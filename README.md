@@ -13,9 +13,12 @@
 #
 
 CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CC Express (CCX) capabilities to all applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. 
+### What is CCX?
+[Creative Cloud Express](https://www.adobe.com/express/)  (CCX) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, CCX users can create standout content from wherever they work. 
 
-This SDK allows you to integrate CCX components within your website. It provides the following components: 
-* CCX Editor Component
+This SDK allows you to integrate the following CCX components within your app: 
+
+## 1. CCX Editor Component
   * [Create Project API](docs/create_project.md):
     * Launch a CCX editor to create a new design
     * Save design to CCX and my app
@@ -23,16 +26,29 @@ This SDK allows you to integrate CCX components within your website. It provides
     * Launch a CCX editor to edit an old design
     * Save edited design to CCX and my app
 
+### How do users experience the CCX editor modal:
 
-## What is CCX?
-[Creative Cloud Express](https://www.adobe.com/express/)  (CCX) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, CCX users can create standout content from wherever they work. 
+After the user launches the CCX editor component upon any user interaction you specify (e.g. clicking a button), they must log in or create a CCX account. Users can access CCX's huge template and asset library and begin designing a new project. When they are done, they can click the **Save** button. The editor closes and the project is saved in CCX inside a folder with the 'appName' that the SDK is initialized with.
+
+  
+## 2. Quick Actions (Image) 
+  * Crop Image
+  * Convert JPEG/PNG
+  * Image Filters
+  * Resize Image
+  * Remove Background
+
+## 3. Quick Actions (Video)  
+  * Change Speed
+  * Convert to GIF/MP4
+  * Crop Video
+  * Merge Videos
+  * Resize Video
+  * Reverse Video
+  * Trim Video
 
 
-## How will users experience the CCX editor component
-Once you embed the CCX editor to your own app using the SDK, users can click on a button and launch the CCX editor. If the user is not already logged into CCX, they must log in or create an account. Now, users can access CCX's huge template and asset library and begin designing a new project. 
-
-When a user is done within the editor, they can click the **Save** button. The editor closes and the project is saved in CCX inside a folder with the 'appName' that the SDK is initialized with.
-
+---
 
 
 
