@@ -47,10 +47,6 @@
                     class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
                     <span class="spectrum-Button-label">Convert JPG to PNG</span>
                 </button>
-                <button id="image-filters"
-                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
-                    <span class="spectrum-Button-label">Image Filters</span>
-                </button>
                 <button id="remove-background"
                     class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
                     <span class="spectrum-Button-label">Remove Background</span>
@@ -225,11 +221,6 @@
         
         document.getElementById('convert-to-png').addEventListener('click', () => {
             openImageQuickAction('convert-to-png');
-        })
-
-        /* doesn't work - Unable to find quick action metadata when provided with quickActionId.  */
-        document.getElementById('image-filters').addEventListener('click', () => {
-            openImageQuickAction('image-filters');
         })
 
         document.getElementById('remove-background').addEventListener('click', () => {

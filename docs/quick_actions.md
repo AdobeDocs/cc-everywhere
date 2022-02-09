@@ -24,7 +24,6 @@ With Image Quick Actions, you have access to these capabilities:
 | Crop Image | 'image-crop'
 | Convert to JPG | 'convert-to-jpg'
 | Convert to PNG | 'convert-to-png'
-| Image Filter | 'image-filters'
 | Resize Image | 'image-resize' 
 | Remove Background | 'remove-background'
 
