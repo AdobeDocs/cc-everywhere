@@ -1,15 +1,17 @@
 # Creating a Project
-
 ## Table of Contents
-* [Overview](../README.md)
-* [Configuration](configuration.md)
-* [Local Development](local_dev.md)
-* [Quick Start](quickstart.md)
-* CCX Editor Component
-  * [Create Project API](create_project.md)
-  * [Open Project API](edit_project.md)
-* [API References](api_ref.md)
-* [Customization](customization.md)
+* [Overview](README.md)
+* Get Started 
+  * [Configuration](docs/configuration.md)
+  * [Local Development](docs/local_dev.md)
+  * [Quick Start](docs/quickstart.md)
+* SDK Components
+  * CCX Editor Component
+    * [Create Project API](docs/create_project.md)
+    * [Open Project API](docs/edit_project.md)
+  * [Quick Actions API](docs/quick_actions.md)
+* [API References](docs/api_ref.md)
+* [Customization](docs/customization.md)
 #
 ## Create Project in CCX Editor: Create Project API
 Users can launch a new project in a CCX editor, using the Create Project API. The CCEverywhere Object exposes this API with the `createDesign()` method.
@@ -48,20 +50,6 @@ ccEverywhere.createDesign(
 All the properties in `CreateDesignParams` are optional. You will probably want to add some code to your `onPublish` callback to send the image data and project ID information back to your own app. The longer example at the bottom demonstrates this.Read the [API reference](api_ref.md) for more details about each of these parameters. 
 
 #
-## Callbacks
-1. `onClose` 
-   
-    Whenever the user closes the CCX editor, this callback is triggered and the host application can receive .
-2. `onPublish` 
-
-    Whenever the user saves a project, onPublish is called with a PublishParams object. onPublish is passed the project ID that was used for generating the asset, and the final asset that has been created. 
-      * The Asset object will have properties for type (asset format), dataType (base64 or URL) 
-      * As of right now, only base64 is supported.
-
-3. `onError` 
-
-    Any time there is an API error or authentication error, onError will be called with the associated error code.
-#
 ## Example 
 
 When the "createDesign" button is clicked, the Create Project API is called and the CCX editor should be launched in a modal. 
@@ -84,21 +72,15 @@ When the "createDesign" button is clicked, the Create Project API is called and 
         var ccEverywhere = null;
         var imageData = document.getElementById("savedDesign");
         const createButton = document.getElementById("createDesign");
-        onload = () => {
-            // checks if SDK has been initialized
-            if (ccEverywhere == null){
-                ccEverywhere = CCEverywhere.default.initialize(
-                    {
-                        clientId: YOUR_CLIENT_ID,
-                        appName: PROJECT_NAME,
-                        appVersion: { major: 1, minor: 0 },
-                        platformCategory: 'web'
-                    }
-                );
+        
+        ccEverywhere = CCEverywhere.default.initialize(
+            {
+                clientId: YOUR_CLIENT_ID,
+                appName: PROJECT_NAME,
+                appVersion: { major: 1, minor: 0 },
+                platformCategory: 'web'
             }
         );
-        ccEverywhere.exchangeAuthCodeForToken();
-
 
         createButton.onclick = () => {
             const createDesignCallback = {

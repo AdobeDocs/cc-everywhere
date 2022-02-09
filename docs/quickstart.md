@@ -1,17 +1,19 @@
 # Quick Start
 
 ## Table of Contents
-
-* [Overview](../README.md)
-* [Configuration](configuration.md)
-* [Local Development](local_dev.md)
-* [Quick Start](quickstart.md)
-* CCX Editor Component
-  * [Create Project API](create_project.md)
-  * [Open Project API](edit_project.md)
-  * [API References](api_ref.md)
-* [Customization](customization.md)
-
+* [Overview](README.md)
+* Get Started 
+  * [Configuration](docs/configuration.md)
+  * [Local Development](docs/local_dev.md)
+  * [Quick Start](docs/quickstart.md)
+* SDK Components
+  * CCX Editor Component
+    * [Create Project API](docs/create_project.md)
+    * [Open Project API](docs/edit_project.md)
+  * [Quick Actions API](docs/quick_actions.md)
+* [API References](docs/api_ref.md)
+* [Customization](docs/customization.md)
+#
 CC Everywhere SDK lets you launch a CCX editor within your own application. This guide explains how to start using the SDK in your own app.
 
 - [Quick Start](#quick-start)
@@ -34,7 +36,7 @@ CC Everywhere SDK lets you launch a CCX editor within your own application. This
 
 ## Step 2: Embed the SDK
 
-We are in the process of distributing this SDK as a CDN. During this alpha phase, you can embed the SDK into your app by downloading the bundled SDK in the [`/dist`](../dist/CCEverywhere.js) folder of this repo.
+We are in the process of distributing this SDK as a CDN. During this alpha phase, you can embed the SDK into your app by downloading the bundled SDK in the [`/dist`](../dist/CCEverywhere.js) folder of this repo. 
 
 > **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](local_dev.md).
 
@@ -88,7 +90,7 @@ These methods are the ones you will use to create a new project or edit an exist
 
 ## Step 4: Exchange Code for Access Token
 
-After a user logs in, make sure you get the user's access token using the `exchangeAuthCodeForToken()` API.
+After a user logs in, you can get the user's access token using the `exchangeAuthCodeForToken()` API.
 
 When you call this API, what happens is the Adobe IMS Server stores the code and redirects the user back to the application's specified redirect URL with an authorization code, which is good for one use.
 
@@ -98,7 +100,9 @@ We can exchange that code from an access token with the following line:
 ccEverywhere.exchangeAuthCodeForToken();
 ```
 
-Make sure you call this after you initialize the SDK. After you exchange the authorization code for an access token, you can store and use that token for future requests to the SDK during this session.
+Create a new endpoint that simply initializes the SDK and calls this function. This endpoint should correspond to the redirect URI you provided us with. The default redirect URI we specified for our sample is "https://localhost:3000/redirect.html". This function will store that token for future requests to the SDK during this session.
+
+In a future build of this SDK, you will be able to specify the redirect uri you wish in the initialize function. 
 
 ---
 
