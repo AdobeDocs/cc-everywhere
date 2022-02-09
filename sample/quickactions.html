@@ -55,10 +55,10 @@
             </ul>
 
     <h1> Video Quick Actions </h1> 
-    <div>
+    <!-- <div>
         <input type="file" id="videoFileInput" />
     </div>
-    <video id="video-container" height="420" width="420" controls> </video>
+    <video id="video-container" height="420" width="420" controls> </video> -->
     <div>
         Choose a Quick Action: 
     </div>
@@ -104,12 +104,13 @@
         const PROJECT_NAME = 'cc everywhere';
         // image: user uploaded file
         var imageFile;
-        var videoFile;
+        // var videoFile;
         // imageUrl, videoUrl: base64 representation we pass into QA function
-        var imageUrl, videoUrl;
+        var imageUrl;
+        // var videoUrl;
         // appImage is the image container displayed in sample 
         var appImage = document.getElementById('image-container');
-        var appVideo = document.getElementById('video-container');
+        // var appVideo = document.getElementById('video-container');
 
         const exportOptions = [
         {
@@ -233,25 +234,25 @@
 
         /* This event listener checks to see if the user uploads a new file 
         and reads it into base64 data type for SDK ingestion later */
-        document.getElementById('videoFileInput').addEventListener('change', (e) => {
-            const reader = new FileReader();
-            videoFile = e.target.files[0];
-            // reads file into base 64 data type
-            reader.readAsDataURL(videoFile);
-            reader.onload = () => {
-                let encodedVideo = reader.result;
-                videoUrl = encodedVideo;
-                console.log(reader.result);
-                appVideo.src = videoUrl;
-            }
-            reader.onerror = (error) => {
-                console.log('error', error);
-            };
-        })
+        // document.getElementById('videoFileInput').addEventListener('change', (e) => {
+        //     const reader = new FileReader();
+        //     videoFile = e.target.files[0];
+        //     // reads file into base 64 data type
+        //     reader.readAsDataURL(videoFile);
+        //     reader.onload = () => {
+        //         let encodedVideo = reader.result;
+        //         videoUrl = encodedVideo;
+        //         appVideo.src = videoUrl;
+        //     }
+        //     reader.onerror = (error) => {
+        //         console.log('error', error);
+        //     };
+        // })
         const videoCallbacks = {
             onCancel: () => {},
             onPublish: (publishParams) => {
                 const { exportButtonId, asset } = publishParams;
+                console.log(publishParams)
                 if (exportButtonId === 'open_video_new_tab') {
                     window.open(asset.data, '_blank');
                 }
@@ -282,29 +283,30 @@
 
         function openVideoQuickAction(qa_id) {
             /* Todo: find out why video file with user-uploaded base64 throws error */
-            if (videoFile) {
-                ccEverywhere.openQuickAction({
-                    id: qa_id, 
-                    inputParams: {
-                        asset: {
-                            data: videoUrl, 
-                            dataType: 'base64', 
-                            type: 'video'
-                        }, 
-                        exportOption: videoExportOptions
-                    },
-                    videoCallbacks
-                })
-            } else {
+            // if (videoFile) {
+            //     ccEverywhere.openQuickAction({
+            //         id: qa_id, 
+            //         inputParams: {
+            //             asset: {
+            //                 data: videoUrl, 
+            //                 dataType: 'base64', 
+            //                 type: 'video'
+            //             }, 
+            //             exportOption: videoExportOptions
+            //         },
+            //         videoCallbacks
+            //     })
+            // } else {
             /* this works - If there's no file uploaded, we can still call the QA API and the user is prompted to 
             browser for image files in the modal */
                 ccEverywhere.openQuickAction({
                     id: qa_id, 
                     inputParams: {
-                        exportOption: exportOptions
+                        exportOption: videoExportOptions
                     },
+                    videoCallbacks
                 })
-            }
+            // }
         };
         
         
