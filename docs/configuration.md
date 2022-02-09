@@ -15,10 +15,6 @@
 
 Before you begin integrating with this SDK, follow these steps: 
 
-## Step 0: Partner Intake Form
-
-Make sure you fill out this [Partner Intake Form](https://forms.office.com/r/JzEsxvM3jv).
-
 ## Step 1: Create Test Accounts 
 
 For this alpha release, developers must create a "personal" AdobeID, known as a "Type 1" or "Federated" ID for creating API credentials. 
