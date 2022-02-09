@@ -6,28 +6,38 @@
     - [ConfigParams](#configparams)
   - [createDesign()](#createdesign)
   - [editDesign()](#editdesign)
+  - [openQuickAction()](#openquickaction)
 - [Shared Types](#shared-types)
-  - [ModalParams](#modalparams)
-  - [CreateInputParams](#createinputparams)
-  - [EditInputParams](#editinputparams)
-  - [CCXOutputParams](#ccxoutputparams)
+  - [Asset](#asset)
+  - [OutputAsset](#outputasset)
   - [Callbacks](#callbacks)
-- [Table of Contents](#table-of-contents)
+    - [PublishParams](#publishparams)
+    - [QuickActionPublishParams](#quickactionpublishparams)
+  - [CreateInputParams](#createinputparams)
+  - [CCXOutputParams](#ccxoutputparams)
+  - [EditInputParams](#editinputparams)
+  - [ExportOption](#exportoption)
+    - [ExportButton](#exportbutton)
+    - [ExportButtonGroup](#exportbuttongroup)
+    - [CustomExportButton: Custom Button Clicks](#customexportbutton-custom-button-clicks)
+    - [NativeExportButton: Render a Native Button](#nativeexportbutton-render-a-native-button)
+    - [Example](#example)
+  - [ModalParams](#modalparams)
+  - [QuickActionInputParams](#quickactioninputparams)
+  - [Table of Contents](#table-of-contents)
 
 ## initialize()
 
 The top-level module exposed by the SDK is `CCEverywhere`. Its default method `initialize()` is the main API used for initializing the SDK. Make sure to call it only once a page. This method returns a [CCEverywhere](#cceverywhere-object) object.
 
-- `default: { initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => null | CCEverywhere }`
+`default: { initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => null | CCEverywhere }`
 
 __Parameters__:
-
 - hostInfo: [HostInfo](#hostinfo)
 - (optional) configParams: [ConfigParams](#configparams)
 
 ### HostInfo
 
----
 All four properties are required fields.
 | Property | Type | Description
 | :-- | :--| :--
@@ -48,8 +58,6 @@ All four properties are required fields.
 A folder named `appName` is created in the user's CCX account, and projects they make will be saved there.
 
 ### ConfigParams
-
----
 This is an optional field, and defaults to 'en_US' if nothing is specified.
 | Property | Type |
 | :-- | :--|
@@ -99,7 +107,6 @@ ccEverywhere.createDesign(
     }
 ); 
 ```
-
 ---
 
 ## editDesign()
@@ -137,7 +144,202 @@ ccEverywhere.editDesign(
 );
 ```
 
+---
+## openQuickAction()
+`openQuickAction(quickActionParams: QuickActionParams) => void`
+
+This method takes an object of parameters, `quickActionParams`:
+
+__`QuickActionParams`__ is an object with 4 properties: 
+- id: QuickActionId
+- inputParams: [QuickActionInputParams](#quickactioninputparams)
+- modalParams: [ModalParams](#modalparams)
+- outputParams: [CCXOutputParams](#ccxoutputparams)
+- callbacks: [Callbacks](#callbacks)
+
+Besides `id` and `exportOption` in `QuickActionInputParams`, the rest are optional fields. `exportOption` can be an empty array if you want. The function returns void. 
+
+```
+ccEverywhere.openQuickAction(
+    {
+        id: 'image-resize',
+        inputParams:{
+            exportOption: []
+        }
+    }
+)
+```
+
+
 # Shared Types
+
+## Asset 
+
+An Asset type has three properties:
+
+| Property | Value(s)
+|:-- | :--
+| type | 'image' or 'video'
+| dataType | 'base64'
+| data | string (base 64 representation of output)
+ 
+--- 
+## OutputAsset
+An OutputAsset type has an additional property, and 2 optional properties.
+| Property | Value(s)
+|:-- | :--
+| type | 'image' or 'video'
+| dataType | 'base64'
+| data | string (base 64 representation of output)
+| fileType | 'jpeg', 'pdf', 'png', 'mp4'
+| (optional) fileName | string
+| (optional) size | { width: #, height: #, unit: "px"/"in"/"mm"}
+
+--- 
+## Callbacks
+All the callbacks are optional and return void. 
+
+| Property | Callback Function
+| :-- | :-- 
+| onCancel | CancelCallback 
+| onPublish | PublishCallback |
+| onError | ErrorCallback`<ErrorCode>` |
+<!-- | onLoad | LoadCallback 
+| onLoadStart | LoadStartCallback  -->
+<!-- | onPublishStart | PublishStartCallback  -->
+
+
+<!-- 1. `onLoad: () => void `
+1. `onLoadStart: () => void ` -->
+2. `onCancel: () => void ` 
+   
+    Whenever the user closes the CCX modal, this callback is triggered.
+3. `onPublish: (PublishParams/QuickActionPublishParams) => void ` 
+
+    Whenever the user saves a project, onPublish passes the host application a PublishParams object. PublishParams consists of the project ID used for generating the asset, and the output asset. 
+<!-- 5. `onPublishStart: () => void `
+   This callback function is called every time a user clicks "Save".  -->
+3. `onError: () => void ` 
+
+    Any time there is an API error or authentication error, onError will be called with the associated error code.
+
+### PublishParams
+ - projectId: string associated with CCX project
+ - asset: [OutputAsset](#outputasset)
+
+### QuickActionPublishParams 
+  - exportButtonId: string configuring export option(s)
+  - [PublishParams](#publishparams)
+
+
+---
+## CreateInputParams
+
+Allows you to specify the canvas template layout ratio, canvas template type, and the search text to pass in the target application (CCX Editor Component, etc). All the properties are optional. To see the full list of canvas template layout ratios and template types, see the [customization](customization.md) page.
+| Property | Type/Value |
+| :-- | :--|
+| canvasAspectId| string
+| templateType | string
+| templateSearchText | string
+
+---
+## CCXOutputParams
+
+All properties are optional. As of this version, the only supported output type is a base64 rendition of the project.
+| Property | Value |
+| :-- | :--|
+| fileType | "jpeg", "png", or "pdf" |
+| outputType | "base64"
+
+---
+## EditInputParams
+
+Allows you to specify the project ID the target application (CCX Editor Component, etc). Get this `projectId` from `publishParams` after you save a project. Refer to the [callbacks](#callbacks) sections.
+| Property | Type |
+| :-- | :--|
+| projectId| string
+
+---
+## ExportOption
+This interface describes the base object for export buttons and groups. Allows you to define export buttons and groups for a Quick Action. All the properties are optional.
+
+
+### ExportButton 
+This interface describes the base object that is used to render a button once the quick action has completed the action. 
+| Property | Value | Description
+| :-- | :--|:--
+|optionType| "button" | QA renders single standalone button
+|label| string | Export label name
+|variant | "cta"/"primary"/"secondary" | Defines the [style](https://spectrum.adobe.com/page/button/) of a button.
+| buttonType | 'custom' or 'native' | Type of export button ([Custom](#customexportbutton-custom-button-clicks)/[Native](#nativeexportbutton-render-a-native-button))
+| optionType | 'button' | Type of ExportOption 
+
+### ExportButtonGroup
+This interface describes the object that is used to render a group of buttons which will be shown as a drop down under a parent button. 
+| Property | Value | Description
+| :-- | :--|:--
+|optionType| "group" | QA renders drop-down button
+|label| string | Export label name
+|variant | "cta"/"primary"/"secondary" | Defines the [style](https://spectrum.adobe.com/page/button/) of a button.
+| buttons | array of [ExportButton](#export-button) | List of buttons under a dropdown menu
+
+
+### CustomExportButton: Custom Button Clicks
+
+This interface describes an object that is used to render a custom button once the quick action has completed the action.  On button click, the id will be passed back in the `onPublish` callback, along with the asset data. 
+| Property | Value | Description
+| :-- | :--|:--
+|id| string | ID of the export button 
+|label| string | Localized text of the export button
+|target | 'Host' | Used to render a custom button. Currently only 'Host'.
+| buttonType | 'custom' | Type of button
+
+### NativeExportButton: Render a Native Button
+
+This interface describes an object that is used to render a native button once the quick action has completed the action.
+| Property | Value | Description
+| :-- | :--|:--
+| context (optional) | 'default' | Uses default mechanism of handling button click
+|          | 'new' | QA handles button click in a new tab/window
+|target | 'Download' | On click will download the asset
+|  | 'Editor' | On click will open the asset in CCX
+| buttonType | 'custom' | Type of button
+
+### Example
+```
+const exportOptions = [
+    // EXPORT BUTTON GROUP 
+    {
+        label: 'Open In',
+        optionType: 'group',
+        variant: 'cta',
+        buttons: [
+        {
+            target: "Editor",
+            label: "Express",
+            buttonType: "native",
+            optionType: "button"
+        },]
+    },
+        /** target: allows the Quick Task to determine type of export */
+    {
+        target: 'Host',
+        id: '@id/random',
+        label: 'Save in Your App',
+        variant: 'cta',
+        optionType: 'button',
+        buttonType: 'custom'
+    },
+    {
+        target: 'Download',
+        variant: 'primary',
+        optionType: 'button',
+        buttonType: 'native'
+    }
+];
+```
+
+---
 
 ## ModalParams
 
@@ -151,69 +353,26 @@ Allows you to define the UI constraints of the CCX editor modal dialog. All the 
 | borderRadius | number
 
 ---
+## QuickActionInputParams
 
-## CreateInputParams
-
-Allows you to specify the canvas template layout ratio, canvas template type, and the search text to pass in the target application (CCX Editor Component, etc). All the properties are optional. To see the full list of canvas template layout ratios and template types, see the [customization](customization.md) page.
-| Property | Type/Value |
-| :-- | :--|
-| canvasAspectId| string
-| templateType | string
-| templateSearchText | string
-
----
-
-## EditInputParams
-
-Allows you to specify the project ID the target application (CCX Editor Component, etc).
+Allows you to specify the asset and export buttons/groups you want to perform a Quick Action with. 
 | Property | Type |
 | :-- | :--|
-| projectId| string
-<!-- | asset | (for quick actions- uploads) -->
-
-You get this `projectId` from `publishParams` after you save a project. Refer to the [callbacks](#callbacks) sections.
+| asset | [Asset](#asset)
+| exportOption | [ExportOption](#export-option)
 
 ---
 
-## CCXOutputParams
-
-All properties are optional. As of this version, the only supported output type is a base64 rendition of the project.
-| Property | Value |
-| :-- | :--|
-| fileType | "jpeg", "png", or "pdf" |
-<!-- | outputType | "base64" -->
-
----
-
-## Callbacks
-
-All the callbacks are optional and return void.
-The only callback function that is passed parameters is PublishCallback: `publishParams`.
-
-Parameters for `publishParams`:
-
-- projectId: string
-- asset: string (base 64 representation of output)
-  
-| Property | Callback Function |
-| :-- | :--|
-| onLoadStart | LoadStartCallback
-| onLoad | LoadCallback
-| onCancel | CancelCallback
-| onPublishStart | PublishStartCallback
-| onPublish | __PublishCallback__
-| onError | ErrorCallback`<ErrorCode>`
-
----
-
-# Table of Contents
-
-- [Overview](../README.md)
-- [Configuration](configuration.md)
-- [Local Development](local_dev.md)
-- [Quick Start](quickstart.md)
-- [CCX Editor Component](#ccx-editor-component)
-  - [Create Project API](create_project.md)
-  - [Open Project API](edit_project.md)
-- [API References](api_ref.md)
-- [Customization](customization.md)
+## Table of Contents
+* [Overview](README.md)
+* Get Started 
+  * [Configuration](docs/configuration.md)
+  * [Local Development](docs/local_dev.md)
+  * [Quick Start](docs/quickstart.md)
+* SDK Components
+  * CCX Editor Component
+    * [Create Project API](docs/create_project.md)
+    * [Open Project API](docs/edit_project.md)
+  * [Quick Actions API](docs/quick_actions.md)
+* [API References](docs/api_ref.md)
+* [Customization](docs/customization.md)

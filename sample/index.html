@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <title>CC Everywhere Sample</title>
+
+
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+  </head>
+    
+  <body>
+    <button id="createDesign" 
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+        <span class="spectrum-Button-label">Create project</span>
+    </button>
+    <button id="editDesign"
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+        <span class="spectrum-Button-label">Edit project</span>
+    </button>
+    <button id="ResetButton"
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+        <span class="spectrum-Button-label" >Reset</span>
+    </button>
+    <button id="QA"
+        class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+        <span class="spectrum-Button-label" >Quick Actions</span>
+    </button>
+
+<!--  savedDesign: img of the current project -->
+    <img id="savedDesign" height="420" width="420" />
+    <script type="text/javascript" src="./CCEverywhere.js""></script>
+    <script type="text/javascript" >
+        const PROJECT_NAME = 'cc everywhere';
+        var ccEverywhere = null;
+        var project_id = null;
+        var image_data = document.getElementById("savedDesign");
+
+        ccEverywhere = CCEverywhere.default.initialize(
+            {
+                    clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
+                    // in CCX, a folder is created using this given appName and projects are saved there
+                    appName: PROJECT_NAME,
+                    appVersion: { major: 1, minor: 0 },
+                    platformCategory: 'web'
+            });
+        
+        
+        var QAButton = document.getElementById("QA");
+        QAButton.onclick = () => {
+            window.location.href = "https://localhost:3000/quickactions.html";
+        };
+
+
+        const createButton = document.getElementById("createDesign");
+        createButton.onclick = () => {
+            const createDesignCallback = {
+                onCancel: () => {},
+                onPublish: (publishParams) => {
+                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
+                    image_data.src = localData.image;
+                    project_id = localData.project;
+                },
+                onError: (err) => {
+                    console.error('Error received is', err.toString());
+                },
+            };
+            
+            ccEverywhere.createDesign(
+                {
+                    callbacks: createDesignCallback
+                }
+            );  
+        }
+        // ----------------------------------------------------
+        const editButton = document.getElementById("editDesign");
+        editButton.onclick = () => {
+            const editDesignCallback = {
+                onCancel: () => {},
+                onPublish: (publishParams) => {
+                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
+                    image_data.src = localData.image;
+                    project_id = localData.project;
+                },
+                onError: (err) => {
+                    console.error('Error received is', err.toString());
+                },
+            };
+            ccEverywhere.editDesign(
+                {
+                    inputParams: { projectId: project_id },
+                    callbacks: editDesignCallback
+                }
+            );
+        }
+        // ----------------------------------------------------
+        const reset = document.getElementById("ResetButton");
+        reset.onclick = () => {
+            image_data.src = null;
+            project_id = null;
+            window.location.reload();
+        }
+    </script>
+  </body>
+  
+</html>
