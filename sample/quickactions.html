@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <title>Quick Actions</title>
+
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+  </head>
+    
+  <body>
+        <button id="back"
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Go Back</span>
+        </button>
+        <h1> Image Quick Actions </h1>
+        <div>
+            <input type="file" id="fileInput" />
+        </div>
+        <img id="image-container" height="420" width="420" />
+        <div>
+            Choose a Quick Action: 
+        </div>
+            <ul>
+                <button id="image-crop"
+                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                    <span class="spectrum-Button-label">Image Crop</span>
+                </button>
+                <button id="image-resize"
+                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                    <span class="spectrum-Button-label">Image Resize</span>
+                </button>
+                <button id="convert-to-jpg"
+                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                    <span class="spectrum-Button-label">Convert PNG to JPEG</span>
+                </button>
+                <button id="convert-to-png"
+                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                    <span class="spectrum-Button-label">Convert JPG to PNG</span>
+                </button>
+                <button id="image-filters"
+                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                    <span class="spectrum-Button-label">Image Filters</span>
+                </button>
+                <button id="remove-background"
+                    class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                    <span class="spectrum-Button-label">Remove Background</span>
+                </button>
+                
+            </ul>
+
+    <h1> Video Quick Actions </h1> 
+    <div>
+        <input type="file" id="videoFileInput" />
+    </div>
+    <video id="video-container" height="420" width="420" controls> </video>
+    <div>
+        Choose a Quick Action: 
+    </div>
+        <ul>
+            <button id="change-speed"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Change Speed</span>
+            </button>
+            <button id="crop-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Crop Video</span>
+            </button>
+            <button id="convert-to-gif"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Convert to GIF</span>
+            </button>
+            <button id="convert-to-mp4"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Convert to MP4</span>
+            </button>
+            <button id="resize-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Resize Video</span>
+            </button>
+            <button id="reverse-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Reverse Video</span>
+            </button>
+            <button id="trim-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Trim Video</span>
+            </button>
+            <button id="merge-videos"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Merge Videos</span>
+            </button>
+            
+        </ul>
+
+        <script type="text/javascript" src="CCEverywhere.js"></script>
+        <script type="text/javascript" >
+
+        const PROJECT_NAME = 'cc everywhere';
+        // image: user uploaded file
+        var imageFile;
+        var videoFile;
+        // imageUrl, videoUrl: base64 representation we pass into QA function
+        var imageUrl, videoUrl;
+        // appImage is the image container displayed in sample 
+        var appImage = document.getElementById('image-container');
+        var appVideo = document.getElementById('video-container');
+
+        const exportOptions = [
+        {
+            label: 'Open In',
+            optionType: 'group',
+            variant: 'cta',
+            buttons: [
+            {
+                target: "Editor",
+                label: "Express",
+                buttonType: "native",
+                optionType: "button"
+            },]
+        },
+         /** target: allows the Quick Task to determine type of export */
+        {
+            target: 'Host',
+            id: '@id/random',
+            label: 'Save in Your App',
+            variant: 'cta',
+            optionType: 'button',
+            buttonType: 'custom'
+        },
+        {
+            target: 'Download',
+            variant: 'primary',
+            optionType: 'button',
+            buttonType: 'native'
+        }
+        ];
+            
+        var ccEverywhere = CCEverywhere.default.initialize(
+            {
+                clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
+                // in CCX, a folder is created using this given appName and projects are saved there
+                appName: PROJECT_NAME,
+                appVersion: { major: 1, minor: 0 },
+                platformCategory: 'web'
+            }
+        );
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+            const reader = new FileReader();
+            imageFile = e.target.files[0];
+            // reads file into base 64 data type
+            reader.readAsDataURL(imageFile);
+            reader.onload = () => {
+                let encodedImage = reader.result;
+                //  save encoded image into imageUrl
+                imageUrl = encodedImage;
+                appImage.src = imageUrl;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        const imageCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                imageUrl = publishParams.asset.data;
+                // update the image src in sample
+                appImage.src = imageUrl;
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        function openImageQuickAction(qa_id) {
+            if (imageFile) {
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: {
+                        asset: {
+                            data: imageUrl, 
+                            dataType: 'base64', 
+                            type: 'image'
+                        }, 
+                        exportOption: exportOptions
+                    },
+                    imageCallbacks
+                })
+            } else {
+            /* If there's no file uploaded, we can still call the QA API and the user is prompted to 
+            browser for image files in the modal */
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: {
+                        exportOption: exportOptions
+                    },
+                })
+            }
+        };
+
+        document.getElementById('image-resize').addEventListener('click', () => {
+            openImageQuickAction('image-resize');
+        })
+
+        document.getElementById('image-crop').addEventListener('click', () => {
+            openImageQuickAction('image-crop');
+        })
+
+        document.getElementById('convert-to-jpg').addEventListener('click', () => {
+            openImageQuickAction('convert-to-jpg');
+        })
+        
+        document.getElementById('convert-to-png').addEventListener('click', () => {
+            openImageQuickAction('convert-to-png');
+        })
+
+        /* doesn't work - Unable to find quick action metadata when provided with quickActionId.  */
+        document.getElementById('image-filters').addEventListener('click', () => {
+            openImageQuickAction('image-filters');
+        })
+
+        document.getElementById('remove-background').addEventListener('click', () => {
+            openImageQuickAction('remove-background');
+        })
+
+        // __________________________________________________________
+        // Video Quick Actions 
+        // __________________________________________________________
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        document.getElementById('videoFileInput').addEventListener('change', (e) => {
+            const reader = new FileReader();
+            videoFile = e.target.files[0];
+            // reads file into base 64 data type
+            reader.readAsDataURL(videoFile);
+            reader.onload = () => {
+                let encodedVideo = reader.result;
+                videoUrl = encodedVideo;
+                console.log(reader.result);
+                appVideo.src = videoUrl;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+        const videoCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                const { exportButtonId, asset } = publishParams;
+                if (exportButtonId === 'open_video_new_tab') {
+                    window.open(asset.data, '_blank');
+                }
+                videoUrl = asset.data;
+                // update the video src in sample
+                appVideo.src = videoUrl;
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+        const videoExportOptions = [
+            {
+            target: 'Host',
+            id: 'open_video_new_tab',
+            label: 'View in New Tab',
+            variant: 'cta',
+            optionType: 'button',
+            buttonType: 'custom'
+            },
+            {
+            target: 'Download',
+            variant: 'primary',
+            optionType: 'button',
+            buttonType: 'native'
+            }
+        ];
+
+        function openVideoQuickAction(qa_id) {
+            /* Todo: find out why video file with user-uploaded base64 throws error */
+            if (videoFile) {
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: {
+                        asset: {
+                            data: videoUrl, 
+                            dataType: 'base64', 
+                            type: 'video'
+                        }, 
+                        exportOption: videoExportOptions
+                    },
+                    videoCallbacks
+                })
+            } else {
+            /* this works - If there's no file uploaded, we can still call the QA API and the user is prompted to 
+            browser for image files in the modal */
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: {
+                        exportOption: exportOptions
+                    },
+                })
+            }
+        };
+        
+        
+        document.getElementById('change-speed').addEventListener('click', () => {
+            openVideoQuickAction('change-speed');
+        })
+        document.getElementById('crop-video').addEventListener('click', () => {
+            openVideoQuickAction('crop-video');
+        })
+        document.getElementById('convert-to-gif').addEventListener('click', () => {
+            openVideoQuickAction('convert-to-gif');
+        })
+        document.getElementById('convert-to-mp4').addEventListener('click', () => {
+            openVideoQuickAction('convert-to-mp4');
+        })
+        document.getElementById('resize-video').addEventListener('click', () => {
+            openVideoQuickAction('resize-video');
+        })
+        document.getElementById('reverse-video').addEventListener('click', () => {
+            openVideoQuickAction('reverse-video');
+        })
+        document.getElementById('trim-video').addEventListener('click', () => {
+            openVideoQuickAction('trim-video');
+        })
+        document.getElementById('merge-videos').addEventListener('click', () => {
+            openVideoQuickAction('merge-videos');
+        })
+
+        // __________________________________________________________
+
+
+        var backButton = document.getElementById('back');
+        backButton.addEventListener('click',  () => {
+            window.location.href = 'https://localhost:3000';
+        })
+
+            
+        </script>
+  </body>
+  
+</html>
