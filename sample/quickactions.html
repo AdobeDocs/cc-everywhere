@@ -26,7 +26,7 @@
         <div>
             <input type="file" id="fileInput" />
         </div>
-        <img id="image-container" height="420" width="420" />
+            <img id="image-container" height="420" width="420" />
         <div>
             Choose a Quick Action: 
         </div>
@@ -55,10 +55,6 @@
             </ul>
 
     <h1> Video Quick Actions </h1> 
-    <!-- <div>
-        <input type="file" id="videoFileInput" />
-    </div>
-    <video id="video-container" height="420" width="420" controls> </video> -->
     <div>
         Choose a Quick Action: 
     </div>
@@ -97,55 +93,25 @@
             </button>
             
         </ul>
+        <h2> Your edited video will appear here </h2>
+        <video id="video-container" height="420" width="420" controls></video>
+    
 
         <script type="text/javascript" src="CCEverywhere.js"></script>
         <script type="text/javascript" >
-
+        /* PROJECT_NAME: CCX project folder name */ 
         const PROJECT_NAME = 'cc everywhere';
-        // image: user uploaded file
+        /* image: user uploaded file */
         var imageFile;
-        // var videoFile;
-        // imageUrl, videoUrl: base64 representation we pass into QA function
+        /* imageUrl: base64 representation we pass into QA function */
         var imageUrl;
-        // var videoUrl;
-        // appImage is the image container displayed in sample 
+        /* appImage is the image container displayed in sample */
         var appImage = document.getElementById('image-container');
-        // var appVideo = document.getElementById('video-container');
-
-        const exportOptions = [
-        {
-            label: 'Open In',
-            optionType: 'group',
-            variant: 'cta',
-            buttons: [
-            {
-                target: "Editor",
-                label: "Express",
-                buttonType: "native",
-                optionType: "button"
-            },]
-        },
-         /** target: allows the Quick Task to determine type of export */
-        {
-            target: 'Host',
-            id: '@id/random',
-            label: 'Save in Your App',
-            variant: 'cta',
-            optionType: 'button',
-            buttonType: 'custom'
-        },
-        {
-            target: 'Download',
-            variant: 'primary',
-            optionType: 'button',
-            buttonType: 'native'
-        }
-        ];
+        var appVideo = document.getElementById('video-container');
             
         var ccEverywhere = CCEverywhere.default.initialize(
             {
                 clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
-                // in CCX, a folder is created using this given appName and projects are saved there
                 appName: PROJECT_NAME,
                 appVersion: { major: 1, minor: 0 },
                 platformCategory: 'web'
@@ -170,11 +136,46 @@
             };
         })
 
+        /* __________________________________________________________
+                        Image Quick Actions 
+        __________________________________________________________ */
+
+        const exportOptions = [
+            {
+                /* Export Button group (parent with drop down) example */
+                label: 'Open In',
+                optionType: 'group',
+                variant: 'cta',
+                buttons: [
+                {
+                    target: "Editor",
+                    label: "Express",
+                    buttonType: "native",
+                    optionType: "button"
+                },]
+            },
+            /* Custom export button */
+            {
+                target: 'Host',
+                id: '@id/random',
+                label: 'Save in Your App',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'custom'
+            },
+            {
+                /* Native Button example */
+                target: 'Download',
+                variant: 'primary',
+                optionType: 'button',
+                buttonType: 'native'
+            }
+        ];
+
         const imageCallbacks = {
             onCancel: () => {},
             onPublish: (publishParams) => {
                 imageUrl = publishParams.asset.data;
-                // update the image src in sample
                 appImage.src = imageUrl;
             },
             onError: (err) => {
@@ -182,8 +183,8 @@
             }
         }
 
-        function openImageQuickAction(qa_id) {
-            if (imageFile) {
+        function openImageQuickAction(qa_id) {            
+            if (imageUrl) {
                 ccEverywhere.openQuickAction({
                     id: qa_id, 
                     inputParams: {
@@ -192,19 +193,18 @@
                             dataType: 'base64', 
                             type: 'image'
                         }, 
-                        exportOption: exportOptions
+                        exportOptions: exportOptions
                     },
-                    imageCallbacks
+                    callbacks: imageCallbacks
                 })
             } else {
             /* If there's no file uploaded, we can still call the QA API and the user is prompted to 
             browser for image files in the modal */
                 ccEverywhere.openQuickAction({
                     id: qa_id, 
-                    inputParams: {
-                        exportOption: exportOptions
-                    },
-                })
+                    inputParams: { exportOptions: exportOptions },
+                    callbacks: imageCallbacks
+                });
             }
         };
 
@@ -228,85 +228,71 @@
             openImageQuickAction('remove-background');
         })
 
-        // __________________________________________________________
-        // Video Quick Actions 
-        // __________________________________________________________
+        /* __________________________________________________________
+                        Video Quick Actions 
+        __________________________________________________________ */
 
-        /* This event listener checks to see if the user uploads a new file 
-        and reads it into base64 data type for SDK ingestion later */
-        // document.getElementById('videoFileInput').addEventListener('change', (e) => {
-        //     const reader = new FileReader();
-        //     videoFile = e.target.files[0];
-        //     // reads file into base 64 data type
-        //     reader.readAsDataURL(videoFile);
-        //     reader.onload = () => {
-        //         let encodedVideo = reader.result;
-        //         videoUrl = encodedVideo;
-        //         appVideo.src = videoUrl;
-        //     }
-        //     reader.onerror = (error) => {
-        //         console.log('error', error);
-        //     };
-        // })
         const videoCallbacks = {
             onCancel: () => {},
             onPublish: (publishParams) => {
                 const { exportButtonId, asset } = publishParams;
-                console.log(publishParams)
-                if (exportButtonId === 'open_video_new_tab') {
-                    window.open(asset.data, '_blank');
+                // if (exportButtonId === 'open_video_new_tab') {
+                //     parent.window.open(asset.data, '_blank');
+                // }
+                if (exportButtonId === 'open_video_app') {
+                    appVideo.src = asset.data;
                 }
-                videoUrl = asset.data;
-                // update the video src in sample
-                appVideo.src = videoUrl;
             },
             onError: (err) => {
                 console.error('Error received is', err.toString())
             }
         }
         const videoExportOptions = [
+            // {
+            //     /* Export Button group (parent with drop down) doesn't work with video QA */
+            //     label: 'Open In',
+            //     optionType: 'group',
+            //     variant: 'cta',
+            //     buttons: [
+            //     {
+            //         target: 'Host',
+            //         id: 'open_video_app',
+            //         label: 'App',
+            //         buttonType: 'custom',
+            //         optionType: 'button'
+            //     },{
+            //         target: 'Host',
+            //         id: 'open_video_new_tab',
+            //         label: 'New tab',
+            //         button: 'custom',
+            //         optionType: 'button'
+            //     }]
+            // },
             {
-            target: 'Host',
-            id: 'open_video_new_tab',
-            label: 'View in New Tab',
-            variant: 'cta',
-            optionType: 'button',
-            buttonType: 'custom'
+                target: 'Host',
+                id: 'open_video_app',
+                label: 'Open in app',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'custom'
             },
             {
-            target: 'Download',
-            variant: 'primary',
-            optionType: 'button',
-            buttonType: 'native'
+                target: 'Download',
+                variant: 'primary',
+                optionType: 'button',
+                buttonType: 'native'
             }
         ];
-
         function openVideoQuickAction(qa_id) {
-            /* Todo: find out why video file with user-uploaded base64 throws error */
-            // if (videoFile) {
-            //     ccEverywhere.openQuickAction({
-            //         id: qa_id, 
-            //         inputParams: {
-            //             asset: {
-            //                 data: videoUrl, 
-            //                 dataType: 'base64', 
-            //                 type: 'video'
-            //             }, 
-            //             exportOption: videoExportOptions
-            //         },
-            //         videoCallbacks
-            //     })
-            // } else {
-            /* this works - If there's no file uploaded, we can still call the QA API and the user is prompted to 
+            /* file input not supported yet, call the QA API and the user is prompted to 
             browser for image files in the modal */
-                ccEverywhere.openQuickAction({
-                    id: qa_id, 
-                    inputParams: {
-                        exportOption: videoExportOptions
-                    },
-                    videoCallbacks
-                })
-            // }
+            ccEverywhere.openQuickAction({
+                id: qa_id, 
+                inputParams: {
+                    exportOptions: videoExportOptions
+                },
+                callbacks: videoCallbacks
+            })
         };
         
         

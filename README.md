@@ -39,14 +39,15 @@ After the user launches the CCX editor component upon any user interaction you s
 
 ### Images
   * Crop Image
-  * Convert JPEG/PNG
-  * Image Filters
+  * Convert to JPEG
+  * Convert to PNG
   * Resize Image
   * Remove Background
 
 ### Video
   * Change Speed
-  * Convert to GIF/MP4
+  * Convert to GIF
+  * Convert to MP4
   * Crop Video
   * Merge Videos
   * Resize Video

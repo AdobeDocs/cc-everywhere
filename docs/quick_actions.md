@@ -93,9 +93,12 @@ ccEverywhere.openQuickAction({
 })
 ```
 
+- Currently, you cannot pass a video asset for a video Quick Action. Instead users will be prompted to browse once the CCX QA modal is open. 
+- [ExportButtonGroup](api_ref.md#exportbuttongroup) is not a valid [ExportOption](api_ref.md#exportoption) for Video Quick Actions. You can create custom and native buttons by specifying objects of [ExportButton](api_ref.md#exportbutton) type. 
+
 
 #
-### Image Example 
+### Image QA Example 
 After a user uploads a file to the example, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl". 
 
 They can then click the "Image Crop" button, which call the Quick Actions API. A CCX modal is launched, and the user is presented several export options along with the Quick Action. 
@@ -203,9 +206,9 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
                     dataType: 'base64', 
                     type: 'image'
                 }, 
-                exportOption: exportOptions
+                exportOptions: exportOptions
             },
-            callbacks,
+            callbacks: callbacks,
             modalParams: {},
         })
     })
@@ -214,4 +217,79 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
 </html>
 ```
 
-Refer to the [sample](/sample/quickactions.html) to see a longer example of Video Quick Actions as well. 
+#
+### Video QA Example 
+They can then click the "Image Crop" button, which call the Quick Actions API. A CCX modal is launched, and the user is presented several export options along with the Quick Action. 
+
+```
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Quick Actions</title>
+  </head>
+    
+  <body>
+    <h1> Video Quick Action Example </h1>
+    <button id="change-speed"> Crop Image </button>
+
+    <script type="text/javascript" src="CCEverywhere.js"></script>
+    <script type="text/javascript" >
+
+    const PROJECT_NAME = 'cc everywhere';
+
+    /* This event listener checks to see if the user uploads a new file and reads it into base64 data type for SDK ingestion later */
+
+    var ccEverywhere = CCEverywhere.default.initialize(
+        {
+            clientId: YOUR_CLIENT_ID,
+            appName: PROJECT_NAME,
+            appVersion: { major: 1, minor: 0 },
+            platformCategory: 'web'
+        }
+    );
+
+    const videoCallbacks = {
+        onCancel: () => {},
+        onPublish: (publishParams) => {
+            const { exportButtonId, asset } = publishParams;
+            if (exportButtonId === 'open_video_new_tab') {
+                parent.window.open(asset.data, '_blank');
+            }
+        },
+        onError: (err) => {
+            console.error('Error received is', err.toString())
+        }
+    }
+
+    const videoExportOptions = [
+        {
+            target: 'Host',
+            id: 'open_video_new_tab',
+            label: 'View in New Tab',
+            variant: 'cta',
+            optionType: 'button',
+            buttonType: 'custom'
+            },
+            {
+            target: 'Download',
+            variant: 'primary',
+            optionType: 'button',
+            buttonType: 'native'
+        }
+    ];
+
+    document.getElementById('change-speed')
+    .addEventListener('click', () => {
+        ccEverywhere.openQuickAction({
+            id: 'change-speed', 
+            inputParams: { 
+                exportOptions: videoExportOptions
+            },
+            callbacks: videoCallbacks,
+            modalParams: {},
+        })
+    })
+    </script>
+  </body> 
+</html>
+```
