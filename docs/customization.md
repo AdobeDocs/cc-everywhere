@@ -1,17 +1,18 @@
 # Customization 
 ## Table of Contents
-* [Overview](README.md)
+* [Overview](../README.md)
 * Get Started 
-  * [Configuration](docs/configuration.md)
-  * [Local Development](docs/local_dev.md)
-  * [Quick Start](docs/quickstart.md)
+  * [Configuration](configuration.md)
+  * [Local Development](local_dev.md)
+  * [Quick Start](quickstart.md)
 * SDK Components
   * CCX Editor Component
-    * [Create Project API](docs/create_project.md)
-    * [Open Project API](docs/edit_project.md)
-  * [Quick Actions API](docs/quick_actions.md)
-* [API References](docs/api_ref.md)
-* [Customization](docs/customization.md)
+    * [Create Project API](create_project.md)
+    * [Open Project API](edit_project.md)
+  * [Quick Actions API](quick_actions.md)
+* [API References](api_ref.md)
+* [Customization](customization.md)
+* [Sample](../sample/README.md)
 #
 
 ## Locale

@@ -1,18 +1,19 @@
 # Quick Start
 
 ## Table of Contents
-* [Overview](README.md)
+* [Overview](../README.md)
 * Get Started 
-  * [Configuration](docs/configuration.md)
-  * [Local Development](docs/local_dev.md)
-  * [Quick Start](docs/quickstart.md)
+  * [Configuration](configuration.md)
+  * [Local Development](local_dev.md)
+  * [Quick Start](quickstart.md)
 * SDK Components
   * CCX Editor Component
-    * [Create Project API](docs/create_project.md)
-    * [Open Project API](docs/edit_project.md)
-  * [Quick Actions API](docs/quick_actions.md)
-* [API References](docs/api_ref.md)
-* [Customization](docs/customization.md)
+    * [Create Project API](create_project.md)
+    * [Open Project API](edit_project.md)
+  * [Quick Actions API](quick_actions.md)
+* [API References](api_ref.md)
+* [Customization](customization.md)
+* [Sample](../sample/README.md)
 #
 CC Everywhere SDK lets you launch a CCX editor within your own application. This guide explains how to start using the SDK in your own app.
 
@@ -83,8 +84,10 @@ This method returns a `CCEverywhere` object, with two methods:
 
 * `createDesign()`
 * `editDesign()`
+* `openQuickAction()`
+* `exchangeAuthCodeForToken()`
 
-These methods are the ones you will use to create a new project or edit an existing one in the CCX editor. To learn more about these methods, visit the [API references](api_ref.md) page.
+These methods are the ones you will use to perform a Quick Action, or to create a new project or edit an existing one in the CCX editor. To learn more about these methods, visit the [API references](api_ref.md) page.
 
 ---
 
@@ -96,11 +99,11 @@ When you call this API, what happens is the Adobe IMS Server stores the code and
 
 We can exchange that code from an access token with the following line:
 
-```js
+`
 ccEverywhere.exchangeAuthCodeForToken();
-```
+`
 
-Create a new endpoint that simply initializes the SDK and calls this function. This endpoint should correspond to the redirect URI you provided us with. The default redirect URI we specified for our sample is "https://localhost:3000/redirect.html". This function will store that token for future requests to the SDK during this session.
+Create a new endpoint that simply initializes the SDK and calls this function. This endpoint should correspond to the redirect URI you provided us with. The default redirect URI we specified for our [sample](../sample/redirect.html) is "https://localhost:3000/redirect.html". This function will store that token for future requests to the SDK during this session.
 
 In a future build of this SDK, you will be able to specify the redirect uri you wish in the initialize function. 
 
@@ -114,3 +117,5 @@ Read more about:
 
 * How to [create a project](create_project.md) in the editor
 * How to [edit an existing project](edit_project.md) in the editor
+* How to [use Image Quick Actions](quick_actions.md#image-quick-actions)
+* How to [use Video Quick Actions](quick_actions.md#video-quick-actions)

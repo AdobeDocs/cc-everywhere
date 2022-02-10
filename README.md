@@ -13,6 +13,7 @@
   * [Quick Actions API](docs/quick_actions.md)
 * [API References](docs/api_ref.md)
 * [Customization](docs/customization.md)
+* [Sample](sample/README.md)
 #
 
 CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CC Express (CCX) capabilities to all applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. 
@@ -54,6 +55,7 @@ After the user launches the CCX editor component upon any user interaction you s
   * Reverse Video
   * Trim Video
 
+Read more about the Quick Actions API [here](docs/quick_actions.md).
 
 ---
 

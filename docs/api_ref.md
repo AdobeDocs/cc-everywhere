@@ -18,8 +18,7 @@
   - [EditInputParams](#editinputparams)
   - [ExportOption](#exportoption)
     - [ExportButton](#exportbutton)
-    - [ExportButtonGroup](#exportbuttongroup)
-    - [CustomExportButton: Custom Button Clicks](#customexportbutton-custom-button-clicks)
+      - [__label__](#label)
     - [NativeExportButton: Render a Native Button](#nativeexportbutton-render-a-native-button)
     - [Example](#example)
   - [ModalParams](#modalparams)
@@ -179,7 +178,7 @@ An Asset type has three properties:
 
 | Property | Value(s)
 |:-- | :--
-| type | 'image' or 'video'
+| type | 'image'
 | dataType | 'base64'
 | data | string (base 64 representation of output)
  
@@ -188,7 +187,7 @@ An Asset type has three properties:
 An OutputAsset type has an additional property, and 2 optional properties.
 | Property | Value(s)
 |:-- | :--
-| type | 'image' or 'video'
+| type | 'image'
 | dataType | 'base64'
 | data | string (base 64 representation of output)
 | fileType | 'jpeg', 'pdf', 'png', 'mp4'
@@ -261,38 +260,22 @@ Allows you to specify the project ID the target application (CCX Editor Componen
 
 ---
 ## ExportOption
-This interface describes the base object for export buttons and groups. Allows you to define export buttons and groups for a Quick Action. All the properties are optional.
+Allows you to define export buttons and groups for a Quick Action. All the properties are optional. Must be specified in [QuickActionsInputParams](#quickactioninputparams) - it can be an empty array.
 
 
 ### ExportButton 
-This interface describes the base object that is used to render a button once the quick action has completed the action. 
+This interface describes the base object that is used to render a button once the quick action has completed the action.  
+
 | Property | Value | Description
 | :-- | :--|:--
 |optionType| "button" | QA renders single standalone button
-|label| string | Export label name
+|[label](#label)| string | Export label name
 |variant | "cta"/"primary"/"secondary" | Defines the [style](https://spectrum.adobe.com/page/button/) of a button.
-| buttonType | 'custom' or 'native' | Type of export button ([Custom](#customexportbutton-custom-button-clicks)/[Native](#nativeexportbutton-render-a-native-button))
+| buttonType | 'native' | Type of export button ([Native](#nativeexportbutton-render-a-native-button))
 | optionType | 'button' | Type of ExportOption 
 
-### ExportButtonGroup
-This interface describes the object that is used to render a group of buttons which will be shown as a drop down under a parent button. 
-| Property | Value | Description
-| :-- | :--|:--
-|optionType| "group" | QA renders drop-down button
-|label| string | Export label name
-|variant | "cta"/"primary"/"secondary" | Defines the [style](https://spectrum.adobe.com/page/button/) of a button.
-| buttons | array of [ExportButton](#export-button) | List of buttons under a dropdown menu
-
-
-### CustomExportButton: Custom Button Clicks
-
-This interface describes an object that is used to render a custom button once the quick action has completed the action.  On button click, the id will be passed back in the `onPublish` callback, along with the asset data. 
-| Property | Value | Description
-| :-- | :--|:--
-|id| string | ID of the export button 
-|label| string | Localized text of the export button
-|target | 'Host' | Used to render a custom button. Currently only 'Host'.
-| buttonType | 'custom' | Type of button
+#### __label__
+"label" defaults to "Customize" when the target is "Editor" and "Download" when the target is "Download".
 
 ### NativeExportButton: Render a Native Button
 
@@ -303,29 +286,16 @@ This interface describes an object that is used to render a native button once t
 |          | 'new' | QA handles button click in a new tab/window
 |target | 'Download' | On click will download the asset
 |  | 'Editor' | On click will open the asset in CCX
-| buttonType | 'custom' | Type of button
+| buttonType | 'native' | Type of button
 
 ### Example
 ```
 const exportOptions = [
-    // EXPORT BUTTON GROUP 
+    
+    ** target: allows the Quick Task to determine type of export */
     {
-        label: 'Open In',
-        optionType: 'group',
-        variant: 'cta',
-        buttons: [
-        {
-            target: "Editor",
-            label: "Express",
-            buttonType: "native",
-            optionType: "button"
-        },]
-    },
-        /** target: allows the Quick Task to determine type of export */
-    {
-        target: 'Host',
-        id: '@id/random',
-        label: 'Save in Your App',
+        // Customize in Express button
+        target: 'Editor',
         variant: 'cta',
         optionType: 'button',
         buttonType: 'custom'
@@ -364,15 +334,16 @@ Allows you to specify the asset and export buttons/groups you want to perform a 
 ---
 
 ## Table of Contents
-* [Overview](README.md)
+* [Overview](../README.md)
 * Get Started 
-  * [Configuration](docs/configuration.md)
-  * [Local Development](docs/local_dev.md)
-  * [Quick Start](docs/quickstart.md)
+  * [Configuration](configuration.md)
+  * [Local Development](local_dev.md)
+  * [Quick Start](quickstart.md)
 * SDK Components
   * CCX Editor Component
-    * [Create Project API](docs/create_project.md)
-    * [Open Project API](docs/edit_project.md)
-  * [Quick Actions API](docs/quick_actions.md)
-* [API References](docs/api_ref.md)
-* [Customization](docs/customization.md)
+    * [Create Project API](create_project.md)
+    * [Open Project API](edit_project.md)
+  * [Quick Actions API](quick_actions.md)
+* [API References](api_ref.md)
+* [Customization](customization.md)
+* [Sample](../sample/README.md)
