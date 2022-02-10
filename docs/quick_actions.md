@@ -1,18 +1,20 @@
 # Quick Actions
 
 ## Table of Contents
-* [Overview](README.md)
+* [Overview](../README.md)
 * Get Started 
-  * [Configuration](docs/configuration.md)
-  * [Local Development](docs/local_dev.md)
-  * [Quick Start](docs/quickstart.md)
+  * [Configuration](configuration.md)
+  * [Local Development](local_dev.md)
+  * [Quick Start](quickstart.md)
 * SDK Components
   * CCX Editor Component
-    * [Create Project API](docs/create_project.md)
-    * [Open Project API](docs/edit_project.md)
-  * [Quick Actions API](docs/quick_actions.md)
-* [API References](docs/api_ref.md)
-* [Customization](docs/customization.md)
+    * [Create Project API](create_project.md)
+    * [Open Project API](edit_project.md)
+  * [Quick Actions API](quick_actions.md)
+* [API References](api_ref.md)
+* [Customization](customization.md)
+* [Sample](../sample/README.md)
+
 #
 The Quick Actions API allows developers to harness the power of Photoshop, Acrobat, and Premiere capabilities and use it in their own application. We currently support [Image](#image-quick-actions) and [Video](#video-quick-actions) Quick Actions. In the future, we plan to add PDF Quick Actions. 
 ## Image Quick Actions 
@@ -35,7 +37,7 @@ This method triggers a CCX modal to perform the Quick Action, and takes an objec
 * id: QuickActionId
 * inputParams: [QuickActionInputParams](api_ref.md#quickactioninputparams)
   * asset: object representing data, data format, type of data
-  * exportOption: array of configurable export options (i.e. open in Express, download)
+  * exportOptions: array of configurable export options (i.e. open in Express, download)
 * [Callbacks](api_ref.md#callbacks)
 * [modalParams](api_ref.md#modalparams): determines size of CCX QA modal
 
@@ -120,10 +122,10 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
     <script type="text/javascript" >
 
     const PROJECT_NAME = 'cc everywhere';
-    // file: user uploaded file
-    // imageUrl: base64 representation we pass into QA function
+    /* file: user uploaded file
+    imageUrl: base64 representation we pass into QA function */
     var file, imageUrl;
-    // appImage is the image container displayed in sample 
+    /*  appImage is the image container displayed in sample */
     var appImage = document.getElementById('image-container');
 
     /* This event listener checks to see if the user uploads a new file and reads it into base64 data type for SDK ingestion later */
@@ -132,11 +134,11 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
     .addEventListener('change', (e) => {
         const reader = new FileReader();
         file = e.target.files[0];
-        // reads file into base 64 data type
+        /* reads file into base 64 data type */
         reader.readAsDataURL(file);
         reader.onload = () => {
             let encodedImage = reader.result;
-            //  save encoded image into imageUrl
+            /*  save encoded image into imageUrl */
             imageUrl = encodedImage;
         }
         reader.onerror = (error) => {
@@ -154,29 +156,14 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
     );
 
     const exportOptions = [
-    /* button with a drop down on click, to open in Express */
+        /* Customize export button */
         {
-            label: 'Open In',
-            optionType: 'group',
-            variant: 'cta',
-            buttons: [
-            {
-                target: "Editor",
-                label: "Express",
-                buttonType: "native",
-                optionType: "button"
-            },]
-        },
-        /* Custom export button */
-        {
-            target: 'Host',
-            id: '@id/random',
-            label: 'Save in Your App',
+            target: 'Editor',
             variant: 'cta',
             optionType: 'button',
-            buttonType: 'custom'
+            buttonType: 'native'
         },
-        /* Native export button */
+        /* Download export button */
         {
             target: 'Download',
             variant: 'primary',
@@ -237,8 +224,6 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
 
     const PROJECT_NAME = 'cc everywhere';
 
-    /* This event listener checks to see if the user uploads a new file and reads it into base64 data type for SDK ingestion later */
-
     var ccEverywhere = CCEverywhere.default.initialize(
         {
             clientId: YOUR_CLIENT_ID,
@@ -251,26 +236,20 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
     const videoCallbacks = {
         onCancel: () => {},
         onPublish: (publishParams) => {
-            const { exportButtonId, asset } = publishParams;
-            if (exportButtonId === 'open_video_new_tab') {
-                parent.window.open(asset.data, '_blank');
-            }
         },
         onError: (err) => {
             console.error('Error received is', err.toString())
         }
     }
 
-    const videoExportOptions = [
+    const exportOptions = [
         {
-            target: 'Host',
-            id: 'open_video_new_tab',
-            label: 'View in New Tab',
+            target: 'Editor',
             variant: 'cta',
             optionType: 'button',
-            buttonType: 'custom'
-            },
-            {
+            buttonType: 'native'
+        },
+        {
             target: 'Download',
             variant: 'primary',
             optionType: 'button',
@@ -283,7 +262,7 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
         ccEverywhere.openQuickAction({
             id: 'change-speed', 
             inputParams: { 
-                exportOptions: videoExportOptions
+                exportOptions: exportOptions
             },
             callbacks: videoCallbacks,
             modalParams: {},

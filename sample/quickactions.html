@@ -93,9 +93,9 @@
             </button>
             
         </ul>
-        <h2> Your edited video will appear here </h2>
+        <!-- <h2> Your edited video will appear here </h2>
         <video id="video-container" height="420" width="420" controls></video>
-    
+     -->
 
         <script type="text/javascript" src="CCEverywhere.js"></script>
         <script type="text/javascript" >
@@ -107,7 +107,7 @@
         var imageUrl;
         /* appImage is the image container displayed in sample */
         var appImage = document.getElementById('image-container');
-        var appVideo = document.getElementById('video-container');
+        // var appVideo = document.getElementById('video-container');
             
         var ccEverywhere = CCEverywhere.default.initialize(
             {
@@ -136,41 +136,28 @@
             };
         })
 
-        /* __________________________________________________________
-                        Image Quick Actions 
-        __________________________________________________________ */
-
+        /* Defines native buttons for export: 
+        "Customize" in Express, or "Download" */
         const exportOptions = [
+            /* Customize in Express */
             {
-                /* Export Button group (parent with drop down) example */
-                label: 'Open In',
-                optionType: 'group',
+                target: 'Editor',
                 variant: 'cta',
-                buttons: [
-                {
-                    target: "Editor",
-                    label: "Express",
-                    buttonType: "native",
-                    optionType: "button"
-                },]
+                buttonType: 'native',
+                optionType: 'button'
             },
-            /* Custom export button */
+            /* Download */
             {
-                target: 'Host',
-                id: '@id/random',
-                label: 'Save in Your App',
-                variant: 'cta',
-                optionType: 'button',
-                buttonType: 'custom'
-            },
-            {
-                /* Native Button example */
                 target: 'Download',
                 variant: 'primary',
                 optionType: 'button',
                 buttonType: 'native'
             }
         ];
+
+        /* __________________________________________________________
+                        Image Quick Actions 
+        __________________________________________________________ */
 
         const imageCallbacks = {
             onCancel: () => {},
@@ -235,61 +222,20 @@
         const videoCallbacks = {
             onCancel: () => {},
             onPublish: (publishParams) => {
-                const { exportButtonId, asset } = publishParams;
-                // if (exportButtonId === 'open_video_new_tab') {
-                //     parent.window.open(asset.data, '_blank');
-                // }
-                if (exportButtonId === 'open_video_app') {
-                    appVideo.src = asset.data;
-                }
+                // appVideo.src = publishParams.asset.data;
             },
             onError: (err) => {
                 console.error('Error received is', err.toString())
             }
         }
-        const videoExportOptions = [
-            // {
-            //     /* Export Button group (parent with drop down) doesn't work with video QA */
-            //     label: 'Open In',
-            //     optionType: 'group',
-            //     variant: 'cta',
-            //     buttons: [
-            //     {
-            //         target: 'Host',
-            //         id: 'open_video_app',
-            //         label: 'App',
-            //         buttonType: 'custom',
-            //         optionType: 'button'
-            //     },{
-            //         target: 'Host',
-            //         id: 'open_video_new_tab',
-            //         label: 'New tab',
-            //         button: 'custom',
-            //         optionType: 'button'
-            //     }]
-            // },
-            {
-                target: 'Host',
-                id: 'open_video_app',
-                label: 'Open in app',
-                variant: 'cta',
-                optionType: 'button',
-                buttonType: 'custom'
-            },
-            {
-                target: 'Download',
-                variant: 'primary',
-                optionType: 'button',
-                buttonType: 'native'
-            }
-        ];
+        
         function openVideoQuickAction(qa_id) {
             /* file input not supported yet, call the QA API and the user is prompted to 
             browser for image files in the modal */
             ccEverywhere.openQuickAction({
                 id: qa_id, 
                 inputParams: {
-                    exportOptions: videoExportOptions
+                    exportOptions: exportOptions
                 },
                 callbacks: videoCallbacks
             })
