@@ -28,7 +28,7 @@ This function edits an existing design using CCEverywhere and takes an object of
 * [outputParams](api_ref.md#ccxoutputparams): output type
 * [callbacks](api_ref.md#callbacks) 
 
-```
+```js
 ccEverywhere.editDesign(
     {
     /* inputParams.projectId is the only required parameter */
@@ -52,7 +52,7 @@ Read more about each parameter in the [API references](api_ref.md).
 #
 ## Example
 When the "editButton" button is clicked, the Open Project API is passed the current projectId saved as a global variable and the CCX editor launches that project in a modal.
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
