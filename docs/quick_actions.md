@@ -36,15 +36,15 @@ After the SDK has been initialized, the CCEverywhere object exposes this API via
 This method triggers a CCX modal to perform the Quick Action, and takes an object of parameters of type `QuickActionParams`:
 * id: QuickActionId
 * inputParams: [QuickActionInputParams](api_ref.md#quickactioninputparams)
-  * asset: object representing data, data format, type of data
-  * exportOptions: array of configurable export options (i.e. open in Express, download)
+  * [asset](api_ref.md#asset): object representing data, data format, type of data
+  * [exportOptions](api_ref.md#exportoption): array of configurable export options (i.e. open in Express, download)
 * [Callbacks](api_ref.md#callbacks)
 * [modalParams](api_ref.md#modalparams): determines size of CCX QA modal
 
 Only the Quick Action ID is required to initialize a QA modal. If no input parameters are provided, the CCX modal will automatically prompt the user to browse their device for a image file. 
 
 
-```
+```js
 ccEverywhere.openQuickAction({
     id: 'image-crop', 
     inputParams: {
@@ -79,7 +79,7 @@ With Video Quick Actions, you have access to these capabilities:
 
 Using the same API: 
 
-```
+```js
 ccEverywhere.openQuickAction({
     id: 'change-speed', 
     inputParams: {
@@ -96,16 +96,15 @@ ccEverywhere.openQuickAction({
 ```
 
 - Currently, you cannot pass a video asset for a video Quick Action. Instead users will be prompted to browse once the CCX QA modal is open. 
-- [ExportButtonGroup](api_ref.md#exportbuttongroup) is not a valid [ExportOption](api_ref.md#exportoption) for Video Quick Actions. You can create custom and native buttons by specifying objects of [ExportButton](api_ref.md#exportbutton) type. 
 
 
 #
 ### Image QA Example 
 After a user uploads a file to the example, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl". 
 
-They can then click the "Image Crop" button, which call the Quick Actions API. A CCX modal is launched, and the user is presented several export options along with the Quick Action. 
+They can then click the "Image Crop" button, which call the Quick Actions API. A CCX modal is launched, and the user can crop the image as they wish. They can click "Customize" to continue designing in a CCX editor, or download the asset.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -206,9 +205,9 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
 
 #
 ### Video QA Example 
-They can then click the "Image Crop" button, which call the Quick Actions API. A CCX modal is launched, and the user is presented several export options along with the Quick Action. 
+They can then click the "Change Speed" button, which call the Quick Actions API. A CCX modal is launched, and user is presented with options for changing the speed. Then they can choose to further customize it in an CCX editor, or download the video asset.
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -217,7 +216,7 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
     
   <body>
     <h1> Video Quick Action Example </h1>
-    <button id="change-speed"> Crop Image </button>
+    <button id="change-speed"> Change Speed </button>
 
     <script type="text/javascript" src="CCEverywhere.js"></script>
     <script type="text/javascript" >

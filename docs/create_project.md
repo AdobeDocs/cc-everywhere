@@ -29,7 +29,7 @@ This function creates a new design using CCEverywhere and takes an object of par
 * [outputParams](api_ref.md#ccxoutputparams): output type
 * [callbacks](api_ref.md#callbacks) 
 
-```
+```js
 ccEverywhere.createDesign(
     {
         modalParams: {},
@@ -55,7 +55,7 @@ All the properties in `CreateDesignParams` are optional. You will probably want 
 
 When the "createDesign" button is clicked, the Create Project API is called and the CCX editor should be launched in a modal. 
 
-```
+```html
 <!DOCTYPE html>
 <html lang="en">
   <head>

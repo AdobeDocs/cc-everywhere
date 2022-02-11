@@ -39,7 +39,7 @@ Homebrew is another package installer that you can use: follow [these steps](htt
 Install it using either `npm install mkcert` or `brew install mkcert`.
 
 Navigate back to the project folder and run:
-```
+```bash
 mkcert localhost 
 ```
 
@@ -55,7 +55,7 @@ Install it using `npm i http-server` or `brew install http-server`.
 
 To start the server at port 3000, run this line in your project root: 
 
-```
+```bash
  http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 3000
 ```
 By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CCX. Now your server is up and available at `https://localhost:3000`.
