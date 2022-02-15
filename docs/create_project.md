@@ -114,9 +114,9 @@ When the "createDesign" button is clicked, the Create Project API is called and 
 </html>
 ```
 __Notes__:
-- When `onPublish` is called, we save the project ID in a global variable `projectId` so we can use it to modify the same project later.
+- When `onPublish` is called, we save the project ID in a global variable `projectId` so that we can pre-load it when invocating the Open Project API later.
 - "imageContainer" is the ID of an image element, and its source tag is updated to reflect user's project creations and edits. "create-project-button" is the ID of a button element, and click events on this button launch the editor.
 
 
-Now that you have created a project and rendered the final design onto your own page, let's explore the [Open Project API](edit_project.md) to see how you can launch the editor to make changes to existing projects.
+Now that you have created a project and rendered the final design onto your own page, let's explore the [Open Project API](edit_project.md) to see how you can load pre-existing projects into editors. 
 
