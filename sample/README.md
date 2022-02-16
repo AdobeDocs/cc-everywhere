@@ -31,7 +31,8 @@ By passing in our newly generated SSL key and certificate, we have enabled secur
 
 ## Step 3: Run this sample
 #
-Run this line to test the sample locally: 
+* Modify the `clientID` field in both `index.html` and `redirect.html` when you initialize the SDK. 
+* Run this line to test the sample locally: 
 
 ```
  http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 3000
