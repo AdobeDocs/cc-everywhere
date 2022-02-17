@@ -33,7 +33,7 @@ After the SDK has been initialized, the CCEverywhere object exposes this API via
 
 > `openQuickAction(params: QuickActionParams) => void`
 
-This method triggers a CCX modal to perform the Quick Action, and takes an object of parameters of type `QuickActionParams`:
+This method triggers a CCX modal to perform the Quick Action, and takes an object of parameters of type **QuickActionParams**:
 * id: QuickActionId
 * inputParams: [QuickActionInputParams](api_ref.md#quickactioninputparams)
   * [asset](api_ref.md#asset): object representing data, data format, type of data
@@ -52,9 +52,11 @@ ccEverywhere.openQuickAction({
     },
     callbacks: {
         onCancel: () => {},
-        onPublish: (publishParams) => {
-        }
         onError: (err) => {},
+        onLoadStart: () => {},
+        onLoad: () => {},
+        onPublishStart: () => {},
+        onPublish: (publishParams) => {},
     },
     modalParams: {},
 })
@@ -87,9 +89,11 @@ ccEverywhere.openQuickAction({
     },
     callbacks: {
         onCancel: () => {},
-        onPublish: (publishParams) => {
-        }
         onError: (err) => {},
+        onLoadStart: () => {},
+        onLoad: () => {},
+        onPublishStart: () => {},
+        onPublish: (publishParams) => {},
     },
     modalParams: {},
 })

@@ -16,7 +16,7 @@
 #
 
 ## Locale
-The CC Everywhere SDK lets you customize the locale during initialization. The default value is 'en_US'. 
+The CC Everywhere SDK lets you customize the locale during initialization. The default value is 'en_US'. This determines the language setting for users experiencing SDK components.
 | Locale | Description
 | :-- | :--
 | 'en_US' | English 
