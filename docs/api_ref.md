@@ -125,7 +125,7 @@ This method launches a specified CCX project in the CCX editor component, and re
 
 | Property | Type | Description
 | :-- | :--| :--
-| inputParams | [EditInputParams](#editinputparams) | ID of CCX project to open for editing; [Asset](#asset) type object to load for editing
+| inputParams | [EditInputParams](#editinputparams) | ID of CCX project to open for editing
 | modalParams | [ModalParams](#modalparams) | Specify CCX editor modal dimensions
 | outputParams | [CCXOutputParams](#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
@@ -156,13 +156,13 @@ ccEverywhere.editDesign(
 
 ## EditInputParams
 
-* Get **projectId** from **publishParams** of **onPublish** (called after save/download finishes).
-* **asset** can be used, instead of **projectId**, to load an asset in for editing in the CCX modal.
+Get **projectId** from **publishParams** of **onPublish** (called after save/download finishes).
+<!-- * **asset** can be used, instead of **projectId**, to load an asset in for editing in the CCX modal. -->
   
 | Property | Type | Description 
 | :-- | :--| :--
 | projectId| string | CCX project ID to send to the editor component
-| asset | [Asset](#asset) | Asset to load into the editor component
+<!-- | asset | [Asset](#asset) | Asset to load into the editor component -->
 
 # openQuickAction()
 This method launches a modal to perform a Quick Action, and returns void.
