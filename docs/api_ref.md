@@ -276,7 +276,7 @@ Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) t
 | data | string | Base 64 rendition of video/image asset
 | fileType | 'jpeg', 'png', 'mp4' | Type of output asset 
 | (optional) fileName | string | Name of output asset
-| (optional) size | { width: #, height: #, unit: 'px'/'in'/'mm'} | Dimensions of output asset
+| (optional) size | { width: number, height: number, unit: 'px'/'in'/'mm'} | Dimensions of output asset
 
 --- 
 ## Callbacks
