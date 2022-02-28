@@ -314,7 +314,7 @@ All properties are optional. Allows you to define the UI constraints of the CCX 
 | Property | Type/Value |
 | :-- | :--|
 |parentElementId| string
-|size | { width: #, height: #, unit: 'px'/'in'/'mm'}
+|size | { width: number, height: number, unit: 'px'/'in'/'mm'}
 | padding | number
 | borderRadius | number
 
