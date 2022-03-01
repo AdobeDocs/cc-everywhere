@@ -99,9 +99,9 @@ When you call this API, what happens is the Adobe IMS Server stores the code and
 
 We can exchange that code from an access token with the following line:
 
-`
+```js
 ccEverywhere.exchangeAuthCodeForToken();
-`
+```
 
 Create a new endpoint that simply initializes the SDK and calls this function. This endpoint should correspond to the redirect URI you provided us with. The default redirect URI we specified for our [sample](../sample/redirect.html) is "https://localhost:3000/redirect.html". This function will store that token for future requests to the SDK during this session.
 

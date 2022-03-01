@@ -35,8 +35,11 @@ ccEverywhere.createDesign(
         modalParams: {},
         callbacks: {
             onCancel: () => {},
-            onPublish: (publishParams) => {},
             onError: (err) => {},
+            onLoadStart: () => {},
+            onLoad: () => {},
+            onPublishStart: () => {},
+            onPublish: (publishParams) => {},
         },
         outputParams: { 
             outputType: "base64"

@@ -46,25 +46,23 @@
         var project_id = null;
         var image_data = document.getElementById("savedDesign");
 
-        ccEverywhere = CCEverywhere.default.initialize(
-            {
-                    // insert your own client ID
-                    clientId: 'c352fd34caa94405ab1a2cfa736bb9f5', 
-                    // in CCX, a folder is created using this given appName and projects are saved there
-                    appName: PROJECT_NAME,
-                    appVersion: { major: 1, minor: 0 },
-                    platformCategory: 'web'
-            });
+        ccEverywhere = CCEverywhere.default.initialize({
+            // insert your own client ID
+            clientId: 'c352fd34caa94405ab1a2cfa736bb9f5', 
+            // in CCX, a folder is created using this given appName and projects are saved there
+            appName: PROJECT_NAME,
+            appVersion: { major: 1, minor: 0 },
+            platformCategory: 'web'
+        });
         
         
-        var QAButton = document.getElementById("QA");
-        QAButton.onclick = () => {
+        document.getElementById("QA").addEventListener('click', () => {
             window.location.href = "https://localhost:3000/quickactions.html";
-        };
+        });
 
 
         const createButton = document.getElementById("createDesign");
-        createButton.onclick = () => {
+        createButton.addEventListener('click', () => {
             const createDesignCallback = {
                 onCancel: () => {},
                 onPublish: (publishParams) => {
@@ -79,13 +77,16 @@
             
             ccEverywhere.createDesign(
                 {
-                    callbacks: createDesignCallback
+                    callbacks: createDesignCallback, 
+                    outputParams: {
+                        outputType: "base64",
+                    }
                 }
             );  
-        }
+        });
         // ----------------------------------------------------
         const editButton = document.getElementById("editDesign");
-        editButton.onclick = () => {
+        editButton.addEventListener('click', () => {
             const editDesignCallback = {
                 onCancel: () => {},
                 onPublish: (publishParams) => {
@@ -103,14 +104,13 @@
                     callbacks: editDesignCallback
                 }
             );
-        }
+        });
         // ----------------------------------------------------
-        const reset = document.getElementById("ResetButton");
-        reset.onclick = () => {
+        document.getElementById('ResetButton').addEventListener('click', () => {
             image_data.src = null;
             project_id = null;
             window.location.reload();
-        }
+        });
     </script>
   </body>
   

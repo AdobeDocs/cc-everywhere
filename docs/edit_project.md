@@ -37,8 +37,11 @@ ccEverywhere.editDesign(
         },
         callbacks: {
             onCancel: () => {},
-            onPublish: (publishParams) => {},
             onError: (err) => {},
+            onLoadStart: () => {},
+            onLoad: () => {},
+            onPublishStart: () => {},
+            onPublish: (publishParams) => {},
         },
         modalParams: {},
         outputParams: { 
