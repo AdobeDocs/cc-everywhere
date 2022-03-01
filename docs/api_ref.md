@@ -53,7 +53,7 @@ All properties are required. **appName** defines the name of a folder created fo
 | :-- | :--| :--
 |clientId | string | Your API Key
 |appName | string | Name of CCX project folder created for user
-|appVersion | { major: number, minor: number, patch: number} | Your app version
+|appVersion | { major: number, minor: number, patch?: number} | Your app version
 | platformCategory | 'web' | Specify host app platform
 
 
