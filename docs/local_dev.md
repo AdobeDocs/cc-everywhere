@@ -53,12 +53,12 @@ This will generate two files: `localhost-key.pem` (key) and `localhost.pem` (cer
 
 Install it using `npm i http-server` or `brew install http-server`.
 
-To start the server at port 3000, run this line in your project root: 
+To start the server at port 8000, run this line in your project root: 
 
 ```bash
- http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 3000
+ http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000
 ```
-By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CCX. Now your server is up and available at `https://localhost:3000`.
+By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CCX. Now your server is up and available at `https://localhost:8000`.
   
 
 Return to the [Quick Start](quickstart.md) guide to see how to embed the SDK in your project.  

@@ -103,7 +103,7 @@ We can exchange that code from an access token with the following line:
 ccEverywhere.exchangeAuthCodeForToken();
 ```
 
-Create a new endpoint that simply initializes the SDK and calls this function. This endpoint should correspond to the redirect URI you provided us with. The default redirect URI we specified for our [sample](../sample/redirect.html) is "https://localhost:3000/redirect.html". This function will store that token for future requests to the SDK during this session.
+Create a new endpoint that simply initializes the SDK and calls this function. This endpoint should correspond to the redirect URI you provided us with. The default redirect URI we specified for our [sample](../sample/redirect.html) is "https://localhost:8000/redirect.html". This function will store that token for future requests to the SDK during this session.
 
 In a future build of this SDK, you will be able to specify the redirect uri you wish in the initialize function. 
 
