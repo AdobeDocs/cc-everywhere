@@ -20,23 +20,17 @@ This will generate two files: `localhost-key.pem` (key) and `localhost.pem` (cer
 `http-server` lets you make files or directories available via `localhost`.
 
 Install it using `npm i http-server` or `brew install http-server`.
-
-To start the server at port 3000, run this line in your project root: 
-
-```
- http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 3000
-```
-By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CCX. Now your server is up and available at `https://localhost:3000`.
   
 
 ## Step 3: Run this sample
 #
-* Modify the `clientID` field in both `index.html` and `redirect.html` when you initialize the SDK. 
-* Run this line to test the sample locally: 
+1. Modify the `clientID` field in both `index.html`, `redirect.html`, and `quickactions.html` when you initialize the SDK. 
+2. To start the server at port 8000, run this line in your project root: 
 
 ```
- http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 3000
+ http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000
 ```
+By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CCX. Now your server is up and available at `https://localhost:8000`.
 
 ## Known Issues 
 
