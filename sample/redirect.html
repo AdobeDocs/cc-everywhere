@@ -17,14 +17,17 @@
       const PROJECT_NAME = 'cc everywhere';
       ccEverywhere = CCEverywhere.default.initialize(
           {
-              clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
+              clientId: '695a1c27f4e147b28d4df7a7a8c46d23',  
+              //clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
               appName: PROJECT_NAME,
               appVersion: { major: 1, minor: 0 },
-              platformCategory: 'web'
+              platformCategory: 'web',
           }
       );
-      ccEverywhere.exchangeAuthCodeForToken();
-        
+      setTimeout(()=> {
+        ccEverywhere.exchangeAuthCodeForToken();
+      }, 10*1000)
+      //ccEverywhere.exchangeAuthCodeForToken();
     </script>
   </body>
   
