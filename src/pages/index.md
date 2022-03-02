@@ -1,8 +1,9 @@
 ---
-title: Overview - Adobe Analytics
-description: This is the overview page of Adobe Analytics
+title: Overview - CC Everywhere SDK 
+description: This is the overview page of CC Everywhere SDK
 contributors:
-  - https://github.com/icaraps 
+  - https://github.com/amandahuarng
+  - https://github.com/pklaschka
 ---
 
 <Hero slots="heading, text"/> 

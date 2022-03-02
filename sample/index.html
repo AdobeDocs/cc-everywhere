@@ -48,13 +48,13 @@
 
         ccEverywhere = CCEverywhere.default.initialize({
             // insert your own client ID
-            clientId: 'c352fd34caa94405ab1a2cfa736bb9f5', 
+            clientId: '695a1c27f4e147b28d4df7a7a8c46d23',
+            // clientId: 'c352fd34caa94405ab1a2cfa736bb9f5', 
             // in CCX, a folder is created using this given appName and projects are saved there
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web'
+            platformCategory: 'web',
         });
-        
         
         document.getElementById("QA").addEventListener('click', () => {
             window.location.href = "https://localhost:3000/quickactions.html";
@@ -98,6 +98,7 @@
                     console.error('Error received is', err.toString());
                 },
             };
+            const ccEverywhere = window.ccEverywhere;
             ccEverywhere.editDesign(
                 {
                     inputParams: { projectId: project_id },
