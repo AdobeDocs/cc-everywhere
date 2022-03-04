@@ -38,7 +38,8 @@ CCEverywhere.default.initialize(
         clientId: YOUR_CLIENT_ID,
         appName: YOUR_PROJECT_NAME,
         appVersion: { major: 1, minor: 0 },
-        platformCategory: 'web'
+        platformCategory: 'web', 
+        redirectUri: YOUR_REDIRECT_URI
     },
     /* ConfigParams (optional) */
     {
@@ -55,6 +56,7 @@ All properties are required. **appName** defines the name of a folder created fo
 |appName | string | Name of CCX project folder created for user
 |appVersion | { major: number, minor: number, patch?: number} | Your app version
 | platformCategory | 'web' | Specify host app platform
+| redirectUri | string | Searches for redirect URL you define in [console](https://developer.adobe.com/console)
 
 
 ## ConfigParams

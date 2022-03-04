@@ -79,7 +79,8 @@ When the "editButton" button is clicked, the Open Project API is passed the curr
             clientId: YOUR_CLIENT_ID
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web'
+            platformCategory: 'web', 
+            redirectUri: YOUR_REDIRECT_URI
         }
     );
 

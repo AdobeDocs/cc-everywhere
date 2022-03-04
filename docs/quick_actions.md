@@ -154,7 +154,8 @@ They can then click the "Image Crop" button, which call the Quick Actions API. A
             clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web'
+            platformCategory: 'web',
+            redirectUri: YOUR_REDIRECT_URI
         }
     );
 
@@ -232,7 +233,8 @@ They can then click the "Change Speed" button, which call the Quick Actions API.
             clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web'
+            platformCategory: 'web',
+            redirectUri: YOUR_REDIRECT_URI
         }
     );
 

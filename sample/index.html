@@ -47,18 +47,16 @@
         var image_data = document.getElementById("savedDesign");
 
         ccEverywhere = CCEverywhere.default.initialize({
-            // insert your own client ID
-            clientId: '695a1c27f4e147b28d4df7a7a8c46d23',
-            //clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
-            // in CCX, a folder is created using this given appName and projects are saved there
+            // stage clientId: '8a485e7470094408a3510b262f404f3d',
+            clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
-            redirectUri: 'https://localhost:8000/redirect.html'
+            redirectUri: 'https://localhost:3000/redirect.html'
         });
         
         document.getElementById("QA").addEventListener('click', () => {
-            window.location.href = "https://localhost:8000/quickactions.html";
+            window.location.href = "https://localhost:3000/quickactions.html";
         });
 
 

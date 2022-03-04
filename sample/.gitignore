@@ -1,4 +1,3 @@
-localhost.pem
-localhost-key.pem
+*.pem
 node_modules
 
