@@ -70,14 +70,13 @@ embedSDK(document, "./CCEverywhere.js");
 To initialize the SDK, call the default method `initialize()`:
 
 ```js
-const ccEverywhere = CCEverywhere.default.initialize(
-                {
-                    clientId: <CLIENT_ID>,
-                    appName: <APP_NAME>,
-                    appVersion: { major: 1, minor: 0 },
-                    platformCategory: 'web'
-                }
-        );
+const ccEverywhere = CCEverywhere.default.initialize({
+    clientId: <CLIENT_ID>,
+    appName: <APP_NAME>,
+    appVersion: { major: 1, minor: 0 },
+    platformCategory: 'web',
+    redirectUri: YOUR_REDIRECT_URI
+});
 ```
 
 This method returns a `CCEverywhere` object, with two methods:
