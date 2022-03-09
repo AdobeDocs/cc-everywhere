@@ -48,7 +48,7 @@ CCEverywhere.default.initialize(
 );
 ```
 ## HostInfo
-All properties are required. **appName** defines the name of a folder created for the user in CCX. Any projects they create or edit will be saved there.
+**appName** defines the name of a folder created for the user in CCX. Any projects they create or edit will be saved there.
 
 | Property | Type | Description
 | :-- | :--| :--
@@ -57,6 +57,8 @@ All properties are required. **appName** defines the name of a folder created fo
 |appVersion | { major: number, minor: number, patch?: number} | Your app version
 | platformCategory | 'web' | Specify host app platform
 | redirectUri | string | Searches for redirect URL you define in [console](https://developer.adobe.com/console)
+
+If you specify `redirectUri` as a parameter in the **HostInfo** object, that is the redirect URI that will be checked first. If you leave this field blank, IMS will search through the "Redirect URI patterns" registered in console for your client, and if no match is found, it will fall back on the "Default Redirect URI".
 
 
 ## ConfigParams
