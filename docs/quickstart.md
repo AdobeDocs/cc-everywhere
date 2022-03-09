@@ -29,9 +29,8 @@ CC Everywhere SDK lets you launch a CCX editor within your own application. This
 
 ## Step 1: Get an API Key
 
-* Follow the steps on the [Configuration](configuration.md) page to get an API key.
+Follow the steps on the [Configuration](configuration.md) page to get an API key.
 
-* Register a redirect URL by emailing marichaec@adobe.com and finnegan@adobe.com.
 
 ---
 

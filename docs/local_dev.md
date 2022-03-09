@@ -19,10 +19,9 @@
 The CC Everywhere SDK expects requests to come from: 
 * express.adobe.com
 * localhost
-* a domain that matches specified redirect URIs 
+* a domain that matches registered redirect URIs 
 
 You cannot just download and embed the SDK in a HTML file on your local machine and open that file in a web browser. Because of the SDK's domain restrictions, the HTML file (or any project using the SDK) must be served via localhost until the redirect URL has been registered. 
- 
  
  This guide contains the steps needed to begin testing your project via localhost. 
 
