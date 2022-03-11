@@ -12,36 +12,26 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: 'v2.0',
-        selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
-      }
-    ],
     pages: [
       {
-        title: 'Adobe Analytics',
+        title: 'CC Everywhere SDK',
         path: '/'
       },
       {
-        title: 'Guides',
-        path: '/guides/'
+        title: 'Components',
+        menu: [{
+          title: 'Embed Editor API',
+          description: 'Embed CCX Editor',
+          path: '/components/editor/'
+        }, {
+          title: 'Quick Actions API',
+          description: 'Image and Video Quick Actions',
+          path: '/components/quick-actions/'
+        }]
       },
       {
-        title: 'API Reference',
-        menu: [{
-          title: 'API Reference v2.0',
-          description: 'Adobe Analytics Reporting API',
-          path: '/api/index.md'
-        }, {
-          title: 'API Reference v1.4',
-          description: 'API Spec for the Adobe Marketing Cloud',
-          path: '/api/1.4.md'
-        }]
+        title: 'API References',
+        path: '/api/'
       },
       {
         title: 'Support',
@@ -51,11 +41,11 @@ module.exports = {
     subPages: [
       {
         title: 'Get Started',
-        path: '/guides/',
+        path: '/components/',
         pages: [
           {
             title: 'Overview',
-            path: '/guides/'
+            path: '/components/'
           },
           {
             title: 'Creating an OAuth Client',
