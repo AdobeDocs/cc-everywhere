@@ -32,3 +32,5 @@ Your existing AdobeID may log in directly, without the prompt for picking which 
 
 ## Step 2: Sign up for an API Key
 Sign up for an API Key for by clicking "Add an API" and choosing **CC Libraries API**. For OAuth, choose **Single Page App** and provide your redirect URL. If you want to test the [sample](../sample/), register `https://localhost:8000/redirect.html` as the redirect URI and replace `clientID` with the one you just created in the sample code. 
+
+![Redirect URI example](console.png)
