@@ -31,4 +31,4 @@ After you've created the correct type of account, sign into the [Adobe console](
 Your existing AdobeID may log in directly, without the prompt for picking which type (Company or Personal) of account. Try using an Incognito window, or a different browser. Clearing adobe.com cookies from your browser should solve the issue.
 
 ## Step 2: Sign up for an API Key
-Sign up for an API Key for by clicking "Add an API" and choosing **CC Libraries API**. For OAuth, choose **Single Page App** and provide your redirect URL. If you want to test the [sample](../sample/), register `https://localhost:8000/redirect.html` as the redirect URI and replace `clientID` with the one you just created in the sample code. 
+Sign up for an API Key for by clicking "Add an API" and choosing **CC Libraries API**. For OAuth, choose **Single Page App** and provide your redirect URL. If you want to test the [sample](../sample/), register `https://localhost:8000/redirect.html` as the redirect URI and replace `clientID` (in the sample code) with the one you just created. 
