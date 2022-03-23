@@ -114,11 +114,11 @@
         // var appVideo = document.getElementById('video-container');
             
         const ccEverywhere = CCEverywhere.default.initialize({
-            clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
+            clientId: '317abf1c6cb4440aa01dc36cac84a9ad',
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
-            redirectUri: 'https://localhost:3000/redirect.html'
+            redirectUri: 'https://localhost:8000/redirect.html'
         });
 
         /* This event listener checks to see if the user uploads a new file 
@@ -281,7 +281,7 @@
 
         var backButton = document.getElementById('back');
         backButton.addEventListener('click',  () => {
-            window.location.href = 'https://localhost:3000';
+            window.location.href = 'https://localhost:8000';
         })        
     </script>
   </body>

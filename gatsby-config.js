@@ -18,20 +18,12 @@ module.exports = {
         path: '/'
       },
       {
-        title: 'Components',
-        menu: [{
-          title: 'Embed Editor API',
-          description: 'Embed CCX Editor',
-          path: '/components/editor/'
-        }, {
-          title: 'Quick Actions API',
-          description: 'Image and Video Quick Actions',
-          path: '/components/quick-actions/'
-        }]
+        title: 'Guides',
+        path: '/guides/'
       },
       {
-        title: 'API References',
-        path: '/api/'
+        title: 'Reference',
+        path: '/reference/'
       },
       {
         title: 'Support',
@@ -40,74 +32,48 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Get Started',
-        path: '/components/',
+        title: 'Quickstart',
+        path: '/guides/quickstart/',
         pages: [
           {
-            title: 'Overview',
-            path: '/components/'
+            title: 'Local Development',
+            path: '/guides/quickstart/local'
+          },
+        ]
+      },
+      {
+        title: 'CCX Editor Component',
+        path: '/guides/ccx_editor/',
+        header: true,
+        pages: [
+          {
+            title: 'Creating New Project',
+            path: '/guides/ccx_editor/create_project'
           },
           {
-            title: 'Creating an OAuth Client',
-            path: '/guides/creating_oauth_client/'
-          },
+            title: 'Editing Existing Project',
+            path: '/guides/ccx_editor/edit_project'
+          }, 
           {
-            title: 'OAuth using cURL',
-            path: '/guides/oauth_using_curl/'
-          },
-          {
-            title: 'OAuth using POSTMAN',
-            path: '/guides/oauth_using_postman/'
-          },
-          {
-            title: 'JWT Authentication',
-            path: '/guides/jwt_authentication/'
+            title: 'Customization',
+            path: '/guides/ccx_editor/customization'
           }
         ]
       },
       {
-        title: 'Reporting API',
-        path: '/guides/reporting_api/',
+        title: 'Quick Actions Component',
+        path: '/guides/quick_actions/',
+        header: true,
         pages: [
           {
-            title: 'Overview',
-            path: '/guides/reporting_api/'
+            title: 'Image Quick Actions',
+            path: '/guides/quick_actions/image'
           },
           {
-            title: 'Reporting with breakdowns',
-            path: '/guides/reporting_api/reporting_breakdowns/',
-            pages: [
-              {
-                title: 'Reporting with single breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/',
-              },
-              {
-                title: 'Reporting with multiple breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/reporting_multiple_breakdowns/',
-              },
-            ]
-          },
-          {
-            title: 'Reporting tips and tricks',
-            path: '/guides/reporting_api/reporting_tips_tricks/'
+            title: 'Video Quick Actions',
+            path: '/guides/quick_actions/video'
           }
         ]
-      },
-      {
-        title: 'Discovery API',
-        path: '/guides/discovery_api/'
-      },
-      {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
-      },
-      {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
-      },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
       },
       {
         title: 'Overview',
@@ -142,5 +108,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/dev-site-documentation-template/'
+  pathPrefix: process.env.PATH_PREFIX || '/cc-everywhere/'
 };

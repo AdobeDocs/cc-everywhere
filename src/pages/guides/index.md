@@ -1,32 +1,20 @@
 ---
-title: Guides - Adobe Analytics
-description: This is the guides overview page of Adobe Analytics 
+title: Guides
+description: This is the page where the guides for CC Everywhere SDK live.
+contributors:
+  - https://github.com/amandahuarng
+  - https://github.com/pklaschka
 ---
 
-# Get Started
+# Guides
 
-To get started with Analytics 2.0 APIs you must first decide whether your application will need
-an OAuth client or a JWT client.
+<!-- TODO: Add diagrams to help consume concepts  -->
 
-## Authentication
+### How do users experience the CCX Editor and Quick Actions?  
+__CCX Editor__:
+* When the CCX editor is first started up: a CCX iframe will appear in a modal and the user will be asked to either log in, or create a CCX account.
+* Once logged in, users can access CCX's huge template and asset library and start creating in a new blank project. They can save the project in CCX once finished. 
+* The CCX Editor can also be spun up taking a CCX project ID as input, and users can continue working on an existing CCX project within the editor.
 
-There are multiple type of authentication for authenticating with the analytics APIs. General information
-about authenticating with Adobe's APIs is located here. Specific information related to authenticating
-with the analytics APIs is available in the sections below
-
-## OAuth
-
-Use an OAuth client if you are creating an application that requires an end use to authenticate before
-calling the Adobe Analytics APIs. The OAuth tokens expire after 24 hours and the end user must then
-re-authenticate before they will be able to call the APIs. To authenticate with an OAuth client, you first
-create an OAuth client on the [Adobe I/O Console](https://console.adobe.io).
-
-<InlineAlert variant="info" slots="text"/>
-
-The refresh token grant type is automatically added to OAuth clients created after September 18, 2019
-
-## JWT
-
-A JWT client is best if you are creating an application that needs to programmatically authenticate calls to 
-the Adobe Analytics APIs. A new JWT token can be generated whenever the old one is about to expire so your application
-can continue to make API calls.  
+__Quick Actions Editor__:
+* Users must select the desired Quick Action (QA) so the corresponding QA editor is spun up. Within the QA Editor, users can browse their filesystem for an asset, and then perform the selected QA. They can download the modified asset to their computer, or further customize the modified asset in a CCX editor.

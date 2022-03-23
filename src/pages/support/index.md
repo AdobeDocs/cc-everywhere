@@ -1,6 +1,6 @@
 ---
-title: Support - Adobe Analytics
-description: This is the support page of Adobe Analytics 
+title: Support - CC Everywhere 
+description: This is the support page of CC Everywhere 
 ---
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>

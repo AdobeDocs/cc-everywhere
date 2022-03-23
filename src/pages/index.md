@@ -8,26 +8,28 @@ contributors:
 
 <Hero slots="heading, text"/> 
 
-# Adobe Analytics API
+# CC Everywhere SDK
 
-Adobe Product API offers limitless ways to integrate your most important customer data into key business processes. Adobe Product API offer limitless ways.
+CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CC Express (CCX) capabilities to all applications.
 
 <Resources slots="heading, links"/>
 
 #### Resources
-
-* [Quickstart Guide](https://www.adobe.io/apis/experiencecloud/analytics/docs.html)
-* [Adobe Analytics Github Repo](https://github.com/AdobeDocs/analytics-2.0-apis)
+* [Quickstart Guide](guides/quickstart/index.md)
+* [Prerelease Github Repo](https://github.com/AdobeDocs/cc-everywhere)
 
 ## Overview
 
-This documentation provides instructions for Adobe Analytics 2.0 APIs. For working with Analytics 1.4 APIs, see [Analytics 1.4 API Documentation](https://github.com/AdobeDocs/analytics-1.4-apis).
+This documentation provides all the materials you need to start integrating CCX components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. As of today, this SDK has two components: __CCX Editor__ and __Quick Actions Editor__.
 
-The Adobe Analytics APIs are a collection of APIs that power Adobe Analytics products like Analysis Workspace. 
-The APIs allow for the creation of data rich user interfaces that you can use to manipulate and integrate data.
-You can also create reports to explore, get insights, or answer important questions about your data.
+### What is CCX? 
+[Creative Cloud Express](https://www.adobe.com/express/) (CCX) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, CCX users can create standout content from wherever they work. 
 
-## Discover 
+### What are Quick Actions? 
+Quick Actions are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed a Quick Actions editor to give end users access to these tools within their own applications.
+
+## Discover
+<!-- explain different workflows here -->
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
@@ -35,51 +37,28 @@ You can also create reports to explore, get insights, or answer important questi
 
 [Quickstart Guide](guides/)
     
-Get started with the Adobe Analytics APIs.
+Start embedding CC Everywhere components into your own application by reading our guides.
 
 <DiscoverBlock slots="heading, link, text"/> 
 
-### Guides
+### Components
 
-[Calculated Metrics API](guides/calculated_metrics_api/) 
+[CCX Editor](guides/ccx_editor/) 
      
-Returns information on the user's company that is necessary for making other Adobe Analytics API calls.
+Embed a CCX editor so users can easily create and publish CCX projects.
 
 <DiscoverBlock slots="link, text"/>
 
-[Segments API](guides/segments_api/) 
+[Quick Actions](guides/quick_actions/) 
 
-Provides configuration guidance and best practices for the /segments endpoint.
+Embed a QA editor so users have fast access to powerful editing tools.
 
-<DiscoverBlock slots="link, text"/>
-
-[Reporting Guide API](guides/reporting_api/)
-
-Provides configuration guidance and best practices for the /reports endpoint.
-
-<DiscoverBlock slots="link, text"/>
-
-[Migrating from 1.4 to 2.0](guides/migrating/)
-
-For help migrating from the 1.4 versions of the Analytics API to the newer and more capable /reports API.   
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
-### API References
+### Reference
 
-[Try the API](api/) 
+[Read the full SDK reference.](reference/) 
 
-Try the Analytics API with Swagger UI. Explore, make calls, with full endpoint descriptions.
 
-## Contributing 
-
-We encourage you to participate in our open documentation initiative, if you have suggestions, corrections, additions 
-or deletions for this documentation, check out the source from [this github repo](https://github.com/adobe/gatsby-theme-spectrum-example), and submit a pull 
-request with your contribution. For more information, refer to the [contributing page](support/contribute/).
-
-## API Requests & Rate Limits
-
-The timeout for API requests through adobe.io is currently *60 seconds*.
-
-The default rate limit for an Adobe Analytics Company is *120 requests per minute*. (The limit is enforced as *12 requests every 6 seconds*).
-When rate limiting is being enforced you will get `429` HTTP response codes with the following response body: `{"error_code":"429050","message":"Too many requests"}`    
+  
