@@ -22,7 +22,7 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'Reference',
+        title: 'SDK Reference',
         path: '/reference/'
       },
       {
@@ -76,7 +76,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Overview',
+        title: 'Support',
         path: '/support/',
         header: true,
         pages: [
@@ -102,6 +102,33 @@ module.exports = {
           {
             title: 'Information',
             path: '/support/community/'
+          }
+        ]
+      },
+      {
+        title: 'Component Reference',
+        path: '/reference',
+        header: true,
+        pages: [
+          // {
+          //   title: 'Authorization', 
+          //   path: '/reference/authorization/'
+          // },
+          {
+            title: 'Initialize SDK', 
+            path: '/reference/'
+          },
+          {
+            title: 'CCX Editor', 
+            path: '/reference/ccx_editor/'
+          },
+          {
+            title: 'Shared Types', 
+            path: '/reference/shared_types/'
+          },
+          {
+            title: 'Quick Actions', 
+            path: '/reference/quick_actions/'
           }
         ]
       }

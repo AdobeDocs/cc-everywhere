@@ -6,7 +6,7 @@ contributors:
   - https://github.com/pklaschka
 ---
 
-<Hero slots="heading, text"/> 
+<Hero slots="heading, text" background="rgb(64, 34, 138)" /> 
 
 # CC Everywhere SDK
 
@@ -15,25 +15,24 @@ CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript l
 <Resources slots="heading, links"/>
 
 #### Resources
-* [Quickstart Guide](guides/quickstart/index.md)
+* [Quickstart Guide](guides/quickstart/)
 * [Prerelease Github Repo](https://github.com/AdobeDocs/cc-everywhere)
 
 ## Overview
 
 This documentation provides all the materials you need to start integrating CCX components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. As of today, this SDK has two components: __CCX Editor__ and __Quick Actions Editor__.
 
-### What is CCX? 
+#### What is CCX? 
 [Creative Cloud Express](https://www.adobe.com/express/) (CCX) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, CCX users can create standout content from wherever they work. 
 
-### What are Quick Actions? 
+#### What are Quick Actions? 
 Quick Actions are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed a Quick Actions editor to give end users access to these tools within their own applications.
 
-## Discover
 <!-- explain different workflows here -->
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
-### Get Started
+## Getting Started
 
 [Quickstart Guide](guides/)
     
@@ -52,11 +51,6 @@ Embed a CCX editor so users can easily create and publish CCX projects.
 [Quick Actions](guides/quick_actions/) 
 
 Embed a QA editor so users have fast access to powerful editing tools.
-
-
-<DiscoverBlock width="100%" slots="heading, link, text"/>
-
-### Reference
 
 [Read the full SDK reference.](reference/) 
 

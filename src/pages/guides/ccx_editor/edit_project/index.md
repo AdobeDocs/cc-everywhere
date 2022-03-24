@@ -24,10 +24,10 @@ editDesign(editDesignParams: EditDesignParams) => void
 This function takes an object of parameters, `editDesignParams`, composed of:
 
 <!-- TODO: fix reference links -->
-* [modalParams](api_ref.md#modalparams): determines size of CCX editor modal
-* [inputParams](api_ref.md#editinputparams): projectId
-* [outputParams](api_ref.md#ccxoutputparams): output type
-* [callbacks](api_ref.md#callbacks) 
+* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of CCX editor modal
+* [inputParams](../../../reference/ccx_editor/index.md#editinputparams): projectId
+* [outputParams](../../../reference/shared_types/index.md#ccxoutputparams): output type
+* [callbacks](../../../reference/shared_types/index.md#callbacks) 
 
 ```js
 // Initialize SDK and save CCEverywhere object as ccEverywhere 

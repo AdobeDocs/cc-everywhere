@@ -24,11 +24,11 @@ openQuickAction(params: QuickActionParams) => void
 This method triggers an iframe to perform the Quick Action, and takes an object of parameters of type **QuickActionParams**:
 <!-- todo: fix links -->
 * id: QuickActionId
-* inputParams: [QuickActionInputParams](api_ref.md#quickactioninputparams)
-  * [asset](api_ref.md#asset): object representing data, data format, type of data
-  * [exportOptions](api_ref.md#exportoption): array of configurable export options (i.e. open in Express, download)
-* [Callbacks](api_ref.md#callbacks)
-* [modalParams](api_ref.md#modalparams): determines size of QA modal
+* inputParams: [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
+  * [asset](../../../reference/shared_types/index.md#asset): object representing data, data format, type of data
+  * [exportOptions](../../../reference/quick_actions/index.md#exportoption): array of configurable export options (i.e. open in Express, download)
+* [Callbacks](../../../reference/shared_types/index.md#callbacks)
+* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of QA modal
 
 Only the Quick Action ID is required to initialize a QA modal. If no input parameters are provided, the modal will automatically prompt the user to browse their device for a image file. 
 

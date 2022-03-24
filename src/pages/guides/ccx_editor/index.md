@@ -7,6 +7,7 @@ contributors:
 ---
 
 # CCX Editor 
+![Editor](editor.png)
 
 ## Create and Edit CCX Projects
 Using the CCX Editor, developers can give end users an easy way to start a creative design workflow from within their own applications.
