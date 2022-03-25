@@ -7,20 +7,11 @@ contributors:
 ---
 
 # Video Quick Actions
-After the SDK has been initialized, the CCEverywhere object exposes these Video Quick Actions via the `openQuickAction()` method.
 
-| Quick Action | QuickActionId
-| :-- | :-- 
-| Change Speed | 'change-speed'
-| Convert to GIF | 'convert-to-gif'
-| Convert to MP4 | 'convert-to-mp4'
-| Crop Video | 'crop-video'
-| Merge Video | 'merge-video'
-| Resize Video | 'resize-video'
-| Reverse Video | 'reverse-video'
-| Trim Video | 'trim-video'
+Each Video Quick Actions component is loaded into the application as an iframe, like the CCX editor component. Users will be prompted to browse for an asset once the QA iframe is loaded. Unlike the Image Quick Actions components, Video QAs cannot be launched with an asset attached during this beta phase.
 
-Using the method `openQuickAction()`: 
+## openQuickAction()
+After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
 
 ```js
 ccEverywhere.openQuickAction({
@@ -40,11 +31,39 @@ ccEverywhere.openQuickAction({
 })
 ```
 
-- Currently, you cannot pass a video asset for a video Quick Action. Instead users will be prompted to browse once the CCX QA modal is open. 
+### QuickActionParams
+`openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
+* id: [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+* inputParams: [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
+  * [exportOptions](../../../reference/quick_actions/index.md#exportoption): array of configurable export options (i.e. open in CCX editor component, download)
+* [Callbacks](../../../reference/shared_types/index.md#callbacks)
+* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of QA modal
+
+
+Only the [QuickActionId](#quickactionid) is required to initialize the iframe.
+
+
+### QuickActionId
+| Quick Action | QuickActionId
+| :-- | :-- 
+| Change Speed | 'change-speed'
+| Convert to GIF | 'convert-to-gif'
+| Convert to MP4 | 'convert-to-mp4'
+| Crop Video | 'crop-video'
+| Merge Video | 'merge-video'
+| Resize Video | 'resize-video'
+| Reverse Video | 'reverse-video'
+| Trim Video | 'trim-video'
 
 
 ## Example 
-They can then click the "Change Speed" button, which call the Quick Actions API. A CCX modal is launched, and user is presented with options for changing the speed. Then they can choose to further customize it in an CCX editor, or download the video asset.
+#### Flow: User clicks the "Change Speed" button.
+* The Change Speed QA Component is launched in an iframe. The user will browse for a mp4 asset to perform the QA on, within this iframe. 
+* Once selected, the user is presented with options for changing the speed. 
+
+Finally, users can choose between 2 export options: 
+* __Customize__: to continue designing in a CCX editor component
+* __Download__: to save the asset
 
 ```html
 <!DOCTYPE html>

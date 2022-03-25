@@ -7,8 +7,46 @@ contributors:
 ---
 
 # Image Quick Actions
-After the SDK has been initialized, the CCEverywhere object exposes these Image Quick Actions via the `openQuickAction()` method. 
 
+Each Image Quick Actions component is loaded into the host application as an iframe, like the CCX editor component. It can be launched with an image asset attached (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for a image file. 
+
+
+## openQuickAction()
+After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
+
+```js
+ccEverywhere.openQuickAction(
+    // QuickActionsParams
+    {
+        id: 'image-crop', 
+        inputParams: {
+            exportOptions: []
+        },
+        callbacks: {
+            onCancel: () => {},
+            onError: (err) => {},
+            onLoadStart: () => {},
+            onLoad: () => {},
+            onPublishStart: () => {},
+            onPublish: (publishParams) => {},
+        },
+        modalParams: {},
+    }
+)
+```
+
+### QuickActionParams
+`openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
+* id: [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+* inputParams: [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
+  * [asset](../../../reference/shared_types/index.md#asset): object representing data, data format, type of data
+  * [exportOptions](../../../reference/quick_actions/index.md#exportoption): array of configurable export options (i.e. open in Express, download)
+* [Callbacks](../../../reference/shared_types/index.md#callbacks)
+* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of QA modal
+
+Only the [QuickActionId](#quickactionid) is required to initialize the iframe.
+
+### QuickActionId
 | Quick Action | QuickActionId
 | :-- | :-- 
 | Crop Image | 'image-crop'
@@ -17,44 +55,19 @@ After the SDK has been initialized, the CCEverywhere object exposes these Image 
 | Resize Image | 'image-resize' 
 | Remove Background | 'remove-background' 
 
-```js
-openQuickAction(params: QuickActionParams) => void
-```
-
-This method triggers an iframe to perform the Quick Action, and takes an object of parameters of type **QuickActionParams**:
-<!-- todo: fix links -->
-* id: QuickActionId
-* inputParams: [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
-  * [asset](../../../reference/shared_types/index.md#asset): object representing data, data format, type of data
-  * [exportOptions](../../../reference/quick_actions/index.md#exportoption): array of configurable export options (i.e. open in Express, download)
-* [Callbacks](../../../reference/shared_types/index.md#callbacks)
-* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of QA modal
-
-Only the Quick Action ID is required to initialize a QA modal. If no input parameters are provided, the modal will automatically prompt the user to browse their device for a image file. 
-
-
-```js
-ccEverywhere.openQuickAction({
-    id: 'image-crop', 
-    inputParams: {
-        exportOptions: []
-    },
-    callbacks: {
-        onCancel: () => {},
-        onError: (err) => {},
-        onLoadStart: () => {},
-        onLoad: () => {},
-        onPublishStart: () => {},
-        onPublish: (publishParams) => {},
-    },
-    modalParams: {},
-})
-```
 
 ## Example 
-After a user uploads a file to the example, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl". 
+#### Flow 1: User uploads an image asset, and clicks the "Image Crop" button.
+   * After a user uploads an image, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl". 
+   * This "imageUrl" is passed as `inputParams.asset` when the `openQuickAction()` method is called. 
+   * The Image Crop QA Component is launched in an iframe, and the user can crop the uploaded image as they wish. 
 
-They can then click the "Image Crop" button, which call the Quick Actions API. A CCX modal is launched, and the user can crop the image as they wish. They can click "Customize" to continue designing in a CCX editor, or download the asset.
+#### Flow 2: User clicks the "Image Crop" button, with no asset attached.
+   * The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on. 
+
+Finally, users can choose between 2 export options: 
+* __Customize__: to continue designing in a CCX editor component
+* __Download__: to save the asset
 
 ```html
 <!DOCTYPE html>
