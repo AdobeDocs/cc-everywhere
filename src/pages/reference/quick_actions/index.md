@@ -6,7 +6,7 @@ contributors:
   - https://github.com/pklaschka
 ---
 # Quick Actions Reference
-![Convert JPG to PNG](image_qa.png)
+![Convert JPG to PNG](imageqa.png)
 
 ## openQuickAction()
 This method launches an iframe to perform a Quick Action.

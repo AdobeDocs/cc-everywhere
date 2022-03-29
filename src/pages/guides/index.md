@@ -84,16 +84,10 @@ The CC Everywhere SDK can be initialized with a customized locale. The [guides](
 * How to [create a project](../guides/ccx_editor/create_project/) in a CCX editor
 * How to [edit an existing project](../guides/ccx_editor/edit_project/) in a CCX editor
 
+When the editor first appears in a modal, the user will be asked to either log in, or create a CCX account. Once logged in, users can access CCX's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing CCX project ID as input, and users can continue working on a CCX project within the editor.
+
 ### [Quick Actions Component](../../guides/quick_actions/index.md)
 * How to [use Image Quick Actions](../guides/quick_actions/image/)
 * How to [use Video Quick Actions](../guides/quick_actions/video/)
 
-### How do users experience the CCX Editor and Quick Actions?  
-#### [CCX Editor Component](../../guides/ccx_editor/index.md)
-* When the CCX editor is first started up: a CCX iframe will appear in a modal and the user will be asked to either log in, or create a CCX account.
-* Once logged in, users can access CCX's huge template and asset library and start creating in a new blank project. They can save the project in CCX once finished. 
-* The CCX Editor can also be spun up taking a CCX project ID as input, and users can continue working on an existing CCX project within the editor.
-
-
-#### [Quick Actions Component](../../guides/quick_actions/index.md)
-* Users must select the desired Quick Action (QA) so the corresponding QA editor is spun up. Within the QA Editor, users can browse their filesystem for an asset, and then perform the selected QA. They can download the modified asset to their computer, or further customize the modified asset in a CCX editor.
+Users must select the desired Quick Action (QA) so the corresponding QA editor is spun up. Within the QA Editor, users can browse their filesystem for an asset, and then perform the selected QA. They can download the modified asset to their computer, or further customize the modified asset in a CCX editor.

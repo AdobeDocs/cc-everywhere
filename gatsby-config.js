@@ -104,7 +104,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Component Reference',
+        title: 'Components',
         path: '/reference',
         header: true,
         pages: [
