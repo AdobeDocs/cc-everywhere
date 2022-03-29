@@ -6,33 +6,22 @@ contributors:
   - https://github.com/pklaschka
 ---
 
-# Creating New Project
+# CCX Editor Component: Create New Project
 
-This guide will demonstrate how to launch a CCX editor with a new project.
+This guide will demonstrate how to launch a CCX editor component. The editor will appear in an iframe and open a new CCX project in a folder named `appName`, as specified when the SDK is initialized.
 
 ## createDesign()
-You can launch a CCX editor with a new project, using the `createDesign()` method. 
+The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `createDesign()` method, which loads the CCX editor component in an iframe. 
 
-Flow: 
-* User triggers `createDesign()` function from within your application, and a CCX editor is loaded in an iframe.
+#### Flow: 
+* User triggers `createDesign()` function from within the host application, and a CCX editor is loaded in an iframe.
 * A pop-up window will appear and the user has to create or log into their CCX account. 
 * Any projects are automatically created/saved in a new project folder ('app_name' specified in SDK initialization) within CCX.
 
 ```js
-createDesign(createDesignParams: CreateDesignParams) => void
-```
-
-This function takes an object of parameters, `createDesignParams`, composed of:
-
-<!-- TODO: fix reference links -->
-* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of CCX editor modal
-* [inputParams](../../../reference/ccx_editor/index.md#createinputparams) canvasAspectId, template types, template search
-* [outputParams](../../../reference/shared_types/index.md#ccxoutputparams): output type
-* [callbacks](../../../reference/shared_types/index.md#callbacks) 
-
-```js
 // Initialize SDK and save CCEverywhere object as ccEverywhere 
 ccEverywhere.createDesign(
+    // CreateDesignParams
     {
         modalParams: {},
         callbacks: {
@@ -53,11 +42,32 @@ ccEverywhere.createDesign(
     }
 ); 
 ```
-All the properties in `CreateDesignParams` are optional. You will probably want to add some code to your `onPublish` callback to send the image data and project ID information back to your own app. The longer example at the bottom demonstrates this. 
+
+
+### [CreateDesignParams](../../../reference/ccx_editor/index.md#createdesignparams)
+`createDesign()` takes an object of parameters, `CreateDesignParams`, composed of:
+
+| Property | Description | Type 
+| :-- | :-- | :--
+| modalParams | Define size of CCX editor modal | [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| inputParams | Specify template layout ratio, template types, template search | [CreateInputParams](../../../reference/ccx_editor/index.md#createinputparams) 
+| outputParams | Configure output type | [CCXOutputParams](../../../reference/shared_types/index.md#ccxoutputparams)
+| callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks) 
+  
+<!-- todo: confirm this is true:  -->
+All the properties in `CreateDesignParams` are optional. 
 
 ## Example 
 
-When the "createDesign" button is clicked, the CCX editor is launched in an iframe. 
+#### Step 1: User clicks the "Create project" button
+* The `createDesign()` function is called and passed `createDesignCallback`. 
+* A CCX editor component is launched in an iframe. 
+
+#### Step 2: User completes design and clicks "Save"
+* The project is saved to the user's CCX account in project folder (`appName`) designated in the [initialize()](../../../reference/index.md#initialize) function.
+* The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __CCX project ID (projectId)__ and __image data representation (asset)__. 
+  * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later via `editDesign()`.
+
 
 ```html
 <!DOCTYPE html>
@@ -118,11 +128,5 @@ When the "createDesign" button is clicked, the CCX editor is launched in an ifra
   </body> 
 </html>
 ```
-__Notes__:
-- When `onPublish` is called, we save the project ID in a global variable `projectId` so that we can pre-load it when invocating the Open Project API later.
-- "imageContainer" is the ID of an image element, and its source tag is updated to reflect the created project, once saved. 
-- "create-project-button" is the ID of a button element, and click events on this button launch the editor.
-
-
 Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into a CCX editor. 
 

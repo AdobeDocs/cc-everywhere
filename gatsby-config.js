@@ -22,7 +22,7 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'SDK Reference',
+        title: 'References',
         path: '/reference/'
       },
       {
@@ -32,46 +32,44 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Quickstart',
-        path: '/guides/quickstart/',
+        title: 'Quickstart Guide',
+        path: '/guides/',
         pages: [
           {
             title: 'Local Development',
-            path: '/guides/quickstart/local'
+            path: '/guides/local/'
           },
         ]
       },
       {
         title: 'CCX Editor Component',
         path: '/guides/ccx_editor/',
-        header: true,
         pages: [
           {
             title: 'Creating New Project',
-            path: '/guides/ccx_editor/create_project'
+            path: '/guides/ccx_editor/create_project/'
           },
           {
             title: 'Editing Existing Project',
-            path: '/guides/ccx_editor/edit_project'
+            path: '/guides/ccx_editor/edit_project/'
           }, 
           {
             title: 'Customization',
-            path: '/guides/ccx_editor/customization'
+            path: '/guides/ccx_editor/customization/'
           }
         ]
       },
       {
         title: 'Quick Actions Component',
         path: '/guides/quick_actions/',
-        header: true,
         pages: [
           {
             title: 'Image Quick Actions',
-            path: '/guides/quick_actions/image'
+            path: '/guides/quick_actions/image/'
           },
           {
             title: 'Video Quick Actions',
-            path: '/guides/quick_actions/video'
+            path: '/guides/quick_actions/video/'
           }
         ]
       },

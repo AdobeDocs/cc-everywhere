@@ -14,36 +14,43 @@ Each Video Quick Actions component is loaded into the application as an iframe, 
 After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
 
 ```js
-ccEverywhere.openQuickAction({
-    id: 'change-speed', 
-    inputParams: {
-        exportOptions: []
-    },
-    callbacks: {
-        onCancel: () => {},
-        onError: (err) => {},
-        onLoadStart: () => {},
-        onLoad: () => {},
-        onPublishStart: () => {},
-        onPublish: (publishParams) => {},
-    },
-    modalParams: {},
-})
+ccEverywhere.openQuickAction(
+    // QuickActionsParams
+    {
+        id: 'change-speed', 
+        inputParams: {
+            exportOptions: []
+        },
+        callbacks: {
+            onCancel: () => {},
+            onError: (err) => {},
+            onLoadStart: () => {},
+            onLoad: () => {},
+            onPublishStart: () => {},
+            onPublish: (publishParams) => {},
+        },
+        modalParams: {},
+    }
+)
 ```
 
-### QuickActionParams
+### [QuickActionParams](../../../reference/quick_actions/index.md#quickactionparams)
 `openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
-* id: [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
-* inputParams: [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
-  * [exportOptions](../../../reference/quick_actions/index.md#exportoption): array of configurable export options (i.e. open in CCX editor component, download)
-* [Callbacks](../../../reference/shared_types/index.md#callbacks)
-* [modalParams](../../../reference/shared_types/index.md#modalparams): determines size of QA modal
+
+| Property | Description | Type 
+| :-- | :-- | :--
+| id | Choose Quick Actions component| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+| inputParams | Configure [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
+| callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
+| modalParams | Define size of QA iframe |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
 
 
-Only the [QuickActionId](#quickactionid) is required to initialize the iframe.
+Only `id` and `inputParams.exportOptions` is required to initialize the iframe. 
 
 
-### QuickActionId
+### [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+Identifies which Video Quick Actions component should be loaded into the iframe.
+
 | Quick Action | QuickActionId
 | :-- | :-- 
 | Change Speed | 'change-speed'
