@@ -12,19 +12,9 @@
 
 module.exports = {
   siteMetadata: {
-    versions: [
-      {
-        title: 'v2.0',
-        selected: true
-      },
-      {
-        title: 'v1.4',
-        path: 'https://github.com/AdobeDocs/analytics-1.4-apis'
-      }
-    ],
     pages: [
       {
-        title: 'Adobe Analytics',
+        title: 'CC Everywhere SDK',
         path: '/'
       },
       {
@@ -32,16 +22,8 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'API Reference',
-        menu: [{
-          title: 'API Reference v2.0',
-          description: 'Adobe Analytics Reporting API',
-          path: '/api/index.md'
-        }, {
-          title: 'API Reference v1.4',
-          description: 'API Spec for the Adobe Marketing Cloud',
-          path: '/api/1.4.md'
-        }]
+        title: 'References',
+        path: '/reference/'
       },
       {
         title: 'Support',
@@ -50,77 +32,49 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Get Started',
+        title: 'Quickstart Guide',
         path: '/guides/',
         pages: [
           {
-            title: 'Overview',
-            path: '/guides/'
+            title: 'Local Development',
+            path: '/guides/local/'
           },
-          {
-            title: 'Creating an OAuth Client',
-            path: '/guides/creating_oauth_client/'
-          },
-          {
-            title: 'OAuth using cURL',
-            path: '/guides/oauth_using_curl/'
-          },
-          {
-            title: 'OAuth using POSTMAN',
-            path: '/guides/oauth_using_postman/'
-          },
-          {
-            title: 'JWT Authentication',
-            path: '/guides/jwt_authentication/'
-          }
         ]
       },
       {
-        title: 'Reporting API',
-        path: '/guides/reporting_api/',
+        title: 'CCX Editor Component',
+        path: '/guides/ccx_editor/',
         pages: [
           {
-            title: 'Overview',
-            path: '/guides/reporting_api/'
+            title: 'Creating New Project',
+            path: '/guides/ccx_editor/create_project/'
           },
           {
-            title: 'Reporting with breakdowns',
-            path: '/guides/reporting_api/reporting_breakdowns/',
-            pages: [
-              {
-                title: 'Reporting with single breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/',
-              },
-              {
-                title: 'Reporting with multiple breakdowns',
-                path: '/guides/reporting_api/reporting_breakdowns/reporting_multiple_breakdowns/',
-              },
-            ]
-          },
+            title: 'Editing Existing Project',
+            path: '/guides/ccx_editor/edit_project/'
+          }, 
           {
-            title: 'Reporting tips and tricks',
-            path: '/guides/reporting_api/reporting_tips_tricks/'
+            title: 'Customization',
+            path: '/guides/ccx_editor/customization/'
           }
         ]
       },
       {
-        title: 'Discovery API',
-        path: '/guides/discovery_api/'
+        title: 'Quick Actions Component',
+        path: '/guides/quick_actions/',
+        pages: [
+          {
+            title: 'Image Quick Actions',
+            path: '/guides/quick_actions/image/'
+          },
+          {
+            title: 'Video Quick Actions',
+            path: '/guides/quick_actions/video/'
+          }
+        ]
       },
       {
-        title: 'Segments API',
-        path: '/guides/segments_api/'
-      },
-      {
-        title: 'Calculated Metrics API',
-        path: '/guides/calculated_metrics_api/'
-      },
-      {
-        title: 'Migrating',
-        path: '/guides/migrating/'
-      },
-      {
-        title: 'Overview',
+        title: 'Support',
         path: '/support/',
         header: true,
         pages: [
@@ -148,9 +102,38 @@ module.exports = {
             path: '/support/community/'
           }
         ]
+      },
+      {
+        title: 'Components',
+        path: '/reference',
+        header: true,
+        pages: [
+          {
+            title: 'Initialize SDK', 
+            path: '/reference/', 
+            pages: [
+              {
+                title: 'Authorization', 
+                path: '/reference/authorization/'
+              },
+            ] 
+          },
+          {
+            title: 'CCX Editor', 
+            path: '/reference/ccx_editor/'
+          },
+          {
+            title: 'Shared Types', 
+            path: '/reference/shared_types/'
+          },
+          {
+            title: 'Quick Actions', 
+            path: '/reference/quick_actions/'
+          }
+        ]
       }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/dev-site-documentation-template/'
+  pathPrefix: process.env.PATH_PREFIX || '/cc-everywhere/'
 };

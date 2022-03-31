@@ -84,22 +84,6 @@
                 <span class="spectrum-Button-label">Merge Videos</span>
             </button>  
         </ul>
-            <!-- <h2> Your edited video will appear here </h2>
-            <video id="video-container" height="420" width="420" controls></video>
-     -->
-
-    <h1> PDF Quick Actions </h1> 
-    <div>Choose a Quick Action:  </div>
-        <ul class="pdf-buttons">
-            <button id="convert-to-pdf"
-                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
-                <span class="spectrum-Button-label">Convert to PDF</span>
-            </button>
-            <button id="export-pdf"
-                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
-                <span class="spectrum-Button-label">Export PDF</span>
-            </button>
-        </ul>
 
     <script type="text/javascript" src="CCEverywhere.js"></script>
     <script type="text/javascript" >
@@ -114,7 +98,7 @@
         // var appVideo = document.getElementById('video-container');
             
         const ccEverywhere = CCEverywhere.default.initialize({
-            clientId: 'c352fd34caa94405ab1a2cfa736bb9f5',
+            clientId: '317abf1c6cb4440aa01dc36cac84a9ad',
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
@@ -237,43 +221,6 @@
         videoButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 videoQuickAction(button.id)
-            })
-        })
-
-        /* __________________________________________________________
-                        PDF Quick Actions 
-                        not yet implemented for 3P usage
-        __________________________________________________________ */
-
-        const pdfCallbacks = {
-            onCancel: () => {},
-            onPublish: (publishParams) => {
-                alert('Saved PDF to CC Express')
-            },
-            onError: (err) => {
-                console.error('Error received is', err.toString())
-            }
-        }
-        
-        function pdfQuickAction(qa_id) {
-            /* file input not supported yet, call the QA API and the user is prompted to 
-            browser for image files in the modal */
-            ccEverywhere.openQuickAction({
-                id: qa_id, 
-                inputParams: {
-                    //exportOptions: exportOptions
-                },
-                callbacks: pdfCallbacks
-                // modal params defaults to: 
-                // modalParams: {colorTheme: 'light', spectrumTheme: 'express', scale: 'medium'}
-            })
-        };
-        
-        
-        let pdfButtons = document.querySelectorAll('.pdf-buttons button');
-        pdfButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                pdfQuickAction(button.id)
             })
         })
 
