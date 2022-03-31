@@ -57,6 +57,6 @@ As of today, it exposes 4 methods:
 1. `openQuickAction()`: Quick Actions Component
 2. `createDesign()`: CCX Editor Component
 3. `editDesign()`: CCX Editor Component
-4. `exchangeAuthCodeForToken()`: Authentication
+4. `exchangeAuthCodeForToken()`: Authorization
 
 

@@ -13,9 +13,7 @@ Learn where to ask questions, report bugs, make feature requests, and spark disc
 
 You've got a place to start discussions.
 
-<DiscoverBlock slots="image, heading, link, text" width="25%"/>
-
-![Adobe Experience Cloud](experience_cloud.png)
+<DiscoverBlock slots="heading, link, text" width="25%"/>
 
 ### Developer forum
 
@@ -31,7 +29,7 @@ Tutorials and videos for the whole community.
 
 <DiscoverBlock slots="link, text" width="25%"/>
 
-[Experience forum](https://adobe.io) 
+[Prerelease forum](https://adobe.io) 
 
 Forum to get help and help others
 
@@ -39,9 +37,7 @@ Forum to get help and help others
 
 You've got a place to join the conversation.
 
-<DiscoverBlock slots="image, heading, link, text" width="100%"/>
-
-![Stack Overflow](stack-overflow.png)
+<DiscoverBlock slots="heading, link, text" width="100%"/>
 
 ### Stack Overflow
 

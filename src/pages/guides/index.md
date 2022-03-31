@@ -12,20 +12,14 @@ This guide explains how to start using the SDK in your own application.
 
 ## Step 1: Get an API Key
 
-During this beta release, developers must create a "personal" AdobeID, known as a "Type 1" or "Federated" ID for creating API credentials. 
-* The tests you run in this account will not be transferrable to another account later. 
-* After the alpha release, we will send additional instructions for creating and managing credentials that are associated with your organization. 
-
-After you've created the correct type of account, sign into the [Adobe console](https://developer.adobe.com/console) and make sure you've created the correct type of account. Your login screen should indicate "Personal Account". 
-
-Create a new project, then sign up for an API Key for by clicking "Add an API" and choosing **CC Libraries API**. For OAuth, choose **Single Page App** and provide your redirect URI patterns and default redirect URI.
+During this beta release, please reach out to efinnegan@adobe.com to register interest in integrating with the SDK.
 
 
 ## Step 2: Embed the SDK
 
 We are in the process of distributing this SDK as a CDN. During this beta phase, you can embed the SDK into your app by downloading the bundled SDK in the `/dist` folder of the [prerelease repo](https://github.com/AdobeDocs/cc-everywhere). 
 
-> **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](../quickstart/local/index.md)
+> **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](./local/index.md)
 
 
 ### HTML Example
@@ -65,7 +59,7 @@ const ccEverywhere = CCEverywhere.default.initialize({
 This method returns a `CCEverywhere` object, with four methods. To learn more about these methods, visit the [SDK references](../../reference/index.md) page.
 
 
-## Step 4: Store Access Token
+## Step 4: Exchange Access Token
 
 After a user logs in, the Adobe IMS Server stores the code and redirects the user back to the designated **redirect URL** with an authorization code. At this redirect URL is hit,  call the following method:
 

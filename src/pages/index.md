@@ -15,7 +15,7 @@ CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript l
 <Resources slots="heading, links"/>
 
 #### Resources
-* [Quickstart Guide](guides/quickstart/)
+* [Quickstart Guide](guides/)
 * [Prerelease Github Repo](https://github.com/AdobeDocs/cc-everywhere)
   
 <DiscoverBlock width="100%" slots="heading, text"/>
