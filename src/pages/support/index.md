@@ -5,43 +5,24 @@ description: This is the support page of CC Everywhere
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>
 
-# Support
+# Developer Support
 
 Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 
-## Feedback
+<DiscoverBlock slots="heading, link, text" width="50%"/>
 
-You've got a place to start discussions.
+## Prerelease Forum
 
-<DiscoverBlock slots="heading, link, text" width="25%"/>
+[Invite me](mailto:cceverywheresupport@adobe.com?subject=Invite me to the CC Everywhere prerelease forums)
 
-### Developer forum
+In the alpha phase of our release, forum access is by invitation only.
 
-[Get started](https://adobe.io)
+<DiscoverBlock slots="heading, link, text" width="50%"/>
 
-Open discussion and support with community experts and Adobe staff.
+## Slack Support
 
-<DiscoverBlock slots="link, text" width="25%"/>
+[Invite me](mailto:cceverywheresupport@adobe.com?subject=Invite me to the Slack channel)
 
-[Experience league](https://adobe.io) 
+Chat with Adobe and other developers in our dedicated Slack channel.
 
-Tutorials and videos for the whole community.
-
-<DiscoverBlock slots="link, text" width="25%"/>
-
-[Prerelease forum](https://adobe.io) 
-
-Forum to get help and help others
-
-## Community
-
-You've got a place to join the conversation.
-
-<DiscoverBlock slots="heading, link, text" width="100%"/>
-
-### Stack Overflow
-
-[Explore](https://adobe.io)
-
-Developer Q&A using a specific tag.
-
+<DiscoverBlock slots="link, text" width="50%"/>
