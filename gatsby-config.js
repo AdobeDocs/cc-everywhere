@@ -75,25 +75,7 @@ module.exports = {
       },
       {
         title: 'Support',
-        path: '/support/',
-        header: true,
-        pages: [
-          {
-            title: 'Help',
-            path: '/support/'
-          }
-        ]
-      },
-      {
-        title: 'Community',
-        path: '/support/community/',
-        header: true,
-        pages: [
-          {
-            title: 'Information',
-            path: '/support/community/'
-          }
-        ]
+        path: '/support/'
       },
       {
         title: 'Components',
