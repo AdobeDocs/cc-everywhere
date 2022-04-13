@@ -30,7 +30,6 @@ This documentation provides all the materials you need to start integrating CCX 
 ### What are Quick Actions? 
 Quick Actions are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed a Quick Actions editor to give end users access to these tools within their own applications.
 
-
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ## Getting Started
