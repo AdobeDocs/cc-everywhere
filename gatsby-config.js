@@ -81,14 +81,6 @@ module.exports = {
           {
             title: 'Help',
             path: '/support/'
-          },
-          {
-            title: 'FAQ',
-            path: '/support/FAQ/'
-          },
-          {
-            title: 'How to contribute',
-            path: '/support/contribute/'
           }
         ]
       },
