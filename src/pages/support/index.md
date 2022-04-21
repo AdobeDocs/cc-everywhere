@@ -19,4 +19,3 @@ In the alpha phase of our release, forum access is by invitation only.
 Chat with Adobe and other developers in our dedicated Slack channel. [Email us](cceverywheresupport@adobe.com) for an invitation.
 
 
-
