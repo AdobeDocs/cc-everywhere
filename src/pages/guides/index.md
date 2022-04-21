@@ -12,7 +12,7 @@ This guide explains how to start using the SDK in your own application.
 
 ## Step 1: Get an API Key
 
-During this beta release, please reach out to cceverywheresupport@adobe.com to register interest in integrating with the SDK.
+During this beta release, please reach out to efinnegan@adobe.com to register interest in integrating with the SDK.
 
 
 ## Step 2: Embed the SDK
