@@ -7,7 +7,6 @@ contributors:
 ---
 
 # Quick Actions
-![Convert JPG to PNG](convert.png)
 
 ## Image and Video
 With Quick Actions, developers have access to image and video editing tools powered by Adobe Photoshop and Premiere. 
