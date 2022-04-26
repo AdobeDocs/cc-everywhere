@@ -46,5 +46,5 @@ To start the server at port 8000, run this line in your project root:
 ```bash
  http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000
 ```
-By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CCX. Now your server is up and available at `https://localhost:8000`.
+By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CC Express. Now your server is up and available at `https://localhost:8000`.
 

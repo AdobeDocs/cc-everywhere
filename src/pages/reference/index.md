@@ -34,7 +34,7 @@ CCEverywhere.default.initialize(
 | Property | Type | Description
 | :-- | :--| :--
 |clientId | string | Your API Key
-|appName | string | Name of project folder created in user's CCX
+|appName | string | Name of project folder created in user's CC Express
 |appVersion | { major: number, minor: number, patch?: number} | Your app version
 | platformCategory | 'web' | Specify host app platform
 | redirectUri | string | Searches for redirect URL you define in [console](https://developer.adobe.com/console)
@@ -55,8 +55,8 @@ The CCEverywhere object is the object returned when the SDK is initialized. This
 
 As of today, it exposes 4 methods: 
 1. `openQuickAction()`: Quick Actions Component
-2. `createDesign()`: CCX Editor Component
-3. `editDesign()`: CCX Editor Component
+2. `createDesign()`: CC Express Editor Component
+3. `editDesign()`: CC Express Editor Component
 4. `exchangeAuthCodeForToken()`: Authorization
 
 

@@ -21,7 +21,7 @@ openQuickAction(QuickActionParams)
 | :-- | :--| :--
 | id | [QuickActionId](#quickactionid) | ID for associated Quick Action
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Asset to load (image only), and export button options
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify CCX editor modal dimensions
+| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify CC Express editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 Besides **id** and **inputParams.exportOptions**, the rest are optional fields. 
@@ -83,7 +83,7 @@ Must be specified with at least an empty array. When specified with an empty arr
 |[label](#label) string | Overwrite default label name
 
 ### target
-  * target = 'Editor' - exports asset to a [CCX editor component](../ccx_editor/index.md) for further customization
+  * target = 'Editor' - exports asset to a [CC Express editor component](../ccx_editor/index.md) for further customization
   * target = 'Download' - downloads asset to user's machine
 ### label
   * target = 'Editor' => label defaults to "Customize"
@@ -93,7 +93,7 @@ Must be specified with at least an empty array. When specified with an empty arr
 ```js
 const exportOptions = [
     {
-        // Customize in CCX editor
+        // Customize in CC Express editor
         target: 'Editor',
         variant: 'cta',
         optionType: 'button',
