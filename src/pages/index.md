@@ -22,7 +22,7 @@ Creative Cloud (CC) Everywhere SDK is an easy-to-integrate, customizable, all-in
 
 ## Overview
 
-This documentation provides all the materials you need to start integrating Creative Cloud Express components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from Express. As of today, this SDK has two components: __CCX Editor__ and __Quick Actions Editor__.
+This documentation provides all the materials you need to start integrating Creative Cloud Express components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from Express. As of today, this SDK has two components: __CC Express Editor__ and __Quick Actions Editor__.
 
 ### What is Creative Cloud Express? 
 [Creative Cloud Express](https://www.adobe.com/express/) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, Express users can create standout content from wherever they work. 

@@ -42,7 +42,7 @@ module.exports = {
         ]
       },
       {
-        title: 'CCX Editor Component',
+        title: 'CC Express Editor Component',
         path: '/guides/ccx_editor/',
         pages: [
           {

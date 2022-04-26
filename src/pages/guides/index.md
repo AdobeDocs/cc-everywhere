@@ -74,7 +74,7 @@ The returned authorization code is exchanged for an access token, and this funct
 
 The CC Everywhere SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [Creative Cloud Express Editor Component](../../guides/ccx_editor/index.md)
+### [CC Express Editor Component](../../guides/ccx_editor/index.md)
 * How to [create a project](../guides/ccx_editor/create_project/) in an Express editor
 * How to [edit an existing project](../guides/ccx_editor/edit_project/) in an Express editor
 
