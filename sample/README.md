@@ -1,5 +1,9 @@
 ## CC Everywhere Sample 
 
+## Step 0: Embed the SDK
+#
+This SDK is currently in private alpha and is subject to changes until GA availability. Join the [prerelease program](adobeprerelease.com) for Creative Cloud Everywhere SDK to register interest and get access after you sign an NDA.
+
 ## Step 1: Install `mkcert` via npm or Homebrew
 #
 `mkcert` is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates. 

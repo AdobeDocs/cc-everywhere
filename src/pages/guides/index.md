@@ -17,7 +17,7 @@ During this beta release, please reach out to efinnegan@adobe.com to register in
 
 ## Step 2: Embed the SDK
 
-We are in the process of distributing this SDK as a CDN. During this beta phase, you can embed the SDK into your app by downloading the bundled SDK in the `/dist` folder of the [prerelease repo](https://github.com/AdobeDocs/cc-everywhere). 
+You can get access to the alpha SDK by joining the prerelease program for Creative Cloud Everywhere SDK. 
 
 > **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](./local/index.md)
 
@@ -45,7 +45,7 @@ embedSDK(document, "./CCEverywhere.js");
 
 To initialize the SDK, pass the default method `initialize()`:
 * `CLIENT_ID` (string): the API key you got from Console
-* `APP_NAME` (string): the name of the CCX project folder created for end users
+* `APP_NAME` (string): the name of the Express project folder created for end users
 
 ```js
 const ccEverywhere = CCEverywhere.default.initialize({
@@ -74,14 +74,14 @@ The returned authorization code is exchanged for an access token, and this funct
 
 The CC Everywhere SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [CCX Editor Component](../../guides/ccx_editor/index.md)
-* How to [create a project](../guides/ccx_editor/create_project/) in a CCX editor
-* How to [edit an existing project](../guides/ccx_editor/edit_project/) in a CCX editor
+### [Creative Cloud Express Editor Component](../../guides/ccx_editor/index.md)
+* How to [create a project](../guides/ccx_editor/create_project/) in an Express editor
+* How to [edit an existing project](../guides/ccx_editor/edit_project/) in an Express editor
 
-When the editor first appears in a modal, the user will be asked to either log in, or create a CCX account. Once logged in, users can access CCX's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing CCX project ID as input, and users can continue working on a CCX project within the editor.
+When the editor first appears in a modal, the user will be asked to either log in, or create a Creative Cloud Express account. Once logged in, users can access Express's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing project ID as input, and users can continue working on a project within the editor.
 
-### [Quick Actions Component](../../guides/quick_actions/index.md)
+### [Quick Actions Editor Component](../../guides/quick_actions/index.md)
 * How to [use Image Quick Actions](../guides/quick_actions/image/)
 * How to [use Video Quick Actions](../guides/quick_actions/video/)
 
-Users must select the desired Quick Action (QA) so the corresponding QA editor is spun up. Within the QA Editor, users can browse their filesystem for an asset, and then perform the selected QA. They can download the modified asset to their computer, or further customize the modified asset in a CCX editor.
+Users must select the desired Quick Action (QA) so the corresponding QA editor is spun up. Within the QA Editor, users can browse their filesystem for an asset, and then perform the selected QA. They can download the modified asset to their computer, or further customize the modified asset in a Creative Cloud Express editor.

@@ -10,7 +10,7 @@ contributors:
 
 # CC Everywhere SDK
 
-CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings CC Express (CCX) capabilities to all applications.
+Creative Cloud (CC) Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Creative Cloud Express capabilities to all applications. The SDK is currently in private alpha, and you must join the prerelease program to get access to the current build.
 
 <Resources slots="heading, links"/>
 
@@ -22,13 +22,13 @@ CC Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript l
 
 ## Overview
 
-This documentation provides all the materials you need to start integrating CCX components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from CCX. As of today, this SDK has two components: __CCX Editor__ and __Quick Actions Editor__.
+This documentation provides all the materials you need to start integrating Creative Cloud Express components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from Express. As of today, this SDK has two components: __CCX Editor__ and __Quick Actions Editor__.
 
-### What is CCX? 
-[Creative Cloud Express](https://www.adobe.com/express/) (CCX) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, CCX users can create standout content from wherever they work. 
+### What is Creative Cloud Express? 
+[Creative Cloud Express](https://www.adobe.com/express/) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, Express users can create standout content from wherever they work. 
 
 ### What are Quick Actions? 
-Quick Actions are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed a Quick Actions editor to give end users access to these tools within their own applications.
+Quick Actions are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed a Quick Actions (QA) editor to give end users access to these tools within their own applications.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
@@ -42,9 +42,9 @@ Start embedding CC Everywhere components into your own application by reading ou
 
 ### Components
 
-[CCX Editor](guides/ccx_editor/) 
+[Creative Cloud Express Editor](guides/ccx_editor/) 
      
-Embed a CCX editor so users can easily create and publish CCX projects.
+Embed a Creative Cloud Express editor so users can easily create and publish projects.
 
 <DiscoverBlock slots="link, text"/>
 

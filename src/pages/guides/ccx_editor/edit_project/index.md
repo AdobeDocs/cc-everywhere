@@ -1,20 +1,20 @@
 ---
-title: CCX Editor - Edit Project
-description: This guide will show you how users can continue working on existing projects in a CCX editor. 
+title: CC Express Editor - Edit Project
+description: This guide will show you how users can continue working on existing projects in a CC Express editor. 
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
 
-# CCX Editor Component: Edit Existing CCX Project 
+# CC Express Editor Component: Edit Existing CC Express Project 
 
-This guide will demonstrate how to launch a CCX editor component. The editor will appear in an iframe, pre-loaded with a specified CCX project.
+This guide will demonstrate how to launch a CCX editor component. The editor will appear in an iframe, pre-loaded with a specified CC Express project.
 
 ## editDesign()
-The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the CCX editor component in an iframe, with an existing project pre-loaded.
+The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the CC Express editor component in an iframe, with an existing project pre-loaded.
 
 #### Flow: 
-* User triggers `editDesign()` function from within the host application, and the CCX editor is loaded in an iframe.
+* User triggers `editDesign()` function from within the host application, and the CC Express editor is loaded in an iframe.
 * To pre-load the editor with an existing project, you must pass the associated project ID to `editDesignParams`. This ID is returned in the `project` property of `publishParams` from the `onPublish` callback. 
 
 
@@ -45,8 +45,8 @@ ccEverywhere.editDesign(
 
 | Property | Description | Type 
 | :-- | :-- | :--
-| modalParams | Define size of CCX editor modal | [ModalParams](../../../reference/shared_types/index.md#modalparams)
-| inputParams| CCX project ID to send to the editor component | [EditInputParams](../../../reference/ccx_editor/index.md#editinputparams)
+| modalParams | Define size of editor modal | [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| inputParams| CC Express project ID to initialize editor component | [EditInputParams](../../../reference/ccx_editor/index.md#editinputparams)
 | outputParams | Configure output type | [CCXOutputParams](../../../reference/shared_types/index.md#ccxoutputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks) 
 
@@ -57,10 +57,10 @@ The only required property is `inputParams.projectId`.
 
 #### Step 1: User clicks the "Edit project" button
 * The `editDesign()` function is called and passed `inputParams.projectId`, a set of callback functions in `editDesignCallback`.
-* A CCX editor component is launched in an iframe, pre-loaded with that CCX project. 
+* A CC Express editor component is launched in an iframe, pre-loaded with that CC Express project. 
 
 #### Step 2: User finishes design and clicks "Save"
-* The project is again saved to the user's CCX account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.
+* The project is again saved to the user's CC Express account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.
 * The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __CCX project ID (projectId)__ and __image data representation (asset)__. 
   * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later again via `editDesign()`.
 

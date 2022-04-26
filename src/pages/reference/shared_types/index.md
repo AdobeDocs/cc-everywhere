@@ -7,7 +7,7 @@ contributors:
 ---
 # Shared Types
 ## Asset 
-Represents an asset that can be loaded into a CCX editor component, or loaded in for an Image Quick Action. 
+Represents an asset that can be loaded into a CC Express editor component, or loaded in for an Image Quick Action. 
 
 | Property | Value(s) | Description 
 |:-- | :-- | :--
@@ -33,7 +33,7 @@ All the callbacks are optional and return void.
 
 | Property | Callback Function | Description 
 | :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes CCX modal
+| onCancel | () => {}| Triggered when user closes CC Express modal
 | onError | () => {} | Triggered upon error with associated error code 
 | onLoadStart | () => {} | Triggered once modal begins to load
 | onLoad | () => {} | Triggered once modal is loaded
@@ -45,7 +45,7 @@ onPublish passes the host application a `PublishParams` object.
 
 | Property | Description
 | :-- | :-- 
-| projectId | string generated for identifying CCX project
+| projectId | string generated for identifying CC Express project
 | asset | Resulting asset: [OutputAsset](#outputasset)
 
 ## CCXOutputParams
@@ -59,7 +59,7 @@ All properties are optional. Allows you to define data type and file type of out
 
 ## ModalParams
 
-All properties are optional. Allows you to define the UI constraints of the CCX editor iframe. 
+All properties are optional. Allows you to define the UI constraints of the CC Express editor iframe. 
 
 | Property | Type/Value |
 | :-- | :--|

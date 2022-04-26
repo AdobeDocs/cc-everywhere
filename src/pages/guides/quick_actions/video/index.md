@@ -8,7 +8,7 @@ contributors:
 
 # Video Quick Actions
 
-Each Video Quick Actions component is loaded into the application as an iframe, like the CCX editor component. Users will be prompted to browse for an asset once the QA iframe is loaded. Unlike the Image Quick Actions components, Video QAs cannot be launched with an asset attached during this beta phase.
+Each Video Quick Actions component is loaded into the application as an iframe, like the CC Express editor component. Users will be prompted to browse for an asset once the QA iframe is loaded. Unlike the Image Quick Actions components, Video QAs cannot be launched with an asset attached during this beta phase.
 
 ## openQuickAction()
 After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
@@ -69,7 +69,7 @@ Identifies which Video Quick Actions component should be loaded into the iframe.
 * Once selected, the user is presented with options for changing the speed. 
 
 Finally, users can choose between 2 export options: 
-* __Customize__: to continue designing in a CCX editor component
+* __Customize__: to continue designing in a CC Express editor component
 * __Download__: to save the asset
 
 ```html

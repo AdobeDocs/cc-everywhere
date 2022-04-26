@@ -1,6 +1,6 @@
 ---
-title: CCX Editor - Customization
-description: This guide will show you how to customize the CCX editor component. 
+title: Creative Cloud Express Editor - Customization
+description: This guide will show you how to customize the CC Express editor component. 
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
@@ -8,7 +8,7 @@ contributors:
 
 # Customization 
 
-The CCX Editor Component can be configured and customized to fit the needs of your users. 
+The CC Express Editor Component can be configured and customized to fit the needs of your users. 
 
 ## Locale
 The CC Everywhere SDK lets you customize the locale during initialization. The default value is 'en_US'. This determines the language setting for users experiencing SDK components.
@@ -32,7 +32,7 @@ The CC Everywhere SDK lets you customize the locale during initialization. The d
 | 'zh_Hant_TW'| Chinese (traditional)
 
 ## Template Layout Ratio
-`canvasAspectId` allows you to specify a string value that initializes the CCX editor loaded with templates that fit that layout ratio. 
+`canvasAspectId` allows you to specify a string value that initializes the CC Express editor loaded with templates that fit that layout ratio. 
 
 | Template Layout Ratio | Description
 | :-- | :--
@@ -77,7 +77,7 @@ The CC Everywhere SDK lets you customize the locale during initialization. The d
 
 
 ## Template Type
-Developers can pass the `createDesign()` method a `templateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on CCX to get an ideal of each category.
+Developers can pass the `createDesign()` method a `templateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on CC Express to get an ideal of each category.
 
 | Template Type | CCX Template Category 
 | :-- | :--

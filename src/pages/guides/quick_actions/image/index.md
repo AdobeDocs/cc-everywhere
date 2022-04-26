@@ -69,7 +69,7 @@ Identifies which Image Quick Actions component should be loaded into the iframe.
    * The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on. 
 #### Step 2: Export Modified Asset
 Finally, users can choose between 2 export options: 
-* __Customize__: to continue designing in a CCX editor component
+* __Customize__: to continue designing in a CC Express editor component
 * __Download__: to save the asset
 
 ```html
