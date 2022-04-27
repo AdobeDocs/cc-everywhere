@@ -11,11 +11,10 @@ Learn where to ask questions, report bugs, make feature requests, and spark disc
 
 ## Prerelease Forum
 
-In the alpha phase of our release, forum access is by invitation only. 
-[Email us](efinnegan@adobe.com) if you would like to join the prerelease.
+In the alpha phase of our release, forum access is by invitation only. Fill out [this form](https://forms.office.com/r/J0HvGMbtDT) to register interest.
 
 
 ## Slack Support
-Chat with Adobe and other developers in our dedicated Slack channel. [Email us](efinnegan@adobe.com) for an invitation.
+Chat with Adobe and other developers in our dedicated Slack channel. Register interest using the form above where you will receive more details. 
 
 
