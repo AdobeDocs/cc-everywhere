@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-reference-shared-types-index-md","path":"/reference/shared_types/","result":{"pageContext":{"frontmatter":{"title":"Shared Types","description":"This is the reference page for shared types across SDK components.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},"staticQueryHashes":["915530536"]}
+{
+    "componentChunkName": "component---src-pages-reference-shared-types-index-md",
+    "path": "/reference/shared_types/",
+    "result": {"pageContext":{"frontmatter":{"title":"Shared Types","description":"This is the reference page for shared types across SDK components.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},
+    "staticQueryHashes": ["915530536"]}

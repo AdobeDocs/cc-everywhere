@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-guides-quick-actions-image-index-md","path":"/guides/quick_actions/image/","result":{"pageContext":{"frontmatter":{"title":"Image Quick Actions","description":"This guide will demonstrate how to trigger a Quick Actions editor for images.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},"staticQueryHashes":["915530536"]}
+{
+    "componentChunkName": "component---src-pages-guides-quick-actions-image-index-md",
+    "path": "/guides/quick_actions/image/",
+    "result": {"pageContext":{"frontmatter":{"title":"Image Quick Actions","description":"This guide will demonstrate how to trigger a Quick Actions editor for images.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},
+    "staticQueryHashes": ["915530536"]}

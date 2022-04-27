@@ -1,1 +1,5 @@
-{"componentChunkName":"component---src-pages-index-md","path":"/","result":{"pageContext":{"frontmatter":{"title":"Overview - CC Everywhere SDK","description":"This is the overview page of CC Everywhere SDK","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},"staticQueryHashes":["915530536"]}
+{
+    "componentChunkName": "component---src-pages-index-md",
+    "path": "/",
+    "result": {"pageContext":{"frontmatter":{"title":"Overview - CC Everywhere SDK","description":"This is the overview page of CC Everywhere SDK","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},
+    "staticQueryHashes": ["915530536"]}
