@@ -16,6 +16,7 @@ Creative Cloud (CC) Everywhere SDK is an easy-to-integrate, customizable, all-in
 
 #### Resources
 * [Quickstart Guide](guides/)
+* [Sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample)
   
 <DiscoverBlock width="100%" slots="heading, text"/>
 
