@@ -10,13 +10,12 @@ contributors:
 
 # CC Everywhere SDK
 
-Creative Cloud (CC) Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Creative Cloud Express capabilities to all applications. The SDK is currently in private alpha, and you must join the prerelease program to get access to the current build.
+Creative Cloud (CC) Everywhere SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Creative Cloud Express capabilities to all applications. This SDK is currently in private alpha and is subject to changes until GA availability. To register interest for the Creative Cloud Everywhere SDK, fill out [this form.](https://forms.office.com/r/J0HvGMbtDT)
 
 <Resources slots="heading, links"/>
 
 #### Resources
 * [Quickstart Guide](guides/)
-* [Prerelease Github Repo](https://github.com/AdobeDocs/cc-everywhere)
   
 <DiscoverBlock width="100%" slots="heading, text"/>
 

@@ -17,6 +17,10 @@ CC Everywhere SDK expects requests to come from:
 * a domain that matches registered redirect URIs 
 
 You cannot just download and embed the SDK in a HTML file on your local machine and open that file in a web browser. Because of the SDK's domain restrictions, any project using the SDK must be served via localhost or a redirect URI pattern you register in [console](https://developer.adobe.com/console/).
+
+If you'd like to test the [sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample), specify: 
+* https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
+* https://localhost:8000/redirect.html in the "Redirect URI patterns" field
  
 ## Step 0: Download npm or Homebrew
 * npm is a package manager used for installing Node packages. Installing Node automatically installs npm: you can download the installer [here](https://nodejs.org/en/download/).
@@ -24,11 +28,12 @@ You cannot just download and embed the SDK in a HTML file on your local machine 
 * Homebrew is another package installer that you can use: follow [these steps](https://docs.brew.sh/Installation) to start using it.
 
 ## Step 1: Create SSL certificate
-`mkcert` is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates. 
+[`mkcert`](https://github.com/FiloSottile/mkcert) is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates. 
 
-Install it using either `npm install mkcert` or `brew install mkcert`.
+1. Install it using `brew install mkcert`, NOT `npm install mkcert`. 
+2. Configure a local certificate authority by running `mkcert -install`
+3. Navigate back to the project folder and run:
 
-Navigate back to the project folder and run:
 ```bash
 mkcert localhost 
 ```

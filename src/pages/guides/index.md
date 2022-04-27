@@ -10,14 +10,21 @@ contributors:
 
 This guide explains how to start using the SDK in your own application. 
 
+## Step 0: Request Access 
+
+This SDK is currently in private alpha and is subject to changes until GA availability. To register interest for the Creative Cloud Everywhere SDK, fill out [this form.](https://forms.office.com/r/J0HvGMbtDT). 
+
 ## Step 1: Get an API Key
 
-During this beta release, please [fill out this form](https://forms.office.com/r/J0HvGMbtDT) if you are interested in integrating with the SDK.
+During this private alpha release, please [fill out this form](https://forms.office.com/r/J0HvGMbtDT) if you are interested in integrating with the SDK.
+
+**Before you complete the following steps, you need to have filled out the form above and been invited to the prerelease repo for access to the SDK.**
+Register your integration by creating a new project in the [Developer Console](https://developer.adobe.com/console). 
+* Select "Add an API" > "Creative Cloud Everywhere SDK".
+* Configure OAuth settings. In the Developer Console, you should select "Single-Page App" and register redirect URI patterns. You can read more [here](../reference/authorization/index.md). 
 
 
-## Step 2: Embed the SDK
-
-You can get access to the alpha SDK by joining the prerelease program for Creative Cloud Everywhere SDK. 
+## Step 2: Embed SDK
 
 > **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To try this on a local server, refer to the [local development set-up guide](./local/index.md)
 
