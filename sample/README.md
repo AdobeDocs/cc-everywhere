@@ -19,11 +19,10 @@ You can read more [here](../src/pages/reference/authorization/index.md)
 
 ## Step 2: Install `mkcert` via Homebrew
 
-`mkcert` is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates. 
-
-Install it using either `npm install mkcert` or `brew install mkcert`.
-
-Navigate back to the project folder and run:
+[`mkcert`](https://github.com/FiloSottile/mkcert) is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates. 
+1. Install it using either `brew install mkcert`.
+2. Run `mkcert -install` to create a local CA.
+3. Navigate back to the project folder and run:
 ```
 mkcert localhost 
 ```
