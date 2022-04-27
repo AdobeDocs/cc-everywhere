@@ -16,8 +16,9 @@ This SDK is currently in private alpha and is subject to changes until GA availa
 
 ## Step 1: Get an API Key
 
-**Before you register an application, you need to have filled out the form above and been invited to the prerelease repo for access to the SDK.**
+During this private alpha release, please [fill out this form](https://forms.office.com/r/J0HvGMbtDT) if you are interested in integrating with the SDK.
 
+**Before you complete the following steps, you need to have filled out the form above and been invited to the prerelease repo for access to the SDK.**
 Register your integration by creating a new project in the [Developer Console](https://developer.adobe.com/console). 
 * Select "Add an API" > "Creative Cloud Everywhere SDK".
 * Configure OAuth settings. In the Developer Console, you should select "Single-Page App" and register redirect URI patterns. You can read more [here](../reference/authorization/index.md). 
