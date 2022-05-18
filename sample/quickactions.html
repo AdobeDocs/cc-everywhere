@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+
+    <title>Quick Actions</title>
+
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+  </head>
+  <body>
+    <button id="back"
+        class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+        <span class="spectrum-Button-label">Go Back</span>
+    </button>
+    <h1> Image Quick Actions </h1>
+    <div><input type="file" id="fileInput" /> </div>
+    <img id="image-container" height="420" width="420" />
+    <div>Choose a Quick Action: </div>
+        <ul class="image-buttons">
+            <button id="image-crop"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Image Crop</span>
+            </button>
+            <button id="image-resize"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Image Resize</span>
+            </button>
+            <button id="convert-to-jpg"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Convert to JPEG</span>
+            </button>
+            <button id="convert-to-png"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Convert to PNG</span>
+            </button>
+            <button id="remove-background"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Remove Background</span>
+            </button>
+        </ul>
+
+    <h1> Video Quick Actions </h1> 
+    <div> Choose a Quick Action: </div>
+        <ul class="video-buttons">
+            <button id="change-speed"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Change Speed</span>
+            </button>
+            <button id="crop-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Crop Video</span>
+            </button>
+            <button id="convert-to-gif"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Convert to GIF</span>
+            </button>
+            <button id="convert-to-mp4"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Convert to MP4</span>
+            </button>
+            <button id="resize-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Resize Video</span>
+            </button>
+            <button id="reverse-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Reverse Video</span>
+            </button>
+            <button id="trim-video"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Trim Video</span>
+            </button>
+            <button id="merge-videos"
+                class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeS" >
+                <span class="spectrum-Button-label">Merge Videos</span>
+            </button>  
+        </ul>
+
+    <script type="text/javascript" src="CCEverywhere.js"></script>
+    <script type="text/javascript" >
+        /* PROJECT_NAME: Express project folder name */ 
+        const PROJECT_NAME = 'cc everywhere';
+        /* image: user uploaded file */
+        var imageFile;
+        /* imageUrl: base64 representation we pass into QA function */
+        var imageUrl;
+        /* appImage is the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
+        // var appVideo = document.getElementById('video-container');
+            
+        const ccEverywhere = CCEverywhere.default.initialize({
+            clientId: '<YOUR_CLIENT_ID>',
+            appName: PROJECT_NAME,
+            appVersion: { major: 1, minor: 0 },
+            platformCategory: 'web',
+            redirectUri: 'https://localhost:8000/redirect.html'
+        });
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        document.getElementById('fileInput').addEventListener('change', (e) => {
+            const reader = new FileReader();
+            imageFile = e.target.files[0];
+            // reads file into base 64 data type
+            reader.readAsDataURL(imageFile);
+            reader.onload = () => {
+                let encodedImage = reader.result;
+                //  save encoded image into imageUrl
+                imageUrl = encodedImage;
+                appImage.src = imageUrl;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        /* Defines native buttons for export: 
+        "Customize" in Express, or "Download" */
+        const exportOptions = [
+            /* Customize in Express */
+            {
+                target: 'Editor',
+                variant: 'cta',
+                buttonType: 'native',
+                optionType: 'button'
+            },
+            /* Download */
+            {
+                target: 'Download',
+                variant: 'primary',
+                optionType: 'button',
+                buttonType: 'native'
+            }
+        ];
+
+        /* __________________________________________________________
+                        Image Quick Actions 
+        __________________________________________________________ */
+
+        const imageCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                imageUrl = publishParams.asset.data;
+                appImage.src = imageUrl;
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        function imageQuickAction(qa_id) {            
+            if (imageUrl) {
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: {
+                        asset: {
+                            data: imageUrl, 
+                            dataType: 'base64', 
+                            type: 'image'
+                        }, 
+                        exportOptions: exportOptions
+                    },
+                    callbacks: imageCallbacks
+                })
+            } else {
+            /* If there's no file uploaded, we can still call the QA API and the user is prompted to 
+            browser for image files in the modal */
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: { exportOptions: exportOptions },
+                    callbacks: imageCallbacks
+                });
+            }
+        };
+
+        let imageButtons = document.querySelectorAll('.image-buttons button');
+        imageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                imageQuickAction(button.id)
+            })
+        })
+
+
+        /* __________________________________________________________
+                        Video Quick Actions 
+        __________________________________________________________ */
+
+        const videoCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                // appVideo.src = publishParams.asset.data;
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+        
+        function videoQuickAction(qa_id) {
+            /* file input not supported yet, call the QA API and the user is prompted to 
+            browser for image files in the modal */
+            ccEverywhere.openQuickAction({
+                id: qa_id, 
+                inputParams: {
+                    exportOptions: exportOptions
+                },
+                callbacks: videoCallbacks
+            })
+        };
+        
+        
+        let videoButtons = document.querySelectorAll('.video-buttons button');
+        videoButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                videoQuickAction(button.id)
+            })
+        })
+
+        // __________________________________________________________
+
+        var backButton = document.getElementById('back');
+        backButton.addEventListener('click',  () => {
+            window.location.href = 'https://localhost:8000';
+        })        
+    </script>
+  </body>
+</html>
