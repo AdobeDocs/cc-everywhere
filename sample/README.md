@@ -12,10 +12,12 @@ Once you gain access, follow the steps [here](https://github.com/AdobeDocs/cc-ev
 
 Register your integration by creating a new project in the [Developer Console](https://developer.adobe.com/console). 
 * Select "Add an API" > "Creative Cloud Everywhere SDK".
-* Configure OAuth settings. In the Developer Console, you should select "Single-Page App" and register redirect URI patterns. If you'd like to test the [sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample), specify: 
-  * https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
-  * https://localhost:8000/redirect.html in the "Redirect URI patterns" field
-You can read more [here](../src/pages/reference/authorization/index.md) 
+* Configure OAuth settings. In the Developer Console, select "Single-Page App" and register redirect URI patterns. 
+  * To test this [sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample) via https, you will need to complete [Step 2](#step-2-install-mkcert-via-homebrew): 
+    * https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
+    * https://localhost:8000/redirect.html in the "Redirect URI patterns" field
+  * If you want to test this sample without https, note that the “Default Redirect URI” field still expects a https URI. The "Redirect URI Patterns" field will accept http for testing localhost instances. You can skip [Step 2](#step-2-install-mkcert-via-homebrew).
+You can read more about authorization [here](../src/pages/reference/authorization/index.md) 
 
 ## Step 2: Install `mkcert` via Homebrew
 
@@ -41,13 +43,21 @@ Run `npm install` to install the dependencies in `package.json`. The required de
 
 ## Step 5: Run this sample
 
-1. **Modify the `clientID` field in both `index.html`, `redirect.html`, and `quickactions.html` with the API key you got in Step 1.**
-2. To start the server at port 8000, run this line in your project root: 
+1. **Modify the `clientID` field in both `index.html`, `redirect.html`, and `quickactions.html` with the API key you got in Step 1.** 
+2. If you are testing via http, make sure you modify the `redirectUri` field in the files above as well. 
+3. To start the server at port 8000, run this line in the project root: 
 
 ```
 http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000
 ```
 By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CC Express. Now your server is up and available at `https://localhost:8000`.
+
+If you want to test via http, run this line in the project root:
+
+```
+http-server -p 8000
+```
+Now your server is up and available at `http://localhost:8000`.
 
 ## Known Issues
 This sample will not run on incognito windows. 
