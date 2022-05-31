@@ -19,7 +19,7 @@ If you'd like to test the [sample](https://github.com/AdobeDocs/cc-everywhere/tr
 * https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
 * https://localhost:8000/redirect.html in the "Redirect URI patterns" field
 
-IMS will check the "Redirect URI Pattern" field first. If there are no matches, it will default to the "Redirect URI". 
+Integrations must be submitted with https redirect URIs to be approved for production, but http URIs are accepted **only** for testing localhost instances. Note that the "Default Redirect URI" field will still expect a https pattern in Console, but including the http URI in the "Redirect URI Patterns" field will be sufficient. IMS will check the "Redirect URI Pattern" field first. If there are no matches, it will default to the "Redirect URI". 
 
 ## Flow
 OAuth credentials are required when first creating an integration, but they can be modified later. In [Developer Console](https://developer.adobe.com/console), navigate to the project you created. You can edit credentials by navigating to "Credentials" > "OAuth Single-Page App".
