@@ -21,7 +21,7 @@ openQuickAction(QuickActionParams)
 | :-- | :--| :--
 | id | [QuickActionId](#quickactionid) | ID for associated Quick Action
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Asset to load (image only), and export button options
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify CC Express editor modal dimensions
+| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 Besides **id** and **inputParams.exportOptions**, the rest are optional fields. 
@@ -76,15 +76,17 @@ Must be specified with at least an empty array. When specified with an empty arr
 
 | Property | Value | Description
 | :-- | :--|:--
-| [target](#target) | 'Editor'/'Download' | Determines what type of export 
-|variant | 'cta'/'primary'/'secondary' | Defines the [style](https://spectrum.adobe.com/page/button/) of a button
-|optionType| 'button' | Determines type of export option 
-| buttonType | 'native' | Type of export button (Always 'native')
-|[label](#label) string | Overwrite default label name
+| [target](#target) | 'Editor'/'Download'/'Host' | Determines what type of export 
+| id | string | See `imageCallbacks` in example below
+|[label](#label) | string | Overwrite default label name
+| variant | 'cta'/'primary'/'secondary' | Defines the [style](https://spectrum.adobe.com/page/button/) of a button
+| optionType| 'button' | Determines type of export option 
+| buttonType | 'native'/'custom' | Type of export button
 
 ### target
-  * target = 'Editor' - exports asset to a [CC Express editor component](../ccx_editor/index.md) for further customization
+  * target = 'Editor' - exports asset to a [Adobe Express editor component](../ccx_editor/index.md) for further customization
   * target = 'Download' - downloads asset to user's machine
+  * target = 'Host' - customizable action in `onPublish` callback
 ### label
   * target = 'Editor' => label defaults to "Customize"
   * target = 'Download' => label displays "Download"
@@ -93,7 +95,7 @@ Must be specified with at least an empty array. When specified with an empty arr
 ```js
 const exportOptions = [
     {
-        // Customize in CC Express editor
+        // Customize in Adobe Express editor
         target: 'Editor',
         variant: 'cta',
         optionType: 'button',
@@ -104,8 +106,27 @@ const exportOptions = [
         variant: 'primary',
         optionType: 'button',
         buttonType: 'native'
+    },
+    {
+        target: 'Host',
+        id: 'save-to-host-app',
+        label: 'Embed in app',
+        variant: 'cta',
+        optionType: 'button',
+        buttonType: 'custom'
     }
 ];
+const imageCallbacks = {
+      onCancel: () => {},
+      onPublish: (publishParams) => {
+          if(publishParams.exportButtonId=="save-to-host-app"){
+              //customize functionality here
+          }
+      },
+      onError: (err) => {
+          console.error('Error received is', err.toString())
+      }
+}
 ```
 
 

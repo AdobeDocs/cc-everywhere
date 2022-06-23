@@ -1,51 +1,55 @@
 <!DOCTYPE html>
 <html lang="en" class="spectrum spectrum--medium spectrum--light">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    
-    <title>CC Everywhere Sample</title>
-    
-    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
+    <title>Adobe Create Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-global.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
   </head>
   <body>
-    <button id="createDesign" 
-            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-        <span class="spectrum-Button-label">Create project</span>
-    </button>
-    <button id="editDesign"
-            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-        <span class="spectrum-Button-label">Edit project</span>
-    </button>
-    <button id="ResetButton"
-            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-        <span class="spectrum-Button-label" >Reset</span>
-    </button>
-    <button id="QA"
-        class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-        <span class="spectrum-Button-label" >Quick Actions</span>
-    </button>
-
-<!--  savedDesign: img of the current project -->
-    <img id="savedDesign" height="420" width="420" />
+    <div class="spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">Adobe Create Embed SDK: Express Editor</h1>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            An Express editor can be launched with new or existing Express projects. 
+            To launch an existing project, the SDK expects the associated project ID.  
+        </p>
+        <h3 class="spectrum-Heading spectrum-Heading--sizeL">Sample Workflow</h3>
+        <p class="spectrum-Body spectrum-Body--sizeM">
+            The <b>Create Design</b> button will launch a new project for the user in an editor.
+            When the user finishes their design in the editor, the project ID and its base64-encoded representation is passed to the sample. 
+            This project ID is saved for the<b> Edit Design</b> workflow, and the user's design is shown as an image below. 
+            The <b>Hide</b> button will stop showing it.
+        </p>
+        <button id="createDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Create Design</span>
+        </button>
+        <button id="editDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Edit Design</span>
+        </button>
+        <button id="reset" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Hide</span>
+        </button>
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXXL"> Quick Actions</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Quick Actions gives users tools to perform complex operations such as "Remove Background" without needing to leave your application.
+        </p>
+        <button id="QA" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >View All</span>
+        </button>
+    </div>
+    <img id="savedDesign"/>
     <script type="text/javascript" src="./CCEverywhere.js""></script>
     <script type="text/javascript" >
         const PROJECT_NAME = 'cc everywhere';
-        var ccEverywhere = null;
         var project_id = null;
         var image_data = document.getElementById("savedDesign");
 
-        ccEverywhere = CCEverywhere.default.initialize({
+        const ccEverywhere = CCEverywhere.default.initialize({
             clientId: '<YOUR_CLIENT_ID>',
-            appName: PROJECT_NAME,
+            appName: '<YOUR_PROJECT_NAME>',
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
             redirectUri: 'https://localhost:8000/redirect.html'
@@ -93,7 +97,6 @@
                     console.error('Error received is', err.toString());
                 },
             };
-            const ccEverywhere = window.ccEverywhere;
             ccEverywhere.editDesign(
                 {
                     inputParams: { projectId: project_id },
@@ -101,12 +104,11 @@
                 }
             );
         });
-        // ----------------------------------------------------
-        document.getElementById('ResetButton').addEventListener('click', () => {
-            image_data.src = null;
-            project_id = null;
-            window.location.reload();
-        });
+        // Hides design on page
+        document.getElementById("reset").addEventListener('click', ()=> {
+            image_data.src = '';
+        })
+        
     </script>
   </body>
   

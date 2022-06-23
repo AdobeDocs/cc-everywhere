@@ -1,21 +1,21 @@
 ---
-title: CC Express Editor
-description: This is the reference page for the CC Express editor component.
+title: Adobe Express Editor
+description: This is the reference page for the Adobe Express editor component.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
-# CC Express Editor Reference
+# Adobe Express Editor Reference
 
 ![Editor](editor.png)
 
-The CC Express Editor component gives you access to two workflows: 
+The Adobe Express Editor component gives you access to two workflows: 
 1. Launch with a new project: [createDesign()](#createdesign)
 2. Launch with a project ID to continue editing an existing CC Express project: [editDesign()](#editdesign)
 
 ## createDesign()
 
-This method launches a new project in the CC Express editor component. The editor is loaded in an iframe.
+This method launches a new project in the Adobe Express editor component. The editor is loaded in an iframe.
 
 ```js
 createDesign(CreateDesignParams)
@@ -37,9 +37,9 @@ createDesign(CreateDesignParams)
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasAspectId| string | Initializes the CC Express editor loaded with templates that fit that layout ratio
-| templateType | string | Initializes the CC Express editor loaded with templates of this specified type
-| templateSearchText | string | Initializes the CC Express editor with this string value for template search
+| canvasAspectId| string | Initializes the Express editor loaded with templates that fit that layout ratio
+| templateType | string | Initializes the Express editor loaded with templates of this specified type
+| templateSearchText | string | Initializes the Express editor with this string value for template search
 
 To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/ccx_editor/customization/index.md) page.
 
@@ -69,7 +69,7 @@ ccEverywhere.createDesign(
 
 
 ## editDesign()
-This method launches a CC Express editor component with an existing CC Express project. The editor is loaded in an iframe.
+This method launches a Adobe Express editor component with an existing Adobe Express project. The editor is loaded in an iframe.
 
 ```js
 editDesign(EditDesignParams)

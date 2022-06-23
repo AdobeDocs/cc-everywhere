@@ -12,12 +12,21 @@ This guide contains the steps needed to begin testing your project locally.
 
 
 ## Domain Restrictions
-CC Everywhere SDK expects requests to come from: 
+Adobe Create Embed SDK expects requests to come from: 
 * express.adobe.com
 * localhost
 * a domain that matches registered redirect URIs 
 
-You cannot just download and embed the SDK in a HTML file on your local machine and open that file in a web browser. Because of the SDK's domain restrictions, your project must be served via localhost or a redirect URI pattern you register in [console](https://developer.adobe.com/console/).
+You cannot just download and embed the SDK in a HTML file on your local machine and open that file in a web browser. Any project using the SDK must be served via localhost or a redirect URI pattern you whitelist in [console](https://developer.adobe.com/console/).
+
+If you'd like to test the [sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample), specify: 
+* https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
+* https://localhost:8000/redirect.html in the "Redirect URI patterns" field
+ 
+## Step 0: Download npm or Homebrew
+* npm is a package manager used for installing Node packages. Installing Node automatically installs npm: you can download the installer [here](https://nodejs.org/en/download/).
+
+* Homebrew is another package installer that you can use: follow [these steps](https://docs.brew.sh/Installation) to start using it.
 
 ## Testing via http
 Integrations must be submitted with https redirect URIs to be approved for production, but http URIs are accepted **only** for testing localhost instances. Note that the "Default Redirect URI" field will still expect a https pattern in Console, but including the http URI in the "Redirect URI Patterns" field will be sufficient. We have included some steps for getting started with a simple http server at port 8000: 

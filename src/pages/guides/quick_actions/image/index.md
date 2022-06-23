@@ -8,7 +8,7 @@ contributors:
 
 # Image Quick Actions
 
-Each Image Quick Actions component is loaded into the host application as an iframe, like the CCX editor component. It can be launched with an image asset attached (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for a image file. 
+Each Image Quick Actions component is loaded into the host application as an iframe, like the Express editor component. It can be launched with an image asset attached (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for a image file. 
 
 
 ## openQuickAction()
@@ -68,9 +68,10 @@ Identifies which Image Quick Actions component should be loaded into the iframe.
 #### Step 1b: User clicks the "Image Crop" button, with no asset attached.
    * The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on. 
 #### Step 2: Export Modified Asset
-Finally, users can choose between 2 export options: 
+Finally, users can choose between 3 export options: 
 * __Customize__: to continue designing in a CC Express editor component
 * __Download__: to save the asset
+* Custom button that targets host app
 
 ```html
 <!DOCTYPE html>
@@ -91,7 +92,7 @@ Finally, users can choose between 2 export options:
     const PROJECT_NAME = 'cc everywhere';
     /* file: user uploaded file
     imageUrl: base64 representation we pass into QA function */
-    var file, imageUrl;
+    var file, encodedImage;
     /*  appImage is the image container displayed in sample */
     var appImage = document.getElementById('image-container');
 
@@ -104,9 +105,7 @@ Finally, users can choose between 2 export options:
         /* reads file into base 64 data type */
         reader.readAsDataURL(file);
         reader.onload = () => {
-            let encodedImage = reader.result;
-            /*  save encoded image into imageUrl */
-            imageUrl = encodedImage;
+            encodedImage = reader.result;
         }
         reader.onerror = (error) => {
             console.log('error', error);
@@ -137,14 +136,25 @@ Finally, users can choose between 2 export options:
             variant: 'primary',
             optionType: 'button',
             buttonType: 'native'
+        },
+        /* Custom implementation in onPublish callback */
+        {
+            target: 'Host',
+            id: 'save-to-host-app',
+            label: 'Embed in app',
+            variant: 'cta',
+            optionType: 'button',
+            buttonType: 'custom'
         }
     ];
 
     const callbacks = {
         onCancel: () => {},
         onPublish: (publishParams) => {
-            imageUrl = publishParams.asset.data;
-            appImage.src = imageUrl;
+            if(publishParams.exportButtonId=="save-to-host-app"){
+                appImage.src = publishParams.asset.data;
+                appImage.style.visibility="visible";
+            }
         },
         onError: (err) => {
             console.error('Error received is', err.toString())
@@ -157,7 +167,7 @@ Finally, users can choose between 2 export options:
             id: 'image-crop', 
             inputParams: {
                 asset: {
-                    data: imageUrl, 
+                    data: encodedImage, 
                     dataType: 'base64', 
                     type: 'image'
                 }, 

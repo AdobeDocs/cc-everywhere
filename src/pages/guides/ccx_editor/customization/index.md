@@ -1,6 +1,6 @@
 ---
-title: Creative Cloud Express Editor - Customization
-description: This guide will show you how to customize the CC Express editor component. 
+title: Adobe Express Editor - Customization
+description: This guide will show you how to customize the Adobe Express editor component. 
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
@@ -8,10 +8,10 @@ contributors:
 
 # Customization 
 
-The CC Express Editor Component can be configured and customized to fit the needs of your users. 
+The Adobe Express Editor Component can be configured and customized to fit the needs of your users. 
 
 ## Locale
-The CC Everywhere SDK lets you customize the locale during initialization. The default value is 'en_US'. This determines the language setting for users experiencing SDK components.
+The Adobe Create Embed SDK lets you customize the locale during initialization. The default value is 'en_US'. This determines the language setting for users experiencing SDK components.
 
 | Locale | Description
 | :-- | :--
@@ -32,7 +32,7 @@ The CC Everywhere SDK lets you customize the locale during initialization. The d
 | 'zh_Hant_TW'| Chinese (traditional)
 
 ## Template Layout Ratio
-`canvasAspectId` allows you to specify a string value that initializes the CC Express editor loaded with templates that fit that layout ratio. 
+`canvasAspectId` allows you to specify a string value that initializes the Adobe Express editor loaded with templates that fit that layout ratio. 
 
 | Template Layout Ratio | Description
 | :-- | :--

@@ -8,7 +8,7 @@ contributors:
 
 # Video Quick Actions
 
-Each Video Quick Actions component is loaded into the application as an iframe, like the CC Express editor component. Users will be prompted to browse for an asset once the QA iframe is loaded. Unlike the Image Quick Actions components, Video QAs cannot be launched with an asset attached during this beta phase.
+Each Video Quick Actions component is loaded into the application as an iframe, like the Adobe Express editor component. Users will be prompted to browse for an asset once the QA iframe is loaded. Unlike the Image Quick Actions components, Video QAs cannot be launched with an asset attached during this beta phase.
 
 ## openQuickAction()
 After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
@@ -68,9 +68,10 @@ Identifies which Video Quick Actions component should be loaded into the iframe.
 * The Change Speed QA Component is launched in an iframe. The user will browse for a mp4 asset to perform the QA on, within this iframe. 
 * Once selected, the user is presented with options for changing the speed. 
 
-Finally, users can choose between 2 export options: 
-* __Customize__: to continue designing in a CC Express editor component
+Finally, users can choose between 3 export options: 
+* __Customize__: to continue designing in a Adobe Express editor component
 * __Download__: to save the asset
+* Custom buttons that target the host application
 
 ```html
 <!DOCTYPE html>
@@ -101,6 +102,9 @@ Finally, users can choose between 2 export options:
     const videoCallbacks = {
         onCancel: () => {},
         onPublish: (publishParams) => {
+            if(publishParams.exportButtonId=="save-to-host-app"){
+                // Customize functionality here 
+            }
         },
         onError: (err) => {
             console.error('Error received is', err.toString())
@@ -119,6 +123,15 @@ Finally, users can choose between 2 export options:
             variant: 'primary',
             optionType: 'button',
             buttonType: 'native'
+        },
+        /* Custom implementation in onPublish callback */
+        {
+            target: 'Host',
+            id: 'save-to-host-app',
+            label: 'Embed in app',
+            variant: 'cta',
+            optionType: 'button',
+            buttonType: 'custom'
         }
     ];
 

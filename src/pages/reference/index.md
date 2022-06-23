@@ -7,7 +7,7 @@ contributors:
 --- 
 
 # SDK Reference
-The main method for initializing the SDK takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object. 
+This is the main API for accessing all the SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object. 
 
 ## initialize()
 
@@ -51,12 +51,12 @@ The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the
 
 ## CCEverywhere
 
-The CCEverywhere object is the object returned when the SDK is initialized. This is the main API for accessing all the SDK components. 
+The CCEverywhere object is the object returned when the SDK is initialized. 
 
 As of today, it exposes 4 methods: 
 1. `openQuickAction()`: Quick Actions Component
-2. `createDesign()`: CC Express Editor Component
-3. `editDesign()`: CC Express Editor Component
+2. `createDesign()`: Adobe Express Editor Component
+3. `editDesign()`: Adobe Express Editor Component
 4. `exchangeAuthCodeForToken()`: Authorization
 
 
