@@ -54,12 +54,20 @@ Run `npm install` to install the dependencies in `package.json`. The required de
 
 ## Step 5: Run this sample
 
+
 To start the server at port 8000, run this line in your project root: 
 
 ```
 http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000 -a localhost
 ```
-By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CC Express. Now your server is up and available at `https://localhost:8000`.
+By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with Adobe Express. Now your server is up and available at `https://localhost:8000`.
+
+If you want to test via http, run this line in the project root:
+
+```
+http-server -p 8000
+```
+Now your server is up and available at `http://localhost:8000`.
 
 ## Known Issues
 This sample will not run on incognito windows. 
