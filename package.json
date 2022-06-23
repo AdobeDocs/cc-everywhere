@@ -1,17 +1,22 @@
 {
   "private": true,
-  "name": "cc-everywhere",
+  "name": "dev-site-documentation-template",
   "version": "1.0.0",
+  "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/cc-everywhere"
+    "url": "https://github.com/AdobeDocs/dev-site-documentation-template"
+  },
+  "author": {
+    "name": "Stephan Ringel",
+    "url": "https://github.com/icaraps"
   },
   "dependencies": {
     "@adobe/gatsby-theme-aio": "^4.1.1",
-    "gatsby": "^4.12.1",
-    "react":"^17.0.0",
-    "react-dom":"^17.0.0"
-  },
+    "gatsby": "^4.13.0",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0"
+},
   "scripts": {
     "start": "gatsby build && gatsby serve",
     "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
