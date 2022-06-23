@@ -88,7 +88,7 @@ The Adobe Create Embed SDK can be initialized with a customized locale. The [gui
 * How to [create a project](../guides/ccx_editor/create_project/) in an Express editor
 * How to [edit an existing project](../guides/ccx_editor/edit_project/) in an Express editor
 
-When the editor first appears in a modal, the user will be asked to either log in, or create a Creative Cloud Express account. Once logged in, users can access Express's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing project ID as input, and users can continue working on a project within the editor.
+When the editor first appears in a modal, the user will be asked to either log in, or create a Adobe Express account. Once logged in, users can access Express's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing project ID as input, and users can continue working on a project within the editor.
 
 ### [Quick Actions Editor Component](../../guides/quick_actions/index.md)
 * How to [use Image Quick Actions](../guides/quick_actions/image/)
