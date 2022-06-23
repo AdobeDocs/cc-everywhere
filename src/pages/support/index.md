@@ -1,6 +1,6 @@
 ---
-title: Support - CC Everywhere 
-description: This is the support page of CC Everywhere 
+title: Support - Adobe Created Embed SDK
+description: This is the support page of Adobe Create Embed SDK
 ---
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>
@@ -11,7 +11,7 @@ Learn where to ask questions, report bugs, make feature requests, and spark disc
 
 ## Prerelease Forum
 
-In the alpha phase of our release, forum access is by invitation only. Fill out [this form](https://forms.office.com/r/J0HvGMbtDT) to register interest.
+In the beta phase of our release, forum access is by invitation only. Fill out [this form](https://forms.office.com/r/J0HvGMbtDT) to register interest.
 
 
 ## Slack Support

@@ -83,14 +83,12 @@ module.exports = {
         header: true,
         pages: [
           {
+            title: 'Authorization', 
+            path: '/reference/authorization/'
+          },
+          {
             title: 'Initialize SDK', 
             path: '/reference/', 
-            pages: [
-              {
-                title: 'Authorization', 
-                path: '/reference/authorization/'
-              },
-            ] 
           },
           {
             title: 'CCX Editor', 

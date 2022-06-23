@@ -23,13 +23,14 @@
         </p>
         <p class="spectrum-Body spectrum-Body--sizeS">1. <b>Download</b>: Downloads the modified asset to the user's computer.
             <br>2. <b>Customize</b>: Sends user to a Creative Cloud Express Editor to continue editing the modified asset.
-            <br>3. <b>Embed in app</b>: <i>Customizable label and functionality.</i> Shows the modified asset on this page. Use the button below to hide the image/video.
+            <br>3. <b>Embed in app</b>: Shows the modified asset on this page. Use the button below to hide the image/video.
         </p>  
         <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeM" >
             <span class="spectrum-Button-label">Clear assets from page</span>
         </button>
         <h4 class="spectrum-Heading spectrum-Heading--sizeM">Image Quick Actions</h4>
         <input type="file" id="fileInput"/><button id="reset">Reset</button><p></p>
+        <p class="spectrum-Body spectrum-Body--sizeS">If a file is selected, it will continue to be used as an input until you click <b>Reset</b>.</p>
         <div id="image-buttons">
             <button id="image-crop" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
                 <span class="spectrum-Button-label">Crop Image</span>
@@ -110,34 +111,34 @@
         })
         document.getElementById('reset').addEventListener('click', () => {
             inputFile.value = '';
-            enodedImage = null;
+            encodedImage = null;
         })
 
-        /* Defines native buttons for export: 
-        "Customize" in Express, or "Download" */
+        /* Defines export buttons for export */
         const exportOptions = [
-            /* Customize in Express */
+            /* Export to continue editing in Express editor */
             {
                 target: 'Editor',
                 variant: 'cta',
-                buttonType: 'native',
-                optionType: 'button'
+                optionType: 'button',
+                buttonType: 'native'
             },
-            /* Download */
+            /* Downloads asset to user's computer */
             {
                 target: 'Download',
                 variant: 'primary',
                 optionType: 'button',
                 buttonType: 'native'
             },
+            /* Custom implementation in onPublish callback */
             {
                 target: 'Host',
-                id: 'save-modified-asset',
+                id: 'save-to-host-app',
                 label: 'Embed in app',
                 variant: 'cta',
                 optionType: 'button',
                 buttonType: 'custom'
-            },
+            }
         ];
 
         /* __________________________________________________________
@@ -147,7 +148,7 @@
         const imageCallbacks = {
             onCancel: () => {},
             onPublish: (publishParams) => {
-                if(publishParams.exportButtonId=="save-modified-asset"){
+                if(publishParams.exportButtonId=="save-to-host-app"){
                     appImage.src = publishParams.asset.data;
                     appImage.style.visibility="visible";
                 }
@@ -157,6 +158,7 @@
             }
         }
 
+        /* If there's no file uploaded, no asset is passed */
         function imageQuickAction(qa_id) {            
             if(inputFile) {
                 ccEverywhere.openQuickAction({
@@ -172,8 +174,6 @@
                     callbacks: imageCallbacks
                 })
             } else {
-            /* If there's no file uploaded, we can still call the QA API and the user is prompted to 
-            browser for image files in the modal */
                 ccEverywhere.openQuickAction({
                     id: qa_id, 
                     inputParams: { exportOptions: exportOptions },
@@ -197,7 +197,7 @@
         const videoCallbacks = {
             onCancel: () => {},
             onPublish: (publishParams) => {
-                if(publishParams.exportButtonId=="save-modified-asset"){
+                if(publishParams.exportButtonId=="save-to-host-app"){
                     appVideo.src = publishParams.asset.data;
                     appVideo.style.visibility = "visible";
                 }

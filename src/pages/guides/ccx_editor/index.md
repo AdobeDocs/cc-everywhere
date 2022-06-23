@@ -1,12 +1,12 @@
 ---
 title: Embed Express Editor
-description: This is the overview page for the Creative Cloud Express Editor component.
+description: This is the overview page for the Adobe Express Editor component.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
 
-# Creative Cloud Express Editor 
+# Adobe Express Editor 
 ![Editor](editor.png)
 
 ## Create and Edit Projects

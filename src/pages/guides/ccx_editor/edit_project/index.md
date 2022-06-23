@@ -1,20 +1,20 @@
 ---
-title: CC Express Editor - Edit Project
+title: Adobe Express Editor - Edit Project
 description: This guide will show you how users can continue working on existing projects in a CC Express editor. 
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
 
-# CC Express Editor Component: Edit Existing CC Express Project 
+# Adobe Express Editor Component: Edit Existing Adobe Express Project 
 
-This guide will demonstrate how to launch a CCX editor component. The editor will appear in an iframe, pre-loaded with a specified CC Express project.
+This guide will demonstrate how to launch a Express editor component. The editor will appear in an iframe, pre-loaded with a specified Adobe Express project.
 
 ## editDesign()
-The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the CC Express editor component in an iframe, with an existing project pre-loaded.
+The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the Adobe Express editor component in an iframe, with an existing project pre-loaded.
 
 #### Flow: 
-* User triggers `editDesign()` function from within the host application, and the CC Express editor is loaded in an iframe.
+* User triggers `editDesign()` function from within the host application, and the Adobe Express editor is loaded in an iframe.
 * To pre-load the editor with an existing project, you must pass the associated project ID to `editDesignParams`. This ID is returned in the `project` property of `publishParams` from the `onPublish` callback. 
 
 
@@ -60,8 +60,8 @@ The only required property is `inputParams.projectId`.
 * A CC Express editor component is launched in an iframe, pre-loaded with that CC Express project. 
 
 #### Step 2: User finishes design and clicks "Save"
-* The project is again saved to the user's CC Express account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.
-* The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __CCX project ID (projectId)__ and __image data representation (asset)__. 
+* The project is again saved to the user's Adobe Express account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.
+* The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __Express project ID (projectId)__ and __image data representation (asset)__. 
   * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later again via `editDesign()`.
 
 

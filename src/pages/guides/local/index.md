@@ -11,12 +11,12 @@ contributors:
 This guide contains the steps needed to begin testing your project via localhost.
 
 ## Domain Restrictions
-CC Everywhere SDK expects requests to come from: 
+Adobe Create Embed SDK expects requests to come from: 
 * express.adobe.com
 * localhost
 * a domain that matches registered redirect URIs 
 
-You cannot just download and embed the SDK in a HTML file on your local machine and open that file in a web browser. Because of the SDK's domain restrictions, any project using the SDK must be served via localhost or a redirect URI pattern you register in [console](https://developer.adobe.com/console/).
+You cannot just download and embed the SDK in a HTML file on your local machine and open that file in a web browser. Any project using the SDK must be served via localhost or a redirect URI pattern you whitelist in [console](https://developer.adobe.com/console/).
 
 If you'd like to test the [sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample), specify: 
 * https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
