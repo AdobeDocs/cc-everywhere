@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-guides-local-index-md",
-    "path": "/guides/local/",
-    "result": {"pageContext":{"frontmatter":{"title":"Local Development","description":"This guide will set you up for local development and testing.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},
-    "staticQueryHashes": ["915530536"]}
+{"componentChunkName":"component---src-pages-guides-local-index-md","path":"/guides/local/","result":{"pageContext":{"frontmatter":{"title":"Local Development","description":"This guide will set you up for local development and testing.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},"staticQueryHashes":["915530536"]}

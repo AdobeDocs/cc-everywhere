@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-guides-quick-actions-index-md",
-    "path": "/guides/quick_actions/",
-    "result": {"pageContext":{"frontmatter":{"title":"Embed QA Editor","description":"This is the overview page for the QA Editor component.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},
-    "staticQueryHashes": ["915530536"]}
+{"componentChunkName":"component---src-pages-guides-quick-actions-index-md","path":"/guides/quick_actions/","result":{"pageContext":{"frontmatter":{"title":"Embed QA Editor","description":"This is the overview page for the QA Editor component.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},"staticQueryHashes":["915530536"]}

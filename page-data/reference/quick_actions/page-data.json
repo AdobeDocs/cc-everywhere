@@ -1,5 +1,1 @@
-{
-    "componentChunkName": "component---src-pages-reference-quick-actions-index-md",
-    "path": "/reference/quick_actions/",
-    "result": {"pageContext":{"frontmatter":{"title":"Quick Actions","description":"This is the reference page for the Quick Actions component.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},
-    "staticQueryHashes": ["915530536"]}
+{"componentChunkName":"component---src-pages-reference-quick-actions-index-md","path":"/reference/quick_actions/","result":{"pageContext":{"frontmatter":{"title":"Quick Actions","description":"This is the reference page for the Quick Actions component.","contributors":["https://github.com/amandahuarng","https://github.com/pklaschka"]}}},"staticQueryHashes":["915530536"]}
