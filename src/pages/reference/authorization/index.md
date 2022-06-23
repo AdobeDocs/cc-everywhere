@@ -28,6 +28,7 @@ If you'd like to test the [sample](https://github.com/AdobeDocs/cc-everywhere/tr
 * https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
 * https://localhost:8000/redirect.html in the "Redirect URI Patterns" field
 
+Integrations must be submitted with https redirect URIs to be approved for production, but http URIs are accepted **only** for testing localhost instances. Note that the "Default Redirect URI" field will still expect a https pattern in Console, but including the http URI in the "Redirect URI Patterns" field will be sufficient. 
 
 ## Code Exchange
 Call the `exchangeAuthCodeForToken()` method at your redirect URI to exchange the authorization code for an access token, so the user is not prompted to login again in this session.
