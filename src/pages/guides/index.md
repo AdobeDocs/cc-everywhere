@@ -19,7 +19,7 @@ This SDK is currently in private alpha and is subject to changes until GA availa
 
 1. Create a new project in the [Developer Console](https://developer.adobe.com/console). 
 2. Select "Add an API" > "Creative Cloud Everywhere SDK". 
-3. Select "Single-Page App" and register your redirect URI in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../reference/authorization/index.md). 
+3. Select "Single-Page App" and register your redirect URI in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md). 
 
 ## Step 2: Embed SDK
 
