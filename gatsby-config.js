@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        title: 'CC Everywhere SDK',
+        title: 'Create Embed SDK',
         path: '/'
       },
       {
@@ -22,7 +22,7 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'References',
+        title: 'Reference',
         path: '/reference/'
       },
       {
@@ -32,25 +32,27 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Quickstart Guide',
+        title: 'Quickstart',
         path: '/guides/',
-        pages: [
-          {
-            title: 'Local Development',
-            path: '/guides/local/'
-          },
-        ]
       },
       {
-        title: 'CC Express Editor Component',
+        title: 'Configure OAuth', 
+        path: '/guides/authorization/'
+      },
+      {
+        title: 'Local Development',
+        path: '/guides/local/'
+      },
+      {
+        title: 'Embed Express Editor',
         path: '/guides/ccx_editor/',
         pages: [
           {
-            title: 'Creating New Project',
+            title: 'Create New Project',
             path: '/guides/ccx_editor/create_project/'
           },
           {
-            title: 'Editing Existing Project',
+            title: 'Edit Existing Project',
             path: '/guides/ccx_editor/edit_project/'
           }, 
           {
@@ -60,7 +62,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Quick Actions Component',
+        title: 'Embed Quick Actions',
         path: '/guides/quick_actions/',
         pages: [
           {
@@ -74,24 +76,16 @@ module.exports = {
         ]
       },
       {
-        title: 'Support',
-        path: '/support/'
-      },
-      {
         title: 'Components',
         path: '/reference',
         header: true,
         pages: [
           {
-            title: 'Authorization', 
-            path: '/reference/authorization/'
-          },
-          {
             title: 'Initialize SDK', 
             path: '/reference/', 
           },
           {
-            title: 'CCX Editor', 
+            title: 'Express Editor', 
             path: '/reference/ccx_editor/'
           },
           {

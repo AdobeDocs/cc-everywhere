@@ -10,7 +10,7 @@ contributors:
 
 # Adobe Create Embed SDK
 
-Adobe Create Embed SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Adobe Express capabilities to all applications. This SDK is currently in private beta and is subject to changes until GA availability. To register interest for the Adobe Create Embed SDK, fill out [this form.](https://forms.office.com/r/J0HvGMbtDT)
+Adobe Create Embed SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Adobe Express capabilities to all applications. This SDK is currently in private beta and is subject to changes until GA availability. 
 
 <Resources slots="heading, links"/>
 
@@ -21,8 +21,7 @@ Adobe Create Embed SDK is an easy-to-integrate, customizable, all-in-one JavaScr
 <DiscoverBlock width="100%" slots="heading, text"/>
 
 ## Overview
-
-This documentation provides all the materials you need to start integrating Adobe Express components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from Express. As of today, this SDK has two components: __Express Editor__ and __Quick Actions__.
+This documentation provides all the materials you need to start integrating Adobe Express components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from Express. As of today, this SDK has two components: __Express Editor__ and __Quick Actions__. To access the Adobe Create Embed SDK during this private beta phase, register interest with [this form.](https://forms.office.com/r/J0HvGMbtDT)  
 
 ### What is Adobe Express? 
 [Adobe Express](https://www.adobe.com/express/) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, Express users can create standout content from wherever they work. 
@@ -33,10 +32,9 @@ Quick Actions are fast and free editing tools for images and videos, powered by 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ## Getting Started
-
-[Guides](guides/)
+[Quickstart](guides/)
     
-Start embedding Adobe Express components into your own application by reading our guides.
+Read our guides to begin integrating with Adobe Create Embed SDK. 
 
 <DiscoverBlock slots="heading, link, text"/> 
 
@@ -52,7 +50,12 @@ Embed an Adobe Express editor so users can easily create and publish projects.
 
 Embed a QA editor so users have fast access to powerful editing tools.
 
-[Read the full SDK reference.](reference/) 
+<DiscoverBlock slots="link, text"/>
+
+[SDK Reference](reference/)
+
+For more details, check out the full SDK reference.
+
 
 
   
