@@ -101,5 +101,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/cc-everywhere/'
+  pathPrefix: process.env.PATH_PREFIX || '/create-embed-sdk/docs/'
 };
