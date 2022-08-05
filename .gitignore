@@ -6,4 +6,5 @@ node_modules
 yarn-error.log
 .editorconfig
 .env
-testing-sample
+1.n-sample
+cdn-test
