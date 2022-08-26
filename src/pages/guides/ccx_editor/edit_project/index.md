@@ -75,35 +75,31 @@ The only required property is `inputParams.projectId`.
     <button id="edit-project-button">Edit project</button>
     <img id="image-container" height="420" width="420" />
 
-    <script type="text/javascript" src="./CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript">
-    /* Set to null until CCEverywhere object is initialized */
-    var ccEverywhere = null;
-    var projectId = <set by createDesign onPublish earlier>
+    // projectId should be saved from an earlier call to createDesign
+    var projectId = SAVED_CCX_PROJECT_ID;
     var imageContainer = document.getElementById("image-container");
-
     const editButton = document.getElementById("edit-project-button");
 
-    ccEverywhere = CCEverywhere.default.initialize(
-        {
-            clientId: YOUR_CLIENT_ID
+    (() => {
+        if (!window.CCEverywhere) {
+            return;
+        }
+        const ccEverywhere = window.CCEverywhere.initialize({
+            clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web', 
             redirectUri: YOUR_REDIRECT_URI
-        }
-    );
+        });
+    })();
 
-    editButton.onclick = () => {
+    editButton.addEventListener('click', () => {
         const editDesignCallback = {
             onCancel: () => {},
             onPublish: (publishParams) => {
-            /* User clicked "Save" - done modifying project.
-            Save modified image data and projectId */
-                const localData = { 
-                    project: publishParams.projectId, 
-                    image: publishParams.asset.data 
-                };
+                const localData = { project: publishParams.projectId, image: publishParams.asset.data };
                 imageContainer.src = localData.image;
                 projectId = localData.project;
             },
@@ -117,7 +113,7 @@ The only required property is `inputParams.projectId`.
                 callbacks: editDesignCallback
             }
         );
-    }
+    });
     </script>
   </body> 
 </html>

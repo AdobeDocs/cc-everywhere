@@ -1,18 +1,10 @@
 ## Adobe Create Embed SDK Sample 
 
-## Step 0: Embed SDK
-
-This SDK is currently in private beta and is subject to changes until GA availability. To register interest for the Adobe Create Embed SDK, fill out [this form.](https://forms.office.com/r/J0HvGMbtDT). 
-
-Once you gain access, follow the steps [here](https://github.com/AdobeDocs/cc-everywhere-alpha).
-
 ## Step 1: Register a project
-
-**Before you register an application, you need to have filled out the form above and been invited to the prerelease repo for access to the SDK.**
 
 Register your integration by creating a new project in the [Developer Console](https://developer.adobe.com/console). 
 
-Select "Add an API" > "Adobe Create Embed SDK".
+Select "Add an API" > "Creative Cloud Everywhere".
 Select "Single-Page App" and register redirect URI patterns to whitelist your domain. 
   * When the SDK is first called, a login popup window appears for the user to sign in and allow the integration to access their Express assets. After the login is complete, a code is sent on the backend from the Adobe server to the registered redirect URI. 
   * Call the SDK's `exchangeCodeForToken` API at your registered redirect URI to exchange that code for an access token. This token will be stored in the browser so the user does not have to login again in the same session. You can read more [here.](https://developer.adobe.com/cc-everywhere/guides/authorization) 

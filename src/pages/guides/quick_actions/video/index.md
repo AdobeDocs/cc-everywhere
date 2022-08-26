@@ -84,12 +84,12 @@ Finally, users can choose between 3 export options:
     <h1> Video Quick Action Example </h1>
     <button id="change-speed"> Change Speed </button>
 
-    <script type="text/javascript" src="CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript" >
 
     const PROJECT_NAME = 'cc everywhere';
 
-    var ccEverywhere = CCEverywhere.default.initialize(
+    var ccEverywhere = window.CCEverywhere.initialize(
         {
             clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,

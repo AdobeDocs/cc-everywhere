@@ -2,6 +2,7 @@
 <html lang="en" class="spectrum spectrum--medium spectrum--light">
   <head>
     <title>Adobe Create Embed SDK Sample</title>
+    
     <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-global.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css">
@@ -41,13 +42,11 @@
         </button>
     </div>
     <img id="savedDesign"/>
-    <script type="text/javascript" src="./CCEverywhere.js""></script>
+    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript" >
+        
         const PROJECT_NAME = 'cc everywhere';
-        var project_id = null;
-        var image_data = document.getElementById("savedDesign");
-
-        const ccEverywhere = CCEverywhere.default.initialize({
+        const ccEverywhere = window.CCEverywhere.initialize({
             clientId: '<YOUR_CLIENT_ID>',
             appName: '<YOUR_PROJECT_NAME>',
             appVersion: { major: 1, minor: 0 },
@@ -60,6 +59,8 @@
         });
 
 
+        var project_id = null;
+        var image_data = document.getElementById("savedDesign");
         const createButton = document.getElementById("createDesign");
         createButton.addEventListener('click', () => {
             const createDesignCallback = {
@@ -104,7 +105,7 @@
                 }
             );
         });
-        // Hides design on page
+
         document.getElementById("reset").addEventListener('click', ()=> {
             image_data.src = '';
         })

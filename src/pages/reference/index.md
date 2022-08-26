@@ -15,7 +15,8 @@ The default method `initialize()` is the API used to initialize the SDK. Make su
 
 
 ```js
-CCEverywhere.default.initialize(
+// after loading the SDK into the window
+window.CCEverywhere.initialize(
     /* HostInfo */
     {
         clientId: YOUR_CLIENT_ID,

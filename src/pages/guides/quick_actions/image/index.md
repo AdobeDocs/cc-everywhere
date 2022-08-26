@@ -86,7 +86,7 @@ Finally, users can choose between 3 export options:
     <img id="image-container" height="420" width="420" />
     <button id="image-crop"> Crop Image </button>
 
-    <script type="text/javascript" src="CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript" >
 
     const PROJECT_NAME = 'cc everywhere';
@@ -112,7 +112,7 @@ Finally, users can choose between 3 export options:
         };
     })
 
-    var ccEverywhere = CCEverywhere.default.initialize(
+    var ccEverywhere = window.CCEverywhere.initialize(
         {
             clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,

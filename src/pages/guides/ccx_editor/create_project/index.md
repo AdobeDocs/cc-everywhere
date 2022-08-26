@@ -79,51 +79,52 @@ All the properties in `CreateDesignParams` are optional.
     <button id="create-project-button">Create project</button>
     <img id="image-container" height="420" width="420" />
 
-    <script type="text/javascript" src="./CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript">
 
     /* Initialize projectId to null until it gets set by onPublish callback */
     var projectId = null;
-    /* Set to null until CCEverywhere object is initialized */
-    var ccEverywhere = null;
+    
     var imageContainer = document.getElementById("image-container");
     const createButton = document.getElementById("create-project-button");
-        
-    ccEverywhere = CCEverywhere.default.initialize(
-        {
+    
+    (() => {
+        if (!window.CCEverywhere) {
+            return;
+        }
+        const ccEverywhere = window.CCEverywhere.initialize({
             clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web', 
             redirectUri: YOUR_REDIRECT_URI
-        }
-    );
-
-    createButton.onclick = () => {
-        const createDesignCallback = {
-            onCancel: () => {},
-            onPublish: (publishParams) => {
-                /* User clicked "Save"
-                   Save image data to render in sample
-                   Save projectId for editing later */
-                const localData = { 
-                    project: publishParams.projectId, 
-                    image: publishParams.asset.data 
-                };
-                imageContainer.src = localData.image;
-                projectId = localData.project; 
-            },
-            onError: (err) => {
-                console.error('Error received is', err.toString());
-            },
-        };
+        });
+    })();
     
-        ccEverywhere.createDesign(
-            {
-                callbacks: createDesignCallback
-            }
-        );  
-    }
+
+    const createButton = document.getElementById("create-project-button");
+        createButton.addEventListener('click', () => {
+            const createDesignCallback = {
+                onCancel: () => {},
+                onPublish: (publishParams) => {
+                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
+                    imageContainer.src = localData.image;
+                    projectId = localData.project;
+                },
+                onError: (err) => {
+                    console.error('Error received is', err.toString());
+                },
+            };
+            
+            ccEverywhere.createDesign(
+                {
+                    callbacks: createDesignCallback, 
+                    outputParams: {
+                        outputType: "base64",
+                    }
+                }
+            );  
+    });
     </script>
   </body> 
 </html>

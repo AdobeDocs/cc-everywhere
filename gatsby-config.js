@@ -76,6 +76,10 @@ module.exports = {
         ]
       },
       {
+        title: 'Changelog',
+        path: '/guides/changelog/'
+      },
+      {
         title: 'Components',
         path: '/reference',
         header: true,

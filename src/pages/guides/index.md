@@ -10,41 +10,57 @@ contributors:
 
 This guide explains how to start using the SDK in your own application. 
 
-## Step 0: Request Access 
-
-This SDK is currently in private alpha and is subject to changes until GA availability. To register interest for the Adobe Create Embed SDK, fill out [this form](https://forms.office.com/r/J0HvGMbtDT).
-
-
 ## Step 1: Get an API Key
 
-1. Create a new project in the [Developer Console](https://developer.adobe.com/console). 
-2. Select "Add an API" > "Creative Cloud Everywhere SDK". 
-3. Select "Single-Page App" and register your redirect URI in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md). 
+Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Creative Cloud Everywhere". 
+
+Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md). 
 
 ## Step 2: Embed SDK
 
-> **Note**: Until the SDK can be pulled directly from a CDN, you'll need to download and serve the SDK yourself locally. To set up a local server, refer to the [local development set-up guide](./local/index.md) 
-
-You can embed the SDK in your app using the `<script>` HTML tag. 
-
-### HTML Example
-
-```html
-<script type="text/javascript" src="./CCEverywhere.js"></script>
+The latest [version](https://sdk.cc-embed.adobe.com/v1/version.json) of the SDK is available on Adobe's CDN: 
+```js
+var CDN_URL = "https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js";
 ```
 
-### JavaScript Example
+You can read the [changelog](/src/pages/guides/changelog/index.md) to understand what updates are being made.
+
+### Load via script tag
 
 ```js
-function embedSDK = (document, pathToSDK) => {
-    const script = document.createElement("script");
-    script.src = pathToSDK;
-    document.body.appendChild(script);
-}
-
-embedSDK(document, "./CCEverywhere.js");
+<script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+<script>
+  (() => {
+    if (!window.CCEverywhere) {
+      return;
+    }
+    const ccEverywhere = window.CCEverywhere.initialize();
+  })();
+</script>
 ```
 
+### Using import 
+
+```js
+await import(CDN_URL);
+const ccEverywhere = window.CCEverywhere.initialize();
+```
+
+### Dynamic script
+
+```js
+((document, url) => {
+    const script = document.createElement("script");
+    script.src = url;
+    script.onload = () => {
+      if (!window.CCEverywhere) {
+          return;
+        }
+        const ccEverywhere = window.CCEverywhere.initialize();
+    };
+    document.body.appendChild(script);
+  })(document, CDN_URL);
+```
 
 ## Step 3: Initialize the SDK
 
@@ -54,13 +70,18 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 * `REDIRECT_URI` (string): Specify the redirect URI you registered for the project in Developer Console
 
 ```js
-const ccEverywhere = CCEverywhere.default.initialize({
-    clientId: <CLIENT_ID>,
-    appName: <APP_NAME>, 
-    appVersion: { major: 1, minor: 0 },
-    platformCategory: 'web',
-    redirectUri: <REDIRECT_URI>
-});
+(() => {
+    if (!window.CCEverywhere) {
+      return;
+    }
+    const ccEverywhere = window.CCEverywhere.initialize({
+      clientId: <CLIENT_ID>,
+      appName: <APP_NAME>, 
+      appVersion: { major: 1, minor: 0 },
+      platformCategory: 'web',
+      redirectUri: <REDIRECT_URI>
+    });
+})();
 ```
 
 This returns a `CCEverywhere` Class object, with four methods: 
@@ -71,7 +92,9 @@ This returns a `CCEverywhere` Class object, with four methods:
 
 ## Step 4: Exchange Access Token
 
-The Adobe IMS server will handle the OAuth for your application. At the redirect URI you define, After a user logs in, the Adobe IMS Server stores the code and redirects the user back to the designated **redirect URL** with an authorization code. At this redirect URL is hit,  call the following method:
+> **Note**: To set up a local server, refer to the [local development set-up guide](./local/index.md) 
+
+After a user logs in, they are redirected back to the designated **redirect URL** with an authorization code. At this redirect URL is hit, call the following method to exchange that code for an access token:
 
 ```js
 ccEverywhere.exchangeAuthCodeForToken();
