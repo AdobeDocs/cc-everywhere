@@ -1,4 +1,16 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - Support
+  - Forums
+  - Developer
 title: Support - Adobe Created Embed SDK
 description: This is the support page of Adobe Create Embed SDK
 ---

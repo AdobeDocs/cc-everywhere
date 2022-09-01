@@ -1,4 +1,20 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Image Quick Actions
+  - Video Quick Actions
+  - Adobe Photoshop
+  - Adobe Premiere
+  - Local development 
 title: Local Development
 description: This guide will set you up for local development and testing. 
 contributors:

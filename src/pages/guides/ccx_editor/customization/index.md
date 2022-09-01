@@ -1,4 +1,19 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Editor component 
+  - Customize
+  - Locale
+  - Template Type
 title: Adobe Express Editor - Customization
 description: This guide will show you how to customize the Adobe Express editor component. 
 contributors:

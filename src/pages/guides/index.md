@@ -1,4 +1,19 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Quickstart
+  - Register project
+  - Initialize SDK
+  - Getting started
 title: Quickstart Guide
 description: This is the quickstart guide for Adobe Create Embed SDK
 contributors:

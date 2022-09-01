@@ -1,4 +1,13 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
 title: Overview - Adobe Create Embed SDK
 description: This is the overview page of Adobe Create Embed SDK
 contributors:

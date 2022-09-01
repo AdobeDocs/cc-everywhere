@@ -1,4 +1,17 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - API Documentation
+  - Reference
+  - Initialize
+  - CCEverywhere
 title: SDK Reference
 description: This is the reference page for the existing components in the SDK.
 contributors:

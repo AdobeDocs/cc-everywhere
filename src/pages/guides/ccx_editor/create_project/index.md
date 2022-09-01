@@ -1,4 +1,18 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Editor component 
+  - Create Express project 
+  - createDesign()
 title: Adobe Express Editor - Create New Project
 description: This guide will show you how users can start working on new projects in a CC Express editor. 
 contributors:

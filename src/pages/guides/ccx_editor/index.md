@@ -1,4 +1,16 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Embed editor component
 title: Embed Express Editor
 description: This is the overview page for the Adobe Express Editor component.
 contributors:

@@ -1,4 +1,16 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Image Quick Action
+  - Video Quick Action
 title: Quick Actions
 description: This is the reference page for the Quick Actions component.
 contributors:

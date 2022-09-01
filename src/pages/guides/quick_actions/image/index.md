@@ -1,4 +1,20 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Image Quick Actions
+  - Video Quick Actions
+  - Adobe Photoshop
+  - Adobe Premiere
+  - Editing tools 
 title: Image Quick Actions
 description: This guide will demonstrate how to trigger a Quick Actions editor for images.
 contributors:

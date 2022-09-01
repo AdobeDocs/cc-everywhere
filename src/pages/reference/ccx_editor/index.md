@@ -1,4 +1,17 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Edit project
+  - Create new project
 title: Adobe Express Editor
 description: This is the reference page for the Adobe Express editor component.
 contributors:

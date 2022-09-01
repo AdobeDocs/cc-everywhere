@@ -1,4 +1,21 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Image Quick Actions
+  - Video Quick Actions
+  - Adobe Photoshop
+  - Adobe Premiere
+  - Authorization
+  - OAuth credentials
 title: Authorization
 description: This is the reference page for authorization. 
 contributors:

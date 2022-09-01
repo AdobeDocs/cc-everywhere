@@ -1,4 +1,20 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Image Quick Actions
+  - Video Quick Actions
+  - Adobe Photoshop
+  - Adobe Premiere
+  - Changelog
 title: Changelog
 description: All notable changes are documented in this page.
 contributors:

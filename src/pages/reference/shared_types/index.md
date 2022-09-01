@@ -1,4 +1,20 @@
 ---
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - Shared Types
+  - Components
+  - Asset
+  - Output
+  - Modal parameters
+  - onPublish
+  - Callbacks
 title: Shared Types
 description: This is the reference page for shared types across SDK components.
 contributors:

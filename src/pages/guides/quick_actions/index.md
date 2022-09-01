@@ -1,6 +1,22 @@
 ---
-title: Embed QA Editor
-description: This is the overview page for the QA Editor component.
+keywords:
+  - Create Embed SDK
+  - Express Editor
+  - Adobe Express
+  - Embed SDK
+  - Quick Actions
+  - ExtendScript
+  - SDK
+  - JavaScript
+  - Embed
+  - SDK Reference
+  - Image Quick Actions
+  - Video Quick Actions
+  - Adobe Photoshop
+  - Adobe Premiere
+  - Editing tools 
+title: Embed Quick Actions
+description: This is the overview page for the Quick Actions component.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
