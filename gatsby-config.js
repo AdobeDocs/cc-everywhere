@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        title: 'Create Embed SDK',
+        title: 'Embed SDK',
         path: '/'
       },
       {
@@ -105,5 +105,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/create-embed-sdk/docs/'
+  pathPrefix: process.env.PATH_PREFIX || '/express-embed-sdk/docs/'
 };
