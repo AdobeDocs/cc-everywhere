@@ -1,4 +1,4 @@
-## Adobe Create Embed SDK Sample 
+## Adobe Express Embed SDK Sample 
 
 ## Step 1: Register a project
 

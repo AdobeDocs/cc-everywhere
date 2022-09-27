@@ -105,5 +105,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/express-embed-sdk/docs/'
+  pathPrefix: process.env.PATH_PREFIX || '/embed-sdk/docs/'
 };
