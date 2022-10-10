@@ -23,6 +23,10 @@ contributors:
 
 # Changelog
 
+## [1.3.14] - 2022-09-23
+### Enhancements
+- Analytic improvements.
+
 ## [1.3.11] - 2022-08-24
 ### Added
 - SDK bundled for browsers, hosted on Adobe CDN
