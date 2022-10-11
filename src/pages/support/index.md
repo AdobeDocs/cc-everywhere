@@ -1,18 +1,17 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed
   - Support
   - Forums
   - Developer
-title: Support - Adobe Created Embed SDK
-description: This is the support page of Adobe Create Embed SDK
+title: Support - Adobe Express Embed SDK
+description: This is the support page of Adobe Express Embed SDK
 ---
 
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>
@@ -21,12 +20,11 @@ description: This is the support page of Adobe Create Embed SDK
 
 Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 
-## Prerelease Forum
+## Community Forum
 
-In the beta phase of our release, forum access is by invitation only. Fill out [this form](https://forms.office.com/r/J0HvGMbtDT) to register interest.
+Please use our [community forum](https://community.adobe.com/t5/create-embed-sdk-beta/ct-p/ct-create-embed-sdk-beta?page=1&sort=latest_replies&lang=all&tabid=all) to leave any questions or comments you may have about the SDK.
 
 
-## Slack Support
-Chat with Adobe and other developers in our dedicated Slack channel. Register interest using the form above where you will receive more details. 
+
 
 

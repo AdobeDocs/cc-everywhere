@@ -1,11 +1,10 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed

@@ -1,11 +1,10 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed
@@ -15,7 +14,7 @@ keywords:
   - Initialize SDK
   - Getting started
 title: Quickstart Guide
-description: This is the quickstart guide for Adobe Create Embed SDK
+description: This is the quickstart guide for Adobe Express Embed SDK
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
@@ -120,7 +119,7 @@ The returned authorization code is exchanged for an access token, which is saved
 
 ## Next Steps: Explore the SDK
 
-The Adobe Create Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
+The Adobe Express Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
 ### [Express Editor Component](../../guides/ccx_editor/index.md)
 * How to [create a project](../guides/ccx_editor/create_project/) in an Express editor

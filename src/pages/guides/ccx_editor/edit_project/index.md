@@ -1,11 +1,10 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed
@@ -14,7 +13,7 @@ keywords:
   - Edit project 
   - editDesign()
 title: Adobe Express Editor - Edit Project
-description: This guide will show you how users can continue working on existing projects in a CC Express editor. 
+description: This guide will show you how users can continue working on existing projects in an Adobe Express editor. 
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
@@ -60,7 +59,7 @@ ccEverywhere.editDesign(
 | Property | Description | Type 
 | :-- | :-- | :--
 | modalParams | Define size of editor modal | [ModalParams](../../../reference/shared_types/index.md#modalparams)
-| inputParams| CC Express project ID to initialize editor component | [EditInputParams](../../../reference/ccx_editor/index.md#editinputparams)
+| inputParams| Adobe Express project ID to initialize editor component | [EditInputParams](../../../reference/ccx_editor/index.md#editinputparams)
 | outputParams | Configure output type | [CCXOutputParams](../../../reference/shared_types/index.md#ccxoutputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks) 
 
@@ -71,7 +70,7 @@ The only required property is `inputParams.projectId`.
 
 #### Step 1: User clicks the "Edit project" button
 * The `editDesign()` function is called and passed `inputParams.projectId`, a set of callback functions in `editDesignCallback`.
-* A CC Express editor component is launched in an iframe, pre-loaded with that CC Express project. 
+* An Adobe Express editor component is launched in an iframe, pre-loaded with that Adobe Express project. 
 
 #### Step 2: User finishes design and clicks "Save"
 * The project is again saved to the user's Adobe Express account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.

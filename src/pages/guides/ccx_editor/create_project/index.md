@@ -1,11 +1,10 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed
@@ -14,7 +13,7 @@ keywords:
   - Create Express project 
   - createDesign()
 title: Adobe Express Editor - Create New Project
-description: This guide will show you how users can start working on new projects in a CC Express editor. 
+description: This guide will show you how users can start working on new projects in an Adobe Express editor. 
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
@@ -143,5 +142,5 @@ All the properties in `CreateDesignParams` are optional.
   </body> 
 </html>
 ```
-Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into a Adobe Express editor. 
+Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into an Adobe Express editor. 
 
