@@ -24,9 +24,11 @@ contributors:
 This guide will demonstrate how to launch a Express editor component. The editor will appear in an iframe, pre-loaded with a specified Adobe Express project.
 
 ## editDesign()
+
 The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the Adobe Express editor component in an iframe, with an existing project pre-loaded.
 
 #### Flow: 
+
 * User triggers `editDesign()` function from within the host application, and the Adobe Express editor is loaded in an iframe.
 * To pre-load the editor with an existing project, you must pass the associated project ID to `editDesignParams`. This ID is returned in the `project` property of `publishParams` from the `onPublish` callback. 
 
@@ -53,7 +55,9 @@ ccEverywhere.editDesign(
     }
 );
 ```
+
 ### [EditDesignParams](../../../reference/ccx_editor/index.md#editdesignparams)
+
 `editDesign()` takes an object of parameters, `editDesignParams`, composed of:
 
 | Property | Description | Type 
@@ -69,10 +73,12 @@ The only required property is `inputParams.projectId`.
 ## Example
 
 #### Step 1: User clicks the "Edit project" button
+
 * The `editDesign()` function is called and passed `inputParams.projectId`, a set of callback functions in `editDesignCallback`.
 * An Adobe Express editor component is launched in an iframe, pre-loaded with that Adobe Express project. 
 
 #### Step 2: User finishes design and clicks "Save"
+
 * The project is again saved to the user's Adobe Express account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.
 * The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __Express project ID (projectId)__ and __image data representation (asset)__. 
   * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later again via `editDesign()`.
@@ -131,4 +137,3 @@ The only required property is `inputParams.projectId`.
   </body> 
 </html>
 ```
-

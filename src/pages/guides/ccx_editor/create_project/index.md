@@ -24,9 +24,11 @@ contributors:
 This guide will demonstrate how to launch an Adobe Express editor component. The editor will appear in an iframe and open a new project in a folder named `appName`, as specified when the SDK is initialized.
 
 ## createDesign()
+
 The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `createDesign()` method, which loads the editor component in an iframe. 
 
 #### Flow: 
+
 * User triggers `createDesign()` function from within the host application, and an editor is loaded in an iframe.
 * A pop-up window will appear and the user has to create or log into their Adobe Express account. 
 * Any projects are automatically created/saved in a new project folder ('app_name' specified in SDK initialization) within Adobe Express.
@@ -58,6 +60,7 @@ ccEverywhere.createDesign(
 
 
 ### [CreateDesignParams](../../../reference/ccx_editor/index.md#createdesignparams)
+
 `createDesign()` takes an object of parameters, `CreateDesignParams`, composed of:
 
 | Property | Description | Type 
@@ -73,10 +76,12 @@ All the properties in `CreateDesignParams` are optional.
 ## Example 
 
 #### Step 1: User clicks the "Create project" button
+
 * The `createDesign()` function is called and passed `createDesignCallback`. 
 * An Express editor component is launched in an iframe. 
 
 #### Step 2: User completes design and clicks "Save"
+
 * The project is saved to the user's Express account in project folder (`appName`) designated in the [initialize()](../../../reference/index.md#initialize) function.
 * The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __Express project ID (projectId)__ and __image data representation (asset)__. 
   * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later via `editDesign()`.
@@ -142,5 +147,5 @@ All the properties in `CreateDesignParams` are optional.
   </body> 
 </html>
 ```
-Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into an Adobe Express editor. 
 
+Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into an Adobe Express editor. 

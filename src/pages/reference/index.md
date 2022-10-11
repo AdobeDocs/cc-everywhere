@@ -19,6 +19,7 @@ contributors:
 --- 
 
 # SDK Reference
+
 This is the main API for accessing all the SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object. 
 
 ## initialize()
@@ -43,7 +44,9 @@ window.CCEverywhere.initialize(
     }
 );
 ```
+
 ### HostInfo
+
 | Property | Type | Description
 | :-- | :--| :--
 |clientId | string | Your API Key
@@ -56,6 +59,7 @@ If you specify `redirectUri` as a parameter in the **HostInfo** object, that is 
 
 
 ### ConfigParams
+
 The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/../pages/guides/ccx_editor/customization/index.md) page for a full locale list.
 
 | Property | Type | Description
@@ -67,6 +71,7 @@ The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the
 The CCEverywhere object is the object returned when the SDK is initialized. 
 
 As of today, it exposes 4 methods: 
+
 1. `openQuickAction()`: Quick Actions Component
 2. `createDesign()`: Adobe Express Editor Component
 3. `editDesign()`: Adobe Express Editor Component

@@ -25,6 +25,7 @@ contributors:
 The Adobe Express Editor Component can be configured and customized to fit the needs of your users. 
 
 ## Locale
+
 The Adobe Express Embed SDK lets you customize the locale during initialization. The default value is `'en_US'`. This determines the language setting for users experiencing SDK components.
 
 | Locale | Description
@@ -46,6 +47,7 @@ The Adobe Express Embed SDK lets you customize the locale during initialization.
 | 'zh_Hant_TW'| Chinese (traditional)
 
 ## Template Layout Ratio
+
 `canvasAspectId` allows you to specify a string value that initializes the Adobe Express editor loaded with templates that fit that layout ratio. 
 
 | Template Layout Ratio | Description
@@ -91,6 +93,7 @@ The Adobe Express Embed SDK lets you customize the locale during initialization.
 
 
 ## Template Type
+
 Developers can pass the `createDesign()` method a `templateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on Adobe Express to get an ideal of each category.
 
 | Template Type | CCX Template Category 
@@ -115,4 +118,3 @@ Developers can pass the `createDesign()` method a `templateType`, for the user t
 |'Album_Cover' | Album covers
 | 'Book_Cover' | Book covers
 | 'Worksheet' | Worksheets
-

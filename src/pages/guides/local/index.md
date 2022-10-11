@@ -26,7 +26,9 @@ contributors:
 This guide contains the steps needed to begin serve your SDK and test your project locally. 
 
 ## Domain Restrictions
+
 Adobe Create Embed SDK expects requests to come from: 
+
 * express.adobe.com
 * localhost
 * a domain that is registered to the client app in [Developer Console](https://developer.adobe.com/console/)
@@ -36,6 +38,7 @@ When a client application first calls the SDK, the user is prompted to authentic
 All non-localhost redirect URIs need a valid SSL certificate to redirect the client after sign-ins and subsequently save access tokens onto client pages.
 
 ## Testing via https
+
 **Your production server will need a public key and a signed certificate to enable https. **
 
 To start trying out the SDK, we have included some steps for setting up a simple http server at port 8000: 
@@ -56,6 +59,7 @@ To start trying out the SDK, we have included some steps for setting up a simple
 ```
 
 ## Testing via http
+
 **Integrations must be submitted with https redirect URIs to be approved for production, but http URIs are accepted in Console *only* for testing localhost instances.**
 
 >  Note: The "Default Redirect URI" field will still expect a https pattern, but including the http URI in the "Redirect URI Patterns" field will be sufficient.

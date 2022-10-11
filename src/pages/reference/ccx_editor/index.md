@@ -34,6 +34,7 @@ createDesign(CreateDesignParams)
 ```
 
 ### CreateDesignParams
+
 `createDesign()` takes a `CreateDesignParams` object with 4 properties.
 
 | Properties | Type | Description
@@ -56,6 +57,7 @@ createDesign(CreateDesignParams)
 To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/ccx_editor/customization/index.md) page.
 
 ### Example
+
 ```js
 ccEverywhere.createDesign(
     {
@@ -81,6 +83,7 @@ ccEverywhere.createDesign(
 
 
 ## editDesign()
+
 This method launches a Adobe Express editor component with an existing Adobe Express project. The editor is loaded in an iframe.
 
 ```js
@@ -88,6 +91,7 @@ editDesign(EditDesignParams)
 ```
 
 ### EditDesignParams
+
 `editDesign()` takes a `EditDesignParams` object with 4 properties.
 
 | Property | Type | Description
@@ -99,6 +103,7 @@ editDesign(EditDesignParams)
 
 
 #### EditInputParams
+
 `EditInputParams` is where you pass the associated projectId to launch in an editor component.
   
 | Property | Type | Description 
@@ -108,6 +113,7 @@ editDesign(EditDesignParams)
 Get **projectId** from **publishParams** of **onPublish** (called after save/download finishes).
 
 ### Example
+
 ```js
 ccEverywhere.editDesign(
     {

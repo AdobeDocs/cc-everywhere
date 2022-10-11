@@ -18,9 +18,11 @@ contributors:
 ---
 
 # Adobe Express Editor 
+
 ![Editor](editor.png)
 
 ## Create and Edit Projects
+
 Using the editor, developers can give end users an easy way to start a creative design workflow from within their own applications.
 
 The editor component can be embedded in your web application today, by following these guides: 

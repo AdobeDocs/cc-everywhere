@@ -28,6 +28,7 @@ Each Image Quick Actions component is loaded into the host application as an ifr
 
 
 ## openQuickAction()
+
 After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
 
 ```js
@@ -52,6 +53,7 @@ ccEverywhere.openQuickAction(
 ```
 
 ### [QuickActionParams](../../../reference/quick_actions/index.md#quickactionparams)
+
 `openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
 
 | Property | Description | Type 
@@ -64,6 +66,7 @@ ccEverywhere.openQuickAction(
 Only `id` and `inputParams.exportOptions` is required to initialize the iframe.
 
 ### [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+
 Identifies which Image Quick Actions component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
@@ -76,15 +79,21 @@ Identifies which Image Quick Actions component should be loaded into the iframe.
 
 
 ## Example 
+
 #### Step 1a: User uploads an image asset, and clicks the "Image Crop" button.
+
    * After a user uploads an image, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl". 
    * This `imageUrl` is passed as `inputParams.asset` when the `openQuickAction()` method is called. 
    * The Image Crop QA Component is launched in an iframe, and the user can crop the uploaded image as they wish. 
 
 #### Step 1b: User clicks the "Image Crop" button, with no asset attached.
+
    * The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on. 
+
 #### Step 2: Export Modified Asset
+
 Finally, users can choose between 3 export options: 
+
 * __Customize__: to continue designing in a CC Express editor component
 * __Download__: to save the asset
 * Custom button that targets host app

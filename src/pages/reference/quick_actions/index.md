@@ -19,6 +19,7 @@ contributors:
 # Quick Actions Reference
 
 ## openQuickAction()
+
 This method launches an iframe to perform a Quick Action.
 
 ```js
@@ -26,6 +27,7 @@ openQuickAction(QuickActionParams)
 ```
 
 ### QuickActionParams
+
 `openQuickAction()` takes an object `QuickActionParams` with 4 properties. 
 
 | Property | Type | Description
@@ -39,6 +41,7 @@ Besides **id** and **inputParams.exportOptions**, the rest are optional fields.
 
 
 ### QuickActionId
+
 Allows you to select a Image or Video Quick Action.
 
 | Quick Action | QuickActionId | Type
@@ -70,6 +73,7 @@ Allows you to specify the asset and export buttons you want to perform a Quick A
 **exportOptions** is required to be defined with at least an empty array.
 
 ### Example
+
 ```js
 ccEverywhere.openQuickAction(
     {
@@ -82,6 +86,7 @@ ccEverywhere.openQuickAction(
 ```
 
 ## ExportOption
+
 Allows you to define export buttons for a Quick Action. 
 Must be specified with at least an empty array. When specified with an empty array, a "Download" button will still be generated for the user once the Quick Action is completed.
 
@@ -95,14 +100,18 @@ Must be specified with at least an empty array. When specified with an empty arr
 | buttonType | 'native'/'custom' | Type of export button
 
 ### target
+
   * target = 'Editor' - exports asset to a [Adobe Express editor component](../ccx_editor/index.md) for further customization
   * target = 'Download' - downloads asset to user's machine
   * target = 'Host' - customizable action in `onPublish` callback
+
 ### label
+
   * target = 'Editor' => label defaults to "Customize"
   * target = 'Download' => label displays "Download"
 
 ### Example
+
 ```js
 const exportOptions = [
     {
@@ -139,5 +148,3 @@ const imageCallbacks = {
       }
 }
 ```
-
-

@@ -21,7 +21,9 @@ contributors:
   - https://github.com/pklaschka
 ---
 # Shared Types
+
 ## Asset 
+
 Represents an asset that can be loaded into an Adobe Express editor component, or loaded in for an Image Quick Action. 
 
 | Property | Value(s) | Description 
@@ -31,6 +33,7 @@ Represents an asset that can be loaded into an Adobe Express editor component, o
 | data | string | Base 64 rendition of image asset
  
 ## OutputAsset
+
 Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) type with 3 additional properties. 
 
 | Property | Value(s) | Description 
@@ -44,6 +47,7 @@ Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) t
 <!-- todo: check optional properties are outputted -->
 
 ## Callbacks
+
 All the callbacks are optional and return void. 
 
 | Property | Callback Function | Description 
@@ -56,6 +60,7 @@ All the callbacks are optional and return void.
 | onPublish | (PublishParams) => {} | Triggered when publish/download finishes 
 
 #### PublishParams
+
 onPublish passes the host application a `PublishParams` object.  
 
 | Property | Description

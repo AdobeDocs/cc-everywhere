@@ -23,23 +23,28 @@ Adobe Express Embed SDK is an easy-to-integrate, customizable, all-in-one JavaSc
 <Resources slots="heading, links"/>
 
 #### Resources
+
 * [Quickstart Guide](guides/)
 * [Sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample)
   
 <DiscoverBlock width="100%" slots="heading, text"/>
 
 ## Overview
+
 This documentation provides all the materials you need to start integrating Adobe Express components into your own applications. Designed to support web (and in the future, mobile) platforms, over time it will include live template generation and other modular building blocks for content-first, task-based creative tooling drawn from Express. As of today, this SDK has two components: __Express Editor__ and __Quick Actions__.   
 
 ### What is Adobe Express? 
+
 [Adobe Express](https://www.adobe.com/express/) makes it easy to get started with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, Express users can create standout content from wherever they work. 
 
 ### What are Quick Actions? 
+
 Quick Actions are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed a Quick Actions (QA) editor to give end users access to these tools within their own applications.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
 ## Getting Started
+
 [Quickstart](guides/)
     
 Read our guides to begin integrating with Adobe Express Embed SDK. 

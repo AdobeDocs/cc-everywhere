@@ -99,6 +99,7 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 ```
 
 This returns a `CCEverywhere` Class object, with four methods: 
+
 1. `openQuickAction()`: Quick Actions Component
 2. `createDesign()`: Adobe Express Editor Component
 3. `editDesign()`: Adobe Express Editor Component
@@ -122,12 +123,14 @@ The returned authorization code is exchanged for an access token, which is saved
 The Adobe Express Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
 ### [Express Editor Component](../../guides/ccx_editor/index.md)
+
 * How to [create a project](../guides/ccx_editor/create_project/) in an Express editor
 * How to [edit an existing project](../guides/ccx_editor/edit_project/) in an Express editor
 
 When the editor first appears in a modal, the user will be asked to either log in, or create a Adobe Express account. Once logged in, users can access Express's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing project ID as input, and users can continue working on a project within the editor.
 
 ### [Quick Actions Editor Component](../../guides/quick_actions/index.md)
+
 * How to [use Image Quick Actions](../guides/quick_actions/image/)
 * How to [use Video Quick Actions](../guides/quick_actions/video/)
 
