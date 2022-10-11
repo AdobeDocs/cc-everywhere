@@ -14,7 +14,7 @@ contributors:
   - https://github.com/pklaschka
 ---
 
-<Hero slots="heading, text" background="rgb(64, 34, 138)" /> 
+<Hero slots="heading, text" background="rgb(64, 34, 138)" />
 
 # Adobe Express Embed SDK
 
@@ -49,7 +49,7 @@ Quick Actions are fast and free editing tools for images and videos, powered by 
 
 Read our guides to begin integrating with Adobe Express Embed SDK.
 
-<DiscoverBlock slots="heading, link, text"/> 
+<DiscoverBlock slots="heading, link, text"/>
 
 ### Components
 
