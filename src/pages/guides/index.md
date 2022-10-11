@@ -1,11 +1,10 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed
@@ -15,7 +14,7 @@ keywords:
   - Initialize SDK
   - Getting started
 title: Quickstart Guide
-description: This is the quickstart guide for Adobe Create Embed SDK
+description: This is the quickstart guide for Adobe Express Embed SDK
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
@@ -23,17 +22,18 @@ contributors:
 
 # Quickstart Guide
 
-This guide explains how to start using the SDK in your own application. 
+This guide explains how to start using the SDK in your own application.
 
 ## Step 1: Get an API Key
 
-Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Creative Cloud Everywhere". 
+Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Creative Cloud Everywhere".
 
-Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md). 
+Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md).
 
 ## Step 2: Embed SDK
 
-The latest [version](https://sdk.cc-embed.adobe.com/v1/version.json) of the SDK is available on Adobe's CDN: 
+The latest [version](https://sdk.cc-embed.adobe.com/v1/version.json) of the SDK is available on Adobe's CDN:
+
 ```js
 var CDN_URL = "https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js";
 ```
@@ -54,7 +54,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 </script>
 ```
 
-### Using import 
+### Using import
 
 ```js
 await import(CDN_URL);
@@ -80,6 +80,7 @@ const ccEverywhere = window.CCEverywhere.initialize();
 ## Step 3: Initialize the SDK
 
 The SDK should only be initialized once each page. To initialize the SDK, pass the default method `initialize()`:
+
 * `CLIENT_ID` (string): API key from Console
 * `APP_NAME` (string): Name of the Express folder created for end users of your integration
 * `REDIRECT_URI` (string): Specify the redirect URI you registered for the project in Developer Console
@@ -99,15 +100,16 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 })();
 ```
 
-This returns a `CCEverywhere` Class object, with four methods: 
+This returns a `CCEverywhere` Class object, with four methods:
+
 1. `openQuickAction()`: Quick Actions Component
 2. `createDesign()`: Adobe Express Editor Component
 3. `editDesign()`: Adobe Express Editor Component
-4. `exchangeAuthCodeForToken()`: Authorization 
+4. `exchangeAuthCodeForToken()`: Authorization
 
 ## Step 4: Exchange Access Token
 
-> **Note**: To set up a local server, refer to the [local development set-up guide](./local/index.md) 
+> **Note**: To set up a local server, refer to the [local development set-up guide](./local/index.md)
 
 After a user logs in, they are redirected back to the designated **redirect URL** with an authorization code. At this redirect URL is hit, call the following method to exchange that code for an access token:
 
@@ -117,18 +119,19 @@ ccEverywhere.exchangeAuthCodeForToken();
 
 The returned authorization code is exchanged for an access token, which is saved for future requests to the SDK during this session.
 
-
 ## Next Steps: Explore the SDK
 
-The Adobe Create Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
+The Adobe Express Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
 ### [Express Editor Component](../../guides/ccx_editor/index.md)
+
 * How to [create a project](../guides/ccx_editor/create_project/) in an Express editor
 * How to [edit an existing project](../guides/ccx_editor/edit_project/) in an Express editor
 
 When the editor first appears in a modal, the user will be asked to either log in, or create a Adobe Express account. Once logged in, users can access Express's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing project ID as input, and users can continue working on a project within the editor.
 
 ### [Quick Actions Editor Component](../../guides/quick_actions/index.md)
+
 * How to [use Image Quick Actions](../guides/quick_actions/image/)
 * How to [use Video Quick Actions](../guides/quick_actions/video/)
 

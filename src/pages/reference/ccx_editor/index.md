@@ -1,11 +1,10 @@
 ---
 keywords:
-  - Create Embed SDK
+  - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
   - Quick Actions
-  - ExtendScript
   - SDK
   - JavaScript
   - Embed
@@ -22,9 +21,10 @@ contributors:
 
 ![Editor](editor.png)
 
-The Adobe Express Editor component gives you access to two workflows: 
+The Adobe Express Editor component gives you access to two workflows:
+
 1. Launch with a new project: [createDesign()](#createdesign)
-2. Launch with a project ID to continue editing an existing CC Express project: [editDesign()](#editdesign)
+2. Launch with a project ID to continue editing an existing Adobe Express project: [editDesign()](#editdesign)
 
 ## createDesign()
 
@@ -35,12 +35,13 @@ createDesign(CreateDesignParams)
 ```
 
 ### CreateDesignParams
+
 `createDesign()` takes a `CreateDesignParams` object with 4 properties.
 
 | Properties | Type | Description
 | :-- | :--| :--
-| inputParams | [CreateInputParams](#createinputparams) | Specify canvas template layout ratio, canvas template type, and the search text to pass in the target application 
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify CC Express editor modal dimensions
+| inputParams | [CreateInputParams](#createinputparams) | Specify canvas template layout ratio, canvas template type, and the search text to pass in the target application
+| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
@@ -57,6 +58,7 @@ createDesign(CreateDesignParams)
 To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/ccx_editor/customization/index.md) page.
 
 ### Example
+
 ```js
 ccEverywhere.createDesign(
     {
@@ -80,8 +82,8 @@ ccEverywhere.createDesign(
 ); 
 ```
 
-
 ## editDesign()
+
 This method launches a Adobe Express editor component with an existing Adobe Express project. The editor is loaded in an iframe.
 
 ```js
@@ -89,26 +91,28 @@ editDesign(EditDesignParams)
 ```
 
 ### EditDesignParams
+
 `editDesign()` takes a `EditDesignParams` object with 4 properties.
 
 | Property | Type | Description
 | :-- | :--| :--
 | inputParams | [EditInputParams](#editinputparams) | ID of CC Express project to open for editing
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify CC Express editor modal dimensions
+| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
-
 #### EditInputParams
+
 `EditInputParams` is where you pass the associated projectId to launch in an editor component.
   
-| Property | Type | Description 
+| Property | Type | Description
 | :-- | :--| :--
-| projectId| string | CC Express project ID to send to the editor component
+| projectId| string | Adobe Express project ID to send to the editor component
 
 Get **projectId** from **publishParams** of **onPublish** (called after save/download finishes).
 
 ### Example
+
 ```js
 ccEverywhere.editDesign(
     {
