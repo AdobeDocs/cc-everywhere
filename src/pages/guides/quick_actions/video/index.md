@@ -28,7 +28,7 @@ Each Video Quick Actions component is loaded into the application as an iframe, 
 
 ## openQuickAction()
 
-After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
+After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method.
 
 ```js
 ccEverywhere.openQuickAction(
@@ -55,23 +55,21 @@ ccEverywhere.openQuickAction(
 
 `openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
 
-| Property | Description | Type 
+| Property | Description | Type
 | :-- | :-- | :--
 | id | Choose Quick Actions component| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 | inputParams | Configure [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
 | modalParams | Define size of QA iframe |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
 
-
-Only `id` and `inputParams.exportOptions` is required to initialize the iframe. 
-
+Only `id` and `inputParams.exportOptions` is required to initialize the iframe.
 
 ### [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 
 Identifies which Video Quick Actions component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
-| :-- | :-- 
+| :-- | :--
 | Change Speed | 'change-speed'
 | Convert to GIF | 'convert-to-gif'
 | Convert to MP4 | 'convert-to-mp4'
@@ -81,15 +79,14 @@ Identifies which Video Quick Actions component should be loaded into the iframe.
 | Reverse Video | 'reverse-video'
 | Trim Video | 'trim-video'
 
-
 ## Example
 
-#### Flow: User clicks the "Change Speed" button.
+#### Flow: User clicks the "Change Speed" button
 
-* The Change Speed QA Component is launched in an iframe. The user will browse for a mp4 asset to perform the QA on, within this iframe. 
-* Once selected, the user is presented with options for changing the speed. 
+* The Change Speed QA Component is launched in an iframe. The user will browse for a mp4 asset to perform the QA on, within this iframe.
+* Once selected, the user is presented with options for changing the speed.
 
-Finally, users can choose between 3 export options: 
+Finally, users can choose between 3 export options:
 
 * __Customize__: to continue designing in a Adobe Express editor component
 * __Download__: to save the asset

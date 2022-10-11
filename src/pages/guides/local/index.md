@@ -23,11 +23,11 @@ contributors:
 
 # Local Development
 
-This guide contains the steps needed to begin serve your SDK and test your project locally. 
+This guide contains the steps needed to begin serve your SDK and test your project locally.
 
 ## Domain Restrictions
 
-Adobe Create Embed SDK expects requests to come from: 
+Adobe Create Embed SDK expects requests to come from:
 
 * express.adobe.com
 * localhost
@@ -39,20 +39,20 @@ All non-localhost redirect URIs need a valid SSL certificate to redirect the cli
 
 ## Testing via https
 
-**Your production server will need a public key and a signed certificate to enable https. **
+**Your production server will need a public key and a signed certificate to enable https.**
 
-To start trying out the SDK, we have included some steps for setting up a simple http server at port 8000: 
+To start trying out the SDK, we have included some steps for setting up a simple http server at port 8000:
 
 1. Install Homebrew. Homebrew is a package installer: follow [these steps](https://docs.brew.sh/Installation) to install it.
-2. Create a key and SSL certificate using `mkcert`. 
-   * [`mkcert`](https://github.com/FiloSottile/mkcert) is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates. 
-   * Install it using `brew install mkcert`, NOT `npm install mkcert`. 
+2. Create a key and SSL certificate using `mkcert`.
+   * [`mkcert`](https://github.com/FiloSottile/mkcert) is a simple tool for making locally-trusted development certificates. It automatically installs a local CA in the system root store, and generates locally-trusted certificates.
+   * Install it using `brew install mkcert`, NOT `npm install mkcert`.
    * Configure a local certificate authority by running `mkcert -install`.
    * Run `mkcert localhost` in the project root. This will generate two files: `localhost-key.pem` (key) and `localhost.pem` (certificate). Our https server is instantiated in the next step with these two files so that the browser trusts localhost.
 3. Install `http-server`.
-   * `http-server` lets you make files or directories available via `localhost`. 
-   * Install it using `npm i http-server` or `brew install http-server`. 
-4. Run the following line in your project root: 
+   * `http-server` lets you make files or directories available via `localhost`.
+   * Install it using `npm i http-server` or `brew install http-server`.
+4. Run the following line in your project root:
 
 ```bash
  http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000 -a localhost
@@ -62,17 +62,16 @@ To start trying out the SDK, we have included some steps for setting up a simple
 
 **Integrations must be submitted with https redirect URIs to be approved for production, but http URIs are accepted in Console *only* for testing localhost instances.**
 
->  Note: The "Default Redirect URI" field will still expect a https pattern, but including the http URI in the "Redirect URI Patterns" field will be sufficient.
+> Note: The "Default Redirect URI" field will still expect a https pattern, but including the http URI in the "Redirect URI Patterns" field will be sufficient.
 
- We have included some steps for getting started with a simple http server at port 8000: 
+ We have included some steps for getting started with a simple http server at port 8000:
 
 1. Install npm or Homebrew. npm is installed when you install Node, and Homebrew is another package installer that you can use.
 2. Install `http-server`.
-   * `http-server` lets you make files or directories available via `localhost`. 
-   * Install it using `npm i http-server` or `brew install http-server`. 
-3. Run the following line in your project root: 
+   * `http-server` lets you make files or directories available via `localhost`.
+   * Install it using `npm i http-server` or `brew install http-server`.
+3. Run the following line in your project root:
 
 ```bash
  http-server -p 8000 -a localhost
 ```
-

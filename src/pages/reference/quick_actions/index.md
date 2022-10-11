@@ -28,7 +28,7 @@ openQuickAction(QuickActionParams)
 
 ### QuickActionParams
 
-`openQuickAction()` takes an object `QuickActionParams` with 4 properties. 
+`openQuickAction()` takes an object `QuickActionParams` with 4 properties.
 
 | Property | Type | Description
 | :-- | :--| :--
@@ -37,8 +37,7 @@ openQuickAction(QuickActionParams)
 | modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
-Besides **id** and **inputParams.exportOptions**, the rest are optional fields. 
-
+Besides **id** and **inputParams.exportOptions**, the rest are optional fields.
 
 ### QuickActionId
 
@@ -60,15 +59,14 @@ Allows you to select a Image or Video Quick Action.
 | Reverse Video | 'reverse-video' | Video
 | Trim Video | 'trim-video' | Video
 
-
 ### QuickActionInputParams
 
-Allows you to specify the asset and export buttons you want to perform a Quick Action with. 
+Allows you to specify the asset and export buttons you want to perform a Quick Action with.
 
-| Property | Type | Description 
+| Property | Type | Description
 | :-- | :--| :--
-| asset | [Asset](#asset) | Image you want to load into QA modal
-| exportOptions | [ExportOption](#export-option) | Customize export buttons 
+| asset | [Asset](../shared_types/index.md#asset) | Image you want to load into QA modal
+| exportOptions | [ExportOption](#exportoption) | Customize export buttons
 
 **exportOptions** is required to be defined with at least an empty array.
 
@@ -87,28 +85,28 @@ ccEverywhere.openQuickAction(
 
 ## ExportOption
 
-Allows you to define export buttons for a Quick Action. 
+Allows you to define export buttons for a Quick Action.
 Must be specified with at least an empty array. When specified with an empty array, a "Download" button will still be generated for the user once the Quick Action is completed.
 
 | Property | Value | Description
 | :-- | :--|:--
-| [target](#target) | 'Editor'/'Download'/'Host' | Determines what type of export 
+| [target](#target) | 'Editor'/'Download'/'Host' | Determines what type of export
 | id | string | See `imageCallbacks` in example below
 |[label](#label) | string | Overwrite default label name
 | variant | 'cta'/'primary'/'secondary' | Defines the [style](https://spectrum.adobe.com/page/button/) of a button
-| optionType| 'button' | Determines type of export option 
+| optionType| 'button' | Determines type of export option
 | buttonType | 'native'/'custom' | Type of export button
 
 ### target
 
-  * target = 'Editor' - exports asset to a [Adobe Express editor component](../ccx_editor/index.md) for further customization
-  * target = 'Download' - downloads asset to user's machine
-  * target = 'Host' - customizable action in `onPublish` callback
+* target = 'Editor' - exports asset to a [Adobe Express editor component](../ccx_editor/index.md) for further customization
+* target = 'Download' - downloads asset to user's machine
+* target = 'Host' - customizable action in `onPublish` callback
 
 ### label
 
-  * target = 'Editor' => label defaults to "Customize"
-  * target = 'Download' => label displays "Download"
+* target = 'Editor' => label defaults to "Customize"
+* target = 'Download' => label displays "Download"
 
 ### Example
 

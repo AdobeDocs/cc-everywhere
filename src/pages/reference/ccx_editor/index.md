@@ -21,7 +21,8 @@ contributors:
 
 ![Editor](editor.png)
 
-The Adobe Express Editor component gives you access to two workflows: 
+The Adobe Express Editor component gives you access to two workflows:
+
 1. Launch with a new project: [createDesign()](#createdesign)
 2. Launch with a project ID to continue editing an existing Adobe Express project: [editDesign()](#editdesign)
 
@@ -39,7 +40,7 @@ createDesign(CreateDesignParams)
 
 | Properties | Type | Description
 | :-- | :--| :--
-| inputParams | [CreateInputParams](#createinputparams) | Specify canvas template layout ratio, canvas template type, and the search text to pass in the target application 
+| inputParams | [CreateInputParams](#createinputparams) | Specify canvas template layout ratio, canvas template type, and the search text to pass in the target application
 | modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
@@ -81,7 +82,6 @@ ccEverywhere.createDesign(
 ); 
 ```
 
-
 ## editDesign()
 
 This method launches a Adobe Express editor component with an existing Adobe Express project. The editor is loaded in an iframe.
@@ -101,12 +101,11 @@ editDesign(EditDesignParams)
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
-
 #### EditInputParams
 
 `EditInputParams` is where you pass the associated projectId to launch in an editor component.
   
-| Property | Type | Description 
+| Property | Type | Description
 | :-- | :--| :--
 | projectId| string | Adobe Express project ID to send to the editor component
 

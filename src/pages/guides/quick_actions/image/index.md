@@ -24,12 +24,11 @@ contributors:
 
 # Image Quick Actions
 
-Each Image Quick Actions component is loaded into the host application as an iframe, like the Express editor component. It can be launched with an image asset attached (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for a image file. 
-
+Each Image Quick Actions component is loaded into the host application as an iframe, like the Express editor component. It can be launched with an image asset attached (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for a image file.
 
 ## openQuickAction()
 
-After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method. 
+After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method.
 
 ```js
 ccEverywhere.openQuickAction(
@@ -56,7 +55,7 @@ ccEverywhere.openQuickAction(
 
 `openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
 
-| Property | Description | Type 
+| Property | Description | Type
 | :-- | :-- | :--
 | id | Choose Quick Actions component| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 | inputParams | [Launch with asset](../../../reference/shared_types/index.md#asset) and [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
@@ -70,29 +69,28 @@ Only `id` and `inputParams.exportOptions` is required to initialize the iframe.
 Identifies which Image Quick Actions component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
-| :-- | :-- 
+| :-- | :--
 | Crop Image | 'image-crop'
 | Convert to JPG | 'convert-to-jpg'
 | Convert to PNG | 'convert-to-png'
-| Resize Image | 'image-resize' 
-| Remove Background | 'remove-background' 
+| Resize Image | 'image-resize'
+| Remove Background | 'remove-background'
 
+## Example
 
-## Example 
+#### Step 1a: User uploads an image asset, and clicks the "Image Crop" button
 
-#### Step 1a: User uploads an image asset, and clicks the "Image Crop" button.
+* After a user uploads an image, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl".
+* This `imageUrl` is passed as `inputParams.asset` when the `openQuickAction()` method is called.
+* The Image Crop QA Component is launched in an iframe, and the user can crop the uploaded image as they wish.
 
-   * After a user uploads an image, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl". 
-   * This `imageUrl` is passed as `inputParams.asset` when the `openQuickAction()` method is called. 
-   * The Image Crop QA Component is launched in an iframe, and the user can crop the uploaded image as they wish. 
+#### Step 1b: User clicks the "Image Crop" button, with no asset attached
 
-#### Step 1b: User clicks the "Image Crop" button, with no asset attached.
-
-   * The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on. 
+* The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on.
 
 #### Step 2: Export Modified Asset
 
-Finally, users can choose between 3 export options: 
+Finally, users can choose between 3 export options:
 
 * __Customize__: to continue designing in a CC Express editor component
 * __Download__: to save the asset
@@ -206,4 +204,3 @@ Finally, users can choose between 3 export options:
   </body> 
 </html>
 ```
-
