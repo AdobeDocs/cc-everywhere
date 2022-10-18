@@ -7,7 +7,7 @@ keywords:
   - SDK
   - JavaScript
   - Embed
-title: Overview - Adobe Express Embed SDK
+title: Adobe Express Embed SDK
 description: This is the overview page of Adobe Create Embed SDK
 contributors:
   - https://github.com/amandahuarng

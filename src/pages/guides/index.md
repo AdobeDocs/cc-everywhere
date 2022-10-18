@@ -26,7 +26,7 @@ This guide explains how to start using the SDK in your own application.
 
 ## Step 1: Get an API Key
 
-Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Creative Cloud Everywhere".
+Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Adobe Express Embed SDK".
 
 Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md).
 

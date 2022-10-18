@@ -4,7 +4,7 @@
 
 Register your integration by creating a new project in the [Developer Console](https://developer.adobe.com/console). 
 
-Select "Add an API" > "Creative Cloud Everywhere".
+Select "Add an API" > "Adobe Express Embed SDK".
 Select "Single-Page App" and register redirect URI patterns to whitelist your domain. 
   * When the SDK is first called, a login popup window appears for the user to sign in and allow the integration to access their Express assets. After the login is complete, a code is sent on the backend from the Adobe server to the registered redirect URI. 
   * Call the SDK's `exchangeCodeForToken` API at your registered redirect URI to exchange that code for an access token. This token will be stored in the browser so the user does not have to login again in the same session. You can read more [here.](https://developer.adobe.com/cc-everywhere/guides/authorization) 
@@ -13,14 +13,14 @@ In the sample, we call the `exchangeCodeForToken` API in the `redirect.html` fil
   * https://127.0.0.1:8000/redirect.html in the "Default Redirect URI" field
   * https://localhost:8000/redirect.html in the "Redirect URI patterns" field
 
-Once you're done, a client ID for your project will be generated. Steps 2-3 will help you get set up with a simple https server. 
+Once you're done, a client ID for your project will be generated. Steps 2-3 will help you get set up with a simple https server.
 
-## Step 3: Clone the sample 
-Clone the sample. 
+## Step 3: Clone the sample
+Clone the sample.
 Replace the `clientID`, `redirectUri` fields each time the SDK is initialized (3 files): 
 * `index.html`
 * `redirect.html`
-* `quickactions.html` 
+* `quickactions.html`
 
 ## Step 2: Install `mkcert` via Homebrew
 
