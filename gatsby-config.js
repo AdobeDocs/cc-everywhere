@@ -76,6 +76,10 @@ module.exports = {
         ]
       },
       {
+        title: 'Submission and Review',
+        path: '/guides/review/'
+      },
+      {
         title: 'Changelog',
         path: '/guides/changelog/'
       },
