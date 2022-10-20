@@ -75,7 +75,7 @@ Once you think you're good to go, click the "Submit for Review" button. Our revi
 * The app description is not ill-formatted, garbled, or improperly exposing character encoding.
 * The app description is clear in conveying the integration's functionality.
 * The integration is able to perform all advertised features.
-* Any website links that are provided successfully open and are safe (check with https://urlvoid.com).
+* Any website links that are provided successfully open and are safe (check with <https://urlvoid.com>).
 * Proper contact details or a contact form is provided on the GitHub/website link.
 * The privacy policy and terms of use URLs (if any) link to the right content.
 * The `appName` used to initialize the SDK (shared by the developer in the "Notes to reviewer" section) is consistent with the "Public app name" registered for this project.
