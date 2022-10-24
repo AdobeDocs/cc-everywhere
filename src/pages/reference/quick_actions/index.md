@@ -65,10 +65,8 @@ Allows you to specify the asset and export buttons you want to perform a Quick A
 
 | Property | Type | Description
 | :-- | :--| :--
-| asset | [Asset](../shared_types/index.md#asset) | Image you want to load into QA modal
-| exportOptions | [ExportOption](#exportoption) | Customize export buttons
-
-**exportOptions** is required to be defined with at least an empty array.
+| asset | [Asset](../shared_types/index.md#asset) | Image you want to load into QA modal. 
+| exportOptions | [ExportOption](#exportoption) | Define export buttons
 
 ### Example
 
@@ -77,6 +75,12 @@ ccEverywhere.openQuickAction(
     {
         id: 'image-resize',
         inputParams:{
+            // asset is not applicable for video Quick Actions
+            asset: {
+                data: <ENCODED_IMAGE>, 
+                dataType: 'base64', 
+                type: 'image'
+            }, 
             exportOptions: []
         }
     }
@@ -86,27 +90,47 @@ ccEverywhere.openQuickAction(
 ## ExportOption
 
 Allows you to define export buttons for a Quick Action.
-Must be specified with at least an empty array. When specified with an empty array, a "Download" button will still be generated for the user once the Quick Action is completed.
 
-| Property | Value | Description
-| :-- | :--|:--
-| [target](#target) | 'Editor'/'Download'/'Host' | Determines what type of export
-| id | string | See `imageCallbacks` in example below
-|[label](#label) | string | Overwrite default label name
-| variant | 'cta'/'primary'/'secondary' | Defines the [style](https://spectrum.adobe.com/page/button/) of a button
-| optionType| 'button' | Determines type of export option
-| buttonType | 'native'/'custom' | Type of export button
+This is an array of [ExportButton](#exportbutton) and/or [ExportButtonGroup](#exportbuttongroup) type objects. When specified with an empty array, a "Download" button will still be generated for the user once the Quick Action is completed.
 
-### target
+## ExportButton
 
-* target = 'Editor' - exports asset to a [Adobe Express editor component](../ccx_editor/index.md) for further customization
-* target = 'Download' - downloads asset to user's machine
-* target = 'Host' - customizable action in `onPublish` callback
+There are two types of export buttons:  `NativeExportButton` and `CustomExportButton`.
 
-### label
+### NativeExportButton
 
-* target = 'Editor' => label defaults to "Customize"
-* target = 'Download' => label displays "Download"
+This is used to render a native button once the Quick Action has finished. You will not be notified when the button is clicked. If you want to be notified via a custom click handler, use [`CustomExportButton`](#customexportbutton).
+
+| Property | Description
+| :-- |:--
+| [target](#target) | 'Editor' or 'Download'
+| label  | Localized text of the export button
+| variant | 'cta', 'primary', 'secondary'
+| optionType| 'button'
+| buttonType | 'native'
+
+### CustomExportButton
+
+This is used to render a custom button once the Quick Action has finished. Use this if you want to have a custom button click handler.
+
+| Property | Description
+| :-- |:--
+| id | The id of the export button
+| [target](#target) | 'Host'
+| label  | Localized text of the export button
+| variant | 'cta', 'primary', 'secondary'
+| optionType| 'button'
+| buttonType | 'custom'
+
+#### target
+
+The target determines the type of export.
+
+* 'Editor': Opens asset in a [Adobe Express editor](../ccx_editor/index.md)
+* 'Download':  Downloads the asset to user's machine
+* 'Host': Targets host app - id is passed in [`onPublish`](../shared_types/index.md#quickactionpublishparams) callback along with asset data
+
+For `NativeExportButton` objects, `label` defaults to **Customize** when targeting the Express editor and **Download** when the target is specified as 'Download;.
 
 ### Example
 
@@ -134,15 +158,26 @@ const exportOptions = [
         buttonType: 'custom'
     }
 ];
-const imageCallbacks = {
-      onCancel: () => {},
-      onPublish: (publishParams) => {
-          if(publishParams.exportButtonId=="save-to-host-app"){
-              //customize functionality here
-          }
-      },
-      onError: (err) => {
-          console.error('Error received is', err.toString())
-      }
+const callbacks = {
+    onCancel: () => {},
+    onPublish: (publishParams) => {
+        if(publishParams.exportButtonId=="save-to-host-app"){
+            //customize functionality here
+        }
+    },
+    onError: (err) => {
+        console.error('Error received is', err.toString())
+    }
 }
 ```
+
+## ExportButtonGroup
+
+This is used to render a group of buttons which will be shown as a drop down under a parent button.
+
+| Property | Description
+| :-- |:--
+| label  | Localized text of the export button group
+| [variant](#variant) | Style of a button
+| optionType| "group"
+| buttons | [ExportButton](#exportbutton)[]

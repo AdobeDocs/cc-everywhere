@@ -57,16 +57,26 @@ All the callbacks are optional and return void.
 | onLoadStart | () => {} | Triggered once modal begins to load
 | onLoad | () => {} | Triggered once modal is loaded
 | onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | (PublishParams) => {} | Triggered when publish/download finishes
+| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download finishes
 
-#### PublishParams
+### PublishParams
 
-onPublish passes the host application a `PublishParams` object.  
+Asset-related information received with `onPublish` callback.
 
 | Property | Description
 | :-- | :--
 | projectId | string generated for identifying Adobe Express project
 | asset | Resulting asset: [OutputAsset](#outputasset)
+
+### QuickActionPublishParams
+
+Asset-related information received with `onPublish` callback in Quick Actions.
+
+| Property | Description
+| :-- | :--
+| projectId | string generated for identifying Adobe Express project
+| asset | Resulting asset: [OutputAsset](#outputasset)
+| exportButtonId | `id` passed in the `CustomExportButton` at time of invoking `openQuickAction`
 
 ## CCXOutputParams
 
