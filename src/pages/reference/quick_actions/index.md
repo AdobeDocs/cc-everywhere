@@ -65,7 +65,7 @@ Allows you to specify the asset and export buttons you want to perform a Quick A
 
 | Property | Type | Description
 | :-- | :--| :--
-| asset | [Asset](../shared_types/index.md#asset) | Image you want to load into QA modal. 
+| asset | [Asset](../shared_types/index.md#asset) | Image you want to load into QA modal.
 | exportOptions | [ExportOption](#exportoption) | Define export buttons
 
 ### Example
@@ -178,6 +178,6 @@ This is used to render a group of buttons which will be shown as a drop down und
 | Property | Description
 | :-- |:--
 | label  | Localized text of the export button group
-| [variant](#variant) | Style of a button
+| Variant | 'cta', 'primary', 'secondary'
 | optionType| "group"
 | buttons | [ExportButton](#exportbutton)[]
