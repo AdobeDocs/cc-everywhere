@@ -74,7 +74,7 @@ Allows you to specify the asset and export buttons you want to perform a Quick A
 ccEverywhere.openQuickAction(
     {
         id: 'image-resize',
-        inputParams:{
+        inputParams: {
             // asset is not applicable for video Quick Actions
             asset: {
                 data: <ENCODED_IMAGE>, 
