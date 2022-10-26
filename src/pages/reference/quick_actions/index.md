@@ -126,7 +126,7 @@ This is used to render a custom button once the Quick Action has finished. Use t
 
 The target determines the type of export.
 
-* 'Editor': Opens asset in a [Adobe Express editor](../ccx_editor/index.md)
+* 'Editor': Opens asset in an [Adobe Express editor](../ccx_editor/index.md)
 * 'Download':  Downloads the asset to user's machine
 * 'Host': Targets host app - id is passed in [`onPublish`](../shared_types/index.md#quickactionpublishparams) callback along with asset data
 
