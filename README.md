@@ -2,4 +2,7 @@
 
 This is the repo for the SDK's [documentation site](https://developer.adobe.com/express-embed-sdk/docs/).
 
-
+```bash
+yarn install
+yarn dev
+```
