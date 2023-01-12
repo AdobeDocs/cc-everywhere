@@ -22,33 +22,31 @@ contributors:
 
 # Changelog
 
-## [1.3.14] - 2022-09-23
+## [1.4.10] - 2022-11-14
 
-### Enhancements
+### Added
 
-- Analytic improvements.
+- Delayed Login experience in the full editor.
+  - With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.
+- "Create from Image" workflow.
+  - Users can now create from an image instead of a blank canvas. This workflow works with the delayed login experience. To use this workflow, partners will need to enable the host application to use it.
 
 ## [1.3.11] - 2022-08-24
 
 ### Added
 
-- SDK bundled for browsers, hosted on Adobe CDN
+- SDK bundled for browsers, hosted on Adobe CDN.
 - Welcome Screen before the Single User Sign In screen appears.
-- Ability to log out from CCX Editor loaded in the iFrame.
-
-### Enhancements
-
-- Analytic improvements.
-- Optimized bundle size.
+- Ability to log out from the full editor loaded in the iFrame.
 
 ### Bug Fixes
 
-- Signing-in from the welcome screen, subsequent to a sign-out, successfully launches CCX Editor iFrame.
+- Signing-in from the welcome screen, subsequent to a sign-out, successfully launches the full editor iFrame.
 
 ### Known Issues
 
-- Opening asset in CCX Editor, subsequent to performing an image QA, and saving the asset doesn't close the iFrame automatically. This will be fixed in the next release.
-- When a QA is performed and the resulting asset is opened in a CCX editor: after the user makes changes and saves it the asset is saved outside of the designated project folder in the user's Express account.
+- Opening asset in the full editor, subsequent to performing an image QA, and saving the asset doesn't close the iFrame automatically. This will be fixed in the next release.
+- When a QA is performed and the resulting asset is opened in a full editor: after the user makes changes and saves it the asset is saved outside of the designated project folder in the user's Express account.
 
 ## [1.1.0] - 2022-04-09
 
@@ -68,4 +66,4 @@ contributors:
 - QA loader screen can be now set to the darkest theme.
 - iFrame now loads successfully on Safari even if pop-up blocker settings are enabled.
 - Enhanced error handling for failure to launch iFrame for QA and CCX Editor.
-- CCX Editor iFrame now honoring 0 border radius value.
+- Full editor iFrame now honoring 0 border radius value.
