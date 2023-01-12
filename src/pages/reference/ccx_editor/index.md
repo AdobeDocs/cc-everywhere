@@ -17,18 +17,19 @@ contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
-# Adobe Express Editor Reference
+# Adobe Express Full Editor Reference
 
 ![Editor](editor.png)
 
-The Adobe Express Editor component gives you access to two workflows:
+The Adobe Express full editor component gives you access to three workflows:
 
-1. Launch with a new project: [createDesign()](#createdesign)
-2. Launch with a project ID to continue editing an existing Adobe Express project: [editDesign()](#editdesign)
+1. Launch with a blank canvas: [createDesign()](#createdesign)
+2. Launch with an image: [createDesign()](#createdesign)
+3. Launch with a project ID to continue editing an existing Adobe Express project: [editDesign()](#editdesign)
 
 ## createDesign()
 
-This method launches a new project in the Adobe Express editor component. The editor is loaded in an iframe.
+This method launches the Adobe Express full editor component either with a blank canvas, or with an image. The editor is loaded in an iframe. To open the editor with an image, you need to ensure that `inputParams` has an [Asset](../shared_types/index.md#asset) object.
 
 ```js
 createDesign(CreateDesignParams)
@@ -54,6 +55,7 @@ createDesign(CreateDesignParams)
 | canvasAspectId| string | Initializes the Express editor loaded with templates that fit that layout ratio
 | templateType | string | Initializes the Express editor loaded with templates of this specified type
 | templateSearchText | string | Initializes the Express editor with this string value for template search
+| asset | [Asset](../shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
 
 To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/ccx_editor/customization/index.md) page.
 
