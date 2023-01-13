@@ -22,6 +22,21 @@ contributors:
 
 # Changelog
 
+## [1.5.4] - 2022-12-16
+
+### Added
+
+- Enabled "Logged Out" experience for image and video quick actions
+
+### Bug Fixes
+
+- Fixed the problem with the editor iFrame not auto-closing post publish (for the scenario when the editor is launched from image quick actions via "Customize in Express" workflow)
+- Fixed an issue related to pre-caching of resources for the editor
+
+### Known Issues
+
+- Currently, the "Customize in Express" workflow from the "Remove Background" image quick action is not working. The fix will be deployed in a future version.
+
 ## [1.4.10] - 2022-11-14
 
 ### Added
