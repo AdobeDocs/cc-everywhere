@@ -14,7 +14,7 @@ module.exports = {
   siteMetadata: {
     pages: [
       {
-        title: 'Embed SDK',
+        title: 'Adobe Express Embed SDK',
         path: '/'
       },
       {
@@ -44,7 +44,7 @@ module.exports = {
         path: '/guides/local/'
       },
       {
-        title: 'Embed Express Editor',
+        title: 'Embed full editor',
         path: '/guides/ccx_editor/',
         pages: [
           {
@@ -62,15 +62,15 @@ module.exports = {
         ]
       },
       {
-        title: 'Embed Quick Actions',
+        title: 'Embed quick actions',
         path: '/guides/quick_actions/',
         pages: [
           {
-            title: 'Image Quick Actions',
+            title: 'Image quick actions',
             path: '/guides/quick_actions/image/'
           },
           {
-            title: 'Video Quick Actions',
+            title: 'Video quick actions',
             path: '/guides/quick_actions/video/'
           }
         ]
@@ -93,15 +93,15 @@ module.exports = {
             path: '/reference/', 
           },
           {
-            title: 'Express Editor', 
+            title: 'Full editor', 
             path: '/reference/ccx_editor/'
           },
           {
-            title: 'Shared Types', 
+            title: 'Shared types', 
             path: '/reference/shared_types/'
           },
           {
-            title: 'Quick Actions', 
+            title: 'Quick actions', 
             path: '/reference/quick_actions/'
           }
         ]
