@@ -66,7 +66,7 @@ ccEverywhere.openQuickAction(
 
 ### [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 
-Identifies which image quick actions component should be loaded into the iframe.
+Identifies which image quick action component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
 | :-- | :--

@@ -22,13 +22,13 @@ contributors:
   - https://github.com/pklaschka
 ---
 
-# Video Quick Actions
+# Video quick actions
 
-Each Video Quick Actions component is loaded into the application as an iframe, like the Adobe Express editor component. Users will be prompted to browse for an asset once the QA iframe is loaded. Unlike the Image Quick Actions components, Video QAs cannot be launched with an asset attached during this beta phase.
+Each quick actions component is loaded into the application as an iframe, like the Adobe Express editor component. Users will be prompted to browse for an asset once the iframe is loaded. Unlike the image quick actions components, Video QAs cannot be launched with an asset attached during this beta phase.
 
 ## openQuickAction()
 
-After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method.
+This API is responsible for embedding and launching the quick actions component in your application as an iframe.
 
 ```js
 ccEverywhere.openQuickAction(
@@ -57,16 +57,16 @@ ccEverywhere.openQuickAction(
 
 | Property | Description | Type
 | :-- | :-- | :--
-| id | Choose Quick Actions component| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+| id | ID of quick action| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 | inputParams | Configure [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
-| modalParams | Define size of QA iframe |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| modalParams | Define size of iframe |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
 
 Only `id` and `inputParams.exportOptions` is required to initialize the iframe.
 
 ### [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 
-Identifies which Video Quick Actions component should be loaded into the iframe.
+Identifies which image quick action component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
 | :-- | :--
@@ -83,12 +83,12 @@ Identifies which Video Quick Actions component should be loaded into the iframe.
 
 #### Flow: User clicks the "Change Speed" button
 
-* The Change Speed QA Component is launched in an iframe. The user will browse for a mp4 asset to perform the QA on, within this iframe.
+* The change speed quick action component is launched in an iframe. The user will browse for a mp4 asset to perform the action on, within this iframe.
 * Once selected, the user is presented with options for changing the speed.
 
 Finally, users can choose between 3 export options:
 
-* __Customize__: to continue designing in a Adobe Express editor component
+* __Customize__: to continue designing in a full editor component
 * __Download__: to save the asset
 * Custom buttons that target the host application
 
