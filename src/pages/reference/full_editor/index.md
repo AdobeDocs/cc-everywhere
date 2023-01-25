@@ -11,25 +11,25 @@ keywords:
   - SDK Reference
   - Edit project
   - Create new project
-title: Adobe Express Editor
-description: This is the reference page for the Adobe Express editor component.
+title: Adobe Express full editor
+description: This is the reference page for the Adobe Express full editor component.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
-# Adobe Express Full Editor Reference
+# Full editor
 
 ![Editor](editor.png)
 
-The Adobe Express full editor component gives you access to three workflows:
+The full editor component gives you access to three workflows:
 
 1. Launch with a blank canvas: [createDesign()](#createdesign)
 2. Launch with an image: [createDesign()](#createdesign)
-3. Launch with a project ID to continue editing an existing Adobe Express project: [editDesign()](#editdesign)
+3. Launch with a project ID to continue editing an existing project: [editDesign()](#editdesign)
 
 ## createDesign()
 
-This method launches the Adobe Express full editor component either with a blank canvas, or with an image. The editor is loaded in an iframe. To open the editor with an image, you need to ensure that `inputParams` has an [Asset](../shared_types/index.md#asset) object.
+This method launches the full editor component either with a blank canvas, or with an image. The editor is loaded in an iframe. To open the editor with an image, you need to ensure that `inputParams` has an [Asset](../shared_types/index.md#asset) object.
 
 ```js
 createDesign(CreateDesignParams)
@@ -41,8 +41,8 @@ createDesign(CreateDesignParams)
 
 | Properties | Type | Description
 | :-- | :--| :--
-| inputParams | [CreateInputParams](#createinputparams) | Specify canvas template layout ratio, canvas template type, and the search text to pass in the target application
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
+| inputParams | [CreateInputParams](#createinputparams) | Specify starting asset, canvas size, canvas template type, or a search text to pass in the target application
+| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
@@ -52,12 +52,12 @@ createDesign(CreateDesignParams)
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasAspectId| string | Initializes the Express editor loaded with templates that fit that layout ratio
-| templateType | string | Initializes the Express editor loaded with templates of this specified type
-| templateSearchText | string | Initializes the Express editor with this string value for template search
+| canvasSize| string | Initializes the editor loaded with templates that fit that layout ratio
+| templateType | string | Initializes the editor loaded with templates of this specified type
+| templateSearchText | string | Initializes the editor with this string value for template search
 | asset | [Asset](../shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
 
-To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/ccx_editor/customization/index.md) page.
+To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/full_editor/customization/index.md) page.
 
 ### Example
 
@@ -77,7 +77,7 @@ ccEverywhere.createDesign(
             outputType: 'base64'
         },
         inputParams: { 
-            canvasAspectId: '1:2',
+            canvasSize: '1:2',
             templateType: 'Flyers',
         }
     }
@@ -86,7 +86,7 @@ ccEverywhere.createDesign(
 
 ## editDesign()
 
-This method launches a Adobe Express editor component with an existing Adobe Express project. The editor is loaded in an iframe.
+This method launches a full editor component with an existing project. The project is loaded in an iframe.
 
 ```js
 editDesign(EditDesignParams)
@@ -98,8 +98,8 @@ editDesign(EditDesignParams)
 
 | Property | Type | Description
 | :-- | :--| :--
-| inputParams | [EditInputParams](#editinputparams) | ID of CC Express project to open for editing
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
+| inputParams | [EditInputParams](#editinputparams) | ID of Adobe Express project to open for editing
+| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify editor modal dimensions
 | outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
 | callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
@@ -109,7 +109,7 @@ editDesign(EditDesignParams)
   
 | Property | Type | Description
 | :-- | :--| :--
-| projectId| string | Adobe Express project ID to send to the editor component
+| projectId| string | Adobe Express project ID to identify project later
 
 Get **projectId** from **publishParams** of **onPublish** (called after save/download finishes).
 

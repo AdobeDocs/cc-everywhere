@@ -24,7 +24,7 @@ contributors:
 
 # Authorization
 
-This SDK follows the Proof Key for Code Exchange (PKCE) OAuth flow.  Developers are responsible for **registering OAuth credentials** in Developer Console and implementing the **code exchange** portion of the flow.
+This Adobe Express Embed SDK follows the Proof Key for Code Exchange (PKCE) OAuth flow.  Developers are responsible for **registering OAuth credentials** in Developer Console and implementing the **code exchange** portion of the flow.
 
 ## Register OAuth Credentials
 

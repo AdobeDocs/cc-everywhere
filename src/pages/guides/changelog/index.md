@@ -42,7 +42,7 @@ contributors:
 ### Added
 
 - Delayed Login experience in the full editor.
-  - With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.
+  - With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Adobe Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.
 - "Create from Image" workflow.
   - Users can now create from an image instead of a blank canvas. This workflow works with the delayed login experience. To use this workflow, partners will need to enable the host application to use it.
 
@@ -60,8 +60,8 @@ contributors:
 
 ### Known Issues
 
-- Opening asset in the full editor, subsequent to performing an image QA, and saving the asset doesn't close the iFrame automatically. This will be fixed in the next release.
-- When a QA is performed and the resulting asset is opened in a full editor: after the user makes changes and saves it the asset is saved outside of the designated project folder in the user's Express account.
+- Opening asset in the full editor, subsequent to performing an image quick action, and saving the asset doesn't close the iFrame automatically. This will be fixed in the next release.
+- When a quick action is performed and the resulting asset is opened in a full editor: after the user makes changes and saves it the asset is saved outside of the designated project folder in the user's Adobe Express account.
 
 ## [1.1.0] - 2022-04-09
 
@@ -80,5 +80,5 @@ contributors:
 - When `parentElementId` is supplied, the dimensions of the parent container display Scrim view instead of Viewport.
 - QA loader screen can be now set to the darkest theme.
 - iFrame now loads successfully on Safari even if pop-up blocker settings are enabled.
-- Enhanced error handling for failure to launch iFrame for QA and CCX Editor.
+- Enhanced error handling for failure to launch iFrame for quick action and full editor.
 - Full editor iFrame now honoring 0 border radius value.

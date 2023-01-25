@@ -19,9 +19,9 @@ contributors:
   - https://github.com/pklaschka
 ---
 
-# Adobe Express Editor Component: Create New Project
+# Creating new projects using the full editor
 
-This guide will demonstrate how to launch an Adobe Express editor component. The editor will appear in an iframe and open a new project in a folder named `appName`, as specified when the SDK is initialized.
+This guide will demonstrate how to launch a full editor component. The editor will appear in an iframe and create a new project in a folder named `appName`, as specified when the SDK is initialized.
 
 ## createDesign()
 
@@ -31,10 +31,10 @@ The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the 
 
 * User triggers `createDesign()` function from within the host application, and an editor is loaded in an iframe.
 * A pop-up window will appear and the user has to create or log into their Adobe Express account.
-* Any projects are automatically created/saved in a new project folder ('app_name' specified in SDK initialization) within Adobe Express.
+* Any projects are automatically created/saved in a new project folder ('app_name' specified in SDK initialization) in the user's Adobe Express account.
 
 ```js
-// Initialize SDK and save CCEverywhere object as ccEverywhere 
+// Initialize the SDK before this 
 ccEverywhere.createDesign(
     // CreateDesignParams
     {
@@ -51,38 +51,52 @@ ccEverywhere.createDesign(
             outputType: "base64"
         },
         inputParams: { 
-            canvasAspectId: "1:2",
+            canvasSize: "1:2",
             templateType: "Flyers",
+            // You can also load an image into the project 
+            // asset : "..."
         }
     }
 ); 
 ```
 
-### [CreateDesignParams](../../../reference/ccx_editor/index.md#createdesignparams)
+### [CreateDesignParams](../../../reference/full_editor/index.md#createdesignparams)
 
 `createDesign()` takes an object of parameters, `CreateDesignParams`, composed of:
 
 | Property | Description | Type
 | :-- | :-- | :--
 | modalParams | Define size of editor modal | [ModalParams](../../../reference/shared_types/index.md#modalparams)
-| inputParams | Specify template layout ratio, template types, template search | [CreateInputParams](../../../reference/ccx_editor/index.md#createinputparams)
+| inputParams | Specify input asset, template layout ratio, template types, template search | [CreateInputParams](#createinputparams)
 | outputParams | Configure output type | [CCXOutputParams](../../../reference/shared_types/index.md#ccxoutputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
   
-<!-- todo: confirm this is true:  -->
 All the properties in `CreateDesignParams` are optional.
+
+#### CreateInputParams
+
+`CreateInputParams` allows you to configure the editor to be launched for the user.
+
+| Property | Type| Description
+| :-- | :--| :--
+| canvasSize| string | Initializes the editor loaded with templates that fit that layout ratio
+| templateType | string | Initializes the editor loaded with templates of this specified type
+| templateSearchText | string | Initializes the editor with this string value for template search
+| asset | [Asset](../../../reference/shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
+
+To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/full_editor/customization/index.md) page.
 
 ## Example
 
 #### Step 1: User clicks the "Create project" button
 
 * The `createDesign()` function is called and passed `createDesignCallback`.
-* An Express editor component is launched in an iframe.
+* A full editor component is launched in an iframe.
 
 #### Step 2: User completes design and clicks "Save"
 
-* The project is saved to the user's Express account in project folder (`appName`) designated in the [initialize()](../../../reference/index.md#initialize) function.
-* The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __Express project ID (projectId)__ and __image data representation (asset)__.
+* The project is saved to the user's Adobe Express account in project folder (`appName`) designated in the [initialize()](../../../reference/index.md#initialize) function.
+* The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the Adobe Express __project ID (projectId)__ and __image data (asset)__.
   * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later via `editDesign()`.
 
 ```html
@@ -146,4 +160,4 @@ All the properties in `CreateDesignParams` are optional.
 </html>
 ```
 
-Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into an Adobe Express editor.
+Now that you have created a project and rendered the final design onto your own page, let's explore [loading pre-existing projects](../edit_project/index.md) into a full editor component.

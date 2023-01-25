@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="spectrum spectrum--medium spectrum--light">
   <head>
-    <title>Quick Actions</title>
+    <title>Quick actions</title>
     <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-global.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css">
@@ -11,15 +11,15 @@
   </head>
   <body>
     <div class="spectrum-Typography">
-        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Adobe Express Embed SDK: Quick Actions </h1>
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Adobe Express Embed SDK: Quick actions </h1>
         <p class="spectrum-Body spectrum-Body--sizeL"> 
-            The SDK supports launching Image Quick Actions with base64 encoded image data. When no image data is provided, 
-            users are asked to browse for an image after the modal is open. Video Quick Actions <b>cannot</b> be launched 
+            The Adobe Express Embed SDK supports launching image quick actions with base64 encoded image data. When no image data is provided, 
+            users are asked to browse for an image after the modal is open. Video quick actions <b>cannot</b> be launched 
             with data passed as input. Users must browse for a video after the modal is open. 
         </p>
         <h3 class="spectrum-Heading spectrum-Heading--sizeL">Sample Workflow</h3> 
         <p class="spectrum-Body spectrum-Body--sizeM" > 
-            This sample surfaces three export buttons once each Quick Action workflow is complete:
+            This sample surfaces three export buttons once each quick action workflow is complete:
         </p>
         <p class="spectrum-Body spectrum-Body--sizeS">1. <b>Download</b>: Downloads the modified asset to the user's computer.
             <br>2. <b>Customize</b>: Sends user to a Creative Cloud Express Editor to continue editing the modified asset.
@@ -28,7 +28,7 @@
         <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeM" >
             <span class="spectrum-Button-label">Clear assets from page</span>
         </button>
-        <h4 class="spectrum-Heading spectrum-Heading--sizeM">Image Quick Actions</h4>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeM">Image quick actions</h4>
         <input type="file" id="fileInput"/><button id="reset">Reset</button><p></p>
         <p class="spectrum-Body spectrum-Body--sizeS">If a file is selected, it will continue to be used as an input until you click <b>Reset</b>.</p>
         <div id="image-buttons">
@@ -49,7 +49,7 @@
             </button>
         </div>
         <img id="image-container" style="visibility:hidden;"/>
-        <h4 class="spectrum-Heading spectrum-Heading--sizeM"> Video Quick Actions </h4>
+        <h4 class="spectrum-Heading spectrum-Heading--sizeM"> Video quick actions </h4>
         <div id="video-buttons">
             <button id="change-speed" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
                 <span class="spectrum-Button-label">Change Speed</span>
@@ -116,7 +116,7 @@
 
         /* Defines export buttons for export */
         const exportOptions = [
-            /* Export to continue editing in Express editor */
+            /* Export to continue editing in full editor */
             {
                 target: 'Editor',
                 variant: 'cta',
@@ -142,7 +142,7 @@
         ];
 
         /* __________________________________________________________
-                        Image Quick Actions 
+                        Image quick actions 
         __________________________________________________________ */
 
         const imageCallbacks = {
@@ -191,7 +191,7 @@
 
 
         /* __________________________________________________________
-                        Video Quick Actions 
+                        Video quick actions 
         __________________________________________________________ */
 
         const videoCallbacks = {

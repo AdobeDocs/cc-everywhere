@@ -24,7 +24,7 @@ contributors:
 
 ## Asset
 
-Represents an asset that can be loaded into an Adobe Express editor component, or loaded in for an Image Quick Action.
+Represents an asset that can be loaded into a full editor component, or loaded in for an image quick action.
 
 | Property | Value(s) | Description
 |:-- | :-- | :--
@@ -52,12 +52,12 @@ All the callbacks are optional and return void.
 
 | Property | Callback Function | Description
 | :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes Adobe Express modal
+| onCancel | () => {}| Triggered when user closes the modal
 | onError | () => {} | Triggered upon error with associated error code
 | onLoadStart | () => {} | Triggered once modal begins to load
 | onLoad | () => {} | Triggered once modal is loaded
 | onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download finishes
+| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
 
 ### PublishParams
 
@@ -65,16 +65,16 @@ Asset-related information received with `onPublish` callback.
 
 | Property | Description
 | :-- | :--
-| projectId | string generated for identifying Adobe Express project
+| projectId | string generated for identifying the project
 | asset | Resulting asset: [OutputAsset](#outputasset)
 
 ### QuickActionPublishParams
 
-Asset-related information received with `onPublish` callback in Quick Actions.
+Asset-related information received with `onPublish` callback in quick actions.
 
 | Property | Description
 | :-- | :--
-| projectId | string generated for identifying Adobe Express project
+| projectId | string generated for identifying the project
 | asset | Resulting asset: [OutputAsset](#outputasset)
 | exportButtonId | `id` passed in the `CustomExportButton` at time of invoking `openQuickAction`
 
@@ -89,7 +89,7 @@ All properties are optional. Allows you to define data type and file type of out
 
 ## ModalParams
 
-All properties are optional. Allows you to define the UI constraints of the Adobe Express editor iframe.
+All properties are optional. Allows you to define the UI constraints of the modal.
 
 | Property | Type/Value |
 | :-- | :--|
