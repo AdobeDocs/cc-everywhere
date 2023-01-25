@@ -92,8 +92,8 @@ Identifies which image quick action component should be loaded into the iframe.
 
 Finally, users can choose between 3 export options:
 
-* __Customize__: to continue designing in a full editor component
-* __Download__: to save the asset
+* **Customize**: to continue designing in a full editor component
+* **Download**: to save the asset
 * Custom button that targets host app
 
 ```html
