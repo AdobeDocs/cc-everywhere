@@ -22,7 +22,7 @@ contributors:
 
 # Quickstart Guide
 
-This guide explains how to start using the SDK in your own application.
+This guide explains how to start using the Adobe Express Embed SDK in your own application.
 
 ## Step 1: Get an API Key
 
@@ -30,7 +30,7 @@ Create a new project in the [Developer Console](https://developer.adobe.com/cons
 
 Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md).
 
-## Step 2: Embed SDK
+## Step 2: Embed the SDK
 
 The latest [version](https://sdk.cc-embed.adobe.com/v1/version.json) of the SDK is available on Adobe's CDN:
 
@@ -38,7 +38,7 @@ The latest [version](https://sdk.cc-embed.adobe.com/v1/version.json) of the SDK 
 var CDN_URL = "https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js";
 ```
 
-You can read the [changelog](/src/pages/guides/changelog/index.md) to understand what updates are being made.
+You can read the [changelog](/src/pages/guides/changelog/index.md) to understand known issues as well as what changes have been made.
 
 ### Load via script tag
 
@@ -81,8 +81,8 @@ const ccEverywhere = window.CCEverywhere.initialize();
 
 The SDK should only be initialized once each page. To initialize the SDK, pass the default method `initialize()`:
 
-* `CLIENT_ID` (string): API key from Console
-* `APP_NAME` (string): Name of the Express folder created for end users of your integration
+* `CLIENT_ID` (string): API key from Developer Console
+* `APP_NAME` (string): Name of the project folder created for end users of your integration. This should correspond to the name of your integration.
 * `REDIRECT_URI` (string): Specify the redirect URI you registered for the project in Developer Console
 
 ```js
@@ -102,9 +102,9 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 
 This returns a `CCEverywhere` Class object, with four methods:
 
-1. `openQuickAction()`: Quick Actions Component
-2. `createDesign()`: Adobe Express Editor Component
-3. `editDesign()`: Adobe Express Editor Component
+1. `openQuickAction()`: Quick actions component
+2. `createDesign()`: Full editor component
+3. `editDesign()`: Full editor component
 4. `exchangeAuthCodeForToken()`: Authorization
 
 ## Step 4: Exchange Access Token
@@ -123,16 +123,18 @@ The returned authorization code is exchanged for an access token, which is saved
 
 The Adobe Express Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [Express Editor Component](../guides/ccx_editor/index.md)
+### [Full editor](../guides/full_editor/index.md)
 
-* How to [create a project](../guides/ccx_editor/create_project/) in an Express editor
-* How to [edit an existing project](../guides/ccx_editor/edit_project/) in an Express editor
+With the full editor component, your users are able to:
 
-When the editor first appears in a modal, the user will be asked to either log in, or create a Adobe Express account. Once logged in, users can access Express's huge template and asset library and start creating in a new blank project. The editor can also be spun up taking an existing project ID as input, and users can continue working on a project within the editor.
+* How to [create new projects](../guides/full_editor/create_project/)
+* How to [edit existing projects](../guides/full_editor/edit_project/)
 
-### [Quick Actions Editor Component](../guides/quick_actions/index.md)
+Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
-* How to [use Image Quick Actions](../guides/quick_actions/image/)
-* How to [use Video Quick Actions](../guides/quick_actions/video/)
+### [Quick actions](../guides/quick_actions/index.md)
 
-Users must select the desired Quick Action (QA) so the corresponding QA editor is spun up. Within the QA Editor, users can browse their filesystem for an asset, and then perform the selected QA. They can download the modified asset to their computer, or further customize the modified asset in an Adobe Express editor.
+* How to [embed image quick actions](../guides/quick_actions/image/)
+* How to [embed video quick actions](../guides/quick_actions/video/)
+
+Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.

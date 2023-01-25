@@ -16,19 +16,19 @@ keywords:
   - Adobe Premiere
   - Editing tools 
 title: Image Quick Actions
-description: This guide will demonstrate how to trigger a Quick Actions editor for images.
+description: This guide will demonstrate how to trigger a quick actions editor for images.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
 
-# Image Quick Actions
+# Image quick actions
 
-Each Image Quick Actions component is loaded into the host application as an iframe, like the Express editor component. It can be launched with an image asset attached (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for a image file.
+Each quick actions component is loaded into the host application as an iframe, like the full editor component. Image quick actions can be launched with a pre-selected asset (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for an image file.
 
 ## openQuickAction()
 
-After the SDK has been initialized, the [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes these Image Quick Actions via the `openQuickAction()` method.
+This API is responsible for embedding and launching the quick actions component in your application as an iframe.
 
 ```js
 ccEverywhere.openQuickAction(
@@ -57,16 +57,16 @@ ccEverywhere.openQuickAction(
 
 | Property | Description | Type
 | :-- | :-- | :--
-| id | Choose Quick Actions component| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
+| id | ID of quick action| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 | inputParams | [Launch with asset](../../../reference/shared_types/index.md#asset) and [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
-| modalParams | Define size of QA iframe |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| modalParams | Define size of modal |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
 
-Only `id` and `inputParams.exportOptions` is required to initialize the iframe.
+**Note**: `inputParams.exportOptions` determines which export buttons are exposed to the user once the action is complete, and must be defined with at least an empty array. If given an empty array, the "Download" button will be surfaced as an export option.
 
 ### [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 
-Identifies which Image Quick Actions component should be loaded into the iframe.
+Identifies which image quick actions component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
 | :-- | :--
@@ -82,17 +82,17 @@ Identifies which Image Quick Actions component should be loaded into the iframe.
 
 * After a user uploads an image, a FileReader object is instantiated and converts the file to a base64 data type and saves it to the variable "imageUrl".
 * This `imageUrl` is passed as `inputParams.asset` when the `openQuickAction()` method is called.
-* The Image Crop QA Component is launched in an iframe, and the user can crop the uploaded image as they wish.
+* The image crop quick action component is launched in an iframe, and the user can crop the uploaded image as they wish.
 
 #### Step 1b: User clicks the "Image Crop" button, with no asset attached
 
-* The Image Crop QA component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on.
+* The image crop quick action component is launched in an iframe. The user will have to browse for an image asset to perform the image crop on.
 
-#### Step 2: Export Modified Asset
+#### Step 2: Export modified asset
 
 Finally, users can choose between 3 export options:
 
-* __Customize__: to continue designing in a CC Express editor component
+* __Customize__: to continue designing in a full editor component
 * __Download__: to save the asset
 * Custom button that targets host app
 
@@ -100,14 +100,14 @@ Finally, users can choose between 3 export options:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Quick Actions</title>
+  <title>Quick actions</title>
   </head>
     
   <body>
-    <h1> Image Quick Action Example </h1>
+    <h1> Image quick action example </h1>
     <input type="file" id="fileInput" />
     <img id="image-container" height="420" width="420" />
-    <button id="image-crop"> Crop Image </button>
+    <button id="image-crop"> Crop image </button>
 
     <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript" >

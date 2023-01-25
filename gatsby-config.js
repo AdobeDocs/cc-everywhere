@@ -44,25 +44,25 @@ module.exports = {
         path: '/guides/local/'
       },
       {
-        title: 'Embed full editor',
-        path: '/guides/ccx_editor/',
+        title: 'Full editor',
+        path: '/guides/full_editor/',
         pages: [
           {
-            title: 'Create New Project',
-            path: '/guides/ccx_editor/create_project/'
+            title: 'Create new project',
+            path: '/guides/full_editor/create_project/'
           },
           {
-            title: 'Edit Existing Project',
-            path: '/guides/ccx_editor/edit_project/'
+            title: 'Edit existing project',
+            path: '/guides/full_editor/edit_project/'
           }, 
           {
             title: 'Customization',
-            path: '/guides/ccx_editor/customization/'
+            path: '/guides/full_editor/customization/'
           }
         ]
       },
       {
-        title: 'Embed quick actions',
+        title: 'Quick actions',
         path: '/guides/quick_actions/',
         pages: [
           {
@@ -94,7 +94,7 @@ module.exports = {
           },
           {
             title: 'Full editor', 
-            path: '/reference/ccx_editor/'
+            path: '/reference/full_editor/'
           },
           {
             title: 'Shared types', 

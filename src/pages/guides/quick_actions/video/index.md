@@ -96,12 +96,12 @@ Finally, users can choose between 3 export options:
 <!DOCTYPE html>
 <html lang="en">
   <head>
-  <title>Quick Actions</title>
+  <title>Quick actions</title>
   </head>
     
   <body>
-    <h1> Video Quick Action Example </h1>
-    <button id="change-speed"> Change Speed </button>
+    <h1> Video quick action example </h1>
+    <button id="change-speed"> Change speed </button>
 
     <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript" >

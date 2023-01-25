@@ -7,7 +7,7 @@ Register your integration by creating a new project in the [Developer Console](h
 Select "Add an API" > "Adobe Express Embed SDK".
 Select "Single-Page App" and register redirect URI patterns to whitelist your domain.
 
-* When the SDK is first called, a login popup window appears for the user to sign in and allow the integration to access their Express assets. After the login is complete, a code is sent on the backend from the Adobe server to the registered redirect URI.
+* When the SDK is first called, a login popup window appears for the user to sign in and allow the integration to access their Adobe Express assets. After the login is complete, a code is sent on the backend from the Adobe server to the registered redirect URI.
 * Call the SDK's `exchangeCodeForToken` API at your registered redirect URI to exchange that code for an access token. This token will be stored in the browser so the user does not have to login again in the same session. You can read more [here.](https://developer.adobe.com/cc-everywhere/guides/authorization)
 
 In the sample, we call the `exchangeCodeForToken` API in the `redirect.html` file, so we register:

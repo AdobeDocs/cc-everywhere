@@ -23,7 +23,7 @@ contributors:
 
 # Local Development
 
-This guide contains the steps needed to begin serve your SDK and test your project locally.
+This guide contains the steps needed to test your project locally.
 
 ## Domain Restrictions
 

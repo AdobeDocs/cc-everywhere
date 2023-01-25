@@ -88,16 +88,16 @@ Once you think you're good to go, click the "Submit for Review" button. Our revi
 * After successful login, the popup window should close and the SDK iFrame appears.
 * All details are shown on the iFrame correctly; no truncation or overlapping of a button.
 
-#### Express Editor
+#### Full editor
 
 * The editor launches accurately when customized input parameters are defined.
-* The editor launches with the right project when passed a valid (existing) Express project's ID.
+* The editor launches with the right project when passed a valid (existing) Adobe Express project's ID.
 * `editDesign()` can not be invoked until after a `createDesign()` API call is made, and a corresponding project ID is saved.
-* Any designs created in the Editor appear in the user's Adobe Express account and should be visible under "Projects > `appName`".
+* Any designs created in the editor appear in the user's Adobe Express account and should be visible under "Projects > `appName`".
 
-#### Quick Actions
+#### Quick actions
 
-* [Image Quick Actions only] If the integration lets users start with an existing asset, the iFrame should load with the user-selected image.
+* [Image quick actions only] If the integration lets users start with an existing asset, the iFrame should load with the user-selected image.
 * The export buttons appear as the developer declared (in the "Notes for reviewers" section) during submission. Custom buttons should behave as defined.
 
 ## After you submit

@@ -11,16 +11,18 @@ keywords:
   - Image Quick Action
   - Video Quick Action
 title: Quick Actions
-description: This is the reference page for the Quick Actions component.
+description: This is the reference page for the quick actions component.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
-# Quick Actions Reference
+# Quick actions
+
+The `openQuickAction()` API allows you to embed the quick actions component in your application.
 
 ## openQuickAction()
 
-This method launches an iframe to perform a Quick Action.
+This method launches an iframe in your application for your user to perform a quick action.
 
 ```js
 openQuickAction(QuickActionParams) 
@@ -32,16 +34,17 @@ openQuickAction(QuickActionParams)
 
 | Property | Type | Description
 | :-- | :--| :--
-| id | [QuickActionId](#quickactionid) | ID for associated Quick Action
+| id | [QuickActionId](#quickactionid) | ID for associated quick action
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Asset to load (image only), and export button options
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify Adobe Express editor modal dimensions
-| outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
-| callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
-Besides **id** and **inputParams.exportOptions**, the rest are optional fields.
+| modalParams (optional) | [ModalParams](../shared_types/index.md#modalparams) | Specify modal dimensions
+| outputParams (optional) | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
+| callbacks (optional) | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
+
+**Note**: `inputParams.exportOptions` determines which export buttons are exposed to the user once the action is complete, and must be defined with at least an empty array. If given an empty array, the "Download" button will be surfaced as an export option.
 
 ### QuickActionId
 
-Allows you to select a Image or Video Quick Action.
+This ID is associated with the quick action you want to surface to your user.
 
 | Quick Action | QuickActionId | Type
 | :-- | :-- | :--
@@ -61,7 +64,7 @@ Allows you to select a Image or Video Quick Action.
 
 ### QuickActionInputParams
 
-Allows you to specify the asset and export buttons you want to perform a Quick Action with.
+Allows you to specify an input asset and export options for the quick actions modal.
 
 | Property | Type | Description
 | :-- | :--| :--
@@ -75,7 +78,7 @@ ccEverywhere.openQuickAction(
     {
         id: 'image-resize',
         inputParams: {
-            // asset is not applicable for video Quick Actions
+            // passing a starting asset is not available for video quick actions
             asset: {
                 data: <ENCODED_IMAGE>, 
                 dataType: 'base64', 
@@ -89,9 +92,9 @@ ccEverywhere.openQuickAction(
 
 ## ExportOption
 
-Allows you to define export buttons for a Quick Action.
+Allows you to define export buttons for a quick action.
 
-This is an array of [ExportButton](#exportbutton) and/or [ExportButtonGroup](#exportbuttongroup) type objects. When specified with an empty array, a "Download" button will still be generated for the user once the Quick Action is completed.
+This is an array of [ExportButton](#exportbutton) and/or [ExportButtonGroup](#exportbuttongroup) type objects. When specified with an empty array, a "Download" button will still be generated for the user once the action is completed.
 
 ## ExportButton
 
@@ -99,7 +102,7 @@ There are two types of export buttons:  `NativeExportButton` and `CustomExportBu
 
 ### NativeExportButton
 
-This is used to render a native button once the Quick Action has finished. You will not be notified when the button is clicked. If you want to be notified via a custom click handler, use [`CustomExportButton`](#customexportbutton).
+This is used to render a native button once the quick action has finished. You will not be notified when the button is clicked. If you want to be notified via a custom click handler, use [`CustomExportButton`](#customexportbutton).
 
 | Property | Description
 | :-- |:--
@@ -126,18 +129,18 @@ This is used to render a custom button once the Quick Action has finished. Use t
 
 The target determines the type of export.
 
-* 'Editor': Opens asset in an [Adobe Express editor](../ccx_editor/index.md)
+* 'Editor': Opens asset in an [full editor component](../full_editor/index.md)
 * 'Download':  Downloads the asset to user's machine
 * 'Host': Targets host app - id is passed in [`onPublish`](../shared_types/index.md#quickactionpublishparams) callback along with asset data
 
-For `NativeExportButton` objects, `label` defaults to **Customize** when targeting the Express editor and **Download** when the target is specified as 'Download;.
+For `NativeExportButton` objects, `label` defaults to **Customize** when targeting the full editor and **Download** when the target is specified as 'Download;.
 
 ### Example
 
 ```js
 const exportOptions = [
     {
-        // Customize in Adobe Express editor
+        // Customize further in the full editor
         target: 'Editor',
         variant: 'cta',
         optionType: 'button',

@@ -20,7 +20,7 @@ contributors:
 
 # SDK Reference
 
-This is the main API for accessing all the SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object.
 
 ## initialize()
 
@@ -49,7 +49,7 @@ window.CCEverywhere.initialize(
 | Property | Type | Description
 | :-- | :--| :--
 |clientId | string | Your API Key
-|appName | string | Name of project folder created in user's CC Express
+|appName | string | Name of project folder created in user's Adobe Express account
 |appVersion | { major: number, minor: number, patch?: number} | Your app version
 | platformCategory | 'web' | Specify host app platform
 | redirectUri | string | Searches for redirect URL you define in [console](https://developer.adobe.com/console)
@@ -58,7 +58,7 @@ If you specify `redirectUri` as a parameter in the **HostInfo** object, that is 
 
 ### ConfigParams
 
-The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/../pages/guides/ccx_editor/customization/index.md) page for a full locale list.
+The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/../pages/guides/full_editor/customization/index.md) page for a full locale list.
 
 | Property | Type | Description
 | :-- | :--| :--
@@ -70,7 +70,7 @@ The CCEverywhere object is the object returned when the SDK is initialized.
 
 As of today, it exposes 4 methods:
 
-1. `openQuickAction()`: Quick Actions Component
-2. `createDesign()`: Adobe Express Editor Component
-3. `editDesign()`: Adobe Express Editor Component
+1. `openQuickAction()`: Quick actions component
+2. `createDesign()`: Full editor component
+3. `editDesign()`: Full editor component
 4. `exchangeAuthCodeForToken()`: Authorization
