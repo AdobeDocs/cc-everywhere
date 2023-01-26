@@ -42,7 +42,7 @@ The full editor component is embedded onto your application as an iframe. Users 
 
 ### What are quick actions?
 
-[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast and free editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed the quick actions component in their own applications to give end users access to these tools.
+[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos, powered by Photoshop and Premiere. Developers can embed the quick actions component in their own applications to give end users access to these tools.
 
 The quick actions component is embedded onto your application as an iframe. Users can work within this modal editor and once the action is completed, the modified asset can be downloaded or saved back to the integrating application.
 
