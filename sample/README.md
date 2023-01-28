@@ -8,7 +8,7 @@ Select "Add an API" > "Adobe Express Embed SDK".
 Select "Single-Page App" and register redirect URI patterns to whitelist your domain.
 
 * When the SDK is first called, a login popup window appears for the user to sign in and allow the integration to access their Adobe Express assets. After the login is complete, a code is sent on the backend from the Adobe server to the registered redirect URI.
-* Call the SDK's `exchangeCodeForToken` API at your registered redirect URI to exchange that code for an access token. This token will be stored in the browser so the user does not have to login again in the same session. You can read more [here.](https://developer.adobe.com/cc-everywhere/guides/authorization)
+* Call the SDK's `exchangeCodeForToken` API at your registered redirect URI to exchange that code for an access token. This token will be stored in the browser so the user does not have to login again in the same session. You can read more [here.](https://developer.adobe.com/embed-sdk/docs/guides/authorization/)
 
 In the sample, we call the `exchangeCodeForToken` API in the `redirect.html` file, so we register:
 
@@ -35,7 +35,7 @@ Replace the `clientID`, `redirectUri` fields each time the SDK is initialized (3
 3. Navigate back to the project folder and run:
 
 ```bash
-mkcert localhost 
+mkcert localhost
 ```
 
 This will generate two files: `localhost-key.pem` (key) and `localhost.pem` (certificate). Our https server is instantiated with these two files so that the browser trusts the domain `localhost`.
@@ -45,7 +45,7 @@ This will generate two files: `localhost-key.pem` (key) and `localhost.pem` (cer
 `http-server` lets you serve files or directories locally.
 
 Install it using `npm i http-server` or `brew install http-server`.
-  
+
 ## Step 4: Install project dependencies
 
 Run `npm install` to install the dependencies in `package.json`. The required dependencies belong to [Spectrum CSS](https://github.com/adobe/spectrum-css) and are used to style the buttons.
