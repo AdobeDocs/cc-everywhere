@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="304.551" height="29.839" viewBox="0 0 304.551 29.839">
+  <g id="Group_378508" data-name="Group 378508" transform="translate(16896.5 12202.838)">
+    <g id="Group_378503" data-name="Group 378503" transform="translate(-16896.5 -12203.391)">
+      <g id="Adobe_Express_logo_RGB_64px" transform="translate(0 0.552)">
+        <path id="Background" d="M5.476,0H25.468a5.476,5.476,0,0,1,5.476,5.476V24.363a5.476,5.476,0,0,1-5.476,5.476H5.476A5.476,5.476,0,0,1,0,24.363V5.476A5.476,5.476,0,0,1,5.476,0Z" transform="translate(0 0)" fill="#000b1d"/>
+        <path id="Path_1027525" data-name="Path 1027525" d="M25.271,13.8a3.71,3.71,0,0,0-6.834.007L13.752,24.963a2.311,2.311,0,0,0,2.129,3.209H21.1a2.324,2.324,0,0,0-.007-4.649l-.892.007a.528.528,0,0,1-.486-.733l1.662-3.962a.513.513,0,0,1,.953,0l3.392,7.931a2.246,2.246,0,0,0,2.134,1.407,2.311,2.311,0,0,0,2.129-3.213Z" transform="translate(-6.356 -5.428)" fill="#fff"/>
+      </g>
+      <text id="Text" transform="translate(40.942 21.972)" fill="#2c2c2c" font-size="20" font-family="AdobeClean-Bold, Adobe Clean" font-weight="700"><tspan x="0" y="0">Create with Adobe Express</tspan></text>
+    </g>
+    <g id="Chevron" transform="translate(-16609.432 -12192.838)">
+      <rect id="Frame" width="17.191" height="10.315" transform="translate(0)" fill="#2c2c2c" opacity="0"/>
+      <path id="Shape" d="M17.169,1.732A1.719,1.719,0,0,0,14.235.511L8.591,6.16,2.947.511A1.722,1.722,0,1,0,.511,2.947L7.375,9.794a1.719,1.719,0,0,0,2.431,0l6.864-6.847A1.719,1.719,0,0,0,17.169,1.732Z" transform="translate(0.313 0.005)" fill="#2c2c2c"/>
+    </g>
+  </g>
+</svg>

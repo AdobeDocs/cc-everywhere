@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="122.123" height="39.571" viewBox="0 0 122.123 39.571">
+  <g id="Button_M_Primary_Fill" data-name="Button / M / Primary / Fill" transform="translate(-0.99 1.043)">
+    <path id="Background" d="M19.785,0h82.552a19.785,19.785,0,0,1,0,39.571H19.785A19.785,19.785,0,0,1,19.785,0Z" transform="translate(0.99 -1.043)" fill="#000b1d"/>
+    <text id="Text" transform="translate(55.113 25)" fill="#fff" font-size="18" font-family="AdobeClean-Bold, Adobe Clean" font-weight="700"><tspan x="0" y="0">Create</tspan></text>
+    <path id="Path_1027424" data-name="Path 1027424" d="M29.077,14.537a4.916,4.916,0,0,0-9.057.009L13.812,29.329a3.062,3.062,0,0,0,2.821,4.253h6.912a3.08,3.08,0,0,0-.009-6.161l-1.182.009a.7.7,0,0,1-.644-.971l2.2-5.25a.68.68,0,0,1,1.263,0l4.5,10.511A2.976,2.976,0,0,0,32.5,33.579a3.062,3.062,0,0,0,2.821-4.258Z" transform="translate(6.422 -4.011)" fill="#fff"/>
+  </g>
+</svg>

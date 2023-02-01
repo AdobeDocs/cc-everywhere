@@ -1,0 +1,57 @@
+
+
+.App-button-default {
+    background-color: #000B1D;
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 23px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: white;
+    font-size: 18pt;
+  }
+  .icon{
+    position: relative;
+    height: 1.5em;
+  }
+
+  .div {
+
+  }
+  
+  .App-button-light {
+    background-color: #F5F5F5;
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 23px;
+    border-color: #F5F5F5;
+    border-style:solid;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: black;
+    font-size: 18pt;
+    /* font-family: 'Helvetica'; */
+  }
+  
+  .App-button-lightest {
+    background-color: #FFFFFF;
+    display: flex;
+    height: 48px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    border-radius: 23px;
+    border-style: solid;
+    border-color: #F5F5F5;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    color: black;
+    font-size: 18pt;
+  }
+

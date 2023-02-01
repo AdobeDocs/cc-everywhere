@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="276.123" height="39.571" viewBox="0 0 276.123 39.571">
+  <g id="Button_M_Primary_Fill" data-name="Button / M / Primary / Fill" transform="translate(-0.99 1.043)">
+    <g id="Background" transform="translate(0.99 -1.043)" fill="#000b1e" stroke="#000b1f" stroke-width="2">
+      <rect width="276.123" height="39.571" rx="19.785" stroke="none"/>
+      <rect x="1" y="1" width="274.123" height="37.571" rx="18.785" fill="none"/>
+    </g>
+    <text id="Text" transform="translate(55.113 25)" fill="#fff" font-size="18" font-family="AdobeClean-Bold, Adobe Clean" font-weight="700"><tspan x="0" y="0">Create with Adobe Express</tspan></text>
+    <path id="Path_1027424" data-name="Path 1027424" d="M29.077,14.537a4.916,4.916,0,0,0-9.057.009L13.812,29.329a3.062,3.062,0,0,0,2.821,4.253h6.912a3.08,3.08,0,0,0-.009-6.161l-1.182.009a.7.7,0,0,1-.644-.971l2.2-5.25a.68.68,0,0,1,1.263,0l4.5,10.511A2.976,2.976,0,0,0,32.5,33.579a3.062,3.062,0,0,0,2.821-4.258Z" transform="translate(6.422 -4.011)" fill="#fff"/>
+  </g>
+</svg>
