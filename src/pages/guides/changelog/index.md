@@ -22,6 +22,13 @@ contributors:
 
 # Changelog
 
+## [2.0.1] - 2022-12-20
+
+### Added
+
+- `initialize()` method is now async
+- New default method `terminate()`: allows you to terminate an active instance of CCEverywhere
+
 ## [1.5.4] - 2022-12-16
 
 ### Added

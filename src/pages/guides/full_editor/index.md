@@ -32,7 +32,6 @@ Users can access Adobe Express's huge template and asset library when starting w
 __Read our guides__:
 * [Creating new projects](create_project/index.md)
 * [Edit existing projects](edit_project/index.md)
-* [Customize the editor component](customization/index.md)
 
 ![Full editor](editor.png)
 

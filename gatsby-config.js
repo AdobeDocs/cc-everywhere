@@ -15,7 +15,7 @@ module.exports = {
     pages: [
       {
         title: 'Adobe Express Embed SDK',
-        path: '/'
+        path: '/',
       },
       {
         title: 'Guides',
@@ -23,7 +23,15 @@ module.exports = {
       },
       {
         title: 'Reference',
-        path: '/reference/'
+        menu: [{
+          title: 'v2.0.1',
+          description: 'v2 Reference', // optional,
+          path: '/v2/reference/'
+        }, {
+         title: 'v1.5.4',
+         description: 'v1 Reference', // optional,
+         path: '/reference/'
+       }],
       },
       {
         title: 'Support',
@@ -84,8 +92,8 @@ module.exports = {
         path: '/guides/changelog/'
       },
       {
-        title: 'Components',
-        path: '/reference',
+        title: 'Reference',
+        path: '/reference/',
         header: true,
         pages: [
           {
@@ -97,12 +105,36 @@ module.exports = {
             path: '/reference/full_editor/'
           },
           {
+            title: 'Quick actions', 
+            path: '/reference/quick_actions/'
+          },
+          {
             title: 'Shared types', 
             path: '/reference/shared_types/'
+          }
+        ]
+      },
+      {
+        title: 'Reference',
+        path:'/v2/reference/',
+        header: true, 
+        // pages: require('./v2-reference')
+        pages: [
+          {
+            title: 'Initialize SDK', 
+            path: '/v2/reference/', 
+          },
+          {
+            title: 'Full editor', 
+            path: '/v2/reference/full_editor/'
           },
           {
             title: 'Quick actions', 
-            path: '/reference/quick_actions/'
+            path: '/v2/reference/quick_actions/'
+          },
+          {
+            title: 'Shared types', 
+            path: '/v2/reference/shared_types/'
           }
         ]
       }
