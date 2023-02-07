@@ -24,13 +24,13 @@ module.exports = {
       {
         title: 'Reference',
         menu: [{
-          title: 'v2.0.1',
-          description: 'v2 Reference', // optional,
-          path: '/v2/reference/'
+          title: 'Reference',
+          description: 'Reference', // optional,
+          path: '/reference/'
         }, {
-         title: 'v1.5.4',
+         title: 'v1 Reference',
          description: 'v1 Reference', // optional,
-         path: '/reference/'
+         path: '/v1/reference/'
        }],
       },
       {
@@ -93,8 +93,31 @@ module.exports = {
       },
       {
         title: 'Reference',
-        path: '/reference/',
+        path: '/v1/reference/',
         header: true,
+        pages: [
+          {
+            title: 'Initialize SDK', 
+            path: '/v1/reference/', 
+          },
+          {
+            title: 'Full editor', 
+            path: '/v1/reference/full_editor/'
+          },
+          {
+            title: 'Quick actions', 
+            path: '/v1/reference/quick_actions/'
+          },
+          {
+            title: 'Shared types', 
+            path: '/v1/reference/shared_types/'
+          }
+        ]
+      },
+      {
+        title: 'Reference',
+        path:'/reference/',
+        header: true, 
         pages: [
           {
             title: 'Initialize SDK', 
@@ -111,30 +134,6 @@ module.exports = {
           {
             title: 'Shared types', 
             path: '/reference/shared_types/'
-          }
-        ]
-      },
-      {
-        title: 'Reference',
-        path:'/v2/reference/',
-        header: true, 
-        // pages: require('./v2-reference')
-        pages: [
-          {
-            title: 'Initialize SDK', 
-            path: '/v2/reference/', 
-          },
-          {
-            title: 'Full editor', 
-            path: '/v2/reference/full_editor/'
-          },
-          {
-            title: 'Quick actions', 
-            path: '/v2/reference/quick_actions/'
-          },
-          {
-            title: 'Shared types', 
-            path: '/v2/reference/shared_types/'
           }
         ]
       }

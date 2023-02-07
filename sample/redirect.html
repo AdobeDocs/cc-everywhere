@@ -4,16 +4,20 @@
     <title>Exchange code for access token</title>
   </head>
   <body>
-    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript" >
-      const ccEverywhere = window.CCEverywhere.initialize({
-            clientId: '<YOUR_CLIENT_ID>',
-            appName: '<YOUR_PROJECT_NAME>',
-            appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web',
-            redirectUri: 'https://localhost:8000/redirect.html'
-      });
-      ccEverywhere.exchangeAuthCodeForToken();
+      (async () => {
+        const PROJECT_NAME = 'cc everywhere';
+        const ccEverywhere = await window.CCEverywhere.initialize({
+          clientId: YOUR_CLIENT_ID,
+          appName: PROJECT_NAME,
+          appVersion: { major: 1, minor: 0 },
+          platformCategory: 'web',
+          redirectUri: 'https://localhost:8000/redirect.html'
+        });
+        ccEverywhere.exchangeAuthCodeForToken();
+      })();
+      
     </script>
   </body>
 </html>

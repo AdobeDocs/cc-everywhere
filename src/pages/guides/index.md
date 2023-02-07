@@ -32,10 +32,10 @@ Then, choose "Single-Page App" and register your domain in the "Redirect URI Pat
 
 ## Step 2: Embed the SDK
 
-The latest [version](https://sdk.cc-embed.adobe.com/v1/version.json) of the SDK is available on Adobe's CDN:
+The latest [version](https://sdk.cc-embed.adobe.com/v2/version.json) of the SDK is available on Adobe's CDN:
 
 ```js
-var CDN_URL = "https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js";
+var CDN_URL = "https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js";
 ```
 
 You can read the [changelog](/src/pages/guides/changelog/index.md) to understand known issues as well as what changes have been made.
@@ -43,13 +43,10 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 ### Load via script tag
 
 ```js
-<script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+<script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
 <script>
-  (() => {
-    if (!window.CCEverywhere) {
-      return;
-    }
-    const ccEverywhere = window.CCEverywhere.initialize();
+  (async () => {
+    const ccEverywhere = await window.CCEverywhere.initialize();
   })();
 </script>
 ```
@@ -58,7 +55,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 
 ```js
 await import(CDN_URL);
-const ccEverywhere = window.CCEverywhere.initialize();
+const ccEverywhere = await window.CCEverywhere.initialize();
 ```
 
 ### Dynamic script
@@ -67,11 +64,11 @@ const ccEverywhere = window.CCEverywhere.initialize();
 ((document, url) => {
     const script = document.createElement("script");
     script.src = url;
-    script.onload = () => {
+    script.onload = async () => {
       if (!window.CCEverywhere) {
           return;
         }
-        const ccEverywhere = window.CCEverywhere.initialize();
+        const ccEverywhere = await window.CCEverywhere.initialize();
     };
     document.body.appendChild(script);
   })(document, CDN_URL);
@@ -86,11 +83,8 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 * `REDIRECT_URI` (string): Specify the redirect URI you registered for the project in Developer Console
 
 ```js
-(() => {
-    if (!window.CCEverywhere) {
-      return;
-    }
-    const ccEverywhere = window.CCEverywhere.initialize({
+(async () => {
+    const ccEverywhere = await window.CCEverywhere.initialize({
       clientId: <CLIENT_ID>,
       appName: <APP_NAME>, 
       appVersion: { major: 1, minor: 0 },

@@ -109,30 +109,25 @@ To see the full list of canvas template layout ratios and template types, see th
     <button id="create-project-button">Create project</button>
     <img id="image-container" height="420" width="420" />
 
-    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript">
-
-    /* Initialize projectId to null until it gets set by onPublish callback */
-    var projectId = null;
     
-    var imageContainer = document.getElementById("image-container");
-    const createButton = document.getElementById("create-project-button");
-    
-    (() => {
-        if (!window.CCEverywhere) {
-            return;
-        }
-        const ccEverywhere = window.CCEverywhere.initialize({
+    (async () => {
+        const ccEverywhere = await window.CCEverywhere.initialize({
             clientId: YOUR_CLIENT_ID,
-            appName: PROJECT_NAME,
+            appName: YOUR_PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web', 
             redirectUri: YOUR_REDIRECT_URI
         });
-    })();
-    
 
-    const createButton = document.getElementById("create-project-button");
+         /* Initialize projectId to null until it gets set by onPublish callback */
+        var projectId = null;
+        
+        var imageContainer = document.getElementById("image-container");
+        const createButton = document.getElementById("create-project-button");
+
+        const createButton = document.getElementById("create-project-button");
         createButton.addEventListener('click', () => {
             const createDesignCallback = {
                 onCancel: () => {},
@@ -154,7 +149,8 @@ To see the full list of canvas template layout ratios and template types, see th
                     }
                 }
             );  
-    });
+        });
+    })();
     </script>
   </body> 
 </html>

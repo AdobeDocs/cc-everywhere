@@ -105,66 +105,63 @@ Finally, users can choose between 3 export options:
 
     <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
     <script type="text/javascript" >
-
-    const PROJECT_NAME = 'cc everywhere';
-
-    var ccEverywhere = window.CCEverywhere.initialize(
-        {
+    (async () => {
+        const ccEverywhere = await window.CCEverywhere.initialize({
             clientId: YOUR_CLIENT_ID,
-            appName: PROJECT_NAME,
+            appName: YOUR_APP_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
             redirectUri: YOUR_REDIRECT_URI
-        }
-    );
+        });
 
-    const videoCallbacks = {
-        onCancel: () => {},
-        onPublish: (publishParams) => {
-            if(publishParams.exportButtonId=="save-to-host-app"){
-                // Customize functionality here 
-            }
-        },
-        onError: (err) => {
-            console.error('Error received is', err.toString())
-        }
-    }
-
-    const exportOptions = [
-        {
-            target: 'Editor',
-            variant: 'cta',
-            optionType: 'button',
-            buttonType: 'native'
-        },
-        {
-            target: 'Download',
-            variant: 'primary',
-            optionType: 'button',
-            buttonType: 'native'
-        },
-        /* Custom implementation in onPublish callback */
-        {
-            target: 'Host',
-            id: 'save-to-host-app',
-            label: 'Embed in app',
-            variant: 'cta',
-            optionType: 'button',
-            buttonType: 'custom'
-        }
-    ];
-
-    document.getElementById('change-speed')
-    .addEventListener('click', () => {
-        ccEverywhere.openQuickAction({
-            id: 'change-speed', 
-            inputParams: { 
-                exportOptions: exportOptions
+        const videoCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                if(publishParams.exportButtonId=="save-to-host-app"){
+                    // Customize functionality here 
+                }
             },
-            callbacks: videoCallbacks,
-            modalParams: {},
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const exportOptions = [
+            {
+                target: 'Editor',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'native'
+            },
+            {
+                target: 'Download',
+                variant: 'primary',
+                optionType: 'button',
+                buttonType: 'native'
+            },
+            /* Custom implementation in onPublish callback */
+            {
+                target: 'Host',
+                id: 'save-to-host-app',
+                label: 'Embed in app',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'custom'
+            }
+        ];
+
+        document.getElementById('change-speed')
+        .addEventListener('click', () => {
+            ccEverywhere.openQuickAction({
+                id: 'change-speed', 
+                inputParams: { 
+                    exportOptions: exportOptions
+                },
+                callbacks: videoCallbacks,
+                modalParams: {},
+            })
         })
-    })
+    })();
     </script>
   </body> 
 </html>

@@ -109,97 +109,95 @@ Finally, users can choose between 3 export options:
     <img id="image-container" height="420" width="420" />
     <button id="image-crop"> Crop image </button>
 
-    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript" >
-
-    const PROJECT_NAME = 'cc everywhere';
-    /* file: user uploaded file
-    imageUrl: base64 representation we pass into QA function */
-    var file, encodedImage;
-    /*  appImage is the image container displayed in sample */
-    var appImage = document.getElementById('image-container');
-
-    /* This event listener checks to see if the user uploads a new file and reads it into base64 data type for SDK ingestion later */
     
-    document.getElementById('fileInput')
-    .addEventListener('change', (e) => {
-        const reader = new FileReader();
-        file = e.target.files[0];
-        /* reads file into base 64 data type */
-        reader.readAsDataURL(file);
-        reader.onload = () => {
-            encodedImage = reader.result;
-        }
-        reader.onerror = (error) => {
-            console.log('error', error);
-        };
-    })
-
-    var ccEverywhere = window.CCEverywhere.initialize(
-        {
+    (async() => {
+        const ccEverywhere = await window.CCEverywhere.initialize({
             clientId: YOUR_CLIENT_ID,
-            appName: PROJECT_NAME,
+            appName: YOUR_APP_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
             redirectUri: YOUR_REDIRECT_URI
-        }
-    );
-
-    const exportOptions = [
-        /* Customize export button */
-        {
-            target: 'Editor',
-            variant: 'cta',
-            optionType: 'button',
-            buttonType: 'native'
-        },
-        /* Download export button */
-        {
-            target: 'Download',
-            variant: 'primary',
-            optionType: 'button',
-            buttonType: 'native'
-        },
-        /* Custom implementation in onPublish callback */
-        {
-            target: 'Host',
-            id: 'save-to-host-app',
-            label: 'Embed in app',
-            variant: 'cta',
-            optionType: 'button',
-            buttonType: 'custom'
-        }
-    ];
-
-    const callbacks = {
-        onCancel: () => {},
-        onPublish: (publishParams) => {
-            if(publishParams.exportButtonId=="save-to-host-app"){
-                appImage.src = publishParams.asset.data;
-                appImage.style.visibility="visible";
             }
-        },
-        onError: (err) => {
-            console.error('Error received is', err.toString())
-        }
-    }
+        );
+        /* file: user uploaded file
+        imageUrl: base64 representation we pass into QA function */
+        var file, encodedImage;
+        /*  appImage is the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
 
-    document.getElementById('image-crop')
-    .addEventListener('click', () => {
-        ccEverywhere.openQuickAction({
-            id: 'image-crop', 
-            inputParams: {
-                asset: {
-                    data: encodedImage, 
-                    dataType: 'base64', 
-                    type: 'image'
-                }, 
-                exportOptions: exportOptions
-            },
-            callbacks: callbacks,
-            modalParams: {},
+        /* This event listener checks to see if the user uploaded a new file */
+        document.getElementById('fileInput')
+        .addEventListener('change', (e) => {
+            const reader = new FileReader();
+            file = e.target.files[0];
+            /* reads file into base 64 data type */
+            reader.readAsDataURL(file);
+            reader.onload = () => {
+                encodedImage = reader.result;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
         })
-    })
+
+        const exportOptions = [
+            /* Customize export button */
+            {
+                target: 'Editor',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'native'
+            },
+            /* Download export button */
+            {
+                target: 'Download',
+                variant: 'primary',
+                optionType: 'button',
+                buttonType: 'native'
+            },
+            /* Custom implementation in onPublish callback */
+            {
+                target: 'Host',
+                id: 'save-to-host-app',
+                label: 'Embed in app',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'custom'
+            }
+        ];
+
+        const callbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                if(publishParams.exportButtonId=="save-to-host-app"){
+                    appImage.src = publishParams.asset.data;
+                    appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        document.getElementById('image-crop')
+        .addEventListener('click', () => {
+            ccEverywhere.openQuickAction({
+                id: 'image-crop', 
+                inputParams: {
+                    asset: {
+                        data: encodedImage, 
+                        dataType: 'base64', 
+                        type: 'image'
+                    }, 
+                    exportOptions: exportOptions
+                },
+                callbacks: callbacks,
+                modalParams: {},
+            })
+        })
+    })();
     </script>
   </body> 
 </html>

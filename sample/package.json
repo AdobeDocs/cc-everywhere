@@ -1,9 +1,7 @@
 {
-    "dependencies": {
-        "@spectrum-css/button": "^6.0.1",
-        "@spectrum-css/expressvars": "^2.0.0",
-        "@spectrum-css/page": "^5.0.1",
-        "@spectrum-css/typography": "^4.0.19",
-        "@spectrum-css/vars": "^6.1.1"
-    }
+  "dependencies": {
+    "@spectrum-css/button": "^6.0.21",
+    "@spectrum-css/typography": "^4.0.27",
+    "@spectrum-css/vars": "^8.0.1"  
+  }
 }

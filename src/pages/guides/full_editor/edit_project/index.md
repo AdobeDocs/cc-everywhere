@@ -92,45 +92,43 @@ The only required property is `inputParams.projectId`.
     <button id="edit-project-button">Edit project</button>
     <img id="image-container" height="420" width="420" />
 
-    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript">
-    // projectId should be saved from an earlier call to createDesign
-    var projectId = SAVED_CCX_PROJECT_ID;
-    var imageContainer = document.getElementById("image-container");
-    const editButton = document.getElementById("edit-project-button");
 
-    (() => {
-        if (!window.CCEverywhere) {
-            return;
-        }
-        const ccEverywhere = window.CCEverywhere.initialize({
+    (async () => {
+        const ccEverywhere = await window.CCEverywhere.initialize({
             clientId: YOUR_CLIENT_ID,
             appName: PROJECT_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web', 
             redirectUri: YOUR_REDIRECT_URI
         });
-    })();
 
-    editButton.addEventListener('click', () => {
-        const editDesignCallback = {
-            onCancel: () => {},
-            onPublish: (publishParams) => {
-                const localData = { project: publishParams.projectId, image: publishParams.asset.data };
-                imageContainer.src = localData.image;
-                projectId = localData.project;
-            },
-            onError: (err) => {
-                console.error('Error received is', err.toString());
-            },
-        };
-        ccEverywhere.editDesign(
-            {
-                inputParams: { projectId: projectId },
-                callbacks: editDesignCallback
-            }
-        );
-    });
+        // projectId should be saved from an earlier call to createDesign
+        var projectId = SAVED_CCX_PROJECT_ID;
+        var imageContainer = document.getElementById("image-container");
+        const editButton = document.getElementById("edit-project-button");
+        
+        editButton.addEventListener('click', () => {
+            const editDesignCallback = {
+                onCancel: () => {},
+                onPublish: (publishParams) => {
+                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
+                    imageContainer.src = localData.image;
+                    projectId = localData.project;
+                },
+                onError: (err) => {
+                    console.error('Error received is', err.toString());
+                },
+            };
+            ccEverywhere.editDesign(
+                {
+                    inputParams: { projectId: projectId },
+                    callbacks: editDesignCallback
+                }
+            );
+        });
+    })();    
     </script>
   </body> 
 </html>

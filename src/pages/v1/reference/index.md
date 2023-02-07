@@ -20,13 +20,11 @@ contributors:
 
 # SDK Reference
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](#cceverywhere) object. The v2 release introduces a new method: `terminate()`
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object.
 
 ## initialize()
 
-#### initialize: (HostInfo, ConfigParams?) => Promise<null | CCEverywhere>
-
-The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  With the v2 release of the SDK, this method is now async.
+The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.
 
 ```js
 // after loading the SDK into the window
@@ -60,7 +58,7 @@ If you specify `redirectUri` as a parameter in the **HostInfo** object, that is 
 
 ### ConfigParams
 
-The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/full_editor/customization/index.md) page for a full locale list.
+The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/../pages/guides/full_editor/customization/index.md) page for a full locale list.
 
 | Property | Type | Description
 | :-- | :--| :--
@@ -68,7 +66,7 @@ The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the
 
 ## CCEverywhere
 
-The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized.
+The CCEverywhere object is the object returned when the SDK is initialized.
 
 As of today, it exposes 4 methods:
 
@@ -76,11 +74,3 @@ As of today, it exposes 4 methods:
 2. `createDesign()`: Full editor component
 3. `editDesign()`: Full editor component
 4. `exchangeAuthCodeForToken()`: Authorization
-
-## terminate()
-
-#### terminate: () => boolean
-
-The default method `terminate()` is available with v2.0.1+ of the SDK. This method will:
-* Return __true__ once it successfully terminates the active instance of `CCEverywhere`
-* Return __false__ if there is no active `CCEverywhere` instance.
