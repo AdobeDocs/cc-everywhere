@@ -2,10 +2,9 @@
 <html lang="en" class="spectrum spectrum--medium spectrum--light">
   <head>
     <title>Quick actions</title>
-    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-global.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
   </head>
@@ -78,160 +77,163 @@
         </div>
         <video id="video-container" controls style="visibility:hidden;">The “video” tag is not supported by your browser. </video>
     </div>
-    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript" >
-        /* encodedInputFile: base64 representation we pass into QA function */
-        var inputFile = document.getElementById('fileInput');
-        var encodedImage; 
-        /* appImage is the image container displayed in sample */
-        var appImage = document.getElementById('image-container');
-        var appVideo = document.getElementById('video-container');
+        (async () => {
+            /* encodedInputFile: base64 representation we pass into QA function */
+            var inputFile = document.getElementById('fileInput');
+            var encodedImage; 
+            /* appImage is the image container displayed in sample */
+            var appImage = document.getElementById('image-container');
+            var appVideo = document.getElementById('video-container');
 
-        const PROJECT_NAME = 'cc everywhere';
-        const ccEverywhere = window.CCEverywhere.initialize({
-            clientId: '<YOUR_CLIENT_ID>',
-            appName: '<YOUR_PROJECT_NAME>',
-            appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web',
-            redirectUri: 'https://localhost:8000/redirect.html'
-        });
+            const PROJECT_NAME = 'cc everywhere';
+            const ccEverywhere = await window.CCEverywhere.initialize({
+                clientId: YOUR_CLIENT_ID, // Get from Adobe Developer Console
+                appName: PROJECT_NAME,
+                appVersion: { major: 1, minor: 0 },
+                platformCategory: 'web',
+                redirectUri: 'https://localhost:8000/redirect.html'
+            });
 
-        /* This event listener checks to see if the user uploads a new file 
-        and reads it into base64 data type for SDK ingestion later */
-        inputFile.addEventListener('change', (e) => {
-            const reader = new FileReader();
-            // reads file into base 64 data type
-            reader.readAsDataURL(e.target.files[0]);
-            reader.onload = () => {
-                encodedImage = reader.result;
-            }
-            reader.onerror = (error) => {
-                console.log('error', error);
-            };
-        })
-        document.getElementById('reset').addEventListener('click', () => {
-            inputFile.value = '';
-            encodedImage = null;
-        })
-
-        /* Defines export buttons for export */
-        const exportOptions = [
-            /* Export to continue editing in full editor */
-            {
-                target: 'Editor',
-                variant: 'cta',
-                optionType: 'button',
-                buttonType: 'native'
-            },
-            /* Downloads asset to user's computer */
-            {
-                target: 'Download',
-                variant: 'primary',
-                optionType: 'button',
-                buttonType: 'native'
-            },
-            /* Custom implementation in onPublish callback */
-            {
-                target: 'Host',
-                id: 'save-to-host-app',
-                label: 'Embed in app',
-                variant: 'cta',
-                optionType: 'button',
-                buttonType: 'custom'
-            }
-        ];
-
-        /* __________________________________________________________
-                        Image quick actions 
-        __________________________________________________________ */
-
-        const imageCallbacks = {
-            onCancel: () => {},
-            onPublish: (publishParams) => {
-                if(publishParams.exportButtonId=="save-to-host-app"){
-                    appImage.src = publishParams.asset.data;
-                    appImage.style.visibility="visible";
+            /* This event listener checks to see if the user uploads a new file 
+            and reads it into base64 data type for SDK ingestion later */
+            inputFile.addEventListener('change', (e) => {
+                const reader = new FileReader();
+                // reads file into base 64 data type
+                reader.readAsDataURL(e.target.files[0]);
+                reader.onload = () => {
+                    encodedImage = reader.result;
                 }
-            },
-            onError: (err) => {
-                console.error('Error received is', err.toString())
-            }
-        }
+                reader.onerror = (error) => {
+                    console.log('error', error);
+                };
+            })
+            document.getElementById('reset').addEventListener('click', () => {
+                inputFile.value = '';
+                encodedImage = null;
+            })
 
-        /* If there's no file uploaded, no asset is passed */
-        function imageQuickAction(qa_id) {            
-            if(inputFile) {
+            /* Defines export buttons for export */
+            const exportOptions = [
+                /* Export to continue editing in full editor */
+                {
+                    target: 'Editor',
+                    variant: 'cta',
+                    optionType: 'button',
+                    buttonType: 'native'
+                },
+                /* Downloads asset to user's computer */
+                {
+                    target: 'Download',
+                    variant: 'primary',
+                    optionType: 'button',
+                    buttonType: 'native'
+                },
+                /* Custom implementation in onPublish callback */
+                {
+                    target: 'Host',
+                    id: 'save-to-host-app',
+                    label: 'Embed in app',
+                    variant: 'cta',
+                    optionType: 'button',
+                    buttonType: 'custom'
+                }
+            ];
+
+            /* __________________________________________________________
+                            Image quick actions 
+            __________________________________________________________ */
+
+            const imageCallbacks = {
+                onCancel: () => {},
+                onPublish: (publishParams) => {
+                    if(publishParams.exportButtonId=="save-to-host-app"){
+                        appImage.src = publishParams.asset.data;
+                        appImage.style.visibility="visible";
+                    }
+                },
+                onError: (err) => {
+                    console.error('Error received is', err.toString())
+                }
+            }
+
+            /* If there's no file uploaded, no asset is passed */
+            function imageQuickAction(qa_id) {            
+                if(encodedImage) {
+                    ccEverywhere.openQuickAction({
+                        id: qa_id, 
+                        inputParams: {
+                            asset: {
+                                data: encodedImage, 
+                                dataType: 'base64', 
+                                type: 'image'
+                            }, 
+                            exportOptions: exportOptions
+                        },
+                        callbacks: imageCallbacks
+                    })
+                } else {
+                    ccEverywhere.openQuickAction({
+                        id: qa_id, 
+                        inputParams: { exportOptions: exportOptions },
+                        callbacks: imageCallbacks
+                    });
+                }
+            };
+
+            let imageButtons = document.querySelectorAll('#image-buttons button');
+            imageButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    imageQuickAction(button.id)
+                })
+            })
+
+
+            /* __________________________________________________________
+                            Video quick actions 
+            __________________________________________________________ */
+
+            const videoCallbacks = {
+                onCancel: () => {},
+                onPublish: (publishParams) => {
+                    if(publishParams.exportButtonId=="save-to-host-app"){
+                        appVideo.src = publishParams.asset.data;
+                        appVideo.style.visibility = "visible";
+                    }
+                },
+                onError: (err) => {
+                    console.error('Error received is', err.toString())
+                }
+            }
+            
+            function videoQuickAction(qa_id) {
+                /* file input not supported yet, call the QA API and the user is prompted to 
+                browser for image files in the modal */
                 ccEverywhere.openQuickAction({
                     id: qa_id, 
                     inputParams: {
-                        asset: {
-                            data: encodedImage, 
-                            dataType: 'base64', 
-                            type: 'image'
-                        }, 
                         exportOptions: exportOptions
                     },
-                    callbacks: imageCallbacks
+                    callbacks: videoCallbacks
                 })
-            } else {
-                ccEverywhere.openQuickAction({
-                    id: qa_id, 
-                    inputParams: { exportOptions: exportOptions },
-                    callbacks: imageCallbacks
-                });
-            }
-        };
-
-        let imageButtons = document.querySelectorAll('#image-buttons button');
-        imageButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                imageQuickAction(button.id)
+            };
+            
+            
+            let videoButtons = document.querySelectorAll('#video-buttons button');
+            videoButtons.forEach((button) => {
+                button.addEventListener('click', () => {
+                    videoQuickAction(button.id)
+                })
+            }) 
+            
+            document.getElementById('clear').addEventListener('click', () => {
+                appImage.src=null;
+                appVideo.src=null;
+                appVideo.style.visibility="hidden";
+                encodedImage=null;
             })
-        })
-
-
-        /* __________________________________________________________
-                        Video quick actions 
-        __________________________________________________________ */
-
-        const videoCallbacks = {
-            onCancel: () => {},
-            onPublish: (publishParams) => {
-                if(publishParams.exportButtonId=="save-to-host-app"){
-                    appVideo.src = publishParams.asset.data;
-                    appVideo.style.visibility = "visible";
-                }
-            },
-            onError: (err) => {
-                console.error('Error received is', err.toString())
-            }
-        }
-        
-        function videoQuickAction(qa_id) {
-            /* file input not supported yet, call the QA API and the user is prompted to 
-            browser for image files in the modal */
-            ccEverywhere.openQuickAction({
-                id: qa_id, 
-                inputParams: {
-                    exportOptions: exportOptions
-                },
-                callbacks: videoCallbacks
-            })
-        };
-        
-        
-        let videoButtons = document.querySelectorAll('#video-buttons button');
-        videoButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                videoQuickAction(button.id)
-            })
-        }) 
-        
-        document.getElementById('clear').addEventListener('click', () => {
-            appImage.src=null;
-            appVideo.src=null;
-            appVideo.style.visibility="hidden";
-        })
+        })();
     </script>
   </body>
 </html>

@@ -3,20 +3,20 @@
   <head>
     <title>Adobe Express Embed SDK Sample</title>
     
-    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-global.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-medium.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/expressvars/dist/spectrum-light.css">
-    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
   </head>
   <body>
     <div class="spectrum-Typography">
-        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">Adobe Express Embed SDK: Full editor</h1>
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">Adobe Express Embed SDK</h1>
         <p class="spectrum-Body spectrum-Body--sizeL">
             A full editor can be launched with new or existing Adobe Express projects. 
             To launch an existing project, the SDK expects the associated project ID.  
         </p>
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Full editor </h2>
         <h3 class="spectrum-Heading spectrum-Heading--sizeL">Sample Workflow</h3>
         <p class="spectrum-Body spectrum-Body--sizeM">
             The <b>Create Design</b> button will launch a new project for the user in an editor.
@@ -33,83 +33,86 @@
         <button id="reset" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
             <span class="spectrum-Button-label">Hide</span>
         </button>
-        <h2 class="spectrum-Heading spectrum-Heading--sizeXXL"> Quick Actions</h2>
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Quick actions</h2>
         <p class="spectrum-Body spectrum-Body--sizeL">
-            Quick actions gives users tools to perform complex operations such as "Remove Background" without needing to leave your application.
+            Quick actions gives users tools to perform complex operations such as "remove background" without needing to leave your application.
         </p>
         <button id="QA" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
             <span class="spectrum-Button-label" >View All</span>
         </button>
     </div>
     <img id="savedDesign"/>
-    <script src="https://sdk.cc-embed.adobe.com/v1/CCEverywhere.js"></script>
+    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
     <script type="text/javascript" >
-        
-        const PROJECT_NAME = 'cc everywhere';
-        const ccEverywhere = window.CCEverywhere.initialize({
-            clientId: '<YOUR_CLIENT_ID>',
-            appName: '<YOUR_PROJECT_NAME>',
-            appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web',
-            redirectUri: 'https://localhost:8000/redirect.html'
-        });
-        
-        document.getElementById("QA").addEventListener('click', () => {
-            window.location.href = "https://localhost:8000/quickactions.html";
-        });
-
-
-        var project_id = null;
-        var image_data = document.getElementById("savedDesign");
-        const createButton = document.getElementById("createDesign");
-        createButton.addEventListener('click', () => {
-            const createDesignCallback = {
-                onCancel: () => {},
-                onPublish: (publishParams) => {
-                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
-                    image_data.src = localData.image;
-                    project_id = localData.project;
-                },
-                onError: (err) => {
-                    console.error('Error received is', err.toString());
-                },
-            };
+        (async () => {
+            const PROJECT_NAME = 'cc everywhere';
+            const ccEverywhere = await window.CCEverywhere.initialize({
+                clientId: YOUR_CLIENT_ID, // Get from Adobe Developer Console
+                appName: PROJECT_NAME,
+                appVersion: { major: 1, minor: 0 },
+                platformCategory: 'web',
+                redirectUri: 'https://localhost:8000/redirect.html'
+            });
             
-            ccEverywhere.createDesign(
-                {
-                    callbacks: createDesignCallback, 
-                    outputParams: {
-                        outputType: "base64",
-                    }
-                }
-            );  
-        });
-        // ----------------------------------------------------
-        const editButton = document.getElementById("editDesign");
-        editButton.addEventListener('click', () => {
-            const editDesignCallback = {
-                onCancel: () => {},
-                onPublish: (publishParams) => {
-                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
-                    image_data.src = localData.image;
-                    project_id = localData.project;
-                },
-                onError: (err) => {
-                    console.error('Error received is', err.toString());
-                },
-            };
-            ccEverywhere.editDesign(
-                {
-                    inputParams: { projectId: project_id },
-                    callbacks: editDesignCallback
-                }
-            );
-        });
+            document.getElementById("QA").addEventListener('click', () => {
+                window.location.href = "https://localhost:8000/quickactions.html";
+            });
 
-        document.getElementById("reset").addEventListener('click', ()=> {
-            image_data.src = '';
-        })
-        
+
+            var project_id = null;
+            var image_data = document.getElementById("savedDesign");
+            const createButton = document.getElementById("createDesign");
+            createButton.addEventListener('click', () => {
+                const createDesignCallback = {
+                    onCancel: () => {},
+                    onPublish: (publishParams) => {
+                        const localData = { 
+                            project: publishParams.projectId, 
+                            image: publishParams.asset.data 
+                        };
+                        image_data.src = localData.image;
+                        project_id = localData.project;
+                    },
+                    onError: (err) => {
+                        console.error('Error received is', err.toString());
+                    },
+                };
+                
+                ccEverywhere.createDesign(
+                    {
+                        callbacks: createDesignCallback, 
+                        outputParams: {
+                            outputType: "base64",
+                        }
+                    }
+                );  
+            });
+            // ----------------------------------------------------
+            const editButton = document.getElementById("editDesign");
+            editButton.addEventListener('click', () => {
+                const editDesignCallback = {
+                    onCancel: () => {},
+                    onPublish: (publishParams) => {
+                        const localData = { project: publishParams.projectId, image: publishParams.asset.data };
+                        image_data.src = localData.image;
+                        project_id = localData.project;
+                    },
+                    onError: (err) => {
+                        console.error('Error received is', err.toString());
+                    },
+                };
+                ccEverywhere.editDesign(
+                    {
+                        inputParams: { projectId: project_id },
+                        callbacks: editDesignCallback
+                    }
+                );
+            });
+
+            document.getElementById("reset").addEventListener('click', ()=> {
+                image_data.src = '';
+            })
+        })();
     </script>
   </body>
   

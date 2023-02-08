@@ -22,6 +22,21 @@ contributors:
 
 # Changelog
 
+## [2.0.8] - 2023-02-02
+
+### Added
+
+- Browser compatibility checker: Now the SDK will check for browser compatibility during initialization.
+- New default method `terminate()` allows you to terminate an active instance of CCEverywhere. This method will return false if there is no active CCEverywhere instance.
+- Google YOLO will work for both the full editor and quick actions. If the user is not signed in, the YOLO prompt will be shown to users. If the user has multiple Google accounts, they can select from a list.
+  - If the user has an Adobe account associated with Google ID, the user is signed in.
+  - If the user does not have an Adobe account associated with the Google ID, a new Adobe account will be created for the user using their Google ID.
+  - User can choose to dismiss the YOLO modal and continue with delayed login.
+
+### Breaking Changes
+
+- `initialize()` method is now async. This is the main API used for initializing the SDK. It will return a promise with a CCEverywhere object which can be used to call other APIs in the SDK.
+
 ## [1.5.4] - 2022-12-16
 
 ### Added

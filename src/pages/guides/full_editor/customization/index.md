@@ -22,7 +22,7 @@ contributors:
 
 # Customization
 
-The full editor component can be configured and customized to fit the needs of your users.
+The Adobe Express Embed SDK can be configured and customized to fit the needs of your users.
 
 ## Locale
 
@@ -46,11 +46,11 @@ The Adobe Express Embed SDK lets you customize the locale during initialization.
 | 'zh_Hans_CN' | Chinese (simplified)
 | 'zh_Hant_TW'| Chinese (traditional)
 
-## Template Layout Ratio
+## CanvasAspectId
 
-`canvasSize` allows you to specify a string value that initializes the full editor loaded with templates that fit that layout ratio.
+`CanvasAspectId` allows you to specify a string value that initializes the full editor loaded with templates that fit that layout ratio.
 
-| Template Layout Ratio | Description
+| CanvasAspectId | Description
 | :-- | :--
 | 'Instagram' | Instagram post
 | 'InstagramStory' | Instagram story
@@ -91,11 +91,11 @@ The Adobe Express Embed SDK lets you customize the locale during initialization.
 | '4:3' | aspect ratio of 4:3
 | '16:9' | aspect ratio of 16:9
 
-## Template Type
+## TemplateType
 
-Developers can pass the `createDesign()` method a `templateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on Adobe Express to get an ideal of each category.
+Developers can pass the `createDesign()` method a `TemplateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on Adobe Express to get an ideal of each category.
 
-| Template Type | Adobe Express Template Category
+| TemplateType | Description
 | :-- | :--
 | 'Flyers' | Flyers
 | 'Instagram_Post' | Instagram posts

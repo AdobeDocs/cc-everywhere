@@ -30,9 +30,9 @@ The full editor component allows you to embed Adobe Express as an iframe in thei
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. The editor component allows you to pass a starting image asset to be pre-loaded. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
 __Read our guides__:
+
 * [Creating new projects](create_project/index.md)
 * [Edit existing projects](edit_project/index.md)
-* [Customize the editor component](customization/index.md)
 
 ![Full editor](editor.png)
 

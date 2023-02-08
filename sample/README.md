@@ -48,7 +48,7 @@ Install it using `npm i http-server` or `brew install http-server`.
 
 ## Step 4: Install project dependencies
 
-Run `npm install` to install the dependencies in `package.json`. The required dependencies belong to [Spectrum CSS](https://github.com/adobe/spectrum-css) and are used to style the buttons.
+Run `npm install` to install the dependencies in `yarn.lock`. The required dependencies belong to [Spectrum CSS](https://github.com/adobe/spectrum-css) and are used to style the buttons.
 
 ## Step 5: Run this sample
 
