@@ -74,7 +74,7 @@ Identifies which image quick action component should be loaded into the iframe.
 | Convert to GIF | 'convert-to-gif'
 | Convert to MP4 | 'convert-to-mp4'
 | Crop Video | 'crop-video'
-| Merge Video | 'merge-video'
+| Merge Video | 'merge-videos'
 | Resize Video | 'resize-video'
 | Reverse Video | 'reverse-video'
 | Trim Video | 'trim-video'

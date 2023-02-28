@@ -93,7 +93,7 @@ The Adobe Express Embed SDK lets you customize the locale during initialization.
 
 ## TemplateType
 
-Developers can pass the `createDesign()` method a `TemplateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on Adobe Express to get an ideal of each category.
+Developers can pass the `createDesign()` method a `TemplateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on Adobe Express to get an idea of each category.
 
 | TemplateType | Description
 | :-- | :--
