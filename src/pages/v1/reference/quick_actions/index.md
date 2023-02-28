@@ -57,7 +57,7 @@ This ID is associated with the quick action you want to surface to your user.
 | Convert to GIF | 'convert-to-gif' | Video
 | Convert to MP4 | 'convert-to-mp4' | Video
 | Crop Video | 'crop-video' | Video
-| Merge Video | 'merge-video' | Video
+| Merge Videos | 'merge-videos' | Video
 | Resize Video | 'resize-video' | Video
 | Reverse Video | 'reverse-video' | Video
 | Trim Video | 'trim-video' | Video
