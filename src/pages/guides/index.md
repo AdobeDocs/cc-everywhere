@@ -30,6 +30,8 @@ Create a new project in the [Developer Console](https://developer.adobe.com/cons
 
 Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md).
 
+Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
+
 ## Step 2: Embed the SDK
 
 The latest [version](https://sdk.cc-embed.adobe.com/v2/version.json) of the SDK is available on Adobe's CDN:
