@@ -23,6 +23,8 @@ contributors:
 
 # Local Development
 
+Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
+
 This guide contains the steps needed to test your project locally.
 
 ## Domain Restrictions

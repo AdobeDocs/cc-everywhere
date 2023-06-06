@@ -24,6 +24,8 @@ This is the main API for accessing all Adobe Express Embed SDK components. The `
 
 ## initialize()
 
+Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
+
 #### `initialize: (HostInfo, ConfigParams?) => Promise<null | CCEverywhere>`
 
 The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  With the v2 release of the SDK, this method is now async.

@@ -28,6 +28,8 @@ This Adobe Express Embed SDK follows the Proof Key for Code Exchange (PKCE) OAut
 
 ## Register OAuth Credentials
 
+Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
+
 OAuth credentials are required when first creating an integration, but they can be modified later. In [Developer Console](https://developer.adobe.com/console), navigate to the project you created. You can edit credentials by navigating to "Credentials" > "OAuth Single-Page App". The redirect URL(s) you define here corresponds with the URL(s) to which the IMS server will redirect after authorization has been granted by the user.
 
 | Domain | Default Redirect URI | Redirect URI Patterns
