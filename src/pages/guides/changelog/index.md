@@ -20,7 +20,17 @@ contributors:
   - https://github.com/amandahuarng
 ---
 
+<InlineAlert variant="warning" slots="header, text1, text2" />
+
+IMPORTANT: Deprecation Warning
+
+This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+
+Instead, we would love for you to start testing the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
+
 # Changelog
+
+<!-- ## [2.2.27] - 2023-02-02 -->
 
 ## [2.0.8] - 2023-02-02
 
@@ -32,6 +42,7 @@ contributors:
   - If the user has an Adobe account associated with Google ID, the user is signed in.
   - If the user does not have an Adobe account associated with the Google ID, a new Adobe account will be created for the user using their Google ID.
   - User can choose to dismiss the YOLO modal and continue with delayed login.
+  - Redirect URI is no longer being used.
 
 ### Breaking Changes
 

@@ -17,6 +17,14 @@ contributors:
   - https://github.com/pklaschka
 ---
 
+<InlineAlert variant="warning" slots="header, text1, text2" />
+
+IMPORTANT: Deprecation Warning
+
+This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+
+Instead, we would love for you to start testing the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
+
 # Full editor
 
 Using the full editor, developers can give end-users an easy way to start a creative design workflow from within their own applications.

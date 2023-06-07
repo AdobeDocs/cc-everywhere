@@ -13,10 +13,10 @@
 module.exports = {
   siteMetadata: {
     pages: [
-      {
-        title: 'Adobe Express Embed SDK',
-        path: '/',
-      },
+      // {
+      //   title: 'Adobe Express Embed SDK',
+      //   path: '/',
+      // },
       {
         title: 'Guides',
         path: '/guides/'
@@ -42,14 +42,6 @@ module.exports = {
       {
         title: 'Quickstart',
         path: '/guides/',
-      },
-      {
-        title: 'Configure OAuth', 
-        path: '/guides/authorization/'
-      },
-      {
-        title: 'Local Development',
-        path: '/guides/local/'
       },
       {
         title: 'Full editor',

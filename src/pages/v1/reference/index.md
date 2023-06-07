@@ -17,6 +17,13 @@ contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 --- 
+<InlineAlert variant="warning" slots="header, text1, text2" />
+
+IMPORTANT: Deprecation Warning
+
+This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+
+Instead, we would love for you to start testing the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
 
 # SDK Reference
 
@@ -35,7 +42,6 @@ window.CCEverywhere.initialize(
         appName: YOUR_PROJECT_NAME,
         appVersion: { major: 1, minor: 0 },
         platformCategory: 'web', 
-        redirectUri: YOUR_REDIRECT_URI
     },
     /* ConfigParams (optional) */
     {
@@ -52,9 +58,6 @@ window.CCEverywhere.initialize(
 |appName | string | Name of project folder created in user's Adobe Express account
 |appVersion | { major: number, minor: number, patch?: number} | Your app version
 | platformCategory | 'web' | Specify host app platform
-| redirectUri | string | Searches for redirect URL you define in [console](https://developer.adobe.com/console)
-
-If you specify `redirectUri` as a parameter in the **HostInfo** object, that is the redirect URI that will be checked first. If you leave this field blank, IMS will search through the "Redirect URI patterns" registered in console for your client, and if no match is found, it will fall back on the "Default Redirect URI".
 
 ### ConfigParams
 
@@ -73,4 +76,3 @@ As of today, it exposes 4 methods:
 1. `openQuickAction()`: Quick actions component
 2. `createDesign()`: Full editor component
 3. `editDesign()`: Full editor component
-4. `exchangeAuthCodeForToken()`: Authorization

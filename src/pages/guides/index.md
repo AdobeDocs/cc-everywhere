@@ -20,6 +20,14 @@ contributors:
   - https://github.com/pklaschka
 ---
 
+<InlineAlert variant="warning" slots="header, text1, text2" />
+
+IMPORTANT: Deprecation Warning
+
+This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+
+Instead, we would love for you to start testing the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
+
 # Quickstart Guide
 
 This guide explains how to start using the Adobe Express Embed SDK in your own application.
@@ -28,7 +36,7 @@ This guide explains how to start using the Adobe Express Embed SDK in your own a
 
 Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Adobe Express Embed SDK".
 
-Then, choose "Single-Page App" and register your domain in the "Redirect URI Patterns" and "Default Redirect URI" fields. You can read more [here](../guides/authorization/index.md).
+Then, choose "Single-Page App" and register your domain in the "Allowed Domains" fields. 
 
 Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
 
@@ -82,7 +90,6 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 
 * `CLIENT_ID` (string): API key from Developer Console
 * `APP_NAME` (string): Name of the project folder created for end users of your integration. This should correspond to the name of your integration.
-* `REDIRECT_URI` (string): Specify the redirect URI you registered for the project in Developer Console
 
 ```js
 (async () => {
@@ -91,29 +98,15 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
       appName: <APP_NAME>, 
       appVersion: { major: 1, minor: 0 },
       platformCategory: 'web',
-      redirectUri: <REDIRECT_URI>
     });
 })();
 ```
 
-This returns a `CCEverywhere` Class object, with four methods:
+This returns a `CCEverywhere` Class object, with three methods:
 
 1. `openQuickAction()`: Quick actions component
 2. `createDesign()`: Full editor component
 3. `editDesign()`: Full editor component
-4. `exchangeAuthCodeForToken()`: Authorization
-
-## Step 4: Exchange Access Token
-
-> **Note**: To set up a local server, refer to the [local development set-up guide](./local/index.md)
-
-After a user logs in, they are redirected back to the designated **redirect URL** with an authorization code. At this redirect URL is hit, call the following method to exchange that code for an access token:
-
-```js
-ccEverywhere.exchangeAuthCodeForToken();
-```
-
-The returned authorization code is exchanged for an access token, which is saved for future requests to the SDK during this session.
 
 ## Next Steps: Explore the SDK
 
