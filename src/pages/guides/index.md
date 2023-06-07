@@ -36,7 +36,7 @@ This guide explains how to start using the Adobe Express Embed SDK in your own a
 
 Create a new project in the [Developer Console](https://developer.adobe.com/console). Select "Add an API" > "Adobe Express Embed SDK".
 
-Then, choose "Single-Page App" and register your domain in the "Allowed Domains" fields. 
+Then, choose "Single-Page App" and register your domain in the "Allowed Domains" fields.
 
 Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
 
