@@ -22,6 +22,14 @@ contributors:
   - https://github.com/pklaschka
 ---
 
+<InlineAlert variant="warning" slots="header, text1, text2" />
+
+IMPORTANT: Deprecation Warning
+
+This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+
+Instead, we would love for you to start testing the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
+
 # Image quick actions
 
 Each quick actions component is loaded into the host application as an iframe, like the full editor component. Image quick actions can be launched with a pre-selected asset (jpg/png). If no input asset is provided, the modal will automatically prompt the user to browse their device for an image file.
@@ -118,7 +126,6 @@ Finally, users can choose between 3 export options:
             appName: YOUR_APP_NAME,
             appVersion: { major: 1, minor: 0 },
             platformCategory: 'web',
-            redirectUri: YOUR_REDIRECT_URI
             }
         );
         /* file: user uploaded file
