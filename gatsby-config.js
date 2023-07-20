@@ -13,10 +13,10 @@
 module.exports = {
   siteMetadata: {
     pages: [
-      // {
-      //   title: 'Adobe Express Embed SDK',
-      //   path: '/',
-      // },
+      {
+        title: 'Adobe Express Embed SDK',
+        path: 'https://developer-stage.adobe.com/express/embed-sdk',
+      },
       {
         title: 'Guides',
         path: '/guides/'
@@ -132,5 +132,5 @@ module.exports = {
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || '/embed-sdk/docs/'
+  pathPrefix: process.env.PATH_PREFIX || '/express/embed-sdk/docs/'
 };
