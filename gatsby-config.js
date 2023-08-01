@@ -15,7 +15,7 @@ module.exports = {
     pages: [
       {
         title: 'Adobe Express Embed SDK',
-        path: 'https://developer-stage.adobe.com/express/embed-sdk',
+        path: 'https://developer.adobe.com/express/embed-sdk',
       },
       {
         title: 'Guides',
