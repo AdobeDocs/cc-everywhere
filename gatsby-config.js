@@ -25,13 +25,17 @@ module.exports = {
         title: 'Reference',
         menu: [{
           title: 'Reference',
-          description: 'Reference', // optional,
+          description: 'v3 Reference', // optional,
           path: '/reference/'
         }, {
-         title: 'v1 Reference',
-         description: 'v1 Reference', // optional,
-         path: '/v1/reference/'
-       }],
+         title: 'v2 Reference',
+         description: 'v2 Reference', // optional,
+         path: '/v2/reference/'
+       }, {
+        title: 'v1 Reference',
+        description: 'v1 Reference', // optional,
+        path: '/v1/reference/'
+      }],
       },
       {
         title: 'Support',
@@ -40,8 +44,12 @@ module.exports = {
     ],
     subPages: [
       {
-        title: 'Quickstart',
+        title: 'Overview',
         path: '/guides/',
+      },
+      {
+        title: 'Quickstart',
+        path: '/guides/quickstart/',
       },
       {
         title: 'Full editor',
@@ -103,6 +111,29 @@ module.exports = {
           {
             title: 'Shared types', 
             path: '/v1/reference/shared_types/'
+          }
+        ]
+      },
+      {
+        title: 'Reference',
+        path: '/v2/reference/',
+        header: true,
+        pages: [
+          {
+            title: 'Initialize SDK', 
+            path: '/v2/reference/', 
+          },
+          {
+            title: 'Full editor', 
+            path: '/v2/reference/full_editor/'
+          },
+          {
+            title: 'Quick actions', 
+            path: '/v2/reference/quick_actions/'
+          },
+          {
+            title: 'Shared types', 
+            path: '/v2/reference/shared_types/'
           }
         ]
       },
