@@ -1,36 +1,46 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
+  - v3
+  - Discuss
   - Support
   - Forums
   - Developer
 title: Support - Adobe Express Embed SDK
 description: This is the support page of the Adobe Express Embed SDK
 ---
-<InlineAlert variant="warning" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
-
-Instead, we would love for you to start integrating the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
-
 <Hero slots="heading, text" background="rgb(19, 93, 183)"/>
 
 # Developer Support
 
 Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 
-## Community Forum
+## Join our community
 
-Please use our [community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all) to leave any questions or comments you may have about the Adobe Express Embed SDK.
+  Please follow this [forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all) to stay updated with future announcements. You can use it to discuss issues with other developers, report bugs, and log feature requests.
 
-## Partnership Opportunities
+## FAQ
 
-If you have any questions or would like to get in touch with our partnerships team, please fill out [this interest form](https://survey.adobe.com/jfe/form/SV_9LggYGfzm9w4Yaq) and a member of our team will get in contact.
+### Do you have a mobile SDK?
+
+Our efforts are currently focused on desktop apps and web.
+
+### Do my users need to have an Adobe ID?
+
+Users will need to sign in using an existing Adobe ID, or create an account, in order to save projects created. Projects will be saved to the user’s Adobe Express account in a folder named after your integration. 
+
+Creating an account for Adobe Express is always free with premium upgrades available.
+
+### Is there a cost to use the SDK?
+
+While there is currently no cost to access the Adobe Express Embed SDK, this may change over time. We look forward to working with our partners and developer community to better understand your users’ needs as we continue to evolve our strategy.
+
+### How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?
+
+There are two functional differences in the embedded Adobe Express full editor compared to Adobe Express on the web:
+
+Content sharing: In an embedded experience, we assume that a user will save the outcome of their creative project back to the host application in order to continue work in the host application. We have disabled sharing capabilities in embedded Adobe Express experiences.
+Content publishing: For the same reason above, you have the ability to pre-define the output type (file types, pixel size, etc.) of the Adobe Express project that is saved to the host application. For this reason, post scheduling and exporting multiple output types are disabled for the embedded Adobe Express editor.
+
+### My user base consists of students/minors. How can I be assured they get appropriate content?
+
+The embedded Adobe Express full editor can be setup to launch student safe content even before a student is signed into the embedded experience. More information about [Adobe & Student Privacy](https://www.adobe.com/privacy/student-policy.html).

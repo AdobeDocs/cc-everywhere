@@ -1,16 +1,8 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
-  - API Documentation
-  - Reference
-  - Initialize
-  - CCEverywhere
+  - v2
+  - References
+  - initialize
 title: SDK Reference
 description: This is the reference page for the existing components in the SDK.
 contributors:

@@ -1,14 +1,12 @@
 ---
 keywords:
+  - v2
   - Express Embed SDK
   - Express Editor
   - Adobe Express
   - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
-  - SDK Reference
+  - Create design
+  - Edit design
   - Edit project
   - Create new project
 title: Adobe Express full editor

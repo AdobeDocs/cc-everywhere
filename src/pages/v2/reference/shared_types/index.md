@@ -1,12 +1,6 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
+  - v2
   - Shared Types
   - Components
   - Asset
@@ -14,6 +8,7 @@ keywords:
   - Modal parameters
   - onPublish
   - Callbacks
+  - Size
 title: Shared Types
 description: This is the reference page for shared types across SDK components.
 contributors:

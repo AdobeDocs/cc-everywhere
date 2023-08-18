@@ -1,15 +1,11 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
+  - v2
   - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
-  - SDK Reference
   - Image Quick Action
   - Video Quick Action
+  - ExportOption
+  - openQuickAction
 title: Quick Actions
 description: This is the reference page for the quick actions component.
 contributors:

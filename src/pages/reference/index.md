@@ -1,42 +1,39 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
   - API Documentation
   - Reference
   - Initialize
   - CCEverywhere
+  - v3
 title: SDK Reference
 description: This is the reference page for the existing components in the SDK.
 contributors:
   - https://github.com/amandahuarng
-  - https://github.com/pklaschka
 --- 
-
-<InlineAlert variant="warning" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
-
-Instead, we would love for you to start integrating the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
 
 # SDK Reference
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](#cceverywhere) object. The v2 release introduces a new method: `terminate()`
+<InlineAlert variant="error" slots="header, text1, text2" />
+
+IMPORTANT: Deprecation Warning
+
+We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
+
+While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
 ## initialize()
 
-Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](#cceverywhere) object.
+
+<InlineAlert variant="info" slots="text1, text2" />
+
+Note: As of March 2023, the `redirectUri` parameter is no longer used. You do not need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
+
+If you created a project prior to March 2023, please [create a new project](https://developer.adobe.com/console) and register your allowed domains.
 
 #### `initialize: (HostInfo, ConfigParams?) => Promise<null | CCEverywhere>`
 
-The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  With the v2 release of the SDK, this method is now async.
+The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  This method is async.
 
 ```js
 // after loading the SDK into the window
@@ -82,11 +79,11 @@ As of today, it exposes 4 methods:
 2. `createDesign()`: Full editor component
 3. `editDesign()`: Full editor component
 
-## terminate()
+## close()
 
-#### `terminate: () => boolean`
+#### `close: () => boolean`
 
-The default method `terminate()` is available with v2.0.1+ of the SDK. This method will:
+The default method `close()` will close the editor modal. This method will:
 
-* Return **true** once it successfully terminates the active instance of `CCEverywhere`
+* Return **true** once it successfully closes the instance of `CCEverywhere`
 * Return **false** if there is no active `CCEverywhere` instance.

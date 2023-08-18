@@ -28,11 +28,11 @@ module.exports = {
           description: 'v3 Reference', // optional,
           path: '/reference/'
         }, {
-         title: 'v2 Reference',
+         title: 'v2 Reference [Deprecated soon]',
          description: 'v2 Reference', // optional,
          path: '/v2/reference/'
        }, {
-        title: 'v1 Reference',
+        title: 'v1 Reference [Deprecated soon]',
         description: 'v1 Reference', // optional,
         path: '/v1/reference/'
       }],

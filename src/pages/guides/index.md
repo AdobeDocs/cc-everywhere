@@ -19,13 +19,7 @@ contributors:
 
 Adobe Express Embed SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Adobe Express capabilities to web applications.
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
-
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
+## Adobe Express Embed SDK
 
 Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on your own website. This documentation provides all the materials you need to get started with the SDK. As of today, this SDK has two components: the __full editor__ and __quick actions__. Try them now in our [demo app](https://demo.expressembed.com/).
 
@@ -37,13 +31,11 @@ Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on you
 
 [Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your own website with just a few lines of code. You can configure what export options are surfaced to your users once they are done with editing tasks (i.e. download, save back to app, edit in an embedded Adobe Express editor).
 
-<br></br>
-
-<DiscoverBlock slots="heading, link, text"/>
-
 ## Getting Started
 
-[Quickstart](guides/quickstart)
+<DiscoverBlock slots="link, text"/>
+
+[Quickstart](./quickstart/index.md)
 
 Read our quickstart to begin integrating with the Adobe Express Embed SDK.
 
@@ -53,13 +45,9 @@ Read our quickstart to begin integrating with the Adobe Express Embed SDK.
 
 Follow to get announcements, debug issues, and submit feature requests.
 
-If you run into any issues at any time throughout your development process, please refer to our guides and use the [community forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
-
 ## Developer Journey
 
-1. Create a project in [Adobe Developer Console](https://adobe.io/console). Refer to the [quickstart](guides/quickstart) guide for these steps.
+1. Create a project in [Adobe Developer Console](https://adobe.io/console). Refer to the [quickstart](./quickstart/index.md) guide for these steps.
 2. [Beta] While v3 is in beta, all clients are disabled by default. **Please share your API key with amandah@adobe.com to get enabled for development.**
 3. Use this documentation, [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample) and [demo app](https://demo.expressembed.com/) code snippets to help you get started with development.
-4. Submit your integration for [review](./review).
-
-<br></br>
+4. Submit your integration for [review](./review/index.md).
