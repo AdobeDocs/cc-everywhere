@@ -50,4 +50,5 @@ Follow to get announcements, debug issues, and submit feature requests.
 1. Create a project in [Adobe Developer Console](https://adobe.io/console). Refer to the [quickstart](./quickstart/index.md) guide for these steps.
 2. [Beta] While v3 is in beta, all clients are disabled by default. **Please share your API key with amandah@adobe.com to get enabled for development.**
 3. Use this documentation, [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/sample) and [demo app](https://demo.expressembed.com/) code snippets to help you get started with development.
-4. Submit your integration for [review](./review/index.md).
+4. Submit your integration for [review](./review/index.md) by Adobe.
+5. Once approved, share the integration publicly with your users!

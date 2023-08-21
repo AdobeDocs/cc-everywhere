@@ -97,9 +97,7 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 (async () => {
     const ccEverywhere = await window.CCEverywhere.initialize({
       clientId: <CLIENT_ID>,
-      appName: <APP_NAME>, 
-      appVersion: { major: 1, minor: 0 },
-      platformCategory: 'web',
+      appName: <APP_NAME>,
     });
 })();
 ```
@@ -110,9 +108,11 @@ This returns a `CCEverywhere` Class object, with three methods:
 2. `createDesign()`: Create a new project or start editing an image in an embedded editor
 3. `editDesign()`: Edit an existing project in an embedded editor
 
+The SDK can be initialized with a customized locale. Read more about the initialize API [here](../../reference/index.md#initialize).
+
 ## Next Steps: Explore the SDK
 
-The Adobe Express Embed SDK can be initialized with a customized locale. The [guides](../../guides/index.md) along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
+The Adobe Express Embed SDK can be initialized with a customized locale. Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
 ### [Full editor](../guides/full_editor/index.md)
 

@@ -22,7 +22,7 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'Reference',
+        title: 'SDK References',
         menu: [{
           title: 'Reference',
           description: 'v3 Reference', // optional,
@@ -37,10 +37,6 @@ module.exports = {
         path: '/v1/reference/'
       }],
       },
-      {
-        title: 'Support',
-        path: '/support/'
-      }
     ],
     subPages: [
       {
@@ -90,6 +86,10 @@ module.exports = {
       {
         title: 'Changelog',
         path: '/guides/changelog/'
+      },
+      {
+        title: 'Support and FAQ',
+        path: '/guides/support/'
       },
       {
         title: 'Reference',
