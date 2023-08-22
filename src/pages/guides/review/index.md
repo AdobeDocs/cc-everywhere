@@ -10,7 +10,7 @@ contributors:
 
 # Submission and Review
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 

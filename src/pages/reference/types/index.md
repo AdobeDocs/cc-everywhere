@@ -6,8 +6,6 @@ keywords:
   - CanvasAspectId
   - EditorPanelView
   - ExportOptions
-  - Size
-  - PixelSize
   - TemplateType
 title: Types
 description: This is the reference page for types used across the SDK.
@@ -46,31 +44,132 @@ Desired asset data type for images. For image output types, host can set this pr
 
 ## CanvasAspectId
 
-`CanvasAspectId` allows you to initializes the full editor loaded with templates that fit that layout ratio.
+`CanvasAspectId` allows you to initializes the full editor loaded with canvas set to a particular size.
 
-| Type | Description
-| :-- | :--
-| 'Instagram' | Instagram post
-| 'InstagramStory' | Instagram story
-| 'InstagramLandscape' | Instagram post (landscape)
-| 'facebook' | Facebook post
-| 'FacebookProfileCover' | Facebook profile cover
-| 'FacebookPageCover' | Facebook page cover
-|'FacebookEventCover' | Facebook event cover
-| 'Twitter' | Twitter post
-| 'TwitterHeader' | Twitter header
-| 'YouTubeChannelArt' | YouTube channel art
-|'YoutubeThumbnail' | YouTube thumbnail
-| 'LinkedInBlogPost' | LinkedIn blog post
-| 'LinkedInProfileCover' | LinkedIn Profile Cover Picture
-| 'SnapchatStory' | Snapchat Story
-| 'KindleCover' | Kindle cover
-| 'Pinterest' | Pinterest post
-| 'TwitchBanner' | Twitch banner
-| 'EtsyCover' | Etsy cover
-|'EventbriteEventImage' | Eventbrite event image
-|  'Letter' | Letter
-|'Poster' | Poster
+| Type | Value | Dimensions
+| :-- | :-- | :--
+| Album cover | "AlbumCover" | 750 x 750px
+| Banner print | "BannerPrint" | 72 x 36in
+| Banner web | "BannerWeb" | 1,200 x 1,000px
+| Blog graphic | "BlogGraphic" | 800 x 1,200px
+| Blog header | "BlogHeader" | 2,240 x 1,260px
+| Book cover | "BookCover" | 1,410 x 2,250px
+| Bookmark | "Bookmark" | 2 x 6in
+| Brochure | "Brochure" | 11 x 8.5in
+| Business card | "BusinessCard" | 3.5 x 2in
+| Calendar | "Calendar" | 1,080 x 1,920px
+| Card greeting | "CardGreeting" | 5 x 7in
+| Certificate | "Certificate" | 11 x 8.5in
+| Checklist | "Checklist" | 8.5 x 11in
+| Class schedule | "ClassSchedule" | 11 x 8.5in
+| Comic strip | "ComicStrip" | 11 x 8.5in
+| Concept map | "ConceptMap" | 1,024 x 768px
+| Coupon sheet | "CouponSheet" | 8.5 x 11in
+| Cover page | "CoverPage" | 8.5 x 11in
+| Display ad | "DisplayAd" | 300 x 600px
+| Divider page | "DividerPage" | 8.5 x 11in
+| Ebook cover | "EbookCover" | 1,600 x 2,560px
+| Email header | "EmailHeader" | 600 x 200px
+| Etsy cover | "EtsyCover" | 1,600 x 400px
+| Etsy shop banner | "EtsyShopBanner" | 1,600 x 213px
+| Eventbrite event image | "EventbriteEventImage" | 820 x 312px
+| Facebook | "Facebook" | 1,080 x 1,080 px
+| Facebook ad | "FacebookAd" | 1,080 x 1,080px
+| Facebook event cover | "FacebookEventCover" | 1,200 x 630px
+| Facebook group cover | "FacebookGroupCover" | 1,640 x 856px
+| Facebook page cover | "FacebookPageCover" | 820 x 312px
+| Facebook profile cover | "FacebookProfileCover" | 851 x 315px
+| Facebook shop cover | "FacebookShopCover" | 1,600 x 1,200px
+| Facebook story | "FacebookStory" | 1,080 x 1,920px
+| Flash card | "FlashCard" | 5 x 3in
+| Flash card sheet | "FlashCardSheet" | 8.5 x 11in
+| Flyer | "Flyer" | 8.5 x 11in
+| Gift certificate | "GiftCertificate" | 8 x 3.75in
+| Gift tag | "GiftTag" | 3.5 x 2in
+| Google classroom banner | "GoogleClassroomBanner" | 1,000 x 250px
+| Graph | "Graph" | 1,920 x 1,080 px
+| Graphic organizer | "GraphicOrganizer" | 8.5 x 11in
+| ID card | "IdCard" | 3.375 x 2.125in
+| Infographic | "Infographic" | 800 x 2,000in
+| Instagram | "Instagram " | 1,080 x 1,080px
+| Instagram ad | "InstagramAd" | 1,080 x 1,350px
+| Instagram carousel post | "InstagramCarousel" | 1,080 x 1,080px
+| Instagram post (landscape) | "InstagramLandscape" | 1,080 x 602px
+| Instagram post (portrait) | "InstagramPostPortrait" | 1,080 x 1,350px
+| Instagram reel | "InstagramReel" | 1,080 x 1,920px
+| Instagram story | "InstagramStory" | 1,080 x 1,920px
+| Instagram story ad | "InstagramStoryAd" | 1,080 x 1,920px
+| Invitation | "Invitation" | 5 x 7in
+| Invoice | "Invoice" | 8.5 x 11in
+| Label | "Label" | 4 x 6in
+| Label sheet | "LabelSheet" | 8.5 x 11in
+| Leaflet trifold | "LeafletTrifold" | 210 x 297mm
+| Lesson plan | "LessonPlan" | 8.5 x 11in
+| Letter | "Letter" | 8.5 x 11in
+| Letterhead | "Letterhead" | 8.5 x 11in
+| LinkedIn post | "LinkedinPost" | 1,920 x 1,920px
+| LinkedIn blog post | "LinkedInBlogPost" | 1,200 x 628px
+| LinkedIn profile cover | "LinkedInProfileCover" | 1,536 x 396px
+| Logo | "Logo" | 500 x 500px
+| Magazine | "Magazine" | 8.5 x 11in
+| Media kit | "MediaKit" | 8.5 x 11in
+| Meme | "Meme" | 1,200 x 1,200px
+| Memo | "Memo" | 8.5 x 11in
+| Menu | "Menu" | 5 x 7in
+| Mindmap | "Mindmap" | 1,024 x 768px
+| Mobile video | "MobileVideo" | 1,080 x 1,920px
+| Mug | "Mug" | 3.3 x 3.3in
+| Newsletter | "Newsletter" | 8.5 x 11in
+| Pamphlet | "Pamphlet" | 8.5 x 11in
+| Photo book | "PhotoBook" | 1,410 x 2,250px
+| Pinterest | "Pinterest" | 1,000 x 500px
+| Pinterest idea pin | "PinterestIdeaPin" | 1,080 x 1,920px
+| Pinterest (square) | "PinterestSquare" | 600 x 600px
+| Pinterest (vertical) | "PinterestVertical" | 600 x 900px
+| Planner | "Planner" | 11 x 8.5in
+| Playlist cover | "PlaylistCover" | 3,000 x 3,000px
+| Podcast cover | "PodcastCover" | 3,000 x 3,000px
+| Postcard | "Postcard" | 6 x 4in
+| Poster | "Poster" | 11 x 17in
+| Presentation | "Presentation" | 1,920 x 1,080px
+| Print ad | "PrintAd" | 6 x 4in
+| Program | "Program" | 8.5 x 11in
+| Proposal | "Proposal" | 8.5 x 11in
+| Recipe card | "RecipeCard" | 6 x 4in
+| Reddit cover | "RedditCover" | 1,920 x 256px
+| Report | "Report" | 8.5 x 11in
+| Report card | "ReportCard" | 8.5 x 11in
+| Resume | "Resume" | 8.5 x 11in
+| Rubric | "Rubric" | 8.5 x 11in
+| Snapchat ad | "SnapchatAd" | 1,080 x 1,920px
+| Snapchat story | "SnapchatStory" | 1,080 x 1,920px
+| Soundcloud banner | "SoundcloudBanner" | 2,480 x 520px
+| Table of contents | "TableOfContents" | 8.5 x 11in
+| Ticket | "Ticket" | 5.5 x 2in
+| Tiktok ad | "TiktokAd" | 1,080 x 1,920px
+| Tiktok video | "TiktokVideo" | 1,080 x 1,920px
+| T-shirt | "Tshirt" | 14 x 18in
+| Tumblr banner | "TumblrBanner" | 3,000 x 1,055px
+| Twitch banner | "TwitchBanner" | 1,200 x 480px
+| Twitch overlay | "TwitchOverlay" | 1,920 x 1,080px
+| Twitter | "Twitter" | 1,200 x 675px
+| Twitter header | "TwitterHeader" | 1,500 x 500px
+| Twitter video | "TwitterVideo" | 1,920 x 1,080px
+| Video | "Video" | 1,920 x 1,080px
+| Wallpaper (desktop) | "WallpaperDesktop" | 1,920 x 1,080px
+| Wallpaper (mobile) | "WallpaperMobile" | 1,080 x 1,920px
+| Worksheet | "Worksheet" | 8.5 x 11in
+| YouTube channel art | "YouTubeChannelArt" | 2,560 x 1,440px
+| YouTube display ads | "YoutubeDisplayAds" | 300 x 60px
+| YouTube profile photo | "YoutubeProfilePhoto" | 800 x 800px
+| YouTube shorts | "YoutubeShorts" | 1,080 x 1,920px
+| YouTube thumbnail | "YoutubeThumbnail" | 1,280 x 720px
+| YouTube video | "YoutubeVideo" | 1,920 x 1,080px
+| YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
+| Zoom background | "ZoomBackground" | 1,920 x 1,080px
+
+<!-- | Name tag | "NameTag" | 
+| Place card | "PlaceCard" | -->
 
 ## EditorPanelView
 
@@ -165,49 +264,6 @@ Output file type for asset.
 | GIF     | "image/gif" |
 | MP4    | "video/mp4" |
 | PDF    | "application/pdf" |
-
-<!-- ## Locale
-
-The Adobe Express Embed SDK lets you customize the locale during initialization. The default value is `'en_US'`. This determines the language setting for users experiencing SDK components.
-
-| Locale | Description
-| :-- | :--
-| 'en_US' | English
-| 'fr_FR' | French
-| 'de_DE' | German  
-| 'ja_JP' | Japanese
-| 'it_IT'| Italian
-| 'es_ES'| Spanish
-| 'pt_BR'| Portuguese
-| 'ko_JR'| Korean  
-| 'da_DK'| Danish
-| 'nl_NL'| Dutch  
-| 'nb_NO'| Norwegian
-| 'sv_SE'| Swedish
-| 'fi_FI'| Finnish
-| 'zh_Hans_CN' | Chinese (simplified)
-| 'zh_Hant_TW'| Chinese (traditional) -->
-
-## Pixels
-
-Define the unit of size being used.
-
-| Type   | Value    |
-| ----------- | --------------- |
-| PIXELS    | "px" |
-| MILLIMETERS    | "mm" |
-| INCHES     | "in" |
-| CENTIMETERS    | "cm" |
-
-## Size
-
-Allows you to define the canvas size of the project created in the full editor. When specifying `size` or `minSize`, `unit` is a required property.
-
-| Property | Value | Description
-| :-- | :--| :--
-|width| number | minimum value = 0
-|height | number | minimum value = 0
-| unit | 'px'/'in'/'mm'/'cm' | pixels/inches/millimeters/centimeters
 
 ## TemplateType
 

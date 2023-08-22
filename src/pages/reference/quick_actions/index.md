@@ -57,18 +57,16 @@ This ID is associated with the quick action you want to surface to your user.
 
 | Quick Action | QuickActionId | Type
 | :-- | :-- | :--
-| Crop Image | 'image-crop' | Image
+| Crop Image | 'crop-image' | Image
 | Convert to JPG | 'convert-to-jpg' | Image
 | Convert to PNG | 'convert-to-png' | Image
-| Resize Image | 'image-resize' | Image
+| Resize Image | 'resize-image' | Image
 | Remove Background | 'remove-background' | Image
-| Change Speed | 'change-speed' | Video
 | Convert to GIF | 'convert-to-gif' | Video
 | Convert to MP4 | 'convert-to-mp4' | Video
 | Crop Video | 'crop-video' | Video
 | Merge Video | 'merge-videos' | Video
 | Resize Video | 'resize-video' | Video
-| Reverse Video | 'reverse-video' | Video
 | Trim Video | 'trim-video' | Video
 
 ### QuickActionInputParams

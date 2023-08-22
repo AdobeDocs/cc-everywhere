@@ -78,11 +78,11 @@ Identifies which image quick action component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
 | :-- | :--
-| Crop Image | 'image-crop'
+| Crop image | 'crop-image'
 | Convert to JPG | 'convert-to-jpg'
 | Convert to PNG | 'convert-to-png'
-| Resize Image | 'image-resize'
-| Remove Background | 'remove-background'
+| Resize image | 'resize-image'
+| Remove background | 'remove-background'
 
 ## Example
 

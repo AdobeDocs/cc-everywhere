@@ -78,14 +78,13 @@ Identifies which image quick action component should be loaded into the iframe.
 
 | Quick Action | QuickActionId
 | :-- | :--
-| Change Speed | 'change-speed'
 | Convert to GIF | 'convert-to-gif'
 | Convert to MP4 | 'convert-to-mp4'
-| Crop Video | 'crop-video'
-| Merge Video | 'merge-videos'
-| Resize Video | 'resize-video'
-| Reverse Video | 'reverse-video'
-| Trim Video | 'trim-video'
+| Crop video | 'crop-video'
+| Merge video | 'merge-videos'
+| Resize video | 'resize-video'
+| Trim video | 'trim-video'
+| Animate from audio | 'animate-from-audio'
 
 ## Example
 
