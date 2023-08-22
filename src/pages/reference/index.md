@@ -30,12 +30,13 @@ While we are in beta, all v3 clients are disabled by default. **Please share you
 
 Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
 
-As of today, it exposes 4 methods:
+As of today, it exposes 5 methods:
 
-1. `openQuickAction()`: Quick actions component
-2. `createDesign()`: Full editor component
-3. `editDesign()`: Full editor component
-4. `close()`: Closes the active editor instance.
+1. `createDesign()`: Full editor component
+2. `editDesign()`: Full editor component
+3. `openQuickAction()`: Quick actions component
+4. `close()`: Closes the active editor modal
+5. `terminate()`: Un-initializes the active `CCEverywhere` instance
 
 ## Shared types
 

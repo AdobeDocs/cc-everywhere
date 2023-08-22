@@ -150,17 +150,25 @@ module.exports = {
         path: '/reference/CCEverywhere/',
         pages: [
           {
+            title: 'createDesign', 
+            path: '/reference/CCEverywhere/create_design/'
+          },
+          {
+            title: 'editDesign', 
+            path: '/reference/CCEverywhere/edit_design/'
+          },
+          {
             title: 'openQuickAction',
             path: '/reference/CCEverywhere/quick_actions/',
           }, 
           {
-            title: 'createDesign', 
-            path: '/reference/CCEverywhere/full_editor/create_design/'
-          },
+            title: 'close',
+            path: '/reference/CCEverywhere/close/',
+          }, 
           {
-            title: 'editDesign', 
-            path: '/reference/CCEverywhere/full_editor/create_design/'
-          }
+            title: 'terminate',
+            path: '/reference/CCEverywhere/terminate/',
+          }, 
         ]
       },
       {

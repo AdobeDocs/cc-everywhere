@@ -1,17 +1,17 @@
 ---
 keywords:
-  - openQuickAction
-  - Open quick action
-  - Load quick action
-  - Launch quick action
+  - editDesign
+  - Edit existing project
+  - Edit project
+  - projectId
   - v3
-title: openQuickAction reference
-description: This is the reference page for the openQuickAction API
+title: editDesign reference
+description: This is the reference page for the editDesign API
 contributors:
   - https://github.com/amandahuarng
 --- 
 
-# openQuickAction()
+# editDesign()
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 

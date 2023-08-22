@@ -10,8 +10,8 @@ keywords:
   - platformCategory
   - HostInfo
   - ConfigParams
-title: SDK Reference
-description: This is the reference page for the existing components in the SDK.
+title: Initialize SDK Reference
+description: This is the reference page for the initialize method.
 contributors:
   - https://github.com/amandahuarng
 --- 
