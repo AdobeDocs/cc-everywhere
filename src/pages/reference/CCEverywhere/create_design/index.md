@@ -34,10 +34,10 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../shared_types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../shared_types/index.md#callbacks) | Parameters to configure editor/modal UI
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
+| modalParams | [ModalParams](../../types/index.md#callbacks) | Parameters to configure editor/modal UI
 | inputParams | [CreateInputParams](#createinputparams) | Input parameters when creating a design.
-| outputParams | [CCXOutputParams](../../shared_types/index.md#callbacks) | Desired output options when exporting assets from the editor.
+| outputParams | [CCXOutputParams](../../types/index.md#callbacks) | Desired output options when exporting assets from the editor.
 
 ### CreateInputParams
 
@@ -45,8 +45,8 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasSize| [Size](../../shared_types/index.md#size)/[CanvasAspectId](../../types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
-| asset | [Asset](../../shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
+| canvasSize| [Size](../../types/index.md#size)/[CanvasAspectId](../../types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
+| asset | [Asset](../../types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
 | editorPanelView | [EditorPanelView](../../types/index.md#editorpanelview) | Determines which panel view to open by default.
 | exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
 | panelSearchText | string | Search text to pass in the editor for selected panel.

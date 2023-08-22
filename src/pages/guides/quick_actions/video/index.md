@@ -67,8 +67,8 @@ ccEverywhere.openQuickAction(
 | :-- | :-- | :--
 | id | ID of quick action| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
 | inputParams | Configure [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
-| callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
-| modalParams | Define size of iframe |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| callbacks | Callback functions | [Callbacks](../../../reference/types/index.md#callbacks)
+| modalParams | Define size of iframe |  [ModalParams](../../../reference/types/index.md#modalparams)
 
 Only `id` and `inputParams.exportOptions` is required to initialize the iframe.
 

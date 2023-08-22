@@ -67,10 +67,10 @@ ccEverywhere.createDesign(
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../../reference/shared_types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../../reference/shared_types/index.md#modalparams) | Parameters to configure editor/modal UI
+| callbacks | [Callbacks](../../../reference/types/index.md#callbacks) | Callback methods
+| modalParams | [ModalParams](../../../reference/types/index.md#modalparams) | Parameters to configure editor/modal UI
 | inputParams | [CreateInputParams](#createinputparams) | Input parameters when creating a design.
-| outputParams | [CCXOutputParams](../../../reference/shared_types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| outputParams | [CCXOutputParams](../../../reference/types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
   
 All the properties in `CreateDesignParams` are optional.
 
@@ -83,7 +83,7 @@ All the properties in `CreateDesignParams` are optional.
 | canvasSize| string | Initializes the editor loaded with the canvas set at a specified size
 | templateType | string | Initializes the editor loaded with templates of this specified type
 | templateSearchText | string | Initializes the editor with this string value for template search
-| asset | [Asset](../../../reference/shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
+| asset | [Asset](../../../reference/types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
 
 View the full list of canvas template layout ratios and template types [here](../../../reference/types/index.md#canvasaspectid).
 

@@ -34,10 +34,10 @@ Besides `id`, all other properties are optional.
 | Property | Type| Description
 | :-- | :-- | :--
 | id | [QuickActionId](#quickactionid) | Specify which quick action to open.
-| callbacks | [Callbacks](../../shared_types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../shared_types/index.md#modalparams) | Parameters to configure modal UI
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
+| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure modal UI
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Input parameters when opening a quick action.
-| outputParams | [CCXOutputParams](../../shared_types/index.md#ccxoutputparams) | Desired output options when exporting assets from a quick action.
+| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from a quick action.
 
 #### QuickActionId
 

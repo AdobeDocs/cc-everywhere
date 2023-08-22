@@ -42,7 +42,7 @@ This API is responsible for embedding and launching the quick actions component 
 ccEverywhere.openQuickAction(
     // QuickActionsParams
     {
-        id: 'image-crop', 
+        id: 'crop-image', 
         inputParams: {
             exportOptions: []
         },
@@ -66,9 +66,9 @@ ccEverywhere.openQuickAction(
 | Property | Description | Type
 | :-- | :-- | :--
 | id | ID of quick action| [QuickActionId](../../../reference/quick_actions/index.md#quickactionid)
-| inputParams | [Launch with asset](../../../reference/shared_types/index.md#asset) and [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
-| callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
-| modalParams | Define size of modal |  [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| inputParams | [Launch with asset](../../../reference/types/index.md#asset) and [export options](../../../reference/quick_actions/index.md#exportoption) | [QuickActionInputParams](../../../reference/quick_actions/index.mdquickactioninputparams)
+| callbacks | Callback functions | [Callbacks](../../../reference/types/index.md#callbacks)
+| modalParams | Define size of modal |  [ModalParams](../../../reference/types/index.md#modalparams)
 
 **Note**: `inputParams.exportOptions` determines which export buttons are exposed to the user once the action is complete, and must be defined with at least an empty array. If given an empty array, the "Download" button will be surfaced as an export option.
 
@@ -191,7 +191,7 @@ Finally, users can choose between 3 export options:
         document.getElementById('image-crop')
         .addEventListener('click', () => {
             ccEverywhere.openQuickAction({
-                id: 'image-crop', 
+                id: 'crop-image', 
                 inputParams: {
                     asset: {
                         data: encodedImage, 

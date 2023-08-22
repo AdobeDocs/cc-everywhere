@@ -168,11 +168,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Shared types', 
-        path: '/reference/shared_types/'
-      },
-      {
-        title: 'More types', 
+        title: 'Types', 
         path: '/reference/types/'
       }
     ]

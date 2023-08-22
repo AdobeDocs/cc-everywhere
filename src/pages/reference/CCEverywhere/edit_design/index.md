@@ -33,10 +33,10 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../shared_types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../shared_types/index.md#modalparams) | Parameters to configure editor/modal UI
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
+| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
 | inputParams | [EditInputParams](#editinputparams) | Input parameters when editing a design.
-| outputParams | [CCXOutputParams](../../shared_types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
 
 ### EditInputParams
 
@@ -49,7 +49,7 @@ All the properties in this object are optional.
 | exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
 | panelSearchText | string | Search text to pass in the editor for selected panel.
 
-When a user completes their workflow in the editor, the associated **projectId** is sent back in [publishParams](../../shared_types/index.md#publishparams) from the `onPublish` callback.
+When a user completes their workflow in the editor, the associated **projectId** is sent back in [publishParams](../../types/index.md#publishparams) from the `onPublish` callback.
 
 ## Example: Edit existing project
 

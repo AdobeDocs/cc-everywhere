@@ -68,10 +68,10 @@ ccEverywhere.editDesign(
 
 | Property | Description | Type
 | :-- | :-- | :--
-| modalParams | Define size of editor modal | [ModalParams](../../../reference/shared_types/index.md#modalparams)
+| modalParams | Define size of editor modal | [ModalParams](../../../reference/types/index.md#modalparams)
 | inputParams| Adobe Express project ID to initialize editor component | [EditInputParams](../../../reference/full_editor/index.md#editinputparams)
-| outputParams | Configure output type | [CCXOutputParams](../../../reference/shared_types/index.md#ccxoutputparams)
-| callbacks | Callback functions | [Callbacks](../../../reference/shared_types/index.md#callbacks)
+| outputParams | Configure output type | [CCXOutputParams](../../../reference/types/index.md#ccxoutputparams)
+| callbacks | Callback functions | [Callbacks](../../../reference/types/index.md#callbacks)
 
 <!-- todo: confirm there's not more:  -->
 The only required property is `inputParams.projectId`.
