@@ -108,11 +108,11 @@ This returns a `CCEverywhere` Class object, with three methods:
 2. `createDesign()`: Create a new project or start editing an image in an embedded editor
 3. `editDesign()`: Edit an existing project in an embedded editor
 
-The SDK can be initialized with a customized locale. Read more about the initialize API [here](../../reference/index.md#initialize).
+The SDK can be initialized with a customized locale. Read more about the initialize API [here](../../reference/initialize/index.md).
 
 ## Next Steps: Explore the SDK
 
-The Adobe Express Embed SDK can be initialized with a customized locale. Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
+Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
 ### [Full editor](../guides/full_editor/index.md)
 
@@ -129,3 +129,16 @@ Users can access Adobe Express's huge template and asset library when starting w
 * How to [embed video quick actions](../guides/quick_actions/video/)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
+
+## Browser support
+
+Here are the minimum browser requirements for the SDK:
+
+| Browser name | Supported | Minimum version
+| :-- | :-- | : --
+| Safari | Yes  | 16 and above
+| Google Chrome | Yes | 100 and above
+| Microsoft Edge | Yes | 107 and above
+| Firefox | No | N/A
+
+The SDK will *not* work in incognito windows.

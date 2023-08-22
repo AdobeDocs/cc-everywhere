@@ -1,18 +1,9 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Adobe Express
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
-  - SDK Reference
-  - Image Quick Actions
-  - Video Quick Actions
-  - Adobe Photoshop
-  - Adobe Premiere
+  - Breaking changes
+  - Added
+  - Known Issues
+  - Embed SDK changelog
   - Changelog
 title: Changelog
 description: All notable changes are documented in this page.

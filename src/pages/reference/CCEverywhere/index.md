@@ -11,7 +11,7 @@ contributors:
   - https://github.com/amandahuarng
 --- 
 
-# Overview
+# CCEverywhere 
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
@@ -21,22 +21,19 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
-## Embed and initialize the SDK
-
-1. Follow the steps in the quickstart guide to [embed the SDK](../guides/quickstart/index.md#step-2-embed-the-sdk) in your application.
-2. After you have imported the SDK to your application, you need to call the `initialize` API first. View the full reference for that [API](./initialize/index.md) here.
-
-## CCEverywhere
-
-Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
+The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized.
 
 As of today, it exposes 4 methods:
 
 1. `openQuickAction()`: Quick actions component
 2. `createDesign()`: Full editor component
 3. `editDesign()`: Full editor component
-4. `close()`: Closes the active editor instance.
 
-## Shared types
+## close()
 
-The [shared types](./shared_types/index.md) reference page contains details about items that are shared across the full editor and quick action components. 
+#### `close: () => boolean`
+
+The default method `close()` will close the editor modal. This method will:
+
+* Return **true** once it successfully closes the instance of `CCEverywhere`
+* Return **false** if there is no active `CCEverywhere` instance.

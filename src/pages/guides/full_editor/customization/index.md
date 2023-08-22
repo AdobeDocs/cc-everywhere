@@ -11,7 +11,6 @@ keywords:
   - SDK Reference
   - Editor component 
   - Customize
-  - Locale
   - Template Type
 title: Adobe Express Editor - Customization
 description: This guide will show you how to customize the Adobe Express editor component. 
@@ -31,28 +30,6 @@ Instead, we would love for you to start integrating the new version of the SDK. 
 # Customization
 
 The Adobe Express Embed SDK can be configured and customized to fit the needs of your users.
-
-## Locale
-
-The Adobe Express Embed SDK lets you customize the locale during initialization. The default value is `'en_US'`. This determines the language setting for users experiencing SDK components.
-
-| Locale | Description
-| :-- | :--
-| 'en_US' | English
-| 'fr_FR' | French
-| 'de_DE' | German  
-| 'ja_JP' | Japanese
-| 'it_IT'| Italian
-| 'es_ES'| Spanish
-| 'pt_BR'| Portuguese
-| 'ko_JR'| Korean  
-| 'da_DK'| Danish
-| 'nl_NL'| Dutch  
-| 'nb_NO'| Norwegian
-| 'sv_SE'| Swedish
-| 'fi_FI'| Finnish
-| 'zh_Hans_CN' | Chinese (simplified)
-| 'zh_Hant_TW'| Chinese (traditional)
 
 ## CanvasAspectId
 

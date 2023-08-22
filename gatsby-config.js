@@ -25,15 +25,15 @@ module.exports = {
         title: 'SDK References',
         menu: [{
           title: 'Reference',
-          description: 'v3 Reference', // optional,
+          description: 'v3 Reference',
           path: '/reference/'
         }, {
          title: 'v2 Reference [Deprecated soon]',
-         description: 'v2 Reference', // optional,
+         description: 'v2 Reference',
          path: '/v2/reference/'
        }, {
         title: 'v1 Reference [Deprecated soon]',
-        description: 'v1 Reference', // optional,
+        description: 'v1 Reference',
         path: '/v1/reference/'
       }],
       },
@@ -92,7 +92,7 @@ module.exports = {
         path: '/guides/support/'
       },
       {
-        title: 'Reference',
+        title: 'v1 Reference',
         path: '/v1/reference/',
         header: true,
         pages: [
@@ -115,7 +115,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Reference',
+        title: 'v2 Reference',
         path: '/v2/reference/',
         header: true,
         pages: [
@@ -138,28 +138,43 @@ module.exports = {
         ]
       },
       {
-        title: 'Reference',
+        title: 'Overview',
         path:'/reference/',
-        header: true, 
+      },
+      {
+        title: 'Initialize SDK',
+        path:'/reference/initialize/',
+      },
+      {
+        title: 'CCEverywhere',
+        path: '/reference/CCEverywhere/',
         pages: [
           {
-            title: 'Initialize SDK', 
-            path: '/reference/', 
+            title: 'openQuickAction',
+            path: '/reference/CCEverywhere/quick_actions/',
+          }, 
+          {
+            title: 'createDesign', 
+            path: '/reference/CCEverywhere/full_editor/create_design/'
           },
           {
-            title: 'Full editor', 
-            path: '/reference/full_editor/'
-          },
-          {
-            title: 'Quick actions', 
-            path: '/reference/quick_actions/'
-          },
-          {
-            title: 'Shared types', 
-            path: '/reference/shared_types/'
+            title: 'editDesign', 
+            path: '/reference/CCEverywhere/full_editor/create_design/'
           }
         ]
-      }
+      },
+      {
+        title: 'Shared types', 
+        path: '/reference/shared_types/'
+      },
+      {
+        title: 'Full editor', 
+        path: '/reference/full_editor/'
+      },
+      {
+        title: 'Quick actions', 
+        path: '/reference/quick_actions/'
+      },
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],
