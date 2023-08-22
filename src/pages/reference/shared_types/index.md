@@ -74,7 +74,7 @@ All properties are optional. Allows you to define data type and file type of out
 | Property | Value | Description
 | :-- | :--| :--
 | fileType | 'jpeg', 'png', 'mp4' | Output asset file type
-| outputType | 'base64' | Output data type
+| outputType | 'base64', 'url' | Output data type
 
 ## ModalParams
 
@@ -94,12 +94,11 @@ Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) t
 | Property | Value(s) | Description
 |:-- | :-- | :--
 | type | 'image', 'video' | Type of asset (image or video)
-| dataType | 'base64' | Type of data representation
-| data | string | Base 64 rendition of video/image asset
+| dataType | 'base64', 'url' | Type of data representation
+| data | string | Image/video data
 | fileType | 'jpeg', 'png', 'mp4' | Type of output asset
 | (optional) fileName | string | Name of output asset
 | (optional) size | [Size](#size) | Dimensions of output asset
-<!-- todo: check optional properties are outputted -->
 
 ## Size
 

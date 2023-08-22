@@ -61,10 +61,10 @@ createDesign(CreateDesignParams)
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasSize| [Size](../shared_types/index.md#size)/[CanvasAspectId](../../../guides/full_editor/customization/index.md#canvasaspectid) | Initializes the editor loaded with templates that fit that layout ratio
-| templateType | [TemplateType](../../../guides/full_editor/customization/index.md#templatetype) | Initializes the editor loaded with templates of this specified type
+| canvasSize| [Size](../../reference/types/index.md#size)/[CanvasAspectId](../../reference/types/index.md#canvasaspectid) | Initializes the editor loaded with templates that fit that layout ratio
+| templateType | [TemplateType](../../reference/types/index.md#templatetype) | Initializes the editor loaded with templates of this specified type
 | templateSearchText | string | Initializes the editor with this string value for template search
-| asset | [Asset](../shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
+| asset | [Asset](../../reference/shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
 
 ### Example
 

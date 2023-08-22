@@ -18,7 +18,7 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
-## `close: () => boolean`
+## close: () => boolean
 
 The default method `close()` will close any active design in progress. This method will:
 

@@ -58,10 +58,6 @@ module.exports = {
           {
             title: 'Edit existing project',
             path: '/guides/full_editor/edit_project/'
-          }, 
-          {
-            title: 'Customization',
-            path: '/guides/full_editor/customization/'
           }
         ]
       },
@@ -176,13 +172,9 @@ module.exports = {
         path: '/reference/shared_types/'
       },
       {
-        title: 'Full editor', 
-        path: '/reference/full_editor/'
-      },
-      {
-        title: 'Quick actions', 
-        path: '/reference/quick_actions/'
-      },
+        title: 'More types', 
+        path: '/reference/types/'
+      }
     ]
   },
   plugins: [`@adobe/gatsby-theme-aio`],

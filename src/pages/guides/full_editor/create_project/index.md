@@ -86,7 +86,7 @@ All the properties in `CreateDesignParams` are optional.
 | templateSearchText | string | Initializes the editor with this string value for template search
 | asset | [Asset](../../../reference/shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
 
-To see the full list of canvas template layout ratios and template types, see the [customization](../../guides/full_editor/customization/index.md) page.
+View the full list of canvas template layout ratios and template types [here](../../../reference/types/index.md#canvasaspectid).
 
 ## Example
 

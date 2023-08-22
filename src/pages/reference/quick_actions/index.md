@@ -117,9 +117,11 @@ This is used to render a native button once the quick action has finished. You w
 | :-- |:--
 | [target](#target) | 'Editor' or 'Download'
 | label  | Localized text of the export button
-| variant | 'cta', 'primary', 'secondary'
+| variant | 'accent', 'primary', 'secondary'
 | optionType| 'button'
 | buttonType | 'native'
+
+
 
 ### CustomExportButton
 

@@ -28,45 +28,53 @@ While we are in beta, all v3 clients are disabled by default. **Please share you
 
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
 
-#### `initialize: (HostInfo, ConfigParams?) => Promise<null | CCEverywhere>`
-
-The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  This method is async.
-
-```js
-// after loading the SDK into the window
-await window.CCEverywhere.initialize(
-    /* HostInfo */
-    {
-        clientId: YOUR_CLIENT_ID,
-        appName: YOUR_PROJECT_NAME,
-        appVersion: { major: 1, minor: 0 }, // optional
-        platformCategory: 'web', // optional
-    },
-    /* ConfigParams (optional) */
-    {
-        locale: 'en_US',
-    }
-);
+```ts
+initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
 ```
 
 ### HostInfo
 
-| Property | Type | Description
-| :-- | :--| :--
-|clientId | string | Your API Key
-|appName | string | Name of project folder created in user's Adobe Express account
-|appVersion | { major: number, minor: number, patch?: number} | Your app version
-| platformCategory | 'web' | Specify host app platform
+| Property | Required | Type | Description
+| :-- | :-- | :-- | :--
+| clientId | Yes | String | API key from Developer Console
+| appName | Yes | String | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application.
+| appVersion | No | { major: number, minor: number, patch?: number } | Version of your integration
+| platformCategory | No | 'web' | Specify host app platform
 
 ### ConfigParams
 
-The **locale** field defaults to **'en_US'** if nothing is specified.  The full locale list is [below](#locale).
+The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified.  The full locale list is [below](#locale).
 
-| Property | Type | Description
-| :-- | :--| :--
-|locale | string | Language settings for SDK components
+| Property | Required | Type | Description
+| :-- | :-- | :-- | :--
+| locale | No | String | Language settings for SDK components
+
+### Example
+
+```ts
+(async () => {
+  let host = { /* HostInfo */
+    clientId: CLIENT_ID,
+    appName: APP_NAME, 
+    appVersion: { major: 1, minor: 0 }, 
+    platformCategory: 'web',
+  }
+
+  let config = { locale = 'en_US'} /* ConfigParams (optional) */
+
+  const ccEverywhere = await window.CCEverywhere.initialize(host, config);
+})();
+```
+
+The returned Promise-wrapped `CCEverywhere` object can then be used to call the other APIs of the SDK:
+
+1. `createDesign()`: Create a design from scratch or from a starting asset in the editor.
+2. `editDesign()`: Edit a design in the editor.
+3. `openQuickAction()`: Open a quick action in a modal.
+4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
+5. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void.
 
 ## Locale
 
