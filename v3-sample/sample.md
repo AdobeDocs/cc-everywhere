@@ -1,18 +1,18 @@
-# Adobe Express Embed SDK v2 Sample
+# Adobe Express Embed SDK Sample
 
-Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
-
-## Step 1: Register a project
+## Step 0: Register a project
 
 Register your integration by creating a new project in the [Developer Console](https://developer.adobe.com/console).
 
-Select "Add an API" > "Adobe Express Embed SDK".
-Select "Single-Page App" and register the domain(s) you want to allowlist.
+Select "Add an API" > "Adobe Create Embed SDK".
+Select "Single-Page App" and register the domains on which you will run/test your app.
 
-## Step 3: Clone the sample
+Once you're done, a client ID for your project will be generated. Steps 2-3 will help you get set up with a simple https server.
+
+## Step 1: Clone the sample
 
 Clone the sample.
-Replace the `clientID` fields each time the SDK is initialized (2 files):
+Replace the `clientID` fields each time the SDK is initialized (3 files):
 
 * `index.html`
 * `quickactions.html`
@@ -36,10 +36,10 @@ This will generate two files: `localhost-key.pem` (key) and `localhost.pem` (cer
 `http-server` lets you serve files or directories locally.
 
 Install it using `npm i http-server` or `brew install http-server`.
-
+  
 ## Step 4: Install project dependencies
 
-Run `npm install` to install the dependencies in `yarn.lock`. The required dependencies belong to [Spectrum CSS](https://github.com/adobe/spectrum-css) and are used to style the buttons.
+Run `npm install` to install the dependencies in `package.json`. The required dependencies belong to [Spectrum CSS](https://github.com/adobe/spectrum-css) and are used to style the buttons.
 
 ## Step 5: Run this sample
 
@@ -49,15 +49,7 @@ To start the server at port 8000, run this line in your project root:
 http-server -S -C ./localhost.pem -K ./localhost-key.pem -p 8000 -a localhost
 ```
 
-By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with Adobe Express. Now your server is up and available at `https://localhost:8000`.
-
-If you want to test via http, run this line in the project root:
-
-```bash
-http-server -p 8000
-```
-
-Now your server is up and available at `http://localhost:8000`.
+By passing in our newly generated SSL key and certificate, we have enabled secure request serving with TLS/SSL (HTTPS), which we need to communicate with CC Express. Now your server is up and available at `https://localhost:8000`.
 
 ## Known Issues
 

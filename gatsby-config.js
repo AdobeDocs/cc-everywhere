@@ -22,26 +22,30 @@ module.exports = {
         path: '/guides/'
       },
       {
-        title: 'Reference',
+        title: 'SDK References',
         menu: [{
           title: 'Reference',
-          description: 'Reference', // optional,
+          description: 'v3 Reference',
           path: '/reference/'
         }, {
-         title: 'v1 Reference',
-         description: 'v1 Reference', // optional,
-         path: '/v1/reference/'
-       }],
+         title: 'v2 Reference [Deprecated soon]',
+         description: 'v2 Reference',
+         path: '/v2/reference/'
+       }, {
+        title: 'v1 Reference [Deprecated soon]',
+        description: 'v1 Reference',
+        path: '/v1/reference/'
+      }],
       },
-      {
-        title: 'Support',
-        path: '/support/'
-      }
     ],
     subPages: [
       {
-        title: 'Quickstart',
+        title: 'Overview',
         path: '/guides/',
+      },
+      {
+        title: 'Quickstart',
+        path: '/guides/quickstart/',
       },
       {
         title: 'Full editor',
@@ -54,37 +58,31 @@ module.exports = {
           {
             title: 'Edit existing project',
             path: '/guides/full_editor/edit_project/'
-          }, 
-          {
-            title: 'Customization',
-            path: '/guides/full_editor/customization/'
           }
         ]
       },
       {
         title: 'Quick actions',
         path: '/guides/quick_actions/',
-        pages: [
-          {
-            title: 'Image quick actions',
-            path: '/guides/quick_actions/image/'
-          },
-          {
-            title: 'Video quick actions',
-            path: '/guides/quick_actions/video/'
-          }
-        ]
       },
       {
-        title: 'Submission and Review',
-        path: '/guides/review/'
+        title: 'Submission and review',
+        path: '/guides/review/',
       },
       {
         title: 'Changelog',
-        path: '/guides/changelog/'
+        path: '/guides/changelog/',
       },
       {
-        title: 'Reference',
+        title: 'FAQ and support',
+        path: '/guides/support/',
+      },
+      // {
+      //   title: 'Community forum',
+      //   path: 'https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all',
+      // },
+      {
+        title: 'v1 Reference',
         path: '/v1/reference/',
         header: true,
         pages: [
@@ -107,27 +105,65 @@ module.exports = {
         ]
       },
       {
-        title: 'Reference',
-        path:'/reference/',
-        header: true, 
+        title: 'v2 Reference',
+        path: '/v2/reference/',
+        header: true,
         pages: [
           {
             title: 'Initialize SDK', 
-            path: '/reference/', 
+            path: '/v2/reference/', 
           },
           {
             title: 'Full editor', 
-            path: '/reference/full_editor/'
+            path: '/v2/reference/full_editor/'
           },
           {
             title: 'Quick actions', 
-            path: '/reference/quick_actions/'
+            path: '/v2/reference/quick_actions/'
           },
           {
             title: 'Shared types', 
-            path: '/reference/shared_types/'
+            path: '/v2/reference/shared_types/'
           }
         ]
+      },
+      {
+        title: 'Overview',
+        path:'/reference/',
+      },
+      {
+        title: 'Initialize SDK',
+        path:'/reference/initialize/',
+      },
+      {
+        title: 'CCEverywhere',
+        path: '/reference/CCEverywhere/',
+        pages: [
+          {
+            title: 'createDesign', 
+            path: '/reference/CCEverywhere/create_design/'
+          },
+          {
+            title: 'editDesign', 
+            path: '/reference/CCEverywhere/edit_design/'
+          },
+          {
+            title: 'openQuickAction',
+            path: '/reference/CCEverywhere/quick_actions/',
+          }, 
+          {
+            title: 'close',
+            path: '/reference/CCEverywhere/close/',
+          }, 
+          {
+            title: 'terminate',
+            path: '/reference/CCEverywhere/terminate/',
+          }, 
+        ]
+      },
+      {
+        title: 'Types', 
+        path: '/reference/types/'
       }
     ]
   },

@@ -1,18 +1,9 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Adobe Express
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
-  - SDK Reference
-  - Image Quick Actions
-  - Video Quick Actions
-  - Adobe Photoshop
-  - Adobe Premiere
+  - Breaking changes
+  - Added
+  - Known Issues
+  - Embed SDK changelog
   - Changelog
 title: Changelog
 description: All notable changes are documented in this page.
@@ -20,17 +11,41 @@ contributors:
   - https://github.com/amandahuarng
 ---
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
+# Changelog
+
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
 
-Instead, we would love for you to start integrating the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
-
-# Changelog
+While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
 <!-- ## [2.2.27] - 2023-02-02 -->
+
+## [3.7.14] - 2023-08-15
+
+### Added
+
+- ExportButton.accent: The variant option 'cta' has been replaced with 'accent'. Both 'cta' and 'accent' work the same but the support for 'cta' is deprecated as per Spectrum guidelines.
+- We will not support the following two quick actions: Reverse Video and Change Speed
+- Added a new video quick action: Animate From Audio. This allows users to create a character animation by choosing a character from the given list of characters, adding a backdrop and then recording a speech. 
+
+### Breaking Changes
+
+- ExportButton.id is now a required property on native buttons
+
+## [3.6.16] - 2023-08-06
+
+### Enhancements
+
+- CreateOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media.
+- EditOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media.
+
+### Added
+
+- Video Export: Users will now be able to export assets as MP4 files. In order to do this, there must be a video asset added in the canvas to see the option in the export options dropdown for custom buttons. Pass video/mp4 option in allowedFileTypes.
+- Mixed Media Support: Users will be able to download mixed media assets. In case they have added an image in one page and video in another, they will now be able to see JPG + MP4 or PNG + MP4 in the export options dropdown for custom buttons.Pass image/jpeg, image/png and video/mp4 option in allowedFileTypes.
 
 ## [2.0.8] - 2023-02-02
 

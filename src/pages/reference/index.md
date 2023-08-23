@@ -1,92 +1,43 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
   - API Documentation
   - Reference
   - Initialize
   - CCEverywhere
+  - v3
 title: SDK Reference
 description: This is the reference page for the existing components in the SDK.
 contributors:
   - https://github.com/amandahuarng
-  - https://github.com/pklaschka
 --- 
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
+# Overview
+
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
 
-Instead, we would love for you to start integrating the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
+While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
-# SDK Reference
+## Embed and initialize the SDK
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](#cceverywhere) object. The v2 release introduces a new method: `terminate()`
-
-## initialize()
-
-Note: As of March 2023, the `redirectUri` parameter is no longer being checked by v2. You no longer need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
-
-#### `initialize: (HostInfo, ConfigParams?) => Promise<null | CCEverywhere>`
-
-The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  With the v2 release of the SDK, this method is now async.
-
-```js
-// after loading the SDK into the window
-await window.CCEverywhere.initialize(
-    /* HostInfo */
-    {
-        clientId: YOUR_CLIENT_ID,
-        appName: YOUR_PROJECT_NAME,
-        appVersion: { major: 1, minor: 0 },
-        platformCategory: 'web', 
-    },
-    /* ConfigParams (optional) */
-    {
-        locale: 'en_US',
-    }
-);
-```
-
-### HostInfo
-
-| Property | Type | Description
-| :-- | :--| :--
-|clientId | string | Your API Key
-|appName | string | Name of project folder created in user's Adobe Express account
-|appVersion | { major: number, minor: number, patch?: number} | Your app version
-| platformCategory | 'web' | Specify host app platform
-
-### ConfigParams
-
-The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/full_editor/customization/index.md) page for a full locale list.
-
-| Property | Type | Description
-| :-- | :--| :--
-|locale | string | Language settings for SDK components
+1. Follow the steps in the quickstart guide to [embed the SDK](../guides/quickstart/index.md#step-2-embed-the-sdk) in your application.
+2. After you have imported the SDK to your application, you need to call the `initialize` API first. View the full reference for that [API](./initialize/index.md) here.
 
 ## CCEverywhere
 
-The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized.
+Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
 
-As of today, it exposes 4 methods:
+As of today, it exposes 5 methods:
 
-1. `openQuickAction()`: Quick actions component
-2. `createDesign()`: Full editor component
-3. `editDesign()`: Full editor component
+1. `createDesign()`: Full editor component
+2. `editDesign()`: Full editor component
+3. `openQuickAction()`: Quick actions component
+4. `close()`: Closes the active editor modal
+5. `terminate()`: Un-initializes the active `CCEverywhere` instance
 
-## terminate()
+## Types
 
-#### `terminate: () => boolean`
-
-The default method `terminate()` is available with v2.0.1+ of the SDK. This method will:
-
-* Return **true** once it successfully terminates the active instance of `CCEverywhere`
-* Return **false** if there is no active `CCEverywhere` instance.
+The [types](./types/index.md) reference page contains details about objects that are shared across the SDK.

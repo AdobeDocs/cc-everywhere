@@ -1,12 +1,6 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
+  - v2
   - Shared Types
   - Components
   - Asset
@@ -14,22 +8,22 @@ keywords:
   - Modal parameters
   - onPublish
   - Callbacks
+  - Size
 title: Shared Types
 description: This is the reference page for shared types across SDK components.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
+# Shared Types
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
 
-Instead, we would love for you to start integrating the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
-
-# Shared Types
+While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
 ## Asset
 

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
+  <head>
+    <title>Adobe Express Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+    <style>
+        .sample {
+            margin: 3%;
+        }
+        hr.solid {
+            border-top: 2px solid #bbb;
+            margin: 2% 0%;
+        }
+        #image-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1rem;
+            place-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sample spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Quick actions </h1>
+        <p class="spectrum-Body spectrum-Body--sizeL" > 
+            This sample surfaces <b>three export buttons</b> to the user after a quick action workflow is complete:
+        </p>
+        <p class="spectrum-Body spectrum-Body--sizeL">1. [Native] <b>Download</b>: Downloads the modified asset to the user's computer.
+            <br>2. [Native] <b>Customize</b>: Sends user to an embedded editor to continue editing the modified asset.
+            <br>3. [Custom] <b>Save image</b>: Save and display the modified asset on this page. Use the button below to hide the image.
+        </p> 
+        <hr class="solid"> 
+        <input type="file" id="fileInput" accept="image/*"/>
+        <button id="reset">Reset</button><p></p>
+        <p class="spectrum-Body spectrum-Body--sizeL">If a file is selected, it will continue to be used as an input until you click <b>Reset</b>.</p>
+        <hr class="solid">
+        <div id="image-buttons">
+            <button id="crop-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Crop Image</span>
+            </button>
+            <button id="resize-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Resize Image</span>
+            </button>
+            <button id="convert-to-jpg" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to JPG</span>
+            </button>
+            <button id="convert-to-png" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to PNG</span>
+            </button>
+            <button id="remove-background" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Remove Background</span>
+            </button>
+            <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Hide</span>
+            </button>
+        </div>
+        <img id="image-container" style="visibility:hidden;"/>
+    </div>
+    <script src="https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js"></script>
+    <script type="text/javascript" >
+    (async () => {
+        const ccEverywhere = await window.CCEverywhere.initialize({
+            /* Get credentials at Adobe Developer Console.
+               During beta, your client will need to be enabled. 
+               Email your client ID (API Key) to amandah@adobe.com
+             */
+            clientId: 'YOUR_CLIENT_ID',
+            appName: 'Partner Days Embed SDK Demo'
+        });
+
+        /* inputFile: file input picker */
+        var inputFile = document.getElementById('fileInput');
+
+        /* encodedImage: base64 representation we pass into QA function */
+        var encodedImage; 
+        /* appImage:  the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        inputFile.addEventListener('change', (e) => {
+            console.log("here")
+            const reader = new FileReader();
+            // reads file into base 64 data type
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                encodedImage = reader.result;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        const exportOptions = [
+            /* If label is not specified, this native button renders label "Open in Adobe Express" */
+            {
+                target: 'Editor',
+                id: 'edit-in-express',
+                buttonType: 'native',
+                variant: 'primary',
+                optionType: 'button',
+                label: 'Customize'
+            },
+           /* If label is not specified, this native button renders label "Download" */
+            {
+                target: 'Download',
+                id: 'download-button',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'native'
+            },
+            {
+                target: 'Host',
+                id: 'save-modified-asset',
+                label: 'Save image',
+                optionType: 'button',
+                buttonType: 'custom'
+            },
+        ];
+
+        const imageCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                const localData = { asset: publishParams.asset[0].data}
+                console.log("Published asset", publishParams)
+                if(publishParams.exportButtonId=="save-modified-asset"){
+                    appImage.src = localData.asset;
+                    appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const openQAwithAsset = (qa_id) => {
+            ccEverywhere.openQuickAction({
+                id: qa_id, 
+                inputParams: {
+                    asset: {
+                        data: encodedImage, 
+                        dataType: 'base64', 
+                        type: 'image'
+                    }, 
+                    exportOptions: exportOptions
+                },
+                callbacks: imageCallbacks
+            });
+        }
+
+        function imageQuickAction(qa_id) {            
+            if(encodedImage) {
+                return openQAwithAsset(qa_id);
+            } else {
+                ccEverywhere.openQuickAction({
+                    id: qa_id, 
+                    inputParams: { exportOptions: exportOptions },
+                    callbacks: imageCallbacks
+                });
+            }
+        };
+
+        // Button event listeners 
+
+        let imageButtons = document.querySelectorAll('#image-buttons button');
+        imageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                imageQuickAction(button.id)
+            })
+        })
+        
+        document.getElementById('clear').addEventListener('click', () => {
+            appImage.src=null;
+            appImage.style.visibility="hidden";
+        })
+
+        document.getElementById('reset').addEventListener('click', () => {
+            inputFile.value = '';
+            encodedImage = null;
+            appImage.src = null;
+        })
+    })();
+    </script>
+  </body>
+</html>
