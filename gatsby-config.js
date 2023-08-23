@@ -64,29 +64,23 @@ module.exports = {
       {
         title: 'Quick actions',
         path: '/guides/quick_actions/',
-        pages: [
-          {
-            title: 'Image quick actions',
-            path: '/guides/quick_actions/image/'
-          },
-          {
-            title: 'Video quick actions',
-            path: '/guides/quick_actions/video/'
-          }
-        ]
       },
       {
-        title: 'Submission and Review',
-        path: '/guides/review/'
+        title: 'Submission and review',
+        path: '/guides/review/',
       },
       {
         title: 'Changelog',
-        path: '/guides/changelog/'
+        path: '/guides/changelog/',
       },
       {
-        title: 'Support and FAQ',
-        path: '/guides/support/'
+        title: 'FAQ and support',
+        path: '/guides/support/',
       },
+      // {
+      //   title: 'Community forum',
+      //   path: 'https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all',
+      // },
       {
         title: 'v1 Reference',
         path: '/v1/reference/',

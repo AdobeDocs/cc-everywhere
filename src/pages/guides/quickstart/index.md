@@ -125,9 +125,6 @@ Users can access Adobe Express's huge template and asset library when starting w
 
 ### [Quick actions](../guides/quick_actions/index.md)
 
-* How to [embed image quick actions](../guides/quick_actions/image/)
-* How to [embed video quick actions](../guides/quick_actions/video/)
-
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
 ## Browser support
