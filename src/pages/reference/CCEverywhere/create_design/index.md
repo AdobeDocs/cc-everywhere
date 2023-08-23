@@ -5,6 +5,10 @@ keywords:
   - Load templates
   - Editor panel
   - Embedded editor reference
+  - panelSearchText
+  - editorPanelView
+  - canvasSize
+  - templateType
   - v3
 title: createDesign reference
 description: This is the reference page for the createDesign API

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
+  <head>
+    <title>Adobe Express Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+    <style>
+        .sample {
+            margin: 3%;
+        }
+        hr.solid {
+            border-top: 2px solid #bbb;
+            margin: 2% 0%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sample spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">Adobe Express Embed SDK: Full editor</h1>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            The <b>Create Design</b> button will launch a new project for the user in an editor.
+        </p>
+        <button id="createDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Create Design</span>
+        </button>
+        <button id="editDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Edit Design</span>
+        </button>
+        <button id="reset" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Hide</span>
+        </button>
+
+        <hr class="solid"> 
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            To load an image into the editor, choose a file then click <b>Create from asset</b>.
+        </p>
+        <input type="file" id="fileInput" accept="image/*"/>
+        <button id="hide">Reset</button><p></p>
+        <button id="createFromAsset" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Create from asset</span>
+        </button>
+
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Quick actions</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Quick actions allow users to perform complex operations such as "Remove Background" without needing to leave your application.
+        </p>
+        <button id="QA" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try quick actions</span>
+        </button>
+    </div>
+    <img id="savedDesign"/>
+    <script src="https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js"></script>
+    <script type="text/javascript" >
+        
+        (async () => {
+            const ccEverywhere = await window.CCEverywhere.initialize({
+                /* Get credentials at Adobe Developer Console.
+                During beta, your client will need to be enabled. 
+                Email your client ID (API Key) to amandah@adobe.com
+                */
+                clientId: 'YOUR_CLIENT_ID',
+                appName: 'Partner Days Embed SDK Demo',
+            });
+            
+            document.getElementById("QA").addEventListener('click', () => {
+                window.location.href = "https://localhost:8000/quickactions.html";
+            });
+
+            /* inputFile: file input picker */
+            var inputFile = document.getElementById('fileInput');
+
+            var project_id = null;
+            var image_data = document.getElementById("savedDesign");
+            /* encodedImage: base64 representation we pass into function */
+            var encodedImage; 
+
+             /* This event listener checks to see if the user uploads a new file 
+            and reads it into base64 data type for SDK ingestion later */
+            inputFile.addEventListener('change', (e) => {
+                const reader = new FileReader();
+                // reads file into base 64 data type
+                reader.readAsDataURL(e.target.files[0]);
+                reader.onload = () => {
+                    encodedImage = reader.result;
+                }
+                
+                reader.onerror = (error) => {
+                    console.log('error', error);
+                };
+            })
+
+            const createButton = document.getElementById("createDesign");
+            createButton.addEventListener('click', () => {
+                const createDesignCallback = {
+                    onCancel: () => {},
+                    onPublish: (publishParams) => {
+                        const localData = { project: publishParams.asset[0].projectId, image: publishParams.asset[0].data };
+                        image_data.src = localData.image;
+                        project_id = localData.project;
+                        console.log("Created from scratch", localData)
+                    },
+                    onError: (err) => {
+                        console.error('Error received is', err.toString());
+                    },
+                };
+                 
+                ccEverywhere.createDesign({
+                    callbacks: createDesignCallback,
+                    modalParams: {
+                        // borderRadius: 2,
+                        // padding: 2,
+                        // backgroundColor: 'purple',
+                        canvasSize: {
+                            height: 300,
+                            width: 1000,
+                            unit: 'px'
+                        }
+                    },
+                    inputParams: {
+                        editorPanelView: 'templates',
+                        // templateType: 'brochure'
+                        // panelSearchText: 'school'
+                    },
+                    outputParams: {
+                        outputType: "base64",
+                    }
+                });
+            });
+
+            const createFromAsset = document.getElementById("createFromAsset");
+            createFromAsset.addEventListener('click', () => {
+                const createDesignCallback = {
+                    onCancel: () => {},
+                    onPublish: (publishParams) => {
+                        const localData = { project: publishParams.asset[0].projectId, image: publishParams.asset[0].data };
+                        image_data.src = localData.image;
+                        project_id = localData.project;
+                        
+                        let img = document.getElementById('savedDesign');
+                        
+                        let blob = new Blob(localData.image, {type: 'text/plain'});
+                        img.src = URL.createObjectURL(blob);
+                        console.log("Created from asset", localData, img);
+                    },
+                    onError: (err) => {
+                        console.error('Error received is', err.toString());
+                    },
+                };
+
+                if(encodedImage) {
+                    ccEverywhere.createDesign({
+                        callbacks: createDesignCallback,
+                        inputParams: {
+                            asset: {
+                                data: encodedImage, 
+                                dataType: 'base64', 
+                                type: 'image'
+                            }, 
+                            canvasSize: {
+                                height: 1000,
+                                width: 3000,
+                                units: 'px'
+                            }
+                        },
+                        outputParams: {
+                            outputType: "url",
+                    }})
+                } else {
+                    console.log("no input image provided")
+                } 
+            });
+
+            // 
+            const editButton = document.getElementById("editDesign");
+            editButton.addEventListener('click', () => {
+                const editDesignCallback = {
+                    onCancel: () => {},
+                    onPublish: (publishParams) => {
+                        const localData = { project: publishParams.asset[0].projectId, image: publishParams.asset[0].data  };
+                        image_data.src = localData.image;
+                        project_id = localData.project;
+                    },
+                    onError: (err) => {
+                        console.error('Error received is', err.toString());
+                    },
+                };
+                console.log(project_id)
+                // ccEverywhere.editDesign(
+                ccEverywhere.editDesign(
+                    {
+                        inputParams: { 
+                            projectId: project_id 
+                        },
+                        callbacks: editDesignCallback
+                    }
+                );
+            });
+
+            document.getElementById("reset").addEventListener('click', ()=> {
+                image_data.src = '';
+                inputFile.value = '';
+                encodedImage = null;
+            })
+
+            document.getElementById("hide").addEventListener('click', ()=> {
+                inputFile.value = '';
+                image_data.src = '';
+            })
+        })();
+        
+        
+    </script>
+  </body>
+  
+</html>

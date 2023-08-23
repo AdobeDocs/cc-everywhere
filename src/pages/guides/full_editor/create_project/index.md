@@ -14,7 +14,7 @@ contributors:
 
 # Creating new projects using the full editor
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
@@ -22,7 +22,7 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
-This guide will demonstrate how to use the embedded full editor in your own application. 
+This guide will demonstrate how to use the embedded full editor in your own application.
 
 ## createDesign()
 
@@ -39,21 +39,12 @@ The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the 
 ccEverywhere.createDesign(
     // CreateDesignParams
     {
-        modalParams: {},
-        callbacks: {
-            onCancel: () => {},
-            onError: (err) => {},
-            onLoadStart: () => {},
-            onLoad: () => {},
-            onPublishStart: () => {},
-            onPublish: (publishParams) => {},
-        },
         outputParams: { 
             outputType: "base64"
         },
         inputParams: { 
             canvasSize: "1:2",
-            templateType: "Flyers",
+            templateType: "brochure",
             // You can also load an image into the project 
             // asset : "..."
         }
@@ -63,29 +54,31 @@ ccEverywhere.createDesign(
 
 ## CreateDesignParams
 
-`createDesign()` takes an object of parameters, [`CreateDesignParams`](../../../reference/full_editor/index.md#createdesignparams), composed of:
+`createDesign()` takes an object of parameters, `CreateDesignParams`, composed of:
 
 | Property | Type| Description
 | :-- | :-- | :--
 | callbacks | [Callbacks](../../../reference/types/index.md#callbacks) | Callback methods
 | modalParams | [ModalParams](../../../reference/types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [CreateInputParams](#createinputparams) | Input parameters when creating a design.
-| outputParams | [CCXOutputParams](../../../reference/types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| inputParams | [CreateInputParams](#createinputparams) | Input parameters when creating a design
+| outputParams | [CCXOutputParams](../../../reference/types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor
   
 All the properties in `CreateDesignParams` are optional.
 
 ### CreateInputParams
 
-[`CreateInputParams`](../../../reference/full_editor/index.md#createinputparams) allows you to configure the editor to be launched for the user.
+`CreateInputParams` allows you to configure the embedded editor.
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasSize| string | Initializes the editor loaded with the canvas set at a specified size
-| templateType | string | Initializes the editor loaded with templates of this specified type
-| templateSearchText | string | Initializes the editor with this string value for template search
-| asset | [Asset](../../../reference/types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
+| canvasSize| [Size](../../../reference/types/index.md#size)/[CanvasAspectId](../../../reference/types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
+| asset | [Asset](../../../reference/types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
+| editorPanelView | [EditorPanelView](../../../reference/types/index.md#editorpanelview) | Determines which panel view to open by default.
+| exportOptions | [ExportOptions](../../../reference/types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
+| panelSearchText | string | Search text to pass in the editor for selected panel.
+| templateType | [TemplateType](../../../reference/types/index.md#templatetype) | Specify template type for canvas.
 
-View the full list of canvas template layout ratios and template types [here](../../../reference/types/index.md#canvasaspectid).
+View the full list of [canvas sizes](../../../reference/types/index.md#canvasaspectid) and [template types](../../../reference/types/index.md#templatetype)
 
 ## Example: Create new project
 

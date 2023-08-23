@@ -1,14 +1,8 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Adobe Express
-  - Embed SDK
-  - Quick Actions
-  - SDK
-  - JavaScript
-  - Embed
-  - SDK Reference
+  - Edit design
+  - Project ID
+  - projectId
   - Editor component 
   - Edit project 
   - editDesign()
@@ -18,15 +12,16 @@ contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
 ---
-<InlineAlert variant="warning" slots="header, text1, text2" />
+
+# Launching existing projects in the full editor
+
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-This version of the docs and SDK will be sunsetted later this year. As a result, we are no longer approving new submissions that integrate with v2.
+We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
 
-Instead, we would love for you to start integrating the new version of the SDK. To join the private beta and get early access to documentation, please fill out [this form](https://airtable.com/shryiOk1VwoWxUCZs?prefill_Platform=Adobe%20Express%20Embed%20SDK&hide_Platform=true).
-
-# Launching existing projects in the full editor
+While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
 This guide will demonstrate how to launch a full editor component. The editor will appear in an iframe, pre-loaded with a specified Adobe Express project.
 
@@ -34,7 +29,7 @@ This guide will demonstrate how to launch a full editor component. The editor wi
 
 The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the full editor component in an iframe, with an existing project pre-loaded.
 
-#### Flow
+### Flow
 
 * User triggers `editDesign()` function from within the host application, and the full editor is loaded in an iframe.
 * To pre-load the editor with an existing project, you must pass the associated project ID to `editDesignParams`. This ID is returned in the `project` property of `publishParams` from the `onPublish` callback.
@@ -62,9 +57,9 @@ ccEverywhere.editDesign(
 );
 ```
 
-### [EditDesignParams](../../../reference/full_editor/index.md#editdesignparams)
+## EditDesignParams
 
-`editDesign()` takes an object of parameters, `editDesignParams`, composed of:
+`editDesign()` takes an object of parameters, `EditDesignParams`, composed of:
 
 | Property | Description | Type
 | :-- | :-- | :--
@@ -76,66 +71,41 @@ ccEverywhere.editDesign(
 <!-- todo: confirm there's not more:  -->
 The only required property is `inputParams.projectId`.
 
-## Example
+### EditInputParams
 
-#### Step 1: User clicks the "Edit project" button
+`EditInputParams` is where you pass the associated projectId to launch in an editor component.
+  
+| Property | Type | Description
+| :-- | :--| :--
+| projectId| string | Project ID of the asset returned from `onPublish` callback when `createDesign` was invoked.
+| editorPanelView | [EditorPanelView](../../../reference/types/index.md#editorpanelview) | Determines which panel view to open by default.
+| exportOptions | [ExportOptions](../../../reference/types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
+| panelSearchText | string | Search text to pass in the editor for selected panel.
 
-* The `editDesign()` function is called and passed `inputParams.projectId`, a set of callback functions in `editDesignCallback`.
-* An Adobe Express editor component is launched in an iframe, pre-loaded with that Adobe Express project.
+When a user completes their workflow in the editor, the associated **projectId** is sent back in [publishParams](../../../reference/types/index.md#publishparams) from the `onPublish` callback
 
-#### Step 2: User finishes design and clicks "Save"
+## Example: Edit existing project
 
-* The project is again saved to the user's Adobe Express account in project folder `appName` as specified in the [initialize()](../../../reference/index.md#initialize) function.
-* The `onPublish` callback function is called. It passes the host application an object `publishParams` that includes the __Adobe Express project ID (projectId)__ and __image data representation (asset)__.
-  * The asset is saved and displayed in the image tag `image-container`. The associated project ID is also saved in a global variable so that we can pre-load it in an editor component later again via `editDesign()`.
+The `editDesign` API takes a saved `projectId` as input and launches an **existing** project in the editor. When the user finishes in the editor and saves/publishes their design, the `onPublish` callback is invoked. Resulting project data is sent in `publishParams`. In this example, we save the project info (`project_id`) and display the image data (of the first page of the user's design) in some image container `image_data`.
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Edit Project Sample</title>
-  </head>  
-  <body>
-    <button id="edit-project-button">Edit project</button>
-    <img id="image-container" height="420" width="420" />
-
-    <script src="https://sdk.cc-embed.adobe.com/v2/CCEverywhere.js"></script>
-    <script type="text/javascript">
-
-    (async () => {
-        const ccEverywhere = await window.CCEverywhere.initialize({
-            clientId: YOUR_CLIENT_ID,
-            appName: PROJECT_NAME,
-            appVersion: { major: 1, minor: 0 },
-            platformCategory: 'web', 
-        });
-
-        // projectId should be saved from an earlier call to createDesign
-        var projectId = SAVED_CCX_PROJECT_ID;
-        var imageContainer = document.getElementById("image-container");
-        const editButton = document.getElementById("edit-project-button");
-        
-        editButton.addEventListener('click', () => {
-            const editDesignCallback = {
-                onCancel: () => {},
-                onPublish: (publishParams) => {
-                    const localData = { project: publishParams.projectId, image: publishParams.asset.data };
-                    imageContainer.src = localData.image;
-                    projectId = localData.project;
-                },
-                onError: (err) => {
-                    console.error('Error received is', err.toString());
-                },
-            };
-            ccEverywhere.editDesign(
-                {
-                    inputParams: { projectId: projectId },
-                    callbacks: editDesignCallback
-                }
-            );
-        });
-    })();    
-    </script>
-  </body> 
-</html>
+``` ts title="edit-project.js" hl_lines="15"
+const editDesignCallback = {
+    onCancel: () => {},
+    onPublish: (publishParams) => {
+        const pageData = { project: publishParams.asset[0].projectId, image: publishParams.asset[0].data };
+        image_data.src = pageData.image;
+        project_id = pageData.project;
+    },
+    onError: (err) => {
+        console.error('Error received is', err.toString());
+    },
+};
+ccEverywhere.editDesign(
+    {
+        inputParams: { 
+            projectId: project_id 
+        },
+        callbacks: editDesignCallback
+    }
+);
 ```

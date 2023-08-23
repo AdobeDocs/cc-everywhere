@@ -23,6 +23,30 @@ While we are in beta, all v3 clients are disabled by default. **Please share you
 
 <!-- ## [2.2.27] - 2023-02-02 -->
 
+## [3.7.14] - 2023-08-15
+
+### Added
+
+- ExportButton.accent: The variant option 'cta' has been replaced with 'accent'. Both 'cta' and 'accent' work the same but the support for 'cta' is deprecated as per Spectrum guidelines.
+- We will not support the following two quick actions: Reverse Video and Change Speed
+- Added a new video quick action: Animate From Audio. This allows users to create a character animation by choosing a character from the given list of characters, adding a backdrop and then recording a speech. 
+
+### Breaking Changes
+
+- ExportButton.id is now a required property on native buttons
+
+## [3.6.16] - 2023-08-06
+
+### Enhancements
+
+- CreateOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media.
+- EditOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media.
+
+### Added
+
+- Video Export: Users will now be able to export assets as MP4 files. In order to do this, there must be a video asset added in the canvas to see the option in the export options dropdown for custom buttons. Pass video/mp4 option in allowedFileTypes.
+- Mixed Media Support: Users will be able to download mixed media assets. In case they have added an image in one page and video in another, they will now be able to see JPG + MP4 or PNG + MP4 in the export options dropdown for custom buttons.Pass image/jpeg, image/png and video/mp4 option in allowedFileTypes.
+
 ## [2.0.8] - 2023-02-02
 
 ### Added

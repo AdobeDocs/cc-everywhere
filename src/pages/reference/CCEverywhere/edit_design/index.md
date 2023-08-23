@@ -50,29 +50,3 @@ All the properties in this object are optional.
 | panelSearchText | string | Search text to pass in the editor for selected panel.
 
 When a user completes their workflow in the editor, the associated **projectId** is sent back in [publishParams](../../types/index.md#publishparams) from the `onPublish` callback.
-
-## Example: Edit existing project
-
-The `editDesign` API takes a saved `projectId` as input and launches an **existing** project in the editor. When the user finishes in the editor and saves/publishes their design, the `onPublish` callback is invoked. Resulting project data is sent in `publishParams`. In this example, we save the project info (`project_id`) and display the image data (of the first page of the user's design) in some image container `image_data`.
-
-``` ts title="edit-project.js" hl_lines="15"
-const editDesignCallback = {
-    onCancel: () => {},
-    onPublish: (publishParams) => {
-        const pageData = { project: publishParams.asset[0].projectId, image: publishParams.asset[0].data };
-        image_data.src = pageData.image;
-        project_id = pageData.project;
-    },
-    onError: (err) => {
-        console.error('Error received is', err.toString());
-    },
-};
-ccEverywhere.editDesign(
-    {
-        inputParams: { 
-            projectId: project_id 
-        },
-        callbacks: editDesignCallback
-    }
-);
-```

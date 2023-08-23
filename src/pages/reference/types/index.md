@@ -36,15 +36,15 @@ While we are in beta, all v3 clients are disabled by default. **Please share you
 
 Represents an asset that can be loaded into a full editor component, or loaded in for an image quick action.
 
-| Property | Value(s) | Description
+| Property | Type | Description
 |:-- | :-- | :--
-| type | 'image' | Type of asset (image)
-| dataType | 'base64' | Type of data representation (base64 only right now)
-| data | string | Base 64 rendition of image asset
+| type | [AssetType](#assettype) | Type of asset
+| dataType | [AssetDataType](#assetdatatype)| Type of data representation
+| data | string | Asset data in base 64 or in a blob URL
 
 ### AssetType
 
-File format supported for design operations.
+String value used to define file format supported for design operations.
 
 | Type   | Value    |
 | ----------- | --------------- |
@@ -54,7 +54,7 @@ File format supported for design operations.
 
 ### AssetDataType
 
-Desired asset data type for images. For image output types, host can set this property to either base64 or url. Default type for images is base64. For videos, we will always send output as url irrespective of this property.
+String value used to define desired asset data type for images. For image output types, host can set this property to either base64 or url. Default type for images is base64. For videos, we will always send output as url irrespective of this property.
 
 | Type   | Value   |
 | ----------- | --------------- |
@@ -97,7 +97,7 @@ Asset-related information received with `onPublish` callback in quick actions.
 
 `CanvasAspectId` allows you to initializes the full editor loaded with canvas set to a particular size.
 
-| Type | Value | Dimensions
+| Canvas size | Value | Dimensions
 | :-- | :-- | :--
 | Album cover | "AlbumCover" | 750 x 750px
 | Banner print | "BannerPrint" | 72 x 36in
@@ -219,30 +219,37 @@ Asset-related information received with `onPublish` callback in quick actions.
 | YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
 | Zoom background | "ZoomBackground" | 1,920 x 1,080px
 
+<!-- | Name tag | "NameTag" | 
+| Place card | "PlaceCard" | -->
+
 ## CCXOutputParams
 
 All properties are optional. Allows you to define data type and file type of output asset.
 
-| Property | Value | Description
+| Property | Type | Description
 | :-- | :--| :--
-| fileType | 'jpeg', 'png', 'mp4' | Output asset file type
-| outputType | 'base64', 'url' | Output data type
+| allowedFileTypes | [FileType](#filetype)[] | Output asset file types
+| outputType | [AssetDataType](#assetdatatype) | Output data type
+| multiPage | boolean | Defines whether the user can save multi-page projects
+| imageQuality | number | Value between 0 and 1 to control the quality of the image
+| videoQuality | [VideoQuality](#videoquality) | Controls the quality of the video
 
-<!-- | Name tag | "NameTag" | 
-| Place card | "PlaceCard" | -->
+<InlineAlert variant="info" slots="text1" />
+
+Use `allowedFileTypes` to specify the list of filetypes that the user can download. This can be used to limit the download options as per file types for end users. This limitation is applied to both native download and custom download scenarios.
 
 ## EditorPanelView
 
 Optional string value that determines if the left panel should open by default. You can also specify the panel view based on user intent. Full list below.
 
-| Type | Description
+| Panel name | Value
 | :-- | :--
-| 'search' | Search panel opens.
-| 'yourStuff' | Panel opens with "Your Stuff"
-| 'templates' | Templates panel opens.
-| 'media' | Media panel opens.
-| 'text' | Text panel opens.
-| 'elements' | Elements panel opens.
+| Search | "search"
+| Your Stuff | "yourStuff"
+| Templates | "templates"
+| Media | "media"
+| Text | "text"
+| Elements | "elements"
 
 ## ExportOptions
 
@@ -276,9 +283,6 @@ Export options to surface to your user in the iframe. If no export options are s
 
 The variant option 'cta' has been replaced with 'accent' Going forward, we will remove the support of 'cta' variant from SDK.
 
-<!-- | featureList (optional) | string[] | todo
-| iconUrl (optional) | string | todo -->
-
 ### CustomExportLink
 
 | Property   | Type    | Description
@@ -310,12 +314,9 @@ Describes object that is used to render a group of buttons which will be shown a
 | optionType | "button" | Renders a standalone single button.
 | buttonType | "native"  | Type of export button.
 
-<!-- | featureList (optional) | string[] | todo
-| iconUrl (optional) | string | todo -->
-
 ## FileType
 
-Output file type for asset.
+String value determining output file type for asset.
 
 | Type   | Value    |
 | ----------- | --------------- |
@@ -324,6 +325,28 @@ Output file type for asset.
 | GIF     | "image/gif" |
 | MP4    | "video/mp4" |
 | PDF    | "application/pdf" |
+
+## Locale
+
+The Adobe Express Embed SDK lets you customize the locale during initialization. The default value is `'en_US'`. This determines the language setting for users experiencing SDK components.
+
+| Locale | Description
+| :-- | :--
+| 'en_US' | English
+| 'fr_FR' | French
+| 'de_DE' | German  
+| 'ja_JP' | Japanese
+| 'it_IT'| Italian
+| 'es_ES'| Spanish
+| 'pt_BR'| Portuguese
+| 'ko_JR'| Korean  
+| 'da_DK'| Danish
+| 'nl_NL'| Dutch  
+| 'nb_NO'| Norwegian
+| 'sv_SE'| Swedish
+| 'fi_FI'| Finnish
+| 'zh_Hans_CN' | Chinese (simplified)
+| 'zh_Hant_TW'| Chinese (traditional)
 
 ## ModalParams
 
@@ -340,12 +363,12 @@ All properties are optional. Allows you to define the UI constraints of the moda
 
 Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) type with 3 additional properties.
 
-| Property | Value(s) | Description
+| Property | Type | Description
 |:-- | :-- | :--
-| type | 'image', 'video' | Type of asset (image or video)
-| dataType | 'base64', 'url' | Type of data representation
-| data | string | Image/video data
-| fileType | 'jpeg', 'png', 'mp4' | Type of output asset
+| type | [AssetType](#assettype) | Type of asset (image or video)
+| dataType | [AssetDataType](#assetdatatype) | Type of data representation
+| data | base-64 string or Blob URL | Image/video data
+| fileType | [FileType](#filetype) | Type of output asset
 | (optional) fileName | string | Name of output asset
 | (optional) size | [Size](#size) | Dimensions of output asset
 
@@ -357,41 +380,53 @@ Allows you to define the canvas size of the project created in the full editor.
 | :-- | :--| :--
 |width| number | minimum value = 0
 |height | number | minimum value = 0
-| unit | 'px'/'in'/'mm' | pixels/inches/millimeters
+| unit | "px"/"in"/"mm" | pixels/inches/millimeters
 
 ## TemplateType
 
 Developers can pass the `createDesign()` method a `TemplateType`, for the user to start creating with. Browse "[All templates](https://express.adobe.com/sp/search?homeBackType=home)" on Adobe Express to get an idea of each category.
 
-| TemplateType | Description
+| Type | Value
 | :-- | :--
-| 'Flyers' | Flyers
-| 'Instagram_Post' | Instagram posts
-| 'Instagram_Story' | Instagram Stories
-| 'Logo' | Logos
-| 'Youtube_Thumbnail' | YouTube thumbnails
-| 'Collage' | Collages
-|'Facebook_Post' | Facebook posts
-| 'Facebook_Cover' | Facebook covers
-| 'Card' | Cards
-| 'Invitation' | Invitations
-| 'Business_Card' | Business cards
-| 'Menu' | Menus
-| 'Brochure' | Brochures
-| 'Resume' | Resumes
-| 'Poster' | Posters
-| 'Desktop_Wallpaper' | Wallpapers
-|'Presentation_Graphic' | Presentation Graphics
-|'Album_Cover' | Album covers
-| 'Book_Cover' | Book covers
-| 'Worksheet' | Worksheets
+| Brochure | "brochure"
+| Business card | "business-card"
+| Card greeting | "card-greeting"
+| Facebook post | "facebook-post"
+| Facebook profile cover | "facebook-profile-cover"
+| Facebook story | "facebook-story"
+| Flyer | "flyer"
+| Graphic organizer | "graphic-organizer"
+| Infographic | "infographic"
+| Instagram carousel | "instagram-carousel"
+| Instagram story | "instagram-story"
+| Instagram square post | "instagram-square-post"
+| Instagram reel | "instagram-reel"
+| Invitation | "invitation"
+| Invoice | "invoice"
+| LinkedIn profile cover | "linkedin-profile-cover"
+| Logo | "logo"
+| Meme | "meme"
+| Menu | "menu"
+| Mobile video | "mobile-video"
+| Newsletter | "newsletter"
+| Photo book | "photo-book"
+| Poster | "poster"
+| Presentation | "presentation"
+| Resume | "resume"
+| Tiktok video | "tiktok-video"
+| Video | "video"
+| Wallpaper (desktop) | "wallpaper-desktop"
+| Worksheet | "worksheet"
+| YouTube profile photo | "youtube-profile-photo"
+| YouTube thumbnail | "youtube-thumbnail"
+| YouTube video | "youtube-video"
 
 ## VideoQuality
 
 Defines the quality/resolution of a video output.
 
-| Type   | Value    |
-| ----------- | --------------- |
-| HD    | '1280' |
-| FULL_HD    | '1920' |
-| UHD  | '2160' |
+| Type   | Value
+| :----------- | :---------------
+| HD video quality    | "1280" |
+| FULL_HD video quality  | "1920" |
+| UHD video quality | "2160" |

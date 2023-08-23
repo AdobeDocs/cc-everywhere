@@ -45,11 +45,11 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEvery
 
 ### ConfigParams
 
-The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified.  The full locale list is [below](#locale).
+The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified.  The full list of accepted locale strings is [here](../types/index.md#locale).
 
 | Property | Required | Type | Description
 | :-- | :-- | :-- | :--
-| locale | No | String | Language settings for SDK components
+| locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
 
 ### Example
 
@@ -75,25 +75,3 @@ The returned Promise-wrapped `CCEverywhere` object can then be used to call the 
 3. `openQuickAction()`: Open a quick action in a modal.
 4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
 5. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void.
-
-## Locale
-
-The Adobe Express Embed SDK lets you customize the locale during initialization. The default value is `'en_US'`. This determines the language setting for users experiencing SDK components.
-
-| Locale | Description
-| :-- | :--
-| 'en_US' | English
-| 'fr_FR' | French
-| 'de_DE' | German  
-| 'ja_JP' | Japanese
-| 'it_IT'| Italian
-| 'es_ES'| Spanish
-| 'pt_BR'| Portuguese
-| 'ko_JR'| Korean  
-| 'da_DK'| Danish
-| 'nl_NL'| Dutch  
-| 'nb_NO'| Norwegian
-| 'sv_SE'| Swedish
-| 'fi_FI'| Finnish
-| 'zh_Hans_CN' | Chinese (simplified)
-| 'zh_Hant_TW'| Chinese (traditional)

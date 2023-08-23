@@ -38,6 +38,6 @@ As of today, it exposes 5 methods:
 4. `close()`: Closes the active editor modal
 5. `terminate()`: Un-initializes the active `CCEverywhere` instance
 
-## Shared types
+## Types
 
-The [shared types](./shared_types/index.md) reference page contains details about items that are shared across the full editor and quick action components. 
+The [types](./types/index.md) reference page contains details about objects that are shared across the SDK.
