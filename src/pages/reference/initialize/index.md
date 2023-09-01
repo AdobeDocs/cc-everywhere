@@ -50,6 +50,7 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | Property | Required | Type | Description
 | :-- | :-- | :-- | :--
 | locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
+| skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
 
 ### Example
 

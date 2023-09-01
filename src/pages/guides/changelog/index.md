@@ -23,13 +23,19 @@ While we are in beta, all v3 clients are disabled by default. **Please share you
 
 <!-- ## [2.2.27] - 2023-02-02 -->
 
+## [3.8.11] - 2023-08-25
+
+### Enhancements
+
+- `ConfigParams.skipBrowserSupportCheck`: By default, this property is set to false and users will encounter an "Unsupported Browser" page when launching a design flow. When this property is configured to true and the browser is not supported, calling `initialize()` will **not** result in an error.
+
 ## [3.7.14] - 2023-08-15
 
 ### Added
 
 - ExportButton.accent: The variant option 'cta' has been replaced with 'accent'. Both 'cta' and 'accent' work the same but the support for 'cta' is deprecated as per Spectrum guidelines.
 - We will not support the following two quick actions: Reverse Video and Change Speed
-- Added a new video quick action: Animate From Audio. This allows users to create a character animation by choosing a character from the given list of characters, adding a backdrop and then recording a speech. 
+- Added a new video quick action: Animate From Audio. This allows users to create a character animation by choosing a character from the given list of characters, adding a backdrop and then recording a speech.
 
 ### Breaking Changes
 
