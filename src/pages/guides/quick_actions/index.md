@@ -2,6 +2,18 @@
 keywords:
   - Image Quick Actions
   - Video Quick Actions
+  - Crop image
+  - Convert to JPG
+  - Convert to PNG
+  - Resize image
+  - Remove background
+  - Convert to GIF
+  - Convert to MP4
+  - Crop video 
+  - Merge videos
+  - Resize video
+  - Trim video
+  - Animate from audio
 title: Embed quick actions
 description: This is the overview page for the quick actions component.
 contributors:
@@ -80,7 +92,7 @@ Identifies which image quick action component should be loaded into the iframe.
 | Convert to GIF | 'convert-to-gif' | Video
 | Convert to MP4 | 'convert-to-mp4' | Video
 | Crop video | 'crop-video' | Video
-| Merge video | 'merge-videos' | Video
+| Merge videos | 'merge-videos' | Video
 | Resize video | 'resize-video' | Video
 | Trim video | 'trim-video' | Video
 | Animate from audio | 'animate-from-audio' | Video

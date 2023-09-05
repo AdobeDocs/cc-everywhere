@@ -5,6 +5,18 @@ keywords:
   - Load quick action
   - Launch quick action
   - v3
+  - Crop image
+  - Convert to JPG
+  - Convert to PNG
+  - Resize image
+  - Remove background
+  - Convert to GIF
+  - Convert to MP4
+  - Crop video 
+  - Merge videos
+  - Resize video
+  - Trim video
+  - Animate from audio
 title: openQuickAction reference
 description: This is the reference page for the openQuickAction API
 contributors:
@@ -53,7 +65,7 @@ This ID is associated with the quick action you want to surface to your user.
 | Convert to GIF | 'convert-to-gif' | Video
 | Convert to MP4 | 'convert-to-mp4' | Video
 | Crop video | 'crop-video' | Video
-| Merge video | 'merge-videos' | Video
+| Merge videos | 'merge-videos' | Video
 | Resize video | 'resize-video' | Video
 | Trim video | 'trim-video' | Video
 | Animate from audio | 'animate-from-audio' | Video

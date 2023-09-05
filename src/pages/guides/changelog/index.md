@@ -21,8 +21,6 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
-<!-- ## [2.2.27] - 2023-02-02 -->
-
 ## [3.8.11] - 2023-08-25
 
 ### Enhancements
