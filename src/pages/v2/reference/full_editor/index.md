@@ -1,4 +1,5 @@
 ---
+noIndex: true
 keywords:
   - v2
   - Express Embed SDK

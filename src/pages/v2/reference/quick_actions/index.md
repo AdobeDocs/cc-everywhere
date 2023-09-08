@@ -1,4 +1,5 @@
 ---
+noIndex: true
 keywords:
   - v2
   - Quick Actions

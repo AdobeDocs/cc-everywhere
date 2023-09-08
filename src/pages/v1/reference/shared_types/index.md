@@ -1,4 +1,5 @@
 ---
+noIndex: true
 keywords:
   - v1
   - Shared Types
