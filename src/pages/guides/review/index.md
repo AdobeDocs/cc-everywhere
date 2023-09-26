@@ -25,7 +25,8 @@ Adobe reviews all applications that integrate Adobe Express Embed SDK before ena
 ### Appropriate brand usage
 
 * Your integration must not violate the trademarks and copyrights of Adobe, Inc., or those of any other party. Please adhere to all trademark guidelines as noted here: <https://www.adobe.com/legal/permissions/trademarks.html>
-* **Brand guidelines are in the process of being finalized.** In the interim, please make sure you have received branding approval from your partner manager.
+
+Before you submit your integration review, please review these [brand guidelines](../../assets/Adobe_Express_Partner_Program_brand_guide.pdf).
 
 ### Inappropriate content
 
