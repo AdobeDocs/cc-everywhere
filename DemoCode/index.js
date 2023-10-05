@@ -1,5 +1,27 @@
+//credential
 
-//dynamic script 
+import credentialJSON from "../credential.json";
+const credential = credentialJSON?.project?.workspace?.details?.credentials[0];
+
+// Function to convert an image URL to base64
+function urlToBase64(imageUrl, callback) {
+  fetch(imageUrl)
+    .then(response => response.blob())
+    .then(blob => {
+      const reader = new FileReader();
+      reader.onload = function () {
+        const base64String = reader.result.split(',')[1];
+        callback(base64String);
+      };
+      reader.readAsDataURL(blob);
+    })
+    .catch(error => {
+      console.error('Error fetching or converting the image:', error);
+      callback(null);
+    });
+}
+
+//dynamic script
 
 const CDN_URL = "https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js";
 ((document, url) => {
@@ -18,8 +40,8 @@ const CDN_URL = "https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js";
 
 (async () => {
   const ccEverywhere = await window.CCEverywhere.initialize({
-    clientId: clientId, // Your API key
-    appName: app_name, // Name of the project folder created in Adobe Express for users
+    clientId: credential?.api_key?.client_id, //your client id
+    appName: credential?.name, //Name of the project folder created in Adobe Express for your integrations' end users
   });
 })();
 
@@ -56,6 +78,15 @@ ccEverywhere.createDesign({
 
 // Edit project 
 
+let dataURL = '';
+urlToBase64('https://example.com/image.jpg') //The image URL is obtained from the user.
+  .then(base64String => {
+    dataURL = base64String;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
 ccEverywhere.editDesign(
   {
     inputParams: {
@@ -71,9 +102,20 @@ ccEverywhere.editDesign(
   })
 
 //image quick actions 
+let imageUrl = '';
+urlToBase64('https://example.com/image.jpg') //The image URL is obtained from the user.
+  .then(base64String => {
+    imageUrl = base64String;
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+
+let quickAction = document.getElementById("quickActionImg");
+var quickActionID = quickAction.value;
 
 ccEverywhere.openQuickAction({
-  id: getKey.key, //keys are remove-background , resize-image, crop-image , convert-to-jpg , convert-to-png
+  id: quickActionID, //keys are remove-background , resize-image, crop-image , convert-to-jpg , convert-to-png
   inputParams: {
     asset: {
       data: imageUrl, //The 'imageUrl' is encoded in base64 and used to send the image to the iframe for performing subsequent quick actions

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-global.css"/>
+        <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-medium.css"/>
+        <link rel="stylesheet" href="node_modules/@spectrum-css/vars/dist/spectrum-light.css"/>
+        <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css"/>
+        <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css"/>
+        <title>Adobe Embed SDK</title>
+    </head>
+    <style>
+      .container{
+        margin: 5%;
+      }
+      p,.quickAction,button {
+        margin: 10px 0 !important;
+      }
+      .quickAction{
+        display: flex;
+        gap: 1%;
+        align-items: center;
+      }
+      hr.solid {
+        border-top: 2px solid #bbb;
+        margin: 2% 0%;
+      }
+      select{
+        padding: 2px;
+        width: 10%;
+      }
+    </style>
+    <body>
+        <div class="container spectrum-Typography">
+            <h1>Adobe Express Embed SDK : Full Editor</h1>
+            <h4>Create Design</h4>
+            <p class="spectrum-Body spectrum-Body--sizeL">
+                The
+                <b>Create Design</b>
+                button will launch a new project for the user in an editor.
+            </p>
+            <div class="quickAction">
+                <label for="editorPanelView">Select editor panel view</label>
+                <select id="editorPanelView" name="editorPanel">
+                    <option value="yourStuff">Your Stuff</option>
+                    <option value="templates">Templates</option>
+                    <option value="media">Media</option>
+                    <option value="text">Text</option>
+                    <option value="elements">Elements</option>
+                </select>
+            </div>
+            <hr class="solid"/>
+            <h4>Edit Design</h4>
+            <p class="marginX spectrum-Body spectrum-Body--sizeL">
+                To load an image into the editor, choose a file then click
+                <b>Create from asset</b>
+            </p>
+            <input type="file" id="fileInput" accept="image/*"/>
+            <hr class="solid"/>
+            <h1>Adobe Express Embed SDK : Quick Action</h1>
+            <h4>Image Quick Action</h4>
+            <input type="file" id="fileInput2" accept="image/*"/>
+            <div class="quickAction">
+                <label for="imageQuickAction">Select Image QuickAction</label>
+                <select id="quickActionImg" name="quickActionImg">
+                    <option value="remove-background">Remove Background</option>
+                    <option value="resize-image">Resize Image</option>
+                    <option value="crop-image">Crop Image</option>
+                    <option value="convert-to-jpg">Convert to JPG</option>
+                    <option value="convert-to-png">Convert to PNG</option>
+                </select>
+            </div>
+        </div>
+        <script src="./DemoCode/index.js"></script>
+        <script>
+          (async() => {
+          await readJSON();
+        })()
+        </script>
+    </body>
+</html>
