@@ -12,6 +12,10 @@
 
 module.exports = {
   siteMetadata: {
+    docs: {
+      title: 'Get credentials',
+      path: '/get-credential/'
+    },
     pages: [
       {
         title: 'Adobe Express Embed SDK',
