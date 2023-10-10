@@ -38,7 +38,7 @@ const CreateCredential = () => {
         <GetCredential.Form.Side>
           <div className='side-container'>
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >API key credential</h3>
-            <p className="spectrum-Body spectrum-Body--sizeM">Submitting this form created an API Key credential. The API key credential identifies your application to Adobe servers and can help accept or reject requests originating from certian domains.</p>
+            <p className="spectrum-Body spectrum-Body--sizeM">Submitting this form created an API Key credential. The API key credential identifies your application to Adobe servers and can help accept or reject requests originating from certain domains.</p>
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >Learn more</h3>
             <a className="side-documentation" href='https://some_help_link'>Authentication documentation</a>
             <a className='side-documentation' href='https://some_help_link'>Adobe Express Embed SDK documentation</a>
@@ -56,14 +56,12 @@ const CreateCredential = () => {
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >API key credential</h3>
             <p className="spectrum-Body spectrum-Body--sizeM">An API Key credential was created. The API key credential identifies your application to Adobe servers and can help accept or reject request originating from certain domains.</p>
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >Learn more</h3>
-            <a className="side-documentation" href='https://some_help_link'>Authentication documentation</a>
-            <a className="side-documentation" href='https://some_help_link'>Adobe Express Embed SDK documentation</a>
+            <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/'>Authentication documentation</a>
+            <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides'>Adobe Express Embed SDK documentation</a>
           </div>
         </GetCredential.Side>
 
       </GetCredential.Card>
-
-      <GetCredential.NoBetaAccessError betaProgramLink="https://some_help_link" betaProgramLinkText="Join Beta program" heading="Get Credentials" text="Join Beta program to get access to the Adobe Express Embed SDK and start creating unique credentials that you will use in your application." className="joinBetaProgram" />
 
     </GetCredential>
 
