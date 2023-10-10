@@ -40,13 +40,13 @@ const CreateCredential = () => {
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >API key credential</h3>
             <p className="spectrum-Body spectrum-Body--sizeM">Submitting this form created an API Key credential. The API key credential identifies your application to Adobe servers and can help accept or reject requests originating from certain domains.</p>
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >Learn more</h3>
-            <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/'>Authentication documentation</a>
+            <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/'>Quickstart guide</a>
             <a className='side-documentation' href='https://developer.adobe.com/express/embed-sdk/docs/guides'>Adobe Express Embed SDK documentation</a>
           </div>
         </GetCredential.Form.Side>
 
       </GetCredential.Form>
-      
+
       <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" devConsoleDirection="project_overview|api_overview|credential_overview" developerConsoleManage="Manage on Developer console" className="card_developer_console">
 
         <GetCredential.Side>
@@ -54,7 +54,7 @@ const CreateCredential = () => {
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >API key credential</h3>
             <p className="spectrum-Body spectrum-Body--sizeM">An API Key credential was created. The API key credential identifies your application to Adobe servers and can help accept or reject request originating from certain domains.</p>
             <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >Learn more</h3>
-            <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/'>Authentication documentation</a>
+            <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/'>Quickstart guide</a>
             <a className="side-documentation" href='https://developer.adobe.com/express/embed-sdk/docs/guides'>Adobe Express Embed SDK documentation</a>
           </div>
         </GetCredential.Side>
