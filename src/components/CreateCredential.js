@@ -47,7 +47,7 @@ const CreateCredential = () => {
 
       </GetCredential.Form>
 
-      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" devConsoleDirection="project_overview|api_overview|credential_overview" developerConsoleManage="Manage on Developer console" className="card_developer_console">
+      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/" devConsoleDirection="project_overview|api_overview|credential_overview" developerConsoleManage="Manage on Developer console" className="card_developer_console">
 
         <GetCredential.Side>
           <div className='side-container'>
