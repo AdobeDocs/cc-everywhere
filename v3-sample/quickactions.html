@@ -57,6 +57,9 @@
             <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
                 <span class="spectrum-Button-label">Hide</span>
             </button>
+            <button id="caption-video" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Caption Video</span>
+            </button>
         </div>
         <img id="image-container" style="visibility:hidden;"/>
     </div>
@@ -64,10 +67,6 @@
     <script type="text/javascript" >
     (async () => {
         const ccEverywhere = await window.CCEverywhere.initialize({
-            /* Get credentials at Adobe Developer Console.
-               During beta, your client will need to be enabled. 
-               Email your client ID (API Key) to amandah@adobe.com
-             */
             clientId: 'your-client-id',
             appName: 'Partner Days Embed SDK Demo'
         });
