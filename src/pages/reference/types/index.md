@@ -156,6 +156,12 @@ Asset-related information received with `onPublish` callback in quick actions.
 | Lesson plan | "LessonPlan" | 8.5 x 11in
 | Letter | "Letter" | 8.5 x 11in
 | Letterhead | "Letterhead" | 8.5 x 11in
+| Line ad (small) | "LineAdSmall" | 600 x 400 px
+| Line ad (square) | "LineAdSquare" | 1,080 x 1,080px
+| Line ad (vertical) | "LineAdVertical" | 1,080 x 1,920px
+| Line rich menu (large) | "LineRichMenuLarge" | 2,500 x 1,686px
+| Line rich menu (small) | "LineRichMenuSmall" | 2,500 x 843px
+| Line rich message | "LineRichMessage" | 1,040 x 1,040px
 | LinkedIn post | "LinkedinPost" | 1,920 x 1,920px
 | LinkedIn blog post | "LinkedInBlogPost" | 1,200 x 628px
 | LinkedIn profile cover | "LinkedInProfileCover" | 1,536 x 396px
@@ -169,6 +175,7 @@ Asset-related information received with `onPublish` callback in quick actions.
 | Mobile video | "MobileVideo" | 1,080 x 1,920px
 | Mug | "Mug" | 3.3 x 3.3in
 | Newsletter | "Newsletter" | 8.5 x 11in
+| Note header image | "NoteHeaderImage" | 1,280 x 670px
 | Pamphlet | "Pamphlet" | 8.5 x 11in
 | Photo book | "PhotoBook" | 1,410 x 2,250px
 | Pinterest | "Pinterest" | 1,000 x 500px
@@ -401,12 +408,19 @@ Developers can pass the `createDesign()` method a `TemplateType`, for the user t
 | Instagram reel | "instagram-reel"
 | Invitation | "invitation"
 | Invoice | "invoice"
+| Line ad (small) | "line-ad-small"
+| Line ad (square) | "line-ad-square"
+| Line ad (vertical) | "line-ad-vertical"
+| Line rich menu (large) | "line-rich-menu-large"
+| Line rich menu (small) | "line-rich-menu-small"
+| Line rich message (vertical) | "line-rich-message"
 | LinkedIn profile cover | "linkedin-profile-cover"
 | Logo | "logo"
 | Meme | "meme"
 | Menu | "menu"
 | Mobile video | "mobile-video"
 | Newsletter | "newsletter"
+| Note header image | "note-header-image"
 | Photo book | "photo-book"
 | Poster | "poster"
 | Presentation | "presentation"
