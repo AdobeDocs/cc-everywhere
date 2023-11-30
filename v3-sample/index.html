@@ -57,10 +57,6 @@
         
         (async () => {
             const ccEverywhere = await window.CCEverywhere.initialize({
-                /* Get credentials at Adobe Developer Console.
-                During beta, your client will need to be enabled. 
-                Email your client ID (API Key) to amandah@adobe.com
-                */
                 clientId: 'your-client-id',
                 appName: 'Partner Days Embed SDK Demo',
             });
@@ -169,11 +165,6 @@
                                 data: encodedImage, 
                                 dataType: 'base64', 
                                 type: 'image'
-                            }, 
-                            canvasSize: {
-                                height: 1000,
-                                width: 3000,
-                                units: 'px'
                             }
                         },
                         outputParams: {
