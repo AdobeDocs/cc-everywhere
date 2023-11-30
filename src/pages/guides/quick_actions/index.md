@@ -87,6 +87,7 @@ Identifies which image quick action component should be loaded into the iframe.
 | Convert to PNG | 'convert-to-png' | Image
 | Resize image | 'resize-image' | Image
 | Remove background | 'remove-background' | Image
+| Generate QR code | 'generate-qr-code' | Image
 | Convert to GIF | 'convert-to-gif' | Video
 | Convert to MP4 | 'convert-to-mp4' | Video
 | Crop video | 'crop-video' | Video
@@ -94,6 +95,7 @@ Identifies which image quick action component should be loaded into the iframe.
 | Resize video | 'resize-video' | Video
 | Trim video | 'trim-video' | Video
 | Animate from audio | 'animate-from-audio' | Video
+| Caption video | 'caption-video' | Video
 
 ### QuickActionInputParams
 
