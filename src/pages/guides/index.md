@@ -38,7 +38,7 @@ Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on you
 
 ### What are modules? (v4 beta)
 
-Modules are contained mini-editing experiences
+Modules are contained mini-editing experiences that you can surface to your users. The modules available at this time are **text to image** and **image editing**.
 
 ## Getting Started
 

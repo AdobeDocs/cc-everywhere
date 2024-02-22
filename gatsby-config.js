@@ -28,9 +28,13 @@ module.exports = {
       {
         title: 'SDK References',
         menu: [{
-          title: 'Reference',
-          description: 'v3 Reference',
+          title: 'v4 Reference',
+          description: 'v4 Reference',
           path: '/reference/'
+        },{
+          title: 'v3 Reference',
+          description: 'v3 Reference',
+          path: '/v3/reference/'
         }, {
          title: 'v2 Reference [Deprecated soon]',
          description: 'v2 Reference',
@@ -133,14 +137,52 @@ module.exports = {
       },
       {
         title: 'Overview',
-        path:'/reference/',
+        path:'/v3/reference/',
+      },
+      {
+        title: 'Initialize SDK',
+        path:'/v3/reference/initialize/',
+      },
+      {
+        title: 'v3 Reference',
+        path: '/v3/reference/CCEverywhere/',
+        pages: [
+          {
+            title: 'createDesign', 
+            path: '/v3/reference/CCEverywhere/create_design/'
+          },
+          {
+            title: 'editDesign', 
+            path: '/v3/reference/CCEverywhere/edit_design/'
+          },
+          {
+            title: 'openQuickAction',
+            path: '/v3/reference/CCEverywhere/quick_actions/',
+          }, 
+          {
+            title: 'close',
+            path: '/v3/reference/CCEverywhere/close/',
+          }, 
+          {
+            title: 'terminate',
+            path: '/v3/reference/CCEverywhere/terminate/',
+          }, 
+        ]
+      },
+      {
+        title: 'Types', 
+        path: '/v3/reference/types/'
+      },
+      {
+        title: 'Overview',
+        path:'/v3/reference/',
       },
       {
         title: 'Initialize SDK',
         path:'/reference/initialize/',
       },
       {
-        title: 'CCEverywhere',
+        title: 'v4 Reference',
         path: '/reference/CCEverywhere/',
         pages: [
           {
