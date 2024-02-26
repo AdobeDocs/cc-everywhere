@@ -26,7 +26,7 @@ Adobe Express Embed SDK is an easy-to-integrate, customizable, all-in-one JavaSc
 **How likely are you to recommend integrating with Adobe Express Embed SDK to a fellow developer?** <br /><br />
 (Not at all likely) [1](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%221%22%7D&Source=documentation) • [2️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%222%22%7D&Source=documentation) • [3️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%223%22%7D&Source=documentation) • [4️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%224%22%7D&Source=documentation) • [5️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%225%22%7D&Source=documentation) • [6️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%226%22%7D&Source=documentation) • [7️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%227%22%7D&Source=documentation) • [8️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%228%22%7D&Source=documentation) • [9️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%229%22%7D&Source=documentation) • [10](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%2210%22%7D&Source=documentation) (Extremely likely)
 
-Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on your own website. This documentation provides all the materials you need to get started with the SDK. As of today, this SDK has two components: the __full editor__ and __quick actions__. Try them now in our [demo app](https://demo.expressembed.com/).
+Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on your own website. This documentation provides all the materials you need to get started with the SDK. Try them now in our [demo app](https://demo.expressembed.com/).
 
 ### What is the full editor?
 
@@ -35,6 +35,10 @@ Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on you
 ### What are quick actions?
 
 [Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your own website with just a few lines of code. You can configure what export options are surfaced to your users once they are done with editing tasks (i.e. download, save back to app, edit in an embedded Adobe Express editor).
+
+### What are modules? (v4 beta)
+
+[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **text to image** and **image editing**.
 
 ## Getting Started
 

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
+  <head>
+    <title>Adobe Express Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/sidenav/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/textfield/dist/index-vars.css">
+    <style>
+        .sample {
+            margin: 3%;
+        }
+        hr.solid {
+            border-top: 2px solid #bbb;
+            margin: 2% 0%;
+        }
+        .spacer {
+            margin-bottom: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sample spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Modules </h1>
+        <p class="spectrum-Body spectrum-Body--sizeL" > 
+            This sample surfaces <b>three export buttons</b> to the user after a quick action workflow is complete:
+        </p>
+        <p class="spectrum-Body spectrum-Body--sizeL">1. [Native] <b>Download</b>: Downloads the modified asset to the user's computer.
+            <br>2. [Native] <b>Customize</b>: Sends user to an embedded editor to continue editing the modified asset.
+            <br>3. [Custom] <b>Save image</b>: Save and display the modified asset on this page. Use the button below to hide the image.
+        </p> 
+        <hr class="solid"> 
+
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Text to Image</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">You can also launch the module, and input the prompt once the modal is open.</p>
+        <div class="spectrum-Textfield is-focused">
+            <label for="textfield-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your prompt</label>
+            <input id="textfield-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
+        </div>
+        <div class="spacer"></div>
+        <button id="text-to-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Text to Image</span>
+        </button>
+        <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Clear Prompt</span>
+        </button>
+
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Image Editing</h2>
+        <input type="file" id="fileInput" accept="image/*,video/*"/>
+        <button id="reset">Reset</button><p></p>
+        <p class="spectrum-Body spectrum-Body--sizeL">Select a file before you launch the module.</p>
+
+        <button id="image-edit" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Image Editing</span>
+        </button>
+        
+        <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Hide</span>
+        </button>
+
+        <img id="image-container" style="visibility:hidden;"/>
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Other SDK Components</h2>
+        <button id="full-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try the full editor</span>
+        </button>
+        <button id="QA" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try quick actions</span>
+        </button>
+    </div>
+    <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
+    <script type="text/javascript" >
+        
+    (async () => {
+        const initializeParams = {
+            clientId: 'your-client-id',
+            appName: 'V4 Sample',
+        }
+        const {miniEditor} = await window.CCEverywhere.initialize(initializeParams);
+
+        document.getElementById("full-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/";
+        });
+        document.getElementById("QA").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/quickactions.html";
+        });
+
+        /* inputFile: file input picker */
+        var inputFile = document.getElementById('fileInput');
+
+        /* base64Asset: base64 representation we pass into QA function */
+        var base64Asset; 
+        /* appImage:  the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
+
+        // Text to image prompt
+        var inputField = document.getElementById('textfield-focused');
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        inputFile.addEventListener('change', (e) => {
+            const reader = new FileReader();
+            // reads file into base 64 data type
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                base64Asset = reader.result;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        const exportOptions = [
+            {
+                target: 'Host',
+                id: 'save-modified-asset',
+                label: 'Save image',
+                optionType: 'button',
+                buttonType: 'custom'
+            },
+        ];
+
+        const callbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+                const localData = { asset: publishParams.asset[0].data}
+                console.log("Published asset", publishParams)
+                if(publishParams.exportButtonId=="save-modified-asset"){
+                    appImage.src = localData.asset;
+                    appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const getAllowedFileTypes = () => {
+            const allowedFileTypes = ['image/png', 'image/jpeg'];
+            return {allowedFileTypes};
+        }
+
+        const textToImageModule = () => {
+            miniEditor.createImageFromText({
+                inputParams: {
+                    promptText: (document.getElementById('textfield-focused').value),
+                },
+                callbacks: callbacks,
+                outputParams: getAllowedFileTypes()
+            });
+        }
+
+        const imageEditingModule = () => {
+            miniEditor.editImage({
+                inputParams: {
+                    asset: {
+                        data: base64Asset,
+                        dataType: 'base64',
+                        type: 'image' 
+                    },
+                    exportOptions: exportOptions
+                },
+                callbacks: callbacks,
+                outputParams: getAllowedFileTypes()
+            });
+        }
+
+        // Button event listeners 
+
+        document.getElementById('text-to-image').addEventListener('click', () => {
+            textToImageModule();
+        })
+
+        document.getElementById('image-edit').addEventListener('click', () => {
+            imageEditingModule();
+        })
+        
+        document.getElementById('clear').addEventListener('click', () => {
+            appImage.src=null;
+            appImage.style.visibility="hidden";
+            inputField.value = '';
+
+        })
+
+        document.getElementById('reset').addEventListener('click', () => {
+            base64Asset = null;
+            appImage.src = null;
+        })
+    })();
+    </script>
+  </body>
+</html>

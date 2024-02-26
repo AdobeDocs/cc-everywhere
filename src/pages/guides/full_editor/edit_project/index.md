@@ -6,6 +6,7 @@ keywords:
   - Editor component 
   - Edit project 
   - editDesign()
+  - v4
 title: Adobe Express Editor - Edit Project
 description: This guide will show you how users can continue working on existing projects in an Adobe Express editor. 
 contributors:
@@ -21,43 +22,29 @@ IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
 
-This guide will demonstrate how to launch a full editor component. The editor will appear in an iframe, pre-loaded with a specified Adobe Express project.
+This guide will demonstrate how to load a specific Adobe Express project in a full editor component.
 
-## editDesign()
+## edit()
 
-The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editDesign()` method, which loads the full editor component in an iframe, with an existing project pre-loaded.
+The [CCEverywhere](../../../reference/index.md#cceverywhere) object exposes the `editor` interface. It contains APIs which loads the editor component in an iframe. Use `edit()` to continue with an existing project in an embedded full editor.
 
 ### Flow
 
-* User triggers `editDesign()` function from within the host application, and the full editor is loaded in an iframe.
-* To pre-load the editor with an existing project, you must pass the associated project ID to `editDesignParams`. This ID is returned in the `project` property of `publishParams` from the `onPublish` callback.
+* User triggers `edit()` function from within the host application, and the full editor is loaded in an iframe.
+* To pre-load the editor with an existing project, you must pass the associated project ID. This ID is returned in the `project` property of `publishParams` from the `onPublish` callback.
 
 ```js
-// Initialize SDK and save CCEverywhere object as ccEverywhere 
-ccEverywhere.editDesign(
-    {
-        inputParams: { 
-            projectId: CCX_PROJECT_ID 
-        },
-        callbacks: {
-            onCancel: () => {},
-            onError: (err) => {},
-            onLoadStart: () => {},
-            onLoad: () => {},
-            onPublishStart: () => {},
-            onPublish: (publishParams) => {},
-        },
-        modalParams: {},
-        outputParams: { 
-            outputType: "base64"
-        },
-    }
-);
+const { editor } = await ccEverywhere.initialize();
+editor.edit({
+    inputParams: { 
+        projectId: CCX_PROJECT_ID 
+    },
+});
 ```
 
-## EditDesignParams
+### EditDesignParams
 
-`editDesign()` takes an object of parameters, `EditDesignParams`, composed of:
+`edit()` takes an object of parameters, `EditDesignParams`, composed of:
 
 | Property | Description | Type
 | :-- | :-- | :--
@@ -66,7 +53,6 @@ ccEverywhere.editDesign(
 | outputParams | Configure output type | [CCXOutputParams](../../../reference/types/index.md#ccxoutputparams)
 | callbacks | Callback functions | [Callbacks](../../../reference/types/index.md#callbacks)
 
-<!-- todo: confirm there's not more:  -->
 The only required property is `inputParams.projectId`.
 
 ### EditInputParams
@@ -82,9 +68,9 @@ The only required property is `inputParams.projectId`.
 
 When a user completes their workflow in the editor, the associated **projectId** is sent back in [publishParams](../../../reference/types/index.md#publishparams) from the `onPublish` callback
 
-## Example: Edit existing project
+## Example
 
-The `editDesign` API takes a saved `projectId` as input and launches an **existing** project in the editor. When the user finishes in the editor and saves/publishes their design, the `onPublish` callback is invoked. Resulting project data is sent in `publishParams`. In this example, we save the project info (`project_id`) and display the image data (of the first page of the user's design) in some image container `image_data`.
+The `edit` API takes a saved `projectId` as input and launches an **existing** project in the editor. When the user finishes in the editor and saves/publishes their design, the `onPublish` callback is invoked. Resulting project data is sent in `publishParams`. In this example, we save the project info (`project_id`) and display the image data (of the first page of the user's design) in some image container `image_data`.
 
 ``` ts title="edit-project.js" hl_lines="15"
 const editDesignCallback = {
@@ -98,7 +84,7 @@ const editDesignCallback = {
         console.error('Error received is', err.toString());
     },
 };
-ccEverywhere.editDesign(
+editor.edit(
     {
         inputParams: { 
             projectId: project_id 

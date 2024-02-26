@@ -48,7 +48,7 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | Property | Required | Type | Description
 | :-- | :-- | :-- | :--
 | locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
-| skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
+| skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
 
 ### Example
 
@@ -67,11 +67,10 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 })();
 ```
 
-The returned Promise-wrapped `CCEverywhere` object can then be used to access the other APIs of the SDK:
+The returned Promise-wrapped `CCEverywhere` object can then be used to call the other APIs of the SDK:
 
-1. `editor`: Create a design from scratch or from a starting asset in a full editor.
-2. `quickAction`: Launches a quick action.
-3. `miniEditor`: Opens a module in a modal.
-
-<!-- 4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
-1. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void. -->
+1. `createDesign()`: Create a design from scratch or from a starting asset in the editor.
+2. `editDesign()`: Edit a design in the editor.
+3. `openQuickAction()`: Open a quick action in a modal.
+4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
+5. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void.

@@ -37,12 +37,30 @@ Adobe-powered quick actions take the most complex tasks from our flagship apps -
 
 Once the desired action is complete, the SDK provides two native export buttons to surface to users: 1) download the modified asset or 2) edit further in the full editor component. You can also configure your own custom export button to perform tasks such as saving the asset back into the application.
 
-## openQuickAction()
+## Quick Action APIs
 
-This API is responsible for embedding and launching the quick actions component in your application as an iframe.
+Each quick action has its own API signature and the API is responsible for embedding and launching the quick actions component in your application as an iframe. Here is the list of available APIs:
+
+* convertToJPEG(quickActionParams: QuickActionParams): void;
+* convertToPNG(quickActionParams: QuickActionParams): void;
+* convertToSVG(quickActionParams: QuickActionParams): void;
+* cropImage(quickActionParams: QuickActionParams): void;
+* resizeImage(quickActionParams: QuickActionParams): void;
+* removeBackground(quickActionParams: QuickActionParams): void;
+* generateQRCode(quickActionParams: QuickActionParams): void;
+* convertToGIF(quickActionParams: QuickActionParams): void;
+* convertToMP4(quickActionParams: QuickActionParams): void;
+* cropVideo(quickActionParams: QuickActionParams): void;
+* mergeVideos(quickActionParams: QuickActionParams): void;
+* resizeVideo(quickActionParams: QuickActionParams): void;
+* trimVideo(quickActionParams: QuickActionParams): void;
+* animateFromAudio(quickActionParams: QuickActionParams): void;
+* captionVideo(quickActionParams: QuickActionParams): void;
+
 
 ```js
-ccEverywhere.openQuickAction(
+const { quickAction } = await ccEverywhere.initialize();
+quickAction.cropImage(
     // QuickActionsParams
     {
         id: 'crop-image', 
@@ -64,12 +82,12 @@ ccEverywhere.openQuickAction(
 
 ## QuickActionParams
 
-`openQuickAction()` takes an object `QuickActionParams` with 4 parameters:
+Each `quickAction` API takes an object `QuickActionParams` with 4 parameters:
 
 | Property | Description | Type
 | :-- | :-- | :--
-| id | ID of quick action| [QuickActionId](../../reference/CCEverywhere/quick_actions/index.md#quickactionid)
-| inputParams | [Launch with asset](../../reference/types/index.md#asset) and [export options](../../reference/types/index.md#exportoptions) | [QuickActionInputParams](../../reference/CCEverywhere/quick_actions/index.md#quickactioninputparams)
+| id | ID of quick action| [QuickActionId](../../reference/CCEverywhere/quickAction/index.md#quickactionid)
+| inputParams | [Launch with asset](../../reference/types/index.md#asset) and [export options](../../reference/types/index.md#exportoptions) | [QuickActionInputParams](../../reference/CCEverywhere/quickAction/index.md#quickactioninputparams)
 | callbacks | Callback functions | [Callbacks](../../reference/types/index.md#callbacks)
 | modalParams | Define size of modal |  [ModalParams](../../reference/types/index.md#modalparams)
 | outputParams | [CCXOutputParams](../../reference/types/index.md#ccxoutputparams) | Desired output options when exporting assets from a quick action.
@@ -112,7 +130,7 @@ Input parameters for quick actions. All the properties are optional.
 When no asset is passed as an input when a quick action is invoked, the user will be asked to browse/upload an image once the modal is open. Default export options will be surfaced to the user.
 
 ``` ts title="crop-image.js" hl_lines="15"
-ccEverywhere.openQuickAction({
+quickAction.cropImage({
     id: 'crop-image', 
 });
 ```
@@ -123,10 +141,10 @@ The screenshot below illustrates how the default export buttons look. **Open in 
 
 ## Example: Input asset, custom export options
 
-The `openQuickAction` API can take an image asset and custom export options as input. When you define custom export options, you must define how the export behavior should be handled in the `onPublish` callback. Here, it saves the image data in some image container `appImage`.
+The `quickAction` APIs can take an image asset and custom export options as input. When you define custom export options, you must define how the export behavior should be handled in the `onPublish` callback. Here, it saves the image data in some image container `appImage`.
 
 ``` ts title="remove-background.js" hl_lines="5 29 40"
-ccEverywhere.openQuickAction({
+quickAction.removeBackground({
     id: 'remove-background', 
     inputParams: {
         asset: {
