@@ -4,7 +4,7 @@ keywords:
   - Reference
   - Initialize
   - CCEverywhere
-  - v3
+  - v4
 title: SDK Reference
 description: This is the reference page for the existing components in the SDK.
 contributors:
@@ -28,13 +28,14 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
 
-As of today, it exposes 5 methods:
+As of today, it exposes:
 
-1. `createDesign()`: Full editor component
-2. `editDesign()`: Full editor component
-3. `openQuickAction()`: Quick actions component
-4. `close()`: Closes the active editor modal
-5. `terminate()`: Un-initializes the active `CCEverywhere` instance
+1. `editor`: Contains APIs for creating and editing in an embedded full editor
+2. `quickAction`: Contains APIs for launching quick actions
+3. `miniEditor`: Contains APIs for launching modules (text to image, image editing)
+
+<!-- 4. `close()`: Closes the active editor modal
+1. `terminate()`: Un-initializes the active `CCEverywhere` instance -->
 
 ## Types
 

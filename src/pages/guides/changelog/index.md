@@ -19,6 +19,12 @@ IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
 
+## [4.0.28] - 2023-12-18
+
+### Breaking Changes
+
+
+
 ## [3.10.13] - 2023-11-06
 
 ### Enhancements

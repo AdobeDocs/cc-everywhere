@@ -70,6 +70,10 @@ module.exports = {
         ]
       },
       {
+        title: 'Modules (Beta)',
+        path: '/guides/modules/',
+      },
+      {
         title: 'Quick actions',
         path: '/guides/quick_actions/',
       },
@@ -178,33 +182,46 @@ module.exports = {
         path:'/v3/reference/',
       },
       {
-        title: 'Initialize SDK',
+        title: 'initialize',
         path:'/reference/initialize/',
       },
+      // {
+      //   title: 'editor',
+      //   path:'/reference/editor/',
+      // },
+      // {
+      //   title: 'miniEditor',
+      //   path:'/reference/miniEditor/',
+      // },
+      // {
+      //   title: 'quickAction',
+      //   path:'/reference/quickAction/',
+      // },
       {
-        title: 'v4 Reference',
+        title: 'CCEverywhere',
         path: '/reference/CCEverywhere/',
+        expanded: 'true',
         pages: [
           {
-            title: 'createDesign', 
-            path: '/reference/CCEverywhere/create_design/'
+            title: 'editor', 
+            path: '/reference/CCEverywhere/editor/'
           },
           {
-            title: 'editDesign', 
-            path: '/reference/CCEverywhere/edit_design/'
+            title: 'quickAction', 
+            path: '/reference/CCEverywhere/quickAction/'
           },
           {
-            title: 'openQuickAction',
-            path: '/reference/CCEverywhere/quick_actions/',
+            title: 'miniEditor',
+            path: '/reference/CCEverywhere/miniEditor/',
           }, 
-          {
-            title: 'close',
-            path: '/reference/CCEverywhere/close/',
-          }, 
-          {
-            title: 'terminate',
-            path: '/reference/CCEverywhere/terminate/',
-          }, 
+          // {
+          //   title: 'close',
+          //   path: '/reference/CCEverywhere/close/',
+          // }, 
+          // {
+          //   title: 'terminate',
+          //   path: '/reference/CCEverywhere/terminate/',
+          // }, 
         ]
       },
       {

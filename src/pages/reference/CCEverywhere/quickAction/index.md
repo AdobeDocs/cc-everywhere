@@ -4,7 +4,7 @@ keywords:
   - Open quick action
   - Load quick action
   - Launch quick action
-  - v3
+  - v4
   - Crop image
   - Convert to JPG
   - Convert to PNG
@@ -17,13 +17,13 @@ keywords:
   - Resize video
   - Trim video
   - Animate from audio
-title: openQuickAction reference
-description: This is the reference page for the openQuickAction API
+title: quickAction reference
+description: This is the reference page for the quickAction module
 contributors:
   - https://github.com/amandahuarng
 --- 
 
-# openQuickAction()
+# quickAction
 
 <InlineAlert variant="error" slots="header, text" />
 
@@ -33,9 +33,97 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 This API is used for opening a quick action.
 
+## convertToJPEG
+
 ```ts
-openQuickAction: (quickActionParams: QuickActionParams): void
+quickAction.convertToJPEG: (quickActionParams: QuickActionParams): void
 ```
+
+## convertToPNG
+
+```ts
+quickAction.convertToPNG: (quickActionParams: QuickActionParams): void
+```
+
+## convertToSVG
+
+```ts
+quickAction.convertToSVG: (quickActionParams: QuickActionParams): void
+```
+
+## cropImage
+
+```ts
+quickAction.cropImage: (quickActionParams: QuickActionParams): void
+```
+
+## resizeImage
+
+```ts
+quickAction.resizeImage: (quickActionParams: QuickActionParams): void
+```
+
+## removeBackground
+
+```ts
+quickAction.removeBackground: (quickActionParams: QuickActionParams): void
+```
+
+## generateQRCode
+
+```ts
+quickAction.generateQRCode: (quickActionParams: QuickActionParams): void
+```
+
+## convertToGIF
+
+```ts
+quickAction.convertToGIF: (quickActionParams: QuickActionParams): void
+```
+
+## convertToMP4
+
+```ts
+quickAction.convertToMP4: (quickActionParams: QuickActionParams): void
+```
+
+## cropVideo
+
+```ts
+quickAction.cropVideo: (quickActionParams: QuickActionParams): void
+```
+
+## mergeVideo
+
+```ts
+quickAction.mergeVideo: (quickActionParams: QuickActionParams): void
+```
+
+## resizeVideo
+
+```ts
+quickAction.resizeVideo: (quickActionParams: QuickActionParams): void
+```
+
+## trimVideo
+
+```ts
+quickAction.trimVideo: (quickActionParams: QuickActionParams): void
+```
+
+## animateFromAudio
+
+```ts
+quickAction.animateFromAudio: (quickActionParams: QuickActionParams): void
+```
+
+## captionVideo
+
+```ts
+quickAction.captionVideo: (quickActionParams: QuickActionParams): void
+```
+
+## Parameters
 
 ### QuickActionParams
 
@@ -49,7 +137,7 @@ Besides `id`, all other properties are optional.
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Input parameters when opening a quick action.
 | outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from a quick action.
 
-#### QuickActionId
+### QuickActionId
 
 This ID is associated with the quick action you want to surface to your user.
 
@@ -70,12 +158,12 @@ This ID is associated with the quick action you want to surface to your user.
 | Animate from audio | 'animate-from-audio' | Video
 | Caption video | 'caption-video' | Video
 
-#### QuickActionInputParams
+### QuickActionInputParams
 
 Input parameters for quick actions. All the properties are optional.
 
 | Property | Type | Description
 | :-- | :-- | :--
 | exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. These options will be visible in the quick action editor.
-| asset | [Asset](#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge video quick action.
+| asset | [Asset](#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge videos quick action.
 | receiveTargetErrors | boolean | Boolean that tells client whether or not to receive target application errors.
