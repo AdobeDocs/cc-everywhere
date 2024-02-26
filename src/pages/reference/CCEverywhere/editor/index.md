@@ -59,10 +59,10 @@ All the properties in this object are optional.
 ## createWithAsset
 
 ```ts
-editor.createWithAsset: (createDesignParams: CreateDesignParams): void
+editor.createWithAsset: (createAssetDesignParams: CreateAssetDesignParams): void
 ```
 
-### CreateDesignParams
+### CreateAssetDesignParams
 
 All the properties in this object are optional.
 
@@ -70,10 +70,10 @@ All the properties in this object are optional.
 | :-- | :-- | :--
 | callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
 | modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [CreateInputParams](#createinputparams) | Input parameters when creating a design.
+| inputParams | [CreateWithAssetInputParams](#createwithassetinputparams) | Input parameters when creating a design.
 | outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
 
-### CreateInputParams
+### CreateWithAssetInputParams
 
 `CreateInputParams` allows you to configure the editor to be launched for the user.
 

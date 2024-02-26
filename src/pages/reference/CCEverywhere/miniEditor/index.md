@@ -19,7 +19,7 @@ contributors:
 
 # miniEditor
 
-This interface has all the APIs used to embed our editing modules in your own application.
+This interface has all the APIs used to embed our editing modules in your own application. Please be aware that this release is a public beta, and we anticipate further modifications to certain API signatures. Additional breaking changes may occur in the future.
 
 ## createImageFromText
 
@@ -46,8 +46,6 @@ All the properties in this object are optional.
 | :-- | :--| :--
 | promptText| string | Optional string to launch the text to image module with a prompt
 
-<!-- | exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options. -->
-
 ## editImage
 
 ```ts
@@ -55,8 +53,6 @@ editImage: (params: ImageMEDesignParams): void
 ```
 
 ### ImageMEDesignParams
-
-All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--

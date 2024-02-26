@@ -23,7 +23,15 @@ We are no longer approving integrations using v1 or v2 of the SDK - both version
 
 ### Breaking Changes
 
+- `ccEverywhere.createDesign()` has now been broken into `ccEverywhere.editor.create()` and `ccEverywhere.editor.createWithAsset()`
+- `ccEverywhere.editDesign()` is now `ccEverywhere.editor.edit()`
+- `ccEverywhere.openQuickAction()` is now `ccEverywhere.quickAction.convertToJPEG()` (each of the different actions has its own API now)
+  
+### Added
 
+- We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:
+  - Text to Image module: `ccEverywhere.miniEditor.createImageFromText()`
+  - Image Editing module: `ccEverywhere.miniEditor.editImage()`
 
 ## [3.10.13] - 2023-11-06
 
