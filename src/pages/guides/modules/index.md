@@ -20,11 +20,11 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text" />
 
-IMPORTANT: Deprecation Warning
+Beta Release
 
 Please be aware that this release is a public beta, and we anticipate further modifications to certain API signatures. Additional breaking changes may occur in the future.
 
-This guide will demonstrate how to use modules (mini editors) in your own application.
+This guide will demonstrate how to embed our Text to Image and Image Editing modules in your own application.
 
 ## createImageFromText()
 
