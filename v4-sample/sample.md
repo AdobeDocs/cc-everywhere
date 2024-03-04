@@ -16,6 +16,7 @@ Replace the `clientID` fields each time the SDK is initialized (3 files):
 
 * `index.html`
 * `quickactions.html`
+* `modules.html`
 
 ## Step 2: Install `mkcert` via Homebrew
 
