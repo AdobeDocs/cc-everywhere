@@ -13,10 +13,12 @@ contributors:
 
 # Changelog
 
-## [4.0.28] - 2023-12-18
+## [4.2.29] - 2024-03-12
 
 ### Breaking Changes
 
+- `callbacks` are now set in the `initialize` method
+- `ExportOptions` has changed and new "continue editing" buttons are available
 - `ccEverywhere.createDesign()` has now been broken into `ccEverywhere.editor.create()` and `ccEverywhere.editor.createWithAsset()`
 - `ccEverywhere.editDesign()` is now `ccEverywhere.editor.edit()`
 - `ccEverywhere.openQuickAction()` is now `ccEverywhere.quickAction.convertToJPEG()` (each of the different actions has its own API now)
@@ -26,6 +28,7 @@ contributors:
 - We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:
   - Text to Image module: `ccEverywhere.miniEditor.createImageFromText()`
   - Image Editing module: `ccEverywhere.miniEditor.editImage()`
+- Delayed login is now available.
 
 ## [3.10.13] - 2023-11-06
 
