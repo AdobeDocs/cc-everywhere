@@ -185,18 +185,6 @@ module.exports = {
         title: 'initialize',
         path:'/reference/initialize/',
       },
-      // {
-      //   title: 'editor',
-      //   path:'/reference/editor/',
-      // },
-      // {
-      //   title: 'miniEditor',
-      //   path:'/reference/miniEditor/',
-      // },
-      // {
-      //   title: 'quickAction',
-      //   path:'/reference/quickAction/',
-      // },
       {
         title: 'CCEverywhere',
         path: '/reference/CCEverywhere/',
@@ -211,7 +199,7 @@ module.exports = {
             path: '/reference/CCEverywhere/quickAction/'
           },
           {
-            title: 'miniEditor',
+            title: 'module',
             path: '/reference/CCEverywhere/miniEditor/',
           }, 
           // {

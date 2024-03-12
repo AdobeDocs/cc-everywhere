@@ -26,8 +26,8 @@ contributors:
 ### Added
 
 - We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:
-  - Text to Image module: `ccEverywhere.miniEditor.createImageFromText()`
-  - Image Editing module: `ccEverywhere.miniEditor.editImage()`
+  - Text to Image module: `ccEverywhere.module.createImageFromText()`
+  - Image Editing module: `ccEverywhere.module.editImage()`
 - Delayed login is now available.
 
 ## [3.10.13] - 2023-11-06
