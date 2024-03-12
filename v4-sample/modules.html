@@ -78,7 +78,29 @@
             clientId: 'your-client-id',
             appName: 'V4 Sample',
         }
-        const {miniEditor} = await window.CCEverywhere.initialize(initializeParams);
+        const configParams = {
+            loginMode: 'delayed'
+        }
+
+         /* appImage:  the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
+        
+        const callbacks = {
+            onCancel: () => {},
+            onPublish: (intent, publishParams) => {
+                const localData = { asset: publishParams.asset[0].data}
+                console.log("Published asset", publishParams)
+                if(publishParams.exportButtonId=="save-modified-asset"){
+                    appImage.src = localData.asset;
+                    appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const {module} = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
 
         document.getElementById("full-editor").addEventListener('click', () => {
             window.location.href = "https://localhost:8000/";
@@ -87,13 +109,12 @@
             window.location.href = "https://localhost:8000/quickactions.html";
         });
 
+
         /* inputFile: file input picker */
         var inputFile = document.getElementById('fileInput');
 
         /* base64Asset: base64 representation we pass into QA function */
         var base64Asset; 
-        /* appImage:  the image container displayed in sample */
-        var appImage = document.getElementById('image-container');
 
         // Text to image prompt
         var inputField = document.getElementById('textfield-focused');
@@ -114,57 +135,79 @@
 
         const exportOptions = [
             {
-                target: 'Host',
                 id: 'save-modified-asset',
                 label: 'Save image',
-                optionType: 'button',
-                buttonType: 'custom'
-            },
-        ];
-
-        const callbacks = {
-            onCancel: () => {},
-            onPublish: (publishParams) => {
-                const localData = { asset: publishParams.asset[0].data}
-                console.log("Published asset", publishParams)
-                if(publishParams.exportButtonId=="save-modified-asset"){
-                    appImage.src = localData.asset;
-                    appImage.style.visibility="visible";
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
                 }
             },
-            onError: (err) => {
-                console.error('Error received is', err.toString())
+            {
+                type: 'continue-editing',
+                label: 'Continue Editing',
+                style: {
+                    uiType: 'button'
+                },
+                options: [
+                    {
+                        id: 'exportOption1',
+                        style: {
+                            uiType: 'dropdown'
+                        },
+                        action: {
+                            target: 'express',
+                            intent: 'add-icons-and-shapes'
+                        }
+                    },
+                    {
+                        id: 'exportOption2',
+                        style: {
+                            uiType: 'dropdown'
+                        },
+                        action: {
+                            target: 'express',
+                            intent: 'add-images'
+                        }
+                    },
+                    {
+                        id: 'exportOption3',
+                        style: {
+                            uiType: 'dropdown'
+                        },
+                        action: {
+                            target: 'express',
+                            intent: 'add-effects'
+                        }
+                    }
+                ]
             }
-        }
+        ];
 
+    
         const getAllowedFileTypes = () => {
             const allowedFileTypes = ['image/png', 'image/jpeg'];
             return {allowedFileTypes};
         }
 
         const textToImageModule = () => {
-            miniEditor.createImageFromText({
-                inputParams: {
-                    promptText: (document.getElementById('textfield-focused').value),
-                },
-                callbacks: callbacks,
-                outputParams: getAllowedFileTypes()
-            });
+            let config = {
+                promptText: (document.getElementById('textfield-focused').value),
+            }
+            module.createImageFromText(config);
         }
 
         const imageEditingModule = () => {
-            miniEditor.editImage({
-                inputParams: {
-                    asset: {
-                        data: base64Asset,
-                        dataType: 'base64',
-                        type: 'image' 
-                    },
-                    exportOptions: exportOptions
-                },
-                callbacks: callbacks,
-                outputParams: getAllowedFileTypes()
-            });
+            const docConfig = {
+                asset: {
+                    data: base64Asset,
+                    type: 'image',
+                    dataType: 'base64'
+                }
+            }
+            let exportConfig = exportOptions;
+            module.editImage(docConfig, exportConfig);
         }
 
         // Button event listeners 

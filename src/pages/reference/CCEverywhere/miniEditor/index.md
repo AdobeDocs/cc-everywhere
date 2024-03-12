@@ -1,46 +1,37 @@
 ---
 keywords:
-  - create
-  - createWithAsset
-  - Create new project
-  - Load templates
-  - Editor panel
-  - Embedded editor reference
-  - panelSearchText
-  - editorPanelView
-  - canvasSize
-  - templateType
+  - createImageFromText
+  - TextToImage
+  - Image editing
   - v4
+  - module
 title: editor reference
 description: This is the reference page for the editor API
 contributors:
   - https://github.com/amandahuarng
 --- 
 
-# miniEditor
+# module
 
-This interface has all the APIs used to embed our editing modules in your own application. Please be aware that this release is a public beta, and we anticipate further modifications to certain API signatures. Additional breaking changes may occur in the future.
+This interface has all the APIs used to embed our editing modules in your own application.
 
 ## createImageFromText
 
 ```ts
-createImageFromText: (params: TextToImageParams): void
+createImageFromText: (appConfig?: TextToImageAppConfig, exportConfig?: ExportOptions, containerConfig?: ContainerConfig): void
 ```
-
-### TextToImageParams
 
 All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [TextToImageInputParams](#texttoimageinputparams) | Input parameters when creating an image from text.
-| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| appConfig | [TextToImageAppConfig](#texttoimageappconfig) | Pass a text prompt to preload in the text to image editor
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
-### TextToImageInputParams
+### TextToImageAppConfig
 
-`TextToImageInputParams` allows you to configure the editor to be launched for the user.
+`TextToImageAppConfig` allows you to pass a prompt to be passed into the editor.
 
 | Property | Type| Description
 | :-- | :--| :--
@@ -49,32 +40,19 @@ All the properties in this object are optional.
 ## editImage
 
 ```ts
-editImage: (params: ImageMEDesignParams): void
+editImage: (docConfig: EditImageDocConfig, exportConfig?: ExportOptions, containerConfig?: ContainerConfig): void
 ```
 
-### ImageMEDesignParams
+The only required property is `docConfig`.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [ImageMEInputParams](#imagemeinputparams) | Input parameters when creating a design.
-| outputParams | [ImageMEOutputParams](#imagemeoutputparams) | Desired output options when exporting assets from the editor.
+| docConfig | [EditImageDocConfig](#editimagedocconfig) | Pass an asset to preload into the image editing module
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
-### ImageMEInputParams
-
-`ImageMEInputParams` allows you to configure the editor to be launched for the user.
+### EditImageDocConfig
 
 | Property | Type| Description
-| :-- | :--| :--
+| :-- | :-- | :--
 | asset | [Asset](../../types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
-| exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
-
-### ImageMEOutputParams
-
-Allows you to define data type and file type of output asset.
-
-| Property | Type | Description
-| :-- | :--| :--
-| allowedFileTypes | [FileType](../../types/index.md#filetype)[] | Output asset file types
-| outputType | [AssetDataType](../../types/index.md#assetdatatype) | Output data type

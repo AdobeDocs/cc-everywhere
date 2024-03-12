@@ -4,12 +4,14 @@ keywords:
   - Reference
   - Initialize
   - CCEverywhere
-  - v3
+  - v4
   - Locale
   - appName
   - platformCategory
   - HostInfo
   - ConfigParams
+  - Callbacks
+  - Delayed login
 title: Initialize SDK Reference
 description: This is the reference page for the initialize method.
 contributors:
@@ -18,18 +20,12 @@ contributors:
 
 # Initialize SDK
 
-<InlineAlert variant="error" slots="header, text" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
-
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams) and [Callbacks](#callbacks), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
 
 ```ts
-initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
+initialize: (hostInfo: HostInfo, configParams?: ConfigParams, callbacks?: Callbacks) => Promise<CCEverywhere>
 ```
 
 ### HostInfo
@@ -49,21 +45,48 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | :-- | :-- | :-- | :--
 | locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
 | skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
+| loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
+
+### Callbacks
+
+All the callbacks are optional and return void.
+
+| Property | Callback Function | Description
+| :-- | :-- | :--
+| onCancel | () => {}| Triggered when user closes the modal
+| onError | () => {} | Triggered upon error with associated error code
+| onLoadStart | () => {} | Triggered once modal begins to load
+| onLoad | () => {} | Triggered once modal is loaded
+| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
+| onPublish | (intent, [PublishParams](../types/index.md#publishparams) or [QuickActionPublishParams](../types/index.md#quickactionpublishparams)) => {} | Triggered when publish/download is complete
 
 ### Example
 
 ```ts
 (async () => {
-  let host = { /* HostInfo */
+  let hostInfo = { /* HostInfo */
     clientId: CLIENT_ID,
     appName: APP_NAME, 
     appVersion: { major: 1, minor: 0 }, 
     platformCategory: 'web',
   }
 
-  let config = { locale = 'en_US'} /* ConfigParams (optional) */
+  const configParams = {
+    loginMode: 'delayed'
+  }
 
-  const ccEverywhere = await window.CCEverywhere.initialize(host, config);
+  let callbacks = {
+    onCancel: () => {},
+    onPublish: (intent, publishParams) => {
+      const localData = { asset: publishParams.asset[0].data}
+      console.log("Published asset", publishParams)
+    },
+    onError: (err) => {
+      console.error('Error received is', err.toString())
+    }
+  }
+
+  const ccEverywhere = await window.CCEverywhere.initialize(hostInfo, configParams, callbacks);
 })();
 ```
 
@@ -71,7 +94,7 @@ The returned Promise-wrapped `CCEverywhere` object can then be used to access th
 
 1. `editor`: Create a design from scratch or from a starting asset in a full editor.
 2. `quickAction`: Launches a quick action.
-3. `miniEditor`: Opens a module in a modal.
+3. `module`: Opens a module in a modal.
 
 <!-- 4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
 1. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void. -->
