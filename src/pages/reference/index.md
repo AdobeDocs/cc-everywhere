@@ -13,12 +13,6 @@ contributors:
 
 # Overview
 
-<InlineAlert variant="error" slots="header, text" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
-
 ## Embed and initialize the SDK
 
 1. Follow the steps in the quickstart guide to [embed the SDK](../guides/quickstart/index.md#step-2-embed-the-sdk) in your application.

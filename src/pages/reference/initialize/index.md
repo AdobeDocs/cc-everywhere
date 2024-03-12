@@ -20,12 +20,6 @@ contributors:
 
 # Initialize SDK
 
-<InlineAlert variant="error" slots="header, text" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
-
 ## initialize()
 
 This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams) and [Callbacks](#callbacks), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
@@ -54,6 +48,17 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
 
 ### Callbacks
+
+All the callbacks are optional and return void.
+
+| Property | Callback Function | Description
+| :-- | :-- | :--
+| onCancel | () => {}| Triggered when user closes the modal
+| onError | () => {} | Triggered upon error with associated error code
+| onLoadStart | () => {} | Triggered once modal begins to load
+| onLoad | () => {} | Triggered once modal is loaded
+| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
+| onPublish | (intent, [PublishParams](../types/index.md#publishparams) or [QuickActionPublishParams](../types/index.md#quickactionpublishparams)) => {} | Triggered when publish/download is complete
 
 ### Example
 

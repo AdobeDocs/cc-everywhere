@@ -66,6 +66,10 @@ All the properties in this object are optional.
 | multiPage | boolean | Defaults to `true`. Set to `false` if multi-page export is not supported.
 | allowedFileTypes | [FileType](../../types/index.md#filetype)[] | Specify the list of file types that the user can publish. By default, all formats (PNG, JPEG, MP4 and PDF) are supported.
 
+<InlineAlert variant="info" slots="text1" />
+
+Use `allowedFileTypes` to specify the list of filetypes that the user can download. This can be used to limit the download options as per file types for end users. This limitation is applied to both native download and custom download scenarios.
+
 View the full list of [canvas sizes](../../types/index.md#canvasaspectid) and [template types](../../types/index.md#templatetype).
 
 ## createWithAsset
