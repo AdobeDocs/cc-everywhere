@@ -12,10 +12,11 @@ Once you're done, a client ID for your project will be generated. Steps 2-3 will
 ## Step 1: Clone the sample
 
 Clone the sample.
-Replace the `clientID` fields each time the SDK is initialized (3 files):
+Replace the `clientID` fields each time the SDK is initialized (4 files):
 
 * `index.html`
 * `quickactions.html`
+* `video-quickactions.html`
 * `modules.html`
 
 ## Step 2: Install `mkcert` via Homebrew

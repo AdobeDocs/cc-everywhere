@@ -14,12 +14,6 @@ contributors:
 
 # Full editor
 
-<InlineAlert variant="error" slots="header, text" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
-
 Using the full editor, developers can give end-users an easy way to start a creative design workflow from within their own applications. Try it out for yourself in our [demo app](https://demo.expressembed.com).
 
 ## What is the full editor?
@@ -33,6 +27,8 @@ Users can access Adobe Express's huge template and asset library when starting t
 * [Launch an embedded editor in your application](create_project/index.md)
 * [Load a previous project in the editor](edit_project/index.md)
 
-![Full editor](editor.png)
+## Explore the SDK
 
-If you are more interested in learning about the quick actions component, refer to our quick action [guides](../quick_actions/index.md).
+If you are more interested in quick editing tools, refer to our quick action [guide](../quick_actions/index.md).
+
+If you are more interested in surfacing a contextual editing experience, refer to our modules [guide](../modules/index.md).

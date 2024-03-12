@@ -21,12 +21,6 @@ contributors:
 ---
 # Quickstart Guide
 
-<InlineAlert variant="error" slots="header, text" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
-
 This guide explains how to start using the Adobe Express Embed SDK in your own application.
 
 ## Step 1: Get an API Key
@@ -51,7 +45,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js""></script>
 <script>
   (async () => {
-    const ccEverywhere = await window.CCEverywhere.initialize();
+    const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
   })();
 </script>
 ```
@@ -60,7 +54,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 
 ```js
 await import(CDN_URL);
-const ccEverywhere = await window.CCEverywhere.initialize();
+const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
 ```
 
 ### Dynamic script
@@ -73,7 +67,7 @@ const ccEverywhere = await window.CCEverywhere.initialize();
       if (!window.CCEverywhere) {
           return;
         }
-        const ccEverywhere = await window.CCEverywhere.initialize();
+        const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
     };
     document.body.appendChild(script);
   })(document, CDN_URL);
@@ -81,36 +75,30 @@ const ccEverywhere = await window.CCEverywhere.initialize();
 
 ## Step 3: Initialize the SDK
 
-The SDK should only be initialized once each page. To initialize the SDK, pass the default method `initialize()`:
+The SDK should only be initialized once each page. To initialize the SDK, pass the following objects: `HostInfo` and `Callbacks`.
+
+### HostInfo
 
 * `CLIENT_ID` (string): API key from Developer Console
 * `APP_NAME` (string): Name of your integration/app. This name corresponds with the project folder created for your end users in Adobe Express.
 
 ```js
 (async () => {
+    const callbacks = {};
     const ccEverywhere = await window.CCEverywhere.initialize({
       clientId: <CLIENT_ID>,
       appName: <APP_NAME>,
-    });
+    }, callbacks);
 })();
 ```
 
-The SDK can be initialized with a customized locale. Read more about the initialize API [here](../../reference/initialize/index.md).
+The SDK can be launched delayed login, meaning users won't be asked to sign in until they export. Read more about the initialize API [here](../../reference/initialize/index.md).
 
 Successful initialization returns a `CCEverywhere` Class object, with three properties:
 
 1. `editor`
-   1. `create`
-   2. `createWithAsset`
-   3. `edit`
-2. `miniEditor`
-   1. `editImage`
-   2. `createImageFromText`
+2. `module`
 3. `quickAction`
-
-4. `openQuickAction()`: Launch an Adobe Express quick action
-5. `createDesign()`: Create a new project or start editing an image in an embedded editor
-6. `editDesign()`: Edit an existing project in an embedded editor
 
 ## Next Steps: Explore the SDK
 

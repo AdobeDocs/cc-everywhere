@@ -64,53 +64,30 @@
                 <span class="spectrum-Button-label">Hide</span>
             </button>
         </div>
-        <hr class="solid"> 
-        <div id="video-buttons">
-            <button id="crop-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Crop Video</span>
-            </button>
-            <button id="resize-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Resize Video</span>
-            </button>
-            <button id="convert-to-gif" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Convert to GIF</span>
-            </button>
-            <button id="convert-to-mp4" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Convert to MP4</span>
-            </button>
-            <button id="merge-videos" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Merge Videos</span>
-            </button>
-            <button id="trim-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Trim Video</span>
-            </button>
-            <button id="animate-from-audio" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Animate from Audio</span>
-            </button>
-            <button id="caption-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Caption Video</span>
-            </button>
-            <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label">Hide</span>
-            </button>
-            <hr class="solid">
-            <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Full editor</h2>
-            <p class="spectrum-Body spectrum-Body--sizeL">
-                Go back to the full editor sample.
-            </p>
-            <button id="full-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label" >Try the full editor</span>
-            </button>
+        
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Full editor</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Go back to the full editor sample.
+        </p>
+        <button id="full-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try the full editor</span>
+        </button>
 
-            <hr class="solid">
-            <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
-            <p class="spectrum-Body spectrum-Body--sizeL">
-                Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support text-to-image and image editing modules.
-            </p>
-            <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
-                <span class="spectrum-Button-label" >Try modules</span>
-            </button>
-        </div>
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support text-to-image and image editing modules.
+        </p>
+        <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try modules</span>
+        </button>
+
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Video quick actions</h2>
+        <button id="video-qa" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try video QA</span>
+        </button>
         <img id="image-container" style="visibility:hidden;"/>
     </div>
     <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
@@ -121,67 +98,14 @@
             clientId: 'your-client-id',
             appName: 'V4 Sample',
         }
-        const { editor, miniEditor, quickAction } = await window.CCEverywhere.initialize(initializeParams);
 
-        document.getElementById("full-editor").addEventListener('click', () => {
-            window.location.href = "https://localhost:8000/";
-        });
-        document.getElementById("mini-editor").addEventListener('click', () => {
-            window.location.href = "https://localhost:8000/modules.html";
-        });
+        const configParams = {
+            loginMode: 'delayed'
+        }
 
-        /* inputFile: file input picker */
-        var inputFile = document.getElementById('fileInput');
-
-        /* base64Asset: base64 representation we pass into QA function */
-        var base64Asset; 
-        /* appImage:  the image container displayed in sample */
-        var appImage = document.getElementById('image-container');
-
-        /* This event listener checks to see if the user uploads a new file 
-        and reads it into base64 data type for SDK ingestion later */
-        inputFile.addEventListener('change', (e) => {
-            const reader = new FileReader();
-            // reads file into base 64 data type
-            reader.readAsDataURL(e.target.files[0]);
-            reader.onload = () => {
-                base64Asset = reader.result;
-            }
-            reader.onerror = (error) => {
-                console.log('error', error);
-            };
-        })
-
-        const exportOptions = [
-            /* If label is not specified, this native button renders label "Open in Adobe Express" */
-            {
-                target: 'Editor',
-                id: 'edit-in-express',
-                buttonType: 'native',
-                variant: 'primary',
-                optionType: 'button',
-                label: 'Customize'
-            },
-           /* If label is not specified, this native button renders label "Download" */
-            {
-                target: 'Download',
-                id: 'download-button',
-                variant: 'cta',
-                optionType: 'button',
-                buttonType: 'native'
-            },
-            {
-                target: 'Host',
-                id: 'save-modified-asset',
-                label: 'Save image',
-                optionType: 'button',
-                buttonType: 'custom'
-            },
-        ];
-
-        const imageCallbacks = {
+        const callbacks = {
             onCancel: () => {},
-            onPublish: (publishParams) => {
+            onPublish: (intent, publishParams) => {
                 const localData = { asset: publishParams.asset[0].data}
                 console.log("Published asset", publishParams)
                 if(publishParams.exportButtonId=="save-modified-asset"){
@@ -194,57 +118,109 @@
             }
         }
 
-        const openQAwithAsset = (qa_id) => {
-            quickAction.convertToJPEG({
-                id: qa_id, 
-                inputParams: {
-                    asset: {
-                        data: base64Asset, 
-                        dataType: 'base64', 
-                        type: 'image'
-                    }, 
-                    exportOptions: exportOptions
-                },
-                callbacks: imageCallbacks
-            });
-        }
+        const { quickAction } = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
 
-        const openQAwithVideo = (qa_id) => {
-            quickAction.convertToMP4({
-                id: qa_id, 
-                inputParams: {
-                    asset: [{
-                        data: base64Asset, 
-                        dataType: 'base64', 
-                        type: 'video'
-                }], 
-                    exportOptions: exportOptions
+
+        /* inputFile: file input picker */
+        var inputFile = document.getElementById('fileInput');
+
+        /* base64Asset: base64 representation we pass into QA function */
+        var base64Asset; 
+        /* appImage:  the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
+        const docConfig = {}
+        const appConfig = {}
+        const modalParams = {}
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        inputFile.addEventListener('change', (e) => {
+            const reader = new FileReader();
+            // reads file into base 64 data type
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                base64Asset = reader.result;
+                let asset = {
+                    data: base64Asset, 
+                    dataType: 'base64', 
+                    type: 'image'
+                };
+                docConfig.asset = asset;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        document.getElementById("full-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/";
+        });
+        document.getElementById("mini-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/modules.html";
+        });
+        document.getElementById("video-qa").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/video-quickactions.html";
+        });
+            
+
+        const exportOptions = [
+            {
+                id: 'edit-in-express',
+                label: 'Edit in Adobe Express',
+                action: {
+                    target: 'express',
                 },
-                callbacks: imageCallbacks
-            });
-        }
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'download',
+                label: 'Download',
+                action: {
+                    target: 'download'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'save-modified-asset',
+                label: 'Save image',
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+        ];
 
         function imageQuickAction(qa_id) {            
-            if(base64Asset) {
-                return openQAwithAsset(qa_id);
-            } else {
-                quickAction.convertToJPEG({
-                    id: qa_id, 
-                    inputParams: { exportOptions: exportOptions },
-                    callbacks: imageCallbacks
-                });
-            }
-        };
-
-        function videoQuickAction(qa_id) {            
-            if(base64Asset) {
-                return openQAwithVideo(qa_id);
-            } else {
-                quickAction.convertToGIF({
-                    id: qa_id, 
-                    inputParams: { exportOptions: exportOptions },
-                    callbacks: imageCallbacks
-                });
+            let exportConfig = exportOptions;        
+            switch (qa_id) {
+                case 'convert-to-jpg':
+                    quickAction.convertToJPEG(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'convert-to-png':
+                    quickAction.convertToPNG(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'convert-to-svg':
+                    quickAction.convertToSVG(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'crop-image':
+                    quickAction.cropImage(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'resize-image':
+                    quickAction.resizeImage(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'remove-background':
+                    quickAction.removeBackground(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'generate-qr-code':
+                    quickAction.generateQRCode(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                default: break;
             }
         };
 
@@ -257,13 +233,6 @@
             })
         })
 
-        let videoButtons = document.querySelectorAll('#video-buttons button');
-        videoButtons.forEach((button) => {
-            button.addEventListener('click', () => {
-                videoQuickAction(button.id)
-            })
-        })
-        
         document.getElementById('clear').addEventListener('click', () => {
             appImage.src=null;
             appImage.style.visibility="hidden";

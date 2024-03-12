@@ -70,7 +70,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Modules (Beta)',
+        title: 'Modules',
         path: '/guides/modules/',
       },
       {

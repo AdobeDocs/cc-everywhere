@@ -19,99 +19,98 @@ contributors:
 
 # editor
 
-<InlineAlert variant="error" slots="header, text" />
+This class contains all the APIs used to embed the full Adobe Express editor in your own application.
 
-IMPORTANT: Deprecation Warning
+## Editor workflows
 
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
+The following methods belong to the `editor` class:
 
-This property has all the APIs used to embed the full Adobe Express editor in your own application.
+* [`create`](#create): Start with an empty canvas.
+* [`createWithAsset`](#createwithasset): Start with an asset.
+* [`edit`](#edit): Continue editing an existing Express project.
 
 ## create
 
-```ts
-editor.create: (createDesignParams: CreateDesignParams): void
-```
+The `create` method starts the full editor workflow with an empty canvas.
 
-### CreateDesignParams
+```ts
+editor.create: (docConfig?: CreateDocConfig, appConfig?: BaseEditorAppConfig, exportConfig?: ExportOptions, containerConfig?: ContainerConfig): void
+```
 
 All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [CreateInputParams](#createinputparams) | Input parameters when creating a design.
-| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| docConfig | [CreateDocConfig](#createdocconfig) | Pass a custom canvas size
+| appConfig | [BaseEditorAppConfig](#baseeditorappconfig) | Parameters to configure editor/modal UI
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
-### CreateInputParams
+### CreateDocConfig
 
-`CreateInputParams` allows you to configure the editor to be launched for the user.
+`CreateDocConfig` allows you to pass a custom canvas size.
 
 | Property | Type| Description
 | :-- | :--| :--
 | canvasSize| [Size](../../types/index.md#size)/[CanvasAspectId](../../types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
-| editorPanelView | [EditorPanelView](../../types/index.md#editorpanelview) | Determines which panel view to open by default.
-| exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
-| panelSearchText | string | Search text to pass in the editor for selected panel.
+
+### BaseEditorAppConfig
+
+`BaseEditorAppConfig` allows you to configure the editor to be launched for the user.
+
+| Property | Type| Description
+| :-- | :--| :--
+| selectedCategory | [EditorPanelView](../../types/index.md#editorpanelview) | Determines which panel view to open by default.
+| categorySearchText | string | Search text to pass in the editor for selected panel.
 | templateType | [TemplateType](../../types/index.md#templatetype) | Specify template type for canvas.
+| multiPage | boolean | Defaults to `true`. Set to `false` if multi-page export is not supported.
+| allowedFileTypes | [FileType](../../types/index.md#filetype)[] | Specify the list of file types that the user can publish. By default, all formats (PNG, JPEG, MP4 and PDF) are supported.
+
+View the full list of [canvas sizes](../../types/index.md#canvasaspectid) and [template types](../../types/index.md#templatetype).
 
 ## createWithAsset
 
+The `createWithAsset` method starts the full editor workflow with an asset.
+
 ```ts
-editor.createWithAsset: (createAssetDesignParams: CreateAssetDesignParams): void
+editor.createWithAsset: (docConfig: CreateWithAssetDocConfig, appConfig?: BaseEditorAppConfig, exportConfig?: ExportOptions, containerConfig?: ContainerConfig): void
 ```
-
-### CreateAssetDesignParams
-
-All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [CreateWithAssetInputParams](#createwithassetinputparams) | Input parameters when creating a design.
-| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| docConfig | [CreateWithAssetDocConfig](#createdocconfig) | Pass an image and custom canvas size
+| appConfig | [BaseEditorAppConfig](#baseeditorappconfig) | Parameters to configure editor/modal UI
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
-### CreateWithAssetInputParams
+### CreateWithAssetDocConfig
 
-`CreateInputParams` allows you to configure the editor to be launched for the user.
+`CreateWithAssetDocConfig` allows you to pass an image and/or a custom canvas size.
 
 | Property | Type| Description
 | :-- | :--| :--
 | canvasSize| [Size](../../types/index.md#size)/[CanvasAspectId](../../types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
 | asset | [Asset](../../types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
-| editorPanelView | [EditorPanelView](../../types/index.md#editorpanelview) | Determines which panel view to open by default.
-| exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
-| panelSearchText | string | Search text to pass in the editor for selected panel.
-| templateType | [TemplateType](../../types/index.md#templatetype) | Specify template type for canvas.
 
 ## edit
 
+The `edit` method lets you continue editing an existing Express project
+
 ```ts
-editor.edit: (editDesignParams: EditDesignParams): void
+editor.edit: (docConfig: EditDocConfig, appConfig?: BaseEditorAppConfig, exportConfig?: ExportOptions, containerConfig?: ContainerConfig): void
 ```
-
-### EditDesignParams
-
-All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure editor/modal UI
-| inputParams | [EditInputParams](#editinputparams) | Input parameters when editing a design.
-| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from the editor.
+| docConfig | [EditDocConfig](#editdocconfig) | Pass the document ID to open in the editor
+| appConfig | [BaseEditorAppConfig](#baseeditorappconfig) | Parameters to configure editor/modal UI
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
-### EditInputParams
+### EditDocConfig
 
-`EditInputParams` is where you pass the associated projectId to launch in an editor component.
-  
-| Property | Type | Description
-| :-- | :--| :--
-| projectId| string | Project ID of the asset returned from `onPublish` callback when `createDesign` was invoked.
-| editorPanelView | [EditorPanelView](../../types/index.md#editorpanelview) | Determines which panel view to open by default.
-| exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. If no export options are specified, the editor falls back to the default layout options.
-| panelSearchText | string | Search text to pass in the editor for selected panel.
+| Property | Type| Description
+| :-- | :-- | :--
+| documentId | string | Unique identifier of the asset returned from `onPublish` callback
 
-When a user completes their workflow in the editor, the associated **projectId** is sent back in [publishParams](../../types/index.md#publishparams) from the `onPublish` callback.
+When a user completes their workflow in the editor, the associated **documentId** is sent back in [publishParams](../../types/index.md#publishparams) from the `onPublish` callback.

@@ -36,7 +36,7 @@ Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on you
 
 [Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your own website with just a few lines of code. You can configure what export options are surfaced to your users once they are done with editing tasks (i.e. download, save back to app, edit in an embedded Adobe Express editor).
 
-### What are modules? (v4 beta)
+### What are modules?
 
 [Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **text to image** and **image editing**.
 

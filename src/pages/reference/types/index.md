@@ -78,7 +78,8 @@ Asset-related information received with `onPublish` callback.
 
 | Property | Description
 | :-- | :--
-| projectId | string generated for identifying the project
+| documentId | Unique identifier for the assets created/modified
+| exportButtonId | ID of the export button clicked
 | asset | Resulting asset: [OutputAsset](#outputasset)
 
 ### QuickActionPublishParams
@@ -226,6 +227,17 @@ Asset-related information received with `onPublish` callback in quick actions.
 
 <!-- | Name tag | "NameTag" | 
 | Place card | "PlaceCard" | -->
+
+## ContainerConfig
+
+Parameters to define editor modal dialog UI constraints.
+
+| Property | Type | Description
+| :-- | :--| :--
+| size | [Size](#size) | Maximum size boundary of the iframe (in pixels)
+| minSize | [Size](#size) | Maximum size boundary of the iframe (in pixels)
+| minSize | [Size](#size) | Padding applied to the iframe (in pixels)
+| borderRadius | number | Border radius applied to the iframe (in pixels)
 
 ## CCXOutputParams
 
