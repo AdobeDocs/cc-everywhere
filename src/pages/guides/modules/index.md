@@ -68,7 +68,7 @@ const { module} = await ccEverywhere.initialize(hostInfo, callbacks);
 let appConfig = {
     promptText: "Aliens sitting in lawn chairs"
 }
-miniEditor.createImageFromText(appConfig);
+module.createImageFromText(appConfig);
 ```
 
 ## Example: Image editing
@@ -125,5 +125,5 @@ const exportOptions = [{
         }
     ]
 }];
-miniEditor.editImage(docConfig, exportOptions);
+module.editImage(docConfig, exportOptions);
 ```
