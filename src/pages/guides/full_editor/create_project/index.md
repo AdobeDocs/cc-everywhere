@@ -59,6 +59,8 @@ The following code will invoke the full editor. It appears in a modal. When the 
 
 ``` ts title="create-new-project.js"
 // Initialize the SDK first
+const { editor } = await ccEverywhere.initialize(hostInfo); 
+
 const callbacks = {
     onCancel: () => {},
     onPublish: (intent,publishParams) => {
@@ -70,13 +72,14 @@ const callbacks = {
     },
 };
 
+let appConfig = { callbacks: callbacks}
+
 const updateImage = (localData) => {
     image_data.src = localData.image;
     project_id = localData.project;
 }
 
-const { editor } = await ccEverywhere.initialize(hostInfo, callbacks); 
-editor.create();
+editor.create(appConfig);
 ```
 
 ## Example: Create from asset
@@ -85,6 +88,8 @@ To launch the editor with a starting asset, the `createWithAsset` API takes a `a
 
 ``` ts title="create-from-asset.js" hl_lines="5"
 // Initialize the SDK first
+const { editor } = await ccEverywhere.initialize(hostInfo);
+
 const callbacks = {
     onCancel: () => {},
     onPublish: (intent,publishParams) => {
@@ -96,12 +101,13 @@ const callbacks = {
     },
 };
 
+let appConfig = { callbacks: callbacks}
+
 const updateImage = (localData) => {
     image_data.src = localData.image;
     project_id = localData.project;
 }
-
-const { editor } = await ccEverywhere.initialize(hostInfo, callbacks); 
+ 
 let docConfig = {
     asset: {
         data: base64Asset,
@@ -109,5 +115,5 @@ let docConfig = {
         type: 'image' 
     }
 }
-editor.createWithAsset(docConfig);
+editor.createWithAsset(docConfig, appConfig);
 ```

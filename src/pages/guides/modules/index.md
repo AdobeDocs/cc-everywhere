@@ -55,6 +55,7 @@ The only required property is `docConfig`.
 | Property | Type| Description
 | :-- | :-- | :--
 | docConfig | [EditImageDocConfig](../../reference/CCEverywhere/miniEditor/index.md#editimagedocconfig)| Pass an asset to preload into the image editing module
+| appConfig | [BaseEditorAppConfig](../../reference/CCEverywhere/miniEditor/index.md#baseeditorappconfig) | Pass callback functions
 | exportConfig | [ExportOptions](../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
 
@@ -64,7 +65,7 @@ The following code will invoke the text-to-image module. In this example, we pas
 
 ``` ts title="text-to-image.js"
 // Initialize the SDK first
-const { module} = await ccEverywhere.initialize(hostInfo, callbacks); 
+const { module} = await ccEverywhere.initialize(hostInfo); 
 let appConfig = {
     promptText: "Aliens sitting in lawn chairs"
 }
@@ -77,7 +78,7 @@ The following code will invoke the image editing module.
 
 ``` ts title="image-editing.js"
 // Initialize the SDK first
-const { module } = await ccEverywhere.initialize(hostInfo, callbacks); 
+const { module } = await ccEverywhere.initialize(hostInfo); 
 let docConfig = {
     asset: {
         data: 'replace-with-base64-encoded-asset',

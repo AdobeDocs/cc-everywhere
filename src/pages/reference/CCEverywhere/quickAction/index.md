@@ -144,3 +144,4 @@ All the properties are optional.
 | :-- | :-- | :--
 | colorTheme | string | Sets color theme of editor ("darkest", "dark", "lightest", "light")
 | scale | string | Set the text scale for the quick actions editor ("medium" or "large")
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions

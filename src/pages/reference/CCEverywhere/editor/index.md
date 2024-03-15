@@ -65,6 +65,7 @@ All the properties in this object are optional.
 | templateType | [TemplateType](../../types/index.md#templatetype) | Specify template type for canvas.
 | multiPage | boolean | Defaults to `true`. Set to `false` if multi-page export is not supported.
 | allowedFileTypes | [FileType](../../types/index.md#filetype)[] | Specify the list of file types that the user can publish. By default, all formats (PNG, JPEG, MP4 and PDF) are supported.
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions
 
 <InlineAlert variant="info" slots="text1" />
 

@@ -73,6 +73,19 @@ Asset-related information received with `onPublish` callback in quick actions.
 | asset | Resulting asset: [OutputAsset](#outputasset)
 | exportButtonId | `id` passed in the `CustomExportButton` at time of invoking `openQuickAction`
 
+### Callbacks
+
+All the callbacks are optional and return void.
+
+| Property | Callback Function | Description
+| :-- | :-- | :--
+| onCancel | () => {}| Triggered when user closes the modal
+| onError | () => {} | Triggered upon error with associated error code
+| onLoadStart | () => {} | Triggered once modal begins to load
+| onLoad | () => {} | Triggered once modal is loaded
+| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
+| onPublish | (intent, [PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
+
 ## CanvasAspectId
 
 `CanvasAspectId` allows you to initializes the full editor loaded with canvas set to a particular size.
