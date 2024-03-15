@@ -45,7 +45,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js""></script>
 <script>
   (async () => {
-    const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
+    const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
   })();
 </script>
 ```
@@ -54,7 +54,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 
 ```js
 await import(CDN_URL);
-const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
+const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
 ```
 
 ### Dynamic script
@@ -67,7 +67,7 @@ const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, conf
       if (!window.CCEverywhere) {
           return;
         }
-        const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
+        const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
     };
     document.body.appendChild(script);
   })(document, CDN_URL);
@@ -75,7 +75,7 @@ const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, conf
 
 ## Step 3: Initialize the SDK
 
-The SDK should only be initialized once each page. To initialize the SDK, pass the following objects: `HostInfo` and `Callbacks`.
+The SDK should only be initialized once each page. To initialize the SDK, pass the following objects: `HostInfo` and `ConfigParams`.
 
 ### HostInfo
 
@@ -84,11 +84,10 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 
 ```js
 (async () => {
-    const callbacks = {};
     const ccEverywhere = await window.CCEverywhere.initialize({
       clientId: <CLIENT_ID>,
       appName: <APP_NAME>,
-    }, callbacks);
+    });
 })();
 ```
 

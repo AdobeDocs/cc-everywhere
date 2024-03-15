@@ -13,7 +13,14 @@ contributors:
 
 # Changelog
 
-## [4.2.29] - 2024-03-12
+## [4.2.30] - 2024-03-14
+
+### Breaking Changes
+
+- `callbacks` are no longer set in the `initialize` method
+- Every API now accepts `appConfig`. Callbacks are now part of `appConfig`.
+
+## [4.2.29] - 2024-03-14
 
 ### Breaking Changes
 

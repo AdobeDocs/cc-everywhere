@@ -22,10 +22,10 @@ contributors:
 
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams) and [Callbacks](#callbacks), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
 
 ```ts
-initialize: (hostInfo: HostInfo, configParams?: ConfigParams, callbacks?: Callbacks) => Promise<CCEverywhere>
+initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
 ```
 
 ### HostInfo
@@ -47,19 +47,6 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
 | loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
 
-### Callbacks
-
-All the callbacks are optional and return void.
-
-| Property | Callback Function | Description
-| :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes the modal
-| onError | () => {} | Triggered upon error with associated error code
-| onLoadStart | () => {} | Triggered once modal begins to load
-| onLoad | () => {} | Triggered once modal is loaded
-| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | (intent, [PublishParams](../types/index.md#publishparams) or [QuickActionPublishParams](../types/index.md#quickactionpublishparams)) => {} | Triggered when publish/download is complete
-
 ### Example
 
 ```ts
@@ -75,18 +62,7 @@ All the callbacks are optional and return void.
     loginMode: 'delayed'
   }
 
-  let callbacks = {
-    onCancel: () => {},
-    onPublish: (intent, publishParams) => {
-      const localData = { asset: publishParams.asset[0].data}
-      console.log("Published asset", publishParams)
-    },
-    onError: (err) => {
-      console.error('Error received is', err.toString())
-    }
-  }
-
-  const ccEverywhere = await window.CCEverywhere.initialize(hostInfo, configParams, callbacks);
+  const ccEverywhere = await window.CCEverywhere.initialize(hostInfo, configParams);
 })();
 ```
 

@@ -31,11 +31,12 @@ All the properties in this object are optional.
 
 ### TextToImageAppConfig
 
-`TextToImageAppConfig` allows you to pass a prompt to be passed into the editor.
+`TextToImageAppConfig` allows you to pass a prompt into the editor, and configure callback functions.
 
 | Property | Type| Description
 | :-- | :--| :--
 | promptText| string | Optional string to launch the text to image module with a prompt
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions
 
 ## editImage
 
