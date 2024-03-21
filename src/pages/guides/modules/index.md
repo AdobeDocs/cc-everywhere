@@ -18,7 +18,7 @@ contributors:
 
 # Modules
 
-This guide will demonstrate how to embed our Text to Image and Image Editing modules in your own application.
+This guide will demonstrate how to embed our Text to Image and Edit Image modules in your own application.
 
 ## createImageFromText()
 
@@ -54,7 +54,7 @@ The only required property is `docConfig`.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| docConfig | [EditImageDocConfig](../../reference/CCEverywhere/miniEditor/index.md#editimagedocconfig)| Pass an asset to preload into the image editing module
+| docConfig | [EditImageDocConfig](../../reference/CCEverywhere/miniEditor/index.md#editimagedocconfig)| Pass an asset to preload into the Edit Image module
 | appConfig | [BaseEditorAppConfig](../../reference/CCEverywhere/miniEditor/index.md#baseeditorappconfig) | Pass callback functions
 | exportConfig | [ExportOptions](../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
@@ -72,9 +72,9 @@ let appConfig = {
 module.createImageFromText(appConfig);
 ```
 
-## Example: Image editing
+## Example: Edit Image
 
-The following code will invoke the image editing module.
+The following code will invoke the Edit Image module.
 
 ``` ts title="image-editing.js"
 // Initialize the SDK first
