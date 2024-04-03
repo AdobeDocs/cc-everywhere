@@ -71,7 +71,7 @@ let appConfig = {
 module.createImageFromText(appConfig);
 ```
 
-## Example: Edit Image module
+## Example: Edit Image
 
 The following code will invoke the Edit Image module.
 
