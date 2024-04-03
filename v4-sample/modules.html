@@ -47,13 +47,15 @@
             <span class="spectrum-Button-label">Clear Prompt</span>
         </button>
 
+
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Edit Image</h2>
+
         <input type="file" id="fileInput" accept="image/*,video/*"/>
         <button id="reset">Reset</button><p></p>
         <p class="spectrum-Body spectrum-Body--sizeL">Select a file before you launch the module.</p>
 
         <button id="image-edit" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-            <span class="spectrum-Button-label">Image Editing</span>
+            <span class="spectrum-Button-label">Edit Image</span>
         </button>
         
         <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
@@ -100,7 +102,7 @@
             }
         }
 
-        const {module} = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
+        const {module} = await window.CCEverywhere.initialize(initializeParams, configParams);
 
         document.getElementById("full-editor").addEventListener('click', () => {
             window.location.href = "https://localhost:8000/";
@@ -151,7 +153,7 @@
                     uiType: 'button'
                 },
                 options: [
-                    {
+                  {
                         id: 'exportOption1',
                         style: {
                             uiType: 'dropdown'
@@ -160,27 +162,37 @@
                             target: 'express',
                             intent: 'add-icons-and-shapes'
                         }
+                  },
+                  {
+                    id: 'exportOption2',
+                    style: {
+                        uiType: 'dropdown'
                     },
-                    {
-                        id: 'exportOption2',
-                        style: {
-                            uiType: 'dropdown'
-                        },
-                        action: {
-                            target: 'express',
-                            intent: 'add-images'
-                        }
-                    },
-                    {
-                        id: 'exportOption3',
-                        style: {
-                            uiType: 'dropdown'
-                        },
-                        action: {
-                            target: 'express',
-                            intent: 'add-effects'
-                        }
+                    action: {
+                        target: 'image-module',
+                        intent: 'remove-background'
                     }
+                  },
+                  {
+                    id: 'exportOption3',
+                    style: {
+                        uiType: 'dropdown'
+                    },
+                    action: {
+                        target: 'express',
+                        intent: 'add-images'
+                    }
+                  },
+                  {
+                    id: 'exportOption4',
+                    style: {
+                        uiType: 'dropdown'
+                    },
+                    action: {
+                        target: 'express',
+                        intent: 'add-text'
+                    }
+                  }
                 ]
             }
         ];
@@ -191,11 +203,16 @@
             return {allowedFileTypes};
         }
 
+        
+
         const textToImageModule = () => {
-            let config = {
+            let appConfig = {
                 promptText: (document.getElementById('textfield-focused').value),
+                callbacks: callbacks
             }
-            module.createImageFromText(config);
+            // The export options defined for the Text to Image module don't appear until the user selects a generative image
+            let exportConfig = exportOptions;
+            module.createImageFromText(appConfig, exportConfig);
         }
 
         const imageEditingModule = () => {
@@ -206,8 +223,9 @@
                     dataType: 'base64'
                 }
             }
+            let appConfig = { callbacks: callbacks };
             let exportConfig = exportOptions;
-            module.editImage(docConfig, exportConfig);
+            module.editImage(docConfig, appConfig, exportConfig);
         }
 
         // Button event listeners 

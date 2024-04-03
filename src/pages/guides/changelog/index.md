@@ -13,6 +13,13 @@ contributors:
 
 # Changelog
 
+## [4.4.15] - 2024-04-02
+
+### Added
+
+- `CCEverywhere.terminate`: We have added the terminate API to SDK v4. Once it is called, performing any action should fail with error SDK_NOT_INITIALIZED unless SDK is initialized again.
+- Added [z-index](../../reference/types/index.md#containerconfig) support for the root container.
+
 ## [4.2.30] - 2024-03-14
 
 ### Breaking Changes
@@ -34,7 +41,7 @@ contributors:
 
 - We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:
   - Text to Image module: `ccEverywhere.module.createImageFromText()`
-  - Image Editing module: `ccEverywhere.module.editImage()`
+  - Edit Image module: `ccEverywhere.module.editImage()`
 - Delayed login is now available.
 
 ## [3.10.13] - 2023-11-06

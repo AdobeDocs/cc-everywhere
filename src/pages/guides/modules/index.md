@@ -5,7 +5,6 @@ keywords:
   - Mini editors
   - Text to image
   - Create image from text
-  - Image editing
   - Edit image 
   - miniEditor
   - editImage

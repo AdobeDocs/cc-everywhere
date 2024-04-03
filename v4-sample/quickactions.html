@@ -26,12 +26,12 @@
   </head>
   <body>
     <div class="sample spectrum-Typography">
-        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Quick actions </h1>
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Image quick actions </h1>
         <p class="spectrum-Body spectrum-Body--sizeL" > 
             This sample surfaces <b>three export buttons</b> to the user after a quick action workflow is complete:
         </p>
         <p class="spectrum-Body spectrum-Body--sizeL">1. [Native] <b>Download</b>: Downloads the modified asset to the user's computer.
-            <br>2. [Native] <b>Customize</b>: Sends user to an embedded editor to continue editing the modified asset.
+            <br>2. [Native] <b>Edit in Adobe Express</b>: Sends user to an embedded editor to continue editing the modified asset.
             <br>3. [Custom] <b>Save image</b>: Save and display the modified asset on this page. Use the button below to hide the image.
         </p> 
         <hr class="solid"> 
@@ -77,7 +77,7 @@
         <hr class="solid">
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
         <p class="spectrum-Body spectrum-Body--sizeL">
-            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support text-to-image and image editing modules.
+            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support Text to Image and Edit Image modules.
         </p>
         <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
             <span class="spectrum-Button-label" >Try modules</span>
@@ -118,7 +118,7 @@
             }
         }
 
-        const { quickAction } = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
+        const { quickAction } = await window.CCEverywhere.initialize(initializeParams, configParams);
 
 
         /* inputFile: file input picker */
@@ -129,7 +129,7 @@
         /* appImage:  the image container displayed in sample */
         var appImage = document.getElementById('image-container');
         const docConfig = {}
-        const appConfig = {}
+        const appConfig = { callbacks: callbacks}
         const modalParams = {}
 
         /* This event listener checks to see if the user uploads a new file 
@@ -173,7 +173,7 @@
                 style: {
                     uiType: 'button'
                 }
-            },
+            },    
             {
                 id: 'download',
                 label: 'Download',
