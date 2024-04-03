@@ -20,16 +20,13 @@
     <div class="sample spectrum-Typography">
         <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">Adobe Express Embed SDK: Full editor</h1>
         <p class="spectrum-Body spectrum-Body--sizeL">
-            The <b>Create Design</b> button will launch a new project for the user in an editor.
+            The <b>Create Design</b> button launches a blank new project in a full editor instance. Once you have published/saved a project, use <b>Edit Design</b> to resume editing the same project.
         </p>
         <button id="createDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
             <span class="spectrum-Button-label">Create Design</span>
         </button>
         <button id="editDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
             <span class="spectrum-Button-label">Edit Design</span>
-        </button>
-        <button id="reset" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
-            <span class="spectrum-Button-label">Hide</span>
         </button>
 
         <hr class="solid"> 
@@ -57,7 +54,7 @@
         <hr class="solid">
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
         <p class="spectrum-Body spectrum-Body--sizeL">
-            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support text-to-image and image editing modules.
+            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support Text to Image and Edit Image modules.
         </p>
         <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
             <span class="spectrum-Button-label" >Try modules</span>
@@ -84,19 +81,19 @@
             onCancel: () => {},
             onPublish: (intent,publishParams) => {
                 const localData = { project: publishParams.projectId, image: publishParams.asset[0].data };
-                updateImage(localData);
+                saveAndDisplayProject(localData);
             },
             onError: (err) => {
                 console.error('Error received is', err.toString());
             },
         };
 
-        const updateImage = (localData) => {
+        const saveAndDisplayProject = (localData) => {
             image_data.src = localData.image;
             project_id = localData.project;
         }
 
-        const { editor } = await window.CCEverywhere.initialize(initializeParams, configParams, callbacks);
+        const { editor } = await window.CCEverywhere.initialize(initializeParams, configParams);
 
         document.getElementById("image-QA").addEventListener('click', () => {
             window.location.href = "https://localhost:8000/quickactions.html";
@@ -155,14 +152,14 @@
         const createButton = document.getElementById("createDesign");
         createButton.addEventListener('click', () => {  
             let docConfig = {};
-            let appConfig = {}
+            let appConfig = { callbacks: callbacks }
             let exportConfig = exportOptions;  
             editor.create(docConfig, appConfig, exportConfig);
         });
 
         const createFromAsset = document.getElementById("createFromAsset");
         createFromAsset.addEventListener('click', () => {
-            let appConfig = {};
+            let appConfig = { callbacks: callbacks};
             let docConfig = {
                 asset: {
                     data: base64Asset,
@@ -181,26 +178,21 @@
                 documentId: project_id
             };
             let appConfig = {
-                selectedCategory: "media"
+                selectedCategory: "media",
+                callbacks: callbacks
             }
             let exportConfig = exportOptions;  
             editor.edit(docConfig, appConfig, exportConfig);
         });
 
-        document.getElementById("reset").addEventListener('click', ()=> {
-            image_data.src = '';
-            inputFile.value = '';
-            base64Asset = null;
-        })
-
         document.getElementById("hide").addEventListener('click', ()=> {
             inputFile.value = '';
             image_data.src = '';
+            base64Asset = null;
         })
     })();
         
         
     </script>
   </body>
-  
 </html>

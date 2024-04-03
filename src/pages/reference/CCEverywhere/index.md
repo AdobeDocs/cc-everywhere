@@ -16,7 +16,7 @@ As of today, it contains 3 properties:
 
 1. `editor`: Contains APIs for creating and editing in an embedded full editor
 2. `quickAction`: Contains APIs for launching quick actions
-3. `module`: Contains APIs for launching modules (text to image, image editing)
+3. `module`: Contains APIs for launching modules (Text to Image, Edit Image)
 
 <!-- 4. `close()`: Closes the active editor modal
 1. `terminate()`: Un-initializes the active `CCEverywhere` instance -->

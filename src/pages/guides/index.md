@@ -21,10 +21,10 @@ Adobe Express Embed SDK is an easy-to-integrate, customizable, all-in-one JavaSc
 
 ## Adobe Express Embed SDK
 
-<!-- <InlineAlert slots="text" />
+<InlineAlert slots="text" />
 
 **How likely are you to recommend integrating with Adobe Express Embed SDK to a fellow developer?** <br /><br />
-(Not at all likely) [1](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%221%22%7D&Source=documentation) • [2️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%222%22%7D&Source=documentation) • [3️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%223%22%7D&Source=documentation) • [4️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%224%22%7D&Source=documentation) • [5️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%225%22%7D&Source=documentation) • [6️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%226%22%7D&Source=documentation) • [7️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%227%22%7D&Source=documentation) • [8️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%228%22%7D&Source=documentation) • [9️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%229%22%7D&Source=documentation) • [10](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%2210%22%7D&Source=documentation) (Extremely likely) -->
+(Not at all likely) [1](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%221%22%7D&Source=documentation) • [2️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%222%22%7D&Source=documentation) • [3️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%223%22%7D&Source=documentation) • [4️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%224%22%7D&Source=documentation) • [5️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%225%22%7D&Source=documentation) • [6️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%226%22%7D&Source=documentation) • [7️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%227%22%7D&Source=documentation) • [8️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%228%22%7D&Source=documentation) • [9️](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%229%22%7D&Source=documentation) • [10](https://survey.adobe.com/jfe/form/SV_aaXJ0tEVSEIqFbo?Q_PopulateResponse=%7B%22QID42%22:%2210%22%7D&Source=documentation) (Extremely likely)
 
 Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on your own website. This documentation provides all the materials you need to get started with the SDK. Try them now in our [demo app](https://demo.expressembed.com/).
 
@@ -38,7 +38,7 @@ Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on you
 
 ### What are modules?
 
-[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **text to image** and **image editing**.
+[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **Text to Image** and **Edit Image**.
 
 ## Getting Started
 

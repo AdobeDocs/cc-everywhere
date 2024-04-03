@@ -3,6 +3,7 @@ keywords:
   - createImageFromText
   - TextToImage
   - Image editing
+  - Edit image 
   - v4
   - module
 title: editor reference
@@ -48,7 +49,7 @@ The only required property is `docConfig`.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| docConfig | [EditImageDocConfig](#editimagedocconfig) | Pass an asset to preload into the image editing module
+| docConfig | [EditImageDocConfig](#editimagedocconfig) | Pass an asset to preload into the Edit Image module
 | exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 

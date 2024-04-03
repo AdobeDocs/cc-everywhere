@@ -75,7 +75,7 @@ Asset-related information received with `onPublish` callback in quick actions.
 
 ### Callbacks
 
-All the callbacks are optional and return void.
+All the callbacks are optional and return void. Callbacks are defined in the `appConfig` object.
 
 | Property | Callback Function | Description
 | :-- | :-- | :--
@@ -229,9 +229,12 @@ Parameters to define editor modal dialog UI constraints.
 | Property | Type | Description
 | :-- | :--| :--
 | size | [Size](#size) | Maximum size boundary of the iframe (in pixels)
-| minSize | [Size](#size) | Maximum size boundary of the iframe (in pixels)
-| minSize | [Size](#size) | Padding applied to the iframe (in pixels)
+| minSize | [Size](#size) | Minimum size boundary of the iframe (in pixels)
+| padding | number | Padding applied to the iframe (in pixels)
 | borderRadius | number | Border radius applied to the iframe (in pixels)
+| showLoader | boolean | Show spinner while loading target app. Default is true.
+| loadTimeout | number | If target app does't open within this time (in ms, same as of setTimeout), the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
+| zIndex | number | Set the z-index of of the root container
 
 ## EditorPanelView
 
