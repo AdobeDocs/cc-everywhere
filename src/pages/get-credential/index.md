@@ -1,3 +1,3 @@
-import {CreateCredential} from "../../components/CreateCredential"
+import { GetCredentialApiKey } from "../../components/CreateCredential"
 
-<CreateCredential />
+<GetCredentialApiKey />
