@@ -4,12 +4,10 @@ import creativeCloud from "../pages/assets/cc-icon.png";
 
 const GetCredentialApiKey = () => {
 
-  const environmentValues = process.env;
-
-  console.log('environmentValues', environmentValues)
+  const { GATSBY_TEMPLATE_ID, GATSBY_PRODUCT_NAME } = process.env;
 
   return (
-    <GetCredential className="getCredentialContainer" templateId="664e39607dcc7c0e5a4a035b" productName='Express Embed SDK' >
+    <GetCredential className="getCredentialContainer" templateId={GATSBY_TEMPLATE_ID} productName={GATSBY_PRODUCT_NAME} >
 
       <GetCredential.SignIn title="Get credentials" paragraph="Create unique credentials that you will use to call multiple APIs from your application." buttonText="Sign in to create credentials" />
 
