@@ -179,19 +179,19 @@ module.exports = {
     app.use(
       "/console/api",
       createProxyMiddleware({
-        target: "https://developer-stage.adobe.com/console/api",
+        target: "https://developer-stage.adobe.com/",
         secure: false,
         changeOrigin: true,
       })
     );
     app.use("/templates", createProxyMiddleware({
-      target: "https://developer-stage.adobe.com/templates",
+      target: "https://developer-stage.adobe.com/",
       secure: false,
       changeOrigin: true,
     }));
 
     app.use("/ims", createProxyMiddleware({
-      target: "https://ims-na1-stg1.adobelogin.com/ims",
+      target: "https://developer-stage.adobe.com/",
       secure: false,
       changeOrigin: true,
     }));
