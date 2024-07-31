@@ -1,10 +1,26 @@
 import { React } from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import { GetCredential } from '@adobe/gatsby-theme-aio/src/components/GetCredential';
 import creativeCloud from "../pages/assets/cc-icon.png";
 
 const GetCredentialApiKey = () => {
 
   const { GATSBY_TEMPLATE_ID, GATSBY_PRODUCT_NAME } = process.env;
+
+  const data = useStaticQuery(
+    graphql`
+    query { 
+      allFile(filter: {name: {eq: "DemoCode"}}) {
+        edges {
+          node {
+            publicURL
+            name
+          }
+        }
+      }
+    }
+  `
+  )
 
   return (
     <GetCredential className="getCredentialContainer" templateId={GATSBY_TEMPLATE_ID} productName={GATSBY_PRODUCT_NAME} >
@@ -22,7 +38,7 @@ const GetCredentialApiKey = () => {
         </GetCredential.Form.Products>
 
         <GetCredential.Form.Downloads label="Download a personalized code sample" contextHelp={true} contextHelpHeading="Select Language">
-          <GetCredential.Form.Download title="JavaScript" href="https://acrobatservices.adobe.com/dc-integration-creation-app-cdn/8bab684/files/samples_q3_2023/PROD/dc-pdf-services-sdk-java-samples.zip" />
+          <GetCredential.Form.Download title="JavaScript" href={data?.allFile?.edges[0]?.node?.publicURL} />
         </GetCredential.Form.Downloads>
 
         <GetCredential.Form.AdobeDeveloperConsole label='By checking this box, you agree to' linkText="Adobe Developer Terms of Use" href="https://wwwimages2.adobe.com/content/dam/cc/en/legal/servicetou/Adobe-Developer-Additional-Terms_en-US_20230822.pdf" />
@@ -39,7 +55,7 @@ const GetCredentialApiKey = () => {
 
       </GetCredential.Form>
 
-      <GetCredential.UnknownError helpLinkText="Get Help" className="unKnownError" />
+      <GetCredential.UnknownError />
 
       <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" className="card_developer_console">
 
