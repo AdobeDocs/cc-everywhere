@@ -83,13 +83,13 @@ const GetCredentialApiKey = () => {
 
       </GetCredential.Card>
 
-      <GetCredential.Return title="Previously created projects" paragraph="Select a project and access your existing credentials for Firefly - Firefly and Creative Cloud Automation." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" className="card_developer_console">
+      <GetCredential.Return title="Previously created projects" paragraph="Select a project and access your existing credentials for Adobe Express Embed SDK." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" className="card_developer_console">
 
         <GetCredential.Return.Side>
           <GetCredential.Return.Side.Custom>
             <div style={{ display: "flex", gap: "30px", flexDirection: "column", width: "100%" }}>
               <h3 className='spectrum-Heading spectrum-Heading--sizeM'>Welcome back</h3>
-              <p className="spectrum-Body spectrum-Body--sizeM">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+              <p className="spectrum-Body spectrum-Body--sizeM">View your existing Adobe Express Embed SDK credentials and generate new ones. Quickly access your API keys to keep your projects running efficiently.</p>
             </div>
           </GetCredential.Return.Side.Custom>
           <GetCredential.Return.Side.NewCredential heading="Need another credential?" buttonLabel="Create new credential" />
@@ -117,12 +117,6 @@ const GetCredentialApiKey = () => {
         title="Get credentials"
         paragraph="Create unique credentials that you will use to call multiple APIs from your application."
       >
-        <GetCredential.RequestAccess.EdgeCase>
-          <GetCredential.RequestAccess.EdgeCase.NoProduct title="Your organization does not have access to Adobe Express Embed SDK" buttonLabel="Contact us to learn more" buttonLink="#someLink" />
-          <GetCredential.RequestAccess.EdgeCase.NotMember title="Access to Adobe Express Embed SDK APIs is not available at this time." buttonLabel="Learn more about Adobe Express Embed SDK" buttonLink="#someLink" />
-          <GetCredential.RequestAccess.EdgeCase.NotSignUp title="Adobe Express Embed SDK APIs is available as part of the beta program. Sign up for the program or log in to an account that has access." buttonLabel="Sign up for the beta" buttonLink="#someLink" />
-        </GetCredential.RequestAccess.EdgeCase>
-
         <GetCredential.RequestAccess.RestrictedAccess
           title="Restricted Access"
           buttonLabel="Request access"
@@ -131,15 +125,6 @@ const GetCredentialApiKey = () => {
             <GetCredential.RequestAccess.RestrictedAccess.Products.Product label="Adobe Express Embed SDK" icon={creativeCloud} />
           </GetCredential.RequestAccess.RestrictedAccess.Products>
         </GetCredential.RequestAccess.RestrictedAccess>
-        <GetCredential.RequestAccess.RequestAccessSide>
-          <div style="display : flex ; gap : 16px ; flex-direction : column;">
-            <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >API key credential</h3>
-            <p className="spectrum-Body spectrum-Body--sizeM">An API Key credential was created. The API key credential identifies your application to Adobe servers and can help accept or reject request originating from certain domains.</p>
-            <h3 className="spectrum-Heading spectrum-Heading--sizeS side-header" >Learn more</h3>
-            <a className="side-documentation" style={{ color: "#0265DC" }} href='https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/'>Quickstart guide</a>
-            <a className='side-documentation' style={{ color: "#0265DC" }} href='https://developer.adobe.com/express/embed-sdk/docs/guides/'>Adobe Express Embed SDK documentation</a>
-          </div>
-        </GetCredential.RequestAccess.RequestAccessSide>
       </GetCredential.RequestAccess>
 
     </GetCredential>
