@@ -25,13 +25,11 @@ contributors:
 
 # openQuickAction()
 
-<InlineAlert variant="error" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text" />
 
 IMPORTANT: Deprecation Warning
 
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
-
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
+We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
 
 This API is used for opening a quick action.
 
@@ -62,6 +60,7 @@ This ID is associated with the quick action you want to surface to your user.
 | Convert to PNG | 'convert-to-png' | Image
 | Resize image | 'resize-image' | Image
 | Remove background | 'remove-background' | Image
+| Generate QR code | 'generate-qr-code' | Image
 | Convert to GIF | 'convert-to-gif' | Video
 | Convert to MP4 | 'convert-to-mp4' | Video
 | Crop video | 'crop-video' | Video
@@ -69,6 +68,7 @@ This ID is associated with the quick action you want to surface to your user.
 | Resize video | 'resize-video' | Video
 | Trim video | 'trim-video' | Video
 | Animate from audio | 'animate-from-audio' | Video
+| Caption video | 'caption-video' | Video
 
 #### QuickActionInputParams
 

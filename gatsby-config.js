@@ -28,9 +28,13 @@ module.exports = {
       {
         title: 'SDK References',
         menu: [{
-          title: 'Reference',
-          description: 'v3 Reference',
+          title: 'v4 Reference',
+          description: 'v4 Reference',
           path: '/reference/'
+        },{
+          title: 'v3 Reference',
+          description: 'v3 Reference',
+          path: '/v3/reference/'
         }, {
          title: 'v2 Reference [Deprecated soon]',
          description: 'v2 Reference',
@@ -64,6 +68,10 @@ module.exports = {
             path: '/guides/full_editor/edit_project/'
           }
         ]
+      },
+      {
+        title: 'Modules',
+        path: '/guides/modules/',
       },
       {
         title: 'Quick actions',
@@ -133,36 +141,75 @@ module.exports = {
       },
       {
         title: 'Overview',
-        path:'/reference/',
+        path:'/v3/reference/',
       },
       {
         title: 'Initialize SDK',
+        path:'/v3/reference/initialize/',
+      },
+      {
+        title: 'v3 Reference',
+        path: '/v3/reference/CCEverywhere/',
+        pages: [
+          {
+            title: 'createDesign', 
+            path: '/v3/reference/CCEverywhere/create_design/'
+          },
+          {
+            title: 'editDesign', 
+            path: '/v3/reference/CCEverywhere/edit_design/'
+          },
+          {
+            title: 'openQuickAction',
+            path: '/v3/reference/CCEverywhere/quick_actions/',
+          }, 
+          {
+            title: 'close',
+            path: '/v3/reference/CCEverywhere/close/',
+          }, 
+          {
+            title: 'terminate',
+            path: '/v3/reference/CCEverywhere/terminate/',
+          }, 
+        ]
+      },
+      {
+        title: 'Types', 
+        path: '/v3/reference/types/'
+      },
+      {
+        title: 'Overview',
+        path:'/v3/reference/',
+      },
+      {
+        title: 'initialize',
         path:'/reference/initialize/',
       },
       {
         title: 'CCEverywhere',
         path: '/reference/CCEverywhere/',
+        expanded: 'true',
         pages: [
           {
-            title: 'createDesign', 
-            path: '/reference/CCEverywhere/create_design/'
+            title: 'editor', 
+            path: '/reference/CCEverywhere/editor/'
           },
           {
-            title: 'editDesign', 
-            path: '/reference/CCEverywhere/edit_design/'
+            title: 'quickAction', 
+            path: '/reference/CCEverywhere/quickAction/'
           },
           {
-            title: 'openQuickAction',
-            path: '/reference/CCEverywhere/quick_actions/',
+            title: 'module',
+            path: '/reference/CCEverywhere/miniEditor/',
           }, 
-          {
-            title: 'close',
-            path: '/reference/CCEverywhere/close/',
-          }, 
-          {
-            title: 'terminate',
-            path: '/reference/CCEverywhere/terminate/',
-          }, 
+          // {
+          //   title: 'close',
+          //   path: '/reference/CCEverywhere/close/',
+          // }, 
+          // {
+          //   title: 'terminate',
+          //   path: '/reference/CCEverywhere/terminate/',
+          // }, 
         ]
       },
       {

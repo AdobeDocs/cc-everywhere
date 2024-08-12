@@ -24,14 +24,6 @@ contributors:
 
 # Types
 
-<InlineAlert variant="error" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
-
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
-
 ## Asset
 
 Represents an asset that can be loaded into a full editor component, or loaded in for an image quick action.
@@ -61,26 +53,14 @@ String value used to define desired asset data type for images. For image output
 | BASE64     | "base64" |
 | URL    | "url" |
 
-## Callbacks
-
-All the callbacks are optional and return void.
-
-| Property | Callback Function | Description
-| :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes the modal
-| onError | () => {} | Triggered upon error with associated error code
-| onLoadStart | () => {} | Triggered once modal begins to load
-| onLoad | () => {} | Triggered once modal is loaded
-| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
-
 ### PublishParams
 
 Asset-related information received with `onPublish` callback.
 
 | Property | Description
 | :-- | :--
-| projectId | string generated for identifying the project
+| documentId | Unique identifier for the assets created/modified
+| exportButtonId | ID of the export button clicked
 | asset | Resulting asset: [OutputAsset](#outputasset)
 
 ### QuickActionPublishParams
@@ -89,9 +69,22 @@ Asset-related information received with `onPublish` callback in quick actions.
 
 | Property | Description
 | :-- | :--
-| projectId | string generated for identifying the project
+| documentId | string generated for identifying the project
 | asset | Resulting asset: [OutputAsset](#outputasset)
 | exportButtonId | `id` passed in the `CustomExportButton` at time of invoking `openQuickAction`
+
+### Callbacks
+
+All the callbacks are optional and return void. Callbacks are defined in the `appConfig` object.
+
+| Property | Callback Function | Description
+| :-- | :-- | :--
+| onCancel | () => {}| Triggered when user closes the modal
+| onError | () => {} | Triggered upon error with associated error code
+| onLoadStart | () => {} | Triggered once modal begins to load
+| onLoad | () => {} | Triggered once modal is loaded
+| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
+| onPublish | (intent, [PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
 
 ## CanvasAspectId
 
@@ -158,6 +151,12 @@ Asset-related information received with `onPublish` callback in quick actions.
 | Lesson plan | "LessonPlan" | 8.5 x 11in
 | Letter | "Letter" | 8.5 x 11in
 | Letterhead | "Letterhead" | 8.5 x 11in
+| Line ad (small) | "LineAdSmall" | 600 x 400 px
+| Line ad (square) | "LineAdSquare" | 1,080 x 1,080px
+| Line ad (vertical) | "LineAdVertical" | 1,080 x 1,920px
+| Line rich menu (large) | "LineRichMenuLarge" | 2,500 x 1,686px
+| Line rich menu (small) | "LineRichMenuSmall" | 2,500 x 843px
+| Line rich message | "LineRichMessage" | 1,040 x 1,040px
 | LinkedIn post | "LinkedinPost" | 1,920 x 1,920px
 | LinkedIn blog post | "LinkedInBlogPost" | 1,200 x 628px
 | LinkedIn profile cover | "LinkedInProfileCover" | 1,536 x 396px
@@ -171,6 +170,7 @@ Asset-related information received with `onPublish` callback in quick actions.
 | Mobile video | "MobileVideo" | 1,080 x 1,920px
 | Mug | "Mug" | 3.3 x 3.3in
 | Newsletter | "Newsletter" | 8.5 x 11in
+| Note header image | "NoteHeaderImage" | 1,280 x 670px
 | Pamphlet | "Pamphlet" | 8.5 x 11in
 | Photo book | "PhotoBook" | 1,410 x 2,250px
 | Pinterest | "Pinterest" | 1,000 x 500px
@@ -222,21 +222,19 @@ Asset-related information received with `onPublish` callback in quick actions.
 <!-- | Name tag | "NameTag" | 
 | Place card | "PlaceCard" | -->
 
-## CCXOutputParams
+## ContainerConfig
 
-All properties are optional. Allows you to define data type and file type of output asset.
+Parameters to define editor modal dialog UI constraints.
 
 | Property | Type | Description
 | :-- | :--| :--
-| allowedFileTypes | [FileType](#filetype)[] | Output asset file types
-| outputType | [AssetDataType](#assetdatatype) | Output data type
-| multiPage | boolean | Defines whether the user can save multi-page projects
-| imageQuality | number | Value between 0 and 1 to control the quality of the image
-| videoQuality | [VideoQuality](#videoquality) | Controls the quality of the video
-
-<InlineAlert variant="info" slots="text1" />
-
-Use `allowedFileTypes` to specify the list of filetypes that the user can download. This can be used to limit the download options as per file types for end users. This limitation is applied to both native download and custom download scenarios.
+| size | [Size](#size) | Maximum size boundary of the iframe (in pixels)
+| minSize | [Size](#size) | Minimum size boundary of the iframe (in pixels)
+| padding | number | Padding applied to the iframe (in pixels)
+| borderRadius | number | Border radius applied to the iframe (in pixels)
+| showLoader | boolean | Show spinner while loading target app. Default is true.
+| loadTimeout | number | If target app does't open within this time (in ms, same as of setTimeout), the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
+| zIndex | number | Set the z-index of of the root container
 
 ## EditorPanelView
 
@@ -255,64 +253,45 @@ Optional string value that determines if the left panel should open by default. 
 
 Export options to surface to your user in the iframe. If no export options are specified, the editor falls back to the default layout options.
 
-`ExportOptions`:  [CustomExportButton](#customexportbutton) | [CustomExportLink](#customexportlink) | [ExportButtonGroup](#exportbuttongroup) | [NativeExportButton](#nativeexportbutton)
+`ExportOptions`:  [ExportOption](#exportoption) | [ExportOptionGroup](#exportoptiongroup)
 
-<!-- ### ExportOptionType
-
-`optionType` property of `ExportOption`. Describes the type of `ExportOption`
-
-| Type | Value | Description
-| :-- | :-- | :-
-| "group" | Quick action will render a drop-down button
-| "button" | Quick action will render a standalone single button
-| "link" | Quick action will render text with hyperlink to export asset -->
-
-### CustomExportButton
+### ExportOption
 
 | Property   | Type    | Description
 | ----------- | --------------- | ---
-| id    | string | The id of the export button. On button click, this id will be passed back in `onPublish` callback along with the asset data.
+| id    | string | The id of the export button. On user export, this will be passed back as `publishParams.exportButtonId`
 | label   | string | Localized text of the export button.
-| target     | "Host" | Renders a custom button that on click, passes the asset back to the client.
-| closeTargetOnExport (optional)  |  boolean | The embed container will be closed after successful export if this is set to true. Defaults to false to conform to backward compatibility.
-| variant (optional)  | "accent", "primary", or "secondary" | Style of the export button.
-| optionType | "button" | Renders a standalone single button.
-| buttonType | "custom"  | Type of export button.
+| action     | [`ExportAction`](#exportaction) | Object with property `target` (string) that can be either `button` or `dropdown`
+| style | object | Object with property `uiType` (string) that can be either `button` or `dropdown` (when the button is in a dropdown)
 
-<InlineAlert variant="info" slots="text1" />
-
-The variant option 'cta' has been replaced with 'accent' Going forward, we will remove the support of 'cta' variant from SDK.
-
-### CustomExportLink
+### ExportAction
 
 | Property   | Type    | Description
 | ----------- | --------------- | ---
-| id    | string | The id of the export button. On button click, this id will be passed back in `onPublish` callback along with the asset data.
-| label   | string | Localized text of the export button.
-| target     | "Host" | Renders a custom button that on click, passes the asset back to the client.
-| closeTargetOnExport (optional)  |  boolean | The embed container will be closed after successful export if this is set to true. Defaults to false to conform to backward compatibility.
-| optionType | "link" | Renders text with hyperlink to export asset.
+| target   | string | The id of the export button. Can be `download`, `publish`, `express` (continue in full editor), `image-module` (continue with mini editor).
+| intent | [EditFurtherIntent](#editfurtherintent) | Intent specifies a particular action to start at within the target surface. Relevant when `target` is `express`.
+| outputType   | [AssetDataType](#assetdatatype) | Desired asset type. For images, can be `base64` (default) or `url`. For videos, it will always be `url` irrespective of this property.
+| publishFileType   | [FileType](#filetype) | The file type of the asset to be published.
 
-### ExportButtonGroup
+### EditFurtherIntent
+
+| EditFurtherIntent  | Target | Description
+| ----------- | --------------- | ---------------
+| 'add-text'  | 'express' | Opens to "Text" category in full editor
+| 'add-icons-and-shapes'  |'express' | Opens "Elements" category in full editor
+| 'add-images'  |'express' | Opens to "Media" category in full editor
+| 'add-effects'  | 'express' | Opens "Search" category in full editor
+
+### ExportOptionGroup
 
 Describes object that is used to render a group of buttons which will be shown as a dropdown under a parent button.
 
 | Property   | Type    | Description
 | ----------- | --------------- | ---
+| type | "continue-editing" | Type of button (dropdown for continue editing)
 | label | string | Localized text of the button group
-| buttons | List of `NativeExportButton` and/or `CustomExportButton` objects | Buttons in button group.
-| optionType | "group" | Type of export button.
-
-### NativeExportButton
-
-| Property   | Type    | Description
-| ----------- | --------------- | ---
-| id    | string | The id of the export button. On button click, this id will be passed back in `onPublish` callback along with the asset data.
-| label   | string | Localized text of the export button.
-| target     | "Download" or "Editor" | A button, which on click will either download the asset or open the asset in CCX editor.
-| variant (optional)  | "accent", "primary", or "secondary" | Style of the export button.
-| optionType | "button" | Renders a standalone single button.
-| buttonType | "native"  | Type of export button.
+| style | "button" | Buttons in button group.
+| options | [ExportOption](#exportoption)[] | Group of buttons in dropdown
 
 ## FileType
 
@@ -347,17 +326,6 @@ The Adobe Express Embed SDK lets you customize the locale during initialization.
 | 'fi_FI'| Finnish
 | 'zh_Hans_CN' | Chinese (simplified)
 | 'zh_Hant_TW'| Chinese (traditional)
-
-## ModalParams
-
-All properties are optional. Allows you to define the UI constraints of the modal.
-
-| Property | Type/Value |
-| :-- | :--|
-|parentElementId| string
-|size | [Size](#size)
-| padding | number
-| borderRadius | number
 
 ## OutputAsset
 
@@ -403,12 +371,19 @@ Developers can pass the `createDesign()` method a `TemplateType`, for the user t
 | Instagram reel | "instagram-reel"
 | Invitation | "invitation"
 | Invoice | "invoice"
+| Line ad (small) | "line-ad-small"
+| Line ad (square) | "line-ad-square"
+| Line ad (vertical) | "line-ad-vertical"
+| Line rich menu (large) | "line-rich-menu-large"
+| Line rich menu (small) | "line-rich-menu-small"
+| Line rich message (vertical) | "line-rich-message"
 | LinkedIn profile cover | "linkedin-profile-cover"
 | Logo | "logo"
 | Meme | "meme"
 | Menu | "menu"
 | Mobile video | "mobile-video"
 | Newsletter | "newsletter"
+| Note header image | "note-header-image"
 | Photo book | "photo-book"
 | Poster | "poster"
 | Presentation | "presentation"
@@ -420,13 +395,3 @@ Developers can pass the `createDesign()` method a `TemplateType`, for the user t
 | YouTube profile photo | "youtube-profile-photo"
 | YouTube thumbnail | "youtube-thumbnail"
 | YouTube video | "youtube-video"
-
-## VideoQuality
-
-Defines the quality/resolution of a video output.
-
-| Type   | Value
-| :----------- | :---------------
-| HD video quality    | "1280" |
-| FULL_HD video quality  | "1920" |
-| UHD video quality | "2160" |

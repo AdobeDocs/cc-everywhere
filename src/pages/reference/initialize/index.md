@@ -4,12 +4,14 @@ keywords:
   - Reference
   - Initialize
   - CCEverywhere
-  - v3
+  - v4
   - Locale
   - appName
   - platformCategory
   - HostInfo
   - ConfigParams
+  - Callbacks
+  - Delayed login
 title: Initialize SDK Reference
 description: This is the reference page for the initialize method.
 contributors:
@@ -17,14 +19,6 @@ contributors:
 --- 
 
 # Initialize SDK
-
-<InlineAlert variant="error" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
-
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
 
 ## initialize()
 
@@ -51,28 +45,32 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | :-- | :-- | :-- | :--
 | locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
 | skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
+| loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
 
 ### Example
 
 ```ts
 (async () => {
-  let host = { /* HostInfo */
+  let hostInfo = { /* HostInfo */
     clientId: CLIENT_ID,
     appName: APP_NAME, 
     appVersion: { major: 1, minor: 0 }, 
     platformCategory: 'web',
   }
 
-  let config = { locale = 'en_US'} /* ConfigParams (optional) */
+  const configParams = {
+    loginMode: 'delayed'
+  }
 
-  const ccEverywhere = await window.CCEverywhere.initialize(host, config);
+  const ccEverywhere = await window.CCEverywhere.initialize(hostInfo, configParams);
 })();
 ```
 
-The returned Promise-wrapped `CCEverywhere` object can then be used to call the other APIs of the SDK:
+The returned Promise-wrapped `CCEverywhere` object can then be used to access the other APIs of the SDK:
 
-1. `createDesign()`: Create a design from scratch or from a starting asset in the editor.
-2. `editDesign()`: Edit a design in the editor.
-3. `openQuickAction()`: Open a quick action in a modal.
-4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
-5. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void.
+1. `editor`: Create a design from scratch or from a starting asset in a full editor.
+2. `quickAction`: Launches a quick action.
+3. `module`: Opens a module in a modal.
+
+<!-- 4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
+1. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void. -->

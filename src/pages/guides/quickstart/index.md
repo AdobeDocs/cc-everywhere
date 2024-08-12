@@ -21,14 +21,6 @@ contributors:
 ---
 # Quickstart Guide
 
-<InlineAlert variant="warning" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
-
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
-
 This guide explains how to start using the Adobe Express Embed SDK in your own application.
 
 ## Step 1: Get an API Key
@@ -37,29 +29,23 @@ Create a new project in the [Developer Console](https://developer.adobe.com/cons
 
 Then, choose "Single-Page App" and register your domain in the "Allowed Domains" fields.
 
-<InlineAlert variant="info" slots="text1, text2" />
-
-Note: As of March 2023, the `redirectUri` parameter is no longer used. You do not need to include it in the `initialize()` method. The `exchangeAuthCodeForToken()` API no longer needs to be called.
-
-If you created a project prior to March 2023, please [create a new project](https://developer.adobe.com/console) and register your allowed domains.
-
 ## Step 2: Embed the SDK
 
-The latest [version](https://sdk.cc-embed.adobe.com/v3/version.json) of the SDK is available on Adobe's CDN:
+The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK is available on Adobe's CDN:
 
 ```js
-var CDN_URL = "https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js";
+var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"";
 ```
 
 You can read the [changelog](/src/pages/guides/changelog/index.md) to understand known issues as well as what changes have been made.
 
 ### Load via script tag
 
-```js
-<script src="https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js"></script>
+```html
+<script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js""></script>
 <script>
   (async () => {
-    const ccEverywhere = await window.CCEverywhere.initialize();
+    const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
   })();
 </script>
 ```
@@ -68,7 +54,7 @@ You can read the [changelog](/src/pages/guides/changelog/index.md) to understand
 
 ```js
 await import(CDN_URL);
-const ccEverywhere = await window.CCEverywhere.initialize();
+const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
 ```
 
 ### Dynamic script
@@ -81,7 +67,7 @@ const ccEverywhere = await window.CCEverywhere.initialize();
       if (!window.CCEverywhere) {
           return;
         }
-        const ccEverywhere = await window.CCEverywhere.initialize();
+        const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
     };
     document.body.appendChild(script);
   })(document, CDN_URL);
@@ -89,7 +75,9 @@ const ccEverywhere = await window.CCEverywhere.initialize();
 
 ## Step 3: Initialize the SDK
 
-The SDK should only be initialized once each page. To initialize the SDK, pass the default method `initialize()`:
+The SDK should only be initialized once each page. To initialize the SDK, pass the following objects: `HostInfo` and `ConfigParams`.
+
+### HostInfo
 
 * `CLIENT_ID` (string): API key from Developer Console
 * `APP_NAME` (string): Name of your integration/app. This name corresponds with the project folder created for your end users in Adobe Express.
@@ -103,13 +91,13 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
 })();
 ```
 
-This returns a `CCEverywhere` Class object, with three methods:
+The SDK can be launched delayed login, meaning users won't be asked to sign in until they export. Read more about the initialize API [here](../../reference/initialize/index.md).
 
-1. `openQuickAction()`: Launch an Adobe Express quick action
-2. `createDesign()`: Create a new project or start editing an image in an embedded editor
-3. `editDesign()`: Edit an existing project in an embedded editor
+Successful initialization returns a `CCEverywhere` Class object, with three properties:
 
-The SDK can be initialized with a customized locale. Read more about the initialize API [here](../../reference/initialize/index.md).
+1. `editor`
+2. `module`
+3. `quickAction`
 
 ## Next Steps: Explore the SDK
 
@@ -128,15 +116,22 @@ Users can access Adobe Express's huge template and asset library when starting w
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
+### [Modules](../guides/modules/index.md)
+
+Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
+
 ## Browser support
 
 Here are the minimum browser requirements for the SDK:
 
-| Browser name | Supported | Minimum version
-| :-- | :-- | : --
-| Safari | Yes  | 16 and above
-| Google Chrome | Yes | 100 and above
-| Microsoft Edge | Yes | 107 and above
-| Firefox | No | N/A
+| Browser name | Minimum version
+| :-- | : --
+| Safari  | 16 and onwards
+| Google Chrome | 100 and onwards
+| Microsoft Edge | 107 and onwards
+| Firefox | 117 and onwards
 
-The SDK will *not* work in incognito windows.
+Notes:
+
+* JavaScript must be enabled
+* The SDK will *not* work in incognito windows.

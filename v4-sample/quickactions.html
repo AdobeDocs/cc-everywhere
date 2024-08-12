@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
+  <head>
+    <title>Adobe Express Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/sidenav/dist/index-vars.css">
+    <style>
+        .sample {
+            margin: 3%;
+        }
+        hr.solid {
+            border-top: 2px solid #bbb;
+            margin: 2% 0%;
+        }
+        image-buttons, video-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1rem;
+            place-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sample spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Image quick actions </h1>
+        <p class="spectrum-Body spectrum-Body--sizeL" > 
+            This sample surfaces <b>three export buttons</b> to the user after a quick action workflow is complete:
+        </p>
+        <p class="spectrum-Body spectrum-Body--sizeL">1. [Native] <b>Download</b>: Downloads the modified asset to the user's computer.
+            <br>2. [Native] <b>Edit in Adobe Express</b>: Sends user to an embedded editor to continue editing the modified asset.
+            <br>3. [Custom] <b>Save image</b>: Save and display the modified asset on this page. Use the button below to hide the image.
+        </p> 
+        <hr class="solid"> 
+        <input type="file" id="fileInput" accept="image/*,video/*"/>
+        <button id="reset">Reset</button><p></p>
+        <p class="spectrum-Body spectrum-Body--sizeL">If a file is selected, it will continue to be used as an input until you click <b>Reset</b>.</p>
+        <div id="image-buttons">
+            <button id="crop-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Crop Image</span>
+            </button>
+            <button id="resize-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Resize Image</span>
+            </button>
+            <button id="convert-to-jpg" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to JPG</span>
+            </button>
+            <button id="convert-to-png" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to PNG</span>
+            </button>
+            <button id="convert-to-svg" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to SVG</span>
+            </button>
+            <button id="remove-background" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Remove Background</span>
+            </button>
+            <button id="generate-qr-code" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Generate QR Code</span>
+            </button>
+            <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Hide</span>
+            </button>
+        </div>
+        
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Full editor</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Go back to the full editor sample.
+        </p>
+        <button id="full-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try the full editor</span>
+        </button>
+
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support Text to Image and Edit Image modules.
+        </p>
+        <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try modules</span>
+        </button>
+
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Video quick actions</h2>
+        <button id="video-qa" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try video QA</span>
+        </button>
+        <img id="image-container" style="visibility:hidden;"/>
+    </div>
+    <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
+    <script type="text/javascript" >
+        
+    (async () => {
+        const initializeParams = {
+            clientId: 'your-client-id',
+            appName: 'V4 Sample',
+        }
+
+        const configParams = {
+            loginMode: 'delayed'
+        }
+
+        const callbacks = {
+            onCancel: () => {},
+            onPublish: (intent, publishParams) => {
+                const localData = { asset: publishParams.asset[0].data}
+                console.log("Published asset", publishParams)
+                if(publishParams.exportButtonId=="save-modified-asset"){
+                    appImage.src = localData.asset;
+                    appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const { quickAction } = await window.CCEverywhere.initialize(initializeParams, configParams);
+
+
+        /* inputFile: file input picker */
+        var inputFile = document.getElementById('fileInput');
+
+        /* base64Asset: base64 representation we pass into QA function */
+        var base64Asset; 
+        /* appImage:  the image container displayed in sample */
+        var appImage = document.getElementById('image-container');
+        const docConfig = {}
+        const appConfig = { callbacks: callbacks}
+        const modalParams = {}
+
+        /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        inputFile.addEventListener('change', (e) => {
+            const reader = new FileReader();
+            // reads file into base 64 data type
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                base64Asset = reader.result;
+                let asset = {
+                    data: base64Asset, 
+                    dataType: 'base64', 
+                    type: 'image'
+                };
+                docConfig.asset = asset;
+            }
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        document.getElementById("full-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/";
+        });
+        document.getElementById("mini-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/modules.html";
+        });
+        document.getElementById("video-qa").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/video-quickactions.html";
+        });
+            
+
+        const exportOptions = [
+            {
+                id: 'edit-in-express',
+                label: 'Edit in Adobe Express',
+                action: {
+                    target: 'express',
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },    
+            {
+                id: 'download',
+                label: 'Download',
+                action: {
+                    target: 'download'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'save-modified-asset',
+                label: 'Save image',
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+        ];
+
+        function imageQuickAction(qa_id) {            
+            let exportConfig = exportOptions;        
+            switch (qa_id) {
+                case 'convert-to-jpg':
+                    quickAction.convertToJPEG(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'convert-to-png':
+                    quickAction.convertToPNG(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'convert-to-svg':
+                    quickAction.convertToSVG(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'crop-image':
+                    quickAction.cropImage(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'resize-image':
+                    quickAction.resizeImage(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'remove-background':
+                    quickAction.removeBackground(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'generate-qr-code':
+                    quickAction.generateQRCode(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                default: break;
+            }
+        };
+
+        // Button event listeners 
+
+        let imageButtons = document.querySelectorAll('#image-buttons button');
+        imageButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                imageQuickAction(button.id)
+            })
+        })
+
+        document.getElementById('clear').addEventListener('click', () => {
+            appImage.src=null;
+            appImage.style.visibility="hidden";
+        })
+
+        document.getElementById('reset').addEventListener('click', () => {
+            inputFile.value = '';
+            base64Asset = null;
+            appImage.src = null;
+        })
+    })();
+    </script>
+  </body>
+</html>

@@ -57,11 +57,7 @@
         
         (async () => {
             const ccEverywhere = await window.CCEverywhere.initialize({
-                /* Get credentials at Adobe Developer Console.
-                During beta, your client will need to be enabled. 
-                Email your client ID (API Key) to amandah@adobe.com
-                */
-                clientId: 'YOUR_CLIENT_ID',
+                clientId: 'your-client-id',
                 appName: 'Partner Days Embed SDK Demo',
             });
             
@@ -106,6 +102,16 @@
                         console.error('Error received is', err.toString());
                     },
                 };
+
+                const exportOptions = [
+                {
+                        target: 'Host',
+                        id: 'save-modified-asset',
+                        label: 'Save image',
+                        optionType: 'button',
+                        buttonType: 'custom'
+                    },
+                ];
                  
                 ccEverywhere.createDesign({
                     callbacks: createDesignCallback,
@@ -123,6 +129,7 @@
                         editorPanelView: 'templates',
                         // templateType: 'brochure'
                         // panelSearchText: 'school'
+                        exportOptions: exportOptions
                     },
                     outputParams: {
                         outputType: "base64",
@@ -158,11 +165,6 @@
                                 data: encodedImage, 
                                 dataType: 'base64', 
                                 type: 'image'
-                            }, 
-                            canvasSize: {
-                                height: 1000,
-                                width: 3000,
-                                units: 'px'
                             }
                         },
                         outputParams: {

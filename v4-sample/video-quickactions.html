@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
+  <head>
+    <title>Adobe Express Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/sidenav/dist/index-vars.css">
+    <style>
+        .sample {
+            margin: 3%;
+        }
+        hr.solid {
+            border-top: 2px solid #bbb;
+            margin: 2% 0%;
+        }
+        image-buttons, video-buttons {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            gap: 1rem;
+            place-items: center;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sample spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Video quick actions </h1>
+        <p class="spectrum-Body spectrum-Body--sizeL" > 
+            This sample surfaces <b>three export buttons</b> to the user after a quick action workflow is complete:
+        </p>
+        <p class="spectrum-Body spectrum-Body--sizeL">1. [Native] <b>Download</b>: Downloads the modified asset to the user's computer.
+            <br>2. [Native] <b>Customize</b>: Sends user to an embedded editor to continue editing the modified asset.
+            <br>3. [Custom] <b>Save image</b>: Save and display the modified asset on this page. Use the button below to hide the image.
+        </p> 
+        <hr class="solid"> 
+        <p class="spectrum-Body spectrum-Body--sizeL">If a file is selected, it will continue to be used as an input until you click <b>Reset</b>.</p>
+        <div id="video-buttons">
+            <button id="crop-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Crop Video</span>
+            </button>
+            <button id="resize-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Resize Video</span>
+            </button>
+            <button id="convert-to-gif" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to GIF</span>
+            </button>
+            <button id="convert-to-mp4" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to MP4</span>
+            </button>
+            <button id="merge-videos" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Merge Videos</span>
+            </button>
+            <button id="trim-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Trim Video</span>
+            </button>
+            <button id="animate-from-audio" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Animate from Audio</span>
+            </button>
+            <button id="caption-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Caption Video</span>
+            </button>
+            <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Hide</span>
+            </button>
+            <hr class="solid">
+            <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Full editor</h2>
+            <p class="spectrum-Body spectrum-Body--sizeL">
+                Go back to the full editor sample.
+            </p>
+            <button id="full-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label" >Try the full editor</span>
+            </button>
+
+            <hr class="solid">
+            <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
+            <p class="spectrum-Body spectrum-Body--sizeL">
+                Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support Text to Image and Edit Image modules.
+            </p>
+            <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label" >Try modules</span>
+            </button>
+
+            <hr class="solid">
+            <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Quick actions</h2>
+            <button id="image-qa" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label" >Try image QA</span>
+            </button>
+        </div>
+        <img id="container" style="visibility:hidden;"/>
+    </div>
+    <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
+    <script type="text/javascript" >
+        
+    (async () => {
+        const initializeParams = {
+            clientId: 'your-client-id',
+            appName: 'V4 Sample',
+        }
+
+        const configParams = {
+            loginMode: 'delayed'
+        }
+
+        const callbacks = {
+            onCancel: () => {},
+            onPublish: (intent, publishParams) => {
+                const localData = { asset: publishParams.asset[0].data}
+                console.log("Published asset", publishParams)
+                if(publishParams.exportButtonId=="save-modified-asset"){
+                    appImage.src = localData.asset;
+                    appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const { quickAction } = await window.CCEverywhere.initialize(initializeParams, configParams);
+
+        /* appImage:  the image container displayed in sample */
+        var appImage = document.getElementById('container');
+        const docConfig = {}
+        const appConfig = { callbacks: callbacks }
+        const modalParams = {}
+
+        document.getElementById("full-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/";
+        });
+        document.getElementById("mini-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/modules.html";
+        });
+        document.getElementById("image-qa").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/quickactions.html";
+        });
+            
+        const exportOptions = [
+            {
+                id: 'edit-in-express',
+                label: 'Edit in Adobe Express',
+                action: {
+                    target: 'express',
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'download',
+                label: 'Download',
+                action: {
+                    target: 'download'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'save-modified-asset',
+                label: 'Save image',
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+        ];
+
+
+        function videoQuickAction(qa_id) {  
+            let exportConfig = exportOptions;        
+
+            switch (qa_id) {
+                case 'convert-to-gif':
+                    quickAction.convertToGIF(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'convert-to-mp4':
+                    quickAction.convertToMP4(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'crop-video':
+                    quickAction.cropVideo(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'merge-videos':
+                    quickAction.mergeVideos(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'resize-video':
+                    quickAction.resizeVideo(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'trim-video':
+                    quickAction.trimVideo(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'animate-from-audio':
+                    quickAction.animateFromAudio(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                case 'caption-video':
+                    quickAction.captionVideo(docConfig, appConfig, exportConfig, modalParams);
+                    break;
+                default: break;
+            }
+        };
+
+        // Button event listeners 
+
+        let videoButtons = document.querySelectorAll('#video-buttons button');
+        videoButtons.forEach((button) => {
+            button.addEventListener('click', () => {
+                videoQuickAction(button.id)
+            })
+        })
+        
+        document.getElementById('clear').addEventListener('click', () => {
+            appImage.src=null;
+            appImage.style.visibility="hidden";
+        })
+
+        document.getElementById('reset').addEventListener('click', () => {
+            appImage.src = null;
+        })
+    })();
+    </script>
+  </body>
+</html>

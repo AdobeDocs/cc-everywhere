@@ -10,23 +10,13 @@ contributors:
 
 # Submission and Review
 
-<InlineAlert variant="error" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
-
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
-
 Adobe reviews all applications that integrate Adobe Express Embed SDK before enabling it for public use.
 
 ## Before you submit
 
 ### Appropriate brand usage
 
-* Your integration must not violate the trademarks and copyrights of Adobe, Inc., or those of any other party. Please adhere to all trademark guidelines as noted here: <https://www.adobe.com/legal/permissions/trademarks.html>
-
-Before you submit your integration review, please review these [brand guidelines](../../assets/Adobe_Express_Partner_Program_brand_guide.pdf).
+  Read our brand guidelines. Before you submit your integration for review, please read our [brand guidelines](../../assets/Adobe_Express_Partner_Program_brand_guide.pdf). To adhere to our brand requirements, you can [download the assets here](https://developer.adobe.com/distribute/cc-brand-assets).
 
 ### Inappropriate content
 
@@ -43,9 +33,11 @@ Integrations may not contain or promote illegal or highly-regulated activities. 
 
 By creating a project using the SDK in Adobe Developer Console, you are agreeing to the Adobe Developer Terms of Use. Adobe reserves the right to disable your integration if your app does not adhere to the terms.
 
+Additionally, your integration must not violate the trademarks and copyrights of Adobe, Inc., or those of any other party. Please adhere to all trademark guidelines as noted here: <https://www.adobe.com/legal/permissions/trademarks.html>
+
 ## Submit your app
 
-1. Navigate to your project in Adobe Developer Console -- select "Submit for review" from the __Project overview__ tab or select the __Approval__ tab on the left panel. 
+1. Navigate to your project in Adobe Developer Console -- select "Submit for review" from the __Project overview__ tab or select the __Approval__ tab on the left panel.
    ![Submit for review in Console UI](submission.png)
 2. If this is your first Adobe integration, set up your public profile - note that the information that appears on your public profile will appear in the consent screen displayed to users.
 
@@ -53,9 +45,11 @@ By creating a project using the SDK in Adobe Developer Console, you are agreeing
 
 4. Fill out the fields in the __Approval Details__ section. In the __Notes to reviewer__ field, make sure to:
    * Provide steps for our review team to test the integration on your platform. If free sign-up is not available, please provide a set of working test credentials for our review team.
-   * Please note whether your app uses the full editor, quick actions, or both.
+   * Please note __what version__ of the SDK you are using. At this time we are only accepting v3 and above.
+   * Please note whether your app uses the full editor, quick actions, and/or modules.
    * Please list which quick actions(s), if any, you use in your application.
-   * Please list the intended behavior of any custom export buttons you use with the full editor or quick actions.
+   * Please list which modules, if any, you use in your application.
+   * Please list the intended behavior of any custom export buttons you use with the full editor, modules, or quick actions.
    * Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name. Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
    * Confirm that the SDK is never initialized more than once per page load.
 
@@ -78,18 +72,19 @@ By creating a project using the SDK in Adobe Developer Console, you are agreeing
 * All details are shown on the iFrame correctly; no truncation or overlapping of a button.
 * The editor launches accurately when customized input parameters are defined.
 * The editor launches with the right project when passed a valid (existing) Adobe Express project's ID.
-* `editDesign()` is not invoked until after a `createDesign()` API call is made, and a corresponding project ID is saved.
-* [Image quick actions only] If the integration lets users start with an existing asset, the iFrame should load with the user-selected image.
+* `edit()` is not invoked until after a `create()` or `createWithAsset()` API call is made, and a corresponding project ID is saved.
+* If the integration lets users start with an existing asset, the iFrame should load with the user-selected image.
 * The export buttons appear as the developer declared (in the "Notes for reviewers" section) during submission. Custom buttons should behave as defined.
 
 ### Common rejection reasons
 
 1. Your app or integration is not accessible via free user sign-up and test credentials are not provided to our review team for testing purposes.
-2. Your app description is not complete in the __Notes to reviewer__ section, and our review team cannot test all the entrypoints. Make sure you are clear about what your app integrates (full editor and/or quick actions) and where/how to invoke them.
+2. Your app description is not complete in the __Notes to reviewer__ section, and our review team cannot test all the entrypoints. Make sure you are clear about what your app integrates (full editor, modules, and/or quick actions) and where/how to invoke them.
+3. Your app name should correspond with the name of your project in Adobe Developer Console. This `appName` should also be consistent throughout your application. We use this property in our analytics checks so if there are any discrepancies, we will ask that you make that change before you are able to release the integration to your users.
 
 ## After you submit
 
-Congratulations! You're on your way to getting your integration into the hands of your users. Our teams are working on new submissions every day. Depending on volume, it can be up to 10 business days before you hear a response from us. Thank you for your patience as we review your submission.
+Congratulations! You're on your way to getting your integration into the hands of your users. Our teams are working on new submissions every day. Depending on volume, it can be up to 10 business days before you hear a response from us. On average, we approve integrations within 3 business days. Thank you for your patience as we review your submission.
 
 Once your submission has been reviewed, we will email you letting you know whether your submission was approved or rejected. If it was rejected, we will include the reasons for rejection along with any next steps. If you'd like to back and edit your submission, you can do so in the Developer Console.
 

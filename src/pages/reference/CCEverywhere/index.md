@@ -1,7 +1,7 @@
 ---
 keywords:
   - CCEverywhere
-  - v3
+  - v4
 title: CCEverywhere object
 description: This is the reference page for CCEverywhere object
 contributors:
@@ -10,20 +10,17 @@ contributors:
 
 # CCEverywhere 
 
-<InlineAlert variant="error" slots="header, text1, text2" />
+The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized. We have refactored the SDK APIs to be more verbose and intent-driven. All the APIs are segregated under three workflows, each of which are exposed as a property of `CCEverywhere`.
 
-IMPORTANT: Deprecation Warning
+As of today, it contains 3 properties:
 
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated later this year.
+1. `editor`: Contains APIs for creating and editing in an embedded full editor
+2. `quickAction`: Contains APIs for launching quick actions
+3. `module`: Contains APIs for launching modules (Text to Image, Edit Image)
 
-While we are in beta, all v3 clients are disabled by default. **Please share your API key with amandah@adobe.com to begin development.**
+<!-- 4. `close()`: Closes the active editor modal
+1. `terminate()`: Un-initializes the active `CCEverywhere` instance -->
 
-The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized.
-
-As of today, it exposes 5 methods:
-
-1. `createDesign()`: Full editor component
-2. `editDesign()`: Full editor component
-3. `openQuickAction()`: Quick actions component
-4. `close()`: Closes the active editor modal
-5. `terminate()`: Un-initializes the active `CCEverywhere` instance
+```js
+const { editor, module, quickAction } = await ccEverywhere.initialize();
+```

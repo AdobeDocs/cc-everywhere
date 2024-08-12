@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
+  <head>
+    <title>Adobe Express Embed SDK Sample</title>
+    <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/button/dist/index-vars.css">
+    <link rel="stylesheet" href="node_modules/@spectrum-css/typography/dist/index-vars.css">
+    <style>
+        .sample {
+            margin: 3%;
+        }
+        hr.solid {
+            border-top: 2px solid #bbb;
+            margin: 2% 0%;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="sample spectrum-Typography">
+        <h1 class="spectrum-Heading spectrum-Heading--sizeXXL">Adobe Express Embed SDK: Full editor</h1>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            The <b>Create Design</b> button launches a blank new project in a full editor instance. Once you have published/saved a project, use <b>Edit Design</b> to resume editing the same project.
+        </p>
+        <button id="createDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Create Design</span>
+        </button>
+        <button id="editDesign" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Edit Design</span>
+        </button>
+
+        <hr class="solid"> 
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            To load an image or video into the editor, choose a file then click <b>Create from asset</b>.
+        </p>
+        <input type="file" id="fileInput" accept="image/*,video/*"/>
+        <button id="hide">Reset</button><p></p>
+        <button id="createFromAsset" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label">Create from asset</span>
+        </button>
+
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Quick actions</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Quick actions allow users to perform complex operations such as "Remove Background" without needing to leave your application.
+        </p>
+        <button id="image-QA" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try image QA</span>
+        </button>
+        <button id="video-QA" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try video QA</span>
+        </button>
+
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Modules</h2>
+        <p class="spectrum-Body spectrum-Body--sizeL">
+            Modules allow you to surface contextually relevant mini-editing experiences to your users. We currently support Text to Image and Edit Image modules.
+        </p>
+        <button id="mini-editor" class="spectrum-Button spectrum-Button--outline spectrum-Button--primary spectrum-Button--sizeL" >
+            <span class="spectrum-Button-label" >Try modules</span>
+        </button>
+    </div>
+    <img id="savedDesign"/>
+    <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
+    <script type="text/javascript" >
+        
+    (async () => {
+        const initializeParams = {
+            clientId: 'your-client-id',
+            appName: 'V4 Sample',
+        }
+        
+        const configParams = {
+            loginMode: 'delayed'
+        }
+        
+        var project_id = null;
+        var image_data = document.getElementById("savedDesign");
+
+        const callbacks = {
+            onCancel: () => {},
+            onPublish: (intent,publishParams) => {
+                const localData = { project: publishParams.projectId, image: publishParams.asset[0].data };
+                saveAndDisplayProject(localData);
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString());
+            },
+        };
+
+        const saveAndDisplayProject = (localData) => {
+            image_data.src = localData.image;
+            project_id = localData.project;
+        }
+
+        const { editor } = await window.CCEverywhere.initialize(initializeParams, configParams);
+
+        document.getElementById("image-QA").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/quickactions.html";
+        });
+        document.getElementById("video-QA").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/video-quickactions.html";
+        });
+        document.getElementById("mini-editor").addEventListener('click', () => {
+            window.location.href = "https://localhost:8000/modules.html";
+        });
+
+        /* inputFile: file input picker */
+        var inputFile = document.getElementById('fileInput');
+
+        /* base64Asset: base64 representation we pass into function */
+        var base64Asset; 
+
+            /* This event listener checks to see if the user uploads a new file 
+        and reads it into base64 data type for SDK ingestion later */
+        inputFile.addEventListener('change', (e) => {
+            const reader = new FileReader();
+            // reads file into base 64 data type
+            reader.readAsDataURL(e.target.files[0]);
+            reader.onload = () => {
+                base64Asset = reader.result;
+            }
+            
+            reader.onerror = (error) => {
+                console.log('error', error);
+            };
+        })
+
+        const exportOptions = [
+            {
+                id: 'download',
+                label: 'Download',
+                action: {
+                    target: 'download'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'save-modified-asset',
+                label: 'Save image',
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+        ];
+
+        const createButton = document.getElementById("createDesign");
+        createButton.addEventListener('click', () => {  
+            let docConfig = {};
+            let appConfig = { callbacks: callbacks }
+            let exportConfig = exportOptions;  
+            editor.create(docConfig, appConfig, exportConfig);
+        });
+
+        const createFromAsset = document.getElementById("createFromAsset");
+        createFromAsset.addEventListener('click', () => {
+            let appConfig = { callbacks: callbacks};
+            let docConfig = {
+                asset: {
+                    data: base64Asset,
+                    dataType: 'base64',
+                    type: 'image' 
+                }
+            }
+            let exportConfig = exportOptions;
+            editor.createWithAsset(docConfig, appConfig, exportConfig)
+        });
+
+        
+        const editButton = document.getElementById("editDesign");
+        editButton.addEventListener('click', () => {
+            let docConfig = {
+                documentId: project_id
+            };
+            let appConfig = {
+                selectedCategory: "media",
+                callbacks: callbacks
+            }
+            let exportConfig = exportOptions;  
+            editor.edit(docConfig, appConfig, exportConfig);
+        });
+
+        document.getElementById("hide").addEventListener('click', ()=> {
+            inputFile.value = '';
+            image_data.src = '';
+            base64Asset = null;
+        })
+    })();
+        
+        
+    </script>
+  </body>
+</html>
