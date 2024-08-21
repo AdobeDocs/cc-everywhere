@@ -18,6 +18,7 @@ title: Quickstart Guide
 description: This is the quickstart guide for Adobe Express Embed SDK
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
 ---
 # Quickstart Guide
 
