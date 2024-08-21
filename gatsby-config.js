@@ -12,6 +12,8 @@
 
 module.exports = {
   siteMetadata: {
+    template_id: process.env.GATSBY_TEMPLATE_ID || '664e39607dcc7c0e5a4a035b',
+    product_name: process.env.GATSBY_PRODUCT_NAME || 'Adobe Express Embed SDK',
     docs: {
       title: 'Get credentials',
       path: '/get-credential/'
