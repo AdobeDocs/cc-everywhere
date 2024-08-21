@@ -8,6 +8,9 @@ const GetCredentialApiKey = () => {
   // GATSBY_TEMPLATE_ID=66...
   // GATSBY_PRODUCT_NAME=Adobe...SDK
   const { GATSBY_TEMPLATE_ID, GATSBY_PRODUCT_NAME } = process.env;
+  console.log('GATSBY_TEMPLATE_ID', GATSBY_TEMPLATE_ID)
+  console.log('GATSBY_PRODUCT_NAME', GATSBY_PRODUCT_NAME)
+  console.log('process.env', process.env)
 
   const data = useStaticQuery(
     graphql`
