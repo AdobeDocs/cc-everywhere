@@ -26,16 +26,16 @@ This guide explains how to start using the Adobe Express Embed SDK in your own a
 
 ## Step 1: Get an API Key
 
-Follow the below steps to get an API Key. 
+Follow the below steps to get an API Key.
 
 1. Navigate to the [Developer Console](https://developer.adobe.com/console).
-2. Select **APIs and services**. 
+2. Select **APIs and services**.
 3. Search for **Adobe Express Embed SDK**.
 4. Click **Create project**.
 
-On the **Configure API** section, 
+On the **Configure API** section,
 
-1. Add your **Allowed domains** in the fields. To prevent unauthorized use of your client ID on another website, restrict usage to the domains you authorize. 
+1. Add your **Allowed domains** in the fields. To prevent unauthorized use of your client ID on another website, restrict usage to the domains you authorize.
 2. Click **Save configured API**. The API key is displayed on the screen.
 
 ## Step 2: Embed the SDK
