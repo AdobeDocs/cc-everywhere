@@ -140,8 +140,8 @@ jobs:
           GOOGLE_OAUTH_CLIENT_SECRET: ${{ secrets.GOOGLE_OAUTH_CLIENT_SECRET }}
           GOOGLE_DOCS_TOKEN: ${{ secrets.GOOGLE_DOCS_TOKEN }}
           GOOGLE_DOCS_FOLDER_ID: ${{ secrets.GOOGLE_DOCS_FOLDER_ID }}
-          GATSBY_IMS_SRC: ${{ secrets.AIO_IMS_DEV_SRC }}
-          GATSBY_IMS_CONFIG: ${{ secrets.AIO_IMS_DEV_CONFIG }}
+          GATSBY_IMS_SRC: "https://auth-stg1.services.adobe.com/imslib/imslib.min.js"
+          GATSBY_IMS_CONFIG: '{"client_id": "stage_adobe_io", "scope": "AdobeID,openid,unified_dev_portal,read_organizations,additional_info.projectedProductContext,additional_info.roles,gnav,read_pc.dma_bullseye,creative_sdk,adobeio_api,service_principals.read,service_principals.write,read_client_secret", "environment": "stg1"}'
           GATSBY_ALGOLIA_APPLICATION_ID: ${{ secrets.AIO_ALGOLIA_APPLICATION_ID }}
           GATSBY_ALGOLIA_SEARCH_API_KEY: ${{ secrets.AIO_ALGOLIA_SEARCH_API_KEY }}
           GATSBY_ALGOLIA_APP_ID: ${{ secrets.AIO_ALGOLIA_APP_ID }}
@@ -151,8 +151,8 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_SITE_DOMAIN_URL: https://developer-stage.adobe.com
-          GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
-          GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
+          GATSBY_TEMPLATE_ID:  "664e39607dcc7c0e5a4a035b"
+          GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
 
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
