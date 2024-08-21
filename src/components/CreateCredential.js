@@ -5,16 +5,15 @@ import creativeCloud from "../pages/assets/cc-icon.png";
 
 const GetCredentialApiKey = () => {
 
-  // GATSBY_TEMPLATE_ID=66...
-  // GATSBY_PRODUCT_NAME=Adobe...SDK
-  const { GATSBY_TEMPLATE_ID, GATSBY_PRODUCT_NAME } = process.env;
-  console.log('GATSBY_TEMPLATE_ID', GATSBY_TEMPLATE_ID)
-  console.log('GATSBY_PRODUCT_NAME', GATSBY_PRODUCT_NAME)
-  console.log('process.env', process.env)
-
   const data = useStaticQuery(
     graphql`
     query { 
+      site {
+        siteMetadata{
+          product_name
+          template_id
+        }
+      }
       allFile(filter: {name: {eq: "DemoCode"}}) {
         edges {
           node {
@@ -27,8 +26,12 @@ const GetCredentialApiKey = () => {
   `
   )
 
+  console.log('data', data?.site?.siteMetadata);
+  const { template_id, product_name } = data?.site?.siteMetadata;
+
+
   return (
-    <GetCredential className="getCredentialContainer" templateId={GATSBY_TEMPLATE_ID} productName={GATSBY_PRODUCT_NAME} >
+    <GetCredential className="getCredentialContainer" templateId={template_id} productName={product_name} >
 
       <GetCredential.SignIn title="Get credentials" paragraph="Create unique credentials that you will use to call Adobe Express Embed SDK from your application." buttonText="Sign in to create credentials" />
 
@@ -61,7 +64,7 @@ const GetCredentialApiKey = () => {
       </GetCredential.Form>
 
       <GetCredential.UnknownError />
-      
+
       <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/" devConsoleDirection="project_overview|api_overview|credential_overview" developerConsoleManage="Manage on Developer console" className="card_developer_console">
 
         <GetCredential.Card.Side>
