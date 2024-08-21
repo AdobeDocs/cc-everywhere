@@ -26,9 +26,7 @@ const GetCredentialApiKey = () => {
   `
   )
 
-  console.log('data', data?.site?.siteMetadata);
   const { template_id, product_name } = data?.site?.siteMetadata;
-
 
   return (
     <GetCredential className="getCredentialContainer" templateId={template_id} productName={product_name} >
