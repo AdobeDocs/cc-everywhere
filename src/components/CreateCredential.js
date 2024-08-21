@@ -5,6 +5,8 @@ import creativeCloud from "../pages/assets/cc-icon.png";
 
 const GetCredentialApiKey = () => {
 
+  // GATSBY_TEMPLATE_ID=66...
+  // GATSBY_PRODUCT_NAME=Adobe...SDK
   const { GATSBY_TEMPLATE_ID, GATSBY_PRODUCT_NAME } = process.env;
 
   const data = useStaticQuery(
