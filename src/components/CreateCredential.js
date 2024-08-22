@@ -28,6 +28,21 @@ const GetCredentialApiKey = () => {
 
   const { template_id, product_name } = data?.site?.siteMetadata;
 
+  const isBrowser = typeof window !== "undefined";
+  let targetURL;
+
+  if (isBrowser) {
+    if (
+      window.location.host.indexOf("developer.adobe.com") >= 0 ||
+      window.location.host.indexOf("adobe.io") >= 0
+    ) {
+      targetURL = "https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/";
+    }
+    else {
+      targetURL = "https://developer-stage.adobe.com/express/embed-sdk/docs/guides/quickstart/";
+    }
+  }
+
   return (
     <GetCredential className="getCredentialContainer" templateId={template_id} productName={product_name} >
 
@@ -63,7 +78,7 @@ const GetCredentialApiKey = () => {
 
       <GetCredential.UnknownError />
 
-      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref="https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/" devConsoleDirection="project_overview|api_overview|credential_overview" developerConsoleManage="Manage on Developer console" className="card_developer_console">
+      <GetCredential.Card title="Your credential is ready to use" paragraph="Check the downloads section of your browser for the ZIP file, or find it where you save downloads on your machine." nextStepsLabel="Next steps" nextStepsHref={targetURL} devConsoleDirection="project_overview|api_overview|credential_overview" developerConsoleManage="Manage on Developer console" className="card_developer_console">
 
         <GetCredential.Card.Side>
           <div style="display : flex ; gap : 16px ; flex-direction : column;">
@@ -90,7 +105,7 @@ const GetCredentialApiKey = () => {
 
       </GetCredential.Card>
 
-      <GetCredential.Return title="Previously created projects" paragraph="Select a project and access your existing credentials for Adobe Express Embed SDK." nextStepsLabel="Next steps" nextStepsHref="/credentials/nextsteps" className="card_developer_console">
+      <GetCredential.Return title="Previously created projects" paragraph="Select a project and access your existing credentials for Adobe Express Embed SDK." nextStepsLabel="Next steps" nextStepsHref={targetURL} className="card_developer_console">
 
         <GetCredential.Return.Side>
           <GetCredential.Return.Side.Custom>
