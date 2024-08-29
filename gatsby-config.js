@@ -47,37 +47,75 @@ module.exports = {
         path: '/v1/reference/'
       }],
       },
+      {
+        title: 'Support',
+        path: '/support/index.md',
+      },
     ],
     subPages: [
       {
-        title: 'Overview',
+        title: 'Getting Started',
         path: '/guides/',
-      },
-      {
-        title: 'Quickstart',
-        path: '/guides/quickstart/',
-      },
-      {
-        title: 'Full editor',
-        path: '/guides/full_editor/',
-        pages: [
+        pages:[
           {
-            title: 'Create new project',
-            path: '/guides/full_editor/create_project/'
+            title: 'Overview',
+            path: '/guides/',
           },
           {
-            title: 'Edit existing project',
-            path: '/guides/full_editor/edit_project/'
+            title: 'Quickstart',
+            path: '/guides/quickstart/',
+          },
+        ]
+      },
+      {
+        title: 'Features',
+        path: '/guides/full_editor/',
+        pages:[
+          {
+            title: 'Full editor',
+            path: '/guides/full_editor/',
+            pages: [
+              {
+                title: 'Create new project',
+                path: '/guides/full_editor/create_project/'
+              },
+              {
+                title: 'Edit existing project',
+                path: '/guides/full_editor/edit_project/'
+              }
+            ]
+          },
+          {
+            title: 'Modules',
+            path: '/guides/modules/',
+          },
+          {
+            title: 'Quick actions',
+            path: '/guides/quick_actions/',
+          },
+        ]
+      },
+      {
+        title: 'Concepts',
+        path: '/guides/concepts/authentication.md',
+        pages:[
+          {
+            title: 'Authentication',
+            path: '/guides/concepts/authentication.md'
+          },
+          {
+            title: 'UI Customization',
+            path: '/guides/concepts/customization.md'
+          },
+          {
+            title: 'Error Handling',
+            path: '/guides/concepts/error-handling.md'
           }
         ]
       },
       {
-        title: 'Modules',
-        path: '/guides/modules/',
-      },
-      {
-        title: 'Quick actions',
-        path: '/guides/quick_actions/',
+        title: 'Tutorials',
+        path:'/guides/tutorials/'
       },
       {
         title: 'Submission and review',
@@ -88,8 +126,14 @@ module.exports = {
         path: '/guides/changelog/',
       },
       {
-        title: 'FAQ and support',
-        path: '/guides/support/',
+        title: 'Troubleshooting',
+        path: '/guides/troubleshooting/faq.md',
+        pages:[
+          {
+            title: 'FAQ',
+            path: '/guides/troubleshooting/faq.md'
+          }
+        ]
       },
       // {
       //   title: 'Community forum',
