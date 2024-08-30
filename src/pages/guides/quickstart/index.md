@@ -58,7 +58,7 @@ There's an **Edit credential** button on the top right corner of the screen. Cli
 The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK is available on Adobe's CDN:
 
 ```js
-var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"";
+var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js";
 ```
 
 You can check the [changelog](/src/pages/guides/changelog/index.md) to read about known issues as well as what changes have been made.
@@ -66,7 +66,7 @@ You can check the [changelog](/src/pages/guides/changelog/index.md) to read abou
 ### Load via script tag
 
 ```html
-<script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js""></script>
+<script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
 <script>
   (async () => {
     const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
