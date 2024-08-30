@@ -32,14 +32,14 @@ API keys—one for each project—are required to use the Adobe Express Embed SD
 ![](../images/quickstart_console.png)
 
 Select **APIs and services** from the top navigation bar; you'll see there a list of the available ones. Find the **Adobe Express Embed SDK** card and click the **Create project** button.
- 
+
 ![](../images/quickstart_apis-and-services.png)
 
 On the **Configure API** section, you must insert up to five domains that will be allowed to use your API key. This is a security measure to prevent unauthorized use of your client ID on another website, restricting usage to the domains you have authorized.
 
 ![](../images/quickstart_configure-domain.png)
 
-For local development, you can use `localhost` specifying the port with the colon `:` syntax—in the screenshot above, it's 5555. Please note that all connections must be secure (HTTPS) for both production and development environments. 
+For local development, you can use `localhost` specifying the port with the colon `:` syntax—in the screenshot above, it's 5555. Please note that all connections must be secure (HTTPS) for both production and development environments.
 
 Once you have added all the domains, click **Save configured API**. The API key will be displayed on the screen.
 
