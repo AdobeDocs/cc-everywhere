@@ -1,7 +1,7 @@
 ---
 keywords:
   - close
-  - v3
+  - v4
 title: close Reference
 description: This is the reference page for the close API
 contributors:

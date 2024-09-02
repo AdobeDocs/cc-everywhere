@@ -6,10 +6,14 @@ title: terminate API
 description: This is the reference page for terminate API.
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
 --- 
 
 # terminate()
 
-## terminate: () => void
+## terminate: (() => boolean)
 
-The default method `terminate()` will un-initialize the `CCEverywhere` object. This method returns `void`.
+Terminates the active instance of `CCEverywhere`. This method will return `false` if there is no active CCEverywhere instance.
+
+* Returns boolean
+* `true` on successful termination
