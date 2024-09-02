@@ -8,7 +8,7 @@ contributors:
   - https://github.com/amandahuarng
 --- 
 
-# CCEverywhere 
+# CCEverywhere
 
 <InlineAlert variant="error" slots="header, text" />
 

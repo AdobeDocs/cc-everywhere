@@ -17,6 +17,6 @@ yarn test:lint
 
 Markdown linting errors can be fixed automatically (with some luck) by running:
 
-```bash 
+```bash
 yarn fix:lint
 ```

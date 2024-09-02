@@ -8,7 +8,7 @@ contributors:
   - https://github.com/amandahuarng
 --- 
 
-# CCEverywhere 
+# CCEverywhere
 
 The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized. We have refactored the SDK APIs to be more verbose and intent-driven. All the APIs are segregated under three workflows, each of which are exposed as a property of `CCEverywhere`.
 
