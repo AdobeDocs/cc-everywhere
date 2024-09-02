@@ -136,4 +136,4 @@ Congratulations! You have successfully set up the Adobe Express Embed SDK in you
 
 ![](./images/gettingstarted_final.png)
 
-In the meantime, feel free to use the [sample project](#) as a starting point for your experiments. If you have any questions or need help, please don't hesitate to reach out to us on the [Adobe Express Discord](https://discord.com/channels/1093561069689110568/1120801549678022796)—use the `#add-on-developers` channel.
+In the meantime, feel free to use the [sample project](#) as a starting point for your experiments. If you have any questions or need help, please don't hesitate to reach out to us on the [Adobe Express Discord](https://discord.com/invite/adobeexpress)—use the `#add-on-developers` channel.
