@@ -21,6 +21,8 @@ contributors:
   - https://github.com/nimithajalal
   - https://github.com/undavide
 ---
+import "./styles.css";
+
 # Quickstart Guide
 
 In this guide, you will learn how to get started with the Adobe Express Embed SDK.
@@ -31,13 +33,20 @@ API keys—one for each project—are required to use the Adobe Express Embed SD
 
 ![](../images/quickstart_console.png)
 
-Select **APIs and services** from the top navigation bar; you'll see there a list of the available ones. Find the **Adobe Express Embed SDK** card and click the **Create project** button.
+1. Navigate to the [Developer Console](https://developer.adobe.com/console).
+2. Select **APIs and services**.
+3. Search for **Adobe Express Embed SDK**.
+4. Click **Create project**.
 
 ![](../images/quickstart_apis-and-services.png)
+
+<InlineAlert variant="info" slots="text1" />
 
 On the **Configure API** section, you must insert up to five domains that will be allowed to use your API key. This is a security measure to prevent unauthorized use of your client ID on another website, restricting usage to the domains you have authorized.
 
 ![](../images/quickstart_configure-domain.png)
+
+<InlineAlert variant="info" slots="text1" />
 
 For local development, you can use `localhost` specifying the port with the colon `:` syntax—in the screenshot above, it's 5555. Please note that all connections must be secure (HTTPS) for both production and development environments.
 
@@ -48,6 +57,8 @@ Once you have added all the domains, click **Save configured API**. The API key 
 Copy the API key and save it in a secure location. You will need it to initialize the SDK in your project. The API cannot be modified once it's created, but you can always edit the list of domains. Click on the **API key** link under the **Credentials** section on the left column:
 
 ![](../images/quickstart_api.png)
+
+<InlineAlert variant="info" slots="text1" />
 
 There's an **Edit credential** button on the top right corner of the screen. Click on it to edit the list of domains. **Save** your changes when you're done.
 
@@ -69,7 +80,9 @@ You can check the [changelog](/src/pages/guides/changelog/index.md) to read abou
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
 <script>
   (async () => {
-    const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
+    const ccEverywhere = await window.CCEverywhere.initialize(
+      initializeParams, configParams
+      );
   })();
 </script>
 ```
@@ -78,7 +91,9 @@ You can check the [changelog](/src/pages/guides/changelog/index.md) to read abou
 
 ```js
 await import(CDN_URL);
-const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
+const ccEverywhere = await window.CCEverywhere.initialize(
+  initializeParams, configParams
+);
 ```
 
 ### Dynamic script
@@ -91,7 +106,9 @@ const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, conf
       if (!window.CCEverywhere) {
           return;
         }
-        const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, configParams);
+        const ccEverywhere = await window.CCEverywhere.initialize(
+          initializeParams, configParams
+        );
     };
     document.body.appendChild(script);
   })(document, CDN_URL);
@@ -99,7 +116,11 @@ const ccEverywhere = await window.CCEverywhere.initialize(initializeParams, conf
 
 ## Step 3: Initialize the SDK
 
-The SDK should only be initialized once each page. To initialize the SDK, pass the following objects: `HostInfo` and `ConfigParams`.
+<InlineAlert variant="info" slots="text1" />
+
+The SDK should only be initialized **once on each page**.
+
+ To initialize the SDK, pass the following objects: `HostInfo` and `ConfigParams`.
 
 ### HostInfo
 
@@ -114,6 +135,7 @@ The SDK should only be initialized once each page. To initialize the SDK, pass t
     });
 })();
 ```
+<InlineAlert variant="info" slots="text1" />
 
 The SDK can be launched with a delayed login: users won't be asked to sign in until they export a document. Read more about the initialize API [here](../../reference/initialize/index.md).
 
@@ -155,8 +177,12 @@ Here are the minimum browser requirements for the SDK:
 | Microsoft Edge | 107 and onwards
 | Firefox | 117 and onwards
 
-**Notes:**
+<InlineAlert variant="help" slots="header, text1, text2, text3" />
 
-* JavaScript must be enabled
-* The SDK will *not* work in incognito windows.
-* HTTPS connections are required for all environments.
+Notes:
+
+- JavaScript must be enabled.
+
+- The SDK will *not* work in incognito windows.
+
+- HTTPS connections are required for all environments.
