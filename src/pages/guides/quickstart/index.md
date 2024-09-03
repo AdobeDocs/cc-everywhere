@@ -54,9 +54,13 @@ Once you have added all the domains, click **Save configured API**. The API key 
 
 ![](../images/quickstart_complete.png)
 
-Copy the API key and save it in a secure location. You will need it to initialize the SDK in your project. The API cannot be modified once it's created, but you can always edit the list of domains. Click on the **API key** link under the **Credentials** section on the left column:
+Copy the API key and save it in a secure location. You will need it to initialize the SDK in your project.
 
-![](../images/quickstart_api.png)
+### Edit the Project's settings
+
+The API cannot be modified once it's created, but you can always edit the list of domains. Click on the **API key** link under the **Credentials** section on the left column:
+
+![](../images/quickstart_api-callout.png)
 
 <InlineAlert variant="info" slots="text1" />
 
@@ -64,7 +68,25 @@ There's an **Edit credential** button on the top right corner of the screen. Cli
 
 ![](../images/quickstart_edit-credentials.png)
 
+Please also select an appropriate Project name for your integration. Select the **Project overview** link on the left column, and click on the **Edit Project button** button on the top right corner of the screen to change the project name.
+
+![](../images/quickstart_edit-project.png)
+
+<InlineAlert variant="info" slots="text1" />
+
+ This name will correspond with the project folder created for your end users in Adobe Express, and must match what's later referred to as `appName` in the SDK initialization.
+
+![](../images/quickstart_edit-project-name.png)
+
+Remember to save your changes each time you edit the project's settings.
+
 ## Step 2: Embed the SDK
+
+You can embed the SDK in your projects using one of the following methods:
+
+- [Load via `<script>` tag](#load-via-script-tag)
+- [Using `import()`](#using-import)
+- [Dynamic script](#dynamic-script)
 
 The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK is available on Adobe's CDN:
 
@@ -124,8 +146,8 @@ The SDK should only be initialized **once on each page**.
 
 ### HostInfo
 
-* `CLIENT_ID` (string): API key from Developer Console
-* `APP_NAME` (string): Name of your integration/app. This name corresponds with the project folder created for your end users in Adobe Express.
+- `CLIENT_ID` (string): API key from Developer Console
+- `APP_NAME` (string): Name of your integration/app. This name corresponds with the project folder created for your end users in Adobe Express.
 
 ```js
 (async () => {
@@ -135,6 +157,7 @@ The SDK should only be initialized **once on each page**.
     });
 })();
 ```
+
 <InlineAlert variant="info" slots="text1" />
 
 The SDK can be launched with a delayed login: users won't be asked to sign in until they export a document. Read more about the initialize API [here](../../reference/initialize/index.md).
@@ -153,8 +176,8 @@ Our guides along with the [SDK references](../../reference/index.md) can help yo
 
 With the full editor component, your users are able to:
 
-* How to [create new projects](../guides/full_editor/create_project/)
-* How to [edit existing projects](../guides/full_editor/edit_project/)
+- How to [create new projects](../guides/full_editor/create_project/)
+- How to [edit existing projects](../guides/full_editor/edit_project/)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
@@ -177,7 +200,7 @@ Here are the minimum browser requirements for the SDK:
 | Microsoft Edge | 107 and onwards
 | Firefox | 117 and onwards
 
-<InlineAlert variant="help" slots="header, text1, text2, text3" />
+<InlineAlert variant="help" slots="header, text1, text2" />
 
 Notes:
 
@@ -186,3 +209,11 @@ Notes:
 - The SDK will *not* work in incognito windows.
 
 - HTTPS connections are required for all environments.
+
+<DiscoverBlock width="100%" slots="heading, link, text"/>
+
+## Next Steps
+
+[Sample Project](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample)
+
+Are you ready to start playing with some code? Check out our sample project to see the latest SDK version in action!
