@@ -77,7 +77,7 @@ quickAction.cropImage();
 
 ## Example: Input asset, custom export options
 
-The `quickAction` APIs can take an image asset and custom export options as input. 
+The `quickAction` APIs can take an image asset and custom export options as input.
 
 ``` ts title="remove-background.js" hl_lines="5 29 40"
 let docConfig = {
