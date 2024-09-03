@@ -184,6 +184,10 @@ module.exports = {
         path:'/v3/reference/',
       },
       {
+        title: 'Overview',
+        path:'/reference/',
+      },
+      {
         title: 'initialize',
         path:'/reference/initialize/',
       },
