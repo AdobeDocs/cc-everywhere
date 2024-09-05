@@ -17,7 +17,7 @@ A step-by-step guide to setting up and integrating the Embed SDK into your web a
 
 ## Introduction
 
-Hello, and welcome to this tutorial! The Adobe Express Embed SDK will be an amazing integration for your projects, allowing you to launch Adobe Express directly from your web applications. This guide will walk you through setting up the credentials and starting to implement the SDK in your project.
+Hello, and welcome to this tutorial! The Adobe Express Embed SDK is an amazing integration opportunity for any project, allowing you to launch Adobe Express directly from your web applications. This guide will walk you through setting up the credentials and starting to implement the SDK.
 
 ### Prerequisites
 
@@ -31,9 +31,9 @@ Before you start, make sure you have the following:
 
 The first crucial step is to acquire an API key from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](../quickstart/index.md) guide, and we'll summarize it here.
 
-1. Visit the [Adobe Developer Console](https://developer.adobe.com/console). In the **APIs and services** section, find the **Adobe Express Embed SDK** card and click the **Create project** button.
+Visit the [Adobe Developer Console](https://developer.adobe.com/console). In the **APIs and services** section, find the **Adobe Express Embed SDK** card and click the **Create project** button.
 
-![](../images/quickstart_apis-and-services.png)
+![](./images/gettingstarted_apis-and-services.png)
 
 On the **Configure API** section, you must insert up to five domains that will be allowed to use your API key. This security measure prevents the unauthorized use of your client ID on another website by restricting usage to the domains you have authorized.
 
@@ -50,7 +50,7 @@ Once you have added all the domains, click **Save configured API**. The API key 
 
 ![](../images/quickstart_complete.png)
 
-The list of domains can be edited anytime—refer to the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide for more information—although the API key cannot be modified. Please keep it safe and away from prying eyes!
+The list of domains can be edited anytime, as well as the project name—refer to the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide for more information—although the API key cannot be modified. Please keep it safe and away from prying eyes!
 
 ## Running the sample project
 
@@ -60,7 +60,7 @@ Now that you have the API key let's set up the sample project to test the Embed 
 VITE_API_KEY="your-api-key-here!"
 ```
 
-Now, you can install the dependencies and run the sample with the following two commands:
+Now, you can install the dependencies and run the sample with the following two simple commands:
 
 ```bash
 npm install
@@ -71,11 +71,11 @@ The web application will be served at `localhost:5555`; open your browser and na
 
 ![](./images/gettingstarted_app.png)
 
-It is just a simple web page with one button: click it, and the Adobe Express logo will whirl its rainbow gradient to signal that the magic is about to happen.
+It is just a simple web page with one button: click it, and the Adobe Express logo will whirl its rainbow gradient to signal that the magic is about to happen. And then, voilà!
 
 ![](./images/gettingstarted_integration.png)
 
-The full Adobe Express application has been integrated! Your users can now create new documents directly from this page and download them locally!
+The full Adobe Express application has been integrated! Your users can now create new documents directly from this page and download them locally
 
 <!-- Info Alert -->
 <InlineAlert variant="info" slots="text1, text2" />
@@ -136,4 +136,4 @@ Congratulations! You have successfully set up the Adobe Express Embed SDK in you
 
 ![](./images/gettingstarted_final.png)
 
-In the meantime, feel free to use the [sample project](#) as a starting point for your experiments. If you have any questions or need help, please don't hesitate to reach out to us on the [Adobe Express Discord](https://discord.com/invite/adobeexpress)—use the `#add-on-developers` channel.
+In the meantime, feel free to use the [sample project](#) as a starting point for your experiments. If you have any questions or need help, please don't hesitate to reach out to us on the [Adobe Express Embed SDK forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
