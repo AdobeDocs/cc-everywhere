@@ -46,12 +46,16 @@ String value used to define file format supported for design operations.
 
 ### AssetDataType
 
-String value used to define desired asset data type for images. For image output types, host can set this property to either base64 or url. Default type for images is base64. For videos, we will always send output as url irrespective of this property.
+`AssetDataType` can be used to define desired data type of an asset while using `docConfig` and `outpuAsset`. 
+
+- For image output types, host can set this property to either `base64`, `url`. Default type for images is `base64`. 
+- For videos, we will always send output as `url` irrespective of this property. 
 
 | Type   | Value   |
 | ----------- | --------------- |
 | BASE64     | "base64" |
 | URL    | "url" |
+| BLOB   | "blob" |
 
 ### PublishParams
 
@@ -270,7 +274,7 @@ Export options to surface to your user in the iframe. If no export options are s
 | ----------- | --------------- | ---
 | target   | string | The id of the export button. Can be `download`, `publish`, `express` (continue in full editor), `image-module` (continue with mini editor).
 | intent | [EditFurtherIntent](#editfurtherintent) | Intent specifies a particular action to start at within the target surface. Relevant when `target` is `express`.
-| outputType   | [AssetDataType](#assetdatatype) | Desired asset type. For images, can be `base64` (default) or `url`. For videos, it will always be `url` irrespective of this property.
+| outputType   | [AssetDataType](#assetdatatype) | Desired asset type. For images, can be `base64` (default) or `url` or `blob`. For videos, it will always be `url` irrespective of this property.
 | publishFileType   | [FileType](#filetype) | The file type of the asset to be published.
 
 ### EditFurtherIntent
