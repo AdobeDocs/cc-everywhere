@@ -46,10 +46,10 @@ String value used to define file format supported for design operations.
 
 ### AssetDataType
 
-`AssetDataType` can be used to define desired data type of an asset while using `docConfig` and `outpuAsset`. 
+`AssetDataType` can be used to define desired data type of an asset while using `docConfig` and `outpuAsset`.
 
-- For image output types, host can set this property to either `base64`, `url`. Default type for images is `base64`. 
-- For videos, we will always send output as `url` irrespective of this property. 
+- For image output types, host can set this property to either `base64`, `url`. Default type for images is `base64`.
+- For videos, we will always send output as `url` irrespective of this property.
 
 | Type   | Value   |
 | ----------- | --------------- |
