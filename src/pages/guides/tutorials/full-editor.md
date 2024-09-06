@@ -70,7 +70,7 @@ You can read the existing code in the sample, but it's always best to learn by d
 
 The [sample](#) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire HTTPS setup and hot reloading.[^1] As customary, we'll work in the `src` folder with the simplest setup possible: HTML, JS, and CSS, one file each.
 
-[^1]: A Webpack setup is entirely possible, but it requires manual steps to integrate the `mkcert` CLI and ensure proper HTTPS handling. We've chosen Vite to keep that out of the way and focus on the actual integration code
+[^1]: A Webpack setup is entirely possible, but it requires manual (or semi-automated) steps to integrate the `mkcert` CLI and ensure proper HTTPS handling. We've chosen Vite to keep that out of the way and focus on the actual integration code.
 
 ### Importing and Initializing
 
@@ -183,8 +183,8 @@ As you can see, we are:
 
 - Creating by default a document using the `"BusinessCard"` template.
 - Launching Adobe Express with the Media panel open on the left.
-- Setting a series of Callback that are going to fire when the user Cancels, Saves (that would be `onPublish`), or when something goes wrong.
-- Defining two ways for users to export content: one to download the file locally, one to save it in the user's Adobe Express folder and pass it back to the web application.
+- Setting a series of Callbacks that will fire when the user Cancels, Saves (that would be `onPublish`), or when something goes wrong.
+- Defining two ways for users to export content: download the file locally and save it in the user's Adobe Express folder and pass it back to the web application.
 
 On the **Create New** button click, Adobe Express is launched:
 
@@ -196,13 +196,13 @@ document.getElementById("createDesign").onclick = async () => {
 
 **TODO** Add screenshot
 
-As you can see, integrating the full editor doesn't take much! You can customize it to a great extent; even using all the default options, the result is brilliant.
+As you can see, integrating the full editor doesn't take much time! You can customize it to a great extent; even using all the default options, the result is brilliant.
 
 ### Managing images
 
-The `exportConfig` array we've just written allows users to save their images; we'd like our web application to capture and display them on the HTML page. 
+The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their images; we'd like our web application to capture and display them on the HTML page. 
 
-For that, we need to write a simple function in the `callbacks`, precisely the [`onPublish`](../../reference/types/index.md#callbacks). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../reference/types/index.md#publishparams) argument, with three crucial properties:
+We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](../../reference/types/index.md#callbacks). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../reference/types/index.md#publishparams) argument, with three crucial properties:
 
 - `documentId`: a unique identifier for the asset that has been created or modified.
 - `exportButtonId`: the identifier of the export button that has been clicked.
@@ -239,21 +239,38 @@ const callbacks = {
 <!-- ... rest of the page -->
 ```
 
+**TODO** add screenshot
 
+Please note that the `asset` is an array; we're getting just the first item here. If you open the Console, you'll see the Base64 string logged.
 
-
-
-
+**TODO** add screenshot
 
 ### Editing projects
 
-The next step is implementing the **Edit** button feature, which should launch Adobe Express opening the project that has been just created. 
+The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before.  As we've seen [earlier](#managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference, and use in the `docConfig` option object to open it again:
 
-When users create and save a document, we'll receive and store its `documentId`. We'll pass such parameter in the `docConfig` options when the `editor` is triggered a second time (**Edit** button), so that Adobe Express knows which document to open when it's launched. 
+```js
+// Will hold the project ID when a document is saved
+var existingProjectId = null;
 
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  // ... other callbacks
+  onPublish: (intent, publishParams) => {
+    existingProjectId = publishParams.projectId;  // 👈 
+    console.log("Project ID", existingProjectId); // 👈
+    expressImage.src = publishParams.asset[0].data;
+    console.log("Image data", publishParams.asset[0].data);
+  }
+};
 
+// Click handler for the Edit Design button
+document.getElementById("editBtn").onclick = async () => {
+  // Opening the existing project by ID
+  let docConfig = { documentId: existingProjectId };
+  // ...
+  editor.edit(docConfig, appConfig, exportConfig);
+};
+```
 
-This is the plan, let's write the code!
-
-First, we need t
-
+Above, we're using `existingProjectId` to hold the project ID, collected in the `onPublish` callback when a document is saved. Later, in the `editBtn` click handler, we're creating a new `docConfig` object passing the ID in the `documentId` property. This tells Adobe Express to look for an existing project, and open it right away.
