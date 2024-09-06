@@ -32,7 +32,7 @@ Before we begin, make sure you have the following:
 
 ## Running the sample project
 
-Let's have a look at what we're going to build. First off, clone the [embed-sdk-full-editor-tutorial](#) sample from GitHub and navigate to the project directory. Locate the `src/.env` file and replace the `VITE_API_KEY` with your Embed SDK API Key:
+Let's have a look at what we're going to build. First off, clone the [embed-sdk-full-editor-tutorial](#) sample from GitHub and navigate to the project directory. Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
@@ -66,7 +66,7 @@ In case you get a popup when trying to launch the Adobe Express integration with
 
 ## Coding the Integration
 
-You can read the existing code in the sample, but it's always best to learn by doing! We suggest following along and typing the code in—even small mistakes can lead to important discoveries.
+You can just read the existing code in the sample, but it's always best to learn by doing! We suggest following along and typing the code in—even small mistakes can lead to important discoveries.
 
 The [sample](#) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire HTTPS setup and hot reloading.[^1] As customary, we'll work in the `src` folder with the simplest setup possible: HTML, JS, and CSS, one file each.
 
@@ -74,7 +74,7 @@ The [sample](#) is a simple web application built with [Vite](https://vitejs.dev
 
 ### Importing and Initializing
 
-The HTML content is not overly important; let's focus on the JavaScript side of things first. Open the project in your code editor of choice. In `main.js`, remove everything below the Spectrum `import` statements.
+The HTML content is not overly important; let's focus on the JavaScript side of things first. Open the project in your code editor of choice. In `main.js`, remove everything below the Spectrum `import` statements—we'll rebuild it from scratch.
 
 ```js
 import "./style.css";
@@ -91,7 +91,7 @@ import "@spectrum-web-components/button-group/sp-button-group.js";
 import "@spectrum-web-components/divider/sp-divider.js";
 ```
 
-They allow us to style our web application with [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/index.html) and the [Adobe Express theme](https://spectrum.adobe.com/page/theming/). Let's begin by importing the Embed SDK:
+The imports above allow us to style our web application with [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/index.html) and the [Adobe Express theme](https://spectrum.adobe.com/page/theming/). Let's begin by importing the Embed SDK:
 
 ```js
 // Importing the Adobe Express Embed SDK
@@ -110,7 +110,7 @@ When the Embed SDK is imported, a `CCEverywhere` object is globally available an
 - **Configuration**: optional settings, like locale, delayed sign-in, etc.
 
 ```javascript
-// **Required** parameters for initializing the Embed SDK
+// 👀 Required parameters for initializing the Embed SDK
 const hostInfo = {
   clientId: import.meta.env.VITE_API_KEY,
   appName: "Embed SDK Sample",
@@ -129,14 +129,14 @@ const { editor } = await window.CCEverywhere.initialize(
 );
 ```
 
-We're using the asynchronous [`initialize()`](../../reference/initialize/) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor, hence we destructure just the [`editor`](../../reference/CCEverywhere/editor/).
+We're using the asynchronous [`initialize()`](../../reference/initialize/) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](../../reference/CCEverywhere/editor/).
 
 The [`hostInfo`](../../reference/initialize/index.md#hostinfo) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
 <!-- Inline Alert -->
-<InlineAlert variant="info" slots="text1" />
+<InlineAlert variant="warning" slots="text1" />
 
-The `appName` should match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
+The `appName` must match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
 
 All [`configParams`](../../reference/initialize/index.md#configparams) are optional, instead: here, `loginMode` tells Adobe Express to delay the login until artworks are exported.
 
@@ -144,12 +144,12 @@ All [`configParams`](../../reference/initialize/index.md#configparams) are optio
 
 Excellent! We have this `editor`: now what? We'll use it to spawn a new Adobe Express instance via the [`editor.create()`](../../reference/CCEverywhere/editor/index.md#create) method—which, in turn, accepts four option objects able to configure:
 
-- The [Document](../../reference/CCEverywhere/editor/index.md#createdocconfig) that will be created (e.g., the size).
+- The [Document](../../reference/CCEverywhere/editor/index.md#createdocconfig) that will be created (e.g., its size).
 - The Adobe Express [Application](../../reference/CCEverywhere/editor/index.md#baseeditorappconfig) itself (e.g., the callbacks).
 - The allowed [Export Options](../../reference/types/index.md#exportoptions).
 - The [Container](../../reference/types/index.md#containerconfig) (modal dialog) of the Adobe Express application.
 
-The links above point to the respective SDK Reference page. They are all optional—our sample makes use of the first three of them:
+The links above point to the respective SDK Reference pages. They are all optional—our sample makes use of the first three of them:
 
 ```js
 // Document
@@ -200,7 +200,7 @@ As you can see, integrating the full editor doesn't take much time! You can cust
 
 ### Managing images
 
-The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their images; we'd like our web application to capture and display them on the HTML page. 
+The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their image; we'd like our web application to capture and display it on the HTML page. 
 
 We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](../../reference/types/index.md#callbacks). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../reference/types/index.md#publishparams) argument, with three crucial properties:
 
@@ -241,17 +241,17 @@ const callbacks = {
 
 **TODO** add screenshot
 
-Please note that the `asset` is an array; we're getting just the first item here. If you open the Console, you'll see the Base64 string logged.
+Please note that `asset` is an array; we're getting just the first item here. If you open the Console, you'll see the Base64 string logged.
 
 **TODO** add screenshot
 
 ### Editing projects
 
-The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before.  As we've seen [earlier](#managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference, and use in the `docConfig` option object to open it again:
+The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before.  As we've seen [earlier](#managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
 
 ```js
 // Will hold the project ID when a document is saved
-var existingProjectId = null;
+var existingProjectId = null; // 👈
 
 // Callbacks to be used when creating or editing a document
 const callbacks = {
@@ -273,4 +273,151 @@ document.getElementById("editBtn").onclick = async () => {
 };
 ```
 
-Above, we're using `existingProjectId` to hold the project ID, collected in the `onPublish` callback when a document is saved. Later, in the `editBtn` click handler, we're creating a new `docConfig` object passing the ID in the `documentId` property. This tells Adobe Express to look for an existing project, and open it right away.
+Above, we're using `existingProjectId` to hold the project reference, collected in the `onPublish` callback every time the document is saved. Later, in the `editBtn` click handler, we're creating a new `docConfig` object passing the ID in the `documentId` property. This tells Adobe Express to look for an existing project and open it right away.
+
+**TODO** add screenshot.
+### Final code
+
+We have all the required bits in place, but some simple refactoring is needed to keep the code clean.
+
+- The `appConfig` and `exportConfig`  option objects are stored in constants, as they're shared in both the **Create new** and **Edit** buttons.
+- The `callbacks` follow suit; we've added a simple `onError` that logs a message, and now `onPublish` also enables the **Edit** button—that starts disabled.
+
+You can check the entire [`embed-sdk-full-editor-tutorial`](#) project code as part of the dedicated [`embed-sdk-samples`](https://github.com/AdobeDocs/embed-sdk-samples) repository. Find the most relevant files below for reference.
+
+<!-- CodeBlock -->
+<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
+
+#### main.js
+
+```js
+import "./style.css";
+
+// Importing theme and typography styles from Spectrum Web Components
+import "@spectrum-web-components/styles/typography.css";
+import "@spectrum-web-components/theme/express/theme-light.js";
+import "@spectrum-web-components/theme/express/scale-medium.js";
+import "@spectrum-web-components/theme/sp-theme.js";
+
+// Importing Spectrum Web Components
+import "@spectrum-web-components/button/sp-button.js";
+import "@spectrum-web-components/button-group/sp-button-group.js";
+import "@spectrum-web-components/divider/sp-divider.js";
+
+// Importing the Adobe Express Embed SDK
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+console.log("CCEverywhere loaded", window.CCEverywhere);
+
+// Parameters for initializing the Adobe Express Embed SDK
+const hostInfo = {
+  clientId: import.meta.env.VITE_API_KEY,
+  appName: "Embed SDK Sample",
+};
+
+// Prompts the user to log in only when exporting/saving the document
+const configParams = {
+  loginMode: "delayed",
+};
+
+// Initializing the Adobe Express Embed SDK
+const { editor } = await window.CCEverywhere.initialize(
+  hostInfo, configParams
+);
+
+// Will hold the project ID when a document is saved on Adobe Express
+var existingProjectId = null;
+var expressImage = document.getElementById("savedImage");
+
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  onCancel: () => {},
+  onPublish: (intent, publishParams) => {
+    existingProjectId = publishParams.projectId;
+    console.log("Project ID", existingProjectId);
+    expressImage.src = publishParams.asset[0].data;
+    console.log("Image data", publishParams.asset[0].data);
+    // enable the editDesign button
+    document.getElementById("editDesign").disabled = false;
+  },
+  onError: (err) => {
+    console.error("Error!", err.toString());
+  },
+};
+
+// Configuration for the app, shared by both Create and Edit flows
+const appConfig = { selectedCategory: "media", callbacks };
+
+// Configuration for the export options made available 
+// to the user when creating or editing a document
+const exportConfig = [
+  {
+    id: "download",
+    label: "Download",
+    action: { target: "download" },
+    style: { uiType: "button" },
+  },
+  {
+    id: "save-modified-asset",
+    label: "Save image",
+    action: { target: "publish" },
+    style: { uiType: "button" },
+  },
+];
+
+// Click handler for the Create Design button
+document.getElementById("createBtn").onclick = async () => {
+  // Presetting the canvas size
+  let docConfig = { canvasSize: "BusinessCard" };
+  // Using the global appConfig and exportConfig
+  editor.create(docConfig, appConfig, exportConfig);
+};
+
+// Click handler for the Edit Design button
+document.getElementById("editBtn").onclick = async () => {
+  // Opening the existing project by ID
+  let docConfig = { documentId: existingProjectId };
+  // Using the global appConfig and exportConfig
+  editor.edit(docConfig, appConfig, exportConfig);
+};
+```
+
+#### index.html
+
+```html
+<body>
+  <sp-theme scale="medium" color="light" system="express">
+    <div class="container">
+      <header>
+        <h1>Adobe Express Embed SDK</h1>
+        <sp-divider size="l"></sp-divider>
+        <h2>Full Editor Sample</h2>
+        <p>
+          The <b>Create New</b> button launches a blank 
+          new project in a full editor instance. <br />
+          Once you have published/saved a project, use the
+          <b>Edit</b> button to resume editing the same project.
+        </p>
+      </header>
+
+      <main>
+        <img id="savedImage" 
+        src="https://placehold.co/300x300?text=Placeholder+Image"
+          alt="Your design will appear here." />
+        <sp-button-group>
+          <sp-button id="createBtn">Create New</sp-button>
+          <sp-button id="editBtn" disabled>Edit</sp-button>
+        </sp-button-group>
+      </main>
+    </div>
+  </sp-theme>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+```
+
+## Next steps
+
+Congratulations! You've implemented a full editor integration with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application.
+
+The Embed SDK offers a wide range of features and customization options; you can explore them in the [API Reference](../../reference/). Keep an eye on the [changelog](../changelog/) to keep up with the latest updates and improvements. If you're looking for more tutorials, check out [this page](../tutorials/). Finally, if you get stuck or you just want to share your experience, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
