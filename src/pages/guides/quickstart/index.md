@@ -29,56 +29,59 @@ In this guide, you will learn how to get started with the Adobe Express Embed SD
 
 ## Step 1: Get an API Key
 
-API keys—one for each project—are required to use the Adobe Express Embed SDK. You can get one logging to your [Adobe Developer Console](https://developer.adobe.com/console); if you need a refresher on the Console, you can read more about it [here](https://developer.adobe.com/developer-console/docs/guides/getting-started/).
+API keys—one for each project—are required to use the Adobe Express Embed SDK. The easiest way to get one is visiting the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
 
-![](../images/quickstart_console.png)
+![](../images/quickstart_home.png)
 
-1. Navigate to the [Developer Console](https://developer.adobe.com/console).
-2. Select **APIs and services**.
-3. Search for **Adobe Express Embed SDK**.
-4. Click **Create project**.
+Log in with your Adobe ID if requested, or create a new account if you don't have one. You'll be then presented this screen:
 
-![](../images/quickstart_apis-and-services.png)
+![](../images/quickstart_credentials.png)
 
-<InlineAlert variant="info" slots="text1" />
-
-On the **Configure API** section, you must insert up to five domains that will be allowed to use your API key. This is a security measure to prevent unauthorized use of your client ID on another website, restricting usage to the domains you have authorized.
-
-![](../images/quickstart_configure-domain.png)
+1. In the **Credential name** field, add a unique title. It will correspond with the project folder created for your end users in Adobe Express, and must match what's later referred to as `appName` in the SDK initialization.
+2. In the **Allowed domains** field, you must insert up to five domains that will be allowed to use your API key. This is a security measure to prevent unauthorized use of your client ID on another website, restricting usage to the domains you have authorized.
 
 <InlineAlert variant="info" slots="text1" />
 
 For local development, you can use `localhost` specifying the port with the colon `:` syntax—in the screenshot above, it's 5555. Please note that all connections must be secure (HTTPS) for both production and development environments.
 
-Once you have added all the domains, click **Save configured API**. The API key will be displayed on the screen.
+3. Agree to the Terms of Use, and click the **Create credential** button; your API key will be displayed on the screen under the Credential details (see 1 below).
 
-![](../images/quickstart_complete.png)
+![](../images/quickstart_credentials-complete.png)
 
-Copy the API key and save it in a secure location. You will need it to initialize the SDK in your project.
+If you find yourself needing to change the project name or the list of allowed domains, click the **Console** button in the top-right corner, as shown in the screenshot above. You will be taken to the [Adobe Developer Console](https://developer.adobe.com/developer-console/docs/guides/getting-started/), where all your projects are listed; click on the one you want to edit.
+
+![](../images/quickstart_overview.png)
 
 ### Edit the Project's settings
 
-The API cannot be modified once it's created, but you can always edit the list of domains. Click on the **API key** link under the **Credentials** section on the left column:
+The API cannot be modified once it's created. To edit the project name, make sure you are in the **Project overview** (link on the left column) and click on the **Edit credential** button (top-right navbar).
 
-![](../images/quickstart_api-callout.png)
+![](../images/quickstart_edit-name.png)
 
-<InlineAlert variant="info" slots="text1" />
+Enter the name and click **Save**.
 
-There's an **Edit credential** button on the top right corner of the screen. Click on it to edit the list of domains. **Save** your changes when you're done.
+![](../images/quickstart_edit-name-dialog.png)
 
-![](../images/quickstart_edit-credentials.png)
+Similarly, you're can edit the list of allowed domains. Select the **API Key** link in the left column, and click on the **Edit credential** button (top-right navbar) to add or remove domains as needed.
 
-Please also select an appropriate Project name for your integration. Select the **Project overview** link on the left column, and click on the **Edit Project button** button on the top right corner of the screen to change the project name.
+![](../images/quickstart_edit-domains.png)
 
-![](../images/quickstart_edit-project.png)
+Remember to **Save** your changes each time you edit the project's settings.
 
-<InlineAlert variant="info" slots="text1" />
+![](../images/quickstart_edit-domains-dialog.png)
 
- This name will correspond with the project folder created for your end users in Adobe Express, and must match what's later referred to as `appName` in the SDK initialization.
+<InlineAlert variant="info" slots="header, text1, text2, text3" />
 
-![](../images/quickstart_edit-project-name.png)
+Creating a Project directly from the Adobe Developer Console
 
-Remember to save your changes each time you edit the project's settings.
+The **Get credentials** button is a convenient shortcut for creating a new Embed SDK project. You can do the same directly from the Developer Console:
+
+1. Navigate to the [Developer Console](https://developer.adobe.com/console).
+2. Select **APIs and services**.
+3. Search for **Adobe Express Embed SDK** card.
+4. Click **Create project** button.
+
+Follow the instructions; you'll find that the same steps are required as described above.
 
 ## Step 2: Embed the SDK
 

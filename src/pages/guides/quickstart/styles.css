@@ -1,3 +1,4 @@
-ul.spectrum-InLineAlert-content {
+ul.spectrum-InLineAlert-content,
+ol.spectrum-InLineAlert-content {
   margin-left: 20px;
 }
