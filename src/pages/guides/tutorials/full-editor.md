@@ -17,7 +17,7 @@ Learn how to integrate the Adobe Express Embed SDK into your web applications.
 
 ## Introduction
 
-Hi, developers! In this tutorial, we'll create an Embed SDK integration that leverages the Adobe Express full editor experience. Users will be able to create, edit, and export documents directly from your web application. 
+Hi, developers! In this tutorial, we'll create an Embed SDK integration that leverages the Adobe Express full editor experience. Users will be able to create, edit, and export documents directly from your web application.
 
 We'll look at a few **configuration parameters**, as well as the way to **handle events**, **callbacks** and **manage files** between your application and Adobe Express. Let's get started!
 
@@ -34,7 +34,7 @@ Before we begin, make sure you have the following:
 
 ## Running the sample project
 
-Let's have a look at what we're going to build. First off, clone the [embed-sdk-full-editor-tutorial](#) sample from GitHub and navigate to the project directory. Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+Let's have a look at what we're going to build. First off, clone the [embed-sdk-full-editor-tutorial](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) sample from GitHub and navigate to the project directory. Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
@@ -52,11 +52,11 @@ npm install
 npm run start
 ```
 
-The web application will be served at `localhost:5555` on a secure HTTPS connection—which is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action. 
+The web application will be served at `localhost:5555` on a secure HTTPS connection—which is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action.
 
 ![Full Editor starting point](./images/full-editor_start.png)
 
-When clicking the **Create New** button, the Adobe Express full editor will launch with a predefined document size; users have the entire set of tools available to create their designs. Once they're done, they can Download the document, or Save it as an Image. 
+When clicking the **Create New** button, the Adobe Express full editor will launch with a predefined document size; users have the entire set of tools available to create their designs. Once they're done, they can Download the document, or Save it as an Image.
 
 The sample project will handle the file transfer between Adobe Express and the web page hosting it, and the image will be displayed in lieu of the placeholder.
 
@@ -212,7 +212,7 @@ As you can see, integrating the full editor doesn't take much time! You can cust
 
 ### 3. Managing images
 
-The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their image; we'd like our web application to capture and display it on the HTML page. 
+The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their image; we'd like our web application to capture and display it on the HTML page.
 
 We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](../../reference/types/index.md#callbacks). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../reference/types/index.md#publishparams) argument, with three crucial properties:
 
@@ -431,7 +431,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
 
-- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/). 
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements. 
-- If you're looking for **more tutorials**, check out [here](../tutorials/). 
+- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/).
+- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
+- If you're looking for **more tutorials**, check out [here](../tutorials/).
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
