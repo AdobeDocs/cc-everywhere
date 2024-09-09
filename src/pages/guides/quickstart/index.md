@@ -29,7 +29,11 @@ In this guide, you will learn how to get started with the Adobe Express Embed SD
 
 ## Step 1: Get an API Key
 
-API keys—one for each project—are required to use the Adobe Express Embed SDK. The easiest way to get one is visiting the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
+API keys—one for each project—are required to use the Adobe Express Embed SDK. There are two ways to get one, either via the **Get credential** flow (recommended) or directly from the **Developer Console**.
+
+### Using the Get Credentials feature
+
+Visit the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
 
 ![](../images/quickstart_home.png)
 
@@ -52,27 +56,9 @@ If you find yourself needing to change the project name or the list of allowed d
 
 ![](../images/quickstart_overview.png)
 
-### Edit the Project's settings
+You can skip the next step and get directly to [Edit the Project's settings](#edit-the-projects-settings).
 
-The API cannot be modified once it's created. To edit the project name, make sure you are in the **Project overview** (link on the left column) and click on the **Edit credential** button (top-right navbar).
-
-![](../images/quickstart_edit-name.png)
-
-Enter the name and click **Save**.
-
-![](../images/quickstart_edit-name-dialog.png)
-
-Similarly, you're can edit the list of allowed domains. Select the **API Key** link in the left column, and click on the **Edit credential** button (top-right navbar) to add or remove domains as needed.
-
-![](../images/quickstart_edit-domains.png)
-
-Remember to **Save** your changes each time you edit the project's settings.
-
-![](../images/quickstart_edit-domains-dialog.png)
-
-<InlineAlert variant="info" slots="header, text1, text2, text3" />
-
-Creating a Project directly from the Adobe Developer Console
+### Using the Developer Console
 
 The **Get credentials** button is a convenient shortcut for creating a new Embed SDK project. You can do the same directly from the Developer Console:
 
@@ -81,7 +67,29 @@ The **Get credentials** button is a convenient shortcut for creating a new Embed
 3. Search for **Adobe Express Embed SDK** card.
 4. Click **Create project** button.
 
+![](../images/quickstart_console-flow.png)
+
 Follow the instructions; you'll find that the same steps are required as described above.
+
+### Edit the Project's settings
+
+The API cannot be modified once it's created. To edit the project name, make sure you are in the **Project overview** (link on the left column) and click on the **Edit project** button (top-right navbar).
+
+![](../images/quickstart_edit-name.png)
+
+Enter the name and click **Save**.
+
+![](../images/quickstart_edit-name-dialog.png)
+
+### Edit the list of allowed domains
+
+Similarly, you're can edit the list of domains that are able to use the Embed SDK. Select the **API Key** link in the left column, and click on the **Edit credential** button (top-right navbar) to add or remove domains as needed.
+
+![](../images/quickstart_edit-domains.png)
+
+Remember to **Save** your changes each time you edit the project's settings.
+
+![](../images/quickstart_edit-domains-dialog.png)
 
 ## Step 2: Embed the SDK
 
