@@ -29,7 +29,6 @@ Our reviewers will assess your submission based on a variety of factors, includi
 - Transparency
 - Presence of bugs or harmful code
 
-
 ## Pre-Submission Checklist
 
 ### Correct namespace usage
@@ -61,7 +60,7 @@ Additionally, your integration must not violate the trademarks and copyrights of
 
 To make sure your review process goes smoothly, check off the tasks in this list before submitting.
 
-If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all). 
+If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
 
 <InlineAlert variant="help" slots="text1, text2, text3" />
 
@@ -90,7 +89,7 @@ If your app processes personal information, include a link to the privacy policy
 
 ### 4. Details for Approval
 
-Describe what your app does, to help Adobe review it for approval. Allowing other enterprises to discover your app or integration in the Adobe Admin Console will make it so that the administrators of those enterprises can manage access to it for their users. 
+Describe what your app does, to help Adobe review it for approval. Allowing other enterprises to discover your app or integration in the Adobe Admin Console will make it so that the administrators of those enterprises can manage access to it for their users.
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
@@ -104,16 +103,16 @@ We are no longer approving integrations using V3 of the SDK as it will be deprec
 
 Make sure you’ve included the following in the **Notes to reviewer** feild.
 
-1. **Test credentials** for your integration. 
+1. **Test credentials** for your integration.
 2. **Workflow** of your integration within your product (URL, step-by-step instructions, and more.)
 3. **Version** of the SDK you are using.
 4. List the intended behavior of any custom export buttons you use with the full editor, modules, or quick actions.
 
-### 6. Provide screenshots 
+### 6. Provide screenshots
 
 Complete the **Screenshots for approval** section.
 
-Include screenshots that show the full experience of your app or integration, as well as any usage of Adobe branded elements. 
+Include screenshots that show the full experience of your app or integration, as well as any usage of Adobe branded elements.
 Any usage of [Adobe branding](https://partners.adobe.com/exchangeprogram/creativecloud/marketing/brand-assets.html) must be approved before you submit for approval. These screenshots will only be seen by Adobe during the review process.
 
 Screenshots must be in `JPG` or `PNG` file format, be no larger than `5 MB` and `1360px x 800px` dimensions.
@@ -168,6 +167,6 @@ If it was rejected, we will include the reasons for rejection along with any nex
 
 To learn more, see the [Adobe Creative Cloud Developer Brand Guide](https://partners.adobe.com/content/dam/tep_assets/public/public_1/documents/Adobe-Creative-Cloud-Developer-Brand-Guide.pdf). This guide includes best practices for brand assets in marketing, press releases and social media guidance. It's the best spot to get our most up to date assets. Here you'll also find information for how to publicize and promote your application once it's approved.
 
-During the submission process, we're available to answer any direct questions you may have at CCIntegrationsReview@adobe.com. Please note that this inbox may have delayed responses depending on the number of queries. 
+During the submission process, we're available to answer any direct questions you may have at CCIntegrationsReview@adobe.com. Please note that this inbox may have delayed responses depending on the number of queries.
 
 We look forward to seeing your creative solutions!
