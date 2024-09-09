@@ -44,40 +44,43 @@ Read our brand guidelines. Before you submit your integration for review, please
 
 Any application embedding an Adobe product is a reflection on Adobe and our developer community and is accessible by all users. We encourage you to use your best judgment when submitting content for review and to ensure that your submitted content is reflective of your brand.
 
-* __No adult content.__
+- **No adult content.**
 No integrations may contain intense violence, blood, gore, sexual content, nudity or strong language.
-* __No malicious content of any kind.__
+- **No malicious content of any kind.**
 Integrations may not contain or promote (for example) phishing, spamming, hacking, password trafficking, spyware, or contain malware, trojans, or viruses.
-* __No illegal or questionable content.__
+- **No illegal or questionable content.**
 Integrations may not contain or promote illegal or highly-regulated activities. For example, pharmaceutical sales, promotions or sweepstakes, alcohol or tobacco sales. Integrations may not violate intellectual property rights. For example, applications may not promote DRM circumvention, or contain copyrighted or trademarked content belonging to someone else. Integrations may not promote hatred, violence, or bullying. For example, applications may not contain hate speech, or promote or enable cruel behavior towards others.
 
 ### Legal
 
 By creating a project using the SDK in Adobe Developer Console, you are agreeing to the Adobe Developer Terms of Use. Adobe reserves the right to disable your integration if your app does not adhere to the terms.
 
-Additionally, your integration must not violate the trademarks and copyrights of Adobe, Inc., or those of any other party. Please adhere to all trademark guidelines as noted here: <https://www.adobe.com/legal/permissions/trademarks.html>
+Additionally, your integration must not violate the trademarks and copyrights of Adobe, Inc., or those of any other party. Please adhere to all trademark guidelines as noted [here](https://www.adobe.com/legal/permissions/trademarks.html).
 
 ## Submission Guidelines
 
 To make sure your review process goes smoothly, check off the tasks in this list before submitting.
 
-If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all). 
+If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all). 
 
-<InlineAlert variant="help" slots="text" />
+<InlineAlert variant="help" slots="text1, text2, text3" />
 
-- Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name. 
-- Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
-- Confirm that the SDK is never initialized more than once per page load.
+  Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name.
+
+  Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
+
+  Confirm that the SDK is never initialized more than once per page load.
 
 ### 1. Submit for approval
 
-Navigate to your project in Adobe Developer Console -- select **Submit for review** from the __Project overview__ tab or select the __Approval__ tab on the left panel.
+- Navigate to your project in Adobe Developer Console
+- Select **Submit for review** from the **Project overview** tab or select the **Approval** tab on the left panel.
 
 ![Submit for review in Console UI](submission.png)
 
 ### 2. Set up your public profile
 
-If  this is your first Adobe integration, set up your public profile - note that the information that appears on your public profile will appear in the consent screen displayed to users.
+If  this is your first Adobe integration, set up your public profile. Note that the information that appears on your public profile will appear in the consent screen displayed to users.
 
 ### 3. Consent Screen Details
 
@@ -89,13 +92,15 @@ If your app processes personal information, include a link to the privacy policy
 
 Describe what your app does, to help Adobe review it for approval. Allowing other enterprises to discover your app or integration in the Adobe Admin Console will make it so that the administrators of those enterprises can manage access to it for their users. 
 
-### 4. Notes to reviewer
-
-<InlineAlert variant="error" slots="header, text" />
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
+We are no longer approving integrations using v1 or v2 of the SDK - both versions are deprecated.
+
+We are no longer approving integrations using V3 of the SDK as it will be deprecated in 2024.
+
+### 5. Notes to reviewer
 
 Make sure you’ve included the following in the **Notes to reviewer** feild.
 
@@ -104,9 +109,9 @@ Make sure you’ve included the following in the **Notes to reviewer** feild.
 3. **Version** of the SDK you are using.
 4. List the intended behavior of any custom export buttons you use with the full editor, modules, or quick actions.
 
-### 5. Provide screenshots 
+### 6. Provide screenshots 
 
-Complete the __Screenshots for approval__ section.
+Complete the **Screenshots for approval** section.
 
 Include screenshots that show the full experience of your app or integration, as well as any usage of Adobe branded elements. 
 Any usage of [Adobe branding](https://partners.adobe.com/exchangeprogram/creativecloud/marketing/brand-assets.html) must be approved before you submit for approval. These screenshots will only be seen by Adobe during the review process.
@@ -136,28 +141,28 @@ If it was rejected, we will include the reasons for rejection along with any nex
 
 ## Test cases
 
-* Public profile content (name) adheres to Adobe brand guidelines.
-* The public profile logo must not include Adobe icons or dummy icons.
-* The app description is not ill-formatted, garbled, or improperly exposing character encoding.
-* The app description is clear in conveying the integration's functionality.
-* The integration is able to perform all advertised features.
-* Any website links that are provided successfully open and are safe (check with <https://urlvoid.com>).
-* Proper contact details or a contact form is provided on the GitHub/website link.
-* The privacy policy and terms of use URLs (if any) link to the right content.
-* Only developers should create projects in the Adobe Developer Console. Users should not be asked to create projects in the Console just to use an integration.
-* The project is only asking for access to Adobe APIs/services needed by the integration.
-* All details are shown on the iFrame correctly; no truncation or overlapping of a button.
-* The editor launches accurately when customized input parameters are defined.
-* The editor launches with the right project when passed a valid (existing) Adobe Express project's ID.
-* `edit()` is not invoked until after a `create()` or `createWithAsset()` API call is made, and a corresponding project ID is saved.
-* If the integration lets users start with an existing asset, the iFrame should load with the user-selected image.
-* The export buttons appear as the developer declared (in the "Notes for reviewers" section) during submission. Custom buttons should behave as defined.
+- Public profile content (name) adheres to Adobe brand guidelines.
+- The public profile logo must not include Adobe icons or dummy icons.
+- The app description is not ill-formatted, garbled, or improperly exposing character encoding.
+- The app description is clear in conveying the integration's functionality.
+- The integration is able to perform all advertised features.
+- Any website links that are provided successfully open and are safe (check with <https://urlvoid.com>).
+- Proper contact details or a contact form is provided on the GitHub/website link.
+- The privacy policy and terms of use URLs (if any) link to the right content.
+- Only developers should create projects in the Adobe Developer Console. Users should not be asked to create projects in the Console just to use an integration.
+- The project is only asking for access to Adobe APIs/services needed by the integration.
+- All details are shown on the iFrame correctly; no truncation or overlapping of a button.
+- The editor launches accurately when customized input parameters are defined.
+- The editor launches with the right project when passed a valid (existing) Adobe Express project's ID.
+- `edit()` is not invoked until after a `create()` or `createWithAsset()` API call is made, and a corresponding project ID is saved.
+- If the integration lets users start with an existing asset, the iFrame should load with the user-selected image.
+- The export buttons appear as the developer declared (in the "Notes for reviewers" section) during submission. Custom buttons should behave as defined.
 
 ## Common rejection reasons
 
--  Your app or integration is not accessible via free user sign-up and test credentials are not provided to our review team for testing purposes.
-- Your app description is not complete in the __Notes to reviewer__ section, and our review team cannot test all the entrypoints. Make sure you are clear about what your app integrates (full editor, modules, and/or quick actions) and where/how to invoke them.
-- Your app name should correspond with the name of your project in Adobe Developer Console. This `appName` should also be consistent throughout your application. We use this property in our analytics checks so if there are any discrepancies, we will ask that you make that change before you are able to release the integration to your users.
+-  Your app or integration is **not accessible via free user sign-up** and **test credentials are not provided** to our review team for testing purposes.
+- Your app **description is not complete** in the **Notes to reviewer** section, and our review team **cannot test all the entrypoints**. Make sure you are clear about what your app integrates (full editor, modules, and/or quick actions) and where/how to invoke them.
+- Your **app name should correspond with the name of your projec**t in Adobe Developer Console. This `appName` should also be consistent throughout your application. We use this property in our analytics checks so if there are any discrepancies, we will ask that you make that change before you are able to release the integration to your users.
 
 ## Marketing
 
@@ -166,4 +171,3 @@ To learn more, see the [Adobe Creative Cloud Developer Brand Guide](https://part
 During the submission process, we're available to answer any direct questions you may have at CCIntegrationsReview@adobe.com. Please note that this inbox may have delayed responses depending on the number of queries. 
 
 We look forward to seeing your creative solutions!
-
