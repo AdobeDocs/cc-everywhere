@@ -11,13 +11,13 @@ contributors:
 
 # Getting Started with the Adobe Express Embed SDK
 
-A step-by-step guide to setting up and integrating the Embed SDK into your web application.
+A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
 
-**TODO**: add a video, Hamza-style.
+<!-- **TODO**: add a video, Hamza-style. -->
 
 ## Introduction
 
-Hello, and welcome to this tutorial! The Adobe Express Embed SDK is an amazing integration opportunity for any project, allowing you to launch Adobe Express directly from your web applications. This guide will walk you through setting up the credentials and starting to implement the SDK.
+Hello, and welcome to this tutorial! The Embed SDK is an amazing opportunity for any project, allowing you to launch Adobe Express directly from your web applications. This guide will walk you through setting up the credentials and starting to implement the SDK.
 
 ### Prerequisites
 
@@ -29,28 +29,33 @@ Before you start, make sure you have the following:
 
 ## Getting the credentials
 
-The first crucial step is to acquire an API key from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](../quickstart/index.md) guide, and we'll summarize it here.
+The first crucial step is to acquire an API Key from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](../quickstart/index.md) guide, and we'll summarize it here.
 
-Visit the [Adobe Developer Console](https://developer.adobe.com/console). In the **APIs and services** section, find the **Adobe Express Embed SDK** card and click the **Create project** button.
+Visit the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
 
-![](./images/gettingstarted_apis-and-services.png)
+![](../images/quickstart_home.png)
 
-On the **Configure API** section, you must insert up to five domains that will be allowed to use your API key. This security measure prevents the unauthorized use of your client ID on another website by restricting usage to the domains you have authorized.
+Log in with your Adobe ID if requested, or create a new account if you don't have one. You'll be then presented this screen:
 
-![](../images/quickstart_configure-domain.png)
+![](../images/quickstart_credentials.png)
 
-We'll test the Embed SDK locally: type `localhost:5555` in the "Allowed domain" field—this is where you would add a list of the domains through which your application is served.
+1. In the **Credential name** field, add a unique title. It will correspond with the project folder created for your end users in Adobe Express, and must match what's later referred to as `appName` in the SDK initialization.
+2. We'll test the Embed SDK locally: type `localhost:5555` in the **Allowed domain** field—this is where you would add a list of the domains through which your application is served.
 
 <!-- Warning Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
 Please note that all connections must be secure (HTTPS) for both production and development environments. The sample project will take care of this for you.
 
-Once you have added all the domains, click **Save configured API**. The API key will be displayed on the screen. Please take note, we'll need it in a minute.
+3. Agree to the Terms of Use, and click the **Create credential** button; your API key will be displayed on the screen under the Credential details (see 1 below).
 
-![](../images/quickstart_complete.png)
+![](../images/quickstart_credentials-complete.png)
 
-The list of domains can be edited anytime, as well as the project name—refer to the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide for more information—although the API key cannot be modified. Please keep it safe and away from prying eyes!
+The list of domains can be edited anytime, as well as the project name, clicking the **Console** button in the top-right corner. Please refer to the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide for more information.
+
+<InlineAlert variant="info" slots="text1" />
+
+The API key cannot be modified. Please keep it safe and away from prying eyes!
 
 ## Running the sample project
 
