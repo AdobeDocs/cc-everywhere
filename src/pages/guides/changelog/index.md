@@ -13,6 +13,12 @@ contributors:
 
 # Changelog
 
+## [4.14.23] - 2024-09-05
+
+### Added
+
+- AAdded support for Blobs to the list of supported data types for an Asset in `DocConfig`. Clients can now pass a blob or file object in place of `base64` or `url`.
+
 ## [4.4.15] - 2024-04-02
 
 ### Added
