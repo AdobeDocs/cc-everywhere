@@ -24,11 +24,13 @@ contributors:
 
 # Types
 
-<InlineAlert variant="error" slots="header, text" />
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
+We are no longer approving integrations using using SDK V1, V2, or V3
+
+V1 and V2 are deprecated and V3 will be deprecated in 2024.
 
 ## Asset
 
