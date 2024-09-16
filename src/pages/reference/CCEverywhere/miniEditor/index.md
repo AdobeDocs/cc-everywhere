@@ -26,7 +26,7 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| appConfig | [TextToImageAppConfig](#texttoimageappconfig) | Pass a text prompt to preload in the text to image editor
+| appConfig | [TextToImageAppConfig](#texttoimageappconfig) | Pass a text prompt to preload in the Generate Image editor
 | exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
@@ -36,7 +36,7 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :--| :--
-| promptText| string | Optional string to launch the text to image module with a prompt
+| promptText| string | Optional string to launch the Generate Image module with a prompt
 | callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions
 
 ## editImage
