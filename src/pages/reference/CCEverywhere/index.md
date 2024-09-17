@@ -8,7 +8,7 @@ contributors:
   - https://github.com/amandahuarng
 --- 
 
-# CCEverywhere 
+# CCEverywhere
 
 The CCEverywhere object is the object returned (wrapped in a promise) when the SDK is initialized. We have refactored the SDK APIs to be more verbose and intent-driven. All the APIs are segregated under three workflows, each of which are exposed as a property of `CCEverywhere`.
 
@@ -16,7 +16,7 @@ As of today, it contains 3 properties:
 
 1. `editor`: Contains APIs for creating and editing in an embedded full editor
 2. `quickAction`: Contains APIs for launching quick actions
-3. `module`: Contains APIs for launching modules (Text to Image, Edit Image)
+3. `module`: Contains APIs for launching modules (Generate Image, Edit Image)
 
 <!-- 4. `close()`: Closes the active editor modal
 1. `terminate()`: Un-initializes the active `CCEverywhere` instance -->

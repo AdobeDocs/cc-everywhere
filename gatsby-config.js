@@ -35,14 +35,14 @@ module.exports = {
           path: '/reference/'
         },{
           title: 'v3 Reference',
-          description: 'v3 Reference',
+          description: 'v3 Reference [Deprecated soon]',
           path: '/v3/reference/'
         }, {
-         title: 'v2 Reference [Deprecated soon]',
+         title: 'v2 Reference [Deprecated]',
          description: 'v2 Reference',
          path: '/v2/reference/'
        }, {
-        title: 'v1 Reference [Deprecated soon]',
+        title: 'v1 Reference [Deprecated]',
         description: 'v1 Reference',
         path: '/v1/reference/'
       }],
@@ -222,6 +222,10 @@ module.exports = {
       {
         title: 'Overview',
         path:'/v3/reference/',
+      },
+      {
+        title: 'Overview',
+        path:'/reference/',
       },
       {
         title: 'initialize',

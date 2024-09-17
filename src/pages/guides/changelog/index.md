@@ -13,6 +13,12 @@ contributors:
 
 # Changelog
 
+## [4.14.23] - 2024-09-05
+
+### Added
+
+- Added support for Blobs to the list of supported data types for an Asset in `DocConfig`. Clients can now pass a blob or file object in place of `base64` or `url`.
+
 ## [4.4.15] - 2024-04-02
 
 ### Added
@@ -40,7 +46,7 @@ contributors:
 ### Added
 
 - We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:
-  - Text to Image module: `ccEverywhere.module.createImageFromText()`
+  - Generate Image module: `ccEverywhere.module.createImageFromText()`
   - Edit Image module: `ccEverywhere.module.editImage()`
 - Delayed login is now available.
 

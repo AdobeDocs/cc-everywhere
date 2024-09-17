@@ -7,7 +7,7 @@ Our efforts are currently focused on desktop apps and web.
 
 ### Do my users need to have an Adobe ID?
 
-Users will need to sign in using an existing Adobe ID, or create an account, in order to save projects created. Projects will be saved to the user’s Adobe Express account in a folder named after your integration. 
+Users will need to sign in using an existing Adobe ID, or create an account, in order to save projects created. Projects will be saved to the user’s Adobe Express account in a folder named after your integration.
 
 Creating an account for Adobe Express is always free with premium upgrades available.
 
