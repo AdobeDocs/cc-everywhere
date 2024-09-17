@@ -68,7 +68,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Editing & Generative AI Capabilties',
+        title: 'Tools',
         path: '/guides/full_editor/',
         pages:[
           {
