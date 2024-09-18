@@ -9,6 +9,10 @@ contributors:
   - https://github.com/nimithajalal
 ---
 
+# Submission and Review
+
+Adobe reviews all applications that integrate Adobe Express Embed SDK before enabling it for public use.
+
 ## Overview
 
 This guideline outlines the process for reviewing and submitting an integration using the Adobe Express Embed SDK. Whether you’re embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for users and maintain consistency across all implementations.
