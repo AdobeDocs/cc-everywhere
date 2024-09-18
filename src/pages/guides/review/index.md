@@ -9,7 +9,7 @@ contributors:
   - https://github.com/nimithajalal
 ---
 
-# Submission and Review
+# Submission and review
 
 Adobe reviews all applications that integrate Adobe Express Embed SDK before enabling it for public use.
 
@@ -21,7 +21,7 @@ This guideline outlines the process for reviewing and submitting an integration 
 
 We aim to review your integration within 10 business days of submission, and will let you know if it is accepted, or if any changes need to be made.
 
-## Review Criteria
+## Review criteria
 
 Our reviewers will assess your submission based on a variety of factors, including:
 
@@ -33,7 +33,7 @@ Our reviewers will assess your submission based on a variety of factors, includi
 - Transparency
 - Presence of bugs or harmful code
 
-## Pre-Submission Checklist
+## Pre-Submission checklist
 
 ### Correct namespace usage
 
@@ -60,7 +60,7 @@ By creating a project using the SDK in Adobe Developer Console, you are agreeing
 
 Additionally, your integration must not violate the trademarks and copyrights of Adobe, Inc., or those of any other party. Please adhere to all trademark guidelines as noted [here](https://www.adobe.com/legal/permissions/trademarks.html).
 
-## Submission Guidelines
+## Submission guidelines
 
 To make sure your review process goes smoothly, check off the tasks in this list before submitting.
 
@@ -85,13 +85,13 @@ If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailt
 
 If  this is your first Adobe integration, set up your public profile. Note that the information that appears on your public profile will appear in the consent screen displayed to users.
 
-### 3. Consent Screen Details
+### 3. Consent Screen details
 
 These details will appear on the consent screen that users will view when signing in to use your app or integration. Information from your public profile will also appear on this screen.
 
 If your app processes personal information, include a link to the privacy policy on your app’s website, per the Adobe Developer Agreement.
 
-### 4. Details for Approval
+### 4. Details for approval
 
 Describe what your app does, to help Adobe review it for approval. Allowing other enterprises to discover your app or integration in the Adobe Admin Console will make it so that the administrators of those enterprises can manage access to it for their users.
 
@@ -121,7 +121,7 @@ Any usage of [Adobe branding](https://partners.adobe.com/exchangeprogram/creativ
 
 Screenshots must be in `JPG` or `PNG` file format, be no larger than `5 MB` and `1360px x 800px` dimensions.
 
-## Submission Process
+## Submission process
 
 Congratulations! You're on your way to getting your integration into the hands of your users. Our teams are working on new submissions every day. Depending on volume, it can be up to 10 business days before you hear a response from us. On average, we approve integrations within 3 business days.
 
@@ -129,11 +129,11 @@ Congratulations! You're on your way to getting your integration into the hands o
 
 Once you think you're good to go, click the **Submit for Review** button. Our review team will ensure your integration fulfills all the guidelines and passes all the [test cases](#test-cases) before approving it for public usage.
 
-### Initial Review
+### Initial review
 
 Adobe’s team will perform an initial review, focusing on technical correctness, design, and user experience. This process may take up to 10 business days.
 
-### Feedback and Revisions
+### Feedback and revisions
 
 If any changes or improvements are required, you will receive feedback with detailed instructions. You can resubmit after addressing the feedback.
 
