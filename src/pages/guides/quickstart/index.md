@@ -33,7 +33,7 @@ API keys—one for each project—are required to use the Adobe Express Embed SD
 
 ### Using the Get Credentials feature
 
-Visit the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
+From this very Quickstart Guide—or any other child page of the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) documentation—look in the top-navbar for the **Get credentials** button and click it.
 
 ![](../images/quickstart_home.png)
 
