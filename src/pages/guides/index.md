@@ -33,7 +33,7 @@ Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on you
 
 ### What are modules?
 
-[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **Text to Image** and **Edit Image**.
+[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **Generate Image** and **Edit Image**.
 
 ## Getting Started
 

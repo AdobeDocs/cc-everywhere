@@ -3,7 +3,7 @@ keywords:
   - v4
   - Modules
   - Mini editors
-  - Text to image
+  - Generate image
   - Create image from text
   - Edit image 
   - miniEditor
@@ -17,7 +17,7 @@ contributors:
 
 # Modules
 
-This guide will demonstrate how to embed our Text to Image and Edit Image modules in your own application.
+This guide will demonstrate how to embed our Generate Image and Edit Image modules in your own application.
 
 ## createImageFromText()
 
@@ -35,7 +35,7 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| appConfig | [TextToImageAppConfig](../../reference/CCEverywhere/miniEditor/index.md#texttoimageappconfig)| Pass a text prompt to preload in the text to image editor
+| appConfig | [TextToImageAppConfig](../../reference/CCEverywhere/miniEditor/index.md#texttoimageappconfig)| Pass a text prompt to preload in the Generate Image editor
 | exportConfig | [ExportOptions](../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
 
