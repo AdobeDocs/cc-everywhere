@@ -11,7 +11,7 @@ contributors:
 
 # Embed SDK Tutorials
 
-This page contains a collection of tutorials to help you get started with the Adobe Express Embed SDK. 
+This page contains a collection of tutorials to help you get started with the Adobe Express Embed SDK.
 
 Each tutorial provides step-by-step instructions on integrating the SDK into your web application and customizing its features. New tutorials will be added regularly, so be sure to check back for updates.
 
