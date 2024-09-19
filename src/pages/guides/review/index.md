@@ -132,7 +132,7 @@ If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailt
 
 ### Submit to Adobe
 
-Once you think you're good to go, click the **Submit for Review** button. Our review team will ensure your integration fulfills all the guidelines and passes all the [test cases](#test-cases) before approving it for public usage.
+Once you think you're good to go, click the **Submit for Review** button in the Developer console. Our review team will ensure your integration fulfills all the guidelines and passes all the [test cases](#test-cases) before approving it for public usage.
 
 ### Initial review
 
