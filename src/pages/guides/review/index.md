@@ -17,6 +17,12 @@ Adobe reviews all applications that integrate Adobe Express Embed SDK before ena
 
 This guideline outlines the process for reviewing and submitting an integration using the Adobe Express Embed SDK. Whether you’re embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for users and maintain consistency across all implementations.
 
+<InlineAlert variant="help" slots="text" />
+
+Please note that until your integration is approved, it will display a red banner indicating, the experience powred by Adobe Express has not been approved yet. Once we review and approve your app, we will remove this banner.
+
+This process is valuable, as gaining approval enhances the credibility of your integration and fosters trust among your users.
+
 <InlineAlert slots="text" />
 
 We aim to review your integration within 10 business days of submission, and will let you know if it is accepted, or if any changes need to be made.
@@ -62,9 +68,19 @@ Additionally, your integration must not violate the trademarks and copyrights of
 
 ## Submission guidelines
 
-To make sure your review process goes smoothly, check off the tasks in this list before submitting.
+You have to submit your app for approval in the [Adobe Developer Console](https://developer.adobe.com/console).
 
-If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
+<InlineAlert variant="help" slots="text" />
+
+If you started your developement by clicking the [Get Credentials](https://developer.adobe.com/express/embed-sdk/docs/get-credential/) button, you'll need to identify your project before proceeding. Alternatively, you can click on the [Get Credentials](https://developer.adobe.com/express/embed-sdk/docs/get-credential/) button, which should provide a link to any previously created projects. This link will take you to the developer console.
+
+Follow the steps below, in the Developer console.
+
+- Navigate to your project in [Adobe Developer Console](https://developer.adobe.com/console).
+- Select **Submit for review** from the **Project overview** tab or select the **Approval** tab on the left panel.
+
+![Submit for review in Console UI](submission.png)
+
 
 <InlineAlert variant="help" slots="text1, text2, text3" />
 
@@ -74,36 +90,23 @@ If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailt
 
   Confirm that the SDK is never initialized more than once per page load.
 
-### 1. Submit for approval
+To make sure your review process goes smoothly, check off the tasks in this list before submitting.
 
-- Navigate to your project in Adobe Developer Console
-- Select **Submit for review** from the **Project overview** tab or select the **Approval** tab on the left panel.
+### 1. Set up your public profile
 
-![Submit for review in Console UI](submission.png)
+If this is your first Adobe integration, set up your public profile.
 
-### 2. Set up your public profile
-
-If  this is your first Adobe integration, set up your public profile. Note that the information that appears on your public profile will appear in the consent screen displayed to users.
-
-### 3. Consent Screen details
+### 2. Consent Screen details
 
 These details will appear on the consent screen that users will view when signing in to use your app or integration. Information from your public profile will also appear on this screen.
 
 If your app processes personal information, include a link to the privacy policy on your app’s website, per the Adobe Developer Agreement.
 
-### 4. Details for approval
+### 3. Details for approval
 
-Describe what your app does, to help Adobe review it for approval. Allowing other enterprises to discover your app or integration in the Adobe Admin Console will make it so that the administrators of those enterprises can manage access to it for their users.
+Describe what your app does, to help Adobe review it for approval.
 
-<InlineAlert variant="error" slots="header, text1, text2" />
-
-IMPORTANT: Deprecation Warning
-
-We are no longer approving integrations using v1 or v2 of the SDK - both versions are deprecated.
-
-We are no longer approving integrations using V3 of the SDK as it will be deprecated in 2024.
-
-### 5. Notes to reviewer
+### 4. Notes to reviewer
 
 Make sure you’ve included the following in the **Notes to reviewer** feild.
 
@@ -112,7 +115,7 @@ Make sure you’ve included the following in the **Notes to reviewer** feild.
 3. **Version** of the SDK you are using.
 4. List the intended behavior of any custom export buttons you use with the full editor, modules, or quick actions.
 
-### 6. Provide screenshots
+### 5. Provide screenshots
 
 Complete the **Screenshots for approval** section.
 
@@ -125,9 +128,11 @@ Screenshots must be in `JPG` or `PNG` file format, be no larger than `5 MB` and 
 
 Congratulations! You're on your way to getting your integration into the hands of your users. Our teams are working on new submissions every day. Depending on volume, it can be up to 10 business days before you hear a response from us. On average, we approve integrations within 3 business days.
 
+If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
+
 ### Submit to Adobe
 
-Once you think you're good to go, click the **Submit for Review** button. Our review team will ensure your integration fulfills all the guidelines and passes all the [test cases](#test-cases) before approving it for public usage.
+Once you think you're good to go, click the **Submit for Review** button in the Developer console. Our review team will ensure your integration fulfills all the guidelines and passes all the [test cases](#test-cases) before approving it for public usage.
 
 ### Initial review
 
