@@ -68,7 +68,7 @@ module.exports = {
         ]
       },
       {
-        title: 'Features',
+        title: 'Tools',
         path: '/guides/full_editor/',
         pages:[
           {
@@ -97,12 +97,8 @@ module.exports = {
       },
       {
         title: 'Concepts',
-        path: '/guides/concepts/authentication.md',
+        path: '/guides/concepts/customization.md',
         pages:[
-          {
-            title: 'Authentication',
-            path: '/guides/concepts/authentication.md'
-          },
           {
             title: 'UI Customization',
             path: '/guides/concepts/customization.md'
