@@ -79,7 +79,7 @@ Follow the steps below, in the Developer console.
 - Navigate to your project in [Adobe Developer Console](https://developer.adobe.com/console).
 - Select **Submit for review** from the **Project overview** tab or select the **Approval** tab on the left panel.
 
-![Submit for review in Console UI](submission.png)
+![Submit for review in Console UI](submission_bigger.png)
 
 <InlineAlert variant="help" slots="text1, text2, text3" />
 
