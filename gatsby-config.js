@@ -100,20 +100,20 @@ module.exports = {
           },
         ],
       },
-      {
-        title: "Concepts",
-        path: "/guides/concepts/customization.md",
-        pages: [
-          {
-            title: "UI Customization",
-            path: "/guides/concepts/customization.md",
-          },
-          {
-            title: "Error Handling",
-            path: "/guides/concepts/error-handling.md",
-          },
-        ],
-      },
+      //   {
+      //     title: "Concepts",
+      //     path: "/guides/concepts/customization.md",
+      //     pages: [
+      //       {
+      //         title: "UI Customization",
+      //         path: "/guides/concepts/customization.md",
+      //       },
+      //       {
+      //         title: "Error Handling",
+      //         path: "/guides/concepts/error-handling.md",
+      //       },
+      //     ],
+      //   },
       {
         title: "Tutorials",
         path: "/guides/tutorials/",
