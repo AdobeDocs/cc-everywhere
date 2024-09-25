@@ -53,8 +53,8 @@ module.exports = {
         ],
       },
       {
-        title: "Support",
-        path: "/support/index.md",
+        title: "Community",
+        path: "https://developer.adobe.com/express/community",
       },
     ],
     subPages: [
