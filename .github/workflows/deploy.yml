@@ -154,7 +154,7 @@ jobs:
         uses: AdobeDocs/static-website-deploy@master
         with:
           enabled-static-website: "true"
-          source: "public"
+          source: "public2"
           target: ${{ needs.set-state.outputs.path_prefix }}
           connection-string: ${{ secrets.AIO_AZURE_DEV_CONNECTION_STRING }}
           remove-existing-files: "true"
