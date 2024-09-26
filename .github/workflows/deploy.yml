@@ -161,13 +161,6 @@ jobs:
           GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: 'Adobe Express Embed SDK'
           NODE_OPTIONS: "--max_old_space_size=20140"
-
-      - name: Upload public/ 
-        if: needs.set-state.outputs.pre_built == 'true'
-        uses: borales/actions-yarn@v3
-        with:
-          cmd: TODO
-
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
@@ -278,13 +271,6 @@ jobs:
           GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
           NODE_OPTIONS: "--max_old_space_size=20140"
-
-      - name: Upload public/ 
-        if: needs.set-state.outputs.pre_built == 'true'
-        uses: borales/actions-yarn@v3
-        with:
-          cmd: TODO
-
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
