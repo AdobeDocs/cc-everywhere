@@ -32,27 +32,27 @@ module.exports = {
         menu: [
           {
             title: "v4 Reference",
-            description: "v4 Reference [Improved docs]",
-            path: "/reference-new/",
+            description: "🟢 Improved docs",
+            path: "/v4/",
           },
           {
             title: "v4 Reference",
-            description: "v4 Reference",
+            description: "🟠 Legacy docs",
             path: "/reference/",
           },
           {
             title: "v3 Reference",
-            description: "v3 Reference [Deprecated soon]",
+            description: "🟠 Deprecated soon",
             path: "/v3/reference/",
           },
           {
-            title: "v2 Reference [Deprecated]",
-            description: "v2 Reference",
+            title: "v2 Reference",
+            description: "🔴 Deprecated",
             path: "/v2/reference/",
           },
           {
-            title: "v1 Reference [Deprecated]",
-            description: "v1 Reference",
+            title: "v1 Reference",
+            description: "🔴 Deprecated",
             path: "/v1/reference/",
           },
         ],
@@ -105,20 +105,6 @@ module.exports = {
           },
         ],
       },
-      //   {
-      //     title: "Concepts",
-      //     path: "/guides/concepts/customization.md",
-      //     pages: [
-      //       {
-      //         title: "UI Customization",
-      //         path: "/guides/concepts/customization.md",
-      //       },
-      //       {
-      //         title: "Error Handling",
-      //         path: "/guides/concepts/error-handling.md",
-      //       },
-      //     ],
-      //   },
       {
         title: "Tutorials",
         path: "/guides/tutorials/",
@@ -276,10 +262,15 @@ module.exports = {
       },
       {
         title: "APIs Reference",
-        path: "/reference-new/",
+        path: "/v4/",
         header: true,
-        expanded: "true",
-        pages: require("./api-refs-sidebar.json"),
+        pages: [
+          {
+            title: "Overview",
+            path: "/v4/index.md",
+          },
+          ...require("./api-refs-sidebar.json"),
+        ],
       },
     ],
   },
