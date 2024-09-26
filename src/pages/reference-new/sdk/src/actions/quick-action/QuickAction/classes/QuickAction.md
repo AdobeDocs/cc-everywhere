@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [sdk/src/actions/quick-action/QuickAction](../index.md) / QuickAction
 
-# Class: QuickAction\<T\>
+# Class: QuickAction<T\>
 
 A action is a specific thing that the user can do. End user will be interacting
 with the action implemented using BaseAction (this class). Action class takes care
@@ -15,7 +11,7 @@ Each implementation of BaseAction is mapped to Workflow & AnalyticsWorkflow
 
 ## Extends
 
-- [`BaseAction`](../../../BaseAction/classes/BaseAction.md)\<`T`\>
+- [`BaseAction`](../../../BaseAction/classes/BaseAction.md)<`T`\>
 
 ## Extended by
 
@@ -39,11 +35,11 @@ new QuickAction<T>(context): QuickAction<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<`T`\> |
+| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<`T`\> |
 
 #### Returns
 
-[`QuickAction`](QuickAction.md)\<`T`\>
+[`QuickAction`](QuickAction.md)<`T`\>
 
 #### Overrides
 
@@ -54,7 +50,7 @@ new QuickAction<T>(context): QuickAction<T>
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<`T`\> | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`context` |
+| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<`T`\> | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`context` |
 
 ## Methods
 
@@ -130,7 +126,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Inherited from
 
@@ -146,7 +142,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Inherited from
 

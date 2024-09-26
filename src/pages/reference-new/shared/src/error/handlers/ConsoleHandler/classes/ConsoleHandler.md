@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [shared/src/error/handlers/ConsoleHandler](../index.md) / ConsoleHandler
 
-# Class: ConsoleHandler\<T\>
+# Class: ConsoleHandler<T\>
 
 ## Extends
 
@@ -18,7 +14,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/IErrorMessageHandler.md)\<`T`\>
+- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/IErrorMessageHandler.md)<`T`\>
 
 ## Constructors
 
@@ -36,7 +32,7 @@ new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>
 
 #### Returns
 
-[`ConsoleHandler`](ConsoleHandler.md)\<`T`\>
+[`ConsoleHandler`](ConsoleHandler.md)<`T`\>
 
 #### Overrides
 
@@ -78,7 +74,7 @@ static error<T>(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/CCEverywhereError.md)\<`T`\> |
+| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/CCEverywhereError.md)<`T`\> |
 
 #### Returns
 
@@ -96,7 +92,7 @@ error(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/CCEverywhereError.md)\<`T`\> |
+| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/CCEverywhereError.md)<`T`\> |
 
 #### Returns
 

@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/messenger/Protocol.types
 
 # shared/src/messenger/Protocol.types
@@ -12,7 +8,7 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ProtocolVersion](enumerations/ProtocolVersion.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [ProtocolVersion](enumerations/ProtocolVersion.md) | - |
 
 ### Interfaces
 

@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/Message.types](../index.md) / MessageDataMap
 
 # Interface: MessageDataMap
@@ -16,4 +12,4 @@
 | `TOKEN_RESPONSE` | [`TokenResponseMessage`](TokenResponseMessage.md) |
 | `PARAMS_RESPONSE` | [`ParamsResponseMessage`](ParamsResponseMessage.md) |
 | `EVENT` | [`HostEventData`](../../MessageData.types/interfaces/HostEventData.md) |
-| `ERROR` | [`ErrorData`](../../../error/ErrorData/interfaces/ErrorData.md)\<`string`\> |
+| `ERROR` | [`ErrorData`](../../../error/ErrorData/interfaces/ErrorData.md)<`string`\> |

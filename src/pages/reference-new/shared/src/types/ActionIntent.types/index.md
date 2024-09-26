@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/types/ActionIntent.types
 
 # shared/src/types/ActionIntent.types
@@ -12,7 +8,7 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [EditorIntent](enumerations/EditorIntent.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [EditorIntent](enumerations/EditorIntent.md) | - |
 | [ModuleIntent](enumerations/ModuleIntent.md) | - |
 | [ImageQuickActionIntent](enumerations/ImageQuickActionIntent.md) | - |
 | [VideoQuickActionIntent](enumerations/VideoQuickActionIntent.md) | - |

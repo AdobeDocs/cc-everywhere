@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / [sdk/src/CCEverywhereBase](../index.md) / CCEverywhereBase
 
 # Class: `abstract` CCEverywhereBase

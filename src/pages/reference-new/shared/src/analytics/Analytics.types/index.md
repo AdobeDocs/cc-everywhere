@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/analytics/Analytics.types
 
 # shared/src/analytics/Analytics.types
@@ -12,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AnalyticsConfig](interfaces/AnalyticsConfig.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [AnalyticsConfig](interfaces/AnalyticsConfig.md) | - |

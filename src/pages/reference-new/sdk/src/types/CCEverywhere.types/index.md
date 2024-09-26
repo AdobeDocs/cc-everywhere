@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / sdk/src/types/CCEverywhere.types
 
 # sdk/src/types/CCEverywhere.types
@@ -12,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [State](enumerations/State.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [State](enumerations/State.md) | - |

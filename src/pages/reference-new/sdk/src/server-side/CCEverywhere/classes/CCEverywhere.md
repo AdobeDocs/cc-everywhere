@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/server-side/CCEverywhere](../index.md) / CCEverywhere
 
 # Class: CCEverywhere
@@ -69,4 +65,4 @@ getTemplates(templateConfig): Promise<TemplateResponse>
 
 #### Returns
 
-`Promise`\<[`TemplateResponse`](../../actions/templates/Template.types/interfaces/TemplateResponse.md)\>
+`Promise`<[`TemplateResponse`](../../actions/templates/Template.types/interfaces/TemplateResponse.md)\>

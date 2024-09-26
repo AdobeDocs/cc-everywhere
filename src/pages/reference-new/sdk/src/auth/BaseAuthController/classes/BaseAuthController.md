@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/auth/BaseAuthController](../index.md) / BaseAuthController
 
 # Class: `abstract` BaseAuthController
@@ -56,7 +52,7 @@ abstract getTargetUrl(targetInfo, skipJumpCheck): Promise<URL>
 
 #### Returns
 
-`Promise`\<`URL`\>
+`Promise`<`URL`\>
 
 ***
 
@@ -104,7 +100,7 @@ refreshAuthOption(validatorFn): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 ***
 

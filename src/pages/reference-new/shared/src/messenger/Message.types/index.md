@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/messenger/Message.types
 
 # shared/src/messenger/Message.types

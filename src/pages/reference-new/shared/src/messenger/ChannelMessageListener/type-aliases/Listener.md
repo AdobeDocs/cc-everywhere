@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessageListener](../index.md) / Listener
 
 # Type Alias: Listener()
@@ -20,7 +16,7 @@ type Listener: <T>(message) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../Message.types/type-aliases/Message.md)\<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/Message.md)<`T`\> |
 
 ## Returns
 

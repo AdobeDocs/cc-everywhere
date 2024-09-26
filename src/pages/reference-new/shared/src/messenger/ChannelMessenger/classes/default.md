@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessenger](../index.md) / default
 
 # Class: default
@@ -128,7 +124,7 @@ sendMessage<T>(
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
-| `message` | [`Message`](../../Message.types/type-aliases/Message.md)\<`T`\> \| [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)\<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/Message.md)<`T`\> \| [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)<`T`\> |
 | `requestId`? | `string` |
 
 #### Returns

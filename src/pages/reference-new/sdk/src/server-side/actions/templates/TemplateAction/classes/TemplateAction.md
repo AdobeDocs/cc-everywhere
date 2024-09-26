@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../../index.md) / [sdk/src/server-side/actions/templates/TemplateAction](../index.md) / TemplateAction
 
 # Class: TemplateAction
@@ -34,7 +30,7 @@ execute(): Promise<TemplateResponse>
 
 #### Returns
 
-`Promise`\<[`TemplateResponse`](../../Template.types/interfaces/TemplateResponse.md)\>
+`Promise`<[`TemplateResponse`](../../Template.types/interfaces/TemplateResponse.md)\>
 
 ***
 

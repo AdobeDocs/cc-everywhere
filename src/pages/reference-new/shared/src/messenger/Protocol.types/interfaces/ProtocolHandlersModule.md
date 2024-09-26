@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/Protocol.types](../index.md) / ProtocolHandlersModule
 
 # Interface: ProtocolHandlersModule

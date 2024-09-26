@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/Message.types](../index.md) / MessageCompat
 
-# Type Alias: MessageCompat\<T\>
+# Type Alias: MessageCompat<T\>
 
 ```ts
 type MessageCompat<T>: object;

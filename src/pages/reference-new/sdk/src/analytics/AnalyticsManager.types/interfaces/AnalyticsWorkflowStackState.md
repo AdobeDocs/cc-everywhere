@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/analytics/AnalyticsManager.types](../index.md) / AnalyticsWorkflowStackState
 
 # Interface: AnalyticsWorkflowStackState

@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / sdk/src/auth/AuthController.types
 
 # sdk/src/auth/AuthController.types

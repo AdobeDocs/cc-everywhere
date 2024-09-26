@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / sdk/src/server-side/actions/templates/TemplateAction
 
 # sdk/src/server-side/actions/templates/TemplateAction

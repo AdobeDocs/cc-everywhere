@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / sdk/src/actions/quick-action/QuickAction
 
 # sdk/src/actions/quick-action/QuickAction

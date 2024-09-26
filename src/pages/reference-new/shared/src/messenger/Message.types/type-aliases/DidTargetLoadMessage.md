@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/Message.types](../index.md) / DidTargetLoadMessage
 
-# Type Alias: DidTargetLoadMessage\<T\>
+# Type Alias: DidTargetLoadMessage<T\>
 
 ```ts
 type DidTargetLoadMessage<T>: T extends LoadStatus.FAILURE ? object : object;

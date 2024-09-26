@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/error/CCEverywhereError](../index.md) / CCEverywhereError
 
-# Class: CCEverywhereError\<T\>
+# Class: CCEverywhereError<T\>
 
 ## Extends
 
@@ -41,7 +37,7 @@ Constructor
 
 #### Returns
 
-[`CCEverywhereError`](CCEverywhereError.md)\<`T`\>
+[`CCEverywhereError`](CCEverywhereError.md)<`T`\>
 
 #### Overrides
 
@@ -82,13 +78,13 @@ customData?): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../CCEverywhereError.types/type-aliases/ErrorCodeMessage.md)\<`T`\> |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../CCEverywhereError.types/type-aliases/ErrorCodeMessage.md)<`T`\> |
 | `subError`? | `string` \| `number` \| `Error` |
 | `customData`? | `unknown` |
 
 #### Returns
 
-[`CCEverywhereError`](CCEverywhereError.md)\<`T`\>
+[`CCEverywhereError`](CCEverywhereError.md)<`T`\>
 
 ***
 
@@ -108,11 +104,11 @@ static createErrorFromData<T>(data): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ErrorData`](../../ErrorData/interfaces/ErrorData.md)\<`T`\> |
+| `data` | [`ErrorData`](../../ErrorData/interfaces/ErrorData.md)<`T`\> |
 
 #### Returns
 
-[`CCEverywhereError`](CCEverywhereError.md)\<`T`\>
+[`CCEverywhereError`](CCEverywhereError.md)<`T`\>
 
 ***
 
@@ -126,7 +122,7 @@ Get a plain-object representation of the error..
 
 #### Returns
 
-[`ErrorData`](../../ErrorData/interfaces/ErrorData.md)\<`T`\>
+[`ErrorData`](../../ErrorData/interfaces/ErrorData.md)<`T`\>
 
 ***
 

@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../../index.md) / [shared/src/types/1p/editor/AppConfig.types](../index.md) / EditorAppConfig
 
 # Interface: EditorAppConfig
@@ -17,7 +13,7 @@
 | `publishModalTitle?` | `string` | Property to configure the Modal titles | - |
 | `publishErrorModalTitle?` | `string` | - | - |
 | `callbacks?` | [`Callbacks`](../../../../Callbacks.types/interfaces/Callbacks.md) | - | [`BaseEditorAppConfig`](../../../../editor/AppConfig.types/interfaces/BaseEditorAppConfig.md).`callbacks` |
-| `selectedCategory?` | [`EditorPanelView`](../../../../AppConfig.types/enumerations/EditorPanelView.md) | Category to show by default **Default** [[`EditorPanelView.TEMPLATES`]] | [`BaseEditorAppConfig`](../../../../editor/AppConfig.types/interfaces/BaseEditorAppConfig.md).`selectedCategory` |
+| `selectedCategory?` | [`EditorPanelView`](../../../../AppConfig.types/enumerations/EditorPanelView.md) | Category to show by default **Default** `EditorPanelView.TEMPLATES` | [`BaseEditorAppConfig`](../../../../editor/AppConfig.types/interfaces/BaseEditorAppConfig.md).`selectedCategory` |
 | `categorySearchText?` | `string` | Search text to pass in the editor for selected panel. | [`BaseEditorAppConfig`](../../../../editor/AppConfig.types/interfaces/BaseEditorAppConfig.md).`categorySearchText` |
 | `templateType?` | [`TemplateType`](../../../../AppConfig.types/enumerations/TemplateType.md) | Canvas template type | [`BaseEditorAppConfig`](../../../../editor/AppConfig.types/interfaces/BaseEditorAppConfig.md).`templateType` |
 | `multiPage?` | `boolean` | Multi page export supported **Default** `true` | [`BaseEditorAppConfig`](../../../../editor/AppConfig.types/interfaces/BaseEditorAppConfig.md).`multiPage` |

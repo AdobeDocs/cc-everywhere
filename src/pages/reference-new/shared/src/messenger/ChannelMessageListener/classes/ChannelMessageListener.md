@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessageListener](../index.md) / ChannelMessageListener
 
 # Class: ChannelMessageListener
@@ -65,7 +61,7 @@ didGetMessage<T>(message, requestId?): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../Message.types/type-aliases/Message.md)\<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/Message.md)<`T`\> |
 | `requestId`? | `string` |
 
 #### Returns
@@ -187,7 +183,7 @@ sendMessage<T>(targetChannel, message): boolean
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
-| `message` | [`SimpleMessageType`](../../Message.types/type-aliases/SimpleMessageType.md) \| [`Message`](../../Message.types/type-aliases/Message.md)\<`T`\> |
+| `message` | [`SimpleMessageType`](../../Message.types/type-aliases/SimpleMessageType.md) \| [`Message`](../../Message.types/type-aliases/Message.md)<`T`\> |
 
 #### Returns
 
@@ -214,7 +210,7 @@ Sends a message using a message channel that is compatible with older version of
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |  |
-| `message` | [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)\<`T`\> | The message to send. |
+| `message` | [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)<`T`\> | The message to send. |
 
 #### Returns
 

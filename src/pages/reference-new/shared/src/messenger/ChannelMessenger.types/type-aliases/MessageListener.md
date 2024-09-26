@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessenger.types](../index.md) / MessageListener
 
 # Type Alias: MessageListener()
@@ -20,7 +16,7 @@ type MessageListener: <T>(event) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `event` | `MessageEvent`\<[`ChannelMessage`](../interfaces/ChannelMessage.md)\<`T`\>\> |
+| `event` | `MessageEvent`<[`ChannelMessage`](../interfaces/ChannelMessage.md)<`T`\>\> |
 
 ## Returns
 

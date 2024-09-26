@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/types/ExportConfig.types](../index.md) / BaseExportOption
 
-# Interface: BaseExportOption\<U\>
+# Interface: BaseExportOption<U\>
 
 ## Extended by
 

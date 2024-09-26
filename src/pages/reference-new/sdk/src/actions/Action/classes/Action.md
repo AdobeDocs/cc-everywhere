@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/actions/Action](../index.md) / Action
 
-# Class: `abstract` Action\<T\>
+# Class: `abstract` Action<T\>
 
 ## Extended by
 
@@ -46,7 +42,7 @@ callbacks?): Action<T>
 
 #### Returns
 
-[`Action`](Action.md)\<`T`\>
+[`Action`](Action.md)<`T`\>
 
 ## Properties
 
@@ -65,7 +61,7 @@ abstract execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 ***
 

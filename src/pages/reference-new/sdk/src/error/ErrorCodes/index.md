@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / sdk/src/error/ErrorCodes
 
 # sdk/src/error/ErrorCodes

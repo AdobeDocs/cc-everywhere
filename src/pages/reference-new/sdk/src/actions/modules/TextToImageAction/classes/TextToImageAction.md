@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [sdk/src/actions/modules/TextToImageAction](../index.md) / TextToImageAction
 
 # Class: TextToImageAction
@@ -15,7 +11,7 @@ Each implementation of BaseAction is mapped to Workflow & AnalyticsWorkflow
 
 ## Extends
 
-- [`BaseAction`](../../../BaseAction/classes/BaseAction.md)\<[`TextToImageDesignConfig`](../../../../../../shared/src/types/module/DesignConfig.types/interfaces/TextToImageDesignConfig.md)\>
+- [`BaseAction`](../../../BaseAction/classes/BaseAction.md)<[`TextToImageDesignConfig`](../../../../../../shared/src/types/module/DesignConfig.types/interfaces/TextToImageDesignConfig.md)\>
 
 ## Constructors
 
@@ -29,7 +25,7 @@ new TextToImageAction(context): TextToImageAction
 
 | Parameter | Type |
 | ------ | ------ |
-| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<[`TextToImageDesignConfig`](../../../../../../shared/src/types/module/DesignConfig.types/interfaces/TextToImageDesignConfig.md)\> |
+| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<[`TextToImageDesignConfig`](../../../../../../shared/src/types/module/DesignConfig.types/interfaces/TextToImageDesignConfig.md)\> |
 
 #### Returns
 
@@ -44,7 +40,7 @@ new TextToImageAction(context): TextToImageAction
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<[`TextToImageDesignConfig`](../../../../../../shared/src/types/module/DesignConfig.types/interfaces/TextToImageDesignConfig.md)\> | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`context` |
+| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<[`TextToImageDesignConfig`](../../../../../../shared/src/types/module/DesignConfig.types/interfaces/TextToImageDesignConfig.md)\> | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`context` |
 
 ## Methods
 
@@ -120,7 +116,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Inherited from
 
@@ -136,7 +132,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Inherited from
 

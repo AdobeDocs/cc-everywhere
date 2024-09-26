@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [sdk/src/auth/3p/AuthController](../index.md) / AuthController
 
 # Class: AuthController
@@ -59,7 +55,7 @@ getTargetUrl(targetInfo): Promise<URL>
 
 #### Returns
 
-`Promise`\<`URL`\>
+`Promise`<`URL`\>
 
 #### Overrides
 
@@ -119,7 +115,7 @@ refreshAuthOption(validatorFn): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Inherited from
 

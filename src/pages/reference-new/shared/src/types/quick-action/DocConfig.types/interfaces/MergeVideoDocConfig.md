@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [shared/src/types/quick-action/DocConfig.types](../index.md) / MergeVideoDocConfig
 
 # Interface: MergeVideoDocConfig

@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/actions/BaseAction](../index.md) / BaseAction
 
-# Class: `abstract` BaseAction\<T\>
+# Class: `abstract` BaseAction<T\>
 
 A action is a specific thing that the user can do. End user will be interacting
 with the action implemented using BaseAction (this class). Action class takes care
@@ -15,7 +11,7 @@ Each implementation of BaseAction is mapped to Workflow & AnalyticsWorkflow
 
 ## Extends
 
-- [`Action`](../../Action/classes/Action.md)\<[`ActionContext`](../../ActionContext/interfaces/ActionContext.md)\<`T`\>\>
+- [`Action`](../../Action/classes/Action.md)<[`ActionContext`](../../ActionContext/interfaces/ActionContext.md)<`T`\>\>
 
 ## Extended by
 
@@ -49,13 +45,13 @@ actionProperties): BaseAction<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `context` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)\<`T`\> |
+| `context` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)<`T`\> |
 | `analyticsWorkflow` | [`AnalyticsWorkflow`](../../../analytics/AnalyticsManager.types/enumerations/AnalyticsWorkflow.md) |
 | `actionProperties` | [`ActionProperties`](../../Action.types/interfaces/ActionProperties.md) |
 
 #### Returns
 
-[`BaseAction`](BaseAction.md)\<`T`\>
+[`BaseAction`](BaseAction.md)<`T`\>
 
 #### Overrides
 
@@ -66,7 +62,7 @@ actionProperties): BaseAction<T>
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`Action`](../../Action/classes/Action.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)\<`T`\> | [`Action`](../../Action/classes/Action.md).`context` |
+| `context` | `public` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)<`T`\> | [`Action`](../../Action/classes/Action.md).`context` |
 
 ## Methods
 
@@ -142,7 +138,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Implementation of
 
@@ -158,7 +154,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Overrides
 

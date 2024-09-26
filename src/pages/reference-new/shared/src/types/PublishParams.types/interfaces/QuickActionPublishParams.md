@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/types/PublishParams.types](../index.md) / QuickActionPublishParams
 
 # Interface: QuickActionPublishParams

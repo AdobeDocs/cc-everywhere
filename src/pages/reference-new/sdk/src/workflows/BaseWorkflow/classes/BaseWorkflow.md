@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/workflows/BaseWorkflow](../index.md) / BaseWorkflow
 
 # Class: BaseWorkflow

@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/types/ContainerConfig.types](../index.md) / FillContainerConfig
 
 # Interface: FillContainerConfig

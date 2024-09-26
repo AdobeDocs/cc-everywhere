@@ -1,14 +1,10 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/types/ExportConfig.types](../index.md) / EditFurtherExportOption
 
-# Interface: EditFurtherExportOption\<U\>
+# Interface: EditFurtherExportOption<U\>
 
 ## Extends
 
-- [`BaseExportOption`](BaseExportOption.md)\<`U`\>
+- [`BaseExportOption`](BaseExportOption.md)<`U`\>
 
 ## Type Parameters
 

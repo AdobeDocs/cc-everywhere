@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/error/ErrorHandler](../index.md) / ErrorHandler
 
 # Class: ErrorHandler
@@ -30,7 +26,7 @@ static addHandler(handler): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler.md)\<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
+| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
 
 #### Returns
 
@@ -48,7 +44,7 @@ static removeHandler(handler): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler.md)\<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
+| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
 
 #### Returns
 
@@ -66,7 +62,7 @@ static error(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)\<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
+| `error` | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
 
 #### Returns
 
@@ -84,7 +80,7 @@ static warn(warn): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `warn` | [`CCEverywhereWarn`](../../../../../shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereWarn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)\<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
+| `warn` | [`CCEverywhereWarn`](../../../../../shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereWarn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/ErrorCode.md)\> |
 
 #### Returns
 

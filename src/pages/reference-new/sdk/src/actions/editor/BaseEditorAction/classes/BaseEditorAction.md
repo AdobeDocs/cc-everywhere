@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [sdk/src/actions/editor/BaseEditorAction](../index.md) / BaseEditorAction
 
-# Class: `abstract` BaseEditorAction\<T\>
+# Class: `abstract` BaseEditorAction<T\>
 
 A action is a specific thing that the user can do. End user will be interacting
 with the action implemented using BaseAction (this class). Action class takes care
@@ -15,7 +11,7 @@ Each implementation of BaseAction is mapped to Workflow & AnalyticsWorkflow
 
 ## Extends
 
-- [`BaseAction`](../../../BaseAction/classes/BaseAction.md)\<`T`\>
+- [`BaseAction`](../../../BaseAction/classes/BaseAction.md)<`T`\>
 
 ## Extended by
 
@@ -42,12 +38,12 @@ new BaseEditorAction<T>(context, workflow): BaseEditorAction<T>
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
-| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<`T`\> | `undefined` |
+| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<`T`\> | `undefined` |
 | `workflow` | [`AnalyticsWorkflow`](../../../../analytics/AnalyticsManager.types/enumerations/AnalyticsWorkflow.md) | `AnalyticsWorkflow.CREATE_DESIGN` |
 
 #### Returns
 
-[`BaseEditorAction`](BaseEditorAction.md)\<`T`\>
+[`BaseEditorAction`](BaseEditorAction.md)<`T`\>
 
 #### Overrides
 
@@ -58,7 +54,7 @@ new BaseEditorAction<T>(context, workflow): BaseEditorAction<T>
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<`T`\> | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`context` |
+| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<`T`\> | [`BaseAction`](../../../BaseAction/classes/BaseAction.md).`context` |
 
 ## Methods
 
@@ -134,7 +130,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Inherited from
 
@@ -150,7 +146,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Inherited from
 

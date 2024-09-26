@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [sdk/src/actions/editor/CreateAction](../index.md) / CreateAction
 
 # Class: CreateAction
@@ -15,7 +11,7 @@ Each implementation of BaseAction is mapped to Workflow & AnalyticsWorkflow
 
 ## Extends
 
-- [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md)\<[`CreateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateDesignConfig.md)\>
+- [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md)<[`CreateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateDesignConfig.md)\>
 
 ## Constructors
 
@@ -29,7 +25,7 @@ new CreateAction(context): CreateAction
 
 | Parameter | Type |
 | ------ | ------ |
-| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<[`CreateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateDesignConfig.md)\> |
+| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<[`CreateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateDesignConfig.md)\> |
 
 #### Returns
 
@@ -44,7 +40,7 @@ new CreateAction(context): CreateAction
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<[`CreateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateDesignConfig.md)\> | [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md).`context` |
+| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<[`CreateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateDesignConfig.md)\> | [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md).`context` |
 
 ## Methods
 
@@ -120,7 +116,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Inherited from
 
@@ -136,7 +132,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Inherited from
 

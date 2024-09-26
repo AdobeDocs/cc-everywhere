@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/config/SDKConfigManager](../index.md) / SDKConfigManager
 
 # Class: SDKConfigManager
@@ -43,7 +39,7 @@ static setEnvironmentConfig(env, isFirstParty): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Overrides
 

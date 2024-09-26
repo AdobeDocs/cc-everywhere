@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/actions/ActionManager](../index.md) / ActionManager
 
 # Class: ActionManager
@@ -45,11 +41,11 @@ set activeAction(action): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `action` | `undefined` \| [`Action`](../../Action/classes/Action.md)\<[`SDKContext`](../../ActionContext/interfaces/SDKContext.md)\> |
+| `action` | `undefined` \| [`Action`](../../Action/classes/Action.md)<[`SDKContext`](../../ActionContext/interfaces/SDKContext.md)\> |
 
 #### Returns
 
-`undefined` \| [`Action`](../../Action/classes/Action.md)\<[`SDKContext`](../../ActionContext/interfaces/SDKContext.md)\>
+`undefined` \| [`Action`](../../Action/classes/Action.md)<[`SDKContext`](../../ActionContext/interfaces/SDKContext.md)\>
 
 ## Methods
 
@@ -72,13 +68,13 @@ designConfig): Promise<void>
 
 | Parameter | Type |
 | ------ | ------ |
-| `actionConstructor` | [`ActionConstructor`](../../Action.types/type-aliases/ActionConstructor.md)\<`T`\> |
+| `actionConstructor` | [`ActionConstructor`](../../Action.types/type-aliases/ActionConstructor.md)<`T`\> |
 | `intent` | [`ActionIntent`](../../../../../shared/src/types/ActionIntent.types/type-aliases/ActionIntent.md) |
 | `designConfig` | `T` |
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 ***
 

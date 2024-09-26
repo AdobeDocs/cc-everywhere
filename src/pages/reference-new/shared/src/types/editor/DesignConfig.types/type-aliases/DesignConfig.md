@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [shared/src/types/editor/DesignConfig.types](../index.md) / DesignConfig
 
 # Type Alias: DesignConfig

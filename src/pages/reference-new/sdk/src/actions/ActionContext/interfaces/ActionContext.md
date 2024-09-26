@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/actions/ActionContext](../index.md) / ActionContext
 
-# Interface: ActionContext\<T\>
+# Interface: ActionContext<T\>
 
 Information that Action needs to be passed by the host.
 
@@ -30,4 +26,4 @@ Information that Action needs to be passed by the host.
 | `validator` | `BaseValidator` | [`SDKContext`](SDKContext.md).`validator` |
 | `authStore` | [`AuthStore`](../../../auth/AuthStore/classes/AuthStore.md) | [`SDKContext`](SDKContext.md).`authStore` |
 | `hostInfo` | [`HostInfoExtended`](../../../../../shared/src/types/HostInfo.types/type-aliases/HostInfoExtended.md) | [`SDKContext`](SDKContext.md).`hostInfo` |
-| `params` | [`ContextParams`](ContextParams.md)\<`T`\> | - |
+| `params` | [`ContextParams`](ContextParams.md)<`T`\> | - |

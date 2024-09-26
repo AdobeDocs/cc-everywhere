@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/types/BrowserEvent.types
 
 # shared/src/types/BrowserEvent.types
@@ -12,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [BrowserEvent](enumerations/BrowserEvent.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [BrowserEvent](enumerations/BrowserEvent.md) | - |

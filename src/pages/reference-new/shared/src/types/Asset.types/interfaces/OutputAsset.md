@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/types/Asset.types](../index.md) / OutputAsset
 
 # Interface: OutputAsset
@@ -10,7 +6,7 @@ Information related to output asset.
 
 ## Extends
 
-- `AssetBase`\<`AssetDataType.URL` \| `AssetDataType.BASE64`\>
+- `AssetBase`<`AssetDataType.URL` \| `AssetDataType.BASE64`\>
 
 ## Properties
 

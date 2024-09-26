@@ -126,7 +126,7 @@
 | [shared/src/types/3p](shared/src/types/3p/index.md) | - |
 | [shared/src/types/ActionIntent.types](shared/src/types/ActionIntent.types/index.md) | - |
 | [shared/src/types/AppConfig.types](shared/src/types/AppConfig.types/index.md) | - |
-| [shared/src/types/Asset.types](shared/src/types/Asset.types/index.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [shared/src/types/Asset.types](shared/src/types/Asset.types/index.md) | - |
 | [shared/src/types/Authentication.types](shared/src/types/Authentication.types/index.md) | - |
 | [shared/src/types/BrowserEvent.types](shared/src/types/BrowserEvent.types/index.md) | - |
 | [shared/src/types/Callbacks.types](shared/src/types/Callbacks.types/index.md) | - |
@@ -139,8 +139,8 @@
 | [shared/src/types/Layout.types](shared/src/types/Layout.types/index.md) | - |
 | [shared/src/types/Network.types](shared/src/types/Network.types/index.md) | - |
 | [shared/src/types/PublishParams.types](shared/src/types/PublishParams.types/index.md) | - |
-| [shared/src/types/TargetInfo.types](shared/src/types/TargetInfo.types/index.md) | ********************************************************************** ADOBE CONFIDENTIAL |
-| [shared/src/types/Version.types](shared/src/types/Version.types/index.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [shared/src/types/TargetInfo.types](shared/src/types/TargetInfo.types/index.md) | - |
+| [shared/src/types/Version.types](shared/src/types/Version.types/index.md) | - |
 | [shared/src/types/Workflow.types](shared/src/types/Workflow.types/index.md) | - |
 | [shared/src/types/editor/AppConfig.types](shared/src/types/editor/AppConfig.types/index.md) | - |
 | [shared/src/types/editor/DesignConfig.types](shared/src/types/editor/DesignConfig.types/index.md) | - |

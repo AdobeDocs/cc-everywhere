@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/types/Network.types
 
 # shared/src/types/Network.types
@@ -12,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [NetworkState](enumerations/NetworkState.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [NetworkState](enumerations/NetworkState.md) | - |

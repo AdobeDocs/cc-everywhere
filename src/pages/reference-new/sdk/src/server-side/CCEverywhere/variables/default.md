@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/server-side/CCEverywhere](../index.md) / default
 
 # Variable: default
@@ -31,6 +27,6 @@ Please ensure to call this API only once.
 
 #### Returns
 
-`Promise`\<[`CCEverywhere`](../classes/CCEverywhere.md)\>
+`Promise`<[`CCEverywhere`](../classes/CCEverywhere.md)\>
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.

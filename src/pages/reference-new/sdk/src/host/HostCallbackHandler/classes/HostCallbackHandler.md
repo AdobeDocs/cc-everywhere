@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/host/HostCallbackHandler](../index.md) / HostCallbackHandler
 
 # Class: HostCallbackHandler
@@ -103,7 +99,7 @@ onError(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)\<[`ErrorCode`](../../../error/ErrorCodes/type-aliases/ErrorCode.md)\> |
+| `error` | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)<[`ErrorCode`](../../../error/ErrorCodes/type-aliases/ErrorCode.md)\> |
 
 #### Returns
 

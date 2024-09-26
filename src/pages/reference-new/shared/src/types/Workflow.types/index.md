@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../index.md) / shared/src/types/Workflow.types
 
 # shared/src/types/Workflow.types
@@ -12,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Workflow](enumerations/Workflow.md) | ********************************************************************** ADOBE CONFIDENTIAL |
+| [Workflow](enumerations/Workflow.md) | - |

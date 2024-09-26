@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/error/ErrorHandlerDelegate](../index.md) / ErrorHandlerDelegate
 
-# Class: ErrorHandlerDelegate\<T\>
+# Class: ErrorHandlerDelegate<T\>
 
 ## Type Parameters
 
@@ -22,7 +18,7 @@ new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>
 
 #### Returns
 
-[`ErrorHandlerDelegate`](ErrorHandlerDelegate.md)\<`T`\>
+[`ErrorHandlerDelegate`](ErrorHandlerDelegate.md)<`T`\>
 
 ## Methods
 
@@ -36,7 +32,7 @@ addHandler(handler): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../IErrorMessageHandler/interfaces/IErrorMessageHandler.md)\<`T`\> |
+| `handler` | [`IErrorMessageHandler`](../../IErrorMessageHandler/interfaces/IErrorMessageHandler.md)<`T`\> |
 
 #### Returns
 
@@ -54,7 +50,7 @@ removeHandler(handler): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../IErrorMessageHandler/interfaces/IErrorMessageHandler.md)\<`T`\> |
+| `handler` | [`IErrorMessageHandler`](../../IErrorMessageHandler/interfaces/IErrorMessageHandler.md)<`T`\> |
 
 #### Returns
 
@@ -84,7 +80,7 @@ error(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../CCEverywhereError/classes/CCEverywhereError.md)\<`T`\> |
+| `error` | [`CCEverywhereError`](../../CCEverywhereError/classes/CCEverywhereError.md)<`T`\> |
 
 #### Returns
 

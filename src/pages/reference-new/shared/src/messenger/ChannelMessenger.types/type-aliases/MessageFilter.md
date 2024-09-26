@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessenger.types](../index.md) / MessageFilter
 
 # Type Alias: MessageFilter()
@@ -20,7 +16,7 @@ type MessageFilter: <T>(message) => boolean;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../Message.types/type-aliases/Message.md)\<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/Message.md)<`T`\> |
 
 ## Returns
 

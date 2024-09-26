@@ -1,14 +1,10 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/actions/WarmupAction](../index.md) / WarmupAction
 
 # Class: WarmupAction
 
 ## Extends
 
-- [`Action`](../../Action/classes/Action.md)\<[`ActionContext`](../../ActionContext/interfaces/ActionContext.md)\<[`WarmupDesignConfig`](../../../../../shared/src/types/module/DesignConfig.types/interfaces/WarmupDesignConfig.md)\>\>
+- [`Action`](../../Action/classes/Action.md)<[`ActionContext`](../../ActionContext/interfaces/ActionContext.md)<[`WarmupDesignConfig`](../../../../../shared/src/types/module/DesignConfig.types/interfaces/WarmupDesignConfig.md)\>\>
 
 ## Implements
 
@@ -26,7 +22,7 @@ new WarmupAction(context): WarmupAction
 
 | Parameter | Type |
 | ------ | ------ |
-| `context` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)\<[`WarmupDesignConfig`](../../../../../shared/src/types/module/DesignConfig.types/interfaces/WarmupDesignConfig.md)\> |
+| `context` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)<[`WarmupDesignConfig`](../../../../../shared/src/types/module/DesignConfig.types/interfaces/WarmupDesignConfig.md)\> |
 
 #### Returns
 
@@ -41,7 +37,7 @@ new WarmupAction(context): WarmupAction
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`Action`](../../Action/classes/Action.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)\<[`WarmupDesignConfig`](../../../../../shared/src/types/module/DesignConfig.types/interfaces/WarmupDesignConfig.md)\> | [`Action`](../../Action/classes/Action.md).`context` |
+| `context` | `public` | [`ActionContext`](../../ActionContext/interfaces/ActionContext.md)<[`WarmupDesignConfig`](../../../../../shared/src/types/module/DesignConfig.types/interfaces/WarmupDesignConfig.md)\> | [`Action`](../../Action/classes/Action.md).`context` |
 
 ## Methods
 
@@ -117,7 +113,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Overrides
 
@@ -136,7 +132,7 @@ close(reason, error?): void
 | Parameter | Type |
 | ------ | ------ |
 | `reason` | `ContainerCloseReason` |
-| `error`? | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)\<[`ErrorCode`](../../../error/ErrorCodes/type-aliases/ErrorCode.md)\> |
+| `error`? | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/CCEverywhereError.md)<[`ErrorCode`](../../../error/ErrorCodes/type-aliases/ErrorCode.md)\> |
 
 #### Returns
 
@@ -184,7 +180,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Implementation of
 

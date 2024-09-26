@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [shared/src/types/module/DesignConfig.types](../index.md) / EditImageDesignConfig
 
 # Interface: EditImageDesignConfig

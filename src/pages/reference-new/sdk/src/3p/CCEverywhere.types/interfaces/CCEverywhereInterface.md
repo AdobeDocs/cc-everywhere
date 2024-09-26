@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/3p/CCEverywhere.types](../index.md) / CCEverywhereInterface
 
 # Interface: CCEverywhereInterface

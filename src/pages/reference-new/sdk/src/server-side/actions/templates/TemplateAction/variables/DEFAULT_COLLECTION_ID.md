@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../../index.md) / [sdk/src/server-side/actions/templates/TemplateAction](../index.md) / DEFAULT\_COLLECTION\_ID
 
 # Variable: DEFAULT\_COLLECTION\_ID

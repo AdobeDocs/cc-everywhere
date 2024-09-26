@@ -1,14 +1,10 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [shared/src/types/ExportConfig.types](../index.md) / ContinueEditingDropdownOption
 
 # Interface: ContinueEditingDropdownOption
 
 ## Extends
 
-- [`BaseExportOption`](BaseExportOption.md)\<[`DropdownOptionStyle`](DropdownOptionStyle.md)\>
+- [`BaseExportOption`](BaseExportOption.md)<[`DropdownOptionStyle`](DropdownOptionStyle.md)\>
 
 ## Properties
 

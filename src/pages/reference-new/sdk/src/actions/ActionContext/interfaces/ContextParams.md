@@ -1,10 +1,6 @@
-[**cc-everywhere**](../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../index.md) / [sdk/src/actions/ActionContext](../index.md) / ContextParams
 
-# Interface: ContextParams\<T\>
+# Interface: ContextParams<T\>
 
 ## Type Parameters
 

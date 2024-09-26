@@ -1,7 +1,3 @@
-[**cc-everywhere**](../../../../../../index.md) • **Docs**
-
-***
-
 [cc-everywhere](../../../../../../index.md) / [sdk/src/actions/editor/CreateWithTemplateAction](../index.md) / CreateWithTemplateAction
 
 # Class: CreateWithTemplateAction
@@ -15,7 +11,7 @@ Each implementation of BaseAction is mapped to Workflow & AnalyticsWorkflow
 
 ## Extends
 
-- [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md)\<[`CreateWithTemplateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)\>
+- [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md)<[`CreateWithTemplateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)\>
 
 ## Constructors
 
@@ -29,7 +25,7 @@ new CreateWithTemplateAction(context, workflow): CreateWithTemplateAction
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
-| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<[`CreateWithTemplateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)\> | `undefined` |
+| `context` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<[`CreateWithTemplateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)\> | `undefined` |
 | `workflow` | [`AnalyticsWorkflow`](../../../../analytics/AnalyticsManager.types/enumerations/AnalyticsWorkflow.md) | `AnalyticsWorkflow.CREATE_DESIGN` |
 
 #### Returns
@@ -45,7 +41,7 @@ new CreateWithTemplateAction(context, workflow): CreateWithTemplateAction
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `hostCallbackHandler` | `readonly` | [`HostCallbackHandler`](../../../../host/HostCallbackHandler/classes/HostCallbackHandler.md) | [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md).`hostCallbackHandler` |
-| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)\<[`CreateWithTemplateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)\> | [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md).`context` |
+| `context` | `public` | [`ActionContext`](../../../ActionContext/interfaces/ActionContext.md)<[`CreateWithTemplateDesignConfig`](../../../../../../shared/src/types/editor/DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)\> | [`BaseEditorAction`](../../BaseEditorAction/classes/BaseEditorAction.md).`context` |
 
 ## Methods
 
@@ -121,7 +117,7 @@ getTargetInfoInternal(): Promise<TargetInfo>
 
 #### Returns
 
-`Promise`\<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
+`Promise`<[`TargetInfo`](../../../../../../shared/src/types/TargetInfo.types/interfaces/TargetInfo.md)\>
 
 #### Inherited from
 
@@ -137,7 +133,7 @@ execute(): Promise<void>
 
 #### Returns
 
-`Promise`\<`void`\>
+`Promise`<`void`\>
 
 #### Inherited from
 
