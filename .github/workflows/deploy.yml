@@ -84,30 +84,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Setup Node v16 for Yarn v3
-        uses: actions/setup-node@v3
+      - name: Setup Node for Yarn
+        uses: actions/setup-node@v4
         with:
-          node-version: "16.15.0" # Current LTS version
+          node-version: lts/iron
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
 
-      - name: Install Yarn v3
-        uses: borales/actions-yarn@v3
-        with:
-          cmd: set version stable
-
       - name: Install Dependencies
-        uses: borales/actions-yarn@v3
-        env:
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        uses: borales/actions-yarn@v5
         with:
           cmd: install
 
       - name: Gatsby Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             public
@@ -123,7 +116,7 @@ jobs:
           cmd: clean
 
       - name: Build site
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         with:
           cmd: build
         env:
@@ -193,28 +186,21 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node v16 for Yarn v3
-        uses: actions/setup-node@v3
+      - name: Setup Node for Yarn
+        uses: actions/setup-node@v4
         with:
-          node-version: "16.15.0" # Current LTS version
+          node-version: lts/iron
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
 
-      - name: Install Yarn v3
-        uses: borales/actions-yarn@v3
-        with:
-          cmd: set version stable
-
       - name: Install Dependencies
-        uses: borales/actions-yarn@v3
-        env:
-          YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        uses: borales/actions-yarn@v5
         with:
           cmd: install
 
       - name: Gatsby Cache
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: |
             public
@@ -230,7 +216,7 @@ jobs:
           cmd: clean
 
       - name: Build site
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         with:
           cmd: build
         env:
