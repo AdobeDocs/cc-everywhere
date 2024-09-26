@@ -13,6 +13,14 @@ contributors:
 
 # Changelog
 
+## [4.14.23] - 2024-09-23
+
+### Enhancements
+
+- Redesigned the Information Architecture, to make it easier for developers to find the information they need.
+- Updated the [Submission and Review](../review/index.md) and [Quickstart](../quickstart/index.md) Guides.
+- Added a new [Tutorials](../tutorials/index.md) section with two tutorials.
+
 ## [4.14.23] - 2024-09-05
 
 ### Added
