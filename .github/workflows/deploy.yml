@@ -11,6 +11,10 @@ on:
         description: "Clean cache (yes|no)"
         required: true
         default: "no"
+      preBuilt:
+        description: "Site is pre-built (yes|no)"
+        required: true
+        default: "no"
       excludeSubfolder:
         description: "Exclude a subfolder from deletion"
         required: false
@@ -30,6 +34,7 @@ jobs:
       deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
       deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
       clean_cache: ${{ contains(github.event.inputs.clean, 'yes') }}
+      pre_built: ${{ contains(github.event.inputs.preBuilt, 'yes') }}
       path_prefix: ${{ steps.get_path_prefix.outputs.path_prefix }}
       branch_short_ref: ${{ steps.get_branch.outputs.branch }}
       exclude_subfolder: ${{ github.event.inputs.excludeSubfolder }}
@@ -57,6 +62,7 @@ jobs:
       - run: echo "Deploy to dev - ${{ needs.set-state.outputs.deploy_dev }}"
       - run: echo "Deploy to prod - ${{ needs.set-state.outputs.deploy_prod }}"
       - run: echo "Clean cache - ${{ needs.set-state.outputs.clean_cache }}"
+      - run: echo "Pre-built - ${{ needs.set-state.outputs.pre_built }}"
       - run: echo "Repository org - ${{ github.event.repository.owner.login }}"
       - run: echo "Repository name - ${{ github.event.repository.name }}"
       - run: echo "Repository branch - ${{ needs.set-state.outputs.branch_short_ref }}"
@@ -123,6 +129,7 @@ jobs:
           cmd: clean
 
       - name: Build site
+        if: needs.set-state.outputs.pre_built == 'false'
         uses: borales/actions-yarn@v3
         with:
           cmd: build
@@ -154,6 +161,12 @@ jobs:
           GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: 'Adobe Express Embed SDK'
           NODE_OPTIONS: "--max_old_space_size=20140"
+
+      - name: Upload public/ 
+        if: needs.set-state.outputs.pre_built == 'true'
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: TODO
 
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
@@ -230,6 +243,7 @@ jobs:
           cmd: clean
 
       - name: Build site
+        if: needs.set-state.outputs.pre_built == 'false'
         uses: borales/actions-yarn@v3
         with:
           cmd: build
@@ -264,6 +278,13 @@ jobs:
           GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
           NODE_OPTIONS: "--max_old_space_size=20140"
+
+      - name: Upload public/ 
+        if: needs.set-state.outputs.pre_built == 'true'
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: TODO
+
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
