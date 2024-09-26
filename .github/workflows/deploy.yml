@@ -151,9 +151,9 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_SITE_DOMAIN_URL: https://developer-stage.adobe.com
-          GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
-          GATSBY_PRODUCT_NAME: 'Adobe Express Embed SDK'
-          NODE_OPTIONS: "--max_old_space_size=20140"
+          GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
+          GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
+          NODE_OPTIONS: "--max-old-space-size=20140"
 
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
@@ -261,8 +261,9 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_SITE_DOMAIN_URL: https://developer.adobe.com
-          GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
+          GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
+          NODE_OPTIONS: "--max-old-space-size=20140"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
