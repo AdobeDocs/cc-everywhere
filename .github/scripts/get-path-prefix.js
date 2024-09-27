@@ -6,11 +6,11 @@
 // https://github.com/actions/github-script#run-a-separate-file
 
 module.exports = async ({ core }) => {
-  const { pathPrefix } = await require('../../gatsby-config.js');
+  const { pathPrefix } = await require('../../gatsby-pathPrefix.js');
 
   if (!pathPrefix) {
     core.setFailed(
-      `The pathPrefix in the site's gatsby-config.js file is missing.
+      `The pathPrefix in the site's gatsby-pathPrefix.js file is missing.
 
       To fix this, open your gatsby-config.js file, and add it to the config object:
 
@@ -21,7 +21,7 @@ module.exports = async ({ core }) => {
     );
   } else if (pathPrefix === '/') {
     core.setFailed(
-      `The pathPrefix in the site's gatsby-config.js file is set to "/". This is not allowed.
+      `The pathPrefix in the site's gatsby-pathPrefix.js file is set to "/". This is not allowed.
 
       To fix this, change the pathPrefix to include a name that starts and ends with "/":
 
