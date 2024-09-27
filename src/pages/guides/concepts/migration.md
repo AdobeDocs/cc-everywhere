@@ -1,0 +1,133 @@
+# Migration Guide: Adobe Express Embed SDK v3 to v4
+ 
+This guide will assist you in updating your implementation from v3 to v4.
+
+## Overview
+
+Adobe Express Embed SDK version v4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
+
+## Key Changes in v4
+
+1. **Simplified Parameters**: Parameters are restructured for clarity and reduced redundancy.
+2. **Base Parameters**: Introduction of base parameters for consistent configuration across APIs.
+3. **Inheritance of Parameters**: Use of inheritance to manage API-specific configurations.
+4. **New Configuration Options**: Enhanced configuration options for better control over the SDK behavior.
+
+For each SDK API, we have four base parameters:
+
+- Doc Config: Contains the properties that serve as a starting point for the workflow. This should not contain any target app configs.
+- App Config: Properties that configure the target application.
+- Export Config: Properties that configure the buttons and the result that is exported to the clients.
+- Container Config: Properties that configure the SDK iFrame.
+
+**Base Doc Config & Base App Config:** Since each API has its own set of inputs that are not correlating with one another, therefore the base doc params are kept empty with the idea of inheritance.
+ 
+
+## Step-by-Step Migration
+
+### 1. Update SDK Version
+
+Need input here @Davide
+
+How to update the SDk version and sample code. 
+
+### 2. Update Initialization Code
+
+Update your initialization code to use the new configuration parameters.
+
+**v3:**
+
+Need input here @Davide
+
+Expected sample code.
+
+v4:
+
+Need input here @Davide
+
+Expected sample code.
+
+### 3. Adjust API Calls
+ 
+Review and update your API calls to match the new method signatures and parameters in v4. Here are some common changes:
+
+V3:
+
+Need input here @Davide
+
+Expected sample code.
+
+V4:
+
+Need input here @Davide
+
+Expected sample code.
+
+### 4. Handle Deprecated Features
+
+Identify and replace any deprecated features in your codebase. Refer to the v4 documentation for alternatives and updated methods.
+
+v3:
+
+`AdobeExpressEmbed.oldMethod();`
+ 
+v4:
+
+`AdobeExpressEmbed.newMethod();`
+
+### 5. Test Your Implementation
+
+After updating your code, thoroughly test your implementation to ensure everything works as expected. Pay particular attention to:
+
+- **Initialization**: Ensure that the SDK initializes correctly with the new configuration parameters.
+- **API Calls**: Validate that all API calls are functioning as intended with the updated method signatures and parameters.
+- **Event Handling**: Verify that events are being handled correctly and that any callbacks are working as expected.
+- **User Interactions**: Test all user interactions within the embedded content to ensure they are smooth and error-free.
+- **Performance**: Monitor the performance to confirm that the enhancements in v4 are realized in your application.
+- **Security**: Ensure that any new security features are properly configured and that your application complies with the latest security standards.
+
+Here are some specific tests you can perform:
+
+#### Initialization Tests
+
+- Ensure the SDK correctly initializes with the `initialize` method.
+- Verify that the iframe is appended to the correct parent element.
+- Check that the iframe size, padding, border radius, and background color are applied as specified.
+
+#### Full Editor API Tests
+
+- Test loading a template or design using `create`.
+- Validate that the default category, search text, template type, and titles are set correctly in the editor.
+- Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
+
+#### Mini Editor API Tests
+
+- Test loading an asset in the Mini Editor using `editImage`.
+- Verify that the asset is displayed and editable.
+- Check that export options and allowed file types are correctly configured.
+
+#### Quick Action API Tests
+
+- Test various Quick Action APIs such as image and video editing.
+- Validate that common inputs for Quick Actions are working correctly.
+- Ensure that API-specific parameters are applied and functioning as expected.
+
+### 6. Review New Features
+
+Take advantage of new features introduced in v4. Review the release notes and documentation to explore new functionalities that could enhance your application. Some new features might include:
+
+- Enhanced configuration options for better customization.
+- New methods and parameters to provide more control over the SDK.
+- Improved performance and security features.
+
+### 7. Update Documentation and Dependencies
+
+Ensure your internal documentation is updated to reflect the changes made during the migration. Also, update any dependencies that interact with Adobe Express Embed SDK to ensure compatibility. This includes:
+
+- Updating any code samples or snippets in your documentation.
+- Modifying any integration guides or setup instructions.
+- Ensuring all team members are aware of the changes and how to use the new SDK features.
+
+## Conclusion
+
+Migrating from Adobe Express Embed SDK v3 to v4 involves updating initialization code, API calls, and handling deprecated features. By following this guide, you can ensure a smooth transition and take advantage of the new features and improvements in v4.
