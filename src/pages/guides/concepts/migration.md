@@ -22,6 +22,46 @@ For each SDK API, we have four base parameters:
 
 **Base Doc Config & Base App Config:** Since each API has its own set of inputs that are not correlating with one another, therefore the base doc params are kept empty with the idea of inheritance.
  
+## Parameter details
+
+### Base Export Config
+
+```ts
+{
+  /**
+   * Desired asset data type for images.
+   * For image output types, host can set this property to either base64 or url. Default type for images is base64.
+   * For videos, we will always send output as url irrespective of this property.
+   * @default base64
+   */
+  outputType?: AssetDataType;
+}
+```
+### Base Container Params
+
+``` ts
+{
+  /** Id of element to which iframe must be appended. By default it is appended to body.*/
+  parentElementId?: string;
+  /** Maximum size boundary of the iframe.*/
+  size?: PixelSize;
+  /** Minimum size boundary of the iframe.*/
+  minSize?: PixelSize;
+  /** Padding applied to the iframe in pixels.*/
+  padding?: number;
+  /** Border Radius applied to the iframe in pixels. */
+  borderRadius?: number;
+  /** Override the background color of the iframe. By default this is as per theme. */
+  backgroundColor?: string;
+  /** Show spinner while loading target app. Default is true. */
+  showLoader?: boolean;
+  /**
+   * If target app does't open within this time (in ms, same as of setTimeout),
+   * the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
+   */
+  loadTimeout?: number;
+}
+```
 
 ## Step-by-Step Migration
 
@@ -37,15 +77,15 @@ Update your initialization code to use the new configuration parameters.
 
 **v3:**
 
-Need input here @Davide
+```ts
+initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
+```
 
-Expected sample code.
+**v4:**
 
-v4:
-
-Need input here @Davide
-
-Expected sample code.
+```ts
+initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, authOption?: AuthOption) => Promise<CCEverywhere>); terminate: (() => boolean)
+```
 
 ### 3. Adjust API Calls
  
@@ -63,7 +103,7 @@ Need input here @Davide
 
 Expected sample code.
 
-### 4. Handle Deprecated Features
+### 4. Handle deprecated parameters
 
 Identify and replace any deprecated features in your codebase. Refer to the v4 documentation for alternatives and updated methods.
 
@@ -75,7 +115,7 @@ v4:
 
 `AdobeExpressEmbed.newMethod();`
 
-### 5. Test Your Implementation
+### 5. Test your implementation
 
 After updating your code, thoroughly test your implementation to ensure everything works as expected. Pay particular attention to:
 
@@ -88,31 +128,31 @@ After updating your code, thoroughly test your implementation to ensure everythi
 
 Here are some specific tests you can perform:
 
-#### Initialization Tests
+#### Initialization tests
 
 - Ensure the SDK correctly initializes with the `initialize` method.
 - Verify that the iframe is appended to the correct parent element.
 - Check that the iframe size, padding, border radius, and background color are applied as specified.
 
-#### Full Editor API Tests
+#### Full editor API tests
 
 - Test loading a template or design using `create`.
 - Validate that the default category, search text, template type, and titles are set correctly in the editor.
 - Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
 
-#### Mini Editor API Tests
+#### Mini editor API tests
 
 - Test loading an asset in the Mini Editor using `editImage`.
 - Verify that the asset is displayed and editable.
 - Check that export options and allowed file types are correctly configured.
 
-#### Quick Action API Tests
+#### Quick Action API tests
 
 - Test various Quick Action APIs such as image and video editing.
 - Validate that common inputs for Quick Actions are working correctly.
 - Ensure that API-specific parameters are applied and functioning as expected.
 
-### 6. Review New Features
+### 6. Review new features
 
 Take advantage of new features introduced in v4. Review the release notes and documentation to explore new functionalities that could enhance your application. Some new features might include:
 
@@ -130,4 +170,6 @@ Ensure your internal documentation is updated to reflect the changes made during
 
 ## Conclusion
 
-Migrating from Adobe Express Embed SDK v3 to v4 involves updating initialization code, API calls, and handling deprecated features. By following this guide, you can ensure a smooth transition and take advantage of the new features and improvements in v4.
+Migrating from Adobe Express Embed SDK v3 to v4 involves updating initialization code, API calls, and handling deprecated features. 
+
+By following this guide, you can ensure a smooth transition and take advantage of the new features and improvements in v4.
