@@ -11,6 +11,10 @@ on:
         description: "Clean cache (yes|no)"
         required: true
         default: "no"
+      preBuilt:
+        description: "Site is pre-built (yes|no)"
+        required: true
+        default: "no"
       excludeSubfolder:
         description: "Exclude a subfolder from deletion"
         required: false
@@ -30,6 +34,7 @@ jobs:
       deploy_prod: ${{ contains(github.event.inputs.env, 'prod') }}
       deploy_dev: ${{ contains(github.event.inputs.env, 'dev') }}
       clean_cache: ${{ contains(github.event.inputs.clean, 'yes') }}
+      pre_built: ${{ contains(github.event.inputs.preBuilt, 'yes') }}
       path_prefix: ${{ steps.get_path_prefix.outputs.path_prefix }}
       branch_short_ref: ${{ steps.get_branch.outputs.branch }}
       exclude_subfolder: ${{ github.event.inputs.excludeSubfolder }}
@@ -57,6 +62,7 @@ jobs:
       - run: echo "Deploy to dev - ${{ needs.set-state.outputs.deploy_dev }}"
       - run: echo "Deploy to prod - ${{ needs.set-state.outputs.deploy_prod }}"
       - run: echo "Clean cache - ${{ needs.set-state.outputs.clean_cache }}"
+      - run: echo "Pre-built - ${{ needs.set-state.outputs.pre_built }}"
       - run: echo "Repository org - ${{ github.event.repository.owner.login }}"
       - run: echo "Repository name - ${{ github.event.repository.name }}"
       - run: echo "Repository branch - ${{ needs.set-state.outputs.branch_short_ref }}"
@@ -84,31 +90,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
 
-      - name: Setup Node for Yarn
-        uses: actions/setup-node@v4
+      - name: Setup Node v16 for Yarn v3
+        uses: actions/setup-node@v3
         with:
-          node-version: lts/iron
+          node-version: "16.15.0" # Current LTS version
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
 
+      - name: Install Yarn v3
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: set version stable
+
       - name: Install Dependencies
-        uses: borales/actions-yarn@v5
+        uses: borales/actions-yarn@v3
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
         with:
           cmd: install
-
-      - name: Gatsby Cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            public
-            .cache
-          key: ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-${{ github.run_id }}
-          restore-keys: |
-            ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-
-
       - name: Clean Cache
         if: needs.set-state.outputs.clean_cache == 'true'
         uses: borales/actions-yarn@v3
@@ -116,7 +118,8 @@ jobs:
           cmd: clean
 
       - name: Build site
-        uses: borales/actions-yarn@v4
+        if: needs.set-state.outputs.pre_built == 'false'
+        uses: borales/actions-yarn@v3
         with:
           cmd: build
         env:
@@ -144,10 +147,9 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_SITE_DOMAIN_URL: https://developer-stage.adobe.com
-          GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
-          GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
-          NODE_OPTIONS: "--max-old-space-size=81920"
-
+          GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
+          GATSBY_PRODUCT_NAME: 'Adobe Express Embed SDK'
+          NODE_OPTIONS: "--max_old_space_size=20140"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
@@ -186,28 +188,25 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node for Yarn
-        uses: actions/setup-node@v4
+      - name: Setup Node v16 for Yarn v3
+        uses: actions/setup-node@v3
         with:
-          node-version: lts/iron
+          node-version: "16.15.0" # Current LTS version
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
 
+      - name: Install Yarn v3
+        uses: borales/actions-yarn@v3
+        with:
+          cmd: set version stable
+
       - name: Install Dependencies
-        uses: borales/actions-yarn@v5
+        uses: borales/actions-yarn@v3
+        env:
+          YARN_ENABLE_IMMUTABLE_INSTALLS: false
         with:
           cmd: install
-
-      - name: Gatsby Cache
-        uses: actions/cache@v4
-        with:
-          path: |
-            public
-            .cache
-          key: ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-${{ github.run_id }}
-          restore-keys: |
-            ${{ needs.set-state.outputs.branch_short_ref }}-gatsby-cache-
 
       - name: Clean Cache
         if: needs.set-state.outputs.clean_cache == 'true'
@@ -216,7 +215,8 @@ jobs:
           cmd: clean
 
       - name: Build site
-        uses: borales/actions-yarn@v4
+        if: needs.set-state.outputs.pre_built == 'false'
+        uses: borales/actions-yarn@v3
         with:
           cmd: build
         env:
@@ -247,9 +247,9 @@ jobs:
           GATSBY_ALGOLIA_INDEX_ENV_PREFIX: ${{ secrets.AIO_ALGOLIA_INDEX_ENV_PREFIX }}
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_SITE_DOMAIN_URL: https://developer.adobe.com
-          GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
+          GATSBY_TEMPLATE_ID:  ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
-          NODE_OPTIONS: "--max-old-space-size=81920"
+          NODE_OPTIONS: "--max_old_space_size=20140"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
