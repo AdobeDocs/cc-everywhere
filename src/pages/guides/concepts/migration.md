@@ -13,6 +13,8 @@ Adobe Express Embed SDK version v4 introduces a more verbose set of APIs, simpli
 3. **Inheritance of Parameters**: Use of inheritance to manage API-specific configurations.
 4. **New Configuration Options**: Enhanced configuration options for better control over the SDK behavior.
 
+## Base parameters in V4
+
 For each SDK API, we have four base parameters:
 
 - Doc Config: Contains the properties that serve as a starting point for the workflow. This should not contain any target app configs.
@@ -24,7 +26,9 @@ For each SDK API, we have four base parameters:
  
 ## Parameter details
 
-### Base Export Config
+### Base parameters
+
+#### Base Export Config
 
 ```ts
 {
@@ -37,7 +41,7 @@ For each SDK API, we have four base parameters:
   outputType?: AssetDataType;
 }
 ```
-### Base Container Params
+#### Base Container Params
 
 ``` ts
 {
@@ -60,6 +64,198 @@ For each SDK API, we have four base parameters:
    * the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
    */
   loadTimeout?: number;
+}
+```
+
+### Full editor API parameters
+
+For all Editor-specific APIs, the modal params are the same. We have the inheritance of input and output params as shown below. 
+
+#### Editor App Params inherit Base App params
+
+```ts
+{
+  /** Category to show by default */
+  defaultCategory?: EditorPanelView;
+  /** Search text to pass in the editor for selected panel. */
+  categorySearchText?: string;
+  /** Canvas template type */
+  templateType?: TemplateType;
+  /** Properties to configure the Editor and Modal titles */
+  editorTitle?: string;
+  publishModalTitle?: string;
+  publishErrorModalTitle?: string;
+}
+```
+
+#### Editor Export Params inherit Base Export params
+
+```ts
+{
+  exportOptions?: ExportOptionsEditor[];
+  /**
+   * Decides whether the multiple pages can be exported
+   * @default true
+   */
+  multiPage?: boolean;
+  /**
+   * Specify the list of filetypes that the user can download.
+   * This can be used to limit the download options as per file types for end users.
+   * This limitation is applied to both native download and custom download scenarios.
+   */
+  allowedFileTypes?: FileType[];
+  /**
+   * Value between 0 and 1 to control the quality of the image.
+   * Currently, only supported for ImageFileType.JPEG when exporting.
+   * @minimum 0
+   * @maximum 1
+   */
+  imageQuality?: number;
+}
+```
+
+### Full Editor API-Specific Input Params
+
+#### Create Doc Params inherits Editor Doc Params
+
+```ts
+{
+  /** Canvas and template size or aspect ratio. */
+  canvasSize?: Size | CanvasAspectId;
+}
+```
+
+#### Create with Asset Doc params inherits Create Doc params 
+
+```ts
+{
+  /** Asset from the client application to start editing with. */
+  asset: AssetInfo;
+}
+
+```
+
+#### Create with Template Doc params inherits Editor Doc params
+
+```ts
+{
+  /** Start the editor workflow with a template */
+  templateId: string;
+}
+```
+
+#### Edit Doc Params inherit Editor Doc Params
+
+```ts
+{
+  /** Document Id of the Express project */
+  documentId: string;
+}
+```
+
+### Mini Editor API parameters
+
+For Mini Editors, we have the same Modal Params as the base params.
+
+### Mini Editor API-Specific Input Params
+
+#### Image Mini Editor
+
+**Image Mini Editor Doc Params inherits base doc params**
+
+```ts
+{
+  /** Asset from the host application to start editing with. */
+  asset: Asset;
+}
+
+```
+**Image Mini Editor Export Params inherits base Export params**
+
+```ts
+{
+  /** Export options to be displayed in Image Mini Editor. */
+  exportOptions?: ExportOptionsEditor[];
+  /**
+   * Specify the list of filetypes that the user can download.
+   * This can be used to limit the download options as per file types for end users.
+   * This limitation is applied to both native download and custom download scenarios.
+   */
+  allowedFileTypes?: FileType[];
+}
+```
+
+#### Text to Image Mini Editor
+
+**Image Mini Editor App Params inherits base App params**
+
+```ts
+{
+  /** Text to search the temptate */
+  promptText?: string;
+}
+```
+
+**Image Mini Editor Export Params inherits base Export params**
+
+```ts
+{
+  /**
+   * Export options to configure the header buttons
+   * Not used as of now
+   */
+  exportOptions?: ExportOptions[];
+}
+```
+
+### Quick Action API parameters
+
+For Quick actions, Container params are the same as base params. We only have changes in the Doc params, App Params, and Container Params. There are a few exceptions where the params have deviated, for example merge videos which have their own set of Doc params.
+
+So, here we have created 3 level hierarchy which is as follows:
+
+- `QuickActionDocParams`: This contains the common inputs for all QA
+- `<Image / Video>QuickActionDocParams extends QuickActionDocParams`: This contains the inputs relevant for a particular QA type (Image/Video/PDF).
+- `<API-Specific>QuickActionParams extends Image/VideQuickActionParams`: inputs specific for a particular API
+
+**Quick Action App Params inherits Base App Params** 
+
+```ts
+{
+  /** Theming options for the Quick Action Editor */
+  colorTheme?: ColorTheme;
+  spectrumTheme?: SpectrumTheme;
+  scale?: Scale;
+  /** Boolean that tells whether to receive target application errors or not to client. */
+  receiveTargetErrors?: boolean;
+}
+```
+
+**Quick Action Doc Params inherits Base Doc Params**
+
+```ts
+{
+  /** Asset from the client application to start editing with. */
+  asset?: Asset;
+}
+```
+**Merge Videos Doc Params inherits Base Doc Params**
+
+```ts
+{
+  /** Asset from the client application to start editing with. */
+  asset?: Asset[];
+}
+```
+
+We have the same output params for all Quick Action APIs as of now: 
+
+**QuickActionExportParams inherits BaseExportParams**
+
+```ts
+{
+  /** Export options for the asset that is created. These options would be visible in the quick action editor */
+  exportOptions?: ExportOptions[];
 }
 ```
 
@@ -89,7 +285,7 @@ initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, 
 
 ### 3. Adjust API Calls
  
-Review and update your API calls to match the new method signatures and parameters in v4. Here are some common changes:
+Review and update your API calls to match the new method signatures and parameters in v4. Here are sample changes:
 
 V3:
 
