@@ -263,9 +263,7 @@ We have the same output params for all Quick Action APIs as of now:
 
 ### 1. Update SDK Version
 
-Need input here @Davide
-
-How to update the SDk version and sample code. 
+Use this link to get the latest verison-- https://cc-embed.adobe.com/docs/v4/release/3p/modules.html
 
 ### 2. Update Initialization Code
 
