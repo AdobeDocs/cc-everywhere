@@ -1,29 +1,83 @@
-# Migration Guide: Adobe Express Embed SDK v3 to v4
+---
+keywords:
+  - Types
+  - AssetType
+  - AssetDataType
+  - CanvasAspectId
+  - EditorPanelView
+  - ExportOptions
+  - TemplateType
+  - Asset
+  - Output
+  - Modal parameters
+  - ModalParams
+  - Size
+  - PublishParams
+  - onPublish
+  - Callbacks
+  - OutputParams
+title: Migration Guide
+description: This is a migration guide for V3 to V4.
+contributors:
+  - https://github.com/nimithajalal
+---
+
+# Migration Guide: Adobe Express Embed SDK V3 to V4
  
-This guide will assist you in updating your implementation from v3 to v4.
+This guide will assist you in updating your implementation from V3 to v4.
 
 ## Overview
 
-Adobe Express Embed SDK version v4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
+Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
-## Key Changes in v4
+SDK V4 was developed to streamline the existing APIs and to create a scalable model that can accommodate the expanding range of SDK Target Applications. Accordingly, APIs were categorized into three distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent. The transition from V3 to V4 brought several changes.
 
-1. **Simplified Parameters**: Parameters are restructured for clarity and reduced redundancy.
-2. **Base Parameters**: Introduction of base parameters for consistent configuration across APIs.
-3. **Inheritance of Parameters**: Use of inheritance to manage API-specific configurations.
-4. **New Configuration Options**: Enhanced configuration options for better control over the SDK behavior.
+## Workflow API changes
 
-## Base parameters in V4
+In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`.
 
-For each SDK API, we have four base parameters:
+These APIs differentiated user intent through the analysis of parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach resulted in an increase in the number of parameters for each API, as they were designed to cater to multiple user intents. V4 addressed this issue by segmenting the APIs based on user intent and providing more descriptive API names.
 
-- Doc Config: Contains the properties that serve as a starting point for the workflow. This should not contain any target app configs.
-- App Config: Properties that configure the target application.
-- Export Config: Properties that configure the buttons and the result that is exported to the clients.
-- Container Config: Properties that configure the SDK iFrame.
+### V4 Key changes
 
-**Base Doc Config & Base App Config:** Since each API has its own set of inputs that are not correlating with one another, therefore the base doc params are kept empty with the idea of inheritance.
- 
+#### Introducing `Module` APIs
+
+The introduction of Module APIs such as `editImage` and `createImageFromText`.
+
+#### Editor workflow
+
+- `create` initiates a workflow using a blank canvas.  
+- `createWithAsset` allows an image asset to be preloaded onto the canvas.  
+- `createWithTemplate` enables starting with a given Adobe Express template ID.  
+- `edit` allows modification using an existing Adobe Express Document ID.  
+
+#### Qucik action workflow
+
+`openQuickAction` has been decommissioned and replaced with individual quick action-named APIs, eliminating the need for partners to submit a quick action ID.
+
+## Workflow API Changes
+
+For all the workflow APIs we will now have 4 parameters.
+
+The four parameters are:
+
+- `DocConfig` - Describes the starting point of a workflow, for example, canvas size for Express Editor.
+- `AppConfig` - properties that configure the target application starting behavior. 
+- `ExportConfig` - properties that govern the export behavior of a workflow.
+- `ContainerConfig` - UI properties that customize the SDK container.
+
+UserInfo, AuthInfo, and Callbacks have been removed from a workflow API level and added at the initialize level.
+
+The following diagram shows how the previous API relates to the current new APIs:
+
+![V3 V4 comparison](../concepts/v3-v4.png)
+
+### Workflow API example
+
+**V3**: `Editor create API: ccEverywhere.createDesign(inputParams);`
+
+**V4**: `Editor create API: ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
+
 ## Parameter details
 
 ### Base parameters
@@ -214,7 +268,7 @@ For Quick actions, Container params are the same as base params. We only have ch
 
 So, here we have created 3 level hierarchy which is as follows:
 
-- `QuickActionDocParams`: This contains the common inputs for all QA
+- `QuickActionDocParams`: This contains the common inputs for all QA.
 - `<Image / Video>QuickActionDocParams extends QuickActionDocParams`: This contains the inputs relevant for a particular QA type (Image/Video/PDF).
 - `<API-Specific>QuickActionParams extends Image/VideQuickActionParams`: inputs specific for a particular API
 
@@ -263,19 +317,30 @@ We have the same output params for all Quick Action APIs as of now:
 
 ### 1. Update SDK Version
 
-Use this link to get the latest verison-- https://cc-embed.adobe.com/docs/v4/release/3p/modules.html
+Use this link to get the latest verison -- [https://cc-embed.adobe.com/docs/v4/release/3p/modules.html](https://cc-embed.adobe.com/docs/v4/release/3p/modules.html)
 
 ### 2. Update Initialization Code
 
 Update your initialization code to use the new configuration parameters.
 
-**v3:**
+Notable Changes to Parameters at Initialize Level:
+
+- Host Info
+- Config Params: Login Mode has moved from `configParams` to `AuthInfo` / `AuthProvider`. More details are in the authentication section of this document.
+- User Info and Auth Info: Both of these params are merged into one, `AuthInfo`.
+- Callbacks: We have moved callbacks from an API-level to a class-level parameter. This enables partners to pass their callbacks once during the lifecycle of SDK. The list of callbacks supported by SDK remains the same as it was in V3.
+
+With all the above changes the SDK initialization API can be visualized using the following diagram:
+
+![SDK initilization](./initilization-v4.png)
+
+**V3:**
 
 ```ts
 initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
 ```
 
-**v4:**
+**V4:**
 
 ```ts
 initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, authOption?: AuthOption) => Promise<CCEverywhere>); terminate: (() => boolean)
@@ -283,31 +348,11 @@ initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, 
 
 ### 3. Adjust API Calls
  
-Review and update your API calls to match the new method signatures and parameters in v4. Here are sample changes:
-
-V3:
-
-Need input here @Davide
-
-Expected sample code.
-
-V4:
-
-Need input here @Davide
-
-Expected sample code.
+Review and update your API calls to match the new method signatures and parameters in V4.
 
 ### 4. Handle deprecated parameters
 
-Identify and replace any deprecated features in your codebase. Refer to the v4 documentation for alternatives and updated methods.
-
-v3:
-
-`AdobeExpressEmbed.oldMethod();`
- 
-v4:
-
-`AdobeExpressEmbed.newMethod();`
+Identify and replace any deprecated features in your codebase. Refer to the V4 documentation for alternatives and updated methods.
 
 ### 5. Test your implementation
 
@@ -317,8 +362,7 @@ After updating your code, thoroughly test your implementation to ensure everythi
 - **API Calls**: Validate that all API calls are functioning as intended with the updated method signatures and parameters.
 - **Event Handling**: Verify that events are being handled correctly and that any callbacks are working as expected.
 - **User Interactions**: Test all user interactions within the embedded content to ensure they are smooth and error-free.
-- **Performance**: Monitor the performance to confirm that the enhancements in v4 are realized in your application.
-- **Security**: Ensure that any new security features are properly configured and that your application complies with the latest security standards.
+- **Performance**: Monitor the performance to confirm that the enhancements in V4 are realized in your application.
 
 Here are some specific tests you can perform:
 
@@ -334,21 +378,21 @@ Here are some specific tests you can perform:
 - Validate that the default category, search text, template type, and titles are set correctly in the editor.
 - Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
 
-#### Mini editor API tests
-
-- Test loading an asset in the Mini Editor using `editImage`.
-- Verify that the asset is displayed and editable.
-- Check that export options and allowed file types are correctly configured.
-
 #### Quick Action API tests
 
 - Test various Quick Action APIs such as image and video editing.
 - Validate that common inputs for Quick Actions are working correctly.
 - Ensure that API-specific parameters are applied and functioning as expected.
 
+#### Modules API tests
+
+- Test loading an asset in the Mini Editor using `editImage`.
+- Verify that the asset is displayed and editable.
+- Check that export options and allowed file types are correctly configured.
+
 ### 6. Review new features
 
-Take advantage of new features introduced in v4. Review the release notes and documentation to explore new functionalities that could enhance your application. Some new features might include:
+Take advantage of new features introduced in V4. Review the release notes and documentation to explore new functionalities that could enhance your application. Some new features might include:
 
 - Enhanced configuration options for better customization.
 - New methods and parameters to provide more control over the SDK.
@@ -364,6 +408,6 @@ Ensure your internal documentation is updated to reflect the changes made during
 
 ## Conclusion
 
-Migrating from Adobe Express Embed SDK v3 to v4 involves updating initialization code, API calls, and handling deprecated features. 
+Migrating from Adobe Express Embed SDK V3 to V4 involves updating initialization code, API calls, and handling deprecated features. 
 
-By following this guide, you can ensure a smooth transition and take advantage of the new features and improvements in v4.
+By following this guide, you can ensure a smooth transition and take advantage of the new features and improvements in V4.
