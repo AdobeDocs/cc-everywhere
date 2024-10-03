@@ -243,6 +243,10 @@ module.exports = {
         path: "/reference/",
       },
       {
+        title: "New Overview",
+        path: "/reference/overview-new.md"
+      },
+      {
         title: "initialize",
         path: "/reference/initialize/",
       },
