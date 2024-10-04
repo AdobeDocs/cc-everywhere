@@ -1,42 +1,42 @@
 ---
 keywords:
-  - V3
-  - AssetType
-  - AssetDataType
-  - CanvasAspectId
-  - EditorPanelView
-  - ExportOptions
-  - TemplateType
-  - Asset
-  - Output
-  - Modal parameters
-  - ModalParams
-  - Size
-  - PublishParams
-  - onPublish
-  - Callbacks
-  - OutputParams
+ - V3
+ - AssetType
+ - AssetDataType
+ - CanvasAspectId
+ - EditorPanelView
+ - ExportOptions
+ - TemplateType
+ - Asset
+ - Output
+ - Modal parameters
+ - ModalParams
+ - Size
+ - PublishParams
+ - onPublish
+ - Callbacks
+ - OutputParams
 title: Migration Guide
 description: This is a migration guide for V3 to V4.
 contributors:
-  - https://github.com/nimithajalal
+ - https://github.com/nimithajalal
 ---
 
 # Migration Guide: Adobe Express Embed SDK V3 to V4
  
-This guide will assist you in updating your implementation from V3 to v4.
+This guide will assist you in updating your Adobe Express Embed SDK integration from V3 to v4.
 
 ## Overview
 
 Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
-SDK V4 was developed to streamline the existing APIs and to create a scalable model that can accommodate the expanding range of SDK Target Applications. Accordingly, APIs were categorized into three distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent. The transition from V3 to V4 brought several changes.
+SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into three distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent. The transition from V3 to V4 brought several changes.
 
 ## Workflow API changes
 
 In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`.
 
-These APIs differentiated user intent through the analysis of parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach resulted in an increase in the number of parameters for each API, as they were designed to cater to multiple user intents. 
+These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents. 
 
 V4 addressed this issue by segmenting the APIs into workflows based on user intent and providing more descriptive API names.
 
@@ -53,19 +53,19 @@ The introduction of Module APIs such as `editImage` and `createImageFromText`.
 - `createWithTemplate` enables starting with a given Adobe Express template ID.  
 - `edit` allows modification using an existing Adobe Express Document ID.  
 
-#### Qucik action workflow
+#### Quick action workflow
 
 `openQuickAction` has been decommissioned and replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
 
 ## Workflow API Changes
 
-For all the workflow APIs we will now have 4 parameters.
+For all the workflow APIs, we will now have four parameters.
 
 The four parameters are:
 
 - `DocConfig` - Describes the starting point of a workflow, for example, canvas size for Express Editor.
-- `AppConfig` - properties that configure the target application starting behavior. 
-- `ExportConfig` - properties that govern the export behavior of a workflow.
+- `AppConfig` - properties that configure the target application starting behaviour. 
+- `ExportConfig` - properties that govern the export behaviour of a workflow.
 - `ContainerConfig` - UI properties that customize the SDK container.
 
 UserInfo, AuthInfo, and Callbacks have been removed from a workflow API level and added at the `initialize` level.
@@ -89,11 +89,11 @@ The following diagram shows how the previous API relates to the current new APIs
 ```ts
 {
   /**
-   * Desired asset data type for images.
-   * For image output types, host can set this property to either base64 or url. Default type for images is base64.
-   * For videos, we will always send output as url irrespective of this property.
-   * @default base64
-   */
+ * Desired asset data type for images.
+ * For image output types, host can set this property to either base64 or url. The default type for images is base64.
+ * For videos, we will always send the output as a URL irrespective of this property.
+ * @default base64
+ */
   outputType?: AssetDataType;
 }
 ```
@@ -101,7 +101,7 @@ The following diagram shows how the previous API relates to the current new APIs
 
 ``` ts
 {
-  /** Id of element to which iframe must be appended. By default it is appended to body.*/
+  /** Id of element to which iframe must be appended. By default, it is appended to the body.*/
   parentElementId?: string;
   /** Maximum size boundary of the iframe.*/
   size?: PixelSize;
@@ -116,16 +116,16 @@ The following diagram shows how the previous API relates to the current new APIs
   /** Show spinner while loading target app. Default is true. */
   showLoader?: boolean;
   /**
-   * If target app does't open within this time (in ms, same as of setTimeout),
-   * the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
-   */
+ * If target app doesn't open within this time (in ms, same as of setTimeout),
+ * the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
+ */
   loadTimeout?: number;
 }
 ```
 
 ### Full editor API parameters
 
-For all Editor-specific APIs, the modal params are the same. We have the inheritance of input and output params as shown below. 
+The modal params are the same for all editor-specific APIs. We have the inheritance of input and output params, as shown below. 
 
 #### Editor App Params inherit Base App params
 
@@ -150,22 +150,22 @@ For all Editor-specific APIs, the modal params are the same. We have the inherit
 {
   exportOptions?: ExportOptionsEditor[];
   /**
-   * Decides whether the multiple pages can be exported
-   * @default true
-   */
+ * Decides whether the multiple pages can be exported
+ * @default true
+ */
   multiPage?: boolean;
   /**
-   * Specify the list of filetypes that the user can download.
-   * This can be used to limit the download options as per file types for end users.
-   * This limitation is applied to both native download and custom download scenarios.
-   */
+ * Specify the list of file types that the user can download.
+ * This can be used to limit the download options as per file types for end users.
+ * This limitation is applied to both native download and custom download scenarios.
+ */
   allowedFileTypes?: FileType[];
   /**
-   * Value between 0 and 1 to control the quality of the image.
-   * Currently, only supported for ImageFileType.JPEG when exporting.
-   * @minimum 0
-   * @maximum 1
-   */
+ * Value between 0 and 1 to control the quality of the image.
+ * Currently, only supported for ImageFileType.JPEG when exporting.
+ * @minimum 0
+ * @maximum 1
+ */
   imageQuality?: number;
 }
 ```
@@ -211,7 +211,7 @@ For all Editor-specific APIs, the modal params are the same. We have the inherit
 
 ### Mini Editor API parameters
 
-For Mini Editors, we have the same Modal Params as the base params.
+We have the same Modal Params as the base params for Mini Editors.
 
 ### Mini Editor API-Specific Input Params
 
@@ -233,10 +233,10 @@ For Mini Editors, we have the same Modal Params as the base params.
   /** Export options to be displayed in Image Mini Editor. */
   exportOptions?: ExportOptionsEditor[];
   /**
-   * Specify the list of filetypes that the user can download.
-   * This can be used to limit the download options as per file types for end users.
-   * This limitation is applied to both native download and custom download scenarios.
-   */
+ * Specify the list of file types that the user can download.
+ * This can be used to limit the download options as per file types for end users.
+ * This limitation is applied to both native download and custom download scenarios.
+ */
   allowedFileTypes?: FileType[];
 }
 ```
@@ -247,7 +247,7 @@ For Mini Editors, we have the same Modal Params as the base params.
 
 ```ts
 {
-  /** Text to search the temptate */
+  /** Text to search the template */
   promptText?: string;
 }
 ```
@@ -257,9 +257,9 @@ For Mini Editors, we have the same Modal Params as the base params.
 ```ts
 {
   /**
-   * Export options to configure the header buttons
-   * Not used as of now
-   */
+ * Export options to configure the header buttons
+ * Not used as of now
+ */
   exportOptions?: ExportOptions[];
 }
 ```
@@ -319,7 +319,7 @@ We have the same output params for all Quick Action APIs as of now:
 
 ### 1. Update SDK Version
 
-Use this link to get the latest verison -- [https://cc-embed.adobe.com/docs/v4/release/3p/modules.html](https://cc-embed.adobe.com/docs/v4/release/3p/modules.html)
+Use this link to get the latest version -- [https://cc-embed.adobe.com/docs/v4/release/3p/modules.html](https://cc-embed.adobe.com/docs/v4/release/3p/modules.html)
 
 ### 2. Update Initialization Code
 
@@ -335,7 +335,7 @@ Notable Changes to Parameters at Initialize Level:
 
 We have moved callbacks from an API-level to a class-level parameter. This enables partners to pass their callbacks once during the lifecycle of SDK. The list of callbacks supported by SDK remains the same as it was in V3.
 
-With all the above changes the SDK initialization API can be visualized using the following diagram:
+With all the above changes, the SDK initialization API can be visualized using the following diagram:
 
 ![SDK initilization](./initilization-v4.png)
 
@@ -357,14 +357,14 @@ Review and update your API calls to match the new method signatures and paramete
 
 ### 4. Handle deprecated parameters
 
-Identify and replace any deprecated features in your codebase. Refer to the V4 documentation for alternatives and updated methods.
+Identify and replace any deprecated features in your codebase. For alternatives and updated methods, refer to the V4 documentation.
 
 ### 5. Test your implementation
 
 After updating your code, thoroughly test your implementation to ensure everything works as expected. Pay particular attention to:
 
-- **Initialization**: Ensure that the SDK initializes correctly with the new configuration parameters.
-- **API Calls**: Validate that all API calls are functioning as intended with the updated method signatures and parameters.
+- **Initialization**: Ensure the SDK initializes correctly with the new configuration parameters.
+- **API Calls**: Validate that all API calls function as intended with the updated method signatures and parameters.
 - **Event Handling**: Verify that events are being handled correctly and that any callbacks are working as expected.
 - **User Interactions**: Test all user interactions within the embedded content to ensure they are smooth and error-free.
 - **Performance**: Monitor the performance to confirm that the enhancements in V4 are realized in your application.
@@ -380,13 +380,13 @@ Here are some specific tests you can perform:
 #### Full editor API tests
 
 - Test loading a template or design using `create`, `createWithAsset`, and `createWithTemplate`.
-- Validate that the default category, search text, template type, and titles are set correctly in the editor.
+- Validate that the editor sets the default category, search text, template type, and titles correctly.
 - Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
 
 #### Quick Action API tests
 
 - Test various Quick Action APIs such as image and video editing.
-- Validate that common inputs for Quick Actions are working correctly.
+- Validate that standard inputs for Quick Actions are working correctly.
 - Ensure that API-specific parameters are applied and functioning as expected.
 
 #### Modules API tests
@@ -405,14 +405,14 @@ Take advantage of new features introduced in V4. Review the release notes and do
 
 ### 7. Update Documentation and Dependencies
 
-Ensure your internal documentation is updated to reflect the changes made during the migration. Also, update any dependencies that interact with Adobe Express Embed SDK to ensure compatibility. This includes:
+Ensure your internal documentation is updated to reflect the changes made during the migration. Also, update any dependencies interacting with Adobe Express Embed SDK to ensure compatibility. This includes:
 
 - Updating any code samples or snippets in your documentation.
 - Modifying any integration guides or setup instructions.
-- Ensuring all team members are aware of the changes and how to use the new SDK features.
+- Ensuring all team members know the changes and how to use the new SDK features.
 
 ## Conclusion
 
-Migrating from Adobe Express Embed SDK V3 to V4 involves updating initialization code, API calls, and handling deprecated features. 
+Migrating from Adobe Express Embed SDK V3 to V4 involves updating initialization code and API calls and handling deprecated features. 
 
-By following this guide, you can ensure a smooth transition and take advantage of the new features and improvements in V4.
+By following this guide, you can ensure a smooth transition and take advantage of V4's new features and improvements.
