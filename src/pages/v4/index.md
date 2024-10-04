@@ -36,10 +36,40 @@ Once you have embedded the SDK into your application, the first step is to call 
 
 #### initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](./CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+The asynchronous `initialize()` method takes [HostInfo](./shared/src/types/HostInfo.types/interfaces/HostInfoSpecifiedBase.md), optional [ConfigParams](#configparams), and `authOption` and returns a Promise with a [CCEverywhere](./sdk/src/3p/CCEverywhere/classes/CCEverywhere.md) object.
 
 ```ts
-initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, authOption?: AuthOption) => Promise<CCEverywhere>); terminate: (() => boolean)
+initialize: (
+    hostInfo:HostInfoSpecifiedBase, 
+    configParams?:ConfigParamsBase, 
+    authOption?:AuthOption) => Promise<CCEverywhere>;
+
+```
+
+<!-- Inline Alert -->
+<InlineAlert variant="info" slots="text1" />
+
+The SDK should be initialized only once on each page.
+
+### Example
+
+```ts
+(async () => {
+  let hostInfo = { /* HostInfo */
+    clientId: CLIENT_ID,
+    appName: APP_NAME, 
+    appVersion: { major: 1, minor: 0 }, 
+    platformCategory: 'web',
+  }
+
+  const configParams = {
+    loginMode: 'delayed'
+  }
+
+  const ccEverywhere = await window.CCEverywhere.initialize(
+    hostInfo, configParams
+  );
+})();
 ```
 
 ### CCEverywhere
