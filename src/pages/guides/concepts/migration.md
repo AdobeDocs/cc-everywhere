@@ -272,9 +272,10 @@ So, here we have created 3 level hierarchy which is as follows:
 
 - `QuickActionDocParams`: This contains the common inputs for all QA.
 - `<Image / Video>QuickActionDocParams extends QuickActionDocParams`: This contains the inputs relevant for a particular QA type (Image/Video/PDF).
-- `<API-Specific>QuickActionParams extends Image/VideQuickActionParams`: inputs specific for a particular API
+- `<API-Specific>QuickActionParams extends Image/VideQuickActionParams`: inputs specific for a particular API.
 
-**Quick Action App Params inherits Base App Params** 
+
+**Quick Action App Params inherits Base App Params**
 
 ```ts
 {
@@ -295,6 +296,7 @@ So, here we have created 3 level hierarchy which is as follows:
   asset?: Asset;
 }
 ```
+
 **Merge Videos Doc Params inherits Base Doc Params**
 
 ```ts
