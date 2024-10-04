@@ -209,15 +209,15 @@ The modal params are the same for all editor-specific APIs. We have the inherita
 }
 ```
 
-### Mini Editor API parameters
+### Module API parameters
 
-We have the same Modal Params as the base params for Mini Editors.
+We have the same Modal Params as the base params for Modules.
 
-### Mini Editor API-Specific Input Params
+### Module API-Specific Input Params
 
-#### Image Mini Editor
+#### Image Module
 
-**Image Mini Editor Doc Params inherits base doc params**
+**Image Module Doc Params inherits base doc params**
 
 ```ts
 {
@@ -226,11 +226,11 @@ We have the same Modal Params as the base params for Mini Editors.
 }
 
 ```
-**Image Mini Editor Export Params inherits base Export params**
+**Image Module Export Params inherits base Export params**
 
 ```ts
 {
-  /** Export options to be displayed in Image Mini Editor. */
+  /** Export options to be displayed in Image Module. */
   exportOptions?: ExportOptionsEditor[];
   /**
  * Specify the list of file types that the user can download.
@@ -241,9 +241,9 @@ We have the same Modal Params as the base params for Mini Editors.
 }
 ```
 
-#### Text to Image Mini Editor
+#### Text to Image Module
 
-**Image Mini Editor App Params inherits base App params**
+**Image Module App Params inherits base App params**
 
 ```ts
 {
@@ -252,7 +252,7 @@ We have the same Modal Params as the base params for Mini Editors.
 }
 ```
 
-**Image Mini Editor Export Params inherits base Export params**
+**Image Module Export Params inherits base Export params**
 
 ```ts
 {
