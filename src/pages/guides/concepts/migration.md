@@ -1,6 +1,6 @@
 ---
 keywords:
-  - Types
+  - V3
   - AssetType
   - AssetDataType
   - CanvasAspectId
@@ -36,11 +36,13 @@ SDK V4 was developed to streamline the existing APIs and to create a scalable mo
 
 In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`.
 
-These APIs differentiated user intent through the analysis of parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach resulted in an increase in the number of parameters for each API, as they were designed to cater to multiple user intents. V4 addressed this issue by segmenting the APIs based on user intent and providing more descriptive API names.
+These APIs differentiated user intent through the analysis of parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach resulted in an increase in the number of parameters for each API, as they were designed to cater to multiple user intents. 
+
+V4 addressed this issue by segmenting the APIs into workflows based on user intent and providing more descriptive API names.
 
 ### V4 Key changes
 
-#### Introducing `Module` APIs
+#### Introducing `Module` APIs through Module Workflow
 
 The introduction of Module APIs such as `editImage` and `createImageFromText`.
 
@@ -53,7 +55,7 @@ The introduction of Module APIs such as `editImage` and `createImageFromText`.
 
 #### Qucik action workflow
 
-`openQuickAction` has been decommissioned and replaced with individual quick action-named APIs, eliminating the need for partners to submit a quick action ID.
+`openQuickAction` has been decommissioned and replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
 
 ## Workflow API Changes
 
@@ -66,7 +68,7 @@ The four parameters are:
 - `ExportConfig` - properties that govern the export behavior of a workflow.
 - `ContainerConfig` - UI properties that customize the SDK container.
 
-UserInfo, AuthInfo, and Callbacks have been removed from a workflow API level and added at the initialize level.
+UserInfo, AuthInfo, and Callbacks have been removed from a workflow API level and added at the `initialize` level.
 
 The following diagram shows how the previous API relates to the current new APIs:
 
@@ -328,7 +330,10 @@ Notable Changes to Parameters at Initialize Level:
 - Host Info
 - Config Params: Login Mode has moved from `configParams` to `AuthInfo` / `AuthProvider`. More details are in the authentication section of this document.
 - User Info and Auth Info: Both of these params are merged into one, `AuthInfo`.
-- Callbacks: We have moved callbacks from an API-level to a class-level parameter. This enables partners to pass their callbacks once during the lifecycle of SDK. The list of callbacks supported by SDK remains the same as it was in V3.
+
+**Callbacks**
+
+We have moved callbacks from an API-level to a class-level parameter. This enables partners to pass their callbacks once during the lifecycle of SDK. The list of callbacks supported by SDK remains the same as it was in V3.
 
 With all the above changes the SDK initialization API can be visualized using the following diagram:
 
@@ -374,7 +379,7 @@ Here are some specific tests you can perform:
 
 #### Full editor API tests
 
-- Test loading a template or design using `create`.
+- Test loading a template or design using `create`, `createWithAsset`, and `createWithTemplate`.
 - Validate that the default category, search text, template type, and titles are set correctly in the editor.
 - Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
 
@@ -386,7 +391,7 @@ Here are some specific tests you can perform:
 
 #### Modules API tests
 
-- Test loading an asset in the Mini Editor using `editImage`.
+- Test loading an asset in the modules using `editImage` or `createImageFromText`.
 - Verify that the asset is displayed and editable.
 - Check that export options and allowed file types are correctly configured.
 
