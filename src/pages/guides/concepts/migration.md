@@ -328,7 +328,7 @@ Update your initialization code to use the new configuration parameters.
 Notable Changes to Parameters at Initialize Level:
 
 - Host Info
-- Config Params: Login Mode has moved from `configParams` to `AuthInfo` / `AuthProvider`. More details are in the authentication section of this document.
+- Config Params: Login Mode has moved from `configParams` to `AuthInfo` / `AuthProvider`.
 - User Info and Auth Info: Both of these params are merged into one, `AuthInfo`.
 
 **Callbacks**
