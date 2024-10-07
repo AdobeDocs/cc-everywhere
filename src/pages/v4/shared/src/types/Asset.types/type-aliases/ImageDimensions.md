@@ -19,6 +19,7 @@ size: PixelSize;
 
 The size of the image in pixels.
 Maximum width and height values are as follows:
+
 - square: 2048x2048
 - portrait: 1792x2304
 - landscape: 2304x1792
@@ -32,6 +33,7 @@ aspectRatio: AspectRatio;
 
 The aspect ratio of the image.
 The provided size should conform to the following aspect ratio values within a tolerance of 0.01:
+
 - square: 1
 - portrait: 0.78
 - landscape: 1.28
