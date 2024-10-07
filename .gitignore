@@ -27,6 +27,7 @@ yarn-error.log
 # gatsby files
 .env
 .cache
+public
 
 # cypress
 cypress/videos
