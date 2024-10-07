@@ -32,22 +32,27 @@ module.exports = {
         menu: [
           {
             title: "v4 Reference",
-            description: "v4 Reference",
+            description: "🟢 Improved docs",
+            path: "/v4/",
+          },
+          {
+            title: "v4 Reference",
+            description: "🟠 Legacy docs",
             path: "/reference/",
           },
           {
             title: "v3 Reference",
-            description: "v3 Reference [Deprecated soon]",
+            description: "🟠 Deprecated soon",
             path: "/v3/reference/",
           },
           {
-            title: "v2 Reference [Deprecated]",
-            description: "v2 Reference",
+            title: "v2 Reference",
+            description: "🔴 Deprecated",
             path: "/v2/reference/",
           },
           {
-            title: "v1 Reference [Deprecated]",
-            description: "v1 Reference",
+            title: "v1 Reference",
+            description: "🔴 Deprecated",
             path: "/v1/reference/",
           },
         ],
@@ -276,6 +281,39 @@ module.exports = {
       {
         title: "Types",
         path: "/reference/types/",
+      },
+      {
+        title: "Overview",
+        path: "/v4/index.md",
+      },
+      {
+        title: "Entrypoints",
+        path: "/v4/",
+        header: true,
+        pages: [
+          {
+            title: "CC Everywhere",
+            path: "/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+          },
+          {
+            title: "Editor",
+            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+          },
+          {
+            title: "Module",
+            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+          },
+          {
+            title: "Quick Action",
+            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+          },
+        ],
+      },
+      {
+        title: "APIs Reference",
+        path: "/v4/",
+        header: true,
+        pages: [...require("./api-refs-sidebar.json")],
       },
     ],
   },
