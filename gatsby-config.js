@@ -105,7 +105,7 @@ module.exports = {
       path: "/guides/concepts/migration.md",
       pages: [
       {
-      title: "Migration Guide: Adobe Express Embed SDK V3 to V4",
+      title: "Migration Guide: V3 to V4",
       path: "/guides/concepts/migration.md",
       },
       //       {

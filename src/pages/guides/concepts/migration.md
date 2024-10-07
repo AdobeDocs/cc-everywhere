@@ -72,11 +72,11 @@ The following diagram shows how the previous API relates to the current new APIs
 
 ![V3 V4 comparison](../concepts/v3-v4.png)
 
-### Workflow API example
+### Editor Workflow API example
 
-**V3**: `Editor create API: ccEverywhere.createDesign(inputParams);`
+**V3**: `ccEverywhere.createDesign(inputParams);`
 
-**V4**: `Editor create API: ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
+**V4**: `ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
 
 ## Parameter details
 
@@ -88,8 +88,10 @@ The following diagram shows how the previous API relates to the current new APIs
 {
   /**
  * Desired asset data type for images.
- * For image output types, host can set this property to either base64 or url. The default type for images is base64.
- * For videos, we will always send the output as a URL irrespective of this property.
+ * For image output types, host can set this property to either base64 
+ * or url. The default type for images is base64. 
+ * For videos,  we will always send the output as a URL irrespective 
+ * of this property.
  * @default base64
  */
   outputType?: AssetDataType;
@@ -99,7 +101,8 @@ The following diagram shows how the previous API relates to the current new APIs
 
 ``` ts
 {
-  /** Id of element to which iframe must be appended. By default, it is appended to the body.*/
+  /** Id of element to which iframe must be appended. 
+   * By default, it is appended to the body. */
   parentElementId?: string;
   /** Maximum size boundary of the iframe.*/
   size?: PixelSize;
@@ -109,14 +112,16 @@ The following diagram shows how the previous API relates to the current new APIs
   padding?: number;
   /** Border Radius applied to the iframe in pixels. */
   borderRadius?: number;
-  /** Override the background color of the iframe. By default this is as per theme. */
+  /** Override the background color of the iframe. 
+   * By default this is as per theme. */
   backgroundColor?: string;
   /** Show spinner while loading target app. Default is true. */
   showLoader?: boolean;
   /**
- * If target app doesn't open within this time (in ms, same as of setTimeout),
- * the error callback is invoked with error code TARGET_LOAD_TIMED_OUT.
- */
+   * If the target app doesn't open within this time (in ms, same as 
+   * setTimeout), the error callback is invoked with the error code
+   * TARGET_LOAD_TIMED_OUT.
+   */
   loadTimeout?: number;
 }
 ```
@@ -153,10 +158,11 @@ The modal params are the same for all editor-specific APIs. We have the inherita
  */
   multiPage?: boolean;
   /**
- * Specify the list of file types that the user can download.
- * This can be used to limit the download options as per file types for end users.
- * This limitation is applied to both native download and custom download scenarios.
- */
+   * Specify the list of file types that the user can download.
+   * This can be used to limit the download options for end users 
+   * based on file types. This limitation is applied to both native 
+   * download and custom download scenarios.
+   */
   allowedFileTypes?: FileType[];
   /**
  * Value between 0 and 1 to control the quality of the image.
@@ -231,10 +237,11 @@ We have the same Modal Params as the base params for Modules.
   /** Export options to be displayed in Image Module. */
   exportOptions?: ExportOptionsEditor[];
   /**
- * Specify the list of file types that the user can download.
- * This can be used to limit the download options as per file types for end users.
- * This limitation is applied to both native download and custom download scenarios.
- */
+   * Specify the list of file types that the user can download.
+   * This can be used to limit the download options for end users 
+   * based on file types. This limitation is applied to both native 
+   * download and custom download scenarios.
+   */
   allowedFileTypes?: FileType[];
 }
 ```
@@ -281,7 +288,8 @@ So, here we have created 3 level hierarchy which is as follows:
   colorTheme?: ColorTheme;
   spectrumTheme?: SpectrumTheme;
   scale?: Scale;
-  /** Boolean that tells whether to receive target application errors or not to client. */
+  /** Boolean that tells whether to receive target application 
+   * errors or not to client. */
   receiveTargetErrors?: boolean;
 }
 ```
