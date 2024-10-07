@@ -44,7 +44,7 @@ const GetCredentialApiKey = () => {
   }
 
   return (
-    <GetCredential className="getCredentialContainer" templateId={template_id} productName={product_name} >
+    <GetCredential className="getCredentialContainer" templateId={"664e39607dcc7c0e5a4a035b"} productName={"Adobe Express Embed SDK"} >
 
       <GetCredential.SignIn title="Get credentials" paragraph="Create unique credentials that you will use to call Adobe Express Embed SDK from your application." buttonText="Sign in to create credentials" />
 
@@ -97,10 +97,10 @@ const GetCredentialApiKey = () => {
         <GetCredential.Card.DevConsoleLink heading="Developer Console Project" />
 
         <GetCredential.Card.CredentialDetails heading="Credential details">
-          <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Card.CredentialDetails.AllowedOrigins heading="Allowed domains" />
-          <GetCredential.Card.CredentialDetails.OrganizationName heading="Organization" />
+          <GetCredential.Card.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Card.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
+          <GetCredential.Card.CredentialDetails.OrganizationName heading="Organization" />
         </GetCredential.Card.CredentialDetails>
 
       </GetCredential.Card>
@@ -118,9 +118,9 @@ const GetCredentialApiKey = () => {
         </GetCredential.Return.Side>
 
         <GetCredential.Return.CredentialDetails heading="Credential details">
+          <GetCredential.Return.CredentialDetails.OrganizationName heading="Organization" />
           <GetCredential.Return.CredentialDetails.APIKey heading="API Key" />
           <GetCredential.Return.CredentialDetails.AllowedOrigins heading="Allowed domains" />
-          <GetCredential.Return.CredentialDetails.OrganizationName heading="Organization" />
           <GetCredential.Return.CredentialDetails.ImsOrgID heading="IMS Organization ID" />
         </GetCredential.Return.CredentialDetails>
 
