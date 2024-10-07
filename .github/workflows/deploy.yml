@@ -153,7 +153,7 @@ jobs:
           GATSBY_SITE_DOMAIN_URL: https://developer-stage.adobe.com
           GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
-          NODE_OPTIONS: "--max_old_space_size=40280"
+          NODE_OPTIONS: "--max_old_space_size=8192"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
@@ -262,7 +262,7 @@ jobs:
           GATSBY_SITE_DOMAIN_URL: https://developer.adobe.com
           GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
-          NODE_OPTIONS: "--max_old_space_size=40280"
+          NODE_OPTIONS: "--max_old_space_size=8192"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
