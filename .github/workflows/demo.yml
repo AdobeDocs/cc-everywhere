@@ -37,8 +37,6 @@ jobs:
   greet-on-developer-website-arc-dev-runners-adcce:
     if: inputs.runners == 'developer-website-arc-dev-runners-adcce'
     runs-on: developer-website-arc-dev-runners-adcce
-      group: adp-platform-operations
-      labels: arc-dev-runners-corp
     steps:
     - name: Print greeting
       run: echo "Hello ${{ inputs.name }} from ${{ inputs.runners }}!"
