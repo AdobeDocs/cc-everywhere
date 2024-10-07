@@ -13,6 +13,9 @@ const ReturnCredentialDetails = ({ clientDetails, clientIdDetails, clientSecretD
 
   const { selectedOrganization } = useContext(GetCredentialContext);
 
+  console.log("clientDetails",clientDetails)
+  console.log("response",response)
+
   return (
     <div css={css`
         display : flex;
