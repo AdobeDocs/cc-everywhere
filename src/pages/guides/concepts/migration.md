@@ -68,8 +68,6 @@ The four parameters are:
 - `ExportConfig` - properties that govern the export behaviour of a workflow.
 - `ContainerConfig` - UI properties that customize the SDK container.
 
-UserInfo, AuthInfo, and Callbacks have been removed from a workflow API level and added at the `initialize` level.
-
 The following diagram shows how the previous API relates to the current new APIs:
 
 ![V3 V4 comparison](../concepts/v3-v4.png)
