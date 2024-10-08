@@ -109,6 +109,9 @@ jobs:
         uses: borales/actions-yarn@v3
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
+          # Testing this flag to see if it helps with the build
+          ACTIONS_RUNNER_DEBUG: false
+          ACTIONS_STEP_DEBUG: false
         with:
           cmd: install
       - name: Clean Cache
@@ -116,7 +119,10 @@ jobs:
         uses: borales/actions-yarn@v3
         with:
           cmd: clean
-
+      - name: Check disk space
+        run: |
+          echo "Available disk space:"
+          df -h
       - name: Build site
         if: needs.set-state.outputs.pre_built == 'false'
         uses: borales/actions-yarn@v3
