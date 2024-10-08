@@ -72,5 +72,6 @@ The returned Promise-wrapped `CCEverywhere` object can then be used to access th
 2. `quickAction`: Launches a quick action.
 3. `module`: Opens a module in a modal.
 
-<!-- 4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
-1. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void. -->
+
+# Terminate the SDK
+`terminate()`: Terminates the active `CCEverywhere` instance. Returns void. 
