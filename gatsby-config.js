@@ -317,6 +317,11 @@ module.exports = {
       },
     ],
   },
+  flags: {
+    PRESERVE_WEBPACK_CACHE: false,
+    PRESERVE_FILE_DOWNLOAD_CACHE: false,
+    BABEL_DISABLE_CACHE: 1,
+  },
   plugins: [`@adobe/gatsby-theme-aio`],
   pathPrefix: process.env.PATH_PREFIX || "/express/embed-sdk/docs/",
 };
