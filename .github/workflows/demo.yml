@@ -16,11 +16,11 @@ on:
       runners:
         description: 'Runners on which to execute workflow'
         required: true
-        default: 'arc-dev-runners'
+        default: 'ubuntu-latest'
         type: choice
         options:
           - ubuntu-latest
-          - developer-website-arc-dev-runners-adcce
+          - developer-website-arc-prd-runners-adcce
 
 jobs:
   greet-on-ubuntu-latest:
@@ -34,9 +34,9 @@ jobs:
       if: inputs.pause == true
       run: sleep 300
 
-  greet-on-developer-website-arc-dev-runners-adcce:
-    if: inputs.runners == 'developer-website-arc-dev-runners-adcce'
-    runs-on: developer-website-arc-dev-runners-adcce
+  greet-on-developer-website-arc-prd-runners-adcce:
+    if: inputs.runners == 'developer-website-arc-prd-runners-adcce'
+    runs-on: developer-website-arc-prd-runners-adcce
     steps:
     - name: Print greeting
       run: echo "Hello ${{ inputs.name }} from ${{ inputs.runners }}!"
