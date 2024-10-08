@@ -151,7 +151,7 @@ jobs:
           GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
           GATSBY_DISABLE_SOURCE_MAPS: "true"
           BABEL_DISABLE_CACHE: 1
-          NODE_OPTIONS: "--max_old_space_size=30720"
+          NODE_OPTIONS: "--max_old_space_size=15360"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
@@ -253,7 +253,7 @@ jobs:
           GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
           GATSBY_DISABLE_SOURCE_MAPS: "true"
           BABEL_DISABLE_CACHE: 1
-          NODE_OPTIONS: "--max_old_space_size=30720"
+          NODE_OPTIONS: "--max_old_space_size=15360"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
