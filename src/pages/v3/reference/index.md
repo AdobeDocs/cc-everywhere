@@ -13,13 +13,15 @@ contributors:
 
 # Overview
 
-<InlineAlert variant="error" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text1, text2 text3" />
 
 IMPORTANT: Deprecation Warning
 
-We are no longer approving integrations using using SDK V1, V2, or V3
+We are no longer approving integrations using using SDK V1, V2, or V3.
 
 V1 and V2 are deprecated and V3 will be deprecated in 2024.
+
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration_v3_v4.md) to help you with the transition.
 
 ## Embed and initialize the SDK
 

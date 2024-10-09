@@ -32,14 +32,14 @@ module.exports = {
         menu: [
           {
             title: "v4 Reference",
-            description: "🟢 Improved docs",
+            description: "🟢 Current version",
             path: "/v4/",
           },
-          {
-            title: "v4 Reference",
-            description: "🟠 Legacy docs",
-            path: "/reference/",
-          },
+          // {
+          //   title: "v4 Reference",
+          //   description: "🟠 Legacy docs",
+          //   path: "/reference/",
+          // },
           {
             title: "v3 Reference",
             description: "🟠 Deprecated soon",
@@ -105,20 +105,24 @@ module.exports = {
           },
         ],
       },
-      //   {
-      //     title: "Concepts",
-      //     path: "/guides/concepts/customization.md",
-      //     pages: [
-      //       {
-      //         title: "UI Customization",
-      //         path: "/guides/concepts/customization.md",
-      //       },
-      //       {
-      //         title: "Error Handling",
-      //         path: "/guides/concepts/error-handling.md",
-      //       },
-      //     ],
-      //   },
+      {
+        title: "Concepts",
+        path: "/guides/concepts/customization.md",
+        pages: [
+          {
+            title: "V3 to V4 Migration guide",
+            path: "/guides/concepts/migration_v3_v4.md",
+          },
+          // {
+          //   title: "UI Customization",
+          //   path: "/guides/concepts/customization.md",
+          // },
+          // {
+          //   title: "Error Handling",
+          //   path: "/guides/concepts/error-handling.md",
+          // },
+        ],
+      },
       {
         title: "Tutorials",
         path: "/guides/tutorials/",
