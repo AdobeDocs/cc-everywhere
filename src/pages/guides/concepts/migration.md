@@ -1,21 +1,11 @@
 ---
 keywords:
  - V3
- - AssetType
- - AssetDataType
- - CanvasAspectId
- - EditorPanelView
- - ExportOptions
- - TemplateType
- - Asset
- - Output
- - Modal parameters
- - ModalParams
- - Size
- - PublishParams
- - onPublish
- - Callbacks
- - OutputParams
+ - Migration Guide
+ - V4
+ - Adobe Express SDK V3 deprecation
+ - V4 Features
+ - Adobe Express Embed SDK migration
 title: Migration Guide
 description: This is a migration guide for V3 to V4.
 contributors:
@@ -38,7 +28,7 @@ In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickA
 
 These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents. 
 
-V4 addressed this issue by segmenting the APIs into workflows based on user intent and providing more descriptive API names.
+We have addressed this issue in V4 by segmenting the APIs into ***workflows*** based on user intent and providing more descriptive API names.
 
 ### V4 Key changes
 
@@ -77,251 +67,6 @@ The following diagram shows how the previous API relates to the current new APIs
 **V3**: `ccEverywhere.createDesign(inputParams);`
 
 **V4**: `ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
-
-## Parameter details
-
-### Base parameters
-
-#### Base Export Config
-
-```ts
-{
-  /**
- * Desired asset data type for images.
- * For image output types, host can set this property to either base64 
- * or url. The default type for images is base64. 
- * For videos,  we will always send the output as a URL irrespective 
- * of this property.
- * @default base64
- */
-  outputType?: AssetDataType;
-}
-```
-#### Base Container Params
-
-``` ts
-{
-  /** Id of element to which iframe must be appended. 
-   * By default, it is appended to the body. */
-  parentElementId?: string;
-  /** Maximum size boundary of the iframe.*/
-  size?: PixelSize;
-  /** Minimum size boundary of the iframe.*/
-  minSize?: PixelSize;
-  /** Padding applied to the iframe in pixels.*/
-  padding?: number;
-  /** Border Radius applied to the iframe in pixels. */
-  borderRadius?: number;
-  /** Override the background color of the iframe. 
-   * By default this is as per theme. */
-  backgroundColor?: string;
-  /** Show spinner while loading target app. Default is true. */
-  showLoader?: boolean;
-  /**
-   * If the target app doesn't open within this time (in ms, same as 
-   * setTimeout), the error callback is invoked with the error code
-   * TARGET_LOAD_TIMED_OUT.
-   */
-  loadTimeout?: number;
-}
-```
-
-### Full editor API parameters
-
-The modal params are the same for all editor-specific APIs. We have the inheritance of input and output params, as shown below. 
-
-#### Editor App Params inherit Base App params
-
-```ts
-{
-  /** Category to show by default */
-  defaultCategory?: EditorPanelView;
-  /** Search text to pass in the editor for selected panel. */
-  categorySearchText?: string;
-  /** Canvas template type */
-  templateType?: TemplateType;
-  /** Properties to configure the Editor and Modal titles */
-  editorTitle?: string;
-  publishModalTitle?: string;
-  publishErrorModalTitle?: string;
-}
-```
-
-#### Editor Export Params inherit Base Export params
-
-```ts
-{
-  exportOptions?: ExportOptionsEditor[];
-  /**
- * Decides whether the multiple pages can be exported
- * @default true
- */
-  multiPage?: boolean;
-  /**
-   * Specify the list of file types that the user can download.
-   * This can be used to limit the download options for end users 
-   * based on file types. This limitation is applied to both native 
-   * download and custom download scenarios.
-   */
-  allowedFileTypes?: FileType[];
-  /**
- * Value between 0 and 1 to control the quality of the image.
- * Currently, only supported for ImageFileType.JPEG when exporting.
- * @minimum 0
- * @maximum 1
- */
-  imageQuality?: number;
-}
-```
-
-### Full Editor API-Specific Input Params
-
-#### Create Doc Params inherits Editor Doc Params
-
-```ts
-{
-  /** Canvas and template size or aspect ratio. */
-  canvasSize?: Size | CanvasAspectId;
-}
-```
-
-#### Create with Asset Doc params inherits Create Doc params 
-
-```ts
-{
-  /** Asset from the client application to start editing with. */
-  asset: AssetInfo;
-}
-
-```
-
-#### Create with Template Doc params inherits Editor Doc params
-
-```ts
-{
-  /** Start the editor workflow with a template */
-  templateId: string;
-}
-```
-
-#### Edit Doc Params inherit Editor Doc Params
-
-```ts
-{
-  /** Document Id of the Express project */
-  documentId: string;
-}
-```
-
-### Module API parameters
-
-We have the same Modal Params as the base params for Modules.
-
-### Module API-Specific Input Params
-
-#### Image Module
-
-**Image Module Doc Params inherits base doc params**
-
-```ts
-{
-  /** Asset from the host application to start editing with. */
-  asset: Asset;
-}
-
-```
-**Image Module Export Params inherits base Export params**
-
-```ts
-{
-  /** Export options to be displayed in Image Module. */
-  exportOptions?: ExportOptionsEditor[];
-  /**
-   * Specify the list of file types that the user can download.
-   * This can be used to limit the download options for end users 
-   * based on file types. This limitation is applied to both native 
-   * download and custom download scenarios.
-   */
-  allowedFileTypes?: FileType[];
-}
-```
-
-#### Text to Image Module
-
-**Image Module App Params inherits base App params**
-
-```ts
-{
-  /** Text to search the template */
-  promptText?: string;
-}
-```
-
-**Image Module Export Params inherits base Export params**
-
-```ts
-{
-  /**
- * Export options to configure the header buttons
- * Not used as of now
- */
-  exportOptions?: ExportOptions[];
-}
-```
-
-### Quick Action API parameters
-
-For Quick actions, Container params are the same as base params. We only have changes in the Doc params, App Params, and Container Params. There are a few exceptions where the params have deviated, for example merge videos which have their own set of Doc params.
-
-So, here we have created 3 level hierarchy which is as follows:
-
-- `QuickActionDocParams`: This contains the common inputs for all QA.
-- `<Image / Video>QuickActionDocParams extends QuickActionDocParams`: This contains the inputs relevant for a particular QA type (Image/Video/PDF).
-- `<API-Specific>QuickActionParams extends Image/VideQuickActionParams`: inputs specific for a particular API.
-
-
-**Quick Action App Params inherits Base App Params**
-
-```ts
-{
-  /** Theming options for the Quick Action Editor */
-  colorTheme?: ColorTheme;
-  spectrumTheme?: SpectrumTheme;
-  scale?: Scale;
-  /** Boolean that tells whether to receive target application 
-   * errors or not to client. */
-  receiveTargetErrors?: boolean;
-}
-```
-
-**Quick Action Doc Params inherits Base Doc Params**
-
-```ts
-{
-  /** Asset from the client application to start editing with. */
-  asset?: Asset;
-}
-```
-
-**Merge Videos Doc Params inherits Base Doc Params**
-
-```ts
-{
-  /** Asset from the client application to start editing with. */
-  asset?: Asset[];
-}
-```
-
-We have the same output params for all Quick Action APIs as of now: 
-
-**QuickActionExportParams inherits BaseExportParams**
-
-```ts
-{
-  /** Export options for the asset that is created. These options would be visible in the quick action editor */
-  exportOptions?: ExportOptions[];
-}
-```
 
 ## Step-by-Step Migration
 
@@ -424,3 +169,29 @@ Ensure your internal documentation is updated to reflect the changes made during
 Migrating from Adobe Express Embed SDK V3 to V4 involves updating initialization code and API calls and handling deprecated features. 
 
 By following this guide, you can ensure a smooth transition and take advantage of V4's new features and improvements.
+
+<DiscoverBlock slots="heading, link, text"/>
+
+## API References
+
+[CCEverywhere](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/)
+
+Once you have successfully initialized the SDK, a Promise will be returned containing the `CCEverywhere` object.
+
+<DiscoverBlock slots="link, text"/>
+
+[Editor API](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow/)
+
+Provides API References for /Editor API.
+
+<DiscoverBlock slots="link, text"/>
+
+[Module API](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow/)
+
+Provides API References for /Module API.
+
+<DiscoverBlock slots="link, text"/>
+
+[Quick Action API](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow/)
+
+Provides API References for /Quick Action API.
