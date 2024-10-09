@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/ContainerConfig.types](../index.md) / ContainerConfig
-
 # Type Alias: ContainerConfig
 
 ```ts

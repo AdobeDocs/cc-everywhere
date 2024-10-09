@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/ExportConfig.types](../index.md) / DownloadTarget
-
 # Enumeration: DownloadTarget
 
 ## Enumeration Members

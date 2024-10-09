@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [sdk/src/3p/CCEverywhere](../index.md) / default
-
 # Variable: default
 
 ```ts

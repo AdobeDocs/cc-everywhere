@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / shared/src/error/handlers/HostErrorHandler
-
 # shared/src/error/handlers/HostErrorHandler
 
 ## Index

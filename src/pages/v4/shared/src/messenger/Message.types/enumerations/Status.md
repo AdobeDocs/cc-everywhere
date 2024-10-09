@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/Message.types](../index.md) / Status
-
 # Enumeration: Status
 
 ## Enumeration Members

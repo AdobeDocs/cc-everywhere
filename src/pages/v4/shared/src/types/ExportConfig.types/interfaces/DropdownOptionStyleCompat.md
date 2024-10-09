@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/ExportConfig.types](../index.md) / DropdownOptionStyleCompat
-
 # Interface: DropdownOptionStyleCompat
 
 Represents the style of a dropdown option, extending the base Style interface.

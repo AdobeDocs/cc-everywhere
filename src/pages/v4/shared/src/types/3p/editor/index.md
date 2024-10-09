@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / shared/src/types/3p/editor
-
 # shared/src/types/3p/editor
 
 ## References

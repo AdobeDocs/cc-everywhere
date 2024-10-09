@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/v1\_1/OutputParams.types](../index.md) / CCXPublishParams
-
 # Interface: CCXPublishParams
 
 Asset related information received with onPublish callback.

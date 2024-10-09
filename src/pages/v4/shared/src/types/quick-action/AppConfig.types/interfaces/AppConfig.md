@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/quick-action/AppConfig.types](../index.md) / AppConfig
-
 # Interface: AppConfig
 
 ## Extends

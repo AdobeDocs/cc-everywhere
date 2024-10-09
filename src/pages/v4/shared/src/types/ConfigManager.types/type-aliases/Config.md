@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/ConfigManager.types](../index.md) / Config
-
 # Type Alias: Config
 
 ```ts

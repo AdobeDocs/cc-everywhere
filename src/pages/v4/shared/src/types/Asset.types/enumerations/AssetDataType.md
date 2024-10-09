@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Asset.types](../index.md) / AssetDataType
-
 # Enumeration: AssetDataType
 
 ## Enumeration Members

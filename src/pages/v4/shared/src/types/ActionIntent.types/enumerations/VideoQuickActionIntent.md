@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/ActionIntent.types](../index.md) / VideoQuickActionIntent
-
 # Enumeration: VideoQuickActionIntent
 
 ## Enumeration Members

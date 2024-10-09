@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/types/HostInfo.types
-
 # shared/src/types/HostInfo.types
 
 ## Index

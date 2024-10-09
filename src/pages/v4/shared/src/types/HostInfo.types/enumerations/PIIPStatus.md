@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/HostInfo.types](../index.md) / PIIPStatus
-
 # Enumeration: PIIPStatus
 
 Represents whether analytics are sent.

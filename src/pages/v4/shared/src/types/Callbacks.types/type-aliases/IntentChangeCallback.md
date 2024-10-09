@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Callbacks.types](../index.md) / IntentChangeCallback
-
 # Type Alias: IntentChangeCallback()
 
 ```ts

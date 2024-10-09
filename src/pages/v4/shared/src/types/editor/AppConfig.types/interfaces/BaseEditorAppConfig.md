@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/editor/AppConfig.types](../index.md) / BaseEditorAppConfig
-
 # Interface: BaseEditorAppConfig
 
 ## Extends

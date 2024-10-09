@@ -1,5 +1,3 @@
-[cc-everywhere](../../../index.md) / shared/src/messenger
-
 # shared/src/messenger
 
 ## References

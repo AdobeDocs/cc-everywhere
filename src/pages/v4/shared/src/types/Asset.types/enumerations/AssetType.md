@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Asset.types](../index.md) / AssetType
-
 # Enumeration: AssetType
 
 File format supported for design operations

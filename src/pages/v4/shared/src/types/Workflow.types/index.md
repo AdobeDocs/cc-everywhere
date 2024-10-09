@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/types/Workflow.types
-
 # shared/src/types/Workflow.types
 
 ## Index

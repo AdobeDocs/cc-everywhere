@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Layout.types](../index.md) / CanvasType
-
 # Enumeration: CanvasType
 
 Canvas Layout supported in Project X

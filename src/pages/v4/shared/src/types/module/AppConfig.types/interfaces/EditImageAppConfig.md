@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/module/AppConfig.types](../index.md) / EditImageAppConfig
-
 # Interface: EditImageAppConfig
 
 ## Extends

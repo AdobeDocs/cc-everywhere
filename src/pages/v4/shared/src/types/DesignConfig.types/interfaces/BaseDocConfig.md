@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/DesignConfig.types](../index.md) / BaseDocConfig
-
 # Interface: BaseDocConfig
 
 ## Extended by

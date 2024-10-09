@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/PublishParams.types](../index.md) / PublishParams
-
 # Interface: PublishParams
 
 Asset related information received with onPublish callback.

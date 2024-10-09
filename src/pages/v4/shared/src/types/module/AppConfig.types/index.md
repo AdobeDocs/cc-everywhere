@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / shared/src/types/module/AppConfig.types
-
 # shared/src/types/module/AppConfig.types
 
 ## Index

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessageListener](../index.md) / ChannelMessageListener
-
 # Class: ChannelMessageListener
 
 ## Implements

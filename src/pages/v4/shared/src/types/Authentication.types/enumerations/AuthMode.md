@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Authentication.types](../index.md) / AuthMode
-
 # Enumeration: AuthMode
 
 Enum representing different authentication modes.

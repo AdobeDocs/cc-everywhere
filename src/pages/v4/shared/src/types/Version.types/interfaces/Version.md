@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Version.types](../index.md) / Version
-
 # Interface: Version
 
 Version details of any application.

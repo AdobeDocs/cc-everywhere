@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/messenger/ChannelMessenger.types
-
 # shared/src/messenger/ChannelMessenger.types
 
 ## Index

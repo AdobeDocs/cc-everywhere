@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Asset.types](../index.md) / Asset
-
 # Type Alias: Asset
 
 ```ts

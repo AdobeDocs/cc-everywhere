@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/error/handlers/BaseHandler](../index.md) / BaseHandler
-
 # Class: BaseHandler
 
 ## Extended by

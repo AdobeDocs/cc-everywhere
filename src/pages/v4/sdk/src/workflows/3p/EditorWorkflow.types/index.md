@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / sdk/src/workflows/3p/EditorWorkflow.types
-
 # sdk/src/workflows/3p/EditorWorkflow.types
 
 ## Index

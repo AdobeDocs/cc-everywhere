@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessenger.types](../index.md) / MessageListener
-
 # Type Alias: MessageListener()
 
 ```ts

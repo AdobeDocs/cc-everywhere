@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/Messages](../index.md) / Messages
-
 # Variable: Messages
 
 ```ts

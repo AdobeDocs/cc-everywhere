@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/quick-action/DesignConfig.types](../index.md) / QuickActionDesignConfig
-
 # Interface: QuickActionDesignConfig
 
 ## Extends

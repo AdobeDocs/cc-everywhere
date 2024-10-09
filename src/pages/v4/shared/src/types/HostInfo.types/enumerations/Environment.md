@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/HostInfo.types](../index.md) / Environment
-
 # Enumeration: Environment
 
 1P only

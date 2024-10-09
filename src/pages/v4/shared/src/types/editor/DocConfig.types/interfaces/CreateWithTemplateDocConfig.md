@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/editor/DocConfig.types](../index.md) / CreateWithTemplateDocConfig
-
 # Interface: CreateWithTemplateDocConfig
 
 ## Extends

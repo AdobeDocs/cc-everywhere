@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [sdk/src/types/CCEverywhere.types](../index.md) / State
-
 # Enumeration: State
 
 ## Enumeration Members

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [sdk/src/error/ErrorCodes](../index.md) / SDKErrorCode
-
 # Enumeration: SDKErrorCode
 
 ## Enumeration Members

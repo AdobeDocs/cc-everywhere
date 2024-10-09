@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [sdk/src/workflows/3p/QuickActionWorkflow.types](../index.md) / QuickActionWorkflow
-
 # Interface: QuickActionWorkflow
 
 ## Methods

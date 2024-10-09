@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/HostInfo.types](../index.md) / Locale
-
 # Enumeration: Locale
 
 List of supported locales.

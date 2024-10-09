@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/MessageData.types](../index.md) / UpdateCloseButtonEventData
-
 # Interface: UpdateCloseButtonEventData
 
 ## Extends

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/types/module/DesignConfig.types](../index.md) / WarmupDesignConfig
-
 # Interface: WarmupDesignConfig
 
 ## Extends

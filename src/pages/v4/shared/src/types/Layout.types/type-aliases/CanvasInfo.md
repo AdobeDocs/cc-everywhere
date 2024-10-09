@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Layout.types](../index.md) / CanvasInfo
-
 # Type Alias: CanvasInfo
 
 ```ts

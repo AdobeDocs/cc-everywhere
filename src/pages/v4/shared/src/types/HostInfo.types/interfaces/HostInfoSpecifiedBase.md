@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/HostInfo.types](../index.md) / HostInfoSpecifiedBase
-
 # Interface: HostInfoSpecifiedBase
 
 This interface describes the properties provided by client.

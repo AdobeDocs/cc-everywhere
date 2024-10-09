@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [sdk/src/workflows/3p/EditorWorkflow](../index.md) / EditorWorkflow
-
 # Class: EditorWorkflow
 
 ## Extends

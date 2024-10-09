@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/error/handlers/HostErrorHandler](../index.md) / HostErrorHandler
-
 # Class: HostErrorHandler<T\>
 
 ## Extends

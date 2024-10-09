@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/TargetInfo.types](../index.md) / TargetInfo
-
 # Interface: TargetInfo
 
 The information of target application (for eg : CCX) which host can open in the browser.

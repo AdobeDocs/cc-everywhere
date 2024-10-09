@@ -1,5 +1,3 @@
-[cc-everywhere](../../../index.md) / shared/src/types
-
 # shared/src/types
 
 ## References

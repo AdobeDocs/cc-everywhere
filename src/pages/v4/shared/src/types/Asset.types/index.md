@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/types/Asset.types
-
 # shared/src/types/Asset.types
 
 ## Index

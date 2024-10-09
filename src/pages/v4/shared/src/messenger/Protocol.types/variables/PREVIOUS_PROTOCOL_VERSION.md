@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/Protocol.types](../index.md) / PREVIOUS\_PROTOCOL\_VERSION
-
 # Variable: PREVIOUS\_PROTOCOL\_VERSION
 
 ```ts

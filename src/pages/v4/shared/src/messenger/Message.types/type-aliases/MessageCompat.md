@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/Message.types](../index.md) / MessageCompat
-
 # Type Alias: MessageCompat<T\>
 
 ```ts

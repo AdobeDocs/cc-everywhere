@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/error/CCEverywhereError.types
-
 # shared/src/error/CCEverywhereError.types
 
 ## Index

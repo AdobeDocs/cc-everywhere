@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/IErrorMessageHandler](../index.md) / IErrorMessageHandler
-
 # Interface: IErrorMessageHandler<T\>
 
 ## Type Parameters

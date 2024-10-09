@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/ErrorData](../index.md) / ErrorData
-
 # Interface: ErrorData<T\>
 
 ## Type Parameters

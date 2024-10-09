@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/FeatureFlags.types](../index.md) / FeatureFlags
-
 # Type Alias: FeatureFlags
 
 ```ts

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/Protocol.types](../index.md) / ProtocolVersion
-
 # Enumeration: ProtocolVersion
 
 ## Enumeration Members

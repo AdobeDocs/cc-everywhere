@@ -1,5 +1,3 @@
-[cc-everywhere](../../../index.md) / sdk/src/types
-
 # sdk/src/types
 
 ## References

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/error/ErrorData
-
 # shared/src/error/ErrorData
 
 ## Index

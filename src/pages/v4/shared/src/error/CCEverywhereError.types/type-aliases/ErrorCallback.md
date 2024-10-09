@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/CCEverywhereError.types](../index.md) / ErrorCallback
-
 # Type Alias: ErrorCallback()<T\>
 
 ```ts

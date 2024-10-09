@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / [sdk/src/CCEverywhereBase](../index.md) / CCEverywhereBase
-
 # Class: `abstract` CCEverywhereBase
 
 Class to create CCEverywhere object.

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/CCEverywhereError.types](../index.md) / LogLevel
-
 # Enumeration: LogLevel
 
 ## Enumeration Members

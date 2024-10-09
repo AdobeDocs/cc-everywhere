@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Authentication.types](../index.md) / UserInfo
-
 # Interface: UserInfo
 
 Base class for user related information.

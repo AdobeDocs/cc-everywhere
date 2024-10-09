@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/Message.types](../index.md) / DidTargetLoadMessage
-
 # Type Alias: DidTargetLoadMessage<T\>
 
 ```ts

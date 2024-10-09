@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/ExportConfig.types](../index.md) / BaseButtonStyle
-
 # Interface: BaseButtonStyle<T\>
 
 Represents the style of a button, extending the base Style interface.

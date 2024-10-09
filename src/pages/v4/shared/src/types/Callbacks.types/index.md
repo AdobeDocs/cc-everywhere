@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/types/Callbacks.types
-
 # shared/src/types/Callbacks.types
 
 ## Index

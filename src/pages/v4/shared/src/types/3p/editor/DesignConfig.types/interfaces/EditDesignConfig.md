@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../../index.md) / [shared/src/types/3p/editor/DesignConfig.types](../index.md) / EditDesignConfig
-
 # Interface: EditDesignConfig
 
 ## Extends

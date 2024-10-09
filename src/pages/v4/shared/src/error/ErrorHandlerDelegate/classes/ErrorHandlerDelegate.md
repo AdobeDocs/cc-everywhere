@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/ErrorHandlerDelegate](../index.md) / ErrorHandlerDelegate
-
 # Class: ErrorHandlerDelegate<T\>
 
 ## Type Parameters

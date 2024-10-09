@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessenger.types](../index.md) / ChannelMessage
-
 # Interface: ChannelMessage<T\>
 
 ## Type Parameters

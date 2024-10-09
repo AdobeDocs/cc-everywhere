@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/AppConfig.types](../index.md) / SpectrumTheme
-
 # Enumeration: SpectrumTheme
 
 ## Enumeration Members

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / shared/src/types/editor/DocConfig.types
-
 # shared/src/types/editor/DocConfig.types
 
 ## Index

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/messenger/Protocol.types
-
 # shared/src/messenger/Protocol.types
 
 ## Index

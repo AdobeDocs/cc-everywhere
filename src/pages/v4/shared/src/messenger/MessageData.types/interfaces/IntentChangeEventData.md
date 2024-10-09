@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/MessageData.types](../index.md) / IntentChangeEventData
-
 # Interface: IntentChangeEventData
 
 ## Extends

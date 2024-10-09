@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/types/quick-action
-
 # shared/src/types/quick-action
 
 ## References

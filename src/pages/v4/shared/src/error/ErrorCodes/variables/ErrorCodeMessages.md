@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/ErrorCodes](../index.md) / ErrorCodeMessages
-
 # Variable: ErrorCodeMessages
 
 ```ts

@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Asset.types](../index.md) / OutputAsset
-
 # Interface: OutputAsset
 
 Information related to output asset.

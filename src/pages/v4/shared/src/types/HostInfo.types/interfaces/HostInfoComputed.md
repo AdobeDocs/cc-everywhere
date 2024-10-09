@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/HostInfo.types](../index.md) / HostInfoComputed
-
 # Interface: HostInfoComputed
 
 This interface describes the properties computed from host session.

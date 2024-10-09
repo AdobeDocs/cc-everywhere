@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/messenger/ChannelMessenger](../index.md) / default
-
 # Class: default
 
 ## Constructors

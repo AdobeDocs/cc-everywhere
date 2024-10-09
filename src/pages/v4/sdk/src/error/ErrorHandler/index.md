@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / sdk/src/error/ErrorHandler
-
 # sdk/src/error/ErrorHandler
 
 ## Index

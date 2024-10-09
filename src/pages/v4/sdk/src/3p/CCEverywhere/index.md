@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / sdk/src/3p/CCEverywhere
-
 # sdk/src/3p/CCEverywhere
 
 ## Index

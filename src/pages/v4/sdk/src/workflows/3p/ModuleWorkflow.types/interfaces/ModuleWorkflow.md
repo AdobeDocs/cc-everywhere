@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [sdk/src/workflows/3p/ModuleWorkflow.types](../index.md) / ModuleWorkflow
-
 # Interface: ModuleWorkflow
 
 ## Methods

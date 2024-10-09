@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Asset.types](../index.md) / ImageFileType
-
 # Enumeration: ImageFileType
 
 ## Enumeration Members

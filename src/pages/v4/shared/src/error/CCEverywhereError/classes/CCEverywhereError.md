@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/error/CCEverywhereError](../index.md) / CCEverywhereError
-
 # Class: CCEverywhereError<T\>
 
 ## Extends

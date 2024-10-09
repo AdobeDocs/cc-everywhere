@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../../index.md) / [shared/src/error/handlers/ConsoleHandler](../index.md) / ConsoleHandler
-
 # Class: ConsoleHandler<T\>
 
 ## Extends

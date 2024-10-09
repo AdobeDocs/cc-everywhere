@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../../index.md) / [shared/src/types/Authentication.types](../index.md) / BaseAuthOption
-
 # Interface: BaseAuthOption
 
 ## Extended by

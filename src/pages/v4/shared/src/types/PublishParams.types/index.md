@@ -1,5 +1,3 @@
-[cc-everywhere](../../../../index.md) / shared/src/types/PublishParams.types
-
 # shared/src/types/PublishParams.types
 
 ## Index
