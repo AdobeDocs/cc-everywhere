@@ -60,7 +60,7 @@ The four parameters are:
 
 The following diagram shows how the previous API relates to the current new APIs:
 
-![V3 V4 comparison](../concepts/v3-v4.png)
+![V3 V4 comparison](./img/v3-v4.png)
 
 ### Editor Workflow API example
 
@@ -72,7 +72,9 @@ The following diagram shows how the previous API relates to the current new APIs
 
 ### 1. Update SDK Version
 
-Use this link to get the latest version -- [https://cc-embed.adobe.com/docs/v4/release/3p/modules.html](https://cc-embed.adobe.com/docs/v4/release/3p/modules.html)
+Use this link to get the latest version: [https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js](https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js). You can check it directly in the JavaScript file.
+
+![version](./img/version.png)
 
 ### 2. Update Initialization Code
 
@@ -90,7 +92,7 @@ We have moved callbacks from an API-level to a class-level parameter. This enabl
 
 With all the above changes, the SDK initialization API can be visualized using the following diagram:
 
-![SDK initialization](./initialization-v4.png)
+![SDK initialization](./img/initialization-v4.png)
 
 **V3:**
 
@@ -174,24 +176,24 @@ By following this guide, you can ensure a smooth transition and take advantage o
 
 ## API References
 
-[CCEverywhere](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/)
+[CCEverywhere](../../v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/)
 
 Once you have successfully initialized the SDK, a Promise will be returned containing the `CCEverywhere` object.
 
 <DiscoverBlock slots="link, text"/>
 
-[Editor API](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow/)
+[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow/)
 
 Provides API References for /Editor API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Module API](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow/)
+[Module API](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow/)
 
 Provides API References for /Module API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Quick Action API](https://developer-stage.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow/)
+[Quick Action API](../../v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow/)
 
 Provides API References for /Quick Action API.

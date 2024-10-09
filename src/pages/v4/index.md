@@ -1,10 +1,12 @@
 ---
 keywords:
   - API Documentation
-  - Reference
+  - API Reference
   - Initialize
   - CCEverywhere
-  - v4
+  - Embed SDK
+  - Import SDK
+  - V4
 title: SDK Reference
 description: This is the reference page for the existing components in the SDK.
 contributors:

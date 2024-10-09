@@ -2,6 +2,8 @@
 keywords:
   - Breaking changes
   - Added
+  - Enhancements
+  - What's new
   - Known Issues
   - Embed SDK changelog
   - Changelog

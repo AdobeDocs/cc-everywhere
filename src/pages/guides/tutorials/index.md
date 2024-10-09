@@ -3,6 +3,7 @@ keywords:
   - Adobe Express
   - Embed SDK
   - Tutorials
+  - CCEverywhere
 title: Embed SDK Tutorials
 description: A collection of tutorials on using and integrating the SDK into your web application.
 contributors:
