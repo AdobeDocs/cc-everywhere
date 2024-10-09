@@ -13,6 +13,19 @@ contributors:
 
 # Changelog
 
+## [4.15.19] - 2024-10-09
+
+### Enhancements
+
+- Redesigned the entire [SDK Reference](../../v4/index.md) section, providing full APIs coverage.
+- Added a V3 to V4 [Migration Guide](../concepts/migration_v3_v4.md).
+
+### Added
+
+- `CCEverywhere.ExportConfig.ENABLED_BUTTON`: Added a new style in export option, any button can be made always enabled from the launch of the iframe by passing `uiType:enabled-button`
+- `CCEverywhere.ExportConfig.DOWNLOAD_ALL`: Added Export options target as `"Download_all"` to download all the images, applicable only for text to image.
+- `CCEverywhere.createImageFromText.appConfig.imageDimensions`: In the `appConfig` of `createImageFromText`, included `imageDimensions` to define the dimensions for the images users can generate. This parameter accepts the size in pixels and the corresponding aspect ratio. When specified, users will be limited to generating images to the provided aspect ratio.
+
 ## [4.14.23] - 2024-09-23
 
 ### Enhancements
