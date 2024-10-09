@@ -14,7 +14,7 @@ on:
 
 jobs:
   build-and-index:
-    runs-on: ubuntu-latest
+    runs-on: developer-website-arc-prd-runners-adcce
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -22,18 +22,27 @@ jobs:
       - name: Setup Node v18 for Yarn v4
         uses: actions/setup-node@v3
         with:
-          node-version: "18.19.0" # Current LTS version
+          node-version: "18.12.0" # Current LTS version
 
-      - name: Enable Corepack for Yarn
+      - name: Enable Corepack for Yarn v4
         run: corepack enable
 
+      - name: Install Yarn v4
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: set version stable
+
       - name: Install Dependencies
-        run: yarn install
+        uses: borales/actions-yarn@v4
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
+        with:
+          cmd: install
 
       - name: Build site
-        run: yarn build
+        uses: borales/actions-yarn@v4
+        with:
+          cmd: build
 
         env:
           NODE_OPTIONS: "--max_old_space_size=8192"

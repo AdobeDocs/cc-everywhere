@@ -23,14 +23,6 @@ on:
         options:
           - console
           - index
-      runners:
-        description: "Runners on which to execute workflow"
-        required: true
-        default: "ubuntu-latest"
-        type: choice
-        options:
-          - ubuntu-latest
-          - developer-website-arc-prd-runners-adcce
 
 jobs:
   set-state:
@@ -90,26 +82,26 @@ jobs:
       run:
         shell: bash
     needs: [set-state, pre-build-dev]
-    runs-on: ubuntu-latest
+    runs-on: developer-website-arc-prd-runners-adcce
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node v16 for Yarn v3
+      - name: Setup Node v18 for Yarn v4
         uses: actions/setup-node@v3
         with:
-          node-version: "16.15.0" # Current LTS version
+          node-version: "18.12.0" # Current LTS version
 
-      - name: Enable Corepack for Yarn v3
+      - name: Enable Corepack for Yarn v4
         run: corepack enable
 
-      - name: Install Yarn v3
-        uses: borales/actions-yarn@v3
+      - name: Install Yarn v4
+        uses: borales/actions-yarn@v4
         with:
           cmd: set version stable
 
       - name: Install Dependencies
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
         with:
@@ -127,12 +119,12 @@ jobs:
 
       - name: Clean Cache
         if: needs.set-state.outputs.clean_cache == 'true'
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         with:
           cmd: clean
 
       - name: Build site
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         with:
           cmd: build
         env:
@@ -162,9 +154,7 @@ jobs:
           GATSBY_SITE_DOMAIN_URL: https://developer-stage.adobe.com
           GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_DEV_TEMPLATE_ID }}
           GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
-          GATSBY_DISABLE_SOURCE_MAPS: "true"
-          NODE_OPTIONS: "--max_old_space_size=30720"
-
+          NODE_OPTIONS: "--max_old_space_size=8192"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
@@ -198,26 +188,26 @@ jobs:
       run:
         shell: bash
     needs: [set-state, pre-build-production]
-    runs-on: ubuntu-latest
+    runs-on: developer-website-arc-prd-runners-adcce
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Setup Node v16 for Yarn v3
+      - name: Setup Node v18 for Yarn v4
         uses: actions/setup-node@v3
         with:
-          node-version: "16.15.0" # Current LTS version
+          node-version: "18.12.0" # Current LTS version
 
       - name: Enable Corepack for Yarn v3
         run: corepack enable
 
-      - name: Install Yarn v3
-        uses: borales/actions-yarn@v3
+      - name: Install Yarn v4
+        uses: borales/actions-yarn@v4
         with:
           cmd: set version stable
 
       - name: Install Dependencies
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         env:
           YARN_ENABLE_IMMUTABLE_INSTALLS: false
         with:
@@ -235,12 +225,12 @@ jobs:
 
       - name: Clean Cache
         if: needs.set-state.outputs.clean_cache == 'true'
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         with:
           cmd: clean
 
       - name: Build site
-        uses: borales/actions-yarn@v3
+        uses: borales/actions-yarn@v4
         with:
           cmd: build
         env:
@@ -272,9 +262,8 @@ jobs:
           GATSBY_FEDS_PRIVACY_ID: ${{ secrets.AIO_FEDS_PRIVACY_ID }}
           GATSBY_SITE_DOMAIN_URL: https://developer.adobe.com
           GATSBY_TEMPLATE_ID: ${{ secrets.AIO_IMS_PROD_TEMPLATE_ID }}
-          GATSBY_PRODUCT_NAME: Adobe Express Embed SDK
-          GATSBY_DISABLE_SOURCE_MAPS: "true"
-          NODE_OPTIONS: "--max_old_space_size=30720"
+          GATSBY_PRODUCT_NAME: "Adobe Express Embed SDK"
+          NODE_OPTIONS: "--max_old_space_size=8192"
       - name: Deploy
         uses: AdobeDocs/static-website-deploy@master
         with:
