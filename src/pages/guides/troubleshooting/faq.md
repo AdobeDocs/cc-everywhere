@@ -1,3 +1,13 @@
+---
+keywords:
+  - Embed FAQ
+  - FAQ
+  - Frequently Asked Questions
+title: Frequently Asked Questions
+description: This page answers common questions about the Adobe Express Embed SDK.
+contributors:
+  - https://github.com/amandahuarng
+---
 
 # FAQ
 

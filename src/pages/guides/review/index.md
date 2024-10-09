@@ -2,6 +2,9 @@
 keywords:
   - Developer submission guidelines
   - Review process
+  - Review
+  - Approval
+  - Rejection
 title: Submission and Review
 description: This page explains the submission and review process.
 contributors:

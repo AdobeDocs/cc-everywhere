@@ -3,6 +3,7 @@ keywords:
   - Adobe Express
   - Embed SDK
   - Tutorial
+  - CCEverywhere
 title: Building your first Adobe Express Embed SDK integration
 description: A step-by-step guide to setting up and integrating the SDK into your web application.
 contributors:

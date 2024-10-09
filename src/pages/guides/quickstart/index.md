@@ -14,6 +14,7 @@ keywords:
   - Initialize SDK
   - Getting started
   - Browser support
+  - Howto
 title: Quickstart Guide
 description: This is the Quickstart Guide for Adobe Express Embed SDK
 contributors:

@@ -14,15 +14,18 @@ title: Initialize SDK Reference
 description: This is the reference page for the initialize method.
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/undavide
 --- 
 
 # Initialize SDK
 
-<InlineAlert variant="error" slots="header, text" />
+<InlineAlert variant="error" slots="header, text1, text2" />
 
 IMPORTANT: Deprecation Warning
 
-We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
+We are no longer approving new integrations using SDK v3, which will be deprecated in 2024.
+
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration_v3_v4.md) to help you with the transition.
 
 ## initialize()
 
