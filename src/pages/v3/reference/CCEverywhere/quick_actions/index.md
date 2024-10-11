@@ -77,5 +77,5 @@ Input parameters for quick actions. All the properties are optional.
 | Property | Type | Description
 | :-- | :-- | :--
 | exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. These options will be visible in the quick action editor.
-| asset | [Asset](#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge video quick action.
+| asset | [Asset](../../types/index.md#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge video quick action.
 | receiveTargetErrors | boolean | Boolean that tells client whether or not to receive target application errors.

@@ -184,20 +184,20 @@ Successful initialization returns a `CCEverywhere` Class object, with three prop
 
 Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [Full editor](../guides/full_editor/index.md)
+### [Full editor](../../guides/full_editor/index.md)
 
 With the full editor component, your users are able to:
 
-- How to [create new projects](../guides/full_editor/create_project/)
-- How to [edit existing projects](../guides/full_editor/edit_project/)
+- How to [create new projects](../../guides/full_editor/create_project/)
+- How to [edit existing projects](../../guides/full_editor/edit_project/)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
-### [Quick actions](../guides/quick_actions/index.md)
+### [Quick actions](../../guides/quick_actions/index.md)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
-### [Modules](../guides/modules/index.md)
+### [Modules](../../guides/modules/index.md)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 

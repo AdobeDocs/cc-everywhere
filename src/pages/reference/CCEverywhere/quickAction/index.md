@@ -136,7 +136,7 @@ All the properties are optional.
 
 | Property | Type | Description
 | :-- | :-- | :--
-| asset | [Asset](#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge videos quick action.
+| asset | [Asset](../../types/index.md#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge videos quick action.
 
 ### AppConfig
 
