@@ -176,24 +176,24 @@ By following this guide, you can ensure a smooth transition and take advantage o
 
 ## API References
 
-[CCEverywhere](../../v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/)
+[CCEverywhere](../../v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md)
 
 Once you have successfully initialized the SDK, a Promise will be returned containing the `CCEverywhere` object.
 
 <DiscoverBlock slots="link, text"/>
 
-[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow/)
+[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md)
 
 Provides API References for /Editor API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Module API](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow/)
+[Module API](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md)
 
 Provides API References for /Module API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Quick Action API](../../v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow/)
+[Quick Action API](../../v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md)
 
 Provides API References for /Quick Action API.

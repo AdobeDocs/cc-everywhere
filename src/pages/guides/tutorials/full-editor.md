@@ -260,7 +260,7 @@ Please note that `asset` is an array; we're getting just the first item here. If
 
 ### 4. Editing projects
 
-The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before.  As we've seen [earlier](#managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
+The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before.  As we've seen [earlier](#3-managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
 
 ```js
 // Will hold the project ID when a document is saved

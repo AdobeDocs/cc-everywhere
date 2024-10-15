@@ -54,7 +54,7 @@ The only required property is `docConfig`.
 | Property | Type| Description
 | :-- | :-- | :--
 | docConfig | [EditImageDocConfig](../../reference/CCEverywhere/miniEditor/index.md#editimagedocconfig)| Pass an asset to preload into the Edit Image module
-| appConfig | [BaseEditorAppConfig](../../reference/CCEverywhere/miniEditor/index.md#baseeditorappconfig) | Pass callback functions
+| appConfig | [BaseEditorAppConfig](../../reference/CCEverywhere/miniEditor/index.md) | Pass callback functions
 | exportConfig | [ExportOptions](../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
 

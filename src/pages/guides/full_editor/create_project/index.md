@@ -11,6 +11,7 @@ title: Adobe Express Editor - Create New Project
 description: This guide will show you how users can start working on new projects in an embedded Adobe Express editor. 
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/undavide
 ---
 
 # Creating new projects using the full editor
