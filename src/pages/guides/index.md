@@ -12,16 +12,19 @@ title: Overview
 description: This is the documentation for Adobe Express Embed SDK
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
 ---
 <Hero slots="heading, text" background="rgb(138, 43, 226)"/>
 
-# Overview
+# Adobe Express Embed SDK documentation
 
-Adobe Express Embed SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Adobe Express capabilities to web applications.
+Embed Powerful Creative Tools Directly into Your Website
 
-## Adobe Express Embed SDK
+## Overview
 
-Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on your own website. This documentation provides all the materials you need to get started with the SDK. Try them now in our [demo app](https://demo.expressembed.com/).
+The Adobe Express Embed SDK equips your platform with robust design, photo editing, video editing, and AI-powered tools, offering your users a seamless creative experience without leaving your site.
+
+Try them now in our [demo app](https://demo.expressembed.com/).
 
 ### What is the full editor?
 
