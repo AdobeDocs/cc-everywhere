@@ -20,7 +20,7 @@ This guide will assist you in updating your Adobe Express Embed SDK integration 
 
 Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
-SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent. 
+SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent.
 
 ## Introducing workflows
 
@@ -81,7 +81,7 @@ We are introducing module APIs through module workflow.
 
 #### Deprecated API
 
-[openQuickAction](../../v3/reference/CCEverywhere/quick_actions/index.md) has been replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID. 
+[openQuickAction](../../v3/reference/CCEverywhere/quick_actions/index.md) has been replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
 
 ## Workflow API enhancements
 
