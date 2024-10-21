@@ -22,11 +22,9 @@ Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies par
 
 SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent. 
 
-## Workflow API changes
+## Introducing workflows
 
-In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`.
-
-These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents.
+In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`. These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents.
 
 We have addressed this issue in V4 by segmenting the APIs into ***workflows*** based on user intent and providing more descriptive API names.
 
@@ -36,11 +34,15 @@ The three workflows are as follows:
 - Editor Workflow
 - Quickaction Workflow
 
-Let us see in detail about the V4 changes.
+Let us see in detail about the V4 changes through these workflows.
 
 ## V4 Key changes
 
-### Module Workflow
+The following diagram shows how the previous API relates to the current new APIs:
+
+![V3 V4 comparison](./img/v3-v4.png)
+
+### Module workflow
 
 We are introducing module APIs through module workflow.
 
@@ -62,7 +64,7 @@ We are introducing module APIs through module workflow.
 | `CCEverywhere.editor.createWithTemplate` | Enables starting with a given Adobe Express template ID.         |
 | `CCEverywhere.editor.edit`               | Allows modification using an existing Adobe Express Document ID. |
 
-#### Deprecated API
+#### Deprecated APIs
 
 - [createDesign](../../v3/reference/CCEverywhere/create_design/)
 - [editDesign](../../v3/reference/CCEverywhere/edit_design/)
@@ -91,10 +93,6 @@ The four parameters are:
 - `AppConfig` - properties that configure the target application starting behaviour.
 - `ExportConfig` - properties that govern the export behaviour of a workflow.
 - `ContainerConfig` - UI properties that customize the SDK container.
-
-The following diagram shows how the previous API relates to the current new APIs:
-
-![V3 V4 comparison](./img/v3-v4.png)
 
 **Editor Workflow API example**
 
