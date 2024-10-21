@@ -7,6 +7,7 @@ title: Frequently Asked Questions
 description: This page answers common questions about the Adobe Express Embed SDK.
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
 ---
 
 # FAQ
@@ -35,3 +36,23 @@ Content publishing: For the same reason above, you have the ability to pre-defin
 ### My user base consists of students/minors. How can I be assured they get appropriate content?
 
 The embedded Adobe Express full editor can be setup to launch student safe content even before a student is signed into the embedded experience. More information about [Adobe & Student Privacy](https://www.adobe.com/privacy/student-policy.html).
+
+### How many domains can be added with a single API key for a service?
+
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services.
+
+### How do I enable SSO for my service?
+
+https://helpx.adobe.com/enterprise/using/sso-faq.html 
+
+### Would Adobe need to approve the integrations before my users can start using it?
+
+Your users can use the integrations, but, we will display a red banner indicating, the experience powred by Adobe Express has not been approved yet. Once we review and approve your app, we will remove this banner. 
+
+### What is the versioning strategy for the SDK?
+
+The SDK follows a continous release model, with newer versions including bug fixes and feature enhancements. We are no longer approving integrations using using SDK V1, V2, or V3.
+
+V1 and V2 are deprecated and V3 will be deprecated in 2024.
+
+Please migrate to V4 as soon as possible: we've created a Migration Guide to help you with the transition.
