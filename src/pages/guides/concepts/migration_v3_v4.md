@@ -36,7 +36,7 @@ The three workflows are as follows:
 
 Let us see in detail about the V4 changes through these workflows.
 
-## V4 Key changes
+## V4 key changes
 
 The following diagram shows how the previous API relates to the current new APIs:
 
@@ -100,19 +100,19 @@ The four parameters are:
 
 **V4**: `ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
 
-## Step-by-Step Migration
+## Step-by-Step migration
 
-### 1. Update SDK Version
+### 1. Update SDK version
 
 Use this link to get the latest version: [https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js](https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js). You can check it directly in the JavaScript file.
 
 ![version](./img/version.png)
 
-### 2. Update Initialization Code
+### 2. Update initialization code
 
 Update your initialization code to use the new configuration parameters.
 
-**Notable Changes to Parameters at Initialize Level:**
+**Notable changes to parameters at Initialize level:**
 
 - Host Info
 - Config Params: Login Mode has moved from `configParams` to `AuthInfo` / `AuthProvider`.
@@ -138,7 +138,7 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEvery
 initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, authOption?: AuthOption) => Promise<CCEverywhere>); terminate: (() => boolean)
 ```
 
-### 3. Adjust API Calls
+### 3. Adjust API calls
 
 Review and update your API calls to match the new method signatures and parameters in V4.
 
@@ -170,9 +170,9 @@ Here are some specific tests you can perform:
 - Validate that the editor sets the default category, search text, template type, and titles correctly.
 - Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
 
-#### Quick Action API tests
+#### Quick action API tests
 
-- Test various Quick Action APIs such as image and video editing.
+- Test various Quick action APIs such as image and video editing.
 - Validate that standard inputs for Quick Actions are working correctly.
 - Ensure that API-specific parameters are applied and functioning as expected.
 
@@ -190,7 +190,7 @@ Take advantage of new features introduced in V4. Review the release notes and do
 - New methods and parameters to provide more control over the SDK.
 - Improved performance and security features.
 
-### 7. Update Documentation and Dependencies
+### 7. Update documentation and dependencies
 
 Ensure your internal documentation is updated to reflect the changes made during the migration. Also, update any dependencies interacting with Adobe Express Embed SDK to ensure compatibility. This includes:
 
