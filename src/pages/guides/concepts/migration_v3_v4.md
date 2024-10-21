@@ -20,34 +20,70 @@ This guide will assist you in updating your Adobe Express Embed SDK integration 
 
 Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
-SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into three distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent. The transition from V3 to V4 brought several changes.
+SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent.
 
-## Workflow API changes
+## Introducing workflows
 
-In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`.
-
-These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents.
+In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`. These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents.
 
 We have addressed this issue in V4 by segmenting the APIs into ***workflows*** based on user intent and providing more descriptive API names.
 
-### V4 Key changes
+The three workflows are as follows:
 
-#### Introducing `Module` APIs through Module Workflow
+- Module Workflow
+- Editor Workflow
+- Quickaction Workflow
 
-The introduction of Module APIs such as `editImage` and `createImageFromText`.
+Let us see in detail about the V4 changes through these workflows.
 
-#### Editor workflow
+## V4 key changes
 
-- `create` initiates a workflow using a blank canvas.  
-- `createWithAsset` allows an image asset to be preloaded onto the canvas.  
-- `createWithTemplate` enables starting with a given Adobe Express template ID.  
-- `edit` allows modification using an existing Adobe Express Document ID.  
+The following diagram shows how the previous API relates to the current new APIs:
 
-#### Quick action workflow
+![V3 V4 comparison](./img/v3-v4.png)
 
-`openQuickAction` has been decommissioned and replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
+### Module workflow
 
-## Workflow API Changes
+We are introducing module APIs through module workflow.
+
+#### New APIs
+
+| API Name                                  | Description                                                                                                                                                                                         |
+|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `CCEverywhere.module.editImage`           | Start editing an asset using image module.                                                                                                                                                          |
+| `CCEverywhere.module.createImageFromText` | Generate images using a text prompt. SDK unlocks a mini editing experience, allowing users to create images from text prompts and then be able to make necessary edits via Embedded Express Editor. |
+
+### Editor workflow
+
+#### New APIs
+
+| API Name             | Description                                                      |
+|----------------------|------------------------------------------------------------------|
+| `CCEverywhere.editor.create`             | Initiates a workflow using a blank canvas                        |
+| `CCEverywhere.editor.createWithAsset`    | Allows an image asset to be preloaded onto the canvas.           |
+| `CCEverywhere.editor.createWithTemplate` | Enables starting with a given Adobe Express template ID.         |
+| `CCEverywhere.editor.edit`               | Allows modification using an existing Adobe Express Document ID. |
+
+#### Deprecated APIs
+
+- [createDesign](../../v3/reference/CCEverywhere/create_design/)
+- [editDesign](../../v3/reference/CCEverywhere/edit_design/)
+
+### Quick action workflow
+
+#### New APIs
+
+| API Name                                 | Description                            |
+|------------------------------------------|----------------------------------------|
+| `CCEverywhere.quickAction.convertToJPEG` | Convert an image asset to JPEG format. |
+| `CCEverywhere.quickAction.convertToPNG`  | Convert an image asset to PNG format.  |
+| ... so on                                |                                        |
+
+#### Deprecated API
+
+[openQuickAction](../../v3/reference/CCEverywhere/quick_actions/index.md) has been replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
+
+## Workflow API enhancements
 
 For all the workflow APIs, we will now have four parameters.
 
@@ -58,29 +94,25 @@ The four parameters are:
 - `ExportConfig` - properties that govern the export behaviour of a workflow.
 - `ContainerConfig` - UI properties that customize the SDK container.
 
-The following diagram shows how the previous API relates to the current new APIs:
-
-![V3 V4 comparison](./img/v3-v4.png)
-
-### Editor Workflow API example
+**Editor Workflow API example**
 
 **V3**: `ccEverywhere.createDesign(inputParams);`
 
 **V4**: `ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
 
-## Step-by-Step Migration
+## Step-by-Step migration
 
-### 1. Update SDK Version
+### 1. Update SDK version
 
 Use this link to get the latest version: [https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js](https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js). You can check it directly in the JavaScript file.
 
 ![version](./img/version.png)
 
-### 2. Update Initialization Code
+### 2. Update initialization code
 
 Update your initialization code to use the new configuration parameters.
 
-Notable Changes to Parameters at Initialize Level:
+**Notable changes to parameters at Initialize level:**
 
 - Host Info
 - Config Params: Login Mode has moved from `configParams` to `AuthInfo` / `AuthProvider`.
@@ -106,7 +138,7 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEvery
 initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, authOption?: AuthOption) => Promise<CCEverywhere>); terminate: (() => boolean)
 ```
 
-### 3. Adjust API Calls
+### 3. Adjust API calls
 
 Review and update your API calls to match the new method signatures and parameters in V4.
 
@@ -138,9 +170,9 @@ Here are some specific tests you can perform:
 - Validate that the editor sets the default category, search text, template type, and titles correctly.
 - Ensure that export options, multi-page settings, allowed file types, and image quality settings are applied properly.
 
-#### Quick Action API tests
+#### Quick action API tests
 
-- Test various Quick Action APIs such as image and video editing.
+- Test various Quick action APIs such as image and video editing.
 - Validate that standard inputs for Quick Actions are working correctly.
 - Ensure that API-specific parameters are applied and functioning as expected.
 
@@ -158,7 +190,7 @@ Take advantage of new features introduced in V4. Review the release notes and do
 - New methods and parameters to provide more control over the SDK.
 - Improved performance and security features.
 
-### 7. Update Documentation and Dependencies
+### 7. Update documentation and dependencies
 
 Ensure your internal documentation is updated to reflect the changes made during the migration. Also, update any dependencies interacting with Adobe Express Embed SDK to ensure compatibility. This includes:
 
