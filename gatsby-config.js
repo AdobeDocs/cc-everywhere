@@ -113,6 +113,10 @@ module.exports = {
             title: "V3 to V4 Migration guide",
             path: "/guides/concepts/migration_v3_v4.md",
           },
+          {
+            title: "SDK Sign-in options",
+            path: "/guides/concepts/sdk-sign-in-options.md"
+          }
           // {
           //   title: "UI Customization",
           //   path: "/guides/concepts/customization.md",
