@@ -3,13 +3,29 @@ keywords:
   - Embed FAQ
   - FAQ
   - Frequently Asked Questions
+  - SSO with Adobe Express Embed SDK
+  - Embed Adobe Full Editor
 title: Frequently Asked Questions
 description: This page answers common questions about the Adobe Express Embed SDK.
 contributors:
   - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
 ---
 
 # FAQ
+
+## Questions
+
+- [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
+- [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
+- [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
+- [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
+- [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
+- [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
+- [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
+- [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
+
+## Answers
 
 ### Do you have a mobile SDK?
 
@@ -35,3 +51,25 @@ Content publishing: For the same reason above, you have the ability to pre-defin
 ### My user base consists of students/minors. How can I be assured they get appropriate content?
 
 The embedded Adobe Express full editor can be setup to launch student safe content even before a student is signed into the embedded experience. More information about [Adobe & Student Privacy](https://www.adobe.com/privacy/student-policy.html).
+
+### How many domains can be added with a single API key for a service?
+
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services.
+
+### How do I enable SSO for my service?
+
+To enable Single Sign-On (SSO) for your service, when using Adobe express Embed SDK, you need to set it up using the Adobe admin console. 
+
+Learn to use the Adobe Admin Console to set up [Single Sign-On (SSO)](https://helpx.adobe.com/in/enterprise/using/sso-overview.html) with your Identity provider and troubleshoot setup-related problems.
+
+### Would Adobe need to approve the integrations before my users can start using it?
+
+Your users can use the integrations, but, we will display a red banner indicating, `The experience powred by Adobe Express has not been approved yet`. Once we review and approve your app, we will remove this banner. 
+
+### What is the versioning strategy for the SDK?
+
+The SDK follows a continous release model, with newer versions including bug fixes and feature enhancements. We are no longer approving integrations using using SDK V1, V2, or V3.
+
+V1 and V2 are deprecated and V3 will be deprecated in 2024.
+
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../concepts/migration_v3_v4.md) to help you with the transition.
