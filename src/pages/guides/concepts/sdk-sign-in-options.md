@@ -2,7 +2,7 @@
 
 This guide describes the various Sign-in Options supported by Embed SDK including what is currently supported and what is desired and what are the gaps to achieve the desire.
 
-## Currently Supported Options
+## Current supported options
 
 Embed SDK Currently supports following Sign-in options:
 
