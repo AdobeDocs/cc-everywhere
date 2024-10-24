@@ -54,7 +54,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 ### How many domains can be added with a single API key for a service?
 
-You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services.
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter multiple subdomains (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
 
 ### How do I enable SSO for my service?
 
@@ -64,7 +64,7 @@ Learn to use the Adobe Admin Console to set up [Single Sign-On (SSO)](https://he
 
 ### Would Adobe need to approve the integrations before my users can start using it?
 
-Your users can use the integrations, but, we will display a red banner indicating, `The experience powred by Adobe Express has not been approved yet`. Once we review and approve your app, we will remove this banner. 
+Your users can use the integrations, but, we will display a red banner indicating, `The experience powered by Adobe Express has not been approved yet`. Once we review and approve your app, we will remove this banner. 
 
 ### What is the versioning strategy for the SDK?
 
