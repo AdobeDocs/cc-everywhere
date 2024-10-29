@@ -1,19 +1,32 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embedded editor documentation
-  - JavaScript library
-  - Adobe Express
-  - Embed SDK
-  - Quick Actions
-  - Developer journey
-  - Adobe express SDK embed documentation
-  - Fast photo editing
-  - Video editing SDK
-  - AI image generation
-  - Embed mini-editing SDK
-  - Embed SDK modules
+- Adobe Express Embed SDK
+- online design tools
+- photo editing features
+- video editing options
+- AI-powered content generation
+- embed Adobe Express
+- professional design capabilities
+- customizable templates
+- stock photos
+- AI-powered image generation
+- project management
+- quick actions
+- media edits
+- resizing tools
+- cropping tools
+- trimming tools
+- background removal
+- file compression
+- export options
+- focused editing experiences
+- generate image
+- edit image
+- developer journey
+- API key
+- code sample
+- demo app
+- integration review
 title: Overview
 description: This is the documentation for Adobe Express Embed SDK
 contributors:
@@ -22,17 +35,15 @@ contributors:
 ---
 <Hero slots="heading, text" background="rgb(138, 43, 226)"/>
 
-#  Overview
+# Overview
 
-Seamlessly embed Adobe Express on your website
+Seamlessly embed Adobe Express on your website with our SDK
 
-<AnnouncementBlock slots="heading, text, button" />
+<AnnouncementBlock slots="text, button"/>
 
-## Try out our Demo App
+Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
 
-Experience the power of Adobe Express Embed SDK- try our demo app and see seamless integration in action!
-
-[Demo App](https://demo.expressembed.com/).
+[Try our demo app](https://demo.expressembed.com/)
 
 ## Adobe Express Embed SDK
 
@@ -40,42 +51,42 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 
 ## Explore our tools
 
-- Full Editor: Let users access the complete Adobe Express editor with thousands of templates and assets.
-- Quick Actions: Add fast, ready-to-use tools for resizing, cropping, trimming, and background removal.
-- Modules: Enable focused editing experiences, such as AI-powered image generation and enhancements.
+- **Full editor**: Access the complete Adobe Express editor with thousands of templates and assets.
+- **Quick actions**: Use ready-to-use tools for resizing, cropping, trimming, and background removal.
+- **Modules**: Enable focused editing experiences, such as AI-powered image generation and enhancements.
 
-### Full Editor: Design without limits
+### Full editor: Design without limits
 
-[Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, Adobe Express users can create standout content from wherever they work. The SDK lets you embed the full Adobe Express editor on your own website. Whether they need to create logos, banners, flyers, or other marketing assets, the full editor empowers them with:
+[Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates and assets for social media content, logos, and more. Even without design experience, users can create standout content from anywhere. The SDK lets you embed the full Adobe Express editor on your website. Whether creating logos, banners, flyers, or other marketing assets, the full editor empowers users with:
 
-- Thousands of customizable templates for every occasion.
-- Access to Adobe’s stock photos and design elements for professional-quality projects.
-- AI-powered image generation features for generating visuals on the spot.
-- Flexible project management options to save designs within your platform for future use or download.
+- Thousands of customizable templates.
+- Access to Adobe’s stock photos and design elements.
+- AI-powered image generation features.
+- Flexible project management options to save designs within your platform or download them.
 
-### Quick Actions: Fast media edits
+### Quick actions: Fast media edits
 
-[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your own website with just a few lines of code. Ideal for users who need quick touch-ups or adjustments for social media and marketing content, these tools include:
+[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your website with just a few lines of code. Ideal for quick touch-ups or adjustments for social media and marketing content, these tools include:
 
-- Resizing, cropping, and trimming tools to fine-tune media effortlessly.
-- Background removal and file compression to streamline visuals.
-- Customizable export options so users can download content, save it to your app, or continue editing with the full editor.
+- Resizing, cropping, and trimming tools.
+- Background removal and file compression.
+- Customizable export options to download content, save it to your app, or continue editing with the full editor.
 
 ### Modules: Focused editing experiences
 
-[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. They are perfect for users needing a focused creative experience without loading the full editor.
+[Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
 
 Available modules:
 
-- Generate Image: AI-powered tools to create unique visuals instantly.
-- Edit Image: Tools for photo retouching, applying filters, and adjusting backgrounds.
+- Generate image: AI-powered tools to create unique visuals instantly.
+- Edit image: Tools for photo retouching, applying filters, and adjusting backgrounds.
 
 ## Developer journey
 
-1. Get an API Key. Refer to the [quickstart](./quickstart/index.md) guide for these steps.
-2. Use this documentation, [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample/sample.md) and [demo app](https://demo.expressembed.com/) code snippets to help you get started with development.
-3. Submit your integration for [review](./review/index.md) by Adobe.
-4. Once approved, share the integration publicly with your users!
+1. **Get an API key**: Refer to the [quickstart](./quickstart/index.md) guide.
+2. **Use documentation**: Utilize our [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample/sample.md) and [demo app](https://demo.expressembed.com/) code snippets.
+3. **Submit for review**: Submit your integration for [review](./review/index.md) by Adobe.
+4. **Share publicly**: Once approved, share the integration with your users!
 
 ## Additional resources
 
