@@ -13,3 +13,5 @@
 | `editorTitle?` | `string` | Property to configure the title | - |
 | `promptText?` | `string` | - | - |
 | `imageDimensions?` | [`ImageDimensions`](../../../Asset.types/type-aliases/ImageDimensions.md) | The dimensions of the image that the user can generate. If provided, the user will be restricted to generating images of the specified dimensions. | - |
+| `imageStyleReference?` | [`Asset`](../../../Asset.types/type-aliases/Asset.md) | Asset to be passed as style reference for generating images | - |
+| `imageCompositionReference?` | [`Asset`](../../../Asset.types/type-aliases/Asset.md) | Asset to be passed as composition reference for generating images | - |

@@ -732,6 +732,18 @@ BRIDGE: object;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.ACROBAT\_EXT
+
+```ts
+ACROBAT_EXT: object;
+```
+
+### CLIENTS.ACROBAT\_EXT.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
 ### CLIENTS.TEST\_APP
 
 ```ts
