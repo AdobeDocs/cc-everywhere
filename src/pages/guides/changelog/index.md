@@ -22,9 +22,9 @@ contributors:
 - [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
 - [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
 
-### Added
+<!-- ### Added
 
-- Support for Safari on iOS. The SDK will no longer throw an unsupported error when accessed via Safari on iOS.
+- Support for Safari on iOS. The SDK will no longer throw an unsupported error when accessed via Safari on iOS. -->
 
 ### Bug Fixes
 
