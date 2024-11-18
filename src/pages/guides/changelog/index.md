@@ -28,7 +28,7 @@ contributors:
 
 ### Bug Fixes
 
-- Animate from Audio Iframe was not allowing microphone access.
+- Video Quick Action: Animate from Audio Iframe was not allowing microphone access.
 
 ## [4.15.19] - 2024-10-09
 
