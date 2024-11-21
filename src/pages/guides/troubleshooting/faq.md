@@ -58,13 +58,13 @@ You can add upto five domains with a single API key. Additionally, there is no l
 
 ### How do I enable SSO for my service?
 
-To enable Single Sign-On (SSO) for your service, when using Adobe express Embed SDK, you need to set it up using the Adobe admin console. 
+To enable Single Sign-On (SSO) for your service, when using Adobe express Embed SDK, you need to set it up using the Adobe admin console.
 
 Learn to use the Adobe Admin Console to set up [Single Sign-On (SSO)](https://helpx.adobe.com/in/enterprise/using/sso-overview.html) with your Identity provider and troubleshoot setup-related problems.
 
 ### Would Adobe need to approve the integrations before my users can start using it?
 
-Your users can use the integrations, but, we will display a red banner indicating, `The experience powered by Adobe Express has not been approved yet`. Once we review and approve your app, we will remove this banner. 
+Your users can use the integrations, but, we will display a red banner indicating, `The experience powered by Adobe Express has not been approved yet`. Once we review and approve your app, we will remove this banner.
 
 ### What is the versioning strategy for the SDK?
 

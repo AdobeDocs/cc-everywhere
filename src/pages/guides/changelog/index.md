@@ -15,6 +15,21 @@ contributors:
 
 # Changelog
 
+## [4.16.11] - 2024-11-18
+
+### Enhancements
+
+- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
+
+<!-- ### Added
+
+- Support for Safari on iOS. The SDK will no longer throw an unsupported error when accessed via Safari on iOS. -->
+
+### Bug Fixes
+
+- Video Quick Action: Animate from Audio Iframe was not allowing microphone access.
+
 ## [4.15.19] - 2024-10-09
 
 ### Enhancements
