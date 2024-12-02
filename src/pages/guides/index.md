@@ -55,6 +55,8 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 - **Quick actions**: Use ready-to-use tools for resizing, cropping, trimming, and background removal.
 - **Modules**: Enable focused editing experiences, such as AI-powered image generation and enhancements.
 
+![Overview illustration](./images/overview_illustration.png
+
 ### Full editor: Design without limits
 
 [Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates and assets for social media content, logos, and more. Even without design experience, users can create standout content from anywhere. The SDK lets you embed the full Adobe Express editor on your website. Whether creating logos, banners, flyers, or other marketing assets, the full editor empowers users with:
@@ -66,7 +68,7 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 
 ### Quick actions: Fast media edits
 
-[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your website with just a few lines of code. Ideal for quick touch-ups or adjustments for social media and marketing content, these tools include:
+[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This API lets you embed quick actions on your website with just a few lines of code. Ideal for quick touch-ups or adjustments for social media and marketing content, these tools include:
 
 - Resizing, cropping, and trimming tools.
 - Background removal and file compression.
