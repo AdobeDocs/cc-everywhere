@@ -35,7 +35,7 @@ contributors:
 ---
 <Hero slots="heading, text" background="rgb(138, 43, 226)"/>
 
-# Overview
+# Adobe Express Embed SDK
 
 Seamlessly embed Adobe Express on your website with our SDK
 
@@ -45,26 +45,17 @@ Experience the power of Adobe Express Embed SDK. Try our demo app and see seamle
 
 [Try our demo app](https://demo.expressembed.com/)
 
-## Adobe Express Embed SDK
+## Overview
 
 The Adobe Express Embed SDK lets you integrate powerful online design tools, photo editing features, video editing options, and AI-powered content generation into your platform. With just a few lines of code, you can embed Adobe Express editor tools and provide your users with seamless access to professional design capabilities.
 
 ## Explore our tools
 
-- **Full editor**: Access the complete Adobe Express editor with thousands of templates and assets.
 - **Quick actions**: Use ready-to-use tools for resizing, cropping, trimming, and background removal.
 - **Modules**: Enable focused editing experiences, such as AI-powered image generation and enhancements.
+- **Full editor**: Access the complete Adobe Express editor with thousands of templates and assets.
 
-![Overview illustration](./images/overview_illustration.png
-
-### Full editor: Design without limits
-
-[Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates and assets for social media content, logos, and more. Even without design experience, users can create standout content from anywhere. The SDK lets you embed the full Adobe Express editor on your website. Whether creating logos, banners, flyers, or other marketing assets, the full editor empowers users with:
-
-- Thousands of customizable templates.
-- Access to Adobe’s stock photos and design elements.
-- AI-powered image generation features.
-- Flexible project management options to save designs within your platform or download them.
+![Overview illustration](./images/overview_illustration.png)
 
 ### Quick actions: Fast media edits
 
@@ -80,8 +71,17 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 
 Available modules:
 
-- Generate image: AI-powered tools to create unique visuals instantly.
 - Edit image: Tools for photo retouching, applying filters, and adjusting backgrounds.
+- Generate image: AI-powered tools to create unique visuals instantly.
+
+### Full editor: Design without limits
+
+[Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates and assets for social media content, logos, and more. Even without design experience, users can create standout content from anywhere. The SDK lets you embed the full Adobe Express editor on your website. Whether creating logos, banners, flyers, or other marketing assets, the full editor empowers users with:
+
+- Thousands of customizable templates.
+- Access to Adobe’s stock photos and design elements.
+- AI-powered image generation features.
+- Flexible project management options to save designs within your platform or download them.
 
 ## Developer journey
 
