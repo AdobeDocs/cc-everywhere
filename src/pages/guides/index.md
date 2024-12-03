@@ -39,7 +39,9 @@ contributors:
 
 Seamlessly embed Adobe Express on your website with our SDK
 
-<AnnouncementBlock slots="text, button"/>
+<AnnouncementBlock slots="heading, text, button"/>
+
+### Demo App
 
 Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
 
