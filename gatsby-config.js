@@ -117,10 +117,10 @@ module.exports = {
           //   title: "UI Customization",
           //   path: "/guides/concepts/customization.md",
           // },
-          // {
-          //   title: "Error Handling",
-          //   path: "/guides/concepts/error-handling.md",
-          // },
+         {
+         title: "Error Handling",
+          path: "/guides/concepts/error-handling.md",
+          },
         ],
       },
       {
