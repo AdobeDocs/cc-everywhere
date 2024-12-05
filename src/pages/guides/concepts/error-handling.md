@@ -44,7 +44,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If an API call requires a specific parameter format and the provided parameter does not meet this format, the application should display an error message like, "Invalid parameters. Please check the documentation for the correct format."
 
-### INVALID_TOKEN
+### INVALID_TOKEN NA 1P
 
 **Meaning**: ErrorMessage: INVALID_TOKEN: The validity of the token has expired. BAD_SIGNATURE: Token is manipulated.
 
@@ -54,7 +54,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If the token has expired or is manipulated, the application should request a new token. A message such as, "Invalid token. Please refresh the page or log in again," can help the user understand the need to obtain a new token.
 
-### VALIDATE_TOKEN_FAILED
+### VALIDATE_TOKEN_FAILED - NA 1P
 
 **Meaning**: The API to validate the token failed.
 
@@ -64,7 +64,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If token validation fails, the application might display a message like, "Token validation failed. Please try again later." This indicates that the issue might be temporary and could be resolved with a retry.
 
-### USER_ID_MISMATCH
+### USER_ID_MISMATCH needs to confirm
 
 **Meaning**: Occurs when the user ID does not match the expected value.
 
@@ -78,7 +78,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Meaning**: The user's session has timed out in the target app. OR SSO couldn’t be performed successfully due to the absence of some information required by the target app. (like DOB, TOU etc.)
 
-**Action for host**: If subError is NOT received, a valid token must be passed. If subError is received, follow the instructions provided in the error message, which may include visiting a URI to complete the user profile.
+**Action for host**: NA
 
 **User Experience/Recoverability**: Recoverable
 
@@ -86,7 +86,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 ### ACCESS_DENIED
 
-**Meaning**: The user does not have the necessary permissions to access the resource.
+**Meaning**: The user does not have the necessary permissions to access the resource or in case of unsupported browser.
 
 **Action for host**: Verify and grant the necessary permissions to the user.
 
@@ -104,7 +104,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If an application fails to load due to an internal error, the application should display a message like, "An error occurred in the target application. Please try again later."
 
-### JSON_STRINGIFY_ERROR
+### JSON_STRINGIFY_ERROR NA
 
 **Meaning**: An error occurred while converting an object to a JSON string, often due to circular references.
 
@@ -114,7 +114,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If an object contains circular references, the application should handle the error and provide a message like, "An error occurred while processing your request. Please try again."
 
-### JSON_PARSE_ERROR
+### JSON_PARSE_ERROR NA
 
 **Meaning**: An error occurred while parsing a JSON string, often due to invalid JSON syntax.
 
@@ -124,7 +124,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If a JSON string is invalid, the application should handle the error and provide a message like, "An error occurred while processing your request. Please ensure the data is correctly formatted."
 
-### ERROR_STACK_NOT_AVAILABLE
+### ERROR_STACK_NOT_AVAILABLE NA
 
 **Meaning**: The error stack trace is not available.
 
@@ -134,7 +134,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If an error occurs and the stack trace is not available, the application should log the error and provide a message like, "An unexpected error occurred. Please contact support."
 
-### GET_TOKEN_TIMEOUT
+### GET_TOKEN_TIMEOUT NA
 
 **Meaning**: The request to get a token timed out.
 
@@ -144,7 +144,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If a token request times out, the application should retry the request and provide a message like, "Request timed out. Retrying..."
 
-### TOKEN_NOT_RECEIVED
+### TOKEN_NOT_RECEIVED NA
 
 **Meaning**: The token was not received.
 
@@ -154,17 +154,17 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If a token is not received, the application should retry the request and provide a message like, "Token not received. Retrying..."
 
-### PARAMS_REQUEST_TIMEOUT
+### PARAMS_REQUEST_TIMEOUT NA
 
 **Meaning**: The request for parameters timed out.
 
-**Action for host**: Retry the request or increase the timeout duration.
+**Action for host**: Retry the request.
 
 **User Experience/Recoverability**: Recoverable
 
-**Example**: If a parameter request times out, the application should retry the request and provide a message like, "Request timed out. Retrying..."
+**Example**: If a parameter request times out, the application should retry the request and provide a message like, "Request timed out. Retrying..." default 90 seconds.
 
-### PARAMS_REQUEST_FAILED
+### PARAMS_REQUEST_FAILED NA
 
 **Meaning**: The request for parameters failed.
 
@@ -174,7 +174,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If a parameter request fails, the application should retry the request and provide a message like, "Request failed. Retrying..."
 
-### REQUIRED_SCOPE_NOT_AVAILABLE
+### REQUIRED_SCOPE_NOT_AVAILABLE NA not for 3P
 
 **Meaning**: The required scope is not available.
 
@@ -188,9 +188,9 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Meaning**: An assertion failed.
 
-**Action for host**: Investigate the specific assertion that failed and resolve the issue.
+**Action for host**: NA
 
-**User Experience/Recoverability**: Depends on the specific error
+**User Experience/Recoverability**: Depends on the specific error.
 
 **Example**: If an assertion fails, the application should log the error and provide a message like, "An unexpected error occurred. Please contact support."
 
@@ -214,7 +214,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: For a generic error, the application should provide a message that includes the subError details if available. For instance, "An unexpected error occurred. Please contact support with the following error code: [subError]."
 
-### CLIENT_ID_MISMATCH
+### CLIENT_ID_MISMATCH not for 3P
 
 **Meaning**: The client ID does not match the expected value.
 
@@ -224,7 +224,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If a client ID mismatch occurs, the application should prompt, "Client ID mismatch. Please verify your client ID and try again."
 
-### IMS_JUMP_CONSUMPTION_ERROR
+### IMS_JUMP_CONSUMPTION_ERROR not for 3P
 
 **Meaning**: An error occurred during IMS jump consumption.
 
@@ -234,7 +234,7 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **Example**: If an IMS jump consumption error occurs, the application should log the error and provide a message like, "An error occurred during IMS jump consumption. Please try again later."
 
-### SCRIPT_LOAD_ERROR
+### SCRIPT_LOAD_ERROR NA if developed a plugin
 
 **Meaning**: An error occurred while loading a script.
 
@@ -252,9 +252,9 @@ The primary goal of this guide is to outline best practices for identifying, man
 
 **User Experience/Recoverability**: Recoverable
 
-**Example**: If an SDK initialization error occurs, the application should retry initializing the SDK and provide a message like, "Error initializing SDK. Retrying..."
+**Example**: NA
 
-### HOST_APP_NOT_FOUND
+### HOST_APP_NOT_FOUND NA
 
 **Meaning**: The host application was not found.
 
