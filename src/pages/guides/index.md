@@ -82,7 +82,7 @@ Explore our tools:
 - Background removal and file compression.
 - Customizable export options to download content, save it to your app, or continue editing with the full editor.
 
-### Modules: Focused Editing Experiences 
+### Modules: Focused Editing Experiences
 
 [Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
 
