@@ -1,57 +1,134 @@
 ---
 keywords:
-  - Express Embed SDK
-  - Express Editor
-  - Embedded editor documentation
-  - JavaScript library
-  - Adobe Express
-  - Embed SDK
-  - Quick Actions
-  - Developer journey
+- Adobe Express Embed SDK
+- online design tools
+- photo editing features
+- video editing options
+- AI-powered content generation
+- embed Adobe Express
+- professional design capabilities
+- customizable templates
+- stock photos
+- AI-powered image generation
+- project management
+- quick actions
+- media edits
+- resizing tools
+- cropping tools
+- trimming tools
+- background removal
+- file compression
+- export options
+- focused editing experiences
+- generate image
+- edit image
+- developer journey
+- API key
+- code sample
+- demo app
+- integration review
 title: Overview
 description: This is the documentation for Adobe Express Embed SDK
 contributors:
+  - https://github.com/nimithajalal
   - https://github.com/amandahuarng
 ---
 <Hero slots="heading, text" background="rgb(138, 43, 226)"/>
 
-# Overview
+# Adobe Express Embed SDK
 
-Adobe Express Embed SDK is an easy-to-integrate, customizable, all-in-one JavaScript library that brings Adobe Express capabilities to web applications.
+Seamlessly embed Adobe Express on your website with our SDK.
 
-## Adobe Express Embed SDK
+<AnnouncementBlock slots="heading, text, button"/>
 
-Adobe Express Embed SDK lets you embed Adobe Express editing capabilities on your own website. This documentation provides all the materials you need to get started with the SDK. Try them now in our [demo app](https://demo.expressembed.com/).
+### Demo App
 
-### What is the full editor?
+Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
 
-[Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates, plus assets for social media content, logos, and more. Even without any design experience, Adobe Express users can create standout content from wherever they work. The SDK lets you embed the full Adobe Express editor on your own website. Users can create within the editor as they would in Adobe Express, with access to thousands of templates and powerful features like text-to-image. Any projects can be saved to your application for other tasks.
+[Try our demo app](https://demo.expressembed.com/)
 
-### What are quick actions?
+## Overview
 
-[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This SDK lets you embed quick actions on your own website with just a few lines of code. You can configure what export options are surfaced to your users once they are done with editing tasks (i.e. download, save back to app, edit in an embedded Adobe Express editor).
+The Adobe Express Embed SDK lets you integrate powerful online design tools, photo editing features, video editing options, and AI-powered content generation into your platform.
 
-### What are modules?
+## Why Choose Adobe Express Embed SDK?
 
-[Modules](../guides/modules/index.md) are contained mini-editing experiences that you can surface to your users. The modules available at this time are **Generate Image** and **Edit Image**.
+With just a few lines of code, you can embed [Adobe Express editor](https://www.adobe.com/in/express/) tools and provide your users with seamless access to professional design capabilities.
 
-## Getting Started
+## First Steps
 
-<DiscoverBlock slots="link, text"/>
+To quickly integrate the Adobe Express Embed SDK, follow these initial steps:
 
-[Quickstart](./quickstart/index.md)
+- **Quickstart Guide**: Begin with the [Quickstart guide](./quickstart/index.md) for a streamlined integration process.
+- **Demo App**: Explore the [Demo App](https://demo.expressembed.com/) to see example integrations in action.
+- **Sample Code**: Check out the [Sample Code](https://github.com/AdobeDocs/cc-everywhere/blob/main/v4-sample/sample.md) for integrating the V4 SDK into your project.
+- **Community Support**: If you have any questions, post them in the [community](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all) for assistance.
 
-Read our quickstart to begin integrating with the Adobe Express Embed SDK.
+## What Can Adobe Express Embed SDK Do?
 
-<DiscoverBlock slots="link, text"/>
+Explore our tools:
 
-[Community forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all)
+- **Quick Actions**: Use ready-to-use tools for resizing, cropping, trimming, and background removal.
+- **Modules**: Enable focused editing experiences, such as AI-powered image generation and enhancements.
+- **Full Editor**: Access the complete Adobe Express editor with thousands of templates and assets.
 
-Follow to get announcements, debug issues, and submit feature requests.
+![Overview illustration](./images/overview_illustration.png)
+
+### Quick actions: Edit with One click
+
+[Quick actions](https://www.adobe.com/express/feature/quick-actions) are fast editing tools for images and videos. This API lets you embed quick actions on your website with just a few lines of code. Ideal for quick touch-ups or adjustments for social media and marketing content, these tools include:
+
+- Resizing, cropping, and trimming tools.
+- Background removal and file compression.
+- Customizable export options to download content, save it to your app, or continue editing with the full editor.
+
+### Modules: Focused Editing Experiences
+
+[Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
+
+**Available modules:**
+
+- Edit image: Tools for photo retouching, applying filters, and adjusting backgrounds.
+- Generate image: AI-powered tools to create unique visuals instantly.
+
+### Full Editor: Get Started in the All-in-One Editor
+
+[Adobe Express](https://adobe.com/express) makes it easy to create with thousands of beautiful templates and assets for social media content, logos, and more. Even without design experience, users can create standout content from anywhere. The SDK lets you embed the full Adobe Express editor on your website. Whether creating logos, banners, flyers, or other marketing assets, the full editor empowers users with:
+
+- Thousands of customizable templates.
+- Access to Adobe’s stock photos and design elements.
+- AI-powered image generation features.
+- Flexible project management options to save designs within your platform or download them.
 
 ## Developer Journey
 
-1. Create a project in [Adobe Developer Console](https://adobe.io/console). Refer to the [quickstart](./quickstart/index.md) guide for these steps.
-2. Use this documentation, [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample/sample.md) and [demo app](https://demo.expressembed.com/) code snippets to help you get started with development.
-3. Submit your integration for [review](./review/index.md) by Adobe.
-4. Once approved, share the integration publicly with your users!
+1. **Get an API key**: Refer to the [quickstart](./quickstart/index.md) guide.
+2. **Use documentation**: Utilize our [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample/sample.md) and [demo app](https://demo.expressembed.com/) code snippets.
+3. **Submit for review**: Submit your integration for [review](./review/index.md) by Adobe.
+4. **Share publicly**: Once approved, share the integration with your users!
+
+## Additional resources
+
+<DiscoverBlock slots="link, text"/>
+
+[Quickstart Guide](../guides/quickstart/)
+
+Learn how to get started with the Adobe Express Embed SDK.
+
+<DiscoverBlock slots="link, text"/>
+
+[Tutorials](..//guides/tutorials/)
+
+Explore the collection of tutorials.
+
+<DiscoverBlock slots="link, text"/>
+
+[Sample Code](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample)
+
+Adobe Express Embed SDK Sample using V4 SDK.
+
+<DiscoverBlock slots="link, text"/>
+
+[Community](https://developer.adobe.com/express/community)
+
+If you need assistance or have questions about the Adobe Express Embed SDK, visit the community section for access to community forums.
