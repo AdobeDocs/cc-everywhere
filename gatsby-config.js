@@ -64,13 +64,13 @@ module.exports = {
     ],
     subPages: [
       {
+          title: "Overview",
+          path: "/guides/",
+      },
+      {
         title: "Getting Started",
-        path: "/guides/",
+        path: "/guides/quickstart/",
         pages: [
-          {
-            title: "Overview",
-            path: "/guides/",
-          },
           {
             title: "Quickstart",
             path: "/guides/quickstart/",
@@ -147,11 +147,11 @@ module.exports = {
       },
       {
         title: "Troubleshooting",
-        path: "/guides/troubleshooting/faq.md",
+        path: "/guides/troubleshooting/faq/",
         pages: [
           {
             title: "FAQ",
-            path: "/guides/troubleshooting/faq.md",
+            path: "/guides/troubleshooting/faq/",
           },
         ],
       },
