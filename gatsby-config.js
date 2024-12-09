@@ -140,6 +140,25 @@ module.exports = {
       {
         title: "Submission and review",
         path: "/guides/review/",
+        pages:
+        [
+          {
+            title: "Submission guidelines",
+            path: "/guides/review/submission_guidelines.md"
+          },
+          {
+            title: "Review process",
+            path: "/guides/review/review_process.md"
+          },
+          {
+            title: " Test cases",
+            path: "/guides/review/test_cases.md"
+          },
+          {
+            title:" Rejection",
+            path: "/guides/review/rejections.md"
+          }
+        ]
       },
       {
         title: "Changelog",
