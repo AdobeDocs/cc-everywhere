@@ -111,13 +111,13 @@ Explore our tools:
 
 <DiscoverBlock slots="link, text"/>
 
-[Quickstart Guide](../guides/quickstart/)
+[Quickstart Guide](./quickstart/)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](..//guides/tutorials/)
+[Tutorials](./tutorials/)
 
 Explore the collection of tutorials.
 
@@ -132,3 +132,9 @@ Adobe Express Embed SDK Sample using V4 SDK.
 [Community](https://developer.adobe.com/express/community)
 
 If you need assistance or have questions about the Adobe Express Embed SDK, visit the community section for access to community forums.
+
+<DiscoverBlock slots="link, text"/>
+
+[Frequently Asked Questions](./troubleshooting/faq/)
+
+Read our FAQ.
