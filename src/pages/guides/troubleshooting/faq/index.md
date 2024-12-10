@@ -16,9 +16,6 @@ contributors:
 
 ## Questions
 
-- [FAQ](#faq)
-  - [Questions](#questions)
-  - [Answers](#answers)
     - [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
     - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
     - [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
