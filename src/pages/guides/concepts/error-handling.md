@@ -54,7 +54,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 **User Experience/Recoverability**: Recoverable
 **Example**: If a user tries to access a restricted area, the application should display, "Access denied. You do not have the necessary permissions to access this resource."
 
-
 ### `TARGET_APP_ERROR`
 
 **Meaning**: An error occurred in the target application.
@@ -69,14 +68,12 @@ The guide provides key components such as Error codes,their meaning,  action for
 **User Experience/Recoverability**: Depends on the specific error.
 **Example**: If an assertion fails, the application should log the error and provide a message like, "An unexpected error occurred. Please contact support."
 
-
 ### `NETWORK_ERROR`
 
 **Meaning**: A network error occurred.
 **Action for host**: Ensure the network connection is stable and retry the request.
 **User Experience/Recoverability**: Recoverable
 **Example**: If a network error occurs, the application should retry the request and provide a message like, "Network error. Retrying..."
-
 
 ### `GENERIC_ERROR`
 
