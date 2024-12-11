@@ -40,7 +40,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 **User Experience/Recoverability**: NA
 **Example**: If an API call requires a specific parameter format and the provided parameter does not meet this format, the application should display an error message like, "Invalid parameters."
 
-### `USER_ID_MISMATCH needs to confirm`
+### `USER_ID_MISMATCH`
 
 **Meaning**: Occurs when the user ID does not match the expected value.
 **Action for host**: Ensure the user ID being used is correct and matches the expected value.
