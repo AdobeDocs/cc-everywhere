@@ -21,6 +21,10 @@ Our teams are working on new submissions every day. Depending on volume, it can 
 
 If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
 
+## Submit for review
+
+Once you think you're good to go, click the **Submit for Review** button in the [Developer console](https://developer.adobe.com/console).
+
 ### Initial review
 
 Adobe’s team will perform an initial review, focusing on technical correctness, design, and user experience. This process may take up to 10 business days.

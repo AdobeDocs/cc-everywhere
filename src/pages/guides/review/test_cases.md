@@ -102,9 +102,7 @@ This guide is designed to help you systematically review and verify all critical
 - [ ] Custom buttons behave as defined.
   - **Example**: Confirm that custom buttons like "Save to Cloud" function as defined.
 
-Once you think you're good to go, click the **Submit for Review** button in the [Developer console](https://developer.adobe.com/console).
-
 ## Next Steps
 
-Checkout our [review process](./review_process.md).
+Checkout our [review process](./review_process.md) to get your integration into the hands of your users.
 

@@ -80,4 +80,4 @@ We look forward to seeing your creative solutions!
 
 ## Next steps
 
-Checkout the [submission guidelines](./submission_guidelines.md) before you submit your integration for approval.
+Checkout the [submission guidelines](./submission_guidelines.md) to submit your integration for approval.
