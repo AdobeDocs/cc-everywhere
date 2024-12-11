@@ -17,19 +17,21 @@ This guides helps you review the test cases before you submit your integration f
 
 ## Review Test Cases
 
-This guide is designed to help you systematically review and verify all critical aspects of your integration before submitting it for approval. By following this test cases checklist, you can ensure that your integration meets Adobe's brand guidelines, functions as advertised, and provides a seamless user experience. Each step includes specific examples to help you understand and apply the requirements effectively. Let's get started on making your integration the best it can be!
+This guide is designed to help you systematically review and verify all critical aspects of your integration before submitting it for approval.
+
+ Let's get started on making your integration the best it can be!
 
 ### Public Profile Content
 
 - [ ] Name adheres to Adobe brand guidelines.
-  - **Example**: Ensure the public profile name is "Adobe Creative Suite" and not "Adobe123".
+  - **Example**: Ensure the public profile name is "ABCCompany" and not "ABC123".
 - [ ] Logo does not include Adobe icons or dummy icons.
   - **Example**: Verify that the public profile logo is a custom design and does not include Adobe's official logo or placeholder icons.
 
 ### App Description
 
 - [ ] Description is well-formatted and not garbled.
-  - **Example**: Confirm the app description is formatted correctly and does not display as "�Adobe Integration�".
+  - **Example**: Confirm the app description is formatted correctly and does not display as "�ABC Integration�".
 - [ ] Clearly conveys the integration's functionality.
   - **Example**: Ensure the app description clearly states, "This integration allows users to edit photos directly within Adobe Express."
 
@@ -99,3 +101,10 @@ This guide is designed to help you systematically review and verify all critical
   - **Example**: Ensure the export buttons appear as described in the "Notes for reviewers" section, such as "Export to PNG" and "Export to JPEG".
 - [ ] Custom buttons behave as defined.
   - **Example**: Confirm that custom buttons like "Save to Cloud" function as defined.
+
+Once you think you're good to go, click the **Submit for Review** button in the [Developer console](https://developer.adobe.com/console).
+
+## Next Steps
+
+Checkout our [review process](./review_process.md).
+

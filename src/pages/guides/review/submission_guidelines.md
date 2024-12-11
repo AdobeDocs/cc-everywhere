@@ -13,7 +13,7 @@ contributors:
 
 # Overview
 
-This section provides a set of guideslines to help you in submitting your integrtion for review.
+This section provides a set of guidelines to help you in submitting your integrtion for review.
 
 ## Submission guidelines
 
@@ -50,6 +50,8 @@ These details will appear on the consent screen that users will view when signin
 
 If your app processes personal information, include a link to the privacy policy on your app’s website, per the Adobe Developer Agreement.
 
+This is not a mandatory step.
+
 ### 3. Details for approval
 
 Describe what your app does, to help Adobe review it for approval.
@@ -71,3 +73,7 @@ Include screenshots that show the full experience of your app or integration, as
 Any usage of [Adobe branding](https://partners.adobe.com/exchangeprogram/creativecloud/marketing/brand-assets.html) must be approved before you submit for approval. These screenshots will only be seen by Adobe during the review process.
 
 Screenshots must be in `JPG` or `PNG` file format, be no larger than `5 MB` and `1360px x 800px` dimensions.
+
+## Next steps
+
+Review the [test cases](./test_cases.md) before you submit your integration for review.

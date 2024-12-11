@@ -17,7 +17,7 @@ Learn how to address common integration rejection reasons with this comprehensiv
 
 ## Overview
 
-Submitting your app for review can be a meticulous process, and it's not uncommon to encounter some hurdles along the way. Understanding the common reasons for rejection and how to address them can significantly improve your chances of getting your app approved. This guide provides a step-by-step approach to help you navigate through the most frequent rejection reasons and ensure your app meets all the necessary criteria.
+Submitting your app for review can be a meticulous process, and it's not uncommon to encounter some hurdles along the way.This guide provides a step-by-step approach to help you navigate through the most frequent rejection reasons and ensure your app meets all the necessary criteria.
 
 ## Step-by-Step Guide for Common Rejection Reasons
 
@@ -31,9 +31,9 @@ Submitting your app for review can be a meticulous process, and it's not uncommo
 
 ### 2. SDK Version
 
-- Verify that your app is built on a supported version of the SDK.
+- Verify that your app is built on V4 SDK version.
 - Note that versions V3 and below are not accepted.
-- **Example**: If your app is using SDK version V3, update it to the latest version, such as V5. Check the SDK documentation for the latest version and update instructions.
+- **Example**: If your app is using SDK version V3, update it to the latest version, such as V4. Check the SDK documentation for [migragtion guide](../concepts/migration_v3_v4.md) from V3 to V4.
 
 ### 3. Website Functionality
 
@@ -73,19 +73,19 @@ Submitting your app for review can be a meticulous process, and it's not uncommo
 
 ### 3. Seek Clarification
 
-- If any feedback is unclear, reach out to the review team for clarification. Understanding their requirements fully can help you make the right adjustments.
+- If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
 
 ### 4. Test Your App
 
 - Before resubmitting, thoroughly test your app to ensure all issues have been resolved. This includes checking functionality, accessibility, and consistency.
 
-### 5. Update Documentation
+### 5. Update Notes to reviewer section
 
-- Make sure all documentation, including the "Notes to reviewer" section, is complete and clear. Provide detailed instructions on how to test your app.
+- Make sure the "Notes to reviewer" section, is complete and clear. Provide detailed instructions on how to test your app.
 
 ### 6. Consult the Guidelines
 
-- Revisit the submission guidelines to ensure your app meets all the requirements. Sometimes, small details can make a big difference.
+- Revisit the [submission guidelines](./submission_guidelines.md) and [test cases](./test_cases.md) to ensure your app meets all the requirements. 
 
 ### 7. Resubmit
 

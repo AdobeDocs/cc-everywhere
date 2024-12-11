@@ -138,24 +138,24 @@ module.exports = {
         ],
       },
       {
-        title: "Submission and review",
+        title: "Integration submission and approval",
         path: "/guides/review/",
         pages:
         [
           {
-            title: "Submission guidelines",
+            title: "Submit yout integration",
             path: "/guides/review/submission_guidelines.md"
           },
           {
-            title: "Review process",
-            path: "/guides/review/review_process.md"
-          },
-          {
-            title: " Test cases",
+            title: "Review test cases",
             path: "/guides/review/test_cases.md"
           },
           {
-            title:" Rejection",
+            title: "Our review process",
+            path: "/guides/review/review_process.md"
+          },
+          {
+            title:" Handle rejections",
             path: "/guides/review/rejections.md"
           }
         ]

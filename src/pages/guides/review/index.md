@@ -18,7 +18,8 @@ Adobe reviews all applications that integrate Adobe Express Embed SDK before ena
 
 ## Overview
 
-This guideline outlines the process for reviewing and submitting an integration using the Adobe Express Embed SDK. Whether you’re embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for users and maintain consistency across all implementations.
+This guideline outlines the process for submitting an integration using the Adobe Express Embed SDK for review.
+Whether you’re embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for your users and maintain consistency across all implementations.
 
 <InlineAlert variant="help" slots="text" />
 
@@ -28,9 +29,9 @@ This process is valuable, as gaining approval enhances the credibility of your i
 
 <InlineAlert slots="text" />
 
-We aim to review your integration within 10 business days of submission, and will let you know if it is accepted, or if any changes need to be made.
+We aim to review your integration within 10 business days of submission, and will let you know if it is accepted, rejected, or if any changes need to be made.
 
-## Review criteria
+## Our review criteria
 
 Our reviewers will assess your submission based on a variety of factors, including:
 
@@ -73,6 +74,10 @@ Additionally, your integration must not violate the trademarks and copyrights of
 
 To learn more, see the [Adobe Creative Cloud Developer Brand Guide](https://partners.adobe.com/content/dam/tep_assets/public/public_1/documents/Adobe-Creative-Cloud-Developer-Brand-Guide.pdf). This guide includes best practices for brand assets in marketing, press releases and social media guidance. It's the best spot to get our most up to date assets. Here you'll also find information for how to publicize and promote your application once it's approved.
 
-During the submission process, we're available to answer any direct questions you may have at CCIntegrationsReview@adobe.com. Please note that this inbox may have delayed responses depending on the number of queries.
+If you have any questions, feel free to contact us at [ccintrev@adobe.com](mailto:ccintrev@adobe.com) or reach out on our [Adobe Express Embed SDK community forum](https://community.adobe.com/t5/express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
 
 We look forward to seeing your creative solutions!
+
+## Next steps
+
+Checkout the [submission guidelines](./submission_guidelines.md) before you submit your integration for approval.
