@@ -10,10 +10,16 @@ keywords:
 title: Changelog
 description: All notable changes are documented in this page.
 contributors:
-  - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
 ---
 
 # Changelog
+
+## 2024-12-12
+
+### Enhancements
+
+Added a comprehensive [error code guide](../concepts/error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
 
 ## [4.16.11] - 2024-11-18
 
