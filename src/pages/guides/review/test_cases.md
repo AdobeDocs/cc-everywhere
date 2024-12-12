@@ -105,4 +105,3 @@ This guide is designed to help you systematically review and verify all critical
 ## Next Steps
 
 Checkout our [review process](./review_process.md) to get your integration into the hands of your users.
-
