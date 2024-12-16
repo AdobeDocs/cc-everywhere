@@ -76,4 +76,4 @@ The SDK follows a continous release model, with newer versions including bug fix
 
 V1 and V2 are deprecated and V3 will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
