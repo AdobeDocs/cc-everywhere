@@ -14,4 +14,5 @@
 | `message` | `string` |
 | `subError?` | `string` \| `number` \| `Error` |
 | `customData?` | `unknown` |
+| `debugId?` | `string` |
 | `stack?` | `string` |

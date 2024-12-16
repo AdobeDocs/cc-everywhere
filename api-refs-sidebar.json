@@ -834,6 +834,10 @@
                     "path": "/v4/shared/src/types/Asset.types/type-aliases/ImageModuleFileTypes.md"
                   },
                   {
+                    "title": "ProcessedImageDimensions",
+                    "path": "/v4/shared/src/types/Asset.types/type-aliases/ProcessedImageDimensions.md"
+                  },
+                  {
                     "title": "UrlAsset",
                     "path": "/v4/shared/src/types/Asset.types/type-aliases/UrlAsset.md"
                   }

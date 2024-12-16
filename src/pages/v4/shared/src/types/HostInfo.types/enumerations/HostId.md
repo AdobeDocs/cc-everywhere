@@ -7,6 +7,7 @@
 | `OTHER` | `"Other"` |
 | `ACROBAT` | `"Acrobat"` |
 | `ACROBAT_EXT` | `"ACROBAT_EXT"` |
+| `ADOBE_HOME` | `"ADOBE_HOME"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
 | `STOCK` | `"STOCK"` |

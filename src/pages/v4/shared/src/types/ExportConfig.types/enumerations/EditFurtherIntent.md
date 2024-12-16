@@ -13,3 +13,5 @@
 | `CROP_IMAGE` | `"crop-image"` |
 | `APPLY_ADJUSTMENT` | `"apply-adjustment"` |
 | `GEN_FILL` | `"gen-fill"` |
+| `REMOVE_OBJECT` | `"remove-object"` |
+| `INSERT_OBJECT` | `"insert-object"` |
