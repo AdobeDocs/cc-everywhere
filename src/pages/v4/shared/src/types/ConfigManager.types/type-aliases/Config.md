@@ -90,6 +90,12 @@ ORIGINAL_PATHNAME: string;
 PLATFORM: string;
 ```
 
+### CLIENTS.CCX.QUERY\_PARAMS.KEYS.BUILD\_TAGS
+
+```ts
+BUILD_TAGS: string;
+```
+
 ### CLIENTS.CCX.EDITOR
 
 ```ts
@@ -739,6 +745,18 @@ ACROBAT_EXT: object;
 ```
 
 ### CLIENTS.ACROBAT\_EXT.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
+### CLIENTS.ADOBE\_HOME
+
+```ts
+ADOBE_HOME: object;
+```
+
+### CLIENTS.ADOBE\_HOME.CLIENT\_ID
 
 ```ts
 CLIENT_ID: string;

@@ -15,11 +15,15 @@ contributors:
 
 # Changelog
 
-## 2024-12-12
+## [4.17.33] 2024-12-16
 
 ### Enhancements
 
 Added a comprehensive [error code guide](../concepts/error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
+
+### Added
+
+- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
 
 ## [4.16.11] - 2024-11-18
 

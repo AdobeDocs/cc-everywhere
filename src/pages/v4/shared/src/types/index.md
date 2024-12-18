@@ -206,6 +206,12 @@ Re-exports [ImageDimensions](Asset.types/type-aliases/ImageDimensions.md)
 
 ***
 
+### ProcessedImageDimensions
+
+Re-exports [ProcessedImageDimensions](Asset.types/type-aliases/ProcessedImageDimensions.md)
+
+***
+
 ### ValidateTokenError
 
 Re-exports [ValidateTokenError](Authentication.types/enumerations/ValidateTokenError.md)
