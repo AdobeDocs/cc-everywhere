@@ -15,6 +15,12 @@ contributors:
 
 # Changelog
 
+## [4.18.14] 2025-01-09
+
+### Added
+
+- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/PublishParams.types/interfaces/TextToImagePublishParams.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
+
 ## [4.17.33] 2024-12-16
 
 ### Enhancements

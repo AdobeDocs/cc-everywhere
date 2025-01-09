@@ -806,6 +806,12 @@ Re-exports [QuickActionPublishParams](PublishParams.types/interfaces/QuickAction
 
 ***
 
+### TextToImagePublishParams
+
+Re-exports [TextToImagePublishParams](PublishParams.types/interfaces/TextToImagePublishParams.md)
+
+***
+
 ### EditorPublishParams
 
 Re-exports [EditorPublishParams](PublishParams.types/interfaces/EditorPublishParams.md)
