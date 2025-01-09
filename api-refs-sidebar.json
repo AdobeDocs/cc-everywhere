@@ -1410,6 +1410,10 @@
                   {
                     "title": "QuickActionPublishParams",
                     "path": "/v4/shared/src/types/PublishParams.types/interfaces/QuickActionPublishParams.md"
+                  },
+                  {
+                    "title": "TextToImagePublishParams",
+                    "path": "/v4/shared/src/types/PublishParams.types/interfaces/TextToImagePublishParams.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/PublishParams.types/interfaces/AssetTargetInfo.md"

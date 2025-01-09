@@ -5,6 +5,7 @@ Asset related information received with onPublish callback.
 ## Extended by
 
 - [`QuickActionPublishParams`](QuickActionPublishParams.md)
+- [`TextToImagePublishParams`](TextToImagePublishParams.md)
 - [`EditorPublishParams`](EditorPublishParams.md)
 
 ## Properties
