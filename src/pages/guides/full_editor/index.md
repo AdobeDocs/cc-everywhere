@@ -29,6 +29,6 @@ Users can access Adobe Express's huge template and asset library when starting t
 
 ## Explore the SDK
 
-If you are more interested in quick editing tools, refer to our quick action [guide](../quick_actions/index.md).
+If you are more interested in quick editing tools, refer to our quick action [guide](../quick-actions/index.md).
 
 If you are more interested in surfacing a contextual editing experience, refer to our modules [guide](../modules/index.md).

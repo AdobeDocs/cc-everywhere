@@ -16,7 +16,7 @@ module.exports = {
     product_name: process.env.GATSBY_PRODUCT_NAME,
     docs: {
       title: "Get credentials",
-      path: "/get-credential/",
+      path: "/get-credential/index.md",
     },
     pages: [
       {
@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         title: "Guides",
-        path: "/guides/",
+        path: "/guides/index.md",
       },
       {
         title: "SDK References",
@@ -33,7 +33,7 @@ module.exports = {
           {
             title: "v4 Reference",
             description: "🟢 Current version",
-            path: "/v4/",
+            path: "/v4/index.md",
           },
           // {
           //   title: "v4 Reference",
@@ -43,17 +43,17 @@ module.exports = {
           {
             title: "v3 Reference",
             description: "🟠 Deprecated soon",
-            path: "/v3/reference/",
+            path: "/v3/reference/index.md",
           },
           {
             title: "v2 Reference",
             description: "🔴 Deprecated",
-            path: "/v2/reference/",
+            path: "/v2/reference/index.md",
           },
           {
             title: "v1 Reference",
             description: "🔴 Deprecated",
-            path: "/v1/reference/",
+            path: "/v1/reference/index.md",
           },
         ],
       },
@@ -65,53 +65,53 @@ module.exports = {
     subPages: [
       {
           title: "Overview",
-          path: "/guides/",
+          path: "/guides/index.md",
       },
       {
         title: "Getting Started",
-        path: "/guides/quickstart/",
+        path: "/guides/quickstart/index.md",
         pages: [
           {
             title: "Quickstart",
-            path: "/guides/quickstart/",
+            path: "/guides/quickstart/index.md",
           },
         ],
       },
       {
         title: "Tools",
-        path: "/guides/full_editor/",
+        path: "/guides/full-editor/index.md",
         pages: [
           {
             title: "Full editor",
-            path: "/guides/full_editor/",
+            path: "/guides/full-editor/index.md",
             pages: [
               {
                 title: "Create new project",
-                path: "/guides/full_editor/create_project/",
+                path: "/guides/full-editor/create-project/index.md",
               },
               {
                 title: "Edit existing project",
-                path: "/guides/full_editor/edit_project/",
+                path: "/guides/full-editor/edit-project/index.md",
               },
             ],
           },
           {
             title: "Modules",
-            path: "/guides/modules/",
+            path: "/guides/modules/index.md",
           },
           {
             title: "Quick actions",
-            path: "/guides/quick_actions/",
+            path: "/guides/quick-actions/index.md",
           },
         ],
       },
       {
         title: "Concepts",
-        path: "/guides/concepts/migration_v3_v4.md",
+        path: "/guides/concepts/migration-v3-v4.md",
         pages: [
           {
             title: "V3 to V4 Migration guide",
-            path: "/guides/concepts/migration_v3_v4.md",
+            path: "/guides/concepts/migration-v3-v4.md",
           },
           // {
           //   title: "UI Customization",
@@ -125,7 +125,7 @@ module.exports = {
       },
       {
         title: "Tutorials",
-        path: "/guides/tutorials/",
+        path: "/guides/tutorials/index.md",
         pages: [
           {
             title: "Embed SDK integration tutorial",
@@ -139,19 +139,19 @@ module.exports = {
       },
       {
         title: "Submission and review",
-        path: "/guides/review/",
+        path: "/guides/review/index.md",
       },
       {
         title: "Changelog",
-        path: "/guides/changelog/",
+        path: "/guides/changelog/index.md",
       },
       {
         title: "Troubleshooting",
-        path: "/guides/troubleshooting/faq/",
+        path: "/guides/troubleshooting/faq/index.md",
         pages: [
           {
             title: "FAQ",
-            path: "/guides/troubleshooting/faq/",
+            path: "/guides/troubleshooting/faq/index.md",
           },
         ],
       },
@@ -161,47 +161,47 @@ module.exports = {
       // },
       {
         title: "v1 Reference",
-        path: "/v1/reference/",
+        path: "/v1/reference/index.md",
         header: true,
         pages: [
           {
             title: "Initialize SDK",
-            path: "/v1/reference/",
+            path: "/v1/reference/index.md",
           },
           {
             title: "Full editor",
-            path: "/v1/reference/full_editor/",
+            path: "/v1/reference/full-editor/index.md",
           },
           {
             title: "Quick actions",
-            path: "/v1/reference/quick_actions/",
+            path: "/v1/reference/quick-actions/index.md",
           },
           {
             title: "Shared types",
-            path: "/v1/reference/shared_types/",
+            path: "/v1/reference/shared-types/index.md",
           },
         ],
       },
       {
         title: "v2 Reference",
-        path: "/v2/reference/",
+        path: "/v2/reference/index.md",
         header: true,
         pages: [
           {
             title: "Initialize SDK",
-            path: "/v2/reference/",
+            path: "/v2/reference/index.md",
           },
           {
             title: "Full editor",
-            path: "/v2/reference/full_editor/",
+            path: "/v2/reference/full-editor/index.md",
           },
           {
             title: "Quick actions",
-            path: "/v2/reference/quick_actions/",
+            path: "/v2/reference/quick-actions/index.md",
           },
           {
             title: "Shared types",
-            path: "/v2/reference/shared_types/",
+            path: "/v2/reference/shared-types/index.md",
           },
         ],
       },
@@ -211,62 +211,62 @@ module.exports = {
       },
       {
         title: "Initialize SDK",
-        path: "/v3/reference/initialize/",
+        path: "/v3/reference/initialize/index.md",
       },
       {
         title: "v3 Reference",
-        path: "/v3/reference/CCEverywhere/",
+        path: "/v3/reference/CCEverywhere/index.md",
         pages: [
           {
             title: "createDesign",
-            path: "/v3/reference/CCEverywhere/create_design/",
+            path: "/v3/reference/CCEverywhere/create-design/index.md",
           },
           {
             title: "editDesign",
-            path: "/v3/reference/CCEverywhere/edit_design/",
+            path: "/v3/reference/CCEverywhere/edit-design/index.md",
           },
           {
             title: "openQuickAction",
-            path: "/v3/reference/CCEverywhere/quick_actions/",
+            path: "/v3/reference/CCEverywhere/quick-actions/index.md",
           },
           {
             title: "close",
-            path: "/v3/reference/CCEverywhere/close/",
+            path: "/v3/reference/CCEverywhere/close/index.md",
           },
           {
             title: "terminate",
-            path: "/v3/reference/CCEverywhere/terminate/",
+            path: "/v3/reference/CCEverywhere/terminate/index.md",
           },
         ],
       },
       {
         title: "Types",
-        path: "/v3/reference/types/",
+        path: "/v3/reference/types/index.md",
       },
       {
         title: "Overview",
-        path: "/reference/",
+        path: "/reference/index.md",
       },
       {
         title: "initialize",
-        path: "/reference/initialize/",
+        path: "/reference/initialize/index.md",
       },
       {
         title: "CCEverywhere",
-        path: "/reference/CCEverywhere/",
+        path: "/reference/CCEverywhere/index.md",
         expanded: "true",
         pages: [
           {
             title: "editor",
-            path: "/reference/CCEverywhere/editor/",
+            path: "/reference/CCEverywhere/editor/index.md",
           },
           {
             title: "quickAction",
-            path: "/reference/CCEverywhere/quickAction/",
+            path: "/reference/CCEverywhere/quickAction/index.md",
           },
           {
             title: "module",
-            path: "/reference/CCEverywhere/miniEditor/",
+            path: "/reference/CCEverywhere/miniEditor/index.md",
           },
           // {
           //   title: 'close',
@@ -280,7 +280,7 @@ module.exports = {
       },
       {
         title: "Types",
-        path: "/reference/types/",
+        path: "/reference/types/index.md",
       },
       {
         title: "Overview",
@@ -288,7 +288,7 @@ module.exports = {
       },
       {
         title: "Entrypoints",
-        path: "/v4/",
+        path: "/v4/index.md",
         header: true,
         pages: [
           {

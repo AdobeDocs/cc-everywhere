@@ -59,7 +59,7 @@ await window.CCEverywhere.initialize(
 
 ### ConfigParams
 
-The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/full_editor/customization/index.md) page for a full locale list.
+The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/full-editor/customization/index.md) page for a full locale list.
 
 | Property | Type | Description
 | :-- | :--| :--
