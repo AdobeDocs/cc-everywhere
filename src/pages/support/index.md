@@ -8,7 +8,7 @@ keywords:
 title: Support - Adobe Express Embed SDK
 description: This is the support page of the Adobe Express Embed SDK
 ---
-<Hero slots="heading, text" background="rgb(138, 43, 226)"/>
+<HeroSimple slots="heading, text" background="rgb(138, 43, 226)"/>
 
 # Developer Support
 

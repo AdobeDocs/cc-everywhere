@@ -33,13 +33,13 @@ contributors:
   - https://github.com/nimithajalal
   - https://github.com/amandahuarng
 ---
-<Hero slots="heading, text" background="rgb(138, 43, 226)"/>
+<HeroSimple slots="heading, text" background="rgb(138, 43, 226)"/>
 
 # Adobe Express Embed SDK
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<AnnouncementBlock slots="heading, text, button"/>
+<Announcement slots="heading, text, button"/>
 
 ### Demo App
 

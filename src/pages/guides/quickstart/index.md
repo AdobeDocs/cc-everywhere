@@ -22,7 +22,6 @@ contributors:
   - https://github.com/nimithajalal
   - https://github.com/undavide
 ---
-import "./styles.css";
 
 # Quickstart Guide
 
@@ -106,7 +105,7 @@ The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK 
 var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js";
 ```
 
-You can check the [changelog](/src/pages/guides/changelog/index.md) to read about known issues as well as what changes have been made.
+You can check the [changelog](../changelog/index.md) to read about known issues as well as what changes have been made.
 
 ### Load via script tag
 
@@ -205,12 +204,12 @@ Once the selected quick action loads in the iframe, users can browse their files
 
 Here are the minimum browser requirements for the SDK:
 
-| Browser name | Minimum version
-| :-- | : --
-| Safari  | 16 and onwards
-| Google Chrome | 100 and onwards
-| Microsoft Edge | 107 and onwards
-| Firefox | 117 and onwards
+| Browser name | Minimum version |
+| :-- | : -- |
+| Safari  | 16 and onwards |
+| Google Chrome | 100 and onwards |
+| Microsoft Edge | 107 and onwards |
+| Firefox | 117 and onwards |
 
 <InlineAlert variant="help" slots="header, text1, text2" />
 
