@@ -187,8 +187,8 @@ Our guides along with the [SDK references](../../reference/index.md) can help yo
 
 With the full editor component, your users are able to:
 
-- How to [create new projects](../../guides/full-editor/create_project/)
-- How to [edit existing projects](../../guides/full-editor/edit_project/)
+- How to [create new projects](../../guides/full-editor/create-project/)
+- How to [edit existing projects](../../guides/full-editor/edit-project/)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
@@ -205,7 +205,7 @@ Once the selected quick action loads in the iframe, users can browse their files
 Here are the minimum browser requirements for the SDK:
 
 | Browser name | Minimum version |
-| :-- | : -- |
+| :----------- |: -- |
 | Safari  | 16 and onwards |
 | Google Chrome | 100 and onwards |
 | Microsoft Edge | 107 and onwards |
