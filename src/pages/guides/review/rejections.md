@@ -85,7 +85,7 @@ Submitting your app for review can be a meticulous process, and it's not uncommo
 
 ### 6. Consult the Guidelines
 
-- Revisit the [submission guidelines](./submission_guidelines.md) and [test cases](./test_cases.md) to ensure your app meets all the requirements. 
+- Revisit the [submission guidelines](./submission_guidelines.md) and [test cases](./test_cases.md) to ensure your app meets all the requirements.
 
 ### 7. Resubmit
 
