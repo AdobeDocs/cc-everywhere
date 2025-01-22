@@ -153,7 +153,7 @@ const ccEverywhere = await window.CCEverywhere.initialize(
 
 The SDK should only be initialized **once on each page**.
 
- To initialize the SDK, pass the following objects: `HostInfo` and `ConfigParams`.
+To initialize the SDK, pass the following objects: `HostInfo` and `ConfigParams`.
 
 ### HostInfo
 
@@ -210,16 +210,6 @@ Here are the minimum browser requirements for the SDK:
 | Google Chrome | 100 and onwards |
 | Microsoft Edge | 107 and onwards |
 | Firefox | 117 and onwards |
-
-<InlineAlert variant="help" slots="header, text1, text2" />
-
-Notes:
-
-- JavaScript must be enabled.
-
-- The SDK will *not* work in incognito windows.
-
-- HTTPS connections are required for all environments.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
