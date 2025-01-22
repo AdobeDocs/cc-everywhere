@@ -40,7 +40,7 @@ contributors:
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<Announcement slots="heading, text, buttons"/>
+<Announcement slots="heading, text, buttons" variant="secondary" />
 
 ### Demo App
 
