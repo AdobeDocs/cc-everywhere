@@ -84,7 +84,7 @@ Follow the steps below, in the Developer console.
 
 ![Submit for review in Console UI](submission_bigger.png)
 
-<InlineAlert variant="help" slots="text1, text2, text3" />
+<InlineAlert variant="help" slots="text" repeat="3" />
 
   Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name.
 
