@@ -80,7 +80,7 @@ It is just a simple web page with one button: click it, and the Adobe Express lo
 
 The **full Adobe Express application** has been integrated! Your users can now create new documents directly from this page and download them locally.
 
-<InlineAlert variant="info" slots="text" repest="2" />
+<InlineAlert variant="info" slots="text" repeat="2" />
 
 Please don't be scared by the red warning toast at the bottom of the screen saying _"The use of this experience powered by Adobe Express has not been approved yet by Adobe"_.
 

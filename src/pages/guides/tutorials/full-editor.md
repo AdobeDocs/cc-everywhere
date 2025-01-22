@@ -16,8 +16,6 @@ contributors:
 
 Learn how to integrate the Adobe Express Embed SDK into your web applications.
 
-<!-- **TODO**: add a video, Davide-style. -->
-
 ## Introduction
 
 Hi, developers! In this tutorial, we'll create an Embed SDK integration that leverages the Adobe Express full editor experience. Users will be able to create, edit, and export documents directly from your web application.
@@ -43,10 +41,9 @@ Let's have a look at what we're going to build. First off, clone the [embed-sdk-
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
-<InlineAlert variant="info" slots="text1" />
+<InlineAlert variant="info" slots="text" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md).
 
 Now, you can install the dependencies and run the sample with the following two simple commands:
 
@@ -67,10 +64,9 @@ The sample project will handle the file transfer between Adobe Express and the w
 
 The **Edit** button (previously disabled) will open the Editor with the same document size and content as the one just created: the Project ID has been stored as part of the `onPublish` callback, as we'll see in due course. Users can modify the design and download or save it again.
 
-<!-- Inline Alert -->
-<InlineAlert variant="error" slots="header, text1" />
+<InlineAlert variant="error" slots="text" repeat="2" />
 
-Error: "Adobe Express is not available"
+### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the correct API Key in the `src/.env` file as described [here](#running-the-sample-project).
 
@@ -109,10 +105,9 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-<!-- Inline Alert -->
-<InlineAlert variant="info" slots="text1" />
+<InlineAlert variant="info" slots="text" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
 
 When the Embed SDK is imported, a `CCEverywhere` object is globally available and must be **initialized**. There are two sets of parameters that you can pass as option objects:
 
@@ -139,12 +134,11 @@ const { editor } = await window.CCEverywhere.initialize(
 );
 ```
 
-We're using the asynchronous [`initialize()`](../../reference/initialize/) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](../../reference/CCEverywhere/editor/).
+We're using the asynchronous [`initialize()`](../../reference/initialize/index.md) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](../../reference/CCEverywhere/editor/index.md).
 
 The [`hostInfo`](../../reference/initialize/index.md#hostinfo) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
-<!-- Inline Alert -->
-<InlineAlert variant="warning" slots="text1" />
+<InlineAlert variant="warning" slots="text" />
 
 The `appName` must match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
 
@@ -206,10 +200,9 @@ document.getElementById("createDesign").onclick = async () => {
 
 ![Launching the Full Editor](./images/full-editor_launch.png)
 
-<!-- Info Alert -->
-<InlineAlert variant="info" slots="text1" />
+<InlineAlert variant="info" slots="text" />
 
-Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.
 
 As you can see, integrating the full editor doesn't take much time! You can customize it to a great extent; even using all the default options, the result is brilliant.
 
@@ -225,7 +218,6 @@ We need to write a simple function in the `callbacks` to implement this feature,
 
 The `data` property sounds promising! The plan is to have an `<img>` element (in this example, it starts as a placeholder), which `src` attribute will be filled with the Base64 string coming from Adobe Express.
 
-<!-- CodeBlock -->
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
 
 #### main.js
@@ -299,7 +291,6 @@ We have all the required bits in place, but some simple refactoring is needed to
 
 You can check the entire [`embed-sdk-full-editor-tutorial`](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) project code as part of the dedicated [`embed-sdk-samples`](https://github.com/AdobeDocs/embed-sdk-samples) repository. Find the most relevant files below for reference.
 
-<!-- CodeBlock -->
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
 
 #### main.js
@@ -434,7 +425,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
 
-- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
-- If you're looking for **more tutorials**, check out [here](../tutorials/).
+- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/index.md).
+- Visit the [changelog](../changelog/index.md) page to keep up with the **latest updates** and improvements.
+- If you're looking for **more tutorials**, check out [here](../tutorials/index.md).
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
