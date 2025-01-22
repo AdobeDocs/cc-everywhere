@@ -204,12 +204,12 @@ Once the selected quick action loads in the iframe, users can browse their files
 
 Here are the minimum browser requirements for the SDK:
 
-| Browser name | Minimum version |
-| :----------- |: -- |
-| Safari  | 16 and onwards |
-| Google Chrome | 100 and onwards |
+| Browser name   | Minimum version |
+| -------------- | --------------- |
+| Safari         | 16 and onwards  |
+| Google Chrome  | 100 and onwards |
 | Microsoft Edge | 107 and onwards |
-| Firefox | 117 and onwards |
+| Firefox        | 117 and onwards |
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 

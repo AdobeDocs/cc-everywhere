@@ -46,7 +46,7 @@ Seamlessly embed Adobe Express on your website with our SDK.
 
 Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
 
-[Try our demo app](https://demo.expressembed.com/)
+- [Try our demo app](https://demo.expressembed.com/)
 
 ## Overview
 
