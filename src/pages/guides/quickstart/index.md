@@ -211,15 +211,15 @@ Here are the minimum browser requirements for the SDK:
 | Microsoft Edge | 107 and onwards |
 | Firefox        | 117 and onwards |
 
-<InlineAlert slots="text" repeat="4" variant="success" />
+<InlineAlert slots="text" repeat="4" />
 
 ### Notes:
 
-- JavaScript must be enabled.
+JavaScript must be enabled.
 
-- The SDK will *not* work in incognito windows.
+The SDK will *not* work in incognito windows.
 
-- HTTPS connections are required for all environments.
+HTTPS connections are required for all environments.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
