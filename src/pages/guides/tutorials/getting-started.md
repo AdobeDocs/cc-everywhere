@@ -14,8 +14,6 @@ contributors:
 
 A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
 
-<!-- **TODO**: add a video, Hamza-style. -->
-
 ## Introduction
 
 Hi developers, and welcome to this tutorial! The Embed SDK is an amazing opportunity for any project, allowing you to **launch Adobe Express directly from your web applications.** This guide will walk you through setting up the credentials and starting to implement the SDK.
@@ -43,7 +41,6 @@ Log in with your Adobe ID if requested, or create a new account if you don't hav
 1. In the **Credential name** field, add a unique title. It will correspond with the project folder created for your end users in Adobe Express, and must match what's later referred to as `appName` in the SDK initialization.
 2. We'll test the Embed SDK locally: type `localhost:5555` in the **Allowed domain** field—this is where you would add a list of the domains through which your application is served.
 
-<!-- Warning Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
 Please note that **all connections must be secure (HTTPS)** for both production and development environments. The sample project will take care of this for you.
@@ -83,12 +80,11 @@ It is just a simple web page with one button: click it, and the Adobe Express lo
 
 The **full Adobe Express application** has been integrated! Your users can now create new documents directly from this page and download them locally.
 
-<!-- Info Alert -->
-<InlineAlert variant="info" slots="text1, text2" />
+<InlineAlert variant="info" slots="text" repest="2" />
 
 Please don't be scared by the red warning toast at the bottom of the screen saying _"The use of this experience powered by Adobe Express has not been approved yet by Adobe"_.
 
-It is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+It is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.
 
 ### Inspecting the code
 
@@ -121,7 +117,7 @@ const { editor } = await window.CCEverywhere.initialize(
 );
 ```
 
-The [`editor`](/reference/CCEverywhere/editor/) class contains all the APIs we need. In the sample, we use it to spawn the full Adobe Express experience on the button click:
+The [`editor`](../../reference/CCEverywhere/editor/) class contains all the APIs we need. In the sample, we use it to spawn the full Adobe Express experience on the button click:
 
 ```javascript
 document.getElementById("launchExpress").onclick = async () => {
@@ -136,11 +132,9 @@ document.getElementById("launchExpress").onclick = async () => {
 };
 ```
 
-The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](/reference/CCEverywhere/editor.md#create) now for more information.
+The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](../../reference/CCEverywhere/editor.md#create) now for more information.
 
 ## Next steps
-
-<!-- Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you? -->
 
 Congratulations! You have successfully **set up the Adobe Express Embed SDK in your web application**. You've learned how to get the credentials, initialize the SDK, and integrate the full Adobe Express experience into your web page.
 
@@ -149,7 +143,7 @@ Congratulations! You have successfully **set up the Adobe Express Embed SDK in y
 What's next for you? Here are a few suggestions:
 
 - Feel free to use this [sample project](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-getting-started) as a starting point for your experiments.
-- Check out more [tutorials](../tutorials/) to learn about the Embed SDK's many features.
-- The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](../../reference/).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
+- Check out more [tutorials](../tutorials/index.md) to learn about the Embed SDK's many features.
+- The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](../../reference/index.md).
+- Visit the [changelog](../changelog/index.md) page to keep up with the **latest updates** and improvements.
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
