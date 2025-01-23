@@ -20,7 +20,7 @@ Adobe reviews all applications that integrate Adobe Express Embed SDK before ena
 
 This guideline outlines the process for reviewing and submitting an integration using the Adobe Express Embed SDK. Whether you’re embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for users and maintain consistency across all implementations.
 
-<InlineAlert variant="help" slots="text" />
+<InlineAlert  slots="text" variant="help" />
 
 Please note that until your integration is approved, it will display a red banner indicating, the experience powred by Adobe Express has not been approved yet. Once we review and approve your app, we will remove this banner.
 
@@ -73,7 +73,7 @@ Additionally, your integration must not violate the trademarks and copyrights of
 
 You have to submit your app for approval in the [Adobe Developer Console](https://developer.adobe.com/console).
 
-<InlineAlert variant="help" slots="text" />
+<InlineAlert slots="text" variant="help" />
 
 If you started your developement by clicking the [Get Credentials](https://developer.adobe.com/express/embed-sdk/docs/get-credential/) button, you'll need to identify your project before proceeding. Alternatively, you can click on the [Get Credentials](https://developer.adobe.com/express/embed-sdk/docs/get-credential/) button, which should provide a link to any previously created projects. This link will take you to the developer console.
 
@@ -86,11 +86,11 @@ Follow the steps below, in the Developer console.
 
 <InlineAlert variant="help" slots="text" repeat="3" />
 
-  Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name.
+Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name.
 
-  Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
+Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
 
-  Confirm that the SDK is never initialized more than once per page load.
+Confirm that the SDK is never initialized more than once per page load.
 
 To make sure your review process goes smoothly, check off the tasks in this list before submitting.
 
