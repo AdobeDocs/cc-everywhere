@@ -12,9 +12,9 @@ contributors:
 --- 
 # SDK Reference
 
-<InlineAlert variant="error" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="text" repeat="3" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using using SDK V1, V2, or V3
 
@@ -45,18 +45,18 @@ window.CCEverywhere.initialize(
 
 ### HostInfo
 
-| Property | Type | Description
-| :-- | :--| :--
-|clientId | string | Your API Key
-|appName | string | Name of project folder created in user's Adobe Express account
-|appVersion | { major: number, minor: number, patch?: number} | Your app version
-| platformCategory | 'web' | Specify host app platform
+| Property         | Type                                            | Description                                                    |
+| ---------------- | ----------------------------------------------- | -------------------------------------------------------------- |
+| clientId         | string                                          | Your API Key                                                   |
+| appName          | string                                          | Name of project folder created in user's Adobe Express account |
+| appVersion       | { major: number, minor: number, patch?: number} | Your app version                                               |
+| platformCategory | 'web'                                           | Specify host app platform                                      |
 
 ### ConfigParams
 
-| Property | Type | Description
-| :-- | :--| :--
-|locale | string | Language settings for SDK components
+| Property | Type   | Description                          |
+| -------- | ------ | ------------------------------------ |
+| locale   | string | Language settings for SDK components |
 
 ## CCEverywhere
 
