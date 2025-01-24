@@ -293,7 +293,7 @@ module.exports = {
         pages: [
           {
             title: "CC Everywhere",
-            path: "v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+            path: "v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere.md",
           },
           {
             title: "Editor",
