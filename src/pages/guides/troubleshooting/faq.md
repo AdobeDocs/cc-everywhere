@@ -16,6 +16,8 @@ contributors:
 
 ## Questions
 
+<!-- The comment below is needed, otherwise the Markdown-all-in-one extensions will automatically create a TOC and mess with the layout -->
+<!-- no toc -->
 - [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
 - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
 - [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
@@ -24,6 +26,7 @@ contributors:
 - [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
 - [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
 - [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
+- [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
 
 ## Answers
 
@@ -73,3 +76,4 @@ The SDK follows a continous release model, with newer versions including bug fix
 V1 and V2 are deprecated and V3 will be deprecated in 2024.
 
 Please migrate to V4 as soon as possible: we've created a [Migration Guide](../concepts/migration_v3_v4.md) to help you with the transition.
+
