@@ -25,7 +25,7 @@ create(
 
 `void`
 
-***
+<hr />
 
 ### createWithAsset()
 
@@ -50,7 +50,7 @@ createWithAsset(
 
 `void`
 
-***
+<hr />
 
 ### createWithTemplate()
 
@@ -75,7 +75,7 @@ createWithTemplate(
 
 `void`
 
-***
+<hr />
 
 ### edit()
 
