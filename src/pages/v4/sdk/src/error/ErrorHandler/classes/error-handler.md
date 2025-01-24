@@ -12,7 +12,7 @@ static instance(): ErrorHandler
 
 [`ErrorHandler`](error-handler.md)
 
-***
+<hr />
 
 ### addHandler()
 
@@ -30,7 +30,7 @@ static addHandler(handler): void
 
 `void`
 
-***
+<hr />
 
 ### removeHandler()
 
@@ -48,7 +48,7 @@ static removeHandler(handler): void
 
 `void`
 
-***
+<hr />
 
 ### error()
 
@@ -66,7 +66,7 @@ static error(error): void
 
 `void`
 
-***
+<hr />
 
 ### warn()
 
@@ -84,7 +84,7 @@ static warn(warn): void
 
 `void`
 
-***
+<hr />
 
 ### info()
 
