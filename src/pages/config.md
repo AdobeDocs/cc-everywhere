@@ -67,7 +67,7 @@
         - [sdk](v4/sdk/src/3p/CCEverywhere/index.md) 
             - [3p](v4/sdk/src/3p/CCEverywhere/index.md) 
                 - [CCEverywhere](v4/sdk/src/3p/CCEverywhere/index.md) 
-                    - [CCEverywhere](v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md) 
+                    - [CCEverywhere](v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere.md) 
                     - [default](v4/sdk/src/3p/CCEverywhere/variables/default.md) 
                 - [CCEverywhere.types](v4/sdk/src/3p/CCEverywhere.types/index.md) 
                     - [CCEverywhereInterface](v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface.md) 
