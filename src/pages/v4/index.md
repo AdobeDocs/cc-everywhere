@@ -29,7 +29,7 @@ Before you dive into the API references, make sure you have completed the follow
 
 Learn more about in the [quick start guide](../guides/quickstart/).
 
-<InlineAlert variant="info" slots="header, text1" />
+<InlineAlert variant="info" slots="header, text" />
 
 Migrating from V3
 
@@ -55,8 +55,7 @@ initialize: (
 
 ```
 
-<!-- Inline Alert -->
-<InlineAlert variant="info" slots="text1" />
+<InlineAlert variant="info" slots="text" />
 
 The SDK should be initialized only once on each page.
 
