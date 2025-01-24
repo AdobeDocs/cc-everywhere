@@ -104,7 +104,7 @@
             "pages": [
               {
                 "title": "State",
-                "path": "v4/sdk/src/types/CCEverywhere.types/enumerations/State.md"
+                "path": "v4/sdk/src/types/CCEverywhere.types/enumerations/state.md"
               }
             ],
             "path": "v4/sdk/src/types/CCEverywhere.types/index.md"
@@ -1384,7 +1384,7 @@
             "pages": [
               {
                 "title": "NetworkState",
-                "path": "v4/shared/src/types/Network.types/enumerations/NetworkState.md"
+                "path": "v4/shared/src/types/Network.types/enumerations/Networkstate.md"
               }
             ],
             "path": "v4/shared/src/types/Network.types/index.md"
