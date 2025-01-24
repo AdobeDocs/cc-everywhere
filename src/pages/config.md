@@ -60,9 +60,9 @@
     - [Overview](v4/index.md) 
     - [Entrypoints](v4/index.md) header
         - [CC Everywhere](v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere.md) 
-        - [Editor](v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md) 
-        - [Module](v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md) 
-        - [Quick Action](v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md) 
+        - [Editor](v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md) 
+        - [Module](v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow.md) 
+        - [Quick Action](v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/quick-action-workflow.md) 
     - [APIs Reference](v4/) header
         - [sdk](/v4/sdk/src/3p/CCEverywhere/index.md) 
             - [3p](/v4/sdk/src/3p/CCEverywhere/index.md) 

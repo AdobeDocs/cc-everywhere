@@ -297,15 +297,15 @@ module.exports = {
           },
           {
             title: "Editor",
-            path: "v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+            path: "v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md",
           },
           {
             title: "Module",
-            path: "v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+            path: "v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow.md",
           },
           {
             title: "Quick Action",
-            path: "v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+            path: "v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/quick-action-workflow.md",
           },
         ],
       },
