@@ -95,3 +95,79 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Action for host** : Ensure the SDK is correctly configured and initialized. Checkout the [reference documentation here](../../reference/initialize/index.md) for Initialization.
 - **User Experience/Recoverability** : Recoverable
 - **Example** : NA
+
+### SDK_NOT_SUPPORTED
+
+- **Meaning** : SDK is not supported, refer the requirements for Embed to be supported
+- **Action for host** : Ensure the SDK's requirements are met to be working as expected. Checkout the [reference documentation here](../../reference/initialize/index.md).
+- **User Experience/Recoverability** : Recoverable
+- **Example** : NA
+
+### SDK_ALREADY_INITIALIZED
+
+- **Meaning** : Main initialization of the SDK called more than once.
+- **Action for host** : Ensure the SDK gets initialized once.
+- **User Experience/Recoverability** : Recoverable
+- **Example** : NA
+
+### SDK_INITIALIZATION_IN_PROGRESS
+
+- **Meaning** :To avoid double initialize issue
+- **Action for host** : Ensure the SDK gets initialized once.
+- **User Experience/Recoverability** : Recoverable
+- **Example** : NA
+
+### SDK_NOT_INITIALIZED
+
+- **Meaning** :To avoid double initialize issue
+- **Action for host** : Ensure the SDK gets initialized once.
+- **User Experience/Recoverability** : Recoverable
+- **Example** : NA
+
+### WORKFLOW_ALREADY_IN_PROGRESS
+
+- **Meaning** :Launch Action Error to convey an already active action
+- **Action for host** : Ensure an action is active at a time
+- **User Experience/Recoverability** : Recoverable
+- **Example** : NA
+
+### INVALID_IMAGE_DATA_URL
+
+
+### INVALID_VIDEO_DATA_URL
+
+
+### INVALID_ASSET_TYPE_URL
+
+
+### INVALID_ASSET_TYPE
+
+
+### INVALID_ASSET_DATA_TYPE
+
+
+### INVALID_PUBLISH_FILE_TYPE
+
+
+### INVALID_DOWNLOAD_ALL_EXPORT_OPTION
+
+
+### TARGET_LOAD_TIMED_OUT
+
+
+### TARGET_LOAD_ERROR
+
+
+### TARGET_LOAD_FAILED
+
+
+### NO_ACTIVE_WORKFLOW
+
+
+### ACTION_LAUNCH_ERROR
+
+
+### INVALID_ASPECT_RATIO_VALUE
+
+
+### INVALID_SIZE_VALUE
