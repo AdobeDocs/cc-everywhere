@@ -88,7 +88,7 @@
             "pages": [
               {
                 "title": "ErrorHandler",
-                "path": "v4/sdk/src/error/ErrorHandler/classes/ErrorHandler.md"
+                "path": "v4/sdk/src/error/ErrorHandler/classes/error-handler.md"
               }
             ],
             "path": "v4/sdk/src/error/ErrorHandler/index.md"
@@ -333,7 +333,7 @@
                 "pages": [
                   {
                     "title": "HostErrorHandler",
-                    "path": "v4/shared/src/error/handlers/HostErrorHandler/classes/HostErrorHandler.md"
+                    "path": "v4/shared/src/error/handlers/HostErrorHandler/classes/Hosterror-handler.md"
                   }
                 ],
                 "path": "v4/shared/src/error/handlers/HostErrorHandler/index.md"

@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ErrorHandler](classes/ErrorHandler.md) | - |
+| [ErrorHandler](classes/error-handler.md) | - |

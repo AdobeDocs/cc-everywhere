@@ -31,7 +31,7 @@ new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>
 
 #### Returns
 
-[`HostErrorHandler`](HostErrorHandler.md)<`T`\>
+[`HostErrorHandler`](Hosterror-handler.md)<`T`\>
 
 #### Overrides
 
