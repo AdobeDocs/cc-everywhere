@@ -30,22 +30,22 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEvery
 
 ### HostInfo
 
-| Property | Required | Type | Description
-| :-- | :-- | :-- | :--
-| clientId | Yes | String | API key from Developer Console
-| appName | Yes | String | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application.
-| appVersion | No | { major: number, minor: number, patch?: number } | Version of your integration
-| platformCategory | No | 'web' | Specify host app platform
+| Property         | Required | Type                                               | Description                                                                                                                  |
+| ---------------- | -------- | -------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| clientId         | Yes      | String                                             | API key from Developer Console                                                                                               |
+| appName          | Yes      | String                                             | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application. |
+| appVersion       | No       | `{ major: number, minor: number, patch?: number }` | Version of your integration                                                                                                  |
+| platformCategory | No       | 'web'                                              | Specify host app platform                                                                                                    |
 
 ### ConfigParams
 
 The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified.  The full list of accepted locale strings is [here](../types/index.md#locale).
 
-| Property | Required | Type | Description
-| :-- | :-- | :-- | :--
-| locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
-| skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
-| loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
+| Property                | Required | Type                               | Description                                                                                                                                                |
+| ----------------------- | -------- | ---------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| locale                  | No       | [Locale](../types/index.md#locale) | Language settings for SDK components                                                                                                                       |
+| skipBrowserSupportCheck | No       | boolean                            | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error. |
+| loginMode               | No       | string                             | When set to `delayed`, user won't be asked to sign in until they export                                                                                    |
 
 ### Example
 
@@ -72,5 +72,3 @@ The returned Promise-wrapped `CCEverywhere` object can then be used to access th
 2. `quickAction`: Launches a quick action.
 3. `module`: Opens a module in a modal.
 
-<!-- 4. `close()`: Closes any active design in progress. It returns a boolean value indicating whether the close operation was successful or not.
-1. `terminate()`: Terminates the active `CCEverywhere` instance. Returns void. -->
