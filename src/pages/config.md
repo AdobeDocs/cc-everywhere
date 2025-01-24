@@ -59,7 +59,7 @@
     - [Types](reference/types/index.md) 
     - [Overview](v4/index.md) 
     - [Entrypoints](v4/index.md) header
-        - [CC Everywhere](v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md) 
+        - [CC Everywhere](v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere.md) 
         - [Editor](v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md) 
         - [Module](v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md) 
         - [Quick Action](v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md) 
