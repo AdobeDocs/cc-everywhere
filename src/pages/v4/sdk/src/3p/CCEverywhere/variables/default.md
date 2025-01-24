@@ -17,15 +17,15 @@ Please ensure to call this API only once.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/HostInfo.types/interfaces/HostInfoSpecifiedBase.md) |  |
-| `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/HostInfo.types/interfaces/ConfigParamsBase.md) |  |
-| `authOption`? | [`AuthOption`](../../../../../shared/src/types/Authentication.types/type-aliases/AuthOption.md) | authentication configuration |
+| Parameter       | Type                                                                                                          | Description                  |
+| --------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| `hostInfo`      | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/HostInfo.types/interfaces/HostInfoSpecifiedBase.md) |                              |
+| `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/HostInfo.types/interfaces/ConfigParamsBase.md)           |                              |
+| `authOption`?   | [`AuthOption`](../../../../../shared/src/types/Authentication.types/type-aliases/AuthOption.md)               | authentication configuration |
 
 #### Returns
 
-`Promise`<[`CCEverywhere`](../classes/CCEverywhere.md)\>
+`Promise`[`CCEverywhere`](../classes/CCEverywhere.md)
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
 
