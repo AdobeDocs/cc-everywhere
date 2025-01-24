@@ -4,9 +4,9 @@
 
 | Property | Type |
 | ------ | ------ |
-| `editor` | [`EditorWorkflow`](../../../workflows/3p/EditorWorkflow.types/interfaces/EditorWorkflow.md) |
-| `module` | [`ModuleWorkflow`](../../../workflows/3p/ModuleWorkflow.types/interfaces/ModuleWorkflow.md) |
-| `quickAction` | [`QuickActionWorkflow`](../../../workflows/3p/QuickActionWorkflow.types/interfaces/QuickActionWorkflow.md) |
+| `editor` | [`EditorWorkflow`](../../../workflows/3p/EditorWorkflow.types/interfaces/editor-workflow.md) |
+| `module` | [`ModuleWorkflow`](../../../workflows/3p/ModuleWorkflow.types/interfaces/module-workflow.md) |
+| `quickAction` | [`QuickActionWorkflow`](../../../workflows/3p/QuickActionWorkflow.types/interfaces/quick-action-workflow.md) |
 
 ## Methods
 

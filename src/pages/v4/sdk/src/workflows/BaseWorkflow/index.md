@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [BaseWorkflow](classes/BaseWorkflow.md) | - |
+| [BaseWorkflow](classes/base-workflow.md) | - |

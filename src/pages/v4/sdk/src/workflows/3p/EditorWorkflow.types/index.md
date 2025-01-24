@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditorWorkflow](interfaces/EditorWorkflow.md) | - |
+| [EditorWorkflow](interfaces/editor-workflow.md) | - |

@@ -2,11 +2,11 @@
 
 ## Extends
 
-- [`BaseWorkflow`](../../../BaseWorkflow/classes/BaseWorkflow.md)
+- [`BaseWorkflow`](../../../BaseWorkflow/classes/base-workflow.md)
 
 ## Implements
 
-- [`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/ModuleWorkflow.md)
+- [`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md)
 
 ## Methods
 
@@ -37,7 +37,7 @@ Perform editing tasks on any image.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/ModuleWorkflow.md).[`editImage`](../../ModuleWorkflow.types/interfaces/ModuleWorkflow.md#editimage)
+[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md).[`editImage`](../../ModuleWorkflow.types/interfaces/module-workflow.md#editimage)
 
 ***
 
@@ -66,4 +66,4 @@ Generate images by just passing a text prompt.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/ModuleWorkflow.md).[`createImageFromText`](../../ModuleWorkflow.types/interfaces/ModuleWorkflow.md#createimagefromtext)
+[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md).[`createImageFromText`](../../ModuleWorkflow.types/interfaces/module-workflow.md#createimagefromtext)

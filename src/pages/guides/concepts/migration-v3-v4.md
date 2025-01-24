@@ -214,18 +214,18 @@ Once you have successfully initialized the SDK, a Promise will be returned conta
 
 <DiscoverBlock slots="link, text"/>
 
-[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md)
+[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md)
 
 Provides API References for /Editor API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Module API](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md)
+[Module API](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow.md)
 
 Provides API References for /Module API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Quick Action API](../../v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md)
+[Quick Action API](../../v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/quick-action-workflow.md)
 
 Provides API References for /Quick Action API.

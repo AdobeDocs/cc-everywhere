@@ -2,11 +2,11 @@
 
 ## Extends
 
-- [`BaseWorkflow`](../../../BaseWorkflow/classes/BaseWorkflow.md)
+- [`BaseWorkflow`](../../../BaseWorkflow/classes/base-workflow.md)
 
 ## Implements
 
-- [`EditorWorkflow`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md)
+- [`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md)
 
 ## Methods
 
@@ -37,7 +37,7 @@ Start the editor workflow with an empty canvas
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md).[`create`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md#create)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`create`](../../EditorWorkflow.types/interfaces/editor-workflow.md#create)
 
 ***
 
@@ -68,7 +68,7 @@ Start the editor workflow by passing an image asset
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md).[`createWithAsset`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md#createwithasset)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`createWithAsset`](../../EditorWorkflow.types/interfaces/editor-workflow.md#createwithasset)
 
 ***
 
@@ -99,7 +99,7 @@ Start the editor workflow by passing an Express Template ID
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md).[`createWithTemplate`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md#createwithtemplate)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`createWithTemplate`](../../EditorWorkflow.types/interfaces/editor-workflow.md#createwithtemplate)
 
 ***
 
@@ -130,4 +130,4 @@ Start the editor workflow by passing an Express Document ID
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md).[`edit`](../../EditorWorkflow.types/interfaces/EditorWorkflow.md#edit)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`edit`](../../EditorWorkflow.types/interfaces/editor-workflow.md#edit)

@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [QuickActionWorkflow](classes/QuickActionWorkflow.md) | - |
+| [QuickActionWorkflow](classes/quick-action-workflow.md) | - |
