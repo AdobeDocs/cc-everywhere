@@ -50,35 +50,35 @@
             "pages": [
               {
                 "title": "SDKErrorCode",
-                "path": "v4/sdk/src/error/ErrorCodes/enumerations/SDKErrorCode.md"
+                "path": "v4/sdk/src/error/ErrorCodes/enumerations/sdk-error-code.md"
               },
               {
                 "title": "type-aliases",
                 "pages": [
                   {
                     "title": "ErrorCode",
-                    "path": "v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCode.md"
+                    "path": "v4/sdk/src/error/ErrorCodes/type-aliases/error-code.md"
                   },
                   {
                     "title": "ErrorCodeMessages",
-                    "path": "v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCodeMessages.md"
+                    "path": "v4/sdk/src/error/ErrorCodes/type-aliases/error-code-messages.md"
                   }
                 ],
-                "path": "v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCode.md"
+                "path": "v4/sdk/src/error/ErrorCodes/type-aliases/error-code.md"
               },
               {
                 "title": "variables",
                 "pages": [
                   {
                     "title": "ErrorCode",
-                    "path": "v4/sdk/src/error/ErrorCodes/variables/ErrorCode.md"
+                    "path": "v4/sdk/src/error/ErrorCodes/variables/error-code.md"
                   },
                   {
                     "title": "ErrorCodeMessages",
-                    "path": "v4/sdk/src/error/ErrorCodes/variables/ErrorCodeMessages.md"
+                    "path": "v4/sdk/src/error/ErrorCodes/variables/error-code-messages.md"
                   }
                 ],
-                "path": "v4/sdk/src/error/ErrorCodes/variables/ErrorCode.md"
+                "path": "v4/sdk/src/error/ErrorCodes/variables/error-code.md"
               }
             ],
             "path": "v4/sdk/src/error/ErrorCodes/index.md"
@@ -256,11 +256,11 @@
             "pages": [
               {
                 "title": "ErrorCode",
-                "path": "v4/shared/src/error/ErrorCodes/enumerations/ErrorCode.md"
+                "path": "v4/shared/src/error/ErrorCodes/enumerations/error-code.md"
               },
               {
                 "title": "ErrorCodeMessages",
-                "path": "v4/shared/src/error/ErrorCodes/variables/ErrorCodeMessages.md"
+                "path": "v4/shared/src/error/ErrorCodes/variables/error-code-messages.md"
               }
             ],
             "path": "v4/shared/src/error/ErrorCodes/index.md"

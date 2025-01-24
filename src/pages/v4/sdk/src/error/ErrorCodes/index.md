@@ -6,18 +6,18 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [SDKErrorCode](enumerations/SDKErrorCode.md) | - |
+| [SDKErrorCode](enumerations/sdk-error-code.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [ErrorCode](type-aliases/ErrorCode.md) | - |
-| [ErrorCodeMessages](type-aliases/ErrorCodeMessages.md) | - |
+| [ErrorCode](type-aliases/error-code.md) | - |
+| [ErrorCodeMessages](type-aliases/error-code-messages.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [ErrorCode](variables/ErrorCode.md) | - |
-| [ErrorCodeMessages](variables/ErrorCodeMessages.md) | - |
+| [ErrorCode](variables/error-code.md) | - |
+| [ErrorCodeMessages](variables/error-code-messages.md) | - |
