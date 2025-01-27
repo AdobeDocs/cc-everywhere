@@ -225,7 +225,7 @@ Notes
 
 ## Troubleshooting
 
-If you run into any issues, check out our [Troubleshooting](../troubleshooting/unavailable.md) section for common problems and solutions, or check the [FAQ](../troubleshooting/faq/index.md) for answers to common questions.
+If you run into any issues, check out our [Troubleshooting](../troubleshooting/express-unavailable-error.md) section for common problems and solutions, or check the [FAQ](../troubleshooting/faq/index.md) for answers to common questions.
 
 ## Next Steps
 

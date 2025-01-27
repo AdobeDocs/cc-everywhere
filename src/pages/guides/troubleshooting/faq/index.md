@@ -81,4 +81,4 @@ Please migrate to V4 as soon as possible: we've created a [Migration Guide](../.
 
 ### I run into the "Adobe Express is not available" error
 
-Please refer to this [troubleshooting guide](../unavailable.md).
+Please refer to this [troubleshooting guide](../express-unavailable-error.md).
