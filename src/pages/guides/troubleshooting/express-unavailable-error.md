@@ -14,7 +14,7 @@ contributors:
 
 # Adobe Express is not available
 
-Troubleshooting the "Adobe Express is not available" error, that might appear when trying to launch any of the Embed SDK experiences.
+Troubleshooting the "Adobe Express is not available" error that might appear when trying to launch any of the Embed SDK experiences.
 
 ![Adobe Express is not available](./img/unavailable.png)
 
@@ -38,7 +38,7 @@ When you launch any Embed SDK experience, the Embed SDK validates requests by ch
 
 #### Server/CDN Configuration
 
-Some servers or CDNs (like AWS CloudFront) are configured to [strip the Referrer header](https://stackoverflow.com/questions/24343001/amazon-cloudfront-removes-referer-header) by default. Check your server or CDN settings to ensure the Referrer header is allowed and passed through. In AWS CloudFront, review the [behavior settings](https://aws.amazon.com/blogs/aws/enhanced-cloudfront-customization/) and enable or whitelist the Referrer header in cache policies.
+Some servers or CDNs (like AWS CloudFront) are configured to [strip the Referrer header](https://stackoverflow.com/questions/24343001/amazon-cloudfront-removes-referer-header) by default. Check your server or CDN settings to ensure the Referrer header is allowed and passed through. Review the [behavior settings](https://aws.amazon.com/blogs/aws/enhanced-cloudfront-customization/) in AWS CloudFront and enable or allow-list the Referrer header in cache policies.
 
 #### Referrer Policy or Meta Tags
 
