@@ -172,7 +172,7 @@ The SDK should only be initialized **once on each page**.
 
 <InlineAlert variant="info" slots="text1" />
 
-The SDK can be launched with a delayed login: users won't be asked to sign in until they export a document. Read more about the initialize API [here](../../reference/initialize/index.md).
+The SDK can be launched with a **delayed login**: users won't be asked to sign in until they export a document. Read more about the initialize API [here](../../reference/initialize/index.md).
 
 Successful initialization returns a `CCEverywhere` Class object, with three properties:
 
@@ -214,18 +214,19 @@ Here are the minimum browser requirements for the SDK:
 
 <InlineAlert variant="help" slots="header, text1, text2" />
 
-Notes:
+Notes
 
 - JavaScript must be enabled.
-
 - The SDK will *not* work in incognito windows.
-
 - HTTPS connections are required for all environments.
+- Referrer headers must be passed through.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
+## Troubleshooting
+
+If you run into any issues, check out our [Troubleshooting](../troubleshooting/express-unavailable-error.md) section for common problems and solutions, or check the [FAQ](../troubleshooting/faq/index.md) for answers to common questions.
+
 ## Next Steps
 
-[Sample Project](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample)
-
-Are you ready to start playing with some code? Check out our sample project to see the latest SDK version in action!
+Are you ready to start playing with some code? Check out our [Tutorials](../tutorials/index.md) to see the latest SDK version in action!

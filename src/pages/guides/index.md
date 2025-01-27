@@ -31,6 +31,7 @@ title: Overview
 description: This is the documentation for Adobe Express Embed SDK
 contributors:
   - https://github.com/nimithajalal
+  - https://github.com/undavide
   - https://github.com/amandahuarng
 ---
 <Hero slots="heading, text" background="rgb(138, 43, 226)"/>
@@ -47,6 +48,8 @@ Experience the power of Adobe Express Embed SDK. Try our demo app and see seamle
 
 [Try our demo app](https://demo.expressembed.com/)
 
+<br/>
+
 ## Overview
 
 The Adobe Express Embed SDK lets you integrate powerful online design tools, photo editing features, video editing options, and AI-powered content generation into your platform.
@@ -54,6 +57,12 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 ## Why Choose Adobe Express Embed SDK?
 
 With just a few lines of code, you can embed [Adobe Express editor](https://www.adobe.com/in/express/) tools and provide your users with seamless access to professional design capabilities.
+
+## Embed SDK Developer Journey
+
+This journey map will give you guidance on which resources to use at different stages of your integration with the Adobe Express Embed SDK. Click on the image below to download the PDF version with active links.
+
+[![Developer Journey](./images/developer-journey.png)](./images/developer-journey.pdf)
 
 ## First Steps
 
