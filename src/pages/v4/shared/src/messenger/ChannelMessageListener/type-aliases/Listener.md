@@ -8,7 +8,7 @@ type Listener: <T>(message) => void;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/MessageType.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
 
 ## Parameters
 

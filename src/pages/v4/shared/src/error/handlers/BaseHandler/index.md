@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [BaseHandler](classes/BaseHandler.md) | - |
+| [BaseHandler](classes/base-handler.md) | - |

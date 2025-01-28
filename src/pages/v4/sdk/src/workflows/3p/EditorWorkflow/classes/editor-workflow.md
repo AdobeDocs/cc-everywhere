@@ -26,10 +26,10 @@ Start the editor workflow with an empty canvas
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`CreateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/CreateDocConfig.md) | pass a custom canvas size |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md) | properties to configure the SDK container |
+| `docConfig`? | [`CreateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config.md) | pass a custom canvas size |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -57,10 +57,10 @@ Start the editor workflow by passing an image asset
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/CreateWithAssetDocConfig.md) | pass an image asset as base64 |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md) | properties to configure the SDK container |
+| `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config.md) | pass an image asset as base64 |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -88,10 +88,10 @@ Start the editor workflow by passing an Express Template ID
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/CreateWithTemplateDocConfig.md) | pass a template ID |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md) | properties to configure the SDK container |
+| `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config.md) | pass a template ID |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -119,10 +119,10 @@ Start the editor workflow by passing an Express Document ID
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/EditDocConfig.md) | pass an Express Document ID |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md) | properties to configure the SDK container |
+| `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config.md) | pass an Express Document ID |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 

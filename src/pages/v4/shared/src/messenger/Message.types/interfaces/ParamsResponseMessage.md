@@ -4,12 +4,12 @@
 
 | Property | Type |
 | ------ | ------ |
-| `status` | [`Status`](../enumerations/Status.md) |
-| `intent` | [`ActionIntent`](../../../types/ActionIntent.types/type-aliases/ActionIntent.md) |
-| `hostInfo` | [`HostInfoSpecified`](../../../types/HostInfo.types/type-aliases/HostInfoSpecified.md) |
-| `authOption` | [`AuthOption`](../../../types/Authentication.types/type-aliases/AuthOption.md) |
-| `designConfig` | [`DesignConfig`](../../../types/DesignConfig.types/interfaces/DesignConfig.md) |
-| `configParams` | [`ConfigParams`](../../../types/HostInfo.types/type-aliases/ConfigParams.md) |
-| `featureFlags` | [`FeatureFlags`](../../../types/FeatureFlags.types/type-aliases/FeatureFlags.md) |
+| `status` | [`Status`](../enumerations/status.md) |
+| `intent` | [`ActionIntent`](../../../types/ActionIntent.types/type-aliases/action-intent.md) |
+| `hostInfo` | [`HostInfoSpecified`](../../../types/HostInfo.types/type-aliases/host-info-specified.md) |
+| `authOption` | [`AuthOption`](../../../types/Authentication.types/type-aliases/auth-option.md) |
+| `designConfig` | [`DesignConfig`](../../../types/DesignConfig.types/interfaces/design-config.md) |
+| `configParams` | [`ConfigParams`](../../../types/HostInfo.types/type-aliases/config-params.md) |
+| `featureFlags` | [`FeatureFlags`](../../../types/FeatureFlags.types/type-aliases/feature-flags.md) |
 | `requestId?` | `string` |
 | `visitorId?` | `string` |

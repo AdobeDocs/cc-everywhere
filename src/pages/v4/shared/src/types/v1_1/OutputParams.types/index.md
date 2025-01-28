@@ -6,6 +6,6 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [PublishParams](interfaces/PublishParams.md) | Asset related information received with onPublish callback. |
-| [QuickActionPublishParams](interfaces/QuickActionPublishParams.md) | Asset related information received with onPublish callback in Quick Actions. |
-| [CCXPublishParams](interfaces/CCXPublishParams.md) | Asset related information received with onPublish callback. |
+| [PublishParams](interfaces/publish-params.md) | Asset related information received with onPublish callback. |
+| [QuickActionPublishParams](interfaces/QuickActionpublish-params.md) | Asset related information received with onPublish callback in Quick Actions. |
+| [CCXPublishParams](interfaces/CCXpublish-params.md) | Asset related information received with onPublish callback. |

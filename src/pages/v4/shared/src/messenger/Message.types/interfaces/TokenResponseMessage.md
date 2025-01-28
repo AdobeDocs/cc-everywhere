@@ -4,7 +4,7 @@
 
 | Property | Type |
 | ------ | ------ |
-| `status` | [`Status`](../enumerations/Status.md) |
+| `status` | [`Status`](../enumerations/status.md) |
 | `token` | `null` \| `string` |
 | `userId` | `null` \| `string` |
 | `type` | `string` |

@@ -19,9 +19,9 @@ Please ensure to call this API only once.
 
 | Parameter       | Type                                                                                                          | Description                  |
 | --------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| `hostInfo`      | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/HostInfo.types/interfaces/HostInfoSpecifiedBase.md) |                              |
-| `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/HostInfo.types/interfaces/ConfigParamsBase.md)           |                              |
-| `authOption`?   | [`AuthOption`](../../../../../shared/src/types/Authentication.types/type-aliases/AuthOption.md)               | authentication configuration |
+| `hostInfo`      | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/HostInfo.types/interfaces/host-info-specified-base.md) |                              |
+| `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/HostInfo.types/interfaces/config-params-base.md)           |                              |
+| `authOption`?   | [`AuthOption`](../../../../../shared/src/types/Authentication.types/type-aliases/auth-option.md)               | authentication configuration |
 
 #### Returns
 

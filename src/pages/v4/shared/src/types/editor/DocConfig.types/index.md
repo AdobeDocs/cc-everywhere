@@ -6,7 +6,7 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CreateDocConfig](interfaces/CreateDocConfig.md) | - |
-| [CreateWithAssetDocConfig](interfaces/CreateWithAssetDocConfig.md) | - |
-| [CreateWithTemplateDocConfig](interfaces/CreateWithTemplateDocConfig.md) | - |
-| [EditDocConfig](interfaces/EditDocConfig.md) | - |
+| [CreateDocConfig](interfaces/create-doc-config.md) | - |
+| [CreateWithAssetDocConfig](interfaces/create-with-asset-doc-config.md) | - |
+| [CreateWithTemplateDocConfig](interfaces/create-with-template-doc-config.md) | - |
+| [EditDocConfig](interfaces/edit-doc-config.md) | - |

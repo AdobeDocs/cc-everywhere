@@ -4,15 +4,15 @@
 
 ### HostInfo
 
-Re-exports [HostInfo](HostInfo.types/type-aliases/HostInfo.md)
+Re-exports [HostInfo](HostInfo.types/type-aliases/host-info.md)
 
-***
+<hr />
 
 ### ConfigParams
 
-Re-exports [ConfigParams](HostInfo.types/type-aliases/ConfigParams.md)
+Re-exports [ConfigParams](HostInfo.types/type-aliases/config-params.md)
 
-***
+<hr />
 
 ### Editor
 

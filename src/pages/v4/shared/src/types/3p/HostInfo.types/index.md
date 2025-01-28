@@ -6,5 +6,5 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [HostInfo](type-aliases/HostInfo.md) | - |
-| [ConfigParams](type-aliases/ConfigParams.md) | - |
+| [HostInfo](type-aliases/host-info.md) | - |
+| [ConfigParams](type-aliases/config-params.md) | - |

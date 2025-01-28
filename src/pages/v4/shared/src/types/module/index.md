@@ -4,40 +4,40 @@
 
 ### TextToImageAppConfig
 
-Re-exports [TextToImageAppConfig](AppConfig.types/interfaces/TextToImageAppConfig.md)
+Re-exports [TextToImageAppConfig](AppConfig.types/interfaces/TextToImageapp-config.md)
 
-***
+<hr />
 
 ### EditImageAppConfig
 
-Re-exports [EditImageAppConfig](AppConfig.types/interfaces/EditImageAppConfig.md)
+Re-exports [EditImageAppConfig](AppConfig.types/interfaces/EditImageapp-config.md)
 
-***
+<hr />
 
 ### WarmupAppConfig
 
-Re-exports [WarmupAppConfig](AppConfig.types/interfaces/WarmupAppConfig.md)
+Re-exports [WarmupAppConfig](AppConfig.types/interfaces/Warmupapp-config.md)
 
-***
+<hr />
 
 ### EditImageDesignConfig
 
-Re-exports [EditImageDesignConfig](DesignConfig.types/interfaces/EditImageDesignConfig.md)
+Re-exports [EditImageDesignConfig](DesignConfig.types/interfaces/EditImagedesign-config.md)
 
-***
+<hr />
 
 ### TextToImageDesignConfig
 
-Re-exports [TextToImageDesignConfig](DesignConfig.types/interfaces/TextToImageDesignConfig.md)
+Re-exports [TextToImageDesignConfig](DesignConfig.types/interfaces/TextToImagedesign-config.md)
 
-***
+<hr />
 
 ### WarmupDesignConfig
 
-Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/WarmupDesignConfig.md)
+Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/Warmupdesign-config.md)
 
-***
+<hr />
 
 ### EditImageDocConfig
 
-Re-exports [EditImageDocConfig](DocConfig.types/interfaces/EditImageDocConfig.md)
+Re-exports [EditImageDocConfig](DocConfig.types/interfaces/edit-image-doc-config.md)

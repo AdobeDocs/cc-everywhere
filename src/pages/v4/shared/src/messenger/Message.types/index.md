@@ -6,10 +6,10 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Status](enumerations/Status.md) | - |
-| [LoadStatus](enumerations/LoadStatus.md) | - |
-| [CancelReason](enumerations/CancelReason.md) | - |
-| [MessageType](enumerations/MessageType.md) | - |
+| [Status](enumerations/status.md) | - |
+| [LoadStatus](enumerations/load-status.md) | - |
+| [CancelReason](enumerations/cancel-reason.md) | - |
+| [MessageType](enumerations/message-type.md) | - |
 
 ### Interfaces
 
@@ -24,8 +24,8 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [DataMessageType](type-aliases/DataMessageType.md) | - |
-| [SimpleMessageType](type-aliases/SimpleMessageType.md) | - |
+| [DataMessageType](type-aliases/Datamessage-type.md) | - |
+| [SimpleMessageType](type-aliases/Simplemessage-type.md) | - |
 | [Message](type-aliases/Message.md) | - |
 | [MessageCompat](type-aliases/MessageCompat.md) | - |
 | [DidTargetLoadMessage](type-aliases/DidTargetLoadMessage.md) | - |

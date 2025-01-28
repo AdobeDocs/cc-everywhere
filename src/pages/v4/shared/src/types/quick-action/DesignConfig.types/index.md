@@ -6,6 +6,6 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseDesignConfig](interfaces/BaseDesignConfig.md) | - |
-| [QuickActionDesignConfig](interfaces/QuickActionDesignConfig.md) | - |
-| [MergeVideosDesignConfig](interfaces/MergeVideosDesignConfig.md) | - |
+| [BaseDesignConfig](interfaces/Basedesign-config.md) | - |
+| [QuickActionDesignConfig](interfaces/QuickActiondesign-config.md) | - |
+| [MergeVideosDesignConfig](interfaces/MergeVideosdesign-config.md) | - |

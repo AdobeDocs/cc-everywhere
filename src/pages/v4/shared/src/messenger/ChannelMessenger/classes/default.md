@@ -15,13 +15,13 @@ new default(
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/IChannelMessengerDelegate.md) |
-| `_sourceChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
-| `_sourceProtocolVersion` | [`ProtocolVersion`](../../Protocol.types/enumerations/ProtocolVersion.md) |
-| `_targetProtocolVersion` | [`ProtocolVersion`](../../Protocol.types/enumerations/ProtocolVersion.md) |
-| `_protocolHandlersModule`? | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/ProtocolHandlersModule.md) |
+| Parameter                  | Type                                                                                                |
+| -------------------------- | --------------------------------------------------------------------------------------------------- |
+| `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md) |
+| `_sourceChannel`           | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)                     |
+| `_sourceProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
+| `_targetProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
+| `_protocolHandlersModule`? | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module.md)               |
 
 #### Returns
 
@@ -37,16 +37,16 @@ addTarget(targetChannel, targetChannelInfo): void
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
-| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/TargetChannelInfo.md) |
+| Parameter           | Type                                                                                |
+| ------------------- | ----------------------------------------------------------------------------------- |
+| `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)     |
+| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md) |
 
 #### Returns
 
 `void`
 
-***
+<hr />
 
 ### removeTarget()
 
@@ -56,15 +56,15 @@ removeTarget(targetChannel): void
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
+| Parameter       | Type                                                                            |
+| --------------- | ------------------------------------------------------------------------------- |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
 
 #### Returns
 
 `void`
 
-***
+<hr />
 
 ### hasTarget()
 
@@ -74,15 +74,15 @@ hasTarget(targetChannel): boolean
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
+| Parameter       | Type                                                                            |
+| --------------- | ------------------------------------------------------------------------------- |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
 
 #### Returns
 
 `boolean`
 
-***
+<hr />
 
 ### getTarget()
 
@@ -92,15 +92,15 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
+| Parameter       | Type                                                                            |
+| --------------- | ------------------------------------------------------------------------------- |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
 
 #### Returns
 
-`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/TargetChannelInfo.md)
+`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md)
 
-***
+<hr />
 
 ### sendMessage()
 
@@ -113,23 +113,23 @@ sendMessage<T>(
 
 #### Type Parameters
 
-| Type Parameter |
-| ------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/MessageType.md) |
+| Type Parameter                                                                 |
+| ------------------------------------------------------------------------------ |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
 
 #### Parameters
 
-| Parameter | Type |
-| ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/MessageChannel.md) |
-| `message` | [`Message`](../../Message.types/type-aliases/Message.md)<`T`\> \| [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)<`T`\> |
-| `requestId`? | `string` |
+| Parameter       | Type                                                                                                                                   |
+| --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)                                                        |
+| `message`       | [`Message`](../../Message.types/type-aliases/Message.md)`T` \| [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)`T` |
+| `requestId`?    | `string`                                                                                                                               |
 
 #### Returns
 
 `boolean`
 
-***
+<hr />
 
 ### removeListener()
 

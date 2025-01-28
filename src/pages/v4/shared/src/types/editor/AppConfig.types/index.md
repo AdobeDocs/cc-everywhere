@@ -6,10 +6,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseEditorAppConfig](interfaces/BaseEditorAppConfig.md) | - |
+| [BaseEditorAppConfig](interfaces/Baseeditor-app-config.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [AppConfig](type-aliases/AppConfig.md) | - |
+| [AppConfig](type-aliases/app-config.md) | - |

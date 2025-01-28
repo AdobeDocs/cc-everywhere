@@ -6,32 +6,32 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ValidateTokenError](enumerations/ValidateTokenError.md) | - |
-| [AuthMode](enumerations/AuthMode.md) | Enum representing different authentication modes. |
+| [ValidateTokenError](enumerations/validate-token-error.md) | - |
+| [AuthMode](enumerations/auth-mode.md) | Enum representing different authentication modes. |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [AuthConfig](interfaces/AuthConfig.md) | - |
-| [PreSignedInAuthConfig](interfaces/PreSignedInAuthConfig.md) | - |
-| [IMSAuthConfig](interfaces/IMSAuthConfig.md) | - |
-| [BaseAuthOption](interfaces/BaseAuthOption.md) | - |
-| [UpfrontAuthOption](interfaces/UpfrontAuthOption.md) | - |
-| [DelayedAuthOption](interfaces/DelayedAuthOption.md) | - |
-| [PreSignedInAuthOption](interfaces/PreSignedInAuthOption.md) | - |
-| [ImsJumpAuthOption](interfaces/ImsJumpAuthOption.md) | - |
-| [UserInfo](interfaces/UserInfo.md) | Base class for user related information. |
+| [AuthConfig](interfaces/auth-config.md) | - |
+| [PreSignedInAuthConfig](interfaces/PreSignedInauth-config.md) | - |
+| [IMSAuthConfig](interfaces/IMSauth-config.md) | - |
+| [BaseAuthOption](interfaces/base-auth-option.md) | - |
+| [UpfrontAuthOption](interfaces/upfront-auth-option.md) | - |
+| [DelayedAuthOption](interfaces/delayed-auth-option.md) | - |
+| [PreSignedInAuthOption](interfaces/pre-signed-in-auth-option.md) | - |
+| [ImsJumpAuthOption](interfaces/ims-jump-auth-option.md) | - |
+| [UserInfo](interfaces/user-info.md) | Base class for user related information. |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [AuthOption](type-aliases/AuthOption.md) | - |
+| [AuthOption](type-aliases/auth-option.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [IMS\_JUMP\_ERROR\_KEY](variables/IMS_JUMP_ERROR_KEY.md) | - |
-| [IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY](variables/IMS_JUMP_ERROR_DESCRIPTION_KEY.md) | - |
+| [IMS\_JUMP\_ERROR\_KEY](variables/ims-jump-error-key.md) | - |
+| [IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY](variables/ims-jump-error-description.md.md) | - |

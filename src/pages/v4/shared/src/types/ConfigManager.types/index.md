@@ -12,4 +12,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [SDK\_CDN\_BASE](variables/SDK_CDN_BASE.md) | - |
+| [SDK\_CDN\_BASE](variables/sdk-cdn-base.md) | - |

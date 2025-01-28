@@ -6,33 +6,33 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Environment](enumerations/Environment.md) | 1P only Default environment is prod. |
-| [PIIPStatus](enumerations/PIIPStatus.md) | Represents whether analytics are sent. By default analytics are sent. |
-| [Locale](enumerations/Locale.md) | List of supported locales. Default locale is ENGLISH (en_US). |
-| [PlatformCategory](enumerations/PlatformCategory.md) | - |
-| [HostId](enumerations/HostId.md) | - |
-| [HostType](enumerations/HostType.md) | - |
+| [Environment](enumerations/environment.md) | 1P only Default environment is prod. |
+| [PIIPStatus](enumerations/PIIPstatus.md) | Represents whether analytics are sent. By default analytics are sent. |
+| [Locale](enumerations/locale.md) | List of supported locales. Default locale is ENGLISH (en_US). |
+| [PlatformCategory](enumerations/platform-category.md) | - |
+| [HostId](enumerations/host-id.md) | - |
+| [HostType](enumerations/host-type.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [ConfigParamsBase](interfaces/ConfigParamsBase.md) | Params to configure the application. |
-| [HostInfoSession](interfaces/HostInfoSession.md) | - |
-| [HostInfoComputed](interfaces/HostInfoComputed.md) | This interface describes the properties computed from host session. |
-| [HostInfoSpecifiedBase](interfaces/HostInfoSpecifiedBase.md) | This interface describes the properties provided by client. |
+| [ConfigParamsBase](interfaces/config-params-base.md) | Params to configure the application. |
+| [HostInfoSession](interfaces/host-info-session.md) | - |
+| [HostInfoComputed](interfaces/host-info-computed.md) | This interface describes the properties computed from host session. |
+| [HostInfoSpecifiedBase](interfaces/host-info-specified-base.md) | This interface describes the properties provided by client. |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [ConfigParams](type-aliases/ConfigParams.md) | - |
-| [HostInfoSpecified](type-aliases/HostInfoSpecified.md) | - |
-| [HostInfo](type-aliases/HostInfo.md) | - |
-| [HostInfoExtended](type-aliases/HostInfoExtended.md) | - |
+| [ConfigParams](type-aliases/config-params.md) | - |
+| [HostInfoSpecified](type-aliases/host-info-specified.md) | - |
+| [HostInfo](type-aliases/host-info.md) | - |
+| [HostInfoExtended](type-aliases/host-info-extended.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [HostTypeName](variables/HostTypeName.md) | - |
+| [HostTypeName](variables/hosttype-name.md) | - |
