@@ -86,7 +86,7 @@
                     - [ErrorHandler](v4/sdk/src/error/ErrorHandler/classes/error-handler.md) 
             - [types](v4/sdk/src/types/index.md) 
                 - [CCEverywhere.types](v4/sdk/src/types/CCEverywhere.types/index.md) 
-                    - [State](v4/sdk/src/types/CCEverywhere.types/enumerations/state.md) 
+                    - [State](v4/sdk/src/types/CCEverywhere.types/enumerations/state-test.md) 
             - [workflows](v4/sdk/src/workflows/3p/EditorWorkflow/index.md) 
                 - [3p](v4/sdk/src/workflows/3p/EditorWorkflow/index.md) 
                     - [EditorWorkflow](v4/sdk/src/workflows/3p/EditorWorkflow/index.md) 
