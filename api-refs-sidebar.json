@@ -104,7 +104,7 @@
             "pages": [
               {
                 "title": "State",
-                "path": "v4/sdk/src/types/CCEverywhere.types/enumerations/state-test.md"
+                "path": "v4/sdk/src/types/CCEverywhere.types/enumerations/state/index.md"
               }
             ],
             "path": "v4/sdk/src/types/CCEverywhere.types/index.md"
