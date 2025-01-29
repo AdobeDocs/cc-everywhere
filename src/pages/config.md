@@ -92,7 +92,7 @@
                     - [EditorWorkflow](v4/sdk/src/workflows/3p/EditorWorkflow/index.md) 
                         - [EditorWorkflow](v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md) 
                     - [EditorWorkflow.types](v4/sdk/src/workflows/3p/EditorWorkflow.types/index.md) 
-                        - [EditorWorkflow](v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/editor-workflow.md) 
+                        - [EditorWorkflow](v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/editor-workflow/index.md) 
                     - [ModuleWorkflow](v4/sdk/src/workflows/3p/ModuleWorkflow/index.md) 
                         - [ModuleWorkflow](v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow.md) 
                     - [ModuleWorkflow.types](v4/sdk/src/workflows/3p/ModuleWorkflow.types/index.md) 

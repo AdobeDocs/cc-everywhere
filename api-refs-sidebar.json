@@ -133,7 +133,7 @@
                 "pages": [
                   {
                     "title": "EditorWorkflow",
-                    "path": "v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/editor-workflow.md"
+                    "path": "v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/editor-workflow/index.md"
                   }
                 ],
                 "path": "v4/sdk/src/workflows/3p/EditorWorkflow.types/index.md"

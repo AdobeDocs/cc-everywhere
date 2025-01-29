@@ -6,7 +6,7 @@
 
 ## Implements
 
-- [`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md)
+- [`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md)
 
 ## Methods
 
@@ -37,7 +37,7 @@ Start the editor workflow with an empty canvas
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`create`](../../EditorWorkflow.types/interfaces/editor-workflow.md#create)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`create`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#create)
 
 ***
 
@@ -68,7 +68,7 @@ Start the editor workflow by passing an image asset
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`createWithAsset`](../../EditorWorkflow.types/interfaces/editor-workflow.md#createwithasset)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`createWithAsset`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#createwithasset)
 
 ***
 
@@ -99,7 +99,7 @@ Start the editor workflow by passing an Express Template ID
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`createWithTemplate`](../../EditorWorkflow.types/interfaces/editor-workflow.md#createwithtemplate)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`createWithTemplate`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#createwithtemplate)
 
 ***
 
@@ -130,4 +130,4 @@ Start the editor workflow by passing an Express Document ID
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow.md).[`edit`](../../EditorWorkflow.types/interfaces/editor-workflow.md#edit)
+[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`edit`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#edit)
