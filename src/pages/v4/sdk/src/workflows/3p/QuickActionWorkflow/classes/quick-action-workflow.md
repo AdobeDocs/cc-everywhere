@@ -6,7 +6,7 @@
 
 ## Implements
 
-- [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md)
+- [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md)
 
 ## Methods
 
@@ -37,7 +37,7 @@ Lower your file size by changing your PNG images into JPG files.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToJPEG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttojpeg)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`convertToJPEG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#converttojpeg)
 
 <hr />
 
@@ -68,7 +68,7 @@ Save your images as PNG files to improve file quality.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToPNG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttopng)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`convertToPNG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#converttopng)
 
 <hr />
 
@@ -99,7 +99,7 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToSVG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttosvg)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`convertToSVG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#converttosvg)
 
 <hr />
 
@@ -130,7 +130,7 @@ Transform your image into the perfect shape or size in seconds.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`cropImage`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#cropimage)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`cropImage`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#cropimage)
 
 <hr />
 
@@ -161,7 +161,7 @@ Change the dimensions of any photo.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`resizeImage`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#resizeimage)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`resizeImage`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#resizeimage)
 
 <hr />
 
@@ -192,7 +192,7 @@ Easily remove the background of your photos.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`removeBackground`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#removebackground)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`removeBackground`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#removebackground)
 
 <hr />
 
@@ -223,7 +223,7 @@ Generate a QR Code for a URL.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`generateQRCode`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#generateqrcode)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`generateQRCode`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#generateqrcode)
 
 <hr />
 
@@ -254,7 +254,7 @@ Convert a video asset to GIF format.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToGIF`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttogif)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`convertToGIF`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#converttogif)
 
 <hr />
 
@@ -285,7 +285,7 @@ Convert a video asset to MP4 format.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToMP4`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttomp4)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`convertToMP4`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#converttomp4)
 
 <hr />
 
@@ -316,7 +316,7 @@ Transform your video into the perfect shape or size in seconds.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`cropVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#cropvideo)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`cropVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#cropvideo)
 
 <hr />
 
@@ -347,7 +347,7 @@ Collate multiple video/photo into a single video.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`mergeVideos`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#mergevideos)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`mergeVideos`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#mergevideos)
 
 <hr />
 
@@ -378,7 +378,7 @@ Change the dimensions of any video.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`resizeVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#resizevideo)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`resizeVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#resizevideo)
 
 <hr />
 
@@ -409,7 +409,7 @@ Trim a video to a desired length.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`trimVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#trimvideo)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`trimVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#trimvideo)
 
 <hr />
 
@@ -440,7 +440,7 @@ Create an animated video from an audio.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`animateFromAudio`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#animatefromaudio)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`animateFromAudio`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#animatefromaudio)
 
 <hr />
 
@@ -471,4 +471,4 @@ Add captions to any video.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`captionVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#captionvideo)
+[`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md).[`captionVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md#captionvideo)

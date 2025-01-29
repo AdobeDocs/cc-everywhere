@@ -6,7 +6,7 @@
 
 ## Implements
 
-- [`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md)
+- [`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow/index.md)
 
 ## Methods
 
@@ -37,7 +37,7 @@ Perform editing tasks on any image.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md).[`editImage`](../../ModuleWorkflow.types/interfaces/module-workflow.md#editimage)
+[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow/index.md).[`editImage`](../../ModuleWorkflow.types/interfaces/module-workflow/index.md#editimage)
 
 <hr />
 
@@ -66,4 +66,4 @@ Generate images by just passing a text prompt.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md).[`createImageFromText`](../../ModuleWorkflow.types/interfaces/module-workflow.md#createimagefromtext)
+[`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow/index.md).[`createImageFromText`](../../ModuleWorkflow.types/interfaces/module-workflow/index.md#createimagefromtext)

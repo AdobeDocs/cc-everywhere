@@ -153,7 +153,7 @@
                 "pages": [
                   {
                     "title": "ModuleWorkflow",
-                    "path": "v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/module-workflow.md"
+                    "path": "v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/module-workflow/index.md"
                   }
                 ],
                 "path": "v4/sdk/src/workflows/3p/ModuleWorkflow.types/index.md"
@@ -173,7 +173,7 @@
                 "pages": [
                   {
                     "title": "QuickActionWorkflow",
-                    "path": "v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/quick-action-workflow.md"
+                    "path": "v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/quick-action-workflow/index.md"
                   }
                 ],
                 "path": "v4/sdk/src/workflows/3p/QuickActionWorkflow.types/index.md"
