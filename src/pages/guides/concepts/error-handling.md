@@ -214,7 +214,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_VIDEO_DATA_URL
 
-- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided video data URL is invalid.
+- **What it means**: While using [QuickAction](../../reference/CCEverywhere/quickAction/index.md), the provided video data URL is invalid.
 - **What to do**: Ensure the video data URL is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
