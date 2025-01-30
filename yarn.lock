@@ -33,7 +33,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@adobe/gatsby-theme-aio@npm:^4.14.17":
+"@adobe/gatsby-theme-aio@npm:^4.14.18":
   version: 4.14.18
   resolution: "@adobe/gatsby-theme-aio@npm:4.14.18"
   dependencies:
@@ -6706,7 +6706,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "cc-everywhere@workspace:."
   dependencies:
-    "@adobe/gatsby-theme-aio": ^4.14.17
+    "@adobe/gatsby-theme-aio": ^4.14.18
     gatsby: 4.22.0
     markdownlint: ^0.35.0
     markdownlint-cli: ^0.41.0
