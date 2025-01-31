@@ -59,7 +59,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 ### How many domains can be added with a single API key for a service?
 
-You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter multiple subdomains (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
 
 ### How do I enable SSO for my service?
 
