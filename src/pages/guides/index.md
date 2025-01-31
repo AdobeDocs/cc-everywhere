@@ -34,7 +34,11 @@ contributors:
   - https://github.com/undavide
   - https://github.com/amandahuarng
 ---
-<Hero slots="heading, text" background="rgb(138, 43, 226)"/>
+import "./landing-styles.css";
+
+<Hero slots="image, heading, text" background="rgb(193, 72, 273)"/>
+
+![Hero image](./images/wide-SDK-Banner-570x400.png)
 
 # Adobe Express Embed SDK
 
