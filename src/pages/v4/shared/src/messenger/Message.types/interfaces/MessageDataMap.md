@@ -10,4 +10,4 @@
 | `TOKEN_RESPONSE` | [`TokenResponseMessage`](TokenResponseMessage.md) |
 | `PARAMS_RESPONSE` | [`ParamsResponseMessage`](ParamsResponseMessage.md) |
 | `EVENT` | [`HostEventData`](../../MessageData.types/interfaces/host-event-data.md) |
-| `ERROR` | [`ErrorData`](../../../error/ErrorData/interfaces/error-data.md)<`string`\> |
+| `ERROR` | [`ErrorData`](../../../error/ErrorData/interfaces/error-data/index.md)<`string`\> |

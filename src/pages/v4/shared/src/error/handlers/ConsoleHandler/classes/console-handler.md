@@ -12,7 +12,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md)`T`
+- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md)`T`
 
 ## Constructors
 
@@ -26,7 +26,7 @@ new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>
 
 | Parameter   | Type                                                                     |
 | ----------- | ------------------------------------------------------------------------ |
-| `logLevel`? | [`LogLevel`](../../../CCEverywhereError.types/enumerations/log-level.md) |
+| `logLevel`? | [`LogLevel`](../../../CCEverywhereError.types/enumerations/log-level/index.md) |
 
 #### Returns
 
@@ -48,7 +48,7 @@ static info(information): void
 
 | Parameter     | Type                                                                                    |
 | ------------- | --------------------------------------------------------------------------------------- |
-| `information` | [`CCEverywhereInfo`](../../../CCEverywhereError.types/interfaces/cc-everywhere-info.md) |
+| `information` | [`CCEverywhereInfo`](../../../CCEverywhereError.types/interfaces/cc-everywhere-info/index.md) |
 
 #### Returns
 
@@ -98,7 +98,7 @@ error(error): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md).`error`
+[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`error`
 
 <hr />
 
@@ -112,7 +112,7 @@ warn(warning): void
 
 | Parameter | Type                                                                                    |
 | --------- | --------------------------------------------------------------------------------------- |
-| `warning` | [`CCEverywhereWarn`](../../../CCEverywhereError.types/interfaces/cc-everywhere-warn.md) |
+| `warning` | [`CCEverywhereWarn`](../../../CCEverywhereError.types/interfaces/cc-everywhere-warn/index.md) |
 
 #### Returns
 
@@ -120,7 +120,7 @@ warn(warning): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md).`warn`
+[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`warn`
 
 <hr />
 
@@ -134,7 +134,7 @@ info(information): void
 
 | Parameter     | Type                                                                                    |
 | ------------- | --------------------------------------------------------------------------------------- |
-| `information` | [`CCEverywhereInfo`](../../../CCEverywhereError.types/interfaces/cc-everywhere-info.md) |
+| `information` | [`CCEverywhereInfo`](../../../CCEverywhereError.types/interfaces/cc-everywhere-info/index.md) |
 
 #### Returns
 
@@ -142,4 +142,4 @@ info(information): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md).`info`
+[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`info`

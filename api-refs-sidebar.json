@@ -24,7 +24,7 @@
             "pages": [
               {
                 "title": "CCEverywhereInterface",
-                "path": "v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface.md"
+                "path": "v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface/index.md"
               }
             ],
             "path": "v4/sdk/src/3p/CCEverywhere.types/index.md"
@@ -218,35 +218,35 @@
             "pages": [
               {
                 "title": "LogLevel",
-                "path": "v4/shared/src/error/CCEverywhereError.types/enumerations/log-level.md"
+                "path": "v4/shared/src/error/CCEverywhereError.types/enumerations/log-level/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "CCEverywhereInfo",
-                    "path": "v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-info.md"
+                    "path": "v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-info/index.md"
                   },
                   {
                     "title": "CCEverywhereWarn",
-                    "path": "v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn.md"
+                    "path": "v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn/index.md"
                   }
                 ],
-                "path": "v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-info.md"
+                "path": "v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-info/index.md"
               },
               {
                 "title": "type-aliases",
                 "pages": [
                   {
                     "title": "ErrorCallback",
-                    "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback.md"
+                    "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/index.md"
                   },
                   {
                     "title": "ErrorCodeMessage",
                     "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message.md"
                   }
                 ],
-                "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback.md"
+                "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/index.md"
               }
             ],
             "path": "v4/shared/src/error/CCEverywhereError.types/index.md"
@@ -270,7 +270,7 @@
             "pages": [
               {
                 "title": "ErrorData",
-                "path": "v4/shared/src/error/ErrorData/interfaces/error-data.md"
+                "path": "v4/shared/src/error/ErrorData/interfaces/error-data/index.md"
               }
             ],
             "path": "v4/shared/src/error/ErrorData/index.md"
@@ -290,7 +290,7 @@
             "pages": [
               {
                 "title": "IErrorMessageHandler",
-                "path": "v4/shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler.md"
+                "path": "v4/shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler/index.md"
               }
             ],
             "path": "v4/shared/src/error/IErrorMessageHandler/index.md"

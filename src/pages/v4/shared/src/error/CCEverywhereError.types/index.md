@@ -6,18 +6,18 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [LogLevel](enumerations/log-level.md) | - |
+| [LogLevel](enumerations/log-level/index.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [CCEverywhereWarn](interfaces/cc-everywhere-warn.md) | - |
-| [CCEverywhereInfo](interfaces/cc-everywhere-info.md) | - |
+| [CCEverywhereWarn](interfaces/cc-everywhere-warn/index.md) | - |
+| [CCEverywhereInfo](interfaces/cc-everywhere-info/index.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [ErrorCallback](type-aliases/error-callback.md) | - |
+| [ErrorCallback](type-aliases/error-callback/index.md) | - |
 | [ErrorCodeMessage](type-aliases/error-code-message.md) | - |

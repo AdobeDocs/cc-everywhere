@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [IErrorMessageHandler](interfaces/i-error-message-handler.md) | - |
+| [IErrorMessageHandler](interfaces/i-error-message-handler/index.md) | - |

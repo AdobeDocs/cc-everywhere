@@ -12,7 +12,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md)<`T`\>
+- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md)<`T`\>
 
 ## Constructors
 
@@ -26,8 +26,8 @@ new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `hostErrorCallback` | [`ErrorCallback`](../../../CCEverywhereError.types/type-aliases/error-callback.md)<`T`\> |
-| `logLevel`? | [`LogLevel`](../../../CCEverywhereError.types/enumerations/log-level.md) |
+| `hostErrorCallback` | [`ErrorCallback`](../../../CCEverywhereError.types/type-aliases/error-callback/index.md)<`T`\> |
+| `logLevel`? | [`LogLevel`](../../../CCEverywhereError.types/enumerations/log-level/index.md) |
 
 #### Returns
 
@@ -57,7 +57,7 @@ error(error): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md).`error`
+[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`error`
 
 ***
 
@@ -73,7 +73,7 @@ warn(): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md).`warn`
+[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`warn`
 
 ***
 
@@ -89,4 +89,4 @@ info(): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler.md).`info`
+[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`info`

@@ -102,7 +102,7 @@ static createErrorFromData<T>(data): CCEverywhereError<T>
 
 | Parameter | Type                                                       |
 | --------- | ---------------------------------------------------------- |
-| `data`    | [`ErrorData`](../../ErrorData/interfaces/error-data.md) `T` |
+| `data`    | [`ErrorData`](../../ErrorData/interfaces/error-data/index.md) `T` |
 
 #### Returns
 
@@ -120,7 +120,7 @@ Get a plain-object representation of the error..
 
 #### Returns
 
-[`ErrorData`](../../ErrorData/interfaces/error-data.md) `T`
+[`ErrorData`](../../ErrorData/interfaces/error-data/index.md) `T`
 
 <hr />
 
