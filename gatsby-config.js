@@ -151,7 +151,7 @@ module.exports = {
         pages: [
           {
             title: "Adobe Express is not available",
-            path: "/guides/troubleshooting/unavailable.md",
+            path: "/guides/troubleshooting/express-unavailable-error.md",
           },
           {
             title: "FAQ",
