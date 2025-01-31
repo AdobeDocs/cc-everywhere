@@ -17,6 +17,9 @@
 
 | Interface | Description |
 | ------ | ------ |
+| [Blob](interfaces/Blob.md) | Custom interface that represents a Blob object. Should be used instead of default Blob type. |
+| [DataTypeMap](interfaces/DataTypeMap.md) | Represents a mapping of data types for assets. |
+| [AssetBase](interfaces/AssetBase.md) | Base interface for all asset types. |
 | [Size](interfaces/Size.md) | - |
 | [PixelSize](interfaces/PixelSize.md) | - |
 | [OutputAsset](interfaces/OutputAsset.md) | Information related to output asset. |

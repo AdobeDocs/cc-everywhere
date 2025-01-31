@@ -104,6 +104,24 @@ Re-exports [Scale](AppConfig.types/enumerations/Scale.md)
 
 ***
 
+### Blob
+
+Re-exports [Blob](Asset.types/interfaces/Blob.md)
+
+***
+
+### DataTypeMap
+
+Re-exports [DataTypeMap](Asset.types/interfaces/DataTypeMap.md)
+
+***
+
+### AssetBase
+
+Re-exports [AssetBase](Asset.types/interfaces/AssetBase.md)
+
+***
+
 ### AssetType
 
 Re-exports [AssetType](Asset.types/enumerations/AssetType.md)
