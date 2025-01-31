@@ -21,7 +21,7 @@ contributors:
 ### Enhancements
 
 - Added a new [Embed SDK Developer Journey](../index.md#embed-sdk-developer-journey) map to help developers navigate the resources available at different stages of their integration.
-- Added a new [Troubleshooting](../troubleshooting/express-unavailable-error.md) guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing. 
+- Added a new [Troubleshooting](../troubleshooting/express-unavailable-error.md) guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing.
 - Various small improvements and fixes across the documentation.
 
 ### Added

@@ -3,4 +3,3 @@
 ```ts
 type FeatureFlags: Record<string, String | Number | Boolean>;
 ```
-
