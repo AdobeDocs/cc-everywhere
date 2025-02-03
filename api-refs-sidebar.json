@@ -594,14 +594,14 @@
                     "pages": [
                       {
                         "title": "ConfigParams",
-                        "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/config-params.md"
+                        "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/config-params/index.md"
                       },
                       {
                         "title": "HostInfo",
                         "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/host-info.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/config-params.md"
+                    "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/config-params/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/3p/HostInfo.types/index.md"
@@ -661,52 +661,52 @@
                 "pages": [
                   {
                     "title": "EditorIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/editor-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/editor-intent/index.md"
                   },
                   {
                     "title": "ImageQuickActionIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/image-quick-action-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/image-quick-action-intent/index.md"
                   },
                   {
                     "title": "ModuleIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/module-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/module-intent/index.md"
                   },
                   {
                     "title": "ModuleSubCategory",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/module-sub-category.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/module-sub-category/index.md"
                   },
                   {
                     "title": "PdfQuickActionIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/pdf-quick-action-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/pdf-quick-action-intent/index.md"
                   },
                   {
                     "title": "QuickActionSubCategories",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/quick-action-sub-categories.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/quick-action-sub-categories/index.md"
                   },
                   {
                     "title": "VideoQuickActionIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/video-quick-action-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/video-quick-action-intent/index.md"
                   },
                   {
                     "title": "WarmupIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/warmup-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/enumerations/warmup-intent/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/ActionIntent.types/enumerations/editor-intent.md"
+                "path": "v4/shared/src/types/ActionIntent.types/enumerations/editor-intent/index.md"
               },
               {
                 "title": "type-aliases",
                 "pages": [
                   {
                     "title": "ActionIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/type-aliases/action-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/type-aliases/action-intent/index.md"
                   },
                   {
                     "title": "QuickActionIntent",
                     "path": "v4/shared/src/types/ActionIntent.types/type-aliases/Quickaction-intent.md"
                   }
                 ],
-                "path": "v4/shared/src/types/ActionIntent.types/type-aliases/action-intent.md"
+                "path": "v4/shared/src/types/ActionIntent.types/type-aliases/action-intent/index.md"
               }
             ],
             "path": "v4/shared/src/types/ActionIntent.types/index.md"
@@ -719,34 +719,34 @@
                 "pages": [
                   {
                     "title": "ColorTheme",
-                    "path": "v4/shared/src/types/AppConfig.types/enumerations/color-theme.md"
+                    "path": "v4/shared/src/types/AppConfig.types/enumerations/color-theme/index.md"
                   },
                   {
                     "title": "EditorPanelView",
-                    "path": "v4/shared/src/types/AppConfig.types/enumerations/editor-panel-view.md"
+                    "path": "v4/shared/src/types/AppConfig.types/enumerations/editor-panel-view/index.md"
                   },
                   {
                     "title": "Scale",
-                    "path": "v4/shared/src/types/AppConfig.types/enumerations/scale.md"
+                    "path": "v4/shared/src/types/AppConfig.types/enumerations/scale/index.md"
                   },
                   {
                     "title": "SpectrumTheme",
-                    "path": "v4/shared/src/types/AppConfig.types/enumerations/spectrum-theme.md"
+                    "path": "v4/shared/src/types/AppConfig.types/enumerations/spectrum-theme/index.md"
                   },
                   {
                     "title": "TemplateMediaType",
-                    "path": "v4/shared/src/types/AppConfig.types/enumerations/template-media-type.md"
+                    "path": "v4/shared/src/types/AppConfig.types/enumerations/template-media-type/index.md"
                   },
                   {
                     "title": "TemplateType",
-                    "path": "v4/shared/src/types/AppConfig.types/enumerations/template-type.md"
+                    "path": "v4/shared/src/types/AppConfig.types/enumerations/template-type/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/AppConfig.types/enumerations/color-theme.md"
+                "path": "v4/shared/src/types/AppConfig.types/enumerations/color-theme/index.md"
               },
               {
                 "title": "SearchCategory",
-                "path": "v4/shared/src/types/AppConfig.types/variables/search-category.md"
+                "path": "v4/shared/src/types/AppConfig.types/variables/search-category/index.md"
               }
             ],
             "path": "v4/shared/src/types/AppConfig.types/index.md"
@@ -759,59 +759,59 @@
                 "pages": [
                   {
                     "title": "AssetDataType",
-                    "path": "v4/shared/src/types/Asset.types/enumerations/asset-data-type.md"
+                    "path": "v4/shared/src/types/Asset.types/enumerations/asset-data-type/index.md"
                   },
                   {
                     "title": "AssetType",
-                    "path": "v4/shared/src/types/Asset.types/enumerations/asset-type.md"
+                    "path": "v4/shared/src/types/Asset.types/enumerations/asset-type/index.md"
                   },
                   {
                     "title": "ImageFileType",
-                    "path": "v4/shared/src/types/Asset.types/enumerations/image-file-type.md"
+                    "path": "v4/shared/src/types/Asset.types/enumerations/image-file-type/index.md"
                   },
                   {
                     "title": "PdfFileType",
-                    "path": "v4/shared/src/types/Asset.types/enumerations/pdf-file-type.md"
+                    "path": "v4/shared/src/types/Asset.types/enumerations/pdf-file-type/index.md"
                   },
                   {
                     "title": "SizeUnit",
-                    "path": "v4/shared/src/types/Asset.types/enumerations/size-unit.md"
+                    "path": "v4/shared/src/types/Asset.types/enumerations/size-unit/index.md"
                   },
                   {
                     "title": "VideoFileType",
-                    "path": "v4/shared/src/types/Asset.types/enumerations/video-file-type.md"
+                    "path": "v4/shared/src/types/Asset.types/enumerations/video-file-type/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Asset.types/enumerations/asset-data-type.md"
+                "path": "v4/shared/src/types/Asset.types/enumerations/asset-data-type/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "OutputAsset",
-                    "path": "v4/shared/src/types/Asset.types/interfaces/output-asset.md"
+                    "path": "v4/shared/src/types/Asset.types/interfaces/output-asset/index.md"
                   },
                   {
                     "title": "PixelSize",
-                    "path": "v4/shared/src/types/Asset.types/interfaces/pixel-size.md"
+                    "path": "v4/shared/src/types/Asset.types/interfaces/pixel-size/index.md"
                   },
                   {
                     "title": "Size",
-                    "path": "v4/shared/src/types/Asset.types/interfaces/size.md"
+                    "path": "v4/shared/src/types/Asset.types/interfaces/size/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Asset.types/interfaces/output-asset.md"
+                "path": "v4/shared/src/types/Asset.types/interfaces/output-asset/index.md"
               },
               {
                 "title": "type-aliases",
                 "pages": [
                   {
                     "title": "AspectRatio",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/aspect-ratio.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/aspect-ratio/index.md"
                   },
                   {
                     "title": "Asset",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/asset.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/asset/index.md"
                   },
                   {
                     "title": "Base64Asset",
@@ -823,15 +823,15 @@
                   },
                   {
                     "title": "FileType",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/file-type.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/file-type/index.md"
                   },
                   {
                     "title": "ImageDimensions",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/image-dimensions.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/image-dimensions/index.md"
                   },
                   {
                     "title": "ImageModuleFileTypes",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/image-module-file-types.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/image-module-file-types/index.md"
                   },
                   {
                     "title": "ProcessedImageDimensions",
@@ -842,21 +842,21 @@
                     "path": "v4/shared/src/types/Asset.types/type-aliases/Urlasset.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Asset.types/type-aliases/aspect-ratio.md"
+                "path": "v4/shared/src/types/Asset.types/type-aliases/aspect-ratio/index.md"
               },
               {
                 "title": "variables",
                 "pages": [
                   {
                     "title": "FileType",
-                    "path": "v4/shared/src/types/Asset.types/variables/file-type.md"
+                    "path": "v4/shared/src/types/Asset.types/variables/file-type/index.md"
                   },
                   {
                     "title": "ImageModuleFileTypes",
-                    "path": "v4/shared/src/types/Asset.types/variables/image-module-file-types.md"
+                    "path": "v4/shared/src/types/Asset.types/variables/image-module-file-types/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Asset.types/variables/file-type.md"
+                "path": "v4/shared/src/types/Asset.types/variables/file-type/index.md"
               }
             ],
             "path": "v4/shared/src/types/Asset.types/index.md"
@@ -1337,7 +1337,7 @@
                 "pages": [
                   {
                     "title": "ConfigParams",
-                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/config-params.md"
+                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/config-params/index.md"
                   },
                   {
                     "title": "HostInfo",
@@ -1352,7 +1352,7 @@
                     "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info-specified.md"
                   }
                 ],
-                "path": "v4/shared/src/types/HostInfo.types/type-aliases/config-params.md"
+                "path": "v4/shared/src/types/HostInfo.types/type-aliases/config-params/index.md"
               },
               {
                 "title": "HostTypeName",

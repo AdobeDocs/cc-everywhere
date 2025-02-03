@@ -8,5 +8,5 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `asset?` | [`Asset`](../../../Asset.types/type-aliases/asset.md) | - |
+| `asset?` | [`Asset`](../../../Asset.types/type-aliases/asset/index.md) | - |
 | `intent?` | [`EditFurtherIntent`](../../../ExportConfig.types/enumerations/edit-further-intent.md) | intent that needs to be performed on the asset |

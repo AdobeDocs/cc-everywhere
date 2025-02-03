@@ -8,8 +8,8 @@ type IntentChangeCallback: (oldIntent, newIntent) => IntentChangeConfig | undefi
 
 | Parameter | Type |
 | ------ | ------ |
-| `oldIntent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/action-intent.md) |
-| `newIntent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/action-intent.md) |
+| `oldIntent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/action-intent/index.md) |
+| `newIntent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/action-intent/index.md) |
 
 ## Returns
 

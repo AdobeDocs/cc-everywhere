@@ -10,10 +10,10 @@ Information related to output asset.
 
 | Property | Type | Inherited from |
 | ------ | ------ | ------ |
-| `type` | [`AssetType`](../enumerations/asset-type.md) | `AssetBase.type` |
+| `type` | [`AssetType`](../enumerations/asset-type/index.md) | `AssetBase.type` |
 | `name?` | `string` | `AssetBase.name` |
 | `dataType` | `BASE64` \| `URL` | `AssetBase.dataType` |
 | `data` | `string` | `AssetBase.data` |
 | `fileType` | `JPEG` \| `PNG` \| `PDF` \| `MP4` | - |
 | `fileName?` | `string` | - |
-| `size?` | [`PixelSize`](pixel-size.md) | - |
+| `size?` | [`PixelSize`](pixel-size/index.md) | - |

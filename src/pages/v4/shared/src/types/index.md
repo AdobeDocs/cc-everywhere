@@ -4,49 +4,49 @@
 
 ### EditorIntent
 
-Re-exports [EditorIntent](ActionIntent.types/enumerations/editor-intent.md)
+Re-exports [EditorIntent](ActionIntent.types/enumerations/editor-intent/index.md)
 
 <hr />
 
 ### ModuleIntent
 
-Re-exports [ModuleIntent](ActionIntent.types/enumerations/module-intent.md)
+Re-exports [ModuleIntent](ActionIntent.types/enumerations/module-intent/index.md)
 
 <hr />
 
 ### ImageQuickActionIntent
 
-Re-exports [ImageQuickActionIntent](ActionIntent.types/enumerations/image-quick-action-intent.md)
+Re-exports [ImageQuickActionIntent](ActionIntent.types/enumerations/image-quick-action-intent/index.md)
 
 <hr />
 
 ### VideoQuickActionIntent
 
-Re-exports [VideoQuickActionIntent](ActionIntent.types/enumerations/video-quick-action-intent.md)
+Re-exports [VideoQuickActionIntent](ActionIntent.types/enumerations/video-quick-action-intent/index.md)
 
 <hr />
 
 ### PdfQuickActionIntent
 
-Re-exports [PdfQuickActionIntent](ActionIntent.types/enumerations/pdf-quick-action-intent.md)
+Re-exports [PdfQuickActionIntent](ActionIntent.types/enumerations/pdf-quick-action-intent/index.md)
 
 <hr />
 
 ### WarmupIntent
 
-Re-exports [WarmupIntent](ActionIntent.types/enumerations/warmup-intent.md)
+Re-exports [WarmupIntent](ActionIntent.types/enumerations/warmup-intent/index.md)
 
 <hr />
 
 ### QuickActionSubCategories
 
-Re-exports [QuickActionSubCategories](ActionIntent.types/enumerations/quick-action-sub-categories.md)
+Re-exports [QuickActionSubCategories](ActionIntent.types/enumerations/quick-action-sub-categories/index.md)
 
 <hr />
 
 ### ModuleSubCategory
 
-Re-exports [ModuleSubCategory](ActionIntent.types/enumerations/module-sub-category.md)
+Re-exports [ModuleSubCategory](ActionIntent.types/enumerations/module-sub-category/index.md)
 
 <hr />
 
@@ -58,109 +58,109 @@ Re-exports [QuickActionIntent](ActionIntent.types/type-aliases/Quickaction-inten
 
 ### ActionIntent
 
-Re-exports [ActionIntent](ActionIntent.types/type-aliases/action-intent.md)
+Re-exports [ActionIntent](ActionIntent.types/type-aliases/action-intent/index.md)
 
 <hr />
 
 ### EditorPanelView
 
-Re-exports [EditorPanelView](AppConfig.types/enumerations/editor-panel-view.md)
+Re-exports [EditorPanelView](AppConfig.types/enumerations/editor-panel-view/index.md)
 
 <hr />
 
 ### SearchCategory
 
-Re-exports [SearchCategory](AppConfig.types/variables/search-category.md)
+Re-exports [SearchCategory](AppConfig.types/variables/search-category/index.md)
 
 <hr />
 
 ### TemplateType
 
-Re-exports [TemplateType](AppConfig.types/enumerations/template-type.md)
+Re-exports [TemplateType](AppConfig.types/enumerations/template-type/index.md)
 
 <hr />
 
 ### TemplateMediaType
 
-Re-exports [TemplateMediaType](AppConfig.types/enumerations/template-media-type.md)
+Re-exports [TemplateMediaType](AppConfig.types/enumerations/template-media-type/index.md)
 
 <hr />
 
 ### ColorTheme
 
-Re-exports [ColorTheme](AppConfig.types/enumerations/color-theme.md)
+Re-exports [ColorTheme](AppConfig.types/enumerations/color-theme/index.md)
 
 <hr />
 
 ### SpectrumTheme
 
-Re-exports [SpectrumTheme](AppConfig.types/enumerations/spectrum-theme.md)
+Re-exports [SpectrumTheme](AppConfig.types/enumerations/spectrum-theme/index.md)
 
 <hr />
 
 ### Scale
 
-Re-exports [Scale](AppConfig.types/enumerations/scale.md)
+Re-exports [Scale](AppConfig.types/enumerations/scale/index.md)
 
 <hr />
 
 ### AssetType
 
-Re-exports [AssetType](Asset.types/enumerations/asset-type.md)
+Re-exports [AssetType](Asset.types/enumerations/asset-type/index.md)
 
 <hr />
 
 ### AssetDataType
 
-Re-exports [AssetDataType](Asset.types/enumerations/asset-data-type.md)
+Re-exports [AssetDataType](Asset.types/enumerations/asset-data-type/index.md)
 
 <hr />
 
 ### SizeUnit
 
-Re-exports [SizeUnit](Asset.types/enumerations/size-unit.md)
+Re-exports [SizeUnit](Asset.types/enumerations/size-unit/index.md)
 
 <hr />
 
 ### ImageFileType
 
-Re-exports [ImageFileType](Asset.types/enumerations/image-file-type.md)
+Re-exports [ImageFileType](Asset.types/enumerations/image-file-type/index.md)
 
 <hr />
 
 ### VideoFileType
 
-Re-exports [VideoFileType](Asset.types/enumerations/video-file-type.md)
+Re-exports [VideoFileType](Asset.types/enumerations/video-file-type/index.md)
 
 <hr />
 
 ### PdfFileType
 
-Re-exports [PdfFileType](Asset.types/enumerations/pdf-file-type.md)
+Re-exports [PdfFileType](Asset.types/enumerations/pdf-file-type/index.md)
 
 <hr />
 
 ### ImageModuleFileTypes
 
-Re-exports [ImageModuleFileTypes](Asset.types/variables/image-module-file-types.md)
+Re-exports [ImageModuleFileTypes](Asset.types/variables/image-module-file-types/index.md)
 
 <hr />
 
 ### FileType
 
-Re-exports [FileType](Asset.types/variables/file-type.md)
+Re-exports [FileType](Asset.types/variables/file-type/index.md)
 
 <hr />
 
 ### Size
 
-Re-exports [Size](Asset.types/interfaces/size.md)
+Re-exports [Size](Asset.types/interfaces/size/index.md)
 
 <hr />
 
 ### PixelSize
 
-Re-exports [PixelSize](Asset.types/interfaces/pixel-size.md)
+Re-exports [PixelSize](Asset.types/interfaces/pixel-size/index.md)
 
 <hr />
 
@@ -184,25 +184,25 @@ Re-exports [BlobAsset](Asset.types/type-aliases/Blobasset.md)
 
 ### Asset
 
-Re-exports [Asset](Asset.types/type-aliases/asset.md)
+Re-exports [Asset](Asset.types/type-aliases/asset/index.md)
 
 <hr />
 
 ### OutputAsset
 
-Re-exports [OutputAsset](Asset.types/interfaces/output-asset.md)
+Re-exports [OutputAsset](Asset.types/interfaces/output-asset/index.md)
 
 <hr />
 
 ### AspectRatio
 
-Re-exports [AspectRatio](Asset.types/type-aliases/aspect-ratio.md)
+Re-exports [AspectRatio](Asset.types/type-aliases/aspect-ratio/index.md)
 
 <hr />
 
 ### ImageDimensions
 
-Re-exports [ImageDimensions](Asset.types/type-aliases/image-dimensions.md)
+Re-exports [ImageDimensions](Asset.types/type-aliases/image-dimensions/index.md)
 
 <hr />
 
@@ -706,7 +706,7 @@ Re-exports [ConfigParamsBase](HostInfo.types/interfaces/config-params-base.md)
 
 ### ConfigParams
 
-Re-exports [ConfigParams](HostInfo.types/type-aliases/config-params.md)
+Re-exports [ConfigParams](HostInfo.types/type-aliases/config-params/index.md)
 
 <hr />
 

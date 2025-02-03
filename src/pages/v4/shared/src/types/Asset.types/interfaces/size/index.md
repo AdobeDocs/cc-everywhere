@@ -2,7 +2,7 @@
 
 ## Extended by
 
-- [`PixelSize`](pixel-size.md)
+- [`PixelSize`](pixel-size/index.md)
 
 ## Properties
 
@@ -10,4 +10,4 @@
 | ------ | ------ | ------ |
 | `width` | `number` | **Minimum** 0 |
 | `height` | `number` | **Minimum** 0 |
-| `unit` | [`SizeUnit`](../enumerations/size-unit.md) | - |
+| `unit` | [`SizeUnit`](../enumerations/size-unit/index.md) | - |

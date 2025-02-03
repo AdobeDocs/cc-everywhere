@@ -8,7 +8,7 @@ type PublishCallback: (intent, publishParams) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `intent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/action-intent.md) |
+| `intent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/action-intent/index.md) |
 | `publishParams` | [`PublishParams`](../../PublishParams.types/interfaces/publish-params.md) |
 
 ## Returns

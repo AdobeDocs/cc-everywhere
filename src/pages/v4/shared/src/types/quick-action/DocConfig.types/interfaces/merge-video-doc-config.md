@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `assets?` | [`Asset`](../../../Asset.types/type-aliases/asset.md)[] |
+| `assets?` | [`Asset`](../../../Asset.types/type-aliases/asset/index.md)[] |

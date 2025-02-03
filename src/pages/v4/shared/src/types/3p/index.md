@@ -10,7 +10,7 @@ Re-exports [HostInfo](HostInfo.types/type-aliases/host-info.md)
 
 ### ConfigParams
 
-Re-exports [ConfigParams](HostInfo.types/type-aliases/config-params.md)
+Re-exports [ConfigParams](HostInfo.types/type-aliases/config-params/index.md)
 
 <hr />
 

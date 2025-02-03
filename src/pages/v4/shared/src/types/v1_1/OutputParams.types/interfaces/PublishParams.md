@@ -11,4 +11,4 @@ Asset related information received with onPublish callback.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `asset` | [`OutputAsset`](../../../Asset.types/interfaces/output-asset.md) | Asset which is exported |
+| `asset` | [`OutputAsset`](../../../Asset.types/interfaces/output-asset/index.md) | Asset which is exported |
