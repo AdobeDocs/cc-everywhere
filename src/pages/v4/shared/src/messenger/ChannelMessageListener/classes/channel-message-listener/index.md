@@ -83,7 +83,7 @@ setTarget(targetChannel, targetChannelInfo): void
 | Parameter           | Type                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------- |
 | `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)     |
-| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md) |
+| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md.md) |
 
 #### Returns
 
@@ -141,7 +141,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 #### Returns
 
-`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md)
+`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md.md)
 
 <hr />
 

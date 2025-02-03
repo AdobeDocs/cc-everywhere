@@ -391,7 +391,7 @@
                   },
                   {
                     "title": "TargetChannelInfo",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/target-channel-info.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/target-channel-info/index.md.md"
                   }
                 ],
                 "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/index.md"

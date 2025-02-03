@@ -144,7 +144,7 @@
                     - [interfaces](v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/index.md) 
                         - [ChannelMessage](v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/index.md) 
                         - [IChannelMessengerDelegate](v4/shared/src/messenger/ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md) 
-                        - [TargetChannelInfo](v4/shared/src/messenger/ChannelMessenger.types/interfaces/target-channel-info.md) 
+                        - [TargetChannelInfo](v4/shared/src/messenger/ChannelMessenger.types/interfaces/target-channel-info/index.md.md) 
                     - [type-aliases](v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter.md) 
                         - [MessageFilter](v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter.md) 
                         - [MessageListener](v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-listener.md) 
