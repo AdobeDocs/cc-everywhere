@@ -473,7 +473,7 @@
                 "pages": [
                   {
                     "title": "data-message-type/index.md",
-                    "path": "v4/shared/src/messenger/Message.types/type-aliases/Datamessage-type.md"
+                    "path": "v4/shared/src/messenger/Message.types/type-aliases/datamessage-type/index.md"
                   },
                   {
                     "title": "did-target-load-message/index.md",
@@ -492,7 +492,7 @@
                     "path": "v4/shared/src/messenger/Message.types/type-aliases/Simplemessage-type.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/Message.types/type-aliases/Datamessage-type.md"
+                "path": "v4/shared/src/messenger/Message.types/type-aliases/datamessage-type/index.md"
               }
             ],
             "path": "v4/shared/src/messenger/Message.types/index.md"
