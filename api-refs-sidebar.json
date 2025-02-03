@@ -557,22 +557,22 @@
                 "pages": [
                   {
                     "title": "CURRENT_PROTOCOL_VERSION",
-                    "path": "v4/shared/src/messenger/Protocol.types/variables/current-protocol-version.md"
+                    "path": "v4/shared/src/messenger/Protocol.types/variables/current-protocol-version/index.md"
                   },
                   {
                     "title": "EARLIEST_PROTOCOL_VERSION",
-                    "path": "v4/shared/src/messenger/Protocol.types/variables/earliest-protocol-version.md"
+                    "path": "v4/shared/src/messenger/Protocol.types/variables/earliest-protocol-version/index.md"
                   },
                   {
                     "title": "NEXT_PROTOCOL_VERSION",
-                    "path": "v4/shared/src/messenger/Protocol.types/variables/next-protocol-version.md"
+                    "path": "v4/shared/src/messenger/Protocol.types/variables/next-protocol-version/index.md"
                   },
                   {
                     "title": "PREVIOUS_PROTOCOL_VERSION",
-                    "path": "v4/shared/src/messenger/Protocol.types/variables/previous-protocol-version.md"
+                    "path": "v4/shared/src/messenger/Protocol.types/variables/previous-protocol-version/index.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/Protocol.types/variables/current-protocol-version.md"
+                "path": "v4/shared/src/messenger/Protocol.types/variables/current-protocol-version/index.md"
               }
             ],
             "path": "v4/shared/src/messenger/Protocol.types/index.md"

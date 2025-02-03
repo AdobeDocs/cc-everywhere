@@ -18,7 +18,7 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [CURRENT\_PROTOCOL\_VERSION](variables/current-protocol-version.md) | - |
-| [EARLIEST\_PROTOCOL\_VERSION](variables/earliest-protocol-version.md) | - |
-| [NEXT\_PROTOCOL\_VERSION](variables/next-protocol-version.md) | - |
-| [PREVIOUS\_PROTOCOL\_VERSION](variables/previous-protocol-version.md) | - |
+| [CURRENT\_PROTOCOL\_VERSION](variables/current-protocol-version/index.md) | - |
+| [EARLIEST\_PROTOCOL\_VERSION](variables/earliest-protocol-version/index.md) | - |
+| [NEXT\_PROTOCOL\_VERSION](variables/next-protocol-version/index.md) | - |
+| [PREVIOUS\_PROTOCOL\_VERSION](variables/previous-protocol-version/index.md) | - |

@@ -136,25 +136,25 @@ Re-exports [ProtocolVersion](Protocol.types/enumerations/protocol-version/index.
 
 ### CURRENT\_PROTOCOL\_VERSION
 
-Re-exports [CURRENT_PROTOCOL_VERSION](Protocol.types/variables/current-protocol-version.md)
+Re-exports [CURRENT_PROTOCOL_VERSION](Protocol.types/variables/current-protocol-version/index.md)
 
 <hr />
 
 ### EARLIEST\_PROTOCOL\_VERSION
 
-Re-exports [EARLIEST_PROTOCOL_VERSION](Protocol.types/variables/earliest-protocol-version.md)
+Re-exports [EARLIEST_PROTOCOL_VERSION](Protocol.types/variables/earliest-protocol-version/index.md)
 
 <hr />
 
 ### NEXT\_PROTOCOL\_VERSION
 
-Re-exports [NEXT_PROTOCOL_VERSION](Protocol.types/variables/next-protocol-version.md)
+Re-exports [NEXT_PROTOCOL_VERSION](Protocol.types/variables/next-protocol-version/index.md)
 
 <hr />
 
 ### PREVIOUS\_PROTOCOL\_VERSION
 
-Re-exports [PREVIOUS_PROTOCOL_VERSION](Protocol.types/variables/previous-protocol-version.md)
+Re-exports [PREVIOUS_PROTOCOL_VERSION](Protocol.types/variables/previous-protocol-version/index.md)
 
 <hr />
 
