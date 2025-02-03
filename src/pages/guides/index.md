@@ -74,7 +74,7 @@ To quickly integrate the Adobe Express Embed SDK, follow these initial steps:
 
 - **Quickstart Guide**: Begin with the [Quickstart guide](./quickstart/index.md) for a streamlined integration process.
 - **Demo App**: Explore the [Demo App](https://demo.expressembed.com/) to see example integrations in action.
-- **Sample Code**: Check out the [Sample Code](https://github.com/AdobeDocs/cc-everywhere/blob/main/v4-sample/sample.md) for integrating the V4 SDK into your project.
+- **Sample Code**: Check out the [Sample Code](https://github.com/AdobeDocs/cc-everywhere/blob/main/v4-sample/sample.md) for integrating the V4 SDK into your project, or follow our [Tutorials](./tutorials/index.md).
 - **Community Support**: If you have any questions, post them in the [community](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all) for assistance.
 
 ## What Can Adobe Express Embed SDK Do?
@@ -112,13 +112,6 @@ Explore our tools:
 - Access to Adobe’s stock photos and design elements.
 - AI-powered image generation features.
 - Flexible project management options to save designs within your platform or download them.
-
-## Developer Journey
-
-1. **Get an API key**: Refer to the [quickstart](./quickstart/index.md) guide.
-2. **Use documentation**: Utilize our [code sample](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample/sample.md) and [demo app](https://demo.expressembed.com/) code snippets.
-3. **Submit for review**: Submit your integration for [review](./review/index.md) by Adobe.
-4. **Share publicly**: Once approved, share the integration with your users!
 
 ## Additional resources
 
