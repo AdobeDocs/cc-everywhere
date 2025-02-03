@@ -114,7 +114,7 @@
                         - [CCEverywhereWarn](v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn/index.md) 
                     - [type-aliases](v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/index.md) 
                         - [ErrorCallback](v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/index.md) 
-                        - [ErrorCodeMessage](v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message.md) 
+                        - [ErrorCodeMessage](v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message/index.md) 
                 - [ErrorCodes](v4/shared/src/error/ErrorCodes/index.md) 
                     - [ErrorCode](v4/shared/src/error/ErrorCodes/enumerations/error-code.md) 
                     - [ErrorCodeMessages](v4/shared/src/error/ErrorCodes/variables/error-code-messages.md) 

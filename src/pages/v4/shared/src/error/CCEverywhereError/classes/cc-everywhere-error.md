@@ -76,7 +76,7 @@ customData?): CCEverywhereError<T>
 
 | Parameter          | Type                                                                                     |
 | ------------------ | ---------------------------------------------------------------------------------------- |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../CCEverywhereError.types/type-aliases/error-code-message.md) `T` |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../CCEverywhereError.types/type-aliases/error-code-message/index.md) `T` |
 | `subError?`        | `string` \| `number` \| `Error`                                                          |
 | `customData?`      | `unknown`                                                                                |
 

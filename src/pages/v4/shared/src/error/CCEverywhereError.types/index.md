@@ -20,4 +20,4 @@
 | Type alias | Description |
 | ------ | ------ |
 | [ErrorCallback](type-aliases/error-callback/index.md) | - |
-| [ErrorCodeMessage](type-aliases/error-code-message.md) | - |
+| [ErrorCodeMessage](type-aliases/error-code-message/index.md) | - |

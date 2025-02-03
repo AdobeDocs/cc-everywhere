@@ -243,7 +243,7 @@
                   },
                   {
                     "title": "ErrorCodeMessage",
-                    "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message.md"
+                    "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message/index.md"
                   }
                 ],
                 "path": "v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/index.md"
