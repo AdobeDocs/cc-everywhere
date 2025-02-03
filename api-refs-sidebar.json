@@ -489,7 +489,7 @@
                   },
                   {
                     "title": "SimpleMessageType/index.md",
-                    "path": "v4/shared/src/messenger/Message.types/type-aliases/Simplemessage-type.md"
+                    "path": "v4/shared/src/messenger/Message.types/type-aliases/simple-message-type/index.md"
                   }
                 ],
                 "path": "v4/shared/src/messenger/Message.types/type-aliases/data-message-type/index.md"

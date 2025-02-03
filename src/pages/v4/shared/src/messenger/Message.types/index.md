@@ -25,7 +25,7 @@
 | Type alias | Description |
 | ------ | ------ |
 | [data-message-type/index.md](type-aliases/data-message-type/index.md) | - |
-| [SimpleMessageType/index.md](type-aliases/Simplemessage-type.md) | - |
+| [SimpleMessageType/index.md](type-aliases/simple-message-type/index.md) | - |
 | [Message](type-aliases/message/index.md) | - |
 | [message-compat/index.md](type-aliases/message-compat/index.md.md) | - |
 | [did-target-load-message/index.md](type-aliases/did-target-load-message/index.md.md) | - |

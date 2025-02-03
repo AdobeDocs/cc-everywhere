@@ -40,7 +40,7 @@ Re-exports [data-message-type/index.md](Message.types/type-aliases/data-message-
 
 ### SimpleMessageType/index.md
 
-Re-exports [SimpleMessageType/index.md](Message.types/type-aliases/Simplemessage-type.md)
+Re-exports [SimpleMessageType/index.md](Message.types/type-aliases/simple-message-type/index.md)
 
 <hr />
 

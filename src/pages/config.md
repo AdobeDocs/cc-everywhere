@@ -166,7 +166,7 @@
                         - [did-target-load-message/index.md](v4/shared/src/messenger/Message.types/type-aliases/did-target-load-message/index.md.md) 
                         - [Message](v4/shared/src/messenger/Message.types/type-aliases/message/index.md) 
                         - [message-compat/index.md](v4/shared/src/messenger/Message.types/type-aliases/message-compat/index.md.md) 
-                        - [SimpleMessageType/index.md](v4/shared/src/messenger/Message.types/type-aliases/Simplemessage-type.md) 
+                        - [SimpleMessageType/index.md](v4/shared/src/messenger/Message.types/type-aliases/simple-message-type/index.md) 
                 - [MessageData.types](v4/shared/src/messenger/MessageData.types/index.md) 
                     - [HostEventType](v4/shared/src/messenger/MessageData.types/enumerations/host-event-type/index.md) 
                     - [interfaces](v4/shared/src/messenger/MessageData.types/interfaces/download-complete-event-data/index.md) 
