@@ -96,19 +96,13 @@ To make sure your review process goes smoothly, check off the tasks in this list
 
 ### 1. Set up your public profile
 
-If this is your first Adobe integration, set up your public profile.
+If this is your first Adobe integration, set up your public profile. If your app processes personal information, include a link to the privacy policy on your app’s website, per the Adobe Developer Agreement.
 
-### 2. Consent Screen details
-
-These details will appear on the consent screen that users will view when signing in to use your app or integration. Information from your public profile will also appear on this screen.
-
-If your app processes personal information, include a link to the privacy policy on your app’s website, per the Adobe Developer Agreement.
-
-### 3. Details for approval
+### 2. Details for approval
 
 Describe what your app does, to help Adobe review it for approval.
 
-### 4. Notes to reviewer
+### 3. Notes to reviewer
 
 Make sure you’ve included the following in the **Notes to reviewer** feild.
 
@@ -117,7 +111,7 @@ Make sure you’ve included the following in the **Notes to reviewer** feild.
 3. **Version** of the SDK you are using.
 4. List the intended behavior of any custom export buttons you use with the full editor, modules, or quick actions.
 
-### 5. Provide screenshots
+### 4. Provide screenshots
 
 Complete the **Screenshots for approval** section.
 
