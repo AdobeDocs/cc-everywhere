@@ -20,7 +20,7 @@
 
 | Type alias                                                   | Description |
 | ------------------------------------------------------------ | ----------- |
-| [MessageTarget](type-aliases/message-target.md)              | -           |
-| [TargetAddedCallback](type-aliases/target-added-callback.md) | -           |
-| [MessageListener](type-aliases/message-listener.md)          | -           |
-| [MessageFilter](type-aliases/message-filter.md)              | -           |
+| [MessageTarget](type-aliases/message-target/index.md)              | -           |
+| [TargetAddedCallback](type-aliases/target-added-callback/index.md) | -           |
+| [MessageListener](type-aliases/message-listener/index.md)          | -           |
+| [MessageFilter](type-aliases/message-filter/index.md)              | -           |

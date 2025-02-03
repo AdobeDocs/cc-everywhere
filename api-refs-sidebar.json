@@ -401,22 +401,22 @@
                 "pages": [
                   {
                     "title": "MessageFilter",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter/index.md"
                   },
                   {
                     "title": "MessageListener",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-listener.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-listener/index.md"
                   },
                   {
                     "title": "MessageTarget",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-target.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-target/index.md"
                   },
                   {
                     "title": "TargetAddedCallback",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/target-added-callback.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/target-added-callback/index.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter.md"
+                "path": "v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter/index.md"
               }
             ],
             "path": "v4/shared/src/messenger/ChannelMessenger.types/index.md"
