@@ -788,6 +788,18 @@
                 "title": "interfaces",
                 "pages": [
                   {
+                    "title": "AssetBase",
+                    "path": "/v4/shared/src/types/Asset.types/interfaces/AssetBase.md"
+                  },
+                  {
+                    "title": "Blob",
+                    "path": "/v4/shared/src/types/Asset.types/interfaces/Blob.md"
+                  },
+                  {
+                    "title": "DataTypeMap",
+                    "path": "/v4/shared/src/types/Asset.types/interfaces/DataTypeMap.md"
+                  },
+                  {
                     "title": "OutputAsset",
                     "path": "/v4/shared/src/types/Asset.types/interfaces/OutputAsset.md"
                   },
@@ -800,7 +812,7 @@
                     "path": "/v4/shared/src/types/Asset.types/interfaces/Size.md"
                   }
                 ],
-                "path": "/v4/shared/src/types/Asset.types/interfaces/OutputAsset.md"
+                "path": "/v4/shared/src/types/Asset.types/interfaces/AssetBase.md"
               },
               {
                 "title": "type-aliases",

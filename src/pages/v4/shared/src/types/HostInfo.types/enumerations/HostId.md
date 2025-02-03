@@ -6,6 +6,7 @@
 | ------ | ------ |
 | `OTHER` | `"Other"` |
 | `ACROBAT` | `"Acrobat"` |
+| `ACROBAT_READER` | `"ACROBAT_READER"` |
 | `ACROBAT_EXT` | `"ACROBAT_EXT"` |
 | `ADOBE_HOME` | `"ADOBE_HOME"` |
 | `CCD` | `"CCD"` |
@@ -14,4 +15,5 @@
 | `AEM_ASSETS` | `"AEM_ASSETS"` |
 | `AEM_ASSETS_CONTENT_HUB` | `"AEM_ASSETS_CONTENT_HUB"` |
 | `A_DOT_COM` | `"A_DOT_COM"` |
+| `GENSTUDIO` | `"GENSTUDIO"` |
 | `BRIDGE` | `"BRIDGE"` |

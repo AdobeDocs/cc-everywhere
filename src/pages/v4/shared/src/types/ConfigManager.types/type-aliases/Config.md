@@ -228,12 +228,6 @@ SEARCH_CATEGORY: string;
 EDIT_ACTION: string;
 ```
 
-### CLIENTS.CCX.EDITOR.QUERY\_PARAMS.KEYS.USE\_DOC\_MODEL
-
-```ts
-USE_DOC_MODEL: string;
-```
-
 ### CLIENTS.CCX.QUICK\_ACTION
 
 ```ts
@@ -642,6 +636,24 @@ DESKTOP: object;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.ACROBAT\_READER
+
+```ts
+ACROBAT_READER: object;
+```
+
+### CLIENTS.ACROBAT\_READER.DESKTOP
+
+```ts
+DESKTOP: object;
+```
+
+### CLIENTS.ACROBAT\_READER.DESKTOP.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
 ### CLIENTS.CCD
 
 ```ts
@@ -778,4 +790,16 @@ FIRST_PARTY_CLIENT_ID: string;
 
 ```ts
 THIRD_PARTY_CLIENT_ID: string;
+```
+
+### CLIENTS.GENSTUDIO
+
+```ts
+GENSTUDIO: object;
+```
+
+### CLIENTS.GENSTUDIO.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
 ```
