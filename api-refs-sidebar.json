@@ -383,18 +383,18 @@
                 "pages": [
                   {
                     "title": "ChannelMessage",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/index.md"
                   },
                   {
                     "title": "IChannelMessengerDelegate",
-                    "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md"
+                    "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md"
                   },
                   {
                     "title": "TargetChannelInfo",
                     "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/target-channel-info.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message.md"
+                "path": "v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/index.md"
               },
               {
                 "title": "type-aliases",

@@ -2,7 +2,7 @@
 
 ## Implements
 
-- [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md)
+- [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md)
 
 ## Constructors
 
@@ -68,7 +68,7 @@ didGetMessage<T>(message, requestId?): void
 
 #### Implementation of
 
-[`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md).`didGetMessage`
+[`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md).`didGetMessage`
 
 <hr />
 

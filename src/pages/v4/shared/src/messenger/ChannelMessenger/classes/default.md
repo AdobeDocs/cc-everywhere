@@ -17,7 +17,7 @@ new default(
 
 | Parameter                  | Type                                                                                                |
 | -------------------------- | --------------------------------------------------------------------------------------------------- |
-| `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md) |
+| `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md) |
 | `_sourceChannel`           | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                     |
 | `_sourceProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
 | `_targetProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |

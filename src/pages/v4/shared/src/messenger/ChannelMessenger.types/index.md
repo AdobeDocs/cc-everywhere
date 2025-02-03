@@ -12,9 +12,9 @@
 
 | Interface                                                               | Description |
 | ----------------------------------------------------------------------- | ----------- |
-| [ChannelMessage](interfaces/channel-message.md)                         | -           |
+| [ChannelMessage](interfaces/channel-message/index.md)                         | -           |
 | [TargetChannelInfo](interfaces/target-channel-info.md)                  | -           |
-| [IChannelMessengerDelegate](interfaces/i-channel-messenger-delegate.md) | -           |
+| [IChannelMessengerDelegate](interfaces/i-channel-messenger-delegate/index.md) | -           |
 
 ### Type Aliases
 
