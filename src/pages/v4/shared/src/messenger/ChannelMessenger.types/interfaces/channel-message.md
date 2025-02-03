@@ -10,6 +10,6 @@
 
 | Property        | Type                                                           |
 | --------------- | -------------------------------------------------------------- |
-| `sourceChannel` | [`MessageChannel`](../enumerations/message-channel.md)         |
+| `sourceChannel` | [`MessageChannel`](../enumerations/message-channel/index.md)         |
 | `requestId?`    | `string`                                                       |
 | `message`       | [`Message`](../../Message.types/type-aliases/Message.md)`T` |

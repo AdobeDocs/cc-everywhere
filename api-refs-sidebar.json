@@ -376,7 +376,7 @@
             "pages": [
               {
                 "title": "MessageChannel",
-                "path": "v4/shared/src/messenger/ChannelMessenger.types/enumerations/message-channel.md"
+                "path": "v4/shared/src/messenger/ChannelMessenger.types/enumerations/message-channel/index.md"
               },
               {
                 "title": "interfaces",

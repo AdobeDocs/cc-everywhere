@@ -6,7 +6,7 @@
 
 | Enumeration                                       | Description |
 | ------------------------------------------------- | ----------- |
-| [MessageChannel](enumerations/message-channel.md) | -           |
+| [MessageChannel](enumerations/message-channel/index.md) | -           |
 
 ### Interfaces
 

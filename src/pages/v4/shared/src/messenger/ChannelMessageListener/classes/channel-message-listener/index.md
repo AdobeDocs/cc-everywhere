@@ -20,7 +20,7 @@ new ChannelMessageListener(
 
 | Parameter                  | Type                                                                                  | Default value          |
 | -------------------------- | ------------------------------------------------------------------------------------- | ---------------------- |
-| `sourceChannel`            | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)       | `undefined`            |
+| `sourceChannel`            | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)       | `undefined`            |
 | `targetProtocolVersion`    | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)             | `ProtocolVersion.V1_3` |
 | `_filterRequestIdMismatch` | `boolean`                                                                             | `false`                |
 | `protocolHandlersModule`?  | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module.md) | `undefined`            |
@@ -82,7 +82,7 @@ setTarget(targetChannel, targetChannelInfo): void
 
 | Parameter           | Type                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------- |
-| `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)     |
+| `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)     |
 | `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md) |
 
 #### Returns
@@ -101,7 +101,7 @@ removeTarget(targetChannel): void
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -119,7 +119,7 @@ hasTarget(targetChannel): boolean
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -137,7 +137,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -155,7 +155,7 @@ addListenerForTarget(targetChannel, callback): void
 
 | Parameter       | Type                                                                                      |
 | --------------- | ----------------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)           |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)           |
 | `callback`      | [`TargetAddedCallback`](../../ChannelMessenger.types/type-aliases/target-added-callback.md) |
 
 #### Returns
@@ -180,7 +180,7 @@ sendMessage<T>(targetChannel, message): boolean
 
 | Parameter       | Type                                                                                                                                        |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)                                                             |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                             |
 | `message`       | [`SimpleMessageType`](../../Message.types/type-aliases/Simplemessage-type.md) \| [`Message`](../../Message.types/type-aliases/Message.md)`T` |
 
 #### Returns
@@ -207,7 +207,7 @@ Sends a message using a message channel that is compatible with older version of
 
 | Parameter       | Type                                                                            | Description          |
 | --------------- | ------------------------------------------------------------------------------- | -------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |                      |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |                      |
 | `message`       | [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)`T`         | The message to send. |
 
 #### Returns

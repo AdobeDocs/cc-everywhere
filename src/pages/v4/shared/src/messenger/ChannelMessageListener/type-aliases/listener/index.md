@@ -6,14 +6,14 @@ type Listener: <T>(message) => void;
 
 ## Type Parameters
 
-| Type Parameter |
-| ------ |
+| Type Parameter                                                                  |
+| ------------------------------------------------------------------------------- |
 | `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
 
 ## Parameters
 
-| Parameter | Type |
-| ------ | ------ |
+| Parameter | Type                                                         |
+| --------- | ------------------------------------------------------------ |
 | `message` | [`Message`](../../Message.types/type-aliases/Message.md) `T` |
 
 ## Returns

@@ -18,7 +18,7 @@ new default(
 | Parameter                  | Type                                                                                                |
 | -------------------------- | --------------------------------------------------------------------------------------------------- |
 | `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md) |
-| `_sourceChannel`           | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)                     |
+| `_sourceChannel`           | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                     |
 | `_sourceProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
 | `_targetProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
 | `_protocolHandlersModule`? | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module.md)               |
@@ -39,7 +39,7 @@ addTarget(targetChannel, targetChannelInfo): void
 
 | Parameter           | Type                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------- |
-| `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)     |
+| `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)     |
 | `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md) |
 
 #### Returns
@@ -58,7 +58,7 @@ removeTarget(targetChannel): void
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -76,7 +76,7 @@ hasTarget(targetChannel): boolean
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -94,7 +94,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -121,7 +121,7 @@ sendMessage<T>(
 
 | Parameter       | Type                                                                                                                                   |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md)                                                        |
+| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                        |
 | `message`       | [`Message`](../../Message.types/type-aliases/Message.md)`T` \| [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)`T` |
 | `requestId`?    | `string`                                                                                                                               |
 

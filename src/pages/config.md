@@ -140,7 +140,7 @@
                 - [ChannelMessenger](v4/shared/src/messenger/ChannelMessenger/index.md) 
                     - [default](v4/shared/src/messenger/ChannelMessenger/classes/default.md) 
                 - [ChannelMessenger.types](v4/shared/src/messenger/ChannelMessenger.types/index.md) 
-                    - [MessageChannel](v4/shared/src/messenger/ChannelMessenger.types/enumerations/message-channel.md) 
+                    - [MessageChannel](v4/shared/src/messenger/ChannelMessenger.types/enumerations/message-channel/index.md) 
                     - [interfaces](v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message.md) 
                         - [ChannelMessage](v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message.md) 
                         - [IChannelMessengerDelegate](v4/shared/src/messenger/ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md) 
