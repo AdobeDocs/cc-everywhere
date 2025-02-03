@@ -34,7 +34,7 @@ Re-exports [MessageDataMap](Message.types/interfaces/message-data-map/index.md)
 
 ### data-message-type/index.md
 
-Re-exports [data-message-type/index.md](Message.types/type-aliases/datamessage-type/index.md)
+Re-exports [data-message-type/index.md](Message.types/type-aliases/data-message-type/index.md)
 
 <hr />
 
