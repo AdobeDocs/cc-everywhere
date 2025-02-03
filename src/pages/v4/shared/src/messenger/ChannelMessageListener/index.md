@@ -6,7 +6,7 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ChannelMessageListener](classes/channel-message-listener.md) | - |
+| [ChannelMessageListener](classes/channel-message-listener/index.md) | - |
 
 ### Type Aliases
 

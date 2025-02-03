@@ -27,7 +27,7 @@ new ChannelMessageListener(
 
 #### Returns
 
-[`ChannelMessageListener`](channel-message-listener.md)
+[`ChannelMessageListener`](channel-message-listener/index.md)
 
 ## Methods
 

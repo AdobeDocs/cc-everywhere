@@ -135,7 +135,7 @@
                         - [HostErrorHandler](v4/shared/src/error/handlers/HostErrorHandler/classes/Hosterror-handler.md) 
             - [messenger](v4/shared/src/messenger/index.md) 
                 - [ChannelMessageListener](v4/shared/src/messenger/ChannelMessageListener/index.md) 
-                    - [ChannelMessageListener](v4/shared/src/messenger/ChannelMessageListener/classes/channel-message-listener.md) 
+                    - [ChannelMessageListener](v4/shared/src/messenger/ChannelMessageListener/classes/channel-message-listener/index.md) 
                     - [Listener](v4/shared/src/messenger/ChannelMessageListener/type-aliases/Listener.md) 
                 - [ChannelMessenger](v4/shared/src/messenger/ChannelMessenger/index.md) 
                     - [default](v4/shared/src/messenger/ChannelMessenger/classes/default.md) 

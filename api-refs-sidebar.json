@@ -352,7 +352,7 @@
             "pages": [
               {
                 "title": "ChannelMessageListener",
-                "path": "v4/shared/src/messenger/ChannelMessageListener/classes/channel-message-listener.md"
+                "path": "v4/shared/src/messenger/ChannelMessageListener/classes/channel-message-listener/index.md"
               },
               {
                 "title": "Listener",
