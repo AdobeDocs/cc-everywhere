@@ -6,16 +6,16 @@
 
 | Enumeration                                      | Description |
 | ------------------------------------------------ | ----------- |
-| [HostEventType](enumerations/host-event-type.md) | -           |
+| [HostEventType](enumerations/host-event-type/index.md) | -           |
 
 ### Interfaces
 
 | Interface                                                                  | Description |
 | -------------------------------------------------------------------------- | ----------- |
-| [MessageData](interfaces/message-data.md)                                  | -           |
-| [HostEventData](interfaces/host-event-data.md)                             | -           |
-| [IntentChangeEventData](interfaces/intent-change-event-data.md)            | -           |
-| [UpdateCloseButtonEventData](interfaces/update-close-button-event-data.md) | -           |
-| [URLInfoEventData](interfaces/url-info-event-data.md)                      | -           |
-| [ExportInfoEventData](interfaces/export-info-event-data.md)                | -           |
-| [DownloadCompleteEventData](interfaces/download-complete-eventData.md)     | -           |
+| [MessageData](interfaces/message-data/index.md)                                  | -           |
+| [HostEventData](interfaces/host-event-data/index.md)                             | -           |
+| [IntentChangeEventData](interfaces/intent-change-event-data/index.md)            | -           |
+| [UpdateCloseButtonEventData](interfaces/update-close-button-event-data/index.md) | -           |
+| [URLInfoEventData](interfaces/url-info-event-data/index.md)                      | -           |
+| [ExportInfoEventData](interfaces/export-info-event-data/index.md)                | -           |
+| [DownloadCompleteEventData](interfaces/download-complete-event-data/index.md)     | -           |

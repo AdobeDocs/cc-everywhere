@@ -429,66 +429,66 @@
                 "pages": [
                   {
                     "title": "CancelReason",
-                    "path": "v4/shared/src/messenger/Message.types/enumerations/cancel-reason.md"
+                    "path": "v4/shared/src/messenger/Message.types/enumerations/cancel-reason/index.md"
                   },
                   {
                     "title": "LoadStatus",
-                    "path": "v4/shared/src/messenger/Message.types/enumerations/load-status.md"
+                    "path": "v4/shared/src/messenger/Message.types/enumerations/load-status/index.md"
                   },
                   {
                     "title": "MessageType",
-                    "path": "v4/shared/src/messenger/Message.types/enumerations/message-type.md"
+                    "path": "v4/shared/src/messenger/Message.types/enumerations/message-type/index.md"
                   },
                   {
                     "title": "Status",
-                    "path": "v4/shared/src/messenger/Message.types/enumerations/status.md"
+                    "path": "v4/shared/src/messenger/Message.types/enumerations/status/index.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/Message.types/enumerations/cancel-reason.md"
+                "path": "v4/shared/src/messenger/Message.types/enumerations/cancel-reason/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "CancelMessage",
-                    "path": "v4/shared/src/messenger/Message.types/interfaces/CancelMessage.md"
+                    "path": "v4/shared/src/messenger/Message.types/interfaces/cancel-message/index.md"
                   },
                   {
                     "title": "MessageDataMap",
-                    "path": "v4/shared/src/messenger/Message.types/interfaces/MessageDataMap.md"
+                    "path": "v4/shared/src/messenger/Message.types/interfaces/message-data-map/index.md"
                   },
                   {
-                    "title": "ParamsResponseMessage",
-                    "path": "v4/shared/src/messenger/Message.types/interfaces/ParamsResponseMessage.md"
+                    "title": "params-response-message/index.md",
+                    "path": "v4/shared/src/messenger/Message.types/interfaces/params-response-message/index.md.md"
                   },
                   {
-                    "title": "TokenResponseMessage",
-                    "path": "v4/shared/src/messenger/Message.types/interfaces/TokenResponseMessage.md"
+                    "title": "token-response-message/index.md",
+                    "path": "v4/shared/src/messenger/Message.types/interfaces/token-response-message/index.md.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/Message.types/interfaces/CancelMessage.md"
+                "path": "v4/shared/src/messenger/Message.types/interfaces/cancel-message/index.md"
               },
               {
                 "title": "type-aliases",
                 "pages": [
                   {
-                    "title": "DataMessageType",
+                    "title": "data-message-type/index.md",
                     "path": "v4/shared/src/messenger/Message.types/type-aliases/Datamessage-type.md"
                   },
                   {
-                    "title": "DidTargetLoadMessage",
-                    "path": "v4/shared/src/messenger/Message.types/type-aliases/DidTargetLoadMessage.md"
+                    "title": "did-target-load-message/index.md",
+                    "path": "v4/shared/src/messenger/Message.types/type-aliases/did-target-load-message/index.md.md"
                   },
                   {
                     "title": "Message",
-                    "path": "v4/shared/src/messenger/Message.types/type-aliases/Message.md"
+                    "path": "v4/shared/src/messenger/Message.types/type-aliases/message/index.md"
                   },
                   {
-                    "title": "MessageCompat",
-                    "path": "v4/shared/src/messenger/Message.types/type-aliases/MessageCompat.md"
+                    "title": "message-compat/index.md",
+                    "path": "v4/shared/src/messenger/Message.types/type-aliases/message-compat/index.md.md"
                   },
                   {
-                    "title": "SimpleMessageType",
+                    "title": "SimpleMessageType/index.md",
                     "path": "v4/shared/src/messenger/Message.types/type-aliases/Simplemessage-type.md"
                   }
                 ],
@@ -502,41 +502,41 @@
             "pages": [
               {
                 "title": "HostEventType",
-                "path": "v4/shared/src/messenger/MessageData.types/enumerations/host-event-type.md"
+                "path": "v4/shared/src/messenger/MessageData.types/enumerations/host-event-type/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "DownloadCompleteEventData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/download-complete-eventData.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/download-complete-event-data/index.md"
                   },
                   {
                     "title": "ExportInfoEventData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/export-info-event-data.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/export-info-event-data/index.md"
                   },
                   {
                     "title": "HostEventData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/host-event-data.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/host-event-data/index.md"
                   },
                   {
                     "title": "IntentChangeEventData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/intent-change-event-data.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/intent-change-event-data/index.md"
                   },
                   {
                     "title": "MessageData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/message-data.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/message-data/index.md"
                   },
                   {
                     "title": "URLInfoEventData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/url-info-event-data.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/url-info-event-data/index.md"
                   },
                   {
                     "title": "UpdateCloseButtonEventData",
-                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/update-close-button-event-data.md"
+                    "path": "v4/shared/src/messenger/MessageData.types/interfaces/update-close-button-event-data/index.md"
                   }
                 ],
-                "path": "v4/shared/src/messenger/MessageData.types/interfaces/download-complete-eventData.md"
+                "path": "v4/shared/src/messenger/MessageData.types/interfaces/download-complete-event-data/index.md"
               }
             ],
             "path": "v4/shared/src/messenger/MessageData.types/index.md"
@@ -546,11 +546,11 @@
             "pages": [
               {
                 "title": "ProtocolVersion",
-                "path": "v4/shared/src/messenger/Protocol.types/enumerations/protocol-version.md"
+                "path": "v4/shared/src/messenger/Protocol.types/enumerations/protocol-version/index.md"
               },
               {
                 "title": "ProtocolHandlersModule",
-                "path": "v4/shared/src/messenger/Protocol.types/interfaces/protocol-handlers-module.md"
+                "path": "v4/shared/src/messenger/Protocol.types/interfaces/protocol-handlers-module/index.md"
               },
               {
                 "title": "variables",

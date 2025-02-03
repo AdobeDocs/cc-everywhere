@@ -8,13 +8,13 @@ type Listener: <T>(message) => void;
 
 | Type Parameter                                                                  |
 | ------------------------------------------------------------------------------- |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 
 ## Parameters
 
 | Parameter | Type                                                         |
 | --------- | ------------------------------------------------------------ |
-| `message` | [`Message`](../../Message.types/type-aliases/Message.md) `T` |
+| `message` | [`Message`](../../Message.types/type-aliases/message/index.md) `T` |
 
 ## Returns
 

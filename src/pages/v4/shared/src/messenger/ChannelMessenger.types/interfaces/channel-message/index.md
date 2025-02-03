@@ -4,7 +4,7 @@
 
 | Type Parameter                                                                  |
 | ------------------------------------------------------------------------------- |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 
 ## Properties
 
@@ -12,4 +12,4 @@
 | --------------- | ------------------------------------------------------------ |
 | `sourceChannel` | [`MessageChannel`](../enumerations/message-channel/index.md) |
 | `requestId?`    | `string`                                                     |
-| `message`       | [`Message`](../../Message.types/type-aliases/Message.md)`T`  |
+| `message`       | [`Message`](../../Message.types/type-aliases/message/index.md)`T`  |

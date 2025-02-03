@@ -19,9 +19,9 @@ new default(
 | -------------------------- | --------------------------------------------------------------------------------------------------- |
 | `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md) |
 | `_sourceChannel`           | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                     |
-| `_sourceProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
-| `_targetProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)                           |
-| `_protocolHandlersModule`? | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module.md)               |
+| `_sourceProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version/index.md)                           |
+| `_targetProtocolVersion`   | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version/index.md)                           |
+| `_protocolHandlersModule`? | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module/index.md)               |
 
 #### Returns
 
@@ -115,14 +115,14 @@ sendMessage<T>(
 
 | Type Parameter                                                                 |
 | ------------------------------------------------------------------------------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 
 #### Parameters
 
 | Parameter       | Type                                                                                                                                   |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                        |
-| `message`       | [`Message`](../../Message.types/type-aliases/Message.md)`T` \| [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)`T` |
+| `message`       | [`Message`](../../Message.types/type-aliases/message/index.md)`T` \| [`message-compat/index.md`](../../Message.types/type-aliases/message-compat/index.md.md)`T` |
 | `requestId`?    | `string`                                                                                                                               |
 
 #### Returns

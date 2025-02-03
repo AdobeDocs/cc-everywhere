@@ -8,7 +8,7 @@ type EventCallback: (message) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`HostEventData`](../../../messenger/MessageData.types/interfaces/host-event-data.md) |
+| `message` | [`HostEventData`](../../../messenger/MessageData.types/interfaces/host-event-data/index.md) |
 
 ## Returns
 

@@ -4,4 +4,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `reason` | [`CancelReason`](../enumerations/cancel-reason.md) |
+| `reason` | [`CancelReason`](../enumerations/cancel-reason/index.md) |

@@ -1,7 +1,7 @@
-# Type Alias: DataMessageType
+# Type Alias: data-message-type/index.md
 
 ```ts
-type DataMessageType: 
+type data-message-type/index.md: 
   | MessageType.DID_TARGET_LOAD
   | MessageType.DID_PUBLISH
   | MessageType.CANCEL

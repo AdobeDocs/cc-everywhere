@@ -1,7 +1,7 @@
-# Type Alias: Message<T\>
+# Type Alias: Message T
 
 ```ts
-type Message<T>: T extends DataMessageType ? object : object;
+type Message<T>: T extends data-message-type/index.md ? object : object;
 ```
 
 ## Type Parameters

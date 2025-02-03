@@ -1,7 +1,7 @@
-# Type Alias: MessageCompat<T\>
+# Type Alias: message-compat/index.md T
 
 ```ts
-type MessageCompat<T>: object;
+type message-compat/index.md<T>: object;
 ```
 
 ## Type Parameters

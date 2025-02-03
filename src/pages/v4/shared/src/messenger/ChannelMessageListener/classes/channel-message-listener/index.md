@@ -21,9 +21,9 @@ new ChannelMessageListener(
 | Parameter                  | Type                                                                                  | Default value          |
 | -------------------------- | ------------------------------------------------------------------------------------- | ---------------------- |
 | `sourceChannel`            | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)       | `undefined`            |
-| `targetProtocolVersion`    | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version.md)             | `ProtocolVersion.V1_3` |
+| `targetProtocolVersion`    | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version/index.md)             | `ProtocolVersion.V1_3` |
 | `_filterRequestIdMismatch` | `boolean`                                                                             | `false`                |
-| `protocolHandlersModule`?  | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module.md) | `undefined`            |
+| `protocolHandlersModule`?  | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module/index.md) | `undefined`            |
 
 #### Returns
 
@@ -53,13 +53,13 @@ didGetMessage<T>(message, requestId?): void
 
 | Type Parameter                                                                 |
 | ------------------------------------------------------------------------------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 
 #### Parameters
 
 | Parameter    | Type                                                        |
 | ------------ | ----------------------------------------------------------- |
-| `message`    | [`Message`](../../Message.types/type-aliases/Message.md)`T` |
+| `message`    | [`Message`](../../Message.types/type-aliases/message/index.md)`T` |
 | `requestId`? | `string`                                                    |
 
 #### Returns
@@ -174,14 +174,14 @@ sendMessage<T>(targetChannel, message): boolean
 
 | Type Parameter                                                                 |
 | ------------------------------------------------------------------------------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 
 #### Parameters
 
 | Parameter       | Type                                                                                                                                        |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                             |
-| `message`       | [`SimpleMessageType`](../../Message.types/type-aliases/Simplemessage-type.md) \| [`Message`](../../Message.types/type-aliases/Message.md)`T` |
+| `message`       | [`SimpleMessageType/index.md`](../../Message.types/type-aliases/Simplemessage-type.md) \| [`Message`](../../Message.types/type-aliases/message/index.md)`T` |
 
 #### Returns
 
@@ -201,14 +201,14 @@ Sends a message using a message channel that is compatible with older version of
 
 | Type Parameter                                                                 | Description                         |
 | ------------------------------------------------------------------------------ | ----------------------------------- |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) | The type of the message being sent. |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) | The type of the message being sent. |
 
 #### Parameters
 
 | Parameter       | Type                                                                            | Description          |
 | --------------- | ------------------------------------------------------------------------------- | -------------------- |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |                      |
-| `message`       | [`MessageCompat`](../../Message.types/type-aliases/MessageCompat.md)`T`         | The message to send. |
+| `message`       | [`message-compat/index.md`](../../Message.types/type-aliases/message-compat/index.md.md)`T`         | The message to send. |
 
 #### Returns
 
@@ -231,7 +231,7 @@ addListener(
 
 | Parameter        | Type                                                                          | Description                                                                                                                                |
 | ---------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `messageType`    | [`MessageType`](../../Message.types/enumerations/message-type.md)              | Listener is invoked for incoming message of this message type.                                                                             |
+| `messageType`    | [`MessageType`](../../Message.types/enumerations/message-type/index.md)              | Listener is invoked for incoming message of this message type.                                                                             |
 | `listener`       | [`Listener`](../type-aliases/Listener.md)                                     | Callback function that is invoked when there is an incoming message.                                                                       |
 | `messageFilter`? | [`MessageFilter`](../../ChannelMessenger.types/type-aliases/message-filter/index.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
 
@@ -251,7 +251,7 @@ removeListener(messageType, listener): void
 
 | Parameter     | Type                                                             |
 | ------------- | ---------------------------------------------------------------- |
-| `messageType` | [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `messageType` | [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 | `listener`    | [`Listener`](../type-aliases/Listener.md)                        |
 
 #### Returns

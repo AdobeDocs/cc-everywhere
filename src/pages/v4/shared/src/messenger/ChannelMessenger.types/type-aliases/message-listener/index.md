@@ -8,7 +8,7 @@ type MessageListener: <T>(event) => void;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
 
 ## Parameters
 

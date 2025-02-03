@@ -6,13 +6,13 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ProtocolVersion](enumerations/protocol-version.md) | - |
+| [ProtocolVersion](enumerations/protocol-version/index.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [ProtocolHandlersModule](interfaces/protocol-handlers-module.md) | - |
+| [ProtocolHandlersModule](interfaces/protocol-handlers-module/index.md) | - |
 
 ### Variables
 

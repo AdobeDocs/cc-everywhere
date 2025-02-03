@@ -10,127 +10,127 @@ Re-exports [Status](Message.types/enumerations/status.md)
 
 ### LoadStatus
 
-Re-exports [LoadStatus](Message.types/enumerations/load-status.md)
+Re-exports [LoadStatus](Message.types/enumerations/load-status/index.md)
 
 <hr />
 
 ### CancelReason
 
-Re-exports [CancelReason](Message.types/enumerations/cancel-reason.md)
+Re-exports [CancelReason](Message.types/enumerations/cancel-reason/index.md)
 
 <hr />
 
 ### MessageType
 
-Re-exports [MessageType](Message.types/enumerations/message-type.md)
+Re-exports [MessageType](Message.types/enumerations/message-type/index.md)
 
 <hr />
 
 ### MessageDataMap
 
-Re-exports [MessageDataMap](Message.types/interfaces/MessageDataMap.md)
+Re-exports [MessageDataMap](Message.types/interfaces/message-data-map/index.md)
 
 <hr />
 
-### DataMessageType
+### data-message-type/index.md
 
-Re-exports [DataMessageType](Message.types/type-aliases/Datamessage-type.md)
+Re-exports [data-message-type/index.md](Message.types/type-aliases/Datamessage-type.md)
 
 <hr />
 
-### SimpleMessageType
+### SimpleMessageType/index.md
 
-Re-exports [SimpleMessageType](Message.types/type-aliases/Simplemessage-type.md)
+Re-exports [SimpleMessageType/index.md](Message.types/type-aliases/Simplemessage-type.md)
 
 <hr />
 
 ### Message
 
-Re-exports [Message](Message.types/type-aliases/Message.md)
+Re-exports [Message](Message.types/type-aliases/message/index.md)
 
 <hr />
 
-### MessageCompat
+### message-compat/index.md
 
-Re-exports [MessageCompat](Message.types/type-aliases/MessageCompat.md)
+Re-exports [message-compat/index.md](Message.types/type-aliases/message-compat/index.md.md)
 
 <hr />
 
-### DidTargetLoadMessage
+### did-target-load-message/index.md
 
-Re-exports [DidTargetLoadMessage](Message.types/type-aliases/DidTargetLoadMessage.md)
+Re-exports [did-target-load-message/index.md](Message.types/type-aliases/did-target-load-message/index.md.md)
 
 <hr />
 
 ### CancelMessage
 
-Re-exports [CancelMessage](Message.types/interfaces/CancelMessage.md)
+Re-exports [CancelMessage](Message.types/interfaces/cancel-message/index.md)
 
 <hr />
 
-### TokenResponseMessage
+### token-response-message/index.md
 
-Re-exports [TokenResponseMessage](Message.types/interfaces/TokenResponseMessage.md)
+Re-exports [token-response-message/index.md](Message.types/interfaces/token-response-message/index.md.md)
 
 <hr />
 
-### ParamsResponseMessage
+### params-response-message/index.md
 
-Re-exports [ParamsResponseMessage](Message.types/interfaces/ParamsResponseMessage.md)
+Re-exports [params-response-message/index.md](Message.types/interfaces/params-response-message/index.md.md)
 
 <hr />
 
 ### MessageData
 
-Re-exports [MessageData](MessageData.types/interfaces/message-data.md)
+Re-exports [MessageData](MessageData.types/interfaces/message-data/index.md)
 
 <hr />
 
 ### HostEventType
 
-Re-exports [HostEventType](MessageData.types/enumerations/host-event-type.md)
+Re-exports [HostEventType](MessageData.types/enumerations/host-event-type/index.md)
 
 <hr />
 
 ### HostEventData
 
-Re-exports [HostEventData](MessageData.types/interfaces/host-event-data.md)
+Re-exports [HostEventData](MessageData.types/interfaces/host-event-data/index.md)
 
 <hr />
 
 ### IntentChangeEventData
 
-Re-exports [IntentChangeEventData](MessageData.types/interfaces/intent-change-event-data.md)
+Re-exports [IntentChangeEventData](MessageData.types/interfaces/intent-change-event-data/index.md)
 
 <hr />
 
 ### UpdateCloseButtonEventData
 
-Re-exports [UpdateCloseButtonEventData](MessageData.types/interfaces/update-close-button-event-data.md)
+Re-exports [UpdateCloseButtonEventData](MessageData.types/interfaces/update-close-button-event-data/index.md)
 
 <hr />
 
 ### URLInfoEventData
 
-Re-exports [URLInfoEventData](MessageData.types/interfaces/url-info-event-data.md)
+Re-exports [URLInfoEventData](MessageData.types/interfaces/url-info-event-data/index.md)
 
 <hr />
 
 ### ExportInfoEventData
 
-Re-exports [ExportInfoEventData](MessageData.types/interfaces/export-info-event-data.md)
+Re-exports [ExportInfoEventData](MessageData.types/interfaces/export-info-event-data/index.md)
 
 <hr />
 
 ### DownloadCompleteEventData
 
-Re-exports [DownloadCompleteEventData](MessageData.types/interfaces/download-complete-eventData.md)
+Re-exports [DownloadCompleteEventData](MessageData.types/interfaces/download-complete-event-data/index.md)
 
 <hr />
 
 ### ProtocolVersion
 
-Re-exports [ProtocolVersion](Protocol.types/enumerations/protocol-version.md)
+Re-exports [ProtocolVersion](Protocol.types/enumerations/protocol-version/index.md)
 
 <hr />
 
@@ -160,4 +160,4 @@ Re-exports [PREVIOUS_PROTOCOL_VERSION](Protocol.types/variables/previous-protoco
 
 ### ProtocolHandlersModule
 
-Re-exports [ProtocolHandlersModule](Protocol.types/interfaces/protocol-handlers-module.md)
+Re-exports [ProtocolHandlersModule](Protocol.types/interfaces/protocol-handlers-module/index.md)
