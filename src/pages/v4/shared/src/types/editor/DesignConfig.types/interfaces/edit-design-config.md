@@ -6,7 +6,7 @@
 
 ## Extended by
 
-- [`EditDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/edit-design-config.md)
+- [`EditDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/edit-design-config/index.md)
 
 ## Properties
 

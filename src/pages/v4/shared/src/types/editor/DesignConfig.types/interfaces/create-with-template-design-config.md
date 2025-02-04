@@ -6,7 +6,7 @@
 
 ## Extended by
 
-- [`CreateWithTemplateDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/create-with-template-design-config.md)
+- [`CreateWithTemplateDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/create-with-template-design-config/index.md)
 
 ## Properties
 

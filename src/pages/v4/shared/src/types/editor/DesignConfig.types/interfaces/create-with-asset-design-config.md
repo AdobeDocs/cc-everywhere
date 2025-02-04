@@ -6,7 +6,7 @@
 
 ## Extended by
 
-- [`CreateWithAssetDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/create-with-asset-design-config.md)
+- [`CreateWithAssetDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/create-with-asset-design-config/index.md)
 
 ## Properties
 

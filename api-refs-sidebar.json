@@ -627,22 +627,22 @@
                         "pages": [
                           {
                             "title": "CreateDesignConfig",
-                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-design-config.md"
+                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-design-config/index.md"
                           },
                           {
                             "title": "CreateWithAssetDesignConfig",
-                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-with-asset-design-config.md"
+                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-with-asset-design-config/index.md"
                           },
                           {
                             "title": "CreateWithTemplateDesignConfig",
-                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-with-template-design-config.md"
+                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-with-template-design-config/index.md"
                           },
                           {
                             "title": "EditDesignConfig",
-                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/edit-design-config.md"
+                            "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/edit-design-config/index.md"
                           }
                         ],
-                        "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-design-config.md"
+                        "path": "v4/shared/src/types/3p/editor/DesignConfig.types/interfaces/create-design-config/index.md"
                       }
                     ],
                     "path": "v4/shared/src/types/3p/editor/DesignConfig.types/index.md"
@@ -1484,22 +1484,22 @@
                     "pages": [
                       {
                         "title": "CreateDesignConfig",
-                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-design-config.md"
+                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-design-config/index.md"
                       },
                       {
                         "title": "CreateWithAssetDesignConfig",
-                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-with-asset-design-config.md"
+                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-with-asset-design-config/index.md"
                       },
                       {
                         "title": "CreateWithTemplateDesignConfig",
-                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-with-template-design-config.md"
+                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-with-template-design-config/index.md"
                       },
                       {
                         "title": "EditDesignConfig",
-                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/edit-design-config.md"
+                        "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/edit-design-config/index.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-design-config.md"
+                    "path": "v4/shared/src/types/editor/DesignConfig.types/interfaces/create-design-config/index.md"
                   },
                   {
                     "title": "DesignConfig",

@@ -6,4 +6,4 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [EditorAppConfig](type-aliases/editor-app-config.md) | - |
+| [EditorAppConfig](type-aliases/editor-app-config/index.md) | - |

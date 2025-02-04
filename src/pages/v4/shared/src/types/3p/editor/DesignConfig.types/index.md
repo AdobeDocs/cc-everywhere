@@ -6,7 +6,7 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CreateDesignConfig](interfaces/create-design-config.md) | - |
-| [CreateWithAssetDesignConfig](interfaces/create-with-asset-design-config.md) | - |
-| [CreateWithTemplateDesignConfig](interfaces/create-with-template-design-config.md) | - |
-| [EditDesignConfig](interfaces/edit-design-config.md) | - |
+| [CreateDesignConfig](interfaces/create-design-config/index.md) | - |
+| [CreateWithAssetDesignConfig](interfaces/create-with-asset-design-config/index.md) | - |
+| [CreateWithTemplateDesignConfig](interfaces/create-with-template-design-config/index.md) | - |
+| [EditDesignConfig](interfaces/edit-design-config/index.md) | - |
