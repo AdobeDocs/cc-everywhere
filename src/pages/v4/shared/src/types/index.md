@@ -52,7 +52,7 @@ Re-exports [ModuleSubCategory](ActionIntent.types/enumerations/module-sub-catego
 
 ### QuickActionIntent
 
-Re-exports [QuickActionIntent](ActionIntent.types/type-aliases/Quickaction-intent.md)
+Re-exports [QuickActionIntent](ActionIntent.types/type-aliases/quick-action-intent/index.md)
 
 <hr />
 

@@ -212,7 +212,7 @@
                         - [WarmupIntent](v4/shared/src/types/ActionIntent.types/enumerations/warmup-intent/index.md) 
                     - [type-aliases](v4/shared/src/types/ActionIntent.types/type-aliases/action-intent/index.md) 
                         - [ActionIntent](v4/shared/src/types/ActionIntent.types/type-aliases/action-intent/index.md) 
-                        - [QuickActionIntent](v4/shared/src/types/ActionIntent.types/type-aliases/Quickaction-intent.md) 
+                        - [QuickActionIntent](v4/shared/src/types/ActionIntent.types/type-aliases/quick-action-intent/index.md) 
                 - [AppConfig.types](v4/shared/src/types/AppConfig.types/index.md) 
                     - [enumerations](v4/shared/src/types/AppConfig.types/enumerations/color-theme/index.md) 
                         - [ColorTheme](v4/shared/src/types/AppConfig.types/enumerations/color-theme/index.md) 

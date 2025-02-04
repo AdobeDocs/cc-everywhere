@@ -703,7 +703,7 @@
                   },
                   {
                     "title": "QuickActionIntent",
-                    "path": "v4/shared/src/types/ActionIntent.types/type-aliases/Quickaction-intent.md"
+                    "path": "v4/shared/src/types/ActionIntent.types/type-aliases/quick-action-intent/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/ActionIntent.types/type-aliases/action-intent/index.md"

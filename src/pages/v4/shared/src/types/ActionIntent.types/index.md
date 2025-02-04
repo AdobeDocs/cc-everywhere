@@ -19,5 +19,5 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [QuickActionIntent](type-aliases/Quickaction-intent.md) | - |
+| [QuickActionIntent](type-aliases/quick-action-intent/index.md) | - |
 | [ActionIntent](type-aliases/action-intent/index.md) | - |
