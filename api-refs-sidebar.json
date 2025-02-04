@@ -819,7 +819,7 @@
                   },
                   {
                     "title": "BlobAsset",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/Blobasset.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/blob-asset/index.md"
                   },
                   {
                     "title": "FileType",

@@ -178,7 +178,7 @@ Re-exports [UrlAsset](Asset.types/type-aliases/Urlasset.md)
 
 ### BlobAsset
 
-Re-exports [BlobAsset](Asset.types/type-aliases/Blobasset.md)
+Re-exports [BlobAsset](Asset.types/type-aliases/blob-asset/index.md)
 
 <hr />
 

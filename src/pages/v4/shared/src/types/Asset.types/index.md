@@ -29,7 +29,7 @@
 | [FileType](type-aliases/file-type/index.md) | - |
 | [Base64Asset](type-aliases/base64-asset/index.md) | Represents an Asset object containing Base64 encoded data. |
 | [UrlAsset](type-aliases/Urlasset.md) | Represents an Asset object containing video data within a presinged URL. |
-| [BlobAsset](type-aliases/Blobasset.md) | Represents an Asset object containing blob/file data. |
+| [BlobAsset](type-aliases/blob-asset/index.md) | Represents an Asset object containing blob/file data. |
 | [Asset](type-aliases/asset/index.md) | Asset interface used as an input data for all SDK workflows. |
 | [AspectRatio](type-aliases/aspect-ratio/index.md) | - |
 | [ImageDimensions](type-aliases/image-dimensions/index.md) | Represents the dimensions of an image. It takes the size of the image in pixels along with the aspect ratio. |

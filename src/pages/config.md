@@ -238,7 +238,7 @@
                         - [AspectRatio](v4/shared/src/types/Asset.types/type-aliases/aspect-ratio/index.md) 
                         - [Asset](v4/shared/src/types/Asset.types/type-aliases/asset/index.md) 
                         - [Base64Asset](v4/shared/src/types/Asset.types/type-aliases/base64-asset/index.md) 
-                        - [BlobAsset](v4/shared/src/types/Asset.types/type-aliases/Blobasset.md) 
+                        - [BlobAsset](v4/shared/src/types/Asset.types/type-aliases/blob-asset/index.md) 
                         - [FileType](v4/shared/src/types/Asset.types/type-aliases/file-type/index.md) 
                         - [ImageDimensions](v4/shared/src/types/Asset.types/type-aliases/image-dimensions/index.md) 
                         - [ImageModuleFileTypes](v4/shared/src/types/Asset.types/type-aliases/image-module-file-types/index.md) 
