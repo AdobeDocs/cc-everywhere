@@ -839,7 +839,7 @@
                   },
                   {
                     "title": "UrlAsset",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/Urlasset.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/url-asset/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/Asset.types/type-aliases/aspect-ratio/index.md"

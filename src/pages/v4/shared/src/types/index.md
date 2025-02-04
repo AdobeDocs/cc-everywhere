@@ -172,7 +172,7 @@ Re-exports [Base64Asset](Asset.types/type-aliases/base64-asset/index.md)
 
 ### UrlAsset
 
-Re-exports [UrlAsset](Asset.types/type-aliases/Urlasset.md)
+Re-exports [UrlAsset](Asset.types/type-aliases/url-asset/index.md)
 
 <hr />
 
