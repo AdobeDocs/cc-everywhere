@@ -815,7 +815,7 @@
                   },
                   {
                     "title": "Base64Asset",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/Base64asset.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/base64-asset/index.md"
                   },
                   {
                     "title": "BlobAsset",

@@ -27,7 +27,7 @@
 | ------ | ------ |
 | [ImageModuleFileTypes](type-aliases/image-module-file-types/index.md) | - |
 | [FileType](type-aliases/file-type/index.md) | - |
-| [Base64Asset](type-aliases/Base64asset.md) | Represents an Asset object containing Base64 encoded data. |
+| [Base64Asset](type-aliases/base64-asset/index.md) | Represents an Asset object containing Base64 encoded data. |
 | [UrlAsset](type-aliases/Urlasset.md) | Represents an Asset object containing video data within a presinged URL. |
 | [BlobAsset](type-aliases/Blobasset.md) | Represents an Asset object containing blob/file data. |
 | [Asset](type-aliases/asset/index.md) | Asset interface used as an input data for all SDK workflows. |

@@ -166,7 +166,7 @@ Re-exports [PixelSize](Asset.types/interfaces/pixel-size/index.md)
 
 ### Base64Asset
 
-Re-exports [Base64Asset](Asset.types/type-aliases/Base64asset.md)
+Re-exports [Base64Asset](Asset.types/type-aliases/base64-asset/index.md)
 
 <hr />
 
