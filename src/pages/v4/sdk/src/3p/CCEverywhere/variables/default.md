@@ -21,7 +21,7 @@ Please ensure to call this API only once.
 | --------------- | ------------------------------------------------------------------------------------------------------------- | ---------------------------- |
 | `hostInfo`      | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/HostInfo.types/interfaces/host-info-specified-base.md) |                              |
 | `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/HostInfo.types/interfaces/config-params-base.md)           |                              |
-| `authOption`?   | [`AuthOption`](../../../../../shared/src/types/Authentication.types/type-aliases/auth-option.md)               | authentication configuration |
+| `authOption`?   | [`AuthOption`](../../../../../shared/src/types/Authentication.types/type-aliases/auth-option/index.md)               | authentication configuration |
 
 #### Returns
 

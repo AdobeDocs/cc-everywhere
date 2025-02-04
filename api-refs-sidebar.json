@@ -869,14 +869,14 @@
                 "pages": [
                   {
                     "title": "AuthMode",
-                    "path": "v4/shared/src/types/Authentication.types/enumerations/auth-mode.md"
+                    "path": "v4/shared/src/types/Authentication.types/enumerations/auth-mode/index.md"
                   },
                   {
                     "title": "ValidateTokenError",
-                    "path": "v4/shared/src/types/Authentication.types/enumerations/validate-token-error.md"
+                    "path": "v4/shared/src/types/Authentication.types/enumerations/validate-token-error/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Authentication.types/enumerations/auth-mode.md"
+                "path": "v4/shared/src/types/Authentication.types/enumerations/auth-mode/index.md"
               },
               {
                 "title": "interfaces",
@@ -887,11 +887,11 @@
                   },
                   {
                     "title": "BaseAuthOption",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/base-auth-option.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/base-auth-option/index.md"
                   },
                   {
                     "title": "DelayedAuthOption",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/delayed-auth-option.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/delayed-auth-option/index.md"
                   },
                   {
                     "title": "IMSAuthConfig",
@@ -899,7 +899,7 @@
                   },
                   {
                     "title": "ImsJumpAuthOption",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/ims-jump-auth-option.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/ims-jump-auth-option/index.md"
                   },
                   {
                     "title": "PreSignedInAuthConfig",
@@ -907,36 +907,36 @@
                   },
                   {
                     "title": "PreSignedInAuthOption",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-option.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-option/index.md"
                   },
                   {
                     "title": "UpfrontAuthOption",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/upfront-auth-option.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/upfront-auth-option/index.md"
                   },
                   {
                     "title": "UserInfo",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/user-info.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/user-info/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/Authentication.types/interfaces/auth-config.md"
               },
               {
                 "title": "AuthOption",
-                "path": "v4/shared/src/types/Authentication.types/type-aliases/auth-option.md"
+                "path": "v4/shared/src/types/Authentication.types/type-aliases/auth-option/index.md"
               },
               {
                 "title": "variables",
                 "pages": [
                   {
                     "title": "IMS_JUMP_ERROR_DESCRIPTION_KEY",
-                    "path": "v4/shared/src/types/Authentication.types/variables/ims-jump-error-description.md.md"
+                    "path": "v4/shared/src/types/Authentication.types/variables/ims-jump-error-description/index.md.md"
                   },
                   {
                     "title": "IMS_JUMP_ERROR_KEY",
-                    "path": "v4/shared/src/types/Authentication.types/variables/ims-jump-error-key.md"
+                    "path": "v4/shared/src/types/Authentication.types/variables/ims-jump-error-key/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Authentication.types/variables/ims-jump-error-description.md.md"
+                "path": "v4/shared/src/types/Authentication.types/variables/ims-jump-error-description/index.md.md"
               }
             ],
             "path": "v4/shared/src/types/Authentication.types/index.md"
@@ -946,7 +946,7 @@
             "pages": [
               {
                 "title": "BrowserEvent",
-                "path": "v4/shared/src/types/BrowserEvent.types/enumerations/browser-event.md"
+                "path": "v4/shared/src/types/BrowserEvent.types/enumerations/browser-event/index.md"
               }
             ],
             "path": "v4/shared/src/types/BrowserEvent.types/index.md"
@@ -959,48 +959,48 @@
                 "pages": [
                   {
                     "title": "Callbacks",
-                    "path": "v4/shared/src/types/Callbacks.types/interfaces/callbacks.md"
+                    "path": "v4/shared/src/types/Callbacks.types/interfaces/callbacks/index.md"
                   },
                   {
                     "title": "IntentChangeConfig",
-                    "path": "v4/shared/src/types/Callbacks.types/interfaces/intent-change-config.md"
+                    "path": "v4/shared/src/types/Callbacks.types/interfaces/intent-change-config/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Callbacks.types/interfaces/callbacks.md"
+                "path": "v4/shared/src/types/Callbacks.types/interfaces/callbacks/index.md"
               },
               {
                 "title": "type-aliases",
                 "pages": [
                   {
                     "title": "CancelCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/cancel-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/cancel-callback/index.md"
                   },
                   {
                     "title": "EventCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/event-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/event-callback/index.md"
                   },
                   {
                     "title": "IntentChangeCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/intent-change-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/intent-change-callback/index.md"
                   },
                   {
                     "title": "LoadCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/load-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/load-callback/index.md"
                   },
                   {
                     "title": "LoadStartCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/load-start-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/load-start-callback/index.md"
                   },
                   {
                     "title": "PublishCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/publish-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/publish-callback/index.md"
                   },
                   {
                     "title": "PublishStartCallback",
-                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/publish-start-callback.md"
+                    "path": "v4/shared/src/types/Callbacks.types/type-aliases/publish-start-callback/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Callbacks.types/type-aliases/cancel-callback.md"
+                "path": "v4/shared/src/types/Callbacks.types/type-aliases/cancel-callback/index.md"
               }
             ],
             "path": "v4/shared/src/types/Callbacks.types/index.md"
@@ -1010,11 +1010,11 @@
             "pages": [
               {
                 "title": "Config",
-                "path": "v4/shared/src/types/ConfigManager.types/type-aliases/Config.md"
+                "path": "v4/shared/src/types/ConfigManager.types/type-aliases/config/index.md"
               },
               {
                 "title": "SDK_CDN_BASE",
-                "path": "v4/shared/src/types/ConfigManager.types/variables/sdk-cdn-base.md"
+                "path": "v4/shared/src/types/ConfigManager.types/variables/sdk-cdn-base/index.md"
               }
             ],
             "path": "v4/shared/src/types/ConfigManager.types/index.md"
@@ -1024,37 +1024,37 @@
             "pages": [
               {
                 "title": "ContainerMode",
-                "path": "v4/shared/src/types/ContainerConfig.types/enumerations/container-mode.md"
+                "path": "v4/shared/src/types/ContainerConfig.types/enumerations/container-mode/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "BaseContainerConfig",
-                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config.md"
+                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config/index.md"
                   },
                   {
                     "title": "FillContainerConfig",
-                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/fill-container-config.md"
+                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/fill-container-config/index.md"
                   },
                   {
                     "title": "InlineContainerConfig",
-                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/Inline-container-config.md"
+                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/Inline-container-config/index.md"
                   },
                   {
                     "title": "InlineOrModalContainerConfig",
-                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/inline-or-modal-container-config.md"
+                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/inline-or-modal-container-config/index.md"
                   },
                   {
                     "title": "ModalContainerConfig",
-                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/modal-container-config.md"
+                    "path": "v4/shared/src/types/ContainerConfig.types/interfaces/modal-container-config/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config.md"
+                "path": "v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config/index.md"
               },
               {
                 "title": "ContainerConfig",
-                "path": "v4/shared/src/types/ContainerConfig.types/type-aliases/container-config.md"
+                "path": "v4/shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md"
               }
             ],
             "path": "v4/shared/src/types/ContainerConfig.types/index.md"
@@ -1067,22 +1067,22 @@
                 "pages": [
                   {
                     "title": "BaseAppConfig",
-                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/base-app-config.md"
+                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/base-app-config/index.md"
                   },
                   {
                     "title": "BaseDocConfig",
-                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/base-doc-config.md"
+                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/base-doc-config/index.md"
                   },
                   {
                     "title": "DesignConfig",
-                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/design-config.md"
+                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/design-config/index.md"
                   },
                   {
                     "title": "TargetDocConfig",
-                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/target-doc-config.md"
+                    "path": "v4/shared/src/types/DesignConfig.types/interfaces/target-doc-config/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/DesignConfig.types/interfaces/base-app-config.md"
+                "path": "v4/shared/src/types/DesignConfig.types/interfaces/base-app-config/index.md"
               }
             ],
             "path": "v4/shared/src/types/DesignConfig.types/index.md"
@@ -1503,7 +1503,7 @@
                   },
                   {
                     "title": "DesignConfig",
-                    "path": "v4/shared/src/types/editor/DesignConfig.types/type-aliases/design-config.md"
+                    "path": "v4/shared/src/types/editor/DesignConfig.types/type-aliases/design-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/editor/DesignConfig.types/index.md"

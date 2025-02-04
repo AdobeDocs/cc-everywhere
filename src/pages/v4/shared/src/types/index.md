@@ -214,13 +214,13 @@ Re-exports [ProcessedImageDimensions](Asset.types/type-aliases/processed-image-d
 
 ### ValidateTokenError
 
-Re-exports [ValidateTokenError](Authentication.types/enumerations/validate-token-error.md)
+Re-exports [ValidateTokenError](Authentication.types/enumerations/validate-token-error/index.md)
 
 <hr />
 
 ### AuthMode
 
-Re-exports [AuthMode](Authentication.types/enumerations/auth-mode.md)
+Re-exports [AuthMode](Authentication.types/enumerations/auth-mode/index.md)
 
 <hr />
 
@@ -244,193 +244,193 @@ Re-exports [IMSAuthConfig](Authentication.types/interfaces/IMSauth-config.md)
 
 ### BaseAuthOption
 
-Re-exports [BaseAuthOption](Authentication.types/interfaces/base-auth-option.md)
+Re-exports [BaseAuthOption](Authentication.types/interfaces/base-auth-option/index.md)
 
 <hr />
 
 ### UpfrontAuthOption
 
-Re-exports [UpfrontAuthOption](Authentication.types/interfaces/upfront-auth-option.md)
+Re-exports [UpfrontAuthOption](Authentication.types/interfaces/upfront-auth-option/index.md)
 
 <hr />
 
 ### DelayedAuthOption
 
-Re-exports [DelayedAuthOption](Authentication.types/interfaces/delayed-auth-option.md)
+Re-exports [DelayedAuthOption](Authentication.types/interfaces/delayed-auth-option/index.md)
 
 <hr />
 
 ### PreSignedInAuthOption
 
-Re-exports [PreSignedInAuthOption](Authentication.types/interfaces/pre-signed-in-auth-option.md)
+Re-exports [PreSignedInAuthOption](Authentication.types/interfaces/pre-signed-in-auth-option/index.md)
 
 <hr />
 
 ### ImsJumpAuthOption
 
-Re-exports [ImsJumpAuthOption](Authentication.types/interfaces/ims-jump-auth-option.md)
+Re-exports [ImsJumpAuthOption](Authentication.types/interfaces/ims-jump-auth-option/index.md)
 
 <hr />
 
 ### AuthOption
 
-Re-exports [AuthOption](Authentication.types/type-aliases/auth-option.md)
+Re-exports [AuthOption](Authentication.types/type-aliases/auth-option/index.md)
 
 <hr />
 
 ### UserInfo
 
-Re-exports [UserInfo](Authentication.types/interfaces/user-info.md)
+Re-exports [UserInfo](Authentication.types/interfaces/user-info/index.md)
 
 <hr />
 
 ### IMS\_JUMP\_ERROR\_KEY
 
-Re-exports [IMS_JUMP_ERROR_KEY](Authentication.types/variables/ims-jump-error-key.md)
+Re-exports [IMS_JUMP_ERROR_KEY](Authentication.types/variables/ims-jump-error-key/index.md)
 
 <hr />
 
 ### IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY
 
-Re-exports [IMS_JUMP_ERROR_DESCRIPTION_KEY](Authentication.types/variables/ims-jump-error-description.md.md)
+Re-exports [IMS_JUMP_ERROR_DESCRIPTION_KEY](Authentication.types/variables/ims-jump-error-description/index.md.md)
 
 <hr />
 
 ### BrowserEvent
 
-Re-exports [BrowserEvent](BrowserEvent.types/enumerations/browser-event.md)
+Re-exports [BrowserEvent](BrowserEvent.types/enumerations/browser-event/index.md)
 
 <hr />
 
 ### IntentChangeConfig
 
-Re-exports [IntentChangeConfig](Callbacks.types/interfaces/intent-change-config.md)
+Re-exports [IntentChangeConfig](Callbacks.types/interfaces/intent-change-config/index.md)
 
 <hr />
 
 ### LoadStartCallback
 
-Re-exports [LoadStartCallback](Callbacks.types/type-aliases/load-start-callback.md)
+Re-exports [LoadStartCallback](Callbacks.types/type-aliases/load-start-callback/index.md)
 
 <hr />
 
 ### LoadCallback
 
-Re-exports [LoadCallback](Callbacks.types/type-aliases/load-callback.md)
+Re-exports [LoadCallback](Callbacks.types/type-aliases/load-callback/index.md)
 
 <hr />
 
 ### CancelCallback
 
-Re-exports [CancelCallback](Callbacks.types/type-aliases/cancel-callback.md)
+Re-exports [CancelCallback](Callbacks.types/type-aliases/cancel-callback/index.md)
 
 <hr />
 
 ### PublishStartCallback
 
-Re-exports [PublishStartCallback](Callbacks.types/type-aliases/publish-start-callback.md)
+Re-exports [PublishStartCallback](Callbacks.types/type-aliases/publish-start-callback/index.md)
 
 <hr />
 
 ### PublishCallback
 
-Re-exports [PublishCallback](Callbacks.types/type-aliases/publish-callback.md)
+Re-exports [PublishCallback](Callbacks.types/type-aliases/publish-callback/index.md)
 
 <hr />
 
 ### EventCallback
 
-Re-exports [EventCallback](Callbacks.types/type-aliases/event-callback.md)
+Re-exports [EventCallback](Callbacks.types/type-aliases/event-callback/index.md)
 
 <hr />
 
 ### IntentChangeCallback
 
-Re-exports [IntentChangeCallback](Callbacks.types/type-aliases/intent-change-callback.md)
+Re-exports [IntentChangeCallback](Callbacks.types/type-aliases/intent-change-callback/index.md)
 
 <hr />
 
 ### Callbacks
 
-Re-exports [Callbacks](Callbacks.types/interfaces/callbacks.md)
+Re-exports [Callbacks](Callbacks.types/interfaces/callbacks/index.md)
 
 <hr />
 
 ### Config
 
-Re-exports [Config](ConfigManager.types/type-aliases/Config.md)
+Re-exports [Config](ConfigManager.types/type-aliases/config/index.md)
 
 <hr />
 
 ### SDK\_CDN\_BASE
 
-Re-exports [SDK_CDN_BASE](ConfigManager.types/variables/sdk-cdn-base.md)
+Re-exports [SDK_CDN_BASE](ConfigManager.types/variables/sdk-cdn-base/index.md)
 
 <hr />
 
 ### ContainerMode
 
-Re-exports [ContainerMode](ContainerConfig.types/enumerations/container-mode.md)
+Re-exports [ContainerMode](ContainerConfig.types/enumerations/container-mode/index.md)
 
 <hr />
 
 ### BaseContainerConfig
 
-Re-exports [BaseContainerConfig](ContainerConfig.types/interfaces/base-container-config.md)
+Re-exports [BaseContainerConfig](ContainerConfig.types/interfaces/base-container-config/index.md)
 
 <hr />
 
 ### InlineOrModalContainerConfig
 
-Re-exports [InlineOrModalContainerConfig](ContainerConfig.types/interfaces/inline-or-modal-container-config.md)
+Re-exports [InlineOrModalContainerConfig](ContainerConfig.types/interfaces/inline-or-modal-container-config/index.md)
 
 <hr />
 
 ### InlineContainerConfig
 
-Re-exports [InlineContainerConfig](ContainerConfig.types/interfaces/Inline-container-config.md)
+Re-exports [InlineContainerConfig](ContainerConfig.types/interfaces/Inline-container-config/index.md)
 
 <hr />
 
 ### ModalContainerConfig
 
-Re-exports [ModalContainerConfig](ContainerConfig.types/interfaces/modal-container-config.md)
+Re-exports [ModalContainerConfig](ContainerConfig.types/interfaces/modal-container-config/index.md)
 
 <hr />
 
 ### FillContainerConfig
 
-Re-exports [FillContainerConfig](ContainerConfig.types/interfaces/fill-container-config.md)
+Re-exports [FillContainerConfig](ContainerConfig.types/interfaces/fill-container-config/index.md)
 
 <hr />
 
 ### ContainerConfig
 
-Re-exports [ContainerConfig](ContainerConfig.types/type-aliases/container-config.md)
+Re-exports [ContainerConfig](ContainerConfig.types/type-aliases/container-config/index.md)
 
 <hr />
 
 ### BaseDocConfig
 
-Re-exports [BaseDocConfig](DesignConfig.types/interfaces/base-doc-config.md)
+Re-exports [BaseDocConfig](DesignConfig.types/interfaces/base-doc-config/index.md)
 
 <hr />
 
 ### TargetDocConfig
 
-Re-exports [TargetDocConfig](DesignConfig.types/interfaces/target-doc-config.md)
+Re-exports [TargetDocConfig](DesignConfig.types/interfaces/target-doc-config/index.md)
 
 <hr />
 
 ### BaseAppConfig
 
-Re-exports [BaseAppConfig](DesignConfig.types/interfaces/base-app-config.md)
+Re-exports [BaseAppConfig](DesignConfig.types/interfaces/base-app-config/index.md)
 
 <hr />
 
 ### DesignConfig
 
-Re-exports [DesignConfig](DesignConfig.types/interfaces/design-config.md)
+Re-exports [DesignConfig](DesignConfig.types/interfaces/design-config/index.md)
 
 <hr />
 

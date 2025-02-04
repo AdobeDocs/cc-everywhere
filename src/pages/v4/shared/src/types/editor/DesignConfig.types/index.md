@@ -15,4 +15,4 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [DesignConfig](type-aliases/design-config.md) | - |
+| [DesignConfig](type-aliases/design-config/index.md) | - |

@@ -2,13 +2,13 @@
 
 ## Extends
 
-- [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config.md)
+- [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config/index.md)
 
 ## Properties
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config.md).`callbacks` |
+| `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/callbacks/index.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config/index.md).`callbacks` |
 | `selectedCategory?` | [`EditorPanelView`](../../../AppConfig.types/enumerations/editor-panel-view/index.md) | Category to show by default **Default** `EditorPanelView.TEMPLATES` | - |
 | `categorySearchText?` | `string` | Search text to pass in the editor for selected panel. | - |
 | `templateType?` | [`TemplateType`](../../../AppConfig.types/enumerations/template-type/index.md) | Canvas template type | - |

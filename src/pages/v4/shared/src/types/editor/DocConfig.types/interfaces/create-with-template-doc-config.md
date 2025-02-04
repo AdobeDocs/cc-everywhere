@@ -2,7 +2,7 @@
 
 ## Extends
 
-- [`BaseDocConfig`](../../../DesignConfig.types/interfaces/base-doc-config.md)
+- [`BaseDocConfig`](../../../DesignConfig.types/interfaces/base-doc-config/index.md)
 
 ## Properties
 

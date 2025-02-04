@@ -13,4 +13,4 @@ type IntentChangeCallback: (oldIntent, newIntent) => IntentChangeConfig | undefi
 
 ## Returns
 
-[`IntentChangeConfig`](../interfaces/intent-change-config.md) \| `undefined`
+[`IntentChangeConfig`](../interfaces/intent-change-config/index.md) \| `undefined`

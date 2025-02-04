@@ -29,7 +29,7 @@ Start the editor workflow with an empty canvas
 | `docConfig`? | [`CreateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config.md) | pass a custom canvas size |
 | `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -60,7 +60,7 @@ Start the editor workflow by passing an image asset
 | `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config.md) | pass an image asset as base64 |
 | `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -91,7 +91,7 @@ Start the editor workflow by passing an Express Template ID
 | `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config.md) | pass a template ID |
 | `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -122,7 +122,7 @@ Start the editor workflow by passing an Express Document ID
 | `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config.md) | pass an Express Document ID |
 | `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 

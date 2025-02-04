@@ -2,13 +2,13 @@
 
 ## Extends
 
-- [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config.md)
+- [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config/index.md)
 
 ## Properties
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config.md).`callbacks` |
+| `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/callbacks/index.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config/index.md).`callbacks` |
 | `headerBarColorTheme?` | [`ColorTheme`](../../../AppConfig.types/enumerations/color-theme/index.md) | Theming options for the TextToImage Editor header bar. **Default** `ColorTheme.LIGHT` | - |
 | `editorTitle?` | `string` | Property to configure the title | - |
 | `promptText?` | `string` | - | - |

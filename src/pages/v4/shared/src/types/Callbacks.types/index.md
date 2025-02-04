@@ -6,17 +6,17 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [IntentChangeConfig](interfaces/intent-change-config.md) | - |
-| [Callbacks](interfaces/callbacks.md) | - |
+| [IntentChangeConfig](interfaces/intent-change-config/index.md) | - |
+| [Callbacks](interfaces/callbacks/index.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [LoadStartCallback](type-aliases/load-start-callback.md) | - |
-| [LoadCallback](type-aliases/load-callback.md) | - |
-| [CancelCallback](type-aliases/cancel-callback.md) | - |
-| [PublishStartCallback](type-aliases/publish-start-callback.md) | - |
-| [PublishCallback](type-aliases/publish-callback.md) | - |
-| [EventCallback](type-aliases/event-callback.md) | - |
-| [IntentChangeCallback](type-aliases/intent-change-callback.md) | - |
+| [LoadStartCallback](type-aliases/load-start-callback/index.md) | - |
+| [LoadCallback](type-aliases/load-callback/index.md) | - |
+| [CancelCallback](type-aliases/cancel-callback/index.md) | - |
+| [PublishStartCallback](type-aliases/publish-start-callback/index.md) | - |
+| [PublishCallback](type-aliases/publish-callback/index.md) | - |
+| [EventCallback](type-aliases/event-callback/index.md) | - |
+| [IntentChangeCallback](type-aliases/intent-change-callback/index.md) | - |

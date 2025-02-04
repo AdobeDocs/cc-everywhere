@@ -19,7 +19,7 @@ convertToJPEG(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -44,7 +44,7 @@ convertToPNG(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -69,7 +69,7 @@ convertToSVG(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -94,7 +94,7 @@ cropImage(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -119,7 +119,7 @@ resizeImage(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -144,7 +144,7 @@ removeBackground(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -169,7 +169,7 @@ generateQRCode(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -194,7 +194,7 @@ convertToGIF(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -219,7 +219,7 @@ convertToMP4(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -244,7 +244,7 @@ cropVideo(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -269,7 +269,7 @@ mergeVideos(
 | `docConfig?`       | [`MergeVideoDocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/merge-video-doc-config.md) |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)                     |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)                     |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md)              |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)              |
 
 #### Returns
 
@@ -294,7 +294,7 @@ resizeVideo(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -319,7 +319,7 @@ trimVideo(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -344,7 +344,7 @@ animateFromAudio(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 
@@ -369,7 +369,7 @@ captionVideo(
 | `docConfig?`       | [`DocConfig`](../../../../../../shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md)        |
 | `appConfig?`       | [`AppConfig`](../../../../../../shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md)        |
 | `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)        |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config.md) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) |
 
 #### Returns
 

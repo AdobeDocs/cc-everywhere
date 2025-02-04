@@ -2,11 +2,11 @@
 
 ## Extends
 
-- [`BaseAuthOption`](base-auth-option.md)
+- [`BaseAuthOption`](base-auth-option/index.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | `DELAYED` | [`BaseAuthOption`](base-auth-option.md).`mode` |
+| `mode` | `DELAYED` | [`BaseAuthOption`](base-auth-option/index.md).`mode` |
 | `config?` | [`AuthConfig`](auth-config.md) | - |

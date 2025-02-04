@@ -11,4 +11,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `callbacks?` | [`Callbacks`](../../Callbacks.types/interfaces/callbacks.md) |
+| `callbacks?` | [`Callbacks`](../../Callbacks.types/interfaces/callbacks/index.md) |

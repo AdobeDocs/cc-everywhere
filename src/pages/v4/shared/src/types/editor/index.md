@@ -40,7 +40,7 @@ Re-exports [EditDesignConfig](DesignConfig.types/interfaces/edit-design-config/i
 
 ### DesignConfig
 
-Re-exports [DesignConfig](DesignConfig.types/type-aliases/design-config.md)
+Re-exports [DesignConfig](DesignConfig.types/type-aliases/design-config/index.md)
 
 <hr />
 

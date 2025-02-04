@@ -2,8 +2,8 @@
 
 ## Extended by
 
-- [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md)
-- [`FillContainerConfig`](fill-container-config.md)
+- [`InlineOrModalContainerConfig`](inline-or-modal-container-config/index.md)
+- [`FillContainerConfig`](fill-container-config/index.md)
 
 ## Properties
 
