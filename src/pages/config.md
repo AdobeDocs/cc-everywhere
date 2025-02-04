@@ -257,7 +257,7 @@
                         - [DelayedAuthOption](v4/shared/src/types/Authentication.types/interfaces/delayed-auth-option/index.md) 
                         - [IMSAuthConfig](v4/shared/src/types/Authentication.types/interfaces/ims-auth-config/index.md) 
                         - [ImsJumpAuthOption](v4/shared/src/types/Authentication.types/interfaces/ims-jump-auth-option/index.md) 
-                        - [PreSignedInAuthConfig](v4/shared/src/types/Authentication.types/interfaces/PreSignedInauth-config.md) 
+                        - [PreSignedInAuthConfig](v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-config/index.md) 
                         - [PreSignedInAuthOption](v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-option/index.md) 
                         - [UpfrontAuthOption](v4/shared/src/types/Authentication.types/interfaces/upfront-auth-option/index.md) 
                         - [UserInfo](v4/shared/src/types/Authentication.types/interfaces/user-info/index.md) 

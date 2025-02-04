@@ -903,7 +903,7 @@
                   },
                   {
                     "title": "PreSignedInAuthConfig",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/PreSignedInauth-config.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-config/index.md"
                   },
                   {
                     "title": "PreSignedInAuthOption",

@@ -232,7 +232,7 @@ Re-exports [AuthConfig](Authentication.types/interfaces/auth-config/index.md)
 
 ### PreSignedInAuthConfig
 
-Re-exports [PreSignedInAuthConfig](Authentication.types/interfaces/PreSignedInauth-config.md)
+Re-exports [PreSignedInAuthConfig](Authentication.types/interfaces/pre-signed-in-auth-config/index.md)
 
 <hr />
 
