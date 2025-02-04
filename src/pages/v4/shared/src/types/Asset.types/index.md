@@ -33,7 +33,7 @@
 | [Asset](type-aliases/asset/index.md) | Asset interface used as an input data for all SDK workflows. |
 | [AspectRatio](type-aliases/aspect-ratio/index.md) | - |
 | [ImageDimensions](type-aliases/image-dimensions/index.md) | Represents the dimensions of an image. It takes the size of the image in pixels along with the aspect ratio. |
-| [ProcessedImageDimensions](type-aliases/Processedimage-dimensions.md) | Represents the processed image dimensions. It includes the size of the image in pixels along with the aspect ratio. It would have computed the aspect ratio value if it was provided as a number in ImageDimensions by bucketing it into one of the predefined aspect ratios. |
+| [ProcessedImageDimensions](type-aliases/processed-image-dimensions/index.md) | Represents the processed image dimensions. It includes the size of the image in pixels along with the aspect ratio. It would have computed the aspect ratio value if it was provided as a number in ImageDimensions by bucketing it into one of the predefined aspect ratios. |
 
 ### Variables
 

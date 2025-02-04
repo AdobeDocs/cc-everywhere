@@ -208,7 +208,7 @@ Re-exports [ImageDimensions](Asset.types/type-aliases/image-dimensions/index.md)
 
 ### ProcessedImageDimensions
 
-Re-exports [ProcessedImageDimensions](Asset.types/type-aliases/Processedimage-dimensions.md)
+Re-exports [ProcessedImageDimensions](Asset.types/type-aliases/processed-image-dimensions/index.md)
 
 <hr />
 

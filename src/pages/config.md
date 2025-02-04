@@ -242,7 +242,7 @@
                         - [FileType](v4/shared/src/types/Asset.types/type-aliases/file-type/index.md) 
                         - [ImageDimensions](v4/shared/src/types/Asset.types/type-aliases/image-dimensions/index.md) 
                         - [ImageModuleFileTypes](v4/shared/src/types/Asset.types/type-aliases/image-module-file-types/index.md) 
-                        - [ProcessedImageDimensions](v4/shared/src/types/Asset.types/type-aliases/Processedimage-dimensions.md) 
+                        - [ProcessedImageDimensions](v4/shared/src/types/Asset.types/type-aliases/processed-image-dimensions/index.md) 
                         - [UrlAsset](v4/shared/src/types/Asset.types/type-aliases/Urlasset.md) 
                     - [variables](v4/shared/src/types/Asset.types/variables/file-type/index.md) 
                         - [FileType](v4/shared/src/types/Asset.types/variables/file-type/index.md) 

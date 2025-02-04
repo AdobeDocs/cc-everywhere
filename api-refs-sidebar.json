@@ -835,7 +835,7 @@
                   },
                   {
                     "title": "ProcessedImageDimensions",
-                    "path": "v4/shared/src/types/Asset.types/type-aliases/Processedimage-dimensions.md"
+                    "path": "v4/shared/src/types/Asset.types/type-aliases/processed-image-dimensions/index.md"
                   },
                   {
                     "title": "UrlAsset",
