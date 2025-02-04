@@ -9,4 +9,4 @@
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
 | `mode` | `UPFRONT` | [`BaseAuthOption`](base-auth-option/index.md).`mode` |
-| `config?` | [`AuthConfig`](auth-config.md) | - |
+| `config?` | [`AuthConfig`](auth-config/index.md) | - |

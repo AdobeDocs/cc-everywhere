@@ -13,7 +13,7 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AuthConfig](interfaces/auth-config.md) | - |
+| [AuthConfig](interfaces/auth-config/index.md) | - |
 | [PreSignedInAuthConfig](interfaces/PreSignedInauth-config.md) | - |
 | [IMSAuthConfig](interfaces/IMSauth-config.md) | - |
 | [BaseAuthOption](interfaces/base-auth-option/index.md) | - |

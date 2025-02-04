@@ -226,7 +226,7 @@ Re-exports [AuthMode](Authentication.types/enumerations/auth-mode/index.md)
 
 ### AuthConfig
 
-Re-exports [AuthConfig](Authentication.types/interfaces/auth-config.md)
+Re-exports [AuthConfig](Authentication.types/interfaces/auth-config/index.md)
 
 <hr />
 

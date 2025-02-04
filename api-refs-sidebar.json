@@ -883,7 +883,7 @@
                 "pages": [
                   {
                     "title": "AuthConfig",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/auth-config.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/auth-config/index.md"
                   },
                   {
                     "title": "BaseAuthOption",
@@ -918,7 +918,7 @@
                     "path": "v4/shared/src/types/Authentication.types/interfaces/user-info/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/Authentication.types/interfaces/auth-config.md"
+                "path": "v4/shared/src/types/Authentication.types/interfaces/auth-config/index.md"
               },
               {
                 "title": "AuthOption",
