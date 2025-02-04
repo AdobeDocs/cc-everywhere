@@ -287,7 +287,7 @@
                     - [interfaces](v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config/index.md) 
                         - [BaseContainerConfig](v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config/index.md) 
                         - [FillContainerConfig](v4/shared/src/types/ContainerConfig.types/interfaces/fill-container-config/index.md) 
-                        - [InlineContainerConfig](v4/shared/src/types/ContainerConfig.types/interfaces/Inline-container-config/index.md) 
+                        - [InlineContainerConfig](v4/shared/src/types/ContainerConfig.types/interfaces/inline-container-config/index.md/index.md) 
                         - [InlineOrModalContainerConfig](v4/shared/src/types/ContainerConfig.types/interfaces/inline-or-modal-container-config/index.md) 
                         - [ModalContainerConfig](v4/shared/src/types/ContainerConfig.types/interfaces/modal-container-config/index.md) 
                     - [ContainerConfig](v4/shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) 

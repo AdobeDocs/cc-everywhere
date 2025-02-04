@@ -14,7 +14,7 @@
 | ------ | ------ |
 | [BaseContainerConfig](interfaces/base-container-config/index.md) | - |
 | [InlineOrModalContainerConfig](interfaces/inline-or-modal-container-config/index.md) | - |
-| [InlineContainerConfig](interfaces/Inline-container-config/index.md) | - |
+| [InlineContainerConfig](interfaces/inline-container-config/index.md/index.md) | - |
 | [ModalContainerConfig](interfaces/modal-container-config/index.md) | - |
 | [FillContainerConfig](interfaces/fill-container-config/index.md) | - |
 

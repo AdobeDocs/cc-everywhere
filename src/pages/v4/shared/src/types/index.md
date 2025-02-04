@@ -388,7 +388,7 @@ Re-exports [InlineOrModalContainerConfig](ContainerConfig.types/interfaces/inlin
 
 ### InlineContainerConfig
 
-Re-exports [InlineContainerConfig](ContainerConfig.types/interfaces/Inline-container-config/index.md)
+Re-exports [InlineContainerConfig](ContainerConfig.types/interfaces/inline-container-config/index.md/index.md)
 
 <hr />
 

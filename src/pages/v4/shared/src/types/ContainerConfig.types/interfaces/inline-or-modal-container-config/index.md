@@ -6,7 +6,7 @@
 
 ## Extended by
 
-- [`InlineContainerConfig`](Inline-container-config/index.md)
+- [`InlineContainerConfig`](inline-container-config/index.md/index.md)
 - [`ModalContainerConfig`](modal-container-config/index.md)
 
 ## Properties
