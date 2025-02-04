@@ -238,7 +238,7 @@ Re-exports [PreSignedInAuthConfig](Authentication.types/interfaces/PreSignedInau
 
 ### IMSAuthConfig
 
-Re-exports [IMSAuthConfig](Authentication.types/interfaces/IMSauth-config.md)
+Re-exports [IMSAuthConfig](Authentication.types/interfaces/ims-auth-config/index.md)
 
 <hr />
 

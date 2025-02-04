@@ -2,7 +2,7 @@
 
 ## Extended by
 
-- [`IMSAuthConfig`](IMSauth-config.md)
+- [`IMSAuthConfig`](ims-auth-config/index.md)
 
 ## Properties
 

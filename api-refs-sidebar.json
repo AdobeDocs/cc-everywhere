@@ -895,7 +895,7 @@
                   },
                   {
                     "title": "IMSAuthConfig",
-                    "path": "v4/shared/src/types/Authentication.types/interfaces/IMSauth-config.md"
+                    "path": "v4/shared/src/types/Authentication.types/interfaces/ims-auth-config/index.md"
                   },
                   {
                     "title": "ImsJumpAuthOption",

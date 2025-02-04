@@ -15,7 +15,7 @@
 | ------ | ------ |
 | [AuthConfig](interfaces/auth-config/index.md) | - |
 | [PreSignedInAuthConfig](interfaces/PreSignedInauth-config.md) | - |
-| [IMSAuthConfig](interfaces/IMSauth-config.md) | - |
+| [IMSAuthConfig](interfaces/ims-auth-config/index.md) | - |
 | [BaseAuthOption](interfaces/base-auth-option/index.md) | - |
 | [UpfrontAuthOption](interfaces/upfront-auth-option/index.md) | - |
 | [DelayedAuthOption](interfaces/delayed-auth-option/index.md) | - |

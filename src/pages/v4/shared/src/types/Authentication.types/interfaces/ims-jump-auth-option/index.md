@@ -9,4 +9,4 @@
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
 | `mode` | `IMS_JUMP` | [`BaseAuthOption`](base-auth-option/index.md).`mode` |
-| `config` | [`IMSAuthConfig`](IMSauth-config.md) | - |
+| `config` | [`IMSAuthConfig`](ims-auth-config/index.md) | - |
