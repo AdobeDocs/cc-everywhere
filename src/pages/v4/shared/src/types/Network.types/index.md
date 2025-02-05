@@ -6,4 +6,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [NetworkState](enumerations/Networkstate.md) | - |
+| [NetworkState](enumerations/network-state/index.md) | - |

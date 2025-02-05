@@ -1384,7 +1384,7 @@
             "pages": [
               {
                 "title": "NetworkState",
-                "path": "v4/shared/src/types/Network.types/enumerations/Networkstate.md"
+                "path": "v4/shared/src/types/Network.types/enumerations/network-state/index.md"
               }
             ],
             "path": "v4/shared/src/types/Network.types/index.md"

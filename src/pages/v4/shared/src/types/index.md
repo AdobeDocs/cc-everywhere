@@ -784,7 +784,7 @@ Re-exports [CanvasTypeInfo](Layout.types/variables/canvas-type-info/index.md)
 
 ### NetworkState
 
-Re-exports [NetworkState](Network.types/enumerations/Networkstate.md)
+Re-exports [NetworkState](Network.types/enumerations/network-state/index.md)
 
 <hr />
 
