@@ -1409,7 +1409,7 @@
                   },
                   {
                     "title": "QuickActionPublishParams",
-                    "path": "v4/shared/src/types/PublishParams.types/interfaces/QuickActionpublish-params.md"
+                    "path": "v4/shared/src/types/PublishParams.types/interfaces/quick-action-publish-params/index.md"
                   },
                   {
                     "title": "TextToImagePublishParams",
@@ -1682,7 +1682,7 @@
                       },
                       {
                         "title": "QuickActionPublishParams",
-                        "path": "v4/shared/src/types/v1_1/OutputParams.types/interfaces/QuickActionpublish-params.md"
+                        "path": "v4/shared/src/types/v1_1/OutputParams.types/interfaces/quick-action-publish-params/index.md"
                       }
                     ],
                     "path": "v4/shared/src/types/v1_1/OutputParams.types/interfaces/CCXpublish-params.md"

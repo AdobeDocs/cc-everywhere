@@ -10,7 +10,7 @@ Re-exports [PublishParams](OutputParams.types/interfaces/publish-params/index.md
 
 ### QuickActionPublishParams
 
-Re-exports [QuickActionPublishParams](OutputParams.types/interfaces/QuickActionpublish-params.md)
+Re-exports [QuickActionPublishParams](OutputParams.types/interfaces/quick-action-publish-params/index.md)
 
 ***
 

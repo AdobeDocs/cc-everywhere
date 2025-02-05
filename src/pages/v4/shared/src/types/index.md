@@ -802,7 +802,7 @@ Re-exports [AssetTargetInfo](PublishParams.types/interfaces/asset-target-info/in
 
 ### QuickActionPublishParams
 
-Re-exports [QuickActionPublishParams](PublishParams.types/interfaces/QuickActionpublish-params.md)
+Re-exports [QuickActionPublishParams](PublishParams.types/interfaces/quick-action-publish-params/index.md)
 
 <hr />
 
