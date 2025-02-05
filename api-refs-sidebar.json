@@ -1255,7 +1255,7 @@
                   },
                   {
                     "title": "ExportStyle",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/Exportstyle.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-style/index.md"
                   },
                   {
                     "title": "ExportTarget",

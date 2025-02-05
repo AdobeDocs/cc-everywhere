@@ -538,7 +538,7 @@ Re-exports [LinkStyle](ExportConfig.types/interfaces/link-style/index.md)
 
 ### ExportStyle
 
-Re-exports [ExportStyle](ExportConfig.types/type-aliases/Exportstyle.md)
+Re-exports [ExportStyle](ExportConfig.types/type-aliases/export-style/index.md)
 
 <hr />
 

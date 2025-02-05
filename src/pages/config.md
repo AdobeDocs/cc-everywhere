@@ -338,7 +338,7 @@
                         - [ExportOption](v4/shared/src/types/ExportConfig.types/type-aliases/export-option/index.md) 
                         - [ExportOptionOrGroup](v4/shared/src/types/ExportConfig.types/type-aliases/export-option-or-group/index.md) 
                         - [ExportOptions](v4/shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) 
-                        - [ExportStyle](v4/shared/src/types/ExportConfig.types/type-aliases/Exportstyle.md) 
+                        - [ExportStyle](v4/shared/src/types/ExportConfig.types/type-aliases/export-style/index.md) 
                         - [ExportTarget](v4/shared/src/types/ExportConfig.types/type-aliases/export-target/index.md) 
                 - [FeatureFlags.types](v4/shared/src/types/FeatureFlags.types/index.md) 
                     - [FeatureFlags](v4/shared/src/types/FeatureFlags.types/type-aliases/feature-flags/index.md) 
