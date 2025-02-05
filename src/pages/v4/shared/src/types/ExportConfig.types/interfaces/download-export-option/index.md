@@ -1,4 +1,4 @@
-# Interface: DownloadExportOption<U\>
+# Interface: DownloadExportOption U
 
 ## Extends
 
