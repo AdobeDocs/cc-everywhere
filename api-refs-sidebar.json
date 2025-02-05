@@ -1203,7 +1203,7 @@
                 "pages": [
                   {
                     "title": "ButtonStyle",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/Buttonstyle.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/button-style/index.md"
                   },
                   {
                     "title": "ContentType",
@@ -1262,7 +1262,7 @@
                     "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-target/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/ExportConfig.types/type-aliases/Buttonstyle.md"
+                "path": "v4/shared/src/types/ExportConfig.types/type-aliases/button-style/index.md"
               }
             ],
             "path": "v4/shared/src/types/ExportConfig.types/index.md"

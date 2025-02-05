@@ -496,7 +496,7 @@ Re-exports [BaseButtonStyle](ExportConfig.types/interfaces/base-button-style/ind
 
 ### ButtonStyle
 
-Re-exports [ButtonStyle](ExportConfig.types/type-aliases/Buttonstyle.md)
+Re-exports [ButtonStyle](ExportConfig.types/type-aliases/button-style/index.md)
 
 <hr />
 
