@@ -1,4 +1,4 @@
-# Interface: BaseExportOption<U\>
+# Interface: BaseExportOption U
 
 ## Extended by
 
