@@ -532,7 +532,7 @@ Re-exports [DropdownOptionStyleCompat](ExportConfig.types/interfaces/dropdown-op
 
 ### LinkStyle
 
-Re-exports [LinkStyle](ExportConfig.types/interfaces/Link-style/index.md)
+Re-exports [LinkStyle](ExportConfig.types/interfaces/link-style/index.md)
 
 <hr />
 

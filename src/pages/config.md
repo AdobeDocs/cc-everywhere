@@ -320,7 +320,7 @@
                         - [EditFurtherExportOption](v4/shared/src/types/ExportConfig.types/interfaces/edit-further-export-option/index.md) 
                         - [ExportGroup](v4/shared/src/types/ExportConfig.types/interfaces/export-group/index.md) 
                         - [ExportOptionGroup](v4/shared/src/types/ExportConfig.types/interfaces/export-option-group/index.md) 
-                        - [LinkStyle](v4/shared/src/types/ExportConfig.types/interfaces/Link-style/index.md) 
+                        - [LinkStyle](v4/shared/src/types/ExportConfig.types/interfaces/link-style/index.md) 
                         - [PublishAction](v4/shared/src/types/ExportConfig.types/interfaces/publish-action/index.md) 
                         - [PublishExportOption](v4/shared/src/types/ExportConfig.types/interfaces/publish-export-option/index.md) 
                         - [Style](v4/shared/src/types/ExportConfig.types/interfaces/style/index.md) 

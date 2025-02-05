@@ -22,7 +22,7 @@
 | [CustomContentConfig](interfaces/custom-content-config/index.md) | Represents the configuration for custom content in a Dropdown option. |
 | [DropdownOptionStyle](interfaces/dropdown-option-style/index.md) | Represents the style of a dropdown option, extending the base Style interface. |
 | [DropdownOptionStyleCompat](interfaces/dropdown-option-style-compat/index.md) | Represents the style of a dropdown option, extending the base Style interface. |
-| [LinkStyle](interfaces/Link-style/index.md) | - |
+| [LinkStyle](interfaces/link-style/index.md) | - |
 | [BaseAction](interfaces/base-action/index.md) | - |
 | [PublishAction](interfaces/publish-action/index.md) | - |
 | [DownloadAction](interfaces/download-action/index.md) | - |
