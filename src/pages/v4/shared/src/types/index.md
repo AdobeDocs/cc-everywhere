@@ -682,7 +682,7 @@ Re-exports [Environment](HostInfo.types/enumerations/environment/index.md)
 
 ### PIIPStatus
 
-Re-exports [PIIPStatus](HostInfo.types/enumerations/PIIPstatus.md)
+Re-exports [PIIPStatus](HostInfo.types/enumerations/piip-status/index.md)
 
 <hr />
 

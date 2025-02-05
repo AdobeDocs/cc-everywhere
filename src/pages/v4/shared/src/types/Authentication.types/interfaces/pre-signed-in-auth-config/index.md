@@ -8,5 +8,5 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `piipStatus?` | [`PIIPStatus`](../../HostInfo.types/enumerations/PIIPstatus.md) | Represents whether analytics are sent. By default analytics are sent. |
+| `piipStatus?` | [`PIIPStatus`](../../HostInfo.types/enumerations/piip-status/index.md) | Represents whether analytics are sent. By default analytics are sent. |
 | `userId?` | `string` | IMS userId Needed to avoid check token failure in scenarios with multiple profiles, enabling IMS to identify which profile is already signed in |

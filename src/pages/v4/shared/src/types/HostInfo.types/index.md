@@ -7,7 +7,7 @@
 | Enumeration | Description |
 | ------ | ------ |
 | [Environment](enumerations/environment/index.md) | 1P only Default environment is prod. |
-| [PIIPStatus](enumerations/PIIPstatus.md) | Represents whether analytics are sent. By default analytics are sent. |
+| [PIIPStatus](enumerations/piip-status/index.md) | Represents whether analytics are sent. By default analytics are sent. |
 | [Locale](enumerations/locale/index.md) | List of supported locales. Default locale is ENGLISH (en_US). |
 | [PlatformCategory](enumerations/platform-category/index.md) | - |
 | [HostId](enumerations/host-id/index.md) | - |

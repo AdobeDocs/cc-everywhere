@@ -1301,7 +1301,7 @@
                   },
                   {
                     "title": "PIIPStatus",
-                    "path": "v4/shared/src/types/HostInfo.types/enumerations/PIIPstatus.md"
+                    "path": "v4/shared/src/types/HostInfo.types/enumerations/piip-status/index.md"
                   },
                   {
                     "title": "PlatformCategory",

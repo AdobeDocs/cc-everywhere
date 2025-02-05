@@ -7,4 +7,4 @@ Base class for user related information.
 | Property | Type |
 | ------ | ------ |
 | `userId?` | `string` |
-| `piipStatus?` | [`PIIPStatus`](../../HostInfo.types/enumerations/PIIPstatus.md) |
+| `piipStatus?` | [`PIIPStatus`](../../HostInfo.types/enumerations/piip-status/index.md) |

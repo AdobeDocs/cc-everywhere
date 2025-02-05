@@ -348,7 +348,7 @@
                         - [HostId](v4/shared/src/types/HostInfo.types/enumerations/host-id/index.md) 
                         - [HostType](v4/shared/src/types/HostInfo.types/enumerations/host-type/index.md) 
                         - [Locale](v4/shared/src/types/HostInfo.types/enumerations/locale/index.md) 
-                        - [PIIPStatus](v4/shared/src/types/HostInfo.types/enumerations/PIIPstatus.md) 
+                        - [PIIPStatus](v4/shared/src/types/HostInfo.types/enumerations/piip-status/index.md) 
                         - [PlatformCategory](v4/shared/src/types/HostInfo.types/enumerations/platform-category/index.md) 
                     - [interfaces](v4/shared/src/types/HostInfo.types/interfaces/config-params-base/index.md) 
                         - [ConfigParamsBase](v4/shared/src/types/HostInfo.types/interfaces/config-params-base/index.md) 
