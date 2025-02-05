@@ -42,7 +42,11 @@ To make sure your review process goes smoothly, check off the tasks in this list
 
 ### 1. Set up your public profile
 
-If this is your first Adobe integration, set up your public profile.
+If this is your first Adobe integration, set up your public profile. 
+
+<InlineAlert variant="warning" slots="text" />
+
+Description, marketing website and logo fields are mandatory if your Adobe Developer Console project includes APIs for "Adobe Express SDK".
 
 ### 2. Consent Screen details
 

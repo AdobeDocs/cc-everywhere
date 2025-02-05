@@ -143,7 +143,7 @@ module.exports = {
         pages:
         [
           {
-            title: "Submit yout integration",
+            title: "Submission guidelines",
             path: "/guides/review/submission_guidelines.md"
           },
           {
