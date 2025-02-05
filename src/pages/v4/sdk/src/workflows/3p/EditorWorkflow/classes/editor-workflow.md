@@ -27,7 +27,7 @@ Start the editor workflow with an empty canvas
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig`? | [`CreateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md) | pass a custom canvas size |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
 | `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
@@ -58,7 +58,7 @@ Start the editor workflow by passing an image asset
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config/index.md) | pass an image asset as base64 |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
 | `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
@@ -89,7 +89,7 @@ Start the editor workflow by passing an Express Template ID
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config/index.md) | pass a template ID |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
 | `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
@@ -120,7 +120,7 @@ Start the editor workflow by passing an Express Document ID
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config/index.md) | pass an Express Document ID |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md) | properties to configure the Editor |
+| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
 | `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
 | `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 

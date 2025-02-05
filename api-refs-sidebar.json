@@ -1413,7 +1413,7 @@
                   },
                   {
                     "title": "TextToImagePublishParams",
-                    "path": "v4/shared/src/types/PublishParams.types/interfaces/TextToImagepublish-params.md"
+                    "path": "v4/shared/src/types/PublishParams.types/interfaces/text-to-image-publish-params/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/PublishParams.types/interfaces/asset-target-info/index.md"
@@ -1467,11 +1467,11 @@
                 "pages": [
                   {
                     "title": "BaseEditorAppConfig",
-                    "path": "v4/shared/src/types/editor/AppConfig.types/interfaces/Baseeditor-app-config.md"
+                    "path": "v4/shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md"
                   },
                   {
                     "title": "AppConfig",
-                    "path": "v4/shared/src/types/editor/AppConfig.types/type-aliases/app-config.md"
+                    "path": "v4/shared/src/types/editor/AppConfig.types/type-aliases/app-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/editor/AppConfig.types/index.md"

@@ -4,13 +4,13 @@
 
 ### BaseEditorAppConfig
 
-Re-exports [BaseEditorAppConfig](AppConfig.types/interfaces/Baseeditor-app-config.md)
+Re-exports [BaseEditorAppConfig](AppConfig.types/interfaces/base-editor-app-config/index.md)
 
 <hr />
 
 ### AppConfig
 
-Re-exports [AppConfig](AppConfig.types/type-aliases/app-config.md)
+Re-exports [AppConfig](AppConfig.types/type-aliases/app-config/index.md)
 
 <hr />
 

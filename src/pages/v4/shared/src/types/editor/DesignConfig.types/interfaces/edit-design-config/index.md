@@ -1,4 +1,4 @@
-# Interface: CreateWithTemplateDesignConfig
+# Interface: EditDesignConfig
 
 ## Extends
 
@@ -6,7 +6,7 @@
 
 ## Extended by
 
-- [`CreateWithTemplateDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/create-with-template-design-config/index.md)
+- [`EditDesignConfig`](../../../3p/editor/DesignConfig.types/interfaces/edit-design-config/index.md)
 
 ## Properties
 
@@ -14,5 +14,5 @@
 | ------ | ------ | ------ | ------ |
 | `exportConfig?` | [`ExportOptions`](../../../ExportConfig.types/type-aliases/export-options/index.md) | - | `EditorDesignConfig.exportConfig` |
 | `containerConfig?` | [`ContainerConfig`](../../../ContainerConfig.types/type-aliases/container-config/index.md) | - | `EditorDesignConfig.containerConfig` |
-| `appConfig?` | [`AppConfig`](../../AppConfig.types/type-aliases/app-config.md) | - | `EditorDesignConfig.appConfig` |
-| `docConfig` | [`CreateWithTemplateDocConfig`](../../DocConfig.types/interfaces/create-with-template-doc-config/index.md) | `EditorDesignConfig.docConfig` | - |
+| `appConfig?` | [`AppConfig`](../../AppConfig.types/type-aliases/app-config/index.md) | - | `EditorDesignConfig.appConfig` |
+| `docConfig` | [`EditDocConfig`](../../DocConfig.types/interfaces/edit-doc-config/index.md) | `EditorDesignConfig.docConfig` | - |

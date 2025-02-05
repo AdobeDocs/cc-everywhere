@@ -808,7 +808,7 @@ Re-exports [QuickActionPublishParams](PublishParams.types/interfaces/quick-actio
 
 ### TextToImagePublishParams
 
-Re-exports [TextToImagePublishParams](PublishParams.types/interfaces/TextToImagepublish-params.md)
+Re-exports [TextToImagePublishParams](PublishParams.types/interfaces/text-to-image-publish-params/index.md)
 
 <hr />
 
