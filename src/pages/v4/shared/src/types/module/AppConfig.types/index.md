@@ -6,6 +6,6 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [TextToImageAppConfig](interfaces/TextToImageapp-config.md) | - |
-| [EditImageAppConfig](interfaces/EditImageapp-config.md) | - |
-| [WarmupAppConfig](interfaces/Warmupapp-config.md) | - |
+| [TextToImageAppConfig](interfaces/text-to-image-app-config/index.md) | - |
+| [EditImageAppConfig](interfaces/edit-image-app-config/index.md) | - |
+| [WarmupAppConfig](interfaces/warmup-app-config/index.md) | - |

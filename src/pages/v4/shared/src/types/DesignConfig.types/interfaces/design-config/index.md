@@ -2,10 +2,10 @@
 
 ## Extended by
 
-- [`EditImageDesignConfig`](../../module/DesignConfig.types/interfaces/EditImagedesign-config.md)
-- [`TextToImageDesignConfig`](../../module/DesignConfig.types/interfaces/TextToImagedesign-config.md)
-- [`WarmupDesignConfig`](../../module/DesignConfig.types/interfaces/Warmupdesign-config.md)
-- [`BaseDesignConfig`](../../quick-action/DesignConfig.types/interfaces/Basedesign-config.md)
+- [`EditImageDesignConfig`](../../module/DesignConfig.types/interfaces/edit-image-design-config/index.md)
+- [`TextToImageDesignConfig`](../../module/DesignConfig.types/interfaces/test-to-image-design-config/index.md)
+- [`WarmupDesignConfig`](../../module/DesignConfig.types/interfaces/warmup-design-config/index.md)
+- [`BaseDesignConfig`](../../quick-action/DesignConfig.types/interfaces/base-design-config/index.md)
 
 ## Properties
 

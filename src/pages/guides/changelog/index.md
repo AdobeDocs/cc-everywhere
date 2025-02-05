@@ -29,14 +29,14 @@ Added a comprehensive [error code guide](../concepts/error-handling.md) for mana
 
 ### Added
 
-- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageapp-config.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
+- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config/index.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
 
 ## [4.16.11] - 2024-11-18
 
 ### Enhancements
 
-- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageapp-config.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
-- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageapp-config.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config/index.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config/index.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
 
 ### Bug Fixes
 

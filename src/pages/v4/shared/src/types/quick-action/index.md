@@ -10,19 +10,19 @@ Re-exports [AppConfig](AppConfig.types/interfaces/app-config.md)
 
 ### BaseDesignConfig
 
-Re-exports [BaseDesignConfig](DesignConfig.types/interfaces/Basedesign-config.md)
+Re-exports [BaseDesignConfig](DesignConfig.types/interfaces/base-design-config/index.md)
 
 <hr />
 
 ### QuickActionDesignConfig
 
-Re-exports [QuickActionDesignConfig](DesignConfig.types/interfaces/QuickActiondesign-config.md)
+Re-exports [QuickActionDesignConfig](DesignConfig.types/interfaces/quick-action-design-config/index.md)
 
 <hr />
 
 ### MergeVideosDesignConfig
 
-Re-exports [MergeVideosDesignConfig](DesignConfig.types/interfaces/MergeVideosdesign-config.md)
+Re-exports [MergeVideosDesignConfig](DesignConfig.types/interfaces/merge-videos-design-config/index.md)
 
 <hr />
 

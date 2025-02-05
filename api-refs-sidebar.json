@@ -1550,18 +1550,18 @@
                     "pages": [
                       {
                         "title": "EditImageAppConfig",
-                        "path": "v4/shared/src/types/module/AppConfig.types/interfaces/EditImageapp-config.md"
+                        "path": "v4/shared/src/types/module/AppConfig.types/interfaces/edit-image-app-config/index.md"
                       },
                       {
                         "title": "TextToImageAppConfig",
-                        "path": "v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageapp-config.md"
+                        "path": "v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config/index.md"
                       },
                       {
                         "title": "WarmupAppConfig",
-                        "path": "v4/shared/src/types/module/AppConfig.types/interfaces/Warmupapp-config.md"
+                        "path": "v4/shared/src/types/module/AppConfig.types/interfaces/warmup-app-config/index.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/module/AppConfig.types/interfaces/EditImageapp-config.md"
+                    "path": "v4/shared/src/types/module/AppConfig.types/interfaces/edit-image-app-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/module/AppConfig.types/index.md"
@@ -1574,18 +1574,18 @@
                     "pages": [
                       {
                         "title": "EditImageDesignConfig",
-                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/EditImagedesign-config.md"
+                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/edit-image-design-config/index.md"
                       },
                       {
                         "title": "TextToImageDesignConfig",
-                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/TextToImagedesign-config.md"
+                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/test-to-image-design-config/index.md"
                       },
                       {
                         "title": "WarmupDesignConfig",
-                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/Warmupdesign-config.md"
+                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/warmup-design-config/index.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/EditImagedesign-config.md"
+                    "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/edit-image-design-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/module/DesignConfig.types/index.md"
@@ -1624,18 +1624,18 @@
                     "pages": [
                       {
                         "title": "BaseDesignConfig",
-                        "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/Basedesign-config.md"
+                        "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/base-design-config/index.md"
                       },
                       {
                         "title": "MergeVideosDesignConfig",
-                        "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/MergeVideosdesign-config.md"
+                        "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/merge-videos-design-config/index.md"
                       },
                       {
                         "title": "QuickActionDesignConfig",
-                        "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/QuickActiondesign-config.md"
+                        "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/quick-action-design-config/index.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/Basedesign-config.md"
+                    "path": "v4/shared/src/types/quick-action/DesignConfig.types/interfaces/base-design-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/quick-action/DesignConfig.types/index.md"
