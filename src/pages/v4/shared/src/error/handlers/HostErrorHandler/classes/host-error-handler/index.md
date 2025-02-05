@@ -1,4 +1,4 @@
-# Class: HostErrorHandler<T\>
+# Class: HostErrorHandler T
 
 ## Extends
 
@@ -12,7 +12,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md)<`T`\>
+- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md) `T`
 
 ## Constructors
 
@@ -26,12 +26,12 @@ new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `hostErrorCallback` | [`ErrorCallback`](../../../CCEverywhereError.types/type-aliases/error-callback/index.md)<`T`\> |
+| `hostErrorCallback` | [`ErrorCallback`](../../../CCEverywhereError.types/type-aliases/error-callback/index.md) `T` |
 | `logLevel`? | [`LogLevel`](../../../CCEverywhereError.types/enumerations/log-level/index.md) |
 
 #### Returns
 
-[`HostErrorHandler`](host-error-handler/index.md)<`T`\>
+[`HostErrorHandler`](host-error-handler/index.md) `T`
 
 #### Overrides
 
@@ -49,7 +49,7 @@ error(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/cc-everywhere-error.md) `T` |
 
 #### Returns
 
