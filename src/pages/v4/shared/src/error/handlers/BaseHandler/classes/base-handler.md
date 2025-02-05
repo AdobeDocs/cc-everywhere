@@ -3,4 +3,4 @@
 ## Extended by
 
 - [`ConsoleHandler`](../../ConsoleHandler/classes/console-handler.md)
-- [`HostErrorHandler`](../../HostErrorHandler/classes/Hosterror-handler.md)
+- [`HostErrorHandler`](../../HostErrorHandler/classes/host-error-handler/index.md)

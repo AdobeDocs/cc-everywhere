@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [HostErrorHandler](classes/Hosterror-handler.md) | - |
+| [HostErrorHandler](classes/host-error-handler/index.md) | - |

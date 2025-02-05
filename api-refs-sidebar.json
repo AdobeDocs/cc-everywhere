@@ -333,7 +333,7 @@
                 "pages": [
                   {
                     "title": "HostErrorHandler",
-                    "path": "v4/shared/src/error/handlers/HostErrorHandler/classes/Hosterror-handler.md"
+                    "path": "v4/shared/src/error/handlers/HostErrorHandler/classes/host-error-handler/index.md"
                   }
                 ],
                 "path": "v4/shared/src/error/handlers/HostErrorHandler/index.md"
@@ -356,7 +356,7 @@
               },
               {
                 "title": "Listener",
-                "path": "v4/shared/src/messenger/ChannelMessageListener/type-aliases/Listener.md"
+                "path": "v4/shared/src/messenger/ChannelMessageListener/type-aliases/listener/index.md"
               }
             ],
             "path": "v4/shared/src/messenger/ChannelMessageListener/index.md"

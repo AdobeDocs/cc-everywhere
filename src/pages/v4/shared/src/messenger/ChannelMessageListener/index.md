@@ -12,4 +12,4 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [Listener](type-aliases/Listener.md) | - |
+| [Listener](type-aliases/listener/index.md) | - |
