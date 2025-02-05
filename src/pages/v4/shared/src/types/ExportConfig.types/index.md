@@ -45,7 +45,7 @@
 | [ExportButtonVariant](type-aliases/export-button-variant/index.md) | - |
 | [ExportContext](type-aliases/export-context/index.md) | - |
 | [ButtonStyle](type-aliases/Buttonstyle.md) | - |
-| [EnabledButtonStyle](type-aliases/EnabledButtonstyle.md) | Represents the style of a button always enabled. |
+| [EnabledButtonStyle](type-aliases/enabled-button-style/index.md) | Represents the style of a button always enabled. |
 | [ContentType](type-aliases/content-type/index.md) | Represents the type of content, currently supporting markdown. |
 | [ExportStyle](type-aliases/Exportstyle.md) | - |
 | [ContinueEditingAction](type-aliases/continue-editing-action/index.md) | - |

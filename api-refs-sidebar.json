@@ -1219,7 +1219,7 @@
                   },
                   {
                     "title": "EnabledButtonStyle",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/EnabledButtonstyle.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/enabled-button-style/index.md"
                   },
                   {
                     "title": "ExportAction",

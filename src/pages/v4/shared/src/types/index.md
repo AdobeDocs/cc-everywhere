@@ -502,7 +502,7 @@ Re-exports [ButtonStyle](ExportConfig.types/type-aliases/button-style/index.md)
 
 ### EnabledButtonStyle
 
-Re-exports [EnabledButtonStyle](ExportConfig.types/type-aliases/EnabledButtonstyle.md)
+Re-exports [EnabledButtonStyle](ExportConfig.types/type-aliases/enabled-button-style/index.md)
 
 <hr />
 

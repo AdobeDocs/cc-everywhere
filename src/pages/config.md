@@ -329,7 +329,7 @@
                         - [ContentType](v4/shared/src/types/ExportConfig.types/type-aliases/content-type/index.md) 
                         - [ContinueEditingAction](v4/shared/src/types/ExportConfig.types/type-aliases/continue-editing-action/index.md) 
                         - [DropdownExportOption](v4/shared/src/types/ExportConfig.types/type-aliases/dropdown-export-option/index.md) 
-                        - [EnabledButtonStyle](v4/shared/src/types/ExportConfig.types/type-aliases/EnabledButtonstyle.md) 
+                        - [EnabledButtonStyle](v4/shared/src/types/ExportConfig.types/type-aliases/enabled-button-style/index.md) 
                         - [ExportAction](v4/shared/src/types/ExportConfig.types/type-aliases/export-action/index.md) 
                         - [ExportButtonTreatment](v4/shared/src/types/ExportConfig.types/type-aliases/export-button-treatment/index.md) 
                         - [ExportButtonVariant](v4/shared/src/types/ExportConfig.types/type-aliases/export-button-variant/index.md) 
