@@ -1,0 +1,8 @@
+main > section {
+  /* Vertical gradient, #C148ED (top) to #6772F7 (bottom) */
+  background: linear-gradient(to bottom, #c148ed, #6772f7);
+
+  /* Optionally ensure the gradient covers the entire section area */
+  background-repeat: no-repeat;
+  background-size: cover;
+}

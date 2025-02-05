@@ -64,8 +64,8 @@ module.exports = {
     ],
     subPages: [
       {
-          title: "Overview",
-          path: "/guides/",
+        title: "Overview",
+        path: "/guides/",
       },
       {
         title: "Getting Started",
@@ -117,10 +117,10 @@ module.exports = {
           //   title: "UI Customization",
           //   path: "/guides/concepts/customization.md",
           // },
-          // {
-          //   title: "Error Handling",
-          //   path: "/guides/concepts/error-handling.md",
-          // },
+          {
+            title: "Error Handling",
+            path: "/guides/concepts/error-handling.md",
+          },
         ],
       },
       {
@@ -168,6 +168,10 @@ module.exports = {
         title: "Troubleshooting",
         path: "/guides/troubleshooting/faq/",
         pages: [
+          {
+            title: "Adobe Express is not available",
+            path: "/guides/troubleshooting/express-unavailable-error.md",
+          },
           {
             title: "FAQ",
             path: "/guides/troubleshooting/faq/",

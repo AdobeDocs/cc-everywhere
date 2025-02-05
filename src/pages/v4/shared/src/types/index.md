@@ -104,6 +104,24 @@ Re-exports [Scale](AppConfig.types/enumerations/Scale.md)
 
 ***
 
+### Blob
+
+Re-exports [Blob](Asset.types/interfaces/Blob.md)
+
+***
+
+### DataTypeMap
+
+Re-exports [DataTypeMap](Asset.types/interfaces/DataTypeMap.md)
+
+***
+
+### AssetBase
+
+Re-exports [AssetBase](Asset.types/interfaces/AssetBase.md)
+
+***
+
 ### AssetType
 
 Re-exports [AssetType](Asset.types/enumerations/AssetType.md)
@@ -203,6 +221,12 @@ Re-exports [AspectRatio](Asset.types/type-aliases/AspectRatio.md)
 ### ImageDimensions
 
 Re-exports [ImageDimensions](Asset.types/type-aliases/ImageDimensions.md)
+
+***
+
+### ProcessedImageDimensions
+
+Re-exports [ProcessedImageDimensions](Asset.types/type-aliases/ProcessedImageDimensions.md)
 
 ***
 
@@ -797,6 +821,12 @@ Re-exports [AssetTargetInfo](PublishParams.types/interfaces/AssetTargetInfo.md)
 ### QuickActionPublishParams
 
 Re-exports [QuickActionPublishParams](PublishParams.types/interfaces/QuickActionPublishParams.md)
+
+***
+
+### TextToImagePublishParams
+
+Re-exports [TextToImagePublishParams](PublishParams.types/interfaces/TextToImagePublishParams.md)
 
 ***
 

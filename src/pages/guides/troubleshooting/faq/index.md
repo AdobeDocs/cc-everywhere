@@ -10,24 +10,25 @@ description: This page answers common questions about the Adobe Express Embed SD
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/nimithajalal
+  - https://github.com/undavide
 ---
 
 # FAQ
 
 ## Questions
 
-- [FAQ](#faq)
-  - [Questions](#questions)
-  - [Answers](#answers)
-    - [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
-    - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
-    - [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
-    - [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
-    - [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
-    - [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
-    - [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
-    - [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
-    - [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
+<!-- The comment below is needed, otherwise the Markdown-all-in-one extensions will automatically create a TOC and mess with the layout -->
+<!-- no toc -->
+- [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
+- [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
+- [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
+- [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
+- [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
+- [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
+- [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
+- [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
+- [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
+- [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
 
 ## Answers
 
@@ -58,7 +59,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 ### How many domains can be added with a single API key for a service?
 
-You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter multiple subdomains (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
 
 ### How do I enable SSO for my service?
 
@@ -76,4 +77,8 @@ The SDK follows a continous release model, with newer versions including bug fix
 
 V1 and V2 are deprecated and V3 will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
+
+### I run into the "Adobe Express is not available" error
+
+Please refer to this [troubleshooting guide](../express-unavailable-error.md).

@@ -90,6 +90,12 @@ ORIGINAL_PATHNAME: string;
 PLATFORM: string;
 ```
 
+### CLIENTS.CCX.QUERY\_PARAMS.KEYS.BUILD\_TAGS
+
+```ts
+BUILD_TAGS: string;
+```
+
 ### CLIENTS.CCX.EDITOR
 
 ```ts
@@ -220,12 +226,6 @@ SEARCH_CATEGORY: string;
 
 ```ts
 EDIT_ACTION: string;
-```
-
-### CLIENTS.CCX.EDITOR.QUERY\_PARAMS.KEYS.USE\_DOC\_MODEL
-
-```ts
-USE_DOC_MODEL: string;
 ```
 
 ### CLIENTS.CCX.QUICK\_ACTION
@@ -636,6 +636,24 @@ DESKTOP: object;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.ACROBAT\_READER
+
+```ts
+ACROBAT_READER: object;
+```
+
+### CLIENTS.ACROBAT\_READER.DESKTOP
+
+```ts
+DESKTOP: object;
+```
+
+### CLIENTS.ACROBAT\_READER.DESKTOP.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
 ### CLIENTS.CCD
 
 ```ts
@@ -744,6 +762,18 @@ ACROBAT_EXT: object;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.ADOBE\_HOME
+
+```ts
+ADOBE_HOME: object;
+```
+
+### CLIENTS.ADOBE\_HOME.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
 ### CLIENTS.TEST\_APP
 
 ```ts
@@ -760,4 +790,16 @@ FIRST_PARTY_CLIENT_ID: string;
 
 ```ts
 THIRD_PARTY_CLIENT_ID: string;
+```
+
+### CLIENTS.GENSTUDIO
+
+```ts
+GENSTUDIO: object;
+```
+
+### CLIENTS.GENSTUDIO.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
 ```

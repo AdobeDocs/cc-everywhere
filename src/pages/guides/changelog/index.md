@@ -10,10 +10,41 @@ keywords:
 title: Changelog
 description: All notable changes are documented in this page.
 contributors:
-  - https://github.com/amandahuarng
+  - https://github.com/nimithajalal
+  - https://github.com/undavide
 ---
 
 # Changelog
+
+## [4.19.22] 2025-01-31
+
+### Enhancements
+
+- Added a new [Embed SDK Developer Journey](../index.md#embed-sdk-developer-journey) map to help developers navigate the resources available at different stages of their integration.
+- Added a new [Troubleshooting](../troubleshooting/express-unavailable-error.md) guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing.
+- Various small improvements and fixes across the documentation.
+
+### Added
+
+- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Added coverage for the [Asset](../../v4/shared/src/types/Asset.types/index.md) type.
+- Various performance improvements and bug fixes.
+
+## [4.18.14] 2025-01-09
+
+### Added
+
+- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/PublishParams.types/interfaces/TextToImagePublishParams.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
+
+## [4.17.33] 2024-12-16
+
+### Enhancements
+
+- Added a comprehensive [error code guide](../concepts/error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
+
+### Added
+
+- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
 
 ## [4.16.11] - 2024-11-18
 
