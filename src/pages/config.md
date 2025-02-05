@@ -125,7 +125,7 @@
                 - [IErrorMessageHandler](v4/shared/src/error/IErrorMessageHandler/index.md) 
                     - [IErrorMessageHandler](v4/shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler/index.md) 
                 - [Messages](v4/shared/src/error/Messages/index.md) 
-                    - [Messages](v4/shared/src/error/Messages/variables/messages.md) 
+                    - [Messages](v4/shared/src/error/Messages/variables/messages/index.md) 
                 - [handlers](v4/shared/src/error/handlers/BaseHandler/index.md) 
                     - [BaseHandler](v4/shared/src/error/handlers/BaseHandler/index.md) 
                         - [BaseHandler](v4/shared/src/error/handlers/BaseHandler/classes/base-handler.md) 

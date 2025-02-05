@@ -300,7 +300,7 @@
             "pages": [
               {
                 "title": "Messages",
-                "path": "v4/shared/src/error/Messages/variables/messages.md"
+                "path": "v4/shared/src/error/Messages/variables/messages/index.md"
               }
             ],
             "path": "v4/shared/src/error/Messages/index.md"
