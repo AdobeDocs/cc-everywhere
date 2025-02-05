@@ -18,4 +18,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [CanvasTypeInfo](variables/Canvas-type-info.md) | - |
+| [CanvasTypeInfo](variables/canvas-type-info/index.md) | - |

@@ -778,7 +778,7 @@ Re-exports [CanvasInfo](Layout.types/type-aliases/canvas-info/index.md)
 
 ### CanvasTypeInfo
 
-Re-exports [CanvasTypeInfo](Layout.types/variables/Canvas-type-info.md)
+Re-exports [CanvasTypeInfo](Layout.types/variables/canvas-type-info/index.md)
 
 <hr />
 

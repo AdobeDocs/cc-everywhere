@@ -364,7 +364,7 @@
                 - [Layout.types](v4/shared/src/types/Layout.types/index.md) 
                     - [CanvasType](v4/shared/src/types/Layout.types/enumerations/canvas-type/index.md) 
                     - [CanvasInfo](v4/shared/src/types/Layout.types/type-aliases/canvas-info/index.md) 
-                    - [CanvasTypeInfo](v4/shared/src/types/Layout.types/variables/Canvas-type-info.md) 
+                    - [CanvasTypeInfo](v4/shared/src/types/Layout.types/variables/canvas-type-info/index.md) 
                 - [Network.types](v4/shared/src/types/Network.types/index.md) 
                     - [NetworkState](v4/shared/src/types/Network.types/enumerations/Networkstate.md) 
                 - [PublishParams.types](v4/shared/src/types/PublishParams.types/index.md) 
