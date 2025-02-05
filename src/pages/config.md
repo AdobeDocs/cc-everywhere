@@ -414,7 +414,7 @@
                         - [EditImageDocConfig](v4/shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config/index.md) 
                 - [quick-action](v4/shared/src/types/quick-action/index.md) 
                     - [AppConfig.types](v4/shared/src/types/quick-action/AppConfig.types/index.md) 
-                        - [AppConfig](v4/shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md) 
+                        - [AppConfig](v4/shared/src/types/quick-action/AppConfig.types/interfaces/app-config/index.md) 
                     - [DesignConfig.types](v4/shared/src/types/quick-action/DesignConfig.types/index.md) 
                         - [interfaces](v4/shared/src/types/quick-action/DesignConfig.types/interfaces/base-design-config/index.md) 
                             - [BaseDesignConfig](v4/shared/src/types/quick-action/DesignConfig.types/interfaces/base-design-config/index.md) 

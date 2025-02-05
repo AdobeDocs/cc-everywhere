@@ -1611,7 +1611,7 @@
                 "pages": [
                   {
                     "title": "AppConfig",
-                    "path": "v4/shared/src/types/quick-action/AppConfig.types/interfaces/app-config.md"
+                    "path": "v4/shared/src/types/quick-action/AppConfig.types/interfaces/app-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/quick-action/AppConfig.types/index.md"
