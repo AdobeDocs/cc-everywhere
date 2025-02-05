@@ -1,4 +1,4 @@
-# Interface: PublishExportOption<U\>
+# Interface: PublishExportOption U
 
 ## Extends
 
