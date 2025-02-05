@@ -31,7 +31,7 @@ Constructor to initialize CCEverywhere object.
 | --------------------------- | ------------------------------------------------------------------------------------------ | ----------------------------------------------------------------- |
 | `validator`                 | `BaseValidator`                                                                            | -                                                                 |
 | `authControllerConstructor` | `AuthControllerConstructor`                                                                | -                                                                 |
-| `hostInfo`                  | [`HostInfo`](../../../../shared/src/types/HostInfo.types/type-aliases/host-info.md)         | client application information - clientId, appName                |
+| `hostInfo`                  | [`HostInfo`](../../../../shared/src/types/HostInfo.types/type-aliases/host-info/index.md)         | client application information - clientId, appName                |
 | `configParams`              | [`ConfigParams`](../../../../shared/src/types/HostInfo.types/type-aliases/config-params/index.md) | environment, locale, piipStatus, colorTheme, spectrumTheme, scale |
 | `authProvider`              | `AuthProvider`                                                                             | -                                                                 |
 

@@ -4,7 +4,7 @@
 
 ### PublishParams
 
-Re-exports [PublishParams](OutputParams.types/interfaces/publish-params.md)
+Re-exports [PublishParams](OutputParams.types/interfaces/publish-params/index.md)
 
 ***
 

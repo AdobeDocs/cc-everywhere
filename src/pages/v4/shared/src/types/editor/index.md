@@ -46,22 +46,22 @@ Re-exports [DesignConfig](DesignConfig.types/type-aliases/design-config/index.md
 
 ### CreateDocConfig
 
-Re-exports [CreateDocConfig](DocConfig.types/interfaces/create-doc-config.md)
+Re-exports [CreateDocConfig](DocConfig.types/interfaces/create-doc-config/index.md)
 
 <hr />
 
 ### CreateWithAssetDocConfig
 
-Re-exports [CreateWithAssetDocConfig](DocConfig.types/interfaces/create-with-asset-doc-config.md)
+Re-exports [CreateWithAssetDocConfig](DocConfig.types/interfaces/create-with-asset-doc-config/index.md)
 
 <hr />
 
 ### CreateWithTemplateDocConfig
 
-Re-exports [CreateWithTemplateDocConfig](DocConfig.types/interfaces/create-with-template-doc-config.md)
+Re-exports [CreateWithTemplateDocConfig](DocConfig.types/interfaces/create-with-template-doc-config/index.md)
 
 <hr />
 
 ### EditDocConfig
 
-Re-exports [EditDocConfig](DocConfig.types/interfaces/edit-doc-config.md)
+Re-exports [EditDocConfig](DocConfig.types/interfaces/edit-doc-config/index.md)

@@ -436,61 +436,61 @@ Re-exports [DesignConfig](DesignConfig.types/interfaces/design-config/index.md)
 
 ### PublishTarget
 
-Re-exports [PublishTarget](ExportConfig.types/enumerations/publish-target.md)
+Re-exports [PublishTarget](ExportConfig.types/enumerations/publish-target/index.md)
 
 <hr />
 
 ### DownloadTarget
 
-Re-exports [DownloadTarget](ExportConfig.types/enumerations/download-target.md)
+Re-exports [DownloadTarget](ExportConfig.types/enumerations/download-target/index.md)
 
 <hr />
 
 ### EditFurtherTarget
 
-Re-exports [EditFurtherTarget](ExportConfig.types/enumerations/edit-further-target.md)
+Re-exports [EditFurtherTarget](ExportConfig.types/enumerations/edit-further-target/index.md)
 
 <hr />
 
 ### ExportTarget
 
-Re-exports [ExportTarget](ExportConfig.types/type-aliases/export-target.md)
+Re-exports [ExportTarget](ExportConfig.types/type-aliases/export-target/index.md)
 
 <hr />
 
 ### ExportOptionUI
 
-Re-exports [ExportOptionUI](ExportConfig.types/enumerations/export-option-ui.md)
+Re-exports [ExportOptionUI](ExportConfig.types/enumerations/export-option-ui/index.md)
 
 <hr />
 
 ### ExportButtonTreatment
 
-Re-exports [ExportButtonTreatment](ExportConfig.types/type-aliases/export-button-treatment.md)
+Re-exports [ExportButtonTreatment](ExportConfig.types/type-aliases/export-button-treatment/index.md)
 
 <hr />
 
 ### ExportButtonVariant
 
-Re-exports [ExportButtonVariant](ExportConfig.types/type-aliases/export-button-variant.md)
+Re-exports [ExportButtonVariant](ExportConfig.types/type-aliases/export-button-variant/index.md)
 
 <hr />
 
 ### ExportContext
 
-Re-exports [ExportContext](ExportConfig.types/type-aliases/export-context.md)
+Re-exports [ExportContext](ExportConfig.types/type-aliases/export-context/index.md)
 
 <hr />
 
 ### Style
 
-Re-exports [Style](ExportConfig.types/interfaces/style.md)
+Re-exports [Style](ExportConfig.types/interfaces/style/index.md)
 
 <hr />
 
 ### BaseButtonStyle
 
-Re-exports [BaseButtonStyle](ExportConfig.types/interfaces/base-button-style.md)
+Re-exports [BaseButtonStyle](ExportConfig.types/interfaces/base-button-style/index.md)
 
 <hr />
 
@@ -508,31 +508,31 @@ Re-exports [EnabledButtonStyle](ExportConfig.types/type-aliases/EnabledButtonsty
 
 ### ContentType
 
-Re-exports [ContentType](ExportConfig.types/type-aliases/content-type.md)
+Re-exports [ContentType](ExportConfig.types/type-aliases/content-type/index.md)
 
 <hr />
 
 ### CustomContentConfig
 
-Re-exports [CustomContentConfig](ExportConfig.types/interfaces/custom-content-config.md)
+Re-exports [CustomContentConfig](ExportConfig.types/interfaces/custom-content-config/index.md)
 
 <hr />
 
 ### DropdownOptionStyle
 
-Re-exports [DropdownOptionStyle](ExportConfig.types/interfaces/dropdown-option-style.md)
+Re-exports [DropdownOptionStyle](ExportConfig.types/interfaces/dropdown-option-style/index.md)
 
 <hr />
 
 ### DropdownOptionStyleCompat
 
-Re-exports [DropdownOptionStyleCompat](ExportConfig.types/interfaces/dropdown-option-style-compat.md)
+Re-exports [DropdownOptionStyleCompat](ExportConfig.types/interfaces/dropdown-option-style-compat/index.md)
 
 <hr />
 
 ### LinkStyle
 
-Re-exports [LinkStyle](ExportConfig.types/interfaces/Link-style.md)
+Re-exports [LinkStyle](ExportConfig.types/interfaces/Link-style/index.md)
 
 <hr />
 
@@ -544,139 +544,139 @@ Re-exports [ExportStyle](ExportConfig.types/type-aliases/Exportstyle.md)
 
 ### BaseAction
 
-Re-exports [BaseAction](ExportConfig.types/interfaces/base-action.md)
+Re-exports [BaseAction](ExportConfig.types/interfaces/base-action/index.md)
 
 <hr />
 
 ### PublishAction
 
-Re-exports [PublishAction](ExportConfig.types/interfaces/publish-action.md)
+Re-exports [PublishAction](ExportConfig.types/interfaces/publish-action/index.md)
 
 <hr />
 
 ### DownloadAction
 
-Re-exports [DownloadAction](ExportConfig.types/interfaces/download-action.md)
+Re-exports [DownloadAction](ExportConfig.types/interfaces/download-action/index.md)
 
 <hr />
 
 ### EditFurtherIntent
 
-Re-exports [EditFurtherIntent](ExportConfig.types/enumerations/edit-further-intent.md)
+Re-exports [EditFurtherIntent](ExportConfig.types/enumerations/edit-further-intent/index.md)
 
 <hr />
 
 ### EditFurtherAction
 
-Re-exports [EditFurtherAction](ExportConfig.types/interfaces/edit-further-action.md)
+Re-exports [EditFurtherAction](ExportConfig.types/interfaces/edit-further-action/index.md)
 
 <hr />
 
 ### ContinueEditingAction
 
-Re-exports [ContinueEditingAction](ExportConfig.types/type-aliases/continue-editing-action.md)
+Re-exports [ContinueEditingAction](ExportConfig.types/type-aliases/continue-editing-action/index.md)
 
 <hr />
 
 ### ExportAction
 
-Re-exports [ExportAction](ExportConfig.types/type-aliases/export-action.md)
+Re-exports [ExportAction](ExportConfig.types/type-aliases/export-action/index.md)
 
 <hr />
 
 ### BaseExportOption
 
-Re-exports [BaseExportOption](ExportConfig.types/interfaces/base-export-option.md)
+Re-exports [BaseExportOption](ExportConfig.types/interfaces/base-export-option/index.md)
 
 <hr />
 
 ### PublishExportOption
 
-Re-exports [PublishExportOption](ExportConfig.types/interfaces/publish-export-option.md)
+Re-exports [PublishExportOption](ExportConfig.types/interfaces/publish-export-option/index.md)
 
 <hr />
 
 ### DownloadExportOption
 
-Re-exports [DownloadExportOption](ExportConfig.types/interfaces/download-export-option.md)
+Re-exports [DownloadExportOption](ExportConfig.types/interfaces/download-export-option/index.md)
 
 <hr />
 
 ### EditFurtherExportOption
 
-Re-exports [EditFurtherExportOption](ExportConfig.types/interfaces/edit-further-export-option.md)
+Re-exports [EditFurtherExportOption](ExportConfig.types/interfaces/edit-further-export-option/index.md)
 
 <hr />
 
 ### ContinueEditingDropdownOption
 
-Re-exports [ContinueEditingDropdownOption](ExportConfig.types/interfaces/continue-editing-dropdown-option.md)
+Re-exports [ContinueEditingDropdownOption](ExportConfig.types/interfaces/continue-editing-dropdown-option/index.md)
 
 <hr />
 
 ### ExportOption
 
-Re-exports [ExportOption](ExportConfig.types/type-aliases/export-option.md)
+Re-exports [ExportOption](ExportConfig.types/type-aliases/export-option/index.md)
 
 <hr />
 
 ### DropdownExportOption
 
-Re-exports [DropdownExportOption](ExportConfig.types/type-aliases/dropdown-export-option.md)
+Re-exports [DropdownExportOption](ExportConfig.types/type-aliases/dropdown-export-option/index.md)
 
 <hr />
 
 ### ExportGroupType
 
-Re-exports [ExportGroupType](ExportConfig.types/enumerations/export-group-type.md)
+Re-exports [ExportGroupType](ExportConfig.types/enumerations/export-group-type/index.md)
 
 <hr />
 
 ### ExportGroup
 
-Re-exports [ExportGroup](ExportConfig.types/interfaces/export-group.md)
+Re-exports [ExportGroup](ExportConfig.types/interfaces/export-group/index.md)
 
 <hr />
 
 ### ExportOptionGroup
 
-Re-exports [ExportOptionGroup](ExportConfig.types/interfaces/export-option-group.md)
+Re-exports [ExportOptionGroup](ExportConfig.types/interfaces/export-option-group/index.md)
 
 <hr />
 
 ### ContinueEditingGroup
 
-Re-exports [ContinueEditingGroup](ExportConfig.types/interfaces/continue-editing-group.md)
+Re-exports [ContinueEditingGroup](ExportConfig.types/interfaces/continue-editing-group/index.md)
 
 <hr />
 
 ### ExportOptionOrGroup
 
-Re-exports [ExportOptionOrGroup](ExportConfig.types/type-aliases/export-option-or-group.md)
+Re-exports [ExportOptionOrGroup](ExportConfig.types/type-aliases/export-option-or-group/index.md)
 
 <hr />
 
 ### ExportOptions
 
-Re-exports [ExportOptions](ExportConfig.types/type-aliases/export-options.md)
+Re-exports [ExportOptions](ExportConfig.types/type-aliases/export-options/index.md)
 
 <hr />
 
 ### ExportConfig
 
-Re-exports [ExportConfig](ExportConfig.types/type-aliases/export-config.md)
+Re-exports [ExportConfig](ExportConfig.types/type-aliases/export-config/index.md)
 
 <hr />
 
 ### FeatureFlags
 
-Re-exports [FeatureFlags](FeatureFlags.types/type-aliases/feature-flags.md)
+Re-exports [FeatureFlags](FeatureFlags.types/type-aliases/feature-flags/index.md)
 
 <hr />
 
 ### Environment
 
-Re-exports [Environment](HostInfo.types/enumerations/environment.md)
+Re-exports [Environment](HostInfo.types/enumerations/environment/index.md)
 
 <hr />
 
@@ -688,19 +688,19 @@ Re-exports [PIIPStatus](HostInfo.types/enumerations/PIIPstatus.md)
 
 ### Locale
 
-Re-exports [Locale](HostInfo.types/enumerations/locale.md)
+Re-exports [Locale](HostInfo.types/enumerations/locale/index.md)
 
 <hr />
 
 ### PlatformCategory
 
-Re-exports [PlatformCategory](HostInfo.types/enumerations/platform-category.md)
+Re-exports [PlatformCategory](HostInfo.types/enumerations/platform-category/index.md)
 
 <hr />
 
 ### ConfigParamsBase
 
-Re-exports [ConfigParamsBase](HostInfo.types/interfaces/config-params-base.md)
+Re-exports [ConfigParamsBase](HostInfo.types/interfaces/config-params-base/index.md)
 
 <hr />
 
@@ -712,67 +712,67 @@ Re-exports [ConfigParams](HostInfo.types/type-aliases/config-params/index.md)
 
 ### HostId
 
-Re-exports [HostId](HostInfo.types/enumerations/host-id.md)
+Re-exports [HostId](HostInfo.types/enumerations/host-id/index.md)
 
 <hr />
 
 ### HostType
 
-Re-exports [HostType](HostInfo.types/enumerations/host-type.md)
+Re-exports [HostType](HostInfo.types/enumerations/host-type/index.md)
 
 <hr />
 
 ### HostTypeName
 
-Re-exports [HostTypeName](HostInfo.types/variables/hosttype-name.md)
+Re-exports [HostTypeName](HostInfo.types/variables/hosttype-name/index.md)
 
 <hr />
 
 ### HostInfoSession
 
-Re-exports [HostInfoSession](HostInfo.types/interfaces/host-info-session.md)
+Re-exports [HostInfoSession](HostInfo.types/interfaces/host-info-session/index.md)
 
 <hr />
 
 ### HostInfoComputed
 
-Re-exports [HostInfoComputed](HostInfo.types/interfaces/host-info-computed.md)
+Re-exports [HostInfoComputed](HostInfo.types/interfaces/host-info-computed/index.md)
 
 <hr />
 
 ### HostInfoSpecifiedBase
 
-Re-exports [HostInfoSpecifiedBase](HostInfo.types/interfaces/host-info-specified-base.md)
+Re-exports [HostInfoSpecifiedBase](HostInfo.types/interfaces/host-info-specified-base/index.md)
 
 <hr />
 
 ### HostInfoSpecified
 
-Re-exports [HostInfoSpecified](HostInfo.types/type-aliases/host-info-specified.md)
+Re-exports [HostInfoSpecified](HostInfo.types/type-aliases/host-info-specified/index.md)
 
 <hr />
 
 ### HostInfo
 
-Re-exports [HostInfo](HostInfo.types/type-aliases/host-info.md)
+Re-exports [HostInfo](HostInfo.types/type-aliases/host-info/index.md)
 
 <hr />
 
 ### HostInfoExtended
 
-Re-exports [HostInfoExtended](HostInfo.types/type-aliases/host-info-extended.md)
+Re-exports [HostInfoExtended](HostInfo.types/type-aliases/host-info-extended/index.md)
 
 <hr />
 
 ### CanvasType
 
-Re-exports [CanvasType](Layout.types/enumerations/canvas-type.md)
+Re-exports [CanvasType](Layout.types/enumerations/canvas-type/index.md)
 
 <hr />
 
 ### CanvasInfo
 
-Re-exports [CanvasInfo](Layout.types/type-aliases/canvas-info.md)
+Re-exports [CanvasInfo](Layout.types/type-aliases/canvas-info/index.md)
 
 <hr />
 
@@ -790,13 +790,13 @@ Re-exports [NetworkState](Network.types/enumerations/Networkstate.md)
 
 ### PublishParams
 
-Re-exports [PublishParams](PublishParams.types/interfaces/publish-params.md)
+Re-exports [PublishParams](PublishParams.types/interfaces/publish-params/index.md)
 
 <hr />
 
 ### AssetTargetInfo
 
-Re-exports [AssetTargetInfo](PublishParams.types/interfaces/asset-target-info.md)
+Re-exports [AssetTargetInfo](PublishParams.types/interfaces/asset-target-info/index.md)
 
 <hr />
 
@@ -814,37 +814,37 @@ Re-exports [TextToImagePublishParams](PublishParams.types/interfaces/TextToImage
 
 ### EditorPublishParams
 
-Re-exports [EditorPublishParams](PublishParams.types/interfaces/editor-publish-params.md)
+Re-exports [EditorPublishParams](PublishParams.types/interfaces/editor-publish-params/index.md)
 
 <hr />
 
 ### TargetInfo
 
-Re-exports [TargetInfo](TargetInfo.types/interfaces/target-info.md)
+Re-exports [TargetInfo](TargetInfo.types/interfaces/target-info/index.md)
 
 <hr />
 
 ### Target
 
-Re-exports [Target](TargetInfo.types/enumerations/target.md)
+Re-exports [Target](TargetInfo.types/enumerations/target/index.md)
 
 <hr />
 
 ### TargetsConfig
 
-Re-exports [TargetsConfig](TargetInfo.types/type-aliases/targets-config.md)
+Re-exports [TargetsConfig](TargetInfo.types/type-aliases/targets-config/index.md)
 
 <hr />
 
 ### Version
 
-Re-exports [Version](Version.types/interfaces/Version.md)
+Re-exports [Version](Version.types/interfaces/version/index.md)
 
 <hr />
 
 ### Workflow
 
-Re-exports [Workflow](Workflow.types/enumerations/Workflow.md)
+Re-exports [Workflow](Workflow.types/enumerations/workflow/index.md)
 
 <hr />
 

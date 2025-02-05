@@ -16,9 +16,9 @@ editImage(
 
 | Parameter          | Type                                                                                                               |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------ |
-| `docConfig`        | [`EditImageDocConfig`](../../../../../../shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config.md) |
+| `docConfig`        | [`EditImageDocConfig`](../../../../../../shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config/index.md) |
 | `appConfig?`       | [`EditImageAppConfig`](../../../../../../shared/src/types/module/AppConfig.types/interfaces/EditImageapp-config.md) |
-| `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)             |
+| `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)             |
 | `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)      |
 
 #### Returns
@@ -41,7 +41,7 @@ createImageFromText(
 | Parameter          | Type                                                                                                                   |
 | ------------------ | ---------------------------------------------------------------------------------------------------------------------- |
 | `appConfig?`       | [`TextToImageAppConfig`](../../../../../../shared/src/types/module/AppConfig.types/interfaces/TextToImageapp-config.md) |
-| `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md)                 |
+| `exportConfig?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)                 |
 | `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)          |
 
 #### Returns

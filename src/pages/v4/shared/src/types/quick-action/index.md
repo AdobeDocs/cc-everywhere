@@ -28,10 +28,10 @@ Re-exports [MergeVideosDesignConfig](DesignConfig.types/interfaces/MergeVideosde
 
 ### DocConfig
 
-Re-exports [DocConfig](DocConfig.types/interfaces/doc-config.md)
+Re-exports [DocConfig](DocConfig.types/interfaces/doc-config/index.md)
 
 <hr />
 
 ### MergeVideoDocConfig
 
-Re-exports [MergeVideoDocConfig](DocConfig.types/interfaces/merge-video-doc-config.md)
+Re-exports [MergeVideoDocConfig](DocConfig.types/interfaces/merge-video-doc-config/index.md)

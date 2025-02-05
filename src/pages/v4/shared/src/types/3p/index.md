@@ -4,7 +4,7 @@
 
 ### HostInfo
 
-Re-exports [HostInfo](HostInfo.types/type-aliases/host-info.md)
+Re-exports [HostInfo](HostInfo.types/type-aliases/host-info/index.md)
 
 <hr />
 

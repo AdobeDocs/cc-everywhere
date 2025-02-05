@@ -6,13 +6,13 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [CanvasType](enumerations/canvas-type.md) | Canvas Layout supported in Project X |
+| [CanvasType](enumerations/canvas-type/index.md) | Canvas Layout supported in Project X |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [CanvasInfo](type-aliases/canvas-info.md) | - |
+| [CanvasInfo](type-aliases/canvas-info/index.md) | - |
 
 ### Variables
 

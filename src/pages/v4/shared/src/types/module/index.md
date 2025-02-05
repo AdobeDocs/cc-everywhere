@@ -40,4 +40,4 @@ Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/Warmupdesign-confi
 
 ### EditImageDocConfig
 
-Re-exports [EditImageDocConfig](DocConfig.types/interfaces/edit-image-doc-config.md)
+Re-exports [EditImageDocConfig](DocConfig.types/interfaces/edit-image-doc-config/index.md)

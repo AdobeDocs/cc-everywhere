@@ -26,9 +26,9 @@ Perform editing tasks on any image.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`EditImageDocConfig`](../../../../../../shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config.md) | pass an asset to preload on to the Editor |
+| `docConfig` | [`EditImageDocConfig`](../../../../../../shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config/index.md) | pass an asset to preload on to the Editor |
 | `appConfig`? | [`EditImageAppConfig`](../../../../../../shared/src/types/module/AppConfig.types/interfaces/EditImageapp-config.md) | - |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
+| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
 | `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
@@ -57,7 +57,7 @@ Generate images by just passing a text prompt.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `appConfig`? | [`TextToImageAppConfig`](../../../../../../shared/src/types/module/AppConfig.types/interfaces/TextToImageapp-config.md) | Pass a text prompt to generate images. |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options.md) | properties to configure the export options |
+| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
 | `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns

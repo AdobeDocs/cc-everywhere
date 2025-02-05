@@ -598,7 +598,7 @@
                       },
                       {
                         "title": "HostInfo",
-                        "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/host-info.md"
+                        "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/host-info/index.md"
                       }
                     ],
                     "path": "v4/shared/src/types/3p/HostInfo.types/type-aliases/config-params/index.md"
@@ -1095,108 +1095,108 @@
                 "pages": [
                   {
                     "title": "DownloadTarget",
-                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/download-target.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/download-target/index.md"
                   },
                   {
                     "title": "EditFurtherIntent",
-                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/edit-further-intent.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/edit-further-intent/index.md"
                   },
                   {
                     "title": "EditFurtherTarget",
-                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/edit-further-target.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/edit-further-target/index.md"
                   },
                   {
                     "title": "ExportGroupType",
-                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/export-group-type.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/export-group-type/index.md"
                   },
                   {
                     "title": "ExportOptionUI",
-                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/export-option-ui.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/export-option-ui/index.md"
                   },
                   {
                     "title": "PublishTarget",
-                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/publish-target.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/enumerations/publish-target/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/ExportConfig.types/enumerations/download-target.md"
+                "path": "v4/shared/src/types/ExportConfig.types/enumerations/download-target/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "BaseAction",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-action.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-action/index.md"
                   },
                   {
                     "title": "BaseButtonStyle",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-button-style.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-button-style/index.md"
                   },
                   {
                     "title": "BaseExportOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-export-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-export-option/index.md"
                   },
                   {
                     "title": "ContinueEditingDropdownOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/continue-editing-dropdown-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/continue-editing-dropdown-option/index.md"
                   },
                   {
                     "title": "ContinueEditingGroup",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/continue-editing-group.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/continue-editing-group/index.md"
                   },
                   {
                     "title": "CustomContentConfig",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/custom-content-config.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/custom-content-config/index.md"
                   },
                   {
                     "title": "DownloadAction",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/download-action.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/download-action/index.md"
                   },
                   {
                     "title": "DownloadExportOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/download-export-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/download-export-option/index.md"
                   },
                   {
                     "title": "DropdownOptionStyle",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/dropdown-option-style.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/dropdown-option-style/index.md"
                   },
                   {
                     "title": "DropdownOptionStyleCompat",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/dropdown-option-style-compat.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/dropdown-option-style-compat/index.md"
                   },
                   {
                     "title": "EditFurtherAction",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/edit-further-action.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/edit-further-action/index.md"
                   },
                   {
                     "title": "EditFurtherExportOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/edit-further-export-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/edit-further-export-option/index.md"
                   },
                   {
                     "title": "ExportGroup",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/export-group.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/export-group/index.md"
                   },
                   {
                     "title": "ExportOptionGroup",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/export-option-group.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/export-option-group/index.md"
                   },
                   {
                     "title": "LinkStyle",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/Link-style.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/Link-style/index.md"
                   },
                   {
                     "title": "PublishAction",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/publish-action.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/publish-action/index.md"
                   },
                   {
                     "title": "PublishExportOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/publish-export-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/publish-export-option/index.md"
                   },
                   {
                     "title": "Style",
-                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/style.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/interfaces/style/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-action.md"
+                "path": "v4/shared/src/types/ExportConfig.types/interfaces/base-action/index.md"
               },
               {
                 "title": "type-aliases",
@@ -1207,15 +1207,15 @@
                   },
                   {
                     "title": "ContentType",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/content-type.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/content-type/index.md"
                   },
                   {
                     "title": "ContinueEditingAction",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/continue-editing-action.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/continue-editing-action/index.md"
                   },
                   {
                     "title": "DropdownExportOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/dropdown-export-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/dropdown-export-option/index.md"
                   },
                   {
                     "title": "EnabledButtonStyle",
@@ -1223,35 +1223,35 @@
                   },
                   {
                     "title": "ExportAction",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-action.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-action/index.md"
                   },
                   {
                     "title": "ExportButtonTreatment",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-button-treatment.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-button-treatment/index.md"
                   },
                   {
                     "title": "ExportButtonVariant",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-button-variant.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-button-variant/index.md"
                   },
                   {
                     "title": "ExportConfig",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-config.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-config/index.md"
                   },
                   {
                     "title": "ExportContext",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-context.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-context/index.md"
                   },
                   {
                     "title": "ExportOption",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-option.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-option/index.md"
                   },
                   {
                     "title": "ExportOptionOrGroup",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-option-or-group.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-option-or-group/index.md"
                   },
                   {
                     "title": "ExportOptions",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-options.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-options/index.md"
                   },
                   {
                     "title": "ExportStyle",
@@ -1259,7 +1259,7 @@
                   },
                   {
                     "title": "ExportTarget",
-                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-target.md"
+                    "path": "v4/shared/src/types/ExportConfig.types/type-aliases/export-target/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/ExportConfig.types/type-aliases/Buttonstyle.md"
@@ -1272,7 +1272,7 @@
             "pages": [
               {
                 "title": "FeatureFlags",
-                "path": "v4/shared/src/types/FeatureFlags.types/type-aliases/feature-flags.md"
+                "path": "v4/shared/src/types/FeatureFlags.types/type-aliases/feature-flags/index.md"
               }
             ],
             "path": "v4/shared/src/types/FeatureFlags.types/index.md"
@@ -1285,19 +1285,19 @@
                 "pages": [
                   {
                     "title": "Environment",
-                    "path": "v4/shared/src/types/HostInfo.types/enumerations/environment.md"
+                    "path": "v4/shared/src/types/HostInfo.types/enumerations/environment/index.md"
                   },
                   {
                     "title": "HostId",
-                    "path": "v4/shared/src/types/HostInfo.types/enumerations/host-id.md"
+                    "path": "v4/shared/src/types/HostInfo.types/enumerations/host-id/index.md"
                   },
                   {
                     "title": "HostType",
-                    "path": "v4/shared/src/types/HostInfo.types/enumerations/host-type.md"
+                    "path": "v4/shared/src/types/HostInfo.types/enumerations/host-type/index.md"
                   },
                   {
                     "title": "Locale",
-                    "path": "v4/shared/src/types/HostInfo.types/enumerations/locale.md"
+                    "path": "v4/shared/src/types/HostInfo.types/enumerations/locale/index.md"
                   },
                   {
                     "title": "PIIPStatus",
@@ -1305,32 +1305,32 @@
                   },
                   {
                     "title": "PlatformCategory",
-                    "path": "v4/shared/src/types/HostInfo.types/enumerations/platform-category.md"
+                    "path": "v4/shared/src/types/HostInfo.types/enumerations/platform-category/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/HostInfo.types/enumerations/environment.md"
+                "path": "v4/shared/src/types/HostInfo.types/enumerations/environment/index.md"
               },
               {
                 "title": "interfaces",
                 "pages": [
                   {
                     "title": "ConfigParamsBase",
-                    "path": "v4/shared/src/types/HostInfo.types/interfaces/config-params-base.md"
+                    "path": "v4/shared/src/types/HostInfo.types/interfaces/config-params-base/index.md"
                   },
                   {
                     "title": "HostInfoComputed",
-                    "path": "v4/shared/src/types/HostInfo.types/interfaces/host-info-computed.md"
+                    "path": "v4/shared/src/types/HostInfo.types/interfaces/host-info-computed/index.md"
                   },
                   {
                     "title": "HostInfoSession",
-                    "path": "v4/shared/src/types/HostInfo.types/interfaces/host-info-session.md"
+                    "path": "v4/shared/src/types/HostInfo.types/interfaces/host-info-session/index.md"
                   },
                   {
                     "title": "HostInfoSpecifiedBase",
-                    "path": "v4/shared/src/types/HostInfo.types/interfaces/host-info-specified-base.md"
+                    "path": "v4/shared/src/types/HostInfo.types/interfaces/host-info-specified-base/index.md"
                   }
                 ],
-                "path": "v4/shared/src/types/HostInfo.types/interfaces/config-params-base.md"
+                "path": "v4/shared/src/types/HostInfo.types/interfaces/config-params-base/index.md"
               },
               {
                 "title": "type-aliases",
@@ -1341,22 +1341,22 @@
                   },
                   {
                     "title": "HostInfo",
-                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info.md"
+                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info/index.md"
                   },
                   {
                     "title": "HostInfoExtended",
-                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info-extended.md"
+                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info-extended/index.md"
                   },
                   {
                     "title": "HostInfoSpecified",
-                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info-specified.md"
+                    "path": "v4/shared/src/types/HostInfo.types/type-aliases/host-info-specified/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/HostInfo.types/type-aliases/config-params/index.md"
               },
               {
                 "title": "HostTypeName",
-                "path": "v4/shared/src/types/HostInfo.types/variables/hosttype-name.md"
+                "path": "v4/shared/src/types/HostInfo.types/variables/hosttype-name/index.md"
               }
             ],
             "path": "v4/shared/src/types/HostInfo.types/index.md"
@@ -1366,11 +1366,11 @@
             "pages": [
               {
                 "title": "CanvasType",
-                "path": "v4/shared/src/types/Layout.types/enumerations/canvas-type.md"
+                "path": "v4/shared/src/types/Layout.types/enumerations/canvas-type/index.md"
               },
               {
                 "title": "CanvasInfo",
-                "path": "v4/shared/src/types/Layout.types/type-aliases/canvas-info.md"
+                "path": "v4/shared/src/types/Layout.types/type-aliases/canvas-info/index.md"
               },
               {
                 "title": "CanvasTypeInfo",
@@ -1397,15 +1397,15 @@
                 "pages": [
                   {
                     "title": "AssetTargetInfo",
-                    "path": "v4/shared/src/types/PublishParams.types/interfaces/asset-target-info.md"
+                    "path": "v4/shared/src/types/PublishParams.types/interfaces/asset-target-info/index.md"
                   },
                   {
                     "title": "EditorPublishParams",
-                    "path": "v4/shared/src/types/PublishParams.types/interfaces/editor-publish-params.md"
+                    "path": "v4/shared/src/types/PublishParams.types/interfaces/editor-publish-params/index.md"
                   },
                   {
                     "title": "PublishParams",
-                    "path": "v4/shared/src/types/PublishParams.types/interfaces/publish-params.md"
+                    "path": "v4/shared/src/types/PublishParams.types/interfaces/publish-params/index.md"
                   },
                   {
                     "title": "QuickActionPublishParams",
@@ -1416,7 +1416,7 @@
                     "path": "v4/shared/src/types/PublishParams.types/interfaces/TextToImagepublish-params.md"
                   }
                 ],
-                "path": "v4/shared/src/types/PublishParams.types/interfaces/asset-target-info.md"
+                "path": "v4/shared/src/types/PublishParams.types/interfaces/asset-target-info/index.md"
               }
             ],
             "path": "v4/shared/src/types/PublishParams.types/index.md"
@@ -1426,15 +1426,15 @@
             "pages": [
               {
                 "title": "Target",
-                "path": "v4/shared/src/types/TargetInfo.types/enumerations/target.md"
+                "path": "v4/shared/src/types/TargetInfo.types/enumerations/target/index.md"
               },
               {
                 "title": "TargetInfo",
-                "path": "v4/shared/src/types/TargetInfo.types/interfaces/target-info.md"
+                "path": "v4/shared/src/types/TargetInfo.types/interfaces/target-info/index.md"
               },
               {
                 "title": "TargetsConfig",
-                "path": "v4/shared/src/types/TargetInfo.types/type-aliases/targets-config.md"
+                "path": "v4/shared/src/types/TargetInfo.types/type-aliases/targets-config/index.md"
               }
             ],
             "path": "v4/shared/src/types/TargetInfo.types/index.md"
@@ -1444,7 +1444,7 @@
             "pages": [
               {
                 "title": "Version",
-                "path": "v4/shared/src/types/Version.types/interfaces/Version.md"
+                "path": "v4/shared/src/types/Version.types/interfaces/version/index.md"
               }
             ],
             "path": "v4/shared/src/types/Version.types/index.md"
@@ -1454,7 +1454,7 @@
             "pages": [
               {
                 "title": "Workflow",
-                "path": "v4/shared/src/types/Workflow.types/enumerations/Workflow.md"
+                "path": "v4/shared/src/types/Workflow.types/enumerations/workflow/index.md"
               }
             ],
             "path": "v4/shared/src/types/Workflow.types/index.md"
@@ -1516,22 +1516,22 @@
                     "pages": [
                       {
                         "title": "CreateDocConfig",
-                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-doc-config.md"
+                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md"
                       },
                       {
                         "title": "CreateWithAssetDocConfig",
-                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config.md"
+                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config/index.md"
                       },
                       {
                         "title": "CreateWithTemplateDocConfig",
-                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config.md"
+                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config/index.md"
                       },
                       {
                         "title": "EditDocConfig",
-                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config.md"
+                        "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config/index.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-doc-config.md"
+                    "path": "v4/shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/editor/DocConfig.types/index.md"
@@ -1595,7 +1595,7 @@
                 "pages": [
                   {
                     "title": "EditImageDocConfig",
-                    "path": "v4/shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config.md"
+                    "path": "v4/shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/module/DocConfig.types/index.md"
@@ -1648,14 +1648,14 @@
                     "pages": [
                       {
                         "title": "DocConfig",
-                        "path": "v4/shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md"
+                        "path": "v4/shared/src/types/quick-action/DocConfig.types/interfaces/doc-config/index.md"
                       },
                       {
                         "title": "MergeVideoDocConfig",
-                        "path": "v4/shared/src/types/quick-action/DocConfig.types/interfaces/merge-video-doc-config.md"
+                        "path": "v4/shared/src/types/quick-action/DocConfig.types/interfaces/merge-video-doc-config/index.md"
                       }
                     ],
-                    "path": "v4/shared/src/types/quick-action/DocConfig.types/interfaces/doc-config.md"
+                    "path": "v4/shared/src/types/quick-action/DocConfig.types/interfaces/doc-config/index.md"
                   }
                 ],
                 "path": "v4/shared/src/types/quick-action/DocConfig.types/index.md"
@@ -1678,7 +1678,7 @@
                       },
                       {
                         "title": "PublishParams",
-                        "path": "v4/shared/src/types/v1_1/OutputParams.types/interfaces/publish-params.md"
+                        "path": "v4/shared/src/types/v1_1/OutputParams.types/interfaces/publish-params/index.md"
                       },
                       {
                         "title": "QuickActionPublishParams",

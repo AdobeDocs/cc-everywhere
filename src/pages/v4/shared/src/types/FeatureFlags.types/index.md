@@ -6,4 +6,4 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [FeatureFlags](type-aliases/feature-flags.md) | - |
+| [FeatureFlags](type-aliases/feature-flags/index.md) | - |
