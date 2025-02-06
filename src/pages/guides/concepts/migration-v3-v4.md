@@ -66,8 +66,8 @@ We are introducing module APIs through module workflow.
 
 #### Deprecated APIs
 
-- [createDesign](../../v3/reference/CCEverywhere/create_design/)
-- [editDesign](../../v3/reference/CCEverywhere/edit-design/)
+- [createDesign](../../v3/reference/CCEverywhere/create-design/index.md)
+- [editDesign](../../v3/reference/CCEverywhere/edit-design/index.md)
 
 ### Quick action workflow
 
@@ -208,7 +208,7 @@ By following this guide, you can ensure a smooth transition and take advantage o
 
 ## API References
 
-[CCEverywhere](../../v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md)
+[CCEverywhere](../../v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere.md)
 
 Once you have successfully initialized the SDK, a Promise will be returned containing the `CCEverywhere` object.
 
