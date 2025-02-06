@@ -96,7 +96,7 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-Please note that the dynamic `import()` requires `await`, to ensure the code is fully loaded before proceeding. Now, the `CCEverywhere` object is available in the global scope: it is the [entry point](/reference/CCEverywhere/) to the SDK and provides all the necessary methods to create the Adobe Express integration.
+Please note that the dynamic `import()` requires `await`, to ensure the code is fully loaded before proceeding. Now, the `CCEverywhere` object is available in the global scope: it is the [entry point](../../reference/CCEverywhere/index.md) to the SDK and provides all the necessary methods to create the Adobe Express integration.
 
 ```javascript
 // Host information for the Adobe SDK
@@ -117,7 +117,7 @@ const { editor } = await window.CCEverywhere.initialize(
 );
 ```
 
-The [`editor`](../../reference/CCEverywhere/editor/) class contains all the APIs we need. In the sample, we use it to spawn the full Adobe Express experience on the button click:
+The [`editor`](../../reference/CCEverywhere/editor/index.md) class contains all the APIs we need. In the sample, we use it to spawn the full Adobe Express experience on the button click:
 
 ```javascript
 document.getElementById("launchExpress").onclick = async () => {
@@ -132,7 +132,7 @@ document.getElementById("launchExpress").onclick = async () => {
 };
 ```
 
-The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](../../reference/CCEverywhere/editor.md#create) now for more information.
+The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](../../reference/CCEverywhere/editor/index.md#create) now for more information.
 
 ## Next steps
 
