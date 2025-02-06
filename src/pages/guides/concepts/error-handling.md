@@ -238,7 +238,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### NO_ACTIVE_WORKFLOW
 
-- **What it means**: You're trying to call [`close`](../../reference/CCEverywhere/close/) or [`terminate`](../../reference/CCEverywhere/terminate/) when there's no active workflow.
+- **What it means**: You're trying to call [`close`](../../reference/CCEverywhere/close/index.md) or [`terminate`](../../reference/CCEverywhere/terminate/index.md) when there's no active workflow.
 - **What to do**: Ensure a workflow is active before calling `close` or `terminate`.
 - **User Experience**: This issue can be fixed.
 - **Example**:
