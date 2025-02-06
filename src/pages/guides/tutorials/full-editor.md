@@ -29,7 +29,7 @@ We'll look at a few **configuration parameters**, as well as the way to **handle
 Before we begin, make sure you have the following:
 
 - An **Adobe account**: use your existing Adobe ID or create one for free.
-- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/) for more information.
+- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/index.md) for more information.
 - Familiarity with **HTML, CSS, JavaScript**.
 - **Node.js** is installed on your development machine.
 
