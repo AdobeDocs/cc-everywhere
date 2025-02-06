@@ -36,7 +36,7 @@ addHandler(handler): void
 
 `void`
 
-***
+<hr />
 
 ### removeHandler()
 
@@ -54,7 +54,7 @@ removeHandler(handler): void
 
 `void`
 
-***
+<hr />
 
 ### removeAllHandlers()
 
@@ -66,7 +66,7 @@ removeAllHandlers(): void
 
 `void`
 
-***
+<hr />
 
 ### error()
 
@@ -84,7 +84,7 @@ error(error): void
 
 `void`
 
-***
+<hr />
 
 ### warn()
 
@@ -102,7 +102,7 @@ warn(warning): void
 
 `void`
 
-***
+<hr />
 
 ### info()
 
