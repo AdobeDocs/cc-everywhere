@@ -408,7 +408,7 @@
                     - [DesignConfig.types](v4/shared/src/types/module/DesignConfig.types/index.md) 
                         - [interfaces](v4/shared/src/types/module/DesignConfig.types/interfaces/edit-image-design-config/index.md) 
                             - [EditImageDesignConfig](v4/shared/src/types/module/DesignConfig.types/interfaces/edit-image-design-config/index.md) 
-                            - [TextToImageDesignConfig](v4/shared/src/types/module/DesignConfig.types/interfaces/test-to-image-design-config/index.md) 
+                            - [TextToImageDesignConfig](v4/shared/src/types/module/DesignConfig.types/interfaces/text-to-image-design-config/index.md) 
                             - [WarmupDesignConfig](v4/shared/src/types/module/DesignConfig.types/interfaces/warmup-design-config/index.md) 
                     - [DocConfig.types](v4/shared/src/types/module/DocConfig.types/index.md) 
                         - [EditImageDocConfig](v4/shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config/index.md) 

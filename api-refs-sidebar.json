@@ -1578,7 +1578,7 @@
                       },
                       {
                         "title": "TextToImageDesignConfig",
-                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/test-to-image-design-config/index.md"
+                        "path": "v4/shared/src/types/module/DesignConfig.types/interfaces/text-to-image-design-config/index.md"
                       },
                       {
                         "title": "WarmupDesignConfig",

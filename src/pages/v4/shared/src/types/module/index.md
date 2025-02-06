@@ -28,7 +28,7 @@ Re-exports [EditImageDesignConfig](DesignConfig.types/interfaces/edit-image-desi
 
 ### TextToImageDesignConfig
 
-Re-exports [TextToImageDesignConfig](DesignConfig.types/interfaces/test-to-image-design-config/index.md)
+Re-exports [TextToImageDesignConfig](DesignConfig.types/interfaces/text-to-image-design-config/index.md)
 
 <hr />
 
