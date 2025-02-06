@@ -214,7 +214,7 @@ Once you have successfully initialized the SDK, a Promise will be returned conta
 
 <DiscoverBlock slots="link, text"/>
 
-[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md)
+[Editor API](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow/index.md)
 
 Provides API References for /Editor API.
 

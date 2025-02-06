@@ -301,7 +301,7 @@ module.exports = {
           },
           {
             title: "Editor",
-            path: "v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md",
+            path: "v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow/index.md",
           },
           {
             title: "Module",

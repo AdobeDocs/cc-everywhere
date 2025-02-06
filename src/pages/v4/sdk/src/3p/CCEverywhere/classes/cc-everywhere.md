@@ -14,7 +14,7 @@ Class to create CCEverywhere object.
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/EditorWorkflow/classes/editor-workflow.md) |
+| `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/EditorWorkflow/classes/editor-workflow/index.md) |
 | `module` | `readonly` | [`ModuleWorkflow`](../../../workflows/3p/ModuleWorkflow/classes/module-workflow.md) |
 | `quickAction` | `readonly` | [`QuickActionWorkflow`](../../../workflows/3p/QuickActionWorkflow/classes/quick-action-workflow.md) |
 
