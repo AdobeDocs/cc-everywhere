@@ -49,7 +49,7 @@ We are introducing module APIs through module workflow.
 #### New APIs
 
 | API Name                                  | Description                                                                                                                                                                                         |
-|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `CCEverywhere.module.editImage`           | Start editing an asset using image module.                                                                                                                                                          |
 | `CCEverywhere.module.createImageFromText` | Generate images using a text prompt. SDK unlocks a mini editing experience, allowing users to create images from text prompts and then be able to make necessary edits via Embedded Express Editor. |
 
@@ -57,8 +57,8 @@ We are introducing module APIs through module workflow.
 
 #### New APIs
 
-| API Name             | Description                                                      |
-|----------------------|------------------------------------------------------------------|
+| API Name                                 | Description                                                      |
+| ---------------------------------------- | ---------------------------------------------------------------- |
 | `CCEverywhere.editor.create`             | Initiates a workflow using a blank canvas                        |
 | `CCEverywhere.editor.createWithAsset`    | Allows an image asset to be preloaded onto the canvas.           |
 | `CCEverywhere.editor.createWithTemplate` | Enables starting with a given Adobe Express template ID.         |
@@ -74,7 +74,7 @@ We are introducing module APIs through module workflow.
 #### New APIs
 
 | API Name                                 | Description                            |
-|------------------------------------------|----------------------------------------|
+| ---------------------------------------- | -------------------------------------- |
 | `CCEverywhere.quickAction.convertToJPEG` | Convert an image asset to JPEG format. |
 | `CCEverywhere.quickAction.convertToPNG`  | Convert an image asset to PNG format.  |
 | ... so on                                |                                        |
