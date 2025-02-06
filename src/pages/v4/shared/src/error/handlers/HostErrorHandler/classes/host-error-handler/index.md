@@ -59,6 +59,8 @@ error(error): void
 
 [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`error`
 
+<hr />
+
 ### warn()
 
 ```ts
@@ -72,6 +74,8 @@ warn(): void
 #### Implementation of
 
 [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`warn`
+
+<hr />
 
 ### info()
 
