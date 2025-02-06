@@ -183,12 +183,12 @@ Successful initialization returns a `CCEverywhere` Class object, with three prop
 
 Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [Full editor](../../guides/full-editor/index.md)
+### [Full editor](../full-editor/index.md)
 
 With the full editor component, your users are able to:
 
-- How to [create new projects](../../guides/full-editor/create-project/)
-- How to [edit existing projects](../../guides/full-editor/edit-project/)
+- How to [create new projects](../full-editor/create-project/index.md)
+- How to [edit existing projects](../full-editor/edit-project/index.md)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
