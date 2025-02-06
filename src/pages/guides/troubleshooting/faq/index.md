@@ -75,7 +75,7 @@ The SDK follows a continous release model, with newer versions including bug fix
 
 V1 and V2 are deprecated and V3 will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration-v3-v4.md.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration-v3-v4.md) to help you with the transition.
 
 ### I run into the "Adobe Express is not available" error
 
