@@ -11,9 +11,24 @@ title: Changelog
 description: All notable changes are documented in this page.
 contributors:
   - https://github.com/nimithajalal
+  - https://github.com/undavide
 ---
 
 # Changelog
+
+## [4.19.22] 2025-01-31
+
+### Enhancements
+
+- Added a new [Embed SDK Developer Journey](../index.md#embed-sdk-developer-journey) map to help developers navigate the resources available at different stages of their integration.
+- Added a new [Troubleshooting](../troubleshooting/express-unavailable-error.md) guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing.
+- Various small improvements and fixes across the documentation.
+
+### Added
+
+- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Added coverage for the [Asset](../../v4/shared/src/types/Asset.types/index.md) type.
+- Various performance improvements and bug fixes.
 
 ## [4.18.14] 2025-01-09
 
@@ -25,7 +40,7 @@ contributors:
 
 ### Enhancements
 
-Added a comprehensive [error code guide](../concepts/error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
+- Added a comprehensive [error code guide](../concepts/error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
 
 ### Added
 
