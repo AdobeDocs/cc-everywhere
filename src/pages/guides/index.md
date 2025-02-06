@@ -36,7 +36,7 @@ contributors:
 ---
 import "./landing-styles.css";
 
-<Hero slots="image, heading, text" background="rgb(193, 72, 273)"/>
+<HeroSimple slots="image, heading, text" background="rgb(193, 72, 273)"/>
 
 ![Hero image](./images/wide-SDK-Banner-570x400.png)
 
