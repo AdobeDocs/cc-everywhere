@@ -52,8 +52,6 @@ Experience the power of Adobe Express Embed SDK. Try our demo app and see seamle
 
 [Try our demo app](https://demo.expressembed.com/)
 
-<br/>
-
 ## Overview
 
 The Adobe Express Embed SDK lets you integrate powerful online design tools, photo editing features, video editing options, and AI-powered content generation into your platform.
