@@ -16,7 +16,7 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2, text3" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using using SDK V1, V2, or V3.
 
