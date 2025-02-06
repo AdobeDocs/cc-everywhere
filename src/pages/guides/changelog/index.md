@@ -26,7 +26,7 @@ contributors:
 
 ### Added
 
-- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/edit-further-intent/index.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
 - Added coverage for the [Asset](../../v4/shared/src/types/Asset.types/index.md) type.
 - Various performance improvements and bug fixes.
 
@@ -62,7 +62,7 @@ contributors:
 ### Enhancements
 
 - Redesigned the entire [SDK Reference](../../v4/index.md) section, providing full APIs coverage.
-- Added a V3 to V4 [Migration Guide](../concepts/migration_v3_v4.md).
+- Added a V3 to V4 [Migration Guide](../concepts/migration-v3-v4.md).
 
 ### Added
 
