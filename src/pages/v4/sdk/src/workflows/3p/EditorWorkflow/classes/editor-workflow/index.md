@@ -2,11 +2,11 @@
 
 ## Extends
 
-- [`BaseWorkflow`](../../../BaseWorkflow/classes/base-workflow.md)
+- [`BaseWorkflow`](../../../../BaseWorkflow/classes/base-workflow.md)
 
 ## Implements
 
-- [`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md)
+- [`EditorWorkflow`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md)
 
 ## Methods
 
@@ -26,10 +26,10 @@ Start the editor workflow with an empty canvas
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`CreateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md) | pass a custom canvas size |
-| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
+| `docConfig?` | [`CreateDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md) | pass a custom canvas size |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -37,7 +37,7 @@ Start the editor workflow with an empty canvas
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`create`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#create)
+[`EditorWorkflow`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`create`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md#create)
 
 <hr />
 
@@ -57,10 +57,10 @@ Start the editor workflow by passing an image asset
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config/index.md) | pass an image asset as base64 |
-| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
+| `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config/index.md) | pass an image asset as base64 |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -68,7 +68,7 @@ Start the editor workflow by passing an image asset
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`createWithAsset`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#createwithasset)
+[`EditorWorkflow`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`createWithAsset`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md#createwithasset)
 
 <hr />
 
@@ -88,10 +88,10 @@ Start the editor workflow by passing an Express Template ID
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config/index.md) | pass a template ID |
-| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
+| `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config/index.md) | pass a template ID |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -99,7 +99,7 @@ Start the editor workflow by passing an Express Template ID
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`createWithTemplate`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#createwithtemplate)
+[`EditorWorkflow`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`createWithTemplate`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md#createwithtemplate)
 
 <hr />
 
@@ -119,10 +119,10 @@ Start the editor workflow by passing an Express Document ID
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config/index.md) | pass an Express Document ID |
-| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
+| `docConfig` | [`EditDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config/index.md) | pass an Express Document ID |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -130,4 +130,4 @@ Start the editor workflow by passing an Express Document ID
 
 #### Implementation of
 
-[`EditorWorkflow`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`edit`](../../EditorWorkflow.types/interfaces/editor-workflow/index.md#edit)
+[`EditorWorkflow`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md).[`edit`](../../../EditorWorkflow.types/interfaces/editor-workflow/index.md#edit)
