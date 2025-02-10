@@ -15,6 +15,7 @@
 | ------ | ------ |
 | [LoadStartCallback](type-aliases/LoadStartCallback.md) | - |
 | [LoadCallback](type-aliases/LoadCallback.md) | - |
+| [LoadInitCallback](type-aliases/LoadInitCallback.md) | - |
 | [CancelCallback](type-aliases/CancelCallback.md) | - |
 | [PublishStartCallback](type-aliases/PublishStartCallback.md) | - |
 | [PublishCallback](type-aliases/PublishCallback.md) | - |

@@ -408,6 +408,14 @@
                     "path": "/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageListener.md"
                   },
                   {
+                    "title": "MessagePayload",
+                    "path": "/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessagePayload.md"
+                  },
+                  {
+                    "title": "MessageSender",
+                    "path": "/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageSender.md"
+                  },
+                  {
                     "title": "MessageTarget",
                     "path": "/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageTarget.md"
                   },
@@ -1000,6 +1008,10 @@
                     "path": "/v4/shared/src/types/Callbacks.types/type-aliases/LoadCallback.md"
                   },
                   {
+                    "title": "LoadInitCallback",
+                    "path": "/v4/shared/src/types/Callbacks.types/type-aliases/LoadInitCallback.md"
+                  },
+                  {
                     "title": "LoadStartCallback",
                     "path": "/v4/shared/src/types/Callbacks.types/type-aliases/LoadStartCallback.md"
                   },
@@ -1558,11 +1570,37 @@
                 "title": "AppConfig.types",
                 "pages": [
                   {
+                    "title": "enumerations",
+                    "pages": [
+                      {
+                        "title": "TextToImageFeature",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageFeature.md"
+                      },
+                      {
+                        "title": "ThumbnailOption",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/ThumbnailOption.md"
+                      }
+                    ],
+                    "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageFeature.md"
+                  },
+                  {
                     "title": "interfaces",
                     "pages": [
                       {
+                        "title": "EditDropdownOptionConfig",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/EditDropdownOptionConfig.md"
+                      },
+                      {
                         "title": "EditImageAppConfig",
                         "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md"
+                      },
+                      {
+                        "title": "FastModeConfig",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/FastModeConfig.md"
+                      },
+                      {
+                        "title": "PublishConfig",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/PublishConfig.md"
                       },
                       {
                         "title": "TextToImageAppConfig",
@@ -1573,7 +1611,7 @@
                         "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/WarmupAppConfig.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md"
+                    "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/EditDropdownOptionConfig.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/module/AppConfig.types/index.md"

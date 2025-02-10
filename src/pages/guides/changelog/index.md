@@ -16,6 +16,18 @@ contributors:
 
 # Changelog
 
+## [4.20.36] 2025-02-13
+
+### Enhancements
+
+- Introduced the support to an entirely new Text To Image experience, disabled by default; to enable it, set `enableNewUI` to `true` in [`appConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md), where you can also find other feature configurations. Among them:
+ 
+- **Enhanced User Interface:** Redesigned with a new Carousel and Grid view. 
+- **Community Wall:** An endless collection of generated images with prompts that users can select from to kickstart their image generation journey. 
+- **Fast Mode:** Images can be generated faster with less details (great use cases such as backgrounds and simple subjects). 
+- **Improved Prompt Bar:** Includes prompt suggestions for a better user experience. 
+- **Rich Previews:** Provides a more interactive and engaging preview experience.
+
 ## [4.19.22] 2025-01-31
 
 ### Enhancements
