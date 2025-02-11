@@ -8,7 +8,7 @@ Class to create CCEverywhere object.
 
 ## Implements
 
-- [`CCEverywhereInterface`](../../CCEverywhere.types/interfaces/cc-everywhere-interface/index.md)
+- [`CCEverywhereInterface`](../../CCEverywhere.types/interfaces/CCEverywhereInterface.md)
 
 ## Properties
 
@@ -54,7 +54,7 @@ boolean value indicating whether the close operation was successful or not.
 
 #### Implementation of
 
-[`CCEverywhereInterface`](../../CCEverywhere.types/interfaces/cc-everywhere-interface/index.md).[`close`](../../CCEverywhere.types/interfaces/cc-everywhere-interface/index.md#close)
+[`CCEverywhereInterface`](../../CCEverywhere.types/interfaces/CCEverywhereInterface.md).[`close`](../../CCEverywhere.types/interfaces/CCEverywhereInterface.md#close)
 
 #### Inherited from
 

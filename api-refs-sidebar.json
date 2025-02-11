@@ -24,7 +24,7 @@
             "pages": [
               {
                 "title": "CCEverywhereInterface",
-                "path": "v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface/index.md"
+                "path": "v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface.md"
               }
             ],
             "path": "v4/sdk/src/3p/CCEverywhere.types/index.md"
