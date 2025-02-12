@@ -4,6 +4,7 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
+| `onLoadInit?` | [`LoadInitCallback`](../type-aliases/LoadInitCallback.md) | Callback maybe invoked when target application has started loading and spinner starts. |
 | `onLoadStart?` | [`LoadStartCallback`](../type-aliases/LoadStartCallback.md) | Callback maybe invoked when target application has started loading. |
 | `onLoad?` | [`LoadCallback`](../type-aliases/LoadCallback.md) | Callback maybe invoked when target application has finished loading. |
 | `onCancel?` | [`CancelCallback`](../type-aliases/CancelCallback.md) | Callback maybe invoked when user cancels the workflow. |

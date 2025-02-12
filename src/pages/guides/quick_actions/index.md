@@ -9,7 +9,7 @@ keywords:
   - Remove background
   - Convert to GIF
   - Convert to MP4
-  - Crop video 
+  - Crop video
   - Merge videos
   - Resize video
   - Trim video
@@ -19,6 +19,7 @@ description: This is the overview page for the quick actions component.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
+  - https://github.com/undavide
 ---
 
 # Quick actions
@@ -31,47 +32,55 @@ The `quickAction` class contains all the methods for launching quick action edit
 
 ```js
 // Initialize the SDK first
-const { quickAction } = await ccEverywhere.initialize(); 
-quickAction.convertToJPEG(docConfig, appConfig, exportConfig, containerConfig); 
+const { quickAction } = await window.CCEverywhere.initialize({
+  clientId: <CLIENT_ID>,
+  appName: <APP_NAME>,
+});
+
+quickAction.convertToJPEG(docConfig, appConfig, exportConfig, containerConfig);
 ```
 
-Each quick action has its own method. Here are the methods for image quick actions:
+Each quick action has its own method, that always accepts `docConfig`, `appConfig`, `exportConfig`, `containerConfig` as optional parameters, and return `void`. Here are the Image quick actions:
 
-* convertToJPEG(docConfig, appConfig, exportConfig, containerConfig): void;
-* convertToPNG(docConfig, appConfig, exportConfig, containerConfig): void;
-* convertToSVG(docConfig, appConfig, exportConfig, containerConfig): void;
-* cropImage(docConfig, appConfig, exportConfig, containerConfig): void;
-* resizeImage(docConfig, appConfig, exportConfig, containerConfig): void;
-* removeBackground(docConfig, appConfig, exportConfig, containerConfig): void;
-* generateQRCode(docConfig, appConfig, exportConfig, containerConfig): void;
+- `convertToJPEG()`
+- `convertToPNG()`
+- `convertToSVG()`
+- `cropImage()`
+- `resizeImage()`
+- `removeBackground()`
+- `generateQRCode()`
 
 Here are the methods for video quick actions:
 
-* convertToGIF(docConfig, appConfig, exportConfig, containerConfig): void;
-* convertToMP4(docConfig, appConfig, exportConfig, containerConfig): void;
-* cropVideo(docConfig, appConfig, exportConfig, containerConfig): void;
-* mergeVideos(docConfig, appConfig, exportConfig, containerConfig): void;
-* resizeVideo(docConfig, appConfig, exportConfig, containerConfig): void;
-* trimVideo(docConfig, appConfig, exportConfig, containerConfig): void;
-* animateFromAudio(docConfig, appConfig, exportConfig, containerConfig): void;
-* captionVideo(docConfig, appConfig, exportConfig, containerConfig): void;
+- `convertToGIF()`
+- `convertToMP4()`
+- `cropVideo()`
+- `mergeVideos()`
+- `resizeVideo()`
+- `trimVideo()`
+- `animateFromAudio()`
+- `captionVideo()`
 
 ## Parameters
 
 All the properties are optional.
 
-| Property | Type| Description
-| :-- | :-- | :--
-| docConfig | [DocConfig](../../reference/CCEverywhere/quickAction/index.md#docconfig)| Pass a starting asset to the quick action editor
-| appConfig | [AppConfig](../../reference/CCEverywhere/quickAction/index.md#appconfig) | Properties to configure the editor
-| exportConfig | [ExportOptions](../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
+| Property        | Type                                                                                               | Description                                                                                                        |
+| :-------------- | :------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| docConfig       | [DocConfig](../../v4/shared/src/types/quick-action/DocConfig.types/interfaces/DocConfig.md)        | Pass a starting asset to the quick action editor                                                                   |
+| appConfig       | [AppConfig](../../v4/shared/src/types/quick-action/AppConfig.types/interfaces/AppConfig.md)        | Properties to configure the editor                                                                                 |
+| exportConfig    | [ExportOptions](../../v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md)[]      | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
+| containerConfig | [ContainerConfig](../../v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md) | Properties to configure the SDK container                                                                          |
 
 ## Example: Default export options
 
 When no asset is passed as an input when a quick action is invoked, the user will be asked to browse/upload an image once the modal is open. Default export options will be surfaced to the user.
 
-``` ts title="crop-image.js" hl_lines="15"
+```js
+const { quickAction } = await window.CCEverywhere.initialize({
+  clientId: <CLIENT_ID>,
+  appName: <APP_NAME>,
+});
 quickAction.cropImage();
 ```
 
@@ -79,45 +88,52 @@ quickAction.cropImage();
 
 The `quickAction` APIs can take an image asset and custom export options as input.
 
-``` ts title="remove-background.js" hl_lines="5 29 40"
-let docConfig = {
-    asset: {
-        data: base64Asset,
-        dataType: 'base64',
-        type: 'image' 
-    }
-}
+```js
+const { quickAction } = await window.CCEverywhere.initialize({
+  clientId: <CLIENT_ID>,
+  appName: <APP_NAME>,
+});
 
-const exportOptions = [{
-    id: 'edit-in-express',
-    label: 'Edit in Adobe Express',
+const docConfig = {
+  asset: {
+    data: base64Asset,
+    dataType: "base64",
+    type: "image",
+  },
+};
+
+const exportOptions = [
+  {
+    id: "edit-in-express",
+    label: "Edit in Adobe Express",
     action: {
-        target: 'express',
+      target: "express",
     },
     style: {
-        uiType: 'button'
-    }
-},
-{
-    id: 'download',
-    label: 'Download',
+      uiType: "button",
+    },
+  },
+  {
+    id: "download",
+    label: "Download",
     action: {
-        target: 'download'
+      target: "download",
     },
     style: {
-        uiType: 'button'
-    }
-},
-{
-    id: 'save-modified-asset',
-    label: 'Save image',
+      uiType: "button",
+    },
+  },
+  {
+    id: "save-modified-asset",
+    label: "Save image",
     action: {
-        target: 'publish'
+      target: "publish",
     },
     style: {
-        uiType: 'button'
-    }
-}];
+      uiType: "button",
+    },
+  },
+];
 
 quickAction.removeBackground(docConfig, exportOptions);
 ```

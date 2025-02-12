@@ -15,3 +15,4 @@
 | `GEN_FILL` | `"gen-fill"` |
 | `REMOVE_OBJECT` | `"remove-object"` |
 | `INSERT_OBJECT` | `"insert-object"` |
+| `NO_INTENT` | `"no-intent"` |

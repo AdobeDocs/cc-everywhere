@@ -338,6 +338,12 @@ Re-exports [LoadCallback](Callbacks.types/type-aliases/LoadCallback.md)
 
 ***
 
+### LoadInitCallback
+
+Re-exports [LoadInitCallback](Callbacks.types/type-aliases/LoadInitCallback.md)
+
+***
+
 ### CancelCallback
 
 Re-exports [CancelCallback](Callbacks.types/type-aliases/CancelCallback.md)

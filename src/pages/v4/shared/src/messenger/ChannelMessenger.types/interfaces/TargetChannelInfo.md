@@ -6,3 +6,4 @@
 | ------ | ------ |
 | `origin` | `string` |
 | `target` | `Window` |
+| `senderFn` | [`MessageSender`](../type-aliases/MessageSender.md) |

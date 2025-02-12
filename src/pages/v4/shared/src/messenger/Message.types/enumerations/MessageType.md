@@ -4,6 +4,7 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
+| `INIT_TARGET_LOAD` | `"INIT_TARGET_LOAD"` |
 | `WILL_TARGET_LOAD` | `"WILL_TARGET_LOAD"` |
 | `DID_TARGET_LOAD` | `"DID_TARGET_LOAD"` |
 | `WILL_PUBLISH` | `"WILL_PUBLISH"` |
