@@ -72,7 +72,7 @@
                 - [CCEverywhere.types](v4/sdk/src/3p/CCEverywhere.types/index.md) 
                     - [CCEverywhereInterface](v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface.md) 
             - [CCEverywhereBase](v4/sdk/src/CCEverywhereBase/index.md) 
-                - [CCEverywhereBase](v4/sdk/src/CCEverywhereBase/classes/cc-everywhere-base.md) 
+                - [CCEverywhereBase](v4/sdk/src/CCEverywhereBase/classes/CCEverywhereBase.md) 
             - [error](v4/sdk/src/error/ErrorCodes/index.md) 
                 - [ErrorCodes](v4/sdk/src/error/ErrorCodes/index.md) 
                     - [SDKErrorCode](v4/sdk/src/error/ErrorCodes/enumerations/sdk-error-code.md) 

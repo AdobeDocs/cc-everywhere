@@ -4,7 +4,7 @@ Class to create CCEverywhere object.
 
 ## Extends
 
-- [`CCEverywhereBase`](../../../CCEverywhereBase/classes/cc-everywhere-base.md)
+- [`CCEverywhereBase`](../../../CCEverywhereBase/classes/CCEverywhereBase.md)
 
 ## Implements
 
@@ -30,11 +30,11 @@ set static activeInstance(instance): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| [`CCEverywhereBase`](../../../CCEverywhereBase/classes/cc-everywhere-base.md) |
+| `instance` | `undefined` \| [`CCEverywhereBase`](../../../CCEverywhereBase/classes/CCEverywhereBase.md) |
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../CCEverywhereBase/classes/cc-everywhere-base.md).[`activeInstance`](../../../CCEverywhereBase/classes/cc-everywhere-base.md#activeinstance)
+[`CCEverywhereBase`](../../../CCEverywhereBase/classes/CCEverywhereBase.md).[`activeInstance`](../../../CCEverywhereBase/classes/CCEverywhereBase.md#activeinstance)
 
 ## Methods
 
@@ -58,4 +58,4 @@ boolean value indicating whether the close operation was successful or not.
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../CCEverywhereBase/classes/cc-everywhere-base.md).[`close`](../../../CCEverywhereBase/classes/cc-everywhere-base.md#close)
+[`CCEverywhereBase`](../../../CCEverywhereBase/classes/CCEverywhereBase.md).[`close`](../../../CCEverywhereBase/classes/CCEverywhereBase.md#close)
