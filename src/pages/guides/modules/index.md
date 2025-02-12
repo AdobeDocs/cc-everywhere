@@ -60,12 +60,12 @@ module.editImage(docConfig);
 
 The only required property is `docConfig`.
 
-| Property        | Type                                                                                                        | Description                                                                                                        |
-| :-------------- | :---------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| docConfig       | [EditImageDocConfig](../../v4/shared/src/types/module/DocConfig.types/interfaces/EditImageDocConfig.md)     | Pass an asset to preload into the Edit Image module                                                                |
-| appConfig       | [BaseEditorAppConfig](../../v4/v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md) | Pass callback functions                                                                                            |
-| exportConfig    | [ExportOptions](../../v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md)[]               | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
-| containerConfig | [ContainerConfig](../../v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md)          | Properties to configure the SDK container                                                                          |
+| Property        | Type                                                                                                     | Description                                                                                                        |
+| :-------------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| docConfig       | [EditImageDocConfig](../../v4/shared/src/types/module/DocConfig.types/interfaces/EditImageDocConfig.md)  | Pass an asset to preload into the Edit Image module                                                                |
+| appConfig       | [BaseEditorAppConfig](../../v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md) | Pass callback functions                                                                                            |
+| exportConfig    | [ExportOptions](../../v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md)[]            | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
+| containerConfig | [ContainerConfig](../../v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md)       | Properties to configure the SDK container                                                                          |
 
 ## Example: Create image from text
 
