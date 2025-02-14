@@ -14,6 +14,7 @@
   "dependencies": {
     "@adobe/gatsby-theme-aio": "^4.14.18",
     "gatsby": "4.22.0",
+    "glob": "^11.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "webpack": "^5.97.1"
@@ -34,7 +35,8 @@
     "test:links": "./node_modules/.bin/remark --use remark-validate-links src/pages --quiet --frail",
     "test:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src",
     "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix",
-    "buildNavigation": "webpack --config webpack.config.js && node buildNavigation.js"
+    "buildNavigation": "webpack --config webpack.config.js && node buildNavigation.js",
+    "buildRedirections": "node buildRedirections.js"
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
