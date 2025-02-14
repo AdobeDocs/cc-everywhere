@@ -1272,8 +1272,8 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface"
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface",
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/",
@@ -1284,8 +1284,8 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/variables/default"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere"
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere",
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere"
         },
         {
             "Source": "/express/embed-sdk/docs/v3/reference/",
