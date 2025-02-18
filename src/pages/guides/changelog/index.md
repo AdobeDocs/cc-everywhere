@@ -21,6 +21,7 @@ contributors:
 ### Bug Fixes
 
 - Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md#createwithasset) method.
+- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/Asset.types/type-aliases/UrlAsset.md) as the [`datatype`](../../v4/shared/src/types/Asset.types/enumerations/AssetDataType.md) for a video [`asset`](../../v4/shared/src/types/Asset.types/interfaces/AssetBase.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
 
 ## [4.19.22] 2025-01-31
 
