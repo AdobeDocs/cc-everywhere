@@ -14,10 +14,6 @@ description: This is the support page of the Adobe Express Embed SDK
 
 Learn where to ask questions, report bugs, make feature requests, and spark discussions.
 
-## Contact Support
-
-TBD
-
 ## Join our community
 
 <InlineAlert slots="text" />

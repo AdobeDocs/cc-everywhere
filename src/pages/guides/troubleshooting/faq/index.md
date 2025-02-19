@@ -5,6 +5,11 @@ keywords:
   - Frequently Asked Questions
   - SSO with Adobe Express Embed SDK
   - Embed Adobe Full Editor
+  - Browser support
+  - Operating system support
+  - Cost of Embed SDK
+  - Allowed-domains
+  - Error handling
 title: Frequently Asked Questions
 description: This page answers common questions about the Adobe Express Embed SDK.
 contributors:
@@ -13,7 +18,13 @@ contributors:
   - https://github.com/undavide
 ---
 
+<Hero slots="image, heading, text" background="rgb(64, 34, 138)" hideBreadcrumbNav={false}/>
+
+![Hero image](../img/hero-image.png)
+
 # FAQ
+
+Get answers to common questions about the Adobe Express Embed SDK, including setup, error handling, and user requirements. Start integrating the SDK seamlessly today!
 
 ## Questions
 
@@ -28,7 +39,10 @@ contributors:
 - [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
 - [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
 - [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
+- [Which web browsers are supported?](#which-web-browsers-are-supported)
+- [What operating systems are supported?](#what-operating-systems-are-supported)
 - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
+- [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
 
 ## Answers
 
@@ -50,8 +64,8 @@ While there is currently no cost to access the Adobe Express Embed SDK, this may
 
 There are two functional differences in the embedded Adobe Express full editor compared to Adobe Express on the web:
 
-Content sharing: In an embedded experience, we assume that a user will save the outcome of their creative project back to the host application in order to continue work in the host application. We have disabled sharing capabilities in embedded Adobe Express experiences.
-Content publishing: For the same reason above, you have the ability to pre-define the output type (file types, pixel size, etc.) of the Adobe Express project that is saved to the host application. For this reason, post scheduling and exporting multiple output types are disabled for the embedded Adobe Express editor.
+- Content sharing: In an embedded experience, we assume that a user will save the outcome of their creative project back to the host application in order to continue work in the host application. We have disabled sharing capabilities in embedded Adobe Express experiences.
+- Content publishing: For the same reason above, you have the ability to pre-define the output type (file types, pixel size, etc.) of the Adobe Express project that is saved to the host application. For this reason, post scheduling and exporting multiple output types are disabled for the embedded Adobe Express editor.
 
 ### My user base consists of students/minors. How can I be assured they get appropriate content?
 
@@ -73,12 +87,31 @@ Your users can use the integrations, but, we will display a red banner indicatin
 
 ### What is the versioning strategy for the SDK?
 
-The SDK follows a continous release model, with newer versions including bug fixes and feature enhancements. We are no longer approving integrations using using SDK V1, V2, or V3.
+- The SDK follows a continous release model, with newer versions including bug fixes and feature enhancements. We are no longer approving integrations using using SDK V1, V2, or V3.
+- V1 and V2 are deprecated and V3 will be deprecated in 2024.
+- Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
 
-V1 and V2 are deprecated and V3 will be deprecated in 2024.
+### Which web browsers are supported?
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
+- Google Chrome: Version 100 or later
+- Microsoft Edge: Version 107 or later
+- Safari: Version 17 or later
+- Firefox: Version 117 or later
+
+You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
+
+### What operating systems are supported?
+
+- Windows: Version 10 or later
+- macOS: Version 11 or later
+- ChromeOS
+
+You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
 
 ### I run into the "Adobe Express is not available" error
 
 Please refer to this [troubleshooting guide](../express-unavailable-error.md).
+
+### How can I debug and troubleshoot errors effectively?
+
+Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors. 

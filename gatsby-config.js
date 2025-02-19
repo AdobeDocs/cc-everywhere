@@ -75,6 +75,10 @@ module.exports = {
             title: "Quickstart",
             path: "/guides/quickstart/",
           },
+          {
+            title: "Techncial requirements",
+            path:"/guides/quickstart/technical-requirements.md"
+          }
         ],
       },
       {
