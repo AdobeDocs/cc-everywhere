@@ -114,4 +114,4 @@ Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 
 ### How can I debug and troubleshoot errors effectively?
 
-Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors. 
+Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
