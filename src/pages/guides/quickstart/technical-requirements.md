@@ -48,6 +48,7 @@ Review the technical requirements for uisng Adobe Express Embed SDK in your web 
 | **HTTPS**              | HTTPS connections are required for all environments |
 | **Referrer Headers**   | Referrer headers must be passed through          |
 
+Find the [full list of technical requirements](https://helpx.adobe.com/express/get-set-up/learn-the-basics/web-technical-requirements.html#technical) here.
 
 ## Additional info: available language versions for Adobe Express
 
@@ -68,4 +69,4 @@ Review the technical requirements for uisng Adobe Express Embed SDK in your web 
 | Italian                                                | Japanese            |
 | Korean                                                 |                     |
 
-Find the [full list of language support](https://helpx.adobe.com/express/get-set-up/learn-the-basics/web-technical-requirements.html) here.
+Find the [full list of language support](https://helpx.adobe.com/express/get-set-up/learn-the-basics/web-technical-requirements.html#languageversions) here.
