@@ -76,9 +76,9 @@ module.exports = {
             path: "/guides/quickstart/",
           },
           {
-            title: "Techncial requirements",
-            path:"/guides/quickstart/technical-requirements.md"
-          }
+            title: "Technical requirements",
+            path: "/guides/quickstart/technical-requirements.md",
+          },
         ],
       },
       {
@@ -113,6 +113,10 @@ module.exports = {
         title: "Concepts",
         path: "/guides/concepts/migration_v3_v4.md",
         pages: [
+          {
+            title: "Generate Image v2",
+            path: "/guides/concepts/generate-image-v2.md",
+          },
           {
             title: "V3 to V4 Migration guide",
             path: "/guides/concepts/migration_v3_v4.md",
