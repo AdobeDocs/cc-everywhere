@@ -11,3 +11,128 @@ contributors:
 ---
 
 # Generate Image v2
+
+Welcome to the new and improved Generate Image v2 experience in the Adobe Express Embed SDK! This upgraded version brings a host of exciting enhancements designed to empower your creative journey.
+
+## Features overview
+
+In redesigning the Text-to-Image module, we’ve focused on making the image generation process more engaging, efficient, and inspiring. The **new User Interface** offers a fresh look and feel, with a Carousel and Grid view that make it easier to browse and select images. Upon launching the module, you’ll be greeted by an endless array of user-generated images on the **Community Wall**, that provide plenty of inspiration for your projects. The **Improved Prompt Bar** helps you with pop-up suggestions to craft the perfect prompt, while **Rich Previews** offer a more interactive and engaging preview experience. With **Fast Mode** you can cut the generation time when fewer details and smaller sizes are enough. Lastly, **Custom Firefly Models** allow enterprise users to tailor outputs to unique brand or project requirements.
+
+## How to enable the new experience
+
+Generate Image v2 is, at the moment, disabled by default, with the classic interface displayed. To activate the new experience, you need to set the new `appVersion` property to the string `"2"` in the [`appConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md) object.
+
+```js
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+
+const { module } = await window.CCEverywhere.initialize(
+  { clientId: "your-client-id", appName: "your-app-name" },
+  {}
+);
+
+const appConfig = {
+  appVersion: "2", // 👈 Enable the new experience
+  // ...
+};
+
+module.createImageFromText(appConfig, {});
+```
+
+## Feature configurations
+
+The new experience introduces several new feature configurations to the [`CCEverywhere.TextToImageAppConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties) object.
+
+### Community Wall
+
+TODO: Screenshot
+
+The infinite-scroll collection of user-generated images with prompts is controlled by the boolean `community-wall` property of the `featureConfig` object:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true, // 👈 Enable the Community Wall
+  },
+};
+```
+
+When enabled, the Community Wall will be displayed upon launching the module; each image can be selected to preload the prompt and generate a new image, varying the other settings as needed.
+
+### Fast Mode
+
+TODO: Screenshot
+
+This new option allows for faster generation of smaller images (1K, or 1024x1024 for a 1:1 ratio, compared to the usual 2K, or 2048x2048) with fewer details. It's a great choice when timely generations are needed, and less precision doesn't matter, for example, in backgrounds, or simpler illustrations. The same `featureConfig` object allows you to toggle the `fast-mode` boolean:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true,
+    "fast-mode": true, // 👈 Enable Fast Mode
+  },
+};
+```
+
+When enabled, a Fast Mode switch will be visible a the bottom of the generation options. To control its default state there's an additional `fastModeConfig` object property, whose `defaultFastModeState` can be set to `"on"` or `"off"`:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true,
+    "fast-mode": true, // 👈 Enable Fast Mode
+    fastModeConfig: {
+      defaultFastModeState: "on", // 👈 Set Fast Mode on by default
+    },
+  },
+};
+```
+
+### Rich Preview
+
+TODO: Screenshot
+
+In addition to the Grid and Carousel view, the new experience introduces the possibility to isolate one of the four generated images, and display it in a larger, focused preview. This feature is controlled by the `thumbnailOptions` property of the `appConfig` object, which array can now include `"rich-preview"`:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  thumbnailOptions: ["rich-preview"],
+};
+```
+
+### Thumbnail Actions
+
+TODO: Screenshot
+
+The new experience also introduces a set of actions that can be immediately performed on the generated image, and allow the user to transfer it directly to the editor. They are collected in a dropdown menu within the thumbnail, and can include adding text, cropping, or applying filters. Similar to the Rich Preview, these actions are controlled by the `thumbnailOptions` property of the `appConfig` object, which array can now include `"edit-dropdown"`. Additionally, the actual options are set in the `editDropdownOptions` array, as option objects:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  thumbnailOptions: ["edit-dropdown"], // 👈 Enable the Edit dropdown
+  editDropdownOptions: [
+    // 👈 Set the options for the Edit dropdown
+    { option: "add-effects" },
+    { option: "remove-background" },
+    { option: "apply-adjustment" },
+    { option: "insert-object" },
+    { option: "remove-object" },
+  ],
+};
+```
+
+For an updated list of all the available options, refer to the [`EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md) enumeration.
+
+### Publish
+
+### All the rest
+
+- The new experience adds the following feature configurations to the [`CCEverywhere.TextToImageAppConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties) object:
+  - [`thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/enumerations/ThumbnailOption.md): Options passed to be displayed on the thumbnail.
+  - [`editDropdownOptions`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md): Options to be passed for the Edit dropdown (Edit Dropdown, Download, Rich Preview, Publish).
+  - [`publishConfig`](../..//v4/shared/src/types/module/AppConfig.types/interfaces/PublishConfig.md): Configuration to be set for the Publish action.
+  - [`fastModeConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/FastModeConfig.md): Configuration for toggling the Fast Mode.
+  - [`featureConfig`](../../v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageFeature.md): Configuration for toggling specific features (Community Wall, FastMode).
