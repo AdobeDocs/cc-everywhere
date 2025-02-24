@@ -48,7 +48,7 @@ module.createImageFromText(appConfig, {});
 
 ## Feature configurations
 
-The new experience introduces several new feature configurations to the [`TextToImageAppConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties) object.
+The new experience introduces several new feature configurations to the [`TextToImageAppConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties) object. They can be independently enabled or disabled to customize the module according to your needs.
 
 ### Community Wall
 
@@ -174,4 +174,25 @@ const exportConfig = [
 
 ## Custom Firefly Models
 
-TODO
+The new experience let you select Custom Firefly Models, in addition to the standard generation model. This allows enterprise users to tailor the generated images to their unique brand or project requirements.
+
+<InlineAlert variant="warning" slots="header, text1" />
+
+Available only for enterprise users
+
+This feature requires users of your organization to have access to the Custom Firefly Models. If you're an enterprise user and want to enable this feature, please contact your System Administrator.
+
+![Custom Firefly Models](./img/genimage_custom-firefly-models.jpg)
+
+Provided that you have trained and uploaded your custom models, you can enable the Custom Firefly Models feature by setting the `custom-models` boolean property of the [`featureConfig`](../../v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageFeature.md) object:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "custom-models": true, // 👈 Enable Custom Firefly Models
+  },
+};
+```
+
+When enabled, the Custom Firefly Models dropdown will be displayed on top of all other generation options, allowing you to select the desired model.
