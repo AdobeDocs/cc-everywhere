@@ -114,7 +114,7 @@ module.exports = {
         path: "/guides/concepts/migration_v3_v4.md",
         pages: [
           {
-            title: "Generate Image v2",
+            title: "Generate Image V2",
             path: "/guides/concepts/generate-image-v2.md",
           },
           {
