@@ -4,6 +4,14 @@ keywords:
   - Embed SDK
   - Text to Image
   - Generate Image
+  - Carousel
+  - Grid view
+  - Community Wall
+  - Prompt Bar suggestions
+  - Rich Previews
+  - Fast Mode
+  - Custom Firefly Models
+  - Feature configurations
 title: Generate Image v2
 description: Generate Image v2
 contributors:
@@ -16,7 +24,7 @@ Welcome to the new and improved Generate Image v2 experience in the Adobe Expres
 
 ## Features overview
 
-In redesigning the Text-to-Image module, we’ve focused on making the image generation process more engaging, efficient, and inspiring. The **new User Interface** offers a fresh look and feel, with a Carousel and Grid view that make it easier to browse and select images.
+In redesigning the Generate Image module, we’ve focused on making the image generation process more engaging, efficient, and inspiring. The **new User Interface** offers a fresh look and feel, with a Carousel and Grid view that make it easier to browse and select images.
 
 ![Carousel and Grid view](./img/genimage_carousel.jpg)
 
@@ -117,7 +125,7 @@ const appConfig = {
 
 ![Thumbnail Actions](./img/genimage_further-intent.jpg)
 
-The new experience also introduces a set of actions that can be immediately performed on the generated image, and allow the user to transfer it directly to the editor. They are collected in a dropdown menu within the thumbnail, and can include adding text, cropping, or applying filters. Similar to the Rich Preview, these actions are controlled by the [`thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/enumerations/ThumbnailOption.md) property of the `appConfig` object, which array can now include `"edit-dropdown"`. Additionally, the actual options are set in the [`editDropdownOptions`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md) array, as option objects:
+You now have a set of actions you can immediately perform on the generated image. You can allow your user to transfer the image directly to the editor. These actions are collected in a dropdown menu within the thumbnail. They include adding text, cropping, and applying filters. Similar to the Rich Preview, these actions are controlled by the [`thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/enumerations/ThumbnailOption.md) property of the `appConfig` object, which array can now include `"edit-dropdown"`. Additionally, the actual options are set in the [`editDropdownOptions`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md) array, as option objects:
 
 ```js
 const appConfig = {
@@ -140,7 +148,7 @@ For an updated list of all the available options, refer to the [`EditFurtherInte
 
 ![Publish](./img/genimage_publish.jpg)
 
-The new experience also introduces the possibility to run a publish callback for the generated image directly from the module. Name and ID of the This feature is controlled by the [`publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/PublishConfig.md) property of the `appConfig` object, which can include the following options:
+The SDK also introduces the possibility of running a publish callback for the generated image directly from the module. Label and ID of this feature are controlled by the [`publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/PublishConfig.md) property of the `appConfig` object, which can include the following options:
 
 ```js
 const appConfig = {
@@ -174,13 +182,19 @@ const exportConfig = [
 
 ## Custom Firefly Models
 
-The new experience let you select Custom Firefly Models, in addition to the standard generation model. This allows enterprise users to tailor the generated images to their unique brand or project requirements.
+### Before you begin
+
+Ensure that you have the right plan! Firefly custom models are available to organizations that use [Adobe storage for business](https://helpx.adobe.com/in/enterprise/using/storage-for-business.html), a feature that's being rolled out globally in a phased manner.
 
 <InlineAlert variant="warning" slots="header, text1" />
 
 Available only for enterprise users
 
-This feature requires users of your organization to have access to the Custom Firefly Models. If you're an enterprise user and want to enable this feature, please contact your System Administrator.
+This feature requires users of your organization to have access to the Custom Firefly Models. To train custom models in Adobe Firefly, you must be entitled as a [trainer for Firefly custom models](https://helpx.adobe.com/in/enterprise/using/assign-users-to-firefly-custom-models.html). If you're using Firefly through a company-owned account, [contact your Adobe administrator](https://helpx.adobe.com/in/enterprise/kb/contact-administrator.html) to request access.
+
+### Enable Custom Firefly Models
+
+The new experience let you select fine-tuned Firefly Models, in addition to the standard generation model. This allows enterprise users to tailor the generated images to their unique brand or project requirements.
 
 ![Custom Firefly Models](./img/genimage_custom-firefly-models.jpg)
 
@@ -195,4 +209,4 @@ const appConfig = {
 };
 ```
 
-When enabled, the Custom Firefly Models dropdown will be displayed on top of all other generation options, allowing you to select the desired model.
+When enabled, the Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model. If your organization does not have a Custom Model enabled, the default model is used and the message "Powered by Firefly Image 3" is displayed in place of the dropdown.
