@@ -4,7 +4,7 @@ Class to create CCEverywhere object.
 
 ## Extended by
 
-- [`CCEverywhere`](../../3p/CCEverywhere/classes/cc-everywhere.md)
+- [`CCEverywhere`](../../3p/CCEverywhere/classes/CCEverywhere.md)
 
 ## Implements
 

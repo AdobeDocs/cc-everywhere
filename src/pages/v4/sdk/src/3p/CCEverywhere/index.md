@@ -6,7 +6,7 @@
 
 | Class | Description |
 | ------ | ------ |
-| [CCEverywhere](classes/CCEverywhere.md) | Class to create CCEverywhere object. |
+| [CCEverywhere](../CCEverywhere/classes/CCEverywhere.md) | Class to create CCEverywhere object. |
 
 ### Variables
 
