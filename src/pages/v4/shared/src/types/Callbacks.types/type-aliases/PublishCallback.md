@@ -1,8 +1,10 @@
 # Type Alias: PublishCallback()
 
 ```ts
-type PublishCallback: (intent, publishParams) => void;
+type PublishCallback: (intent, publishParams) => void | Promise<PublishStatus>;
 ```
+
+Keeping callback type as void | Promise<PublishStatus> for the publish operation, to handle promises as well
 
 ## Parameters
 
@@ -13,4 +15,4 @@ type PublishCallback: (intent, publishParams) => void;
 
 ## Returns
 
-`void`
+`void` \| `Promise`<[`PublishStatus`](../interfaces/PublishStatus.md)\>
