@@ -1273,7 +1273,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/",
