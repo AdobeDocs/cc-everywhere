@@ -16,8 +16,8 @@ handleMessage(
 | Parameter | Type |
 | ------ | ------ |
 | `message` | `unknown` |
-| `sourceVersion` | [`ProtocolVersion`](../enumerations/protocol-version/index.md) |
-| `targetVersion` | [`ProtocolVersion`](../enumerations/protocol-version/index.md) |
+| `sourceVersion` | [`ProtocolVersion`](../../enumerations/protocol-version/index.md) |
+| `targetVersion` | [`ProtocolVersion`](../../enumerations/protocol-version/index.md) |
 
 #### Returns
 

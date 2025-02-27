@@ -1,4 +1,4 @@
-# Type Alias: data-message-type/index.md
+# Type Alias: DataMessageType
 
 ```ts
 type data-message-type/index.md: 

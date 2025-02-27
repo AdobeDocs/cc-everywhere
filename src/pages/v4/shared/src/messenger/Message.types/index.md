@@ -17,15 +17,15 @@
 | ------ | ------ |
 | [MessageDataMap](interfaces/message-data-map/index.md) | - |
 | [CancelMessage](interfaces/cancel-message/index.md) | - |
-| [token-response-message/index.md](interfaces/token-response-message/index.md.md) | - |
-| [params-response-message/index.md](interfaces/params-response-message/index.md.md) | - |
+| [TokenResponseMessage](interfaces/token-response-message/index.md) | - |
+| [ParamsResponseMessage](interfaces/params-response-message/index.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [data-message-type/index.md](type-aliases/data-message-type/index.md) | - |
-| [SimpleMessageType/index.md](type-aliases/simple-message-type/index.md) | - |
+| [DataMessageType](type-aliases/data-message-type/index.md) | - |
+| [SimpleMessageType](type-aliases/simple-message-type/index.md) | - |
 | [Message](type-aliases/message/index.md) | - |
-| [message-compat/index.md](type-aliases/message-compat/index.md.md) | - |
-| [did-target-load-message/index.md](type-aliases/did-target-load-message/index.md.md) | - |
+| [MessageCompat](type-aliases/message-compat/index.md) | - |
+| [DidTargetLoadMessage](type-aliases/did-target-load-message/index.md) | - |

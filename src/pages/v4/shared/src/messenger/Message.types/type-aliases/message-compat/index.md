@@ -1,4 +1,4 @@
-# Type Alias: message-compat/index.md T
+# Type Alias: MessageCompat T
 
 ```ts
 type message-compat/index.md<T>: object;

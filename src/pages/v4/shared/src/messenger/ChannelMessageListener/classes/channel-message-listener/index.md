@@ -2,7 +2,7 @@
 
 ## Implements
 
-- [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md)
+- [`IChannelMessengerDelegate`](../../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md)
 
 ## Constructors
 
@@ -20,14 +20,14 @@ new ChannelMessageListener(
 
 | Parameter                  | Type                                                                                  | Default value          |
 | -------------------------- | ------------------------------------------------------------------------------------- | ---------------------- |
-| `sourceChannel`            | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)       | `undefined`            |
-| `targetProtocolVersion`    | [`ProtocolVersion`](../../Protocol.types/enumerations/protocol-version/index.md)             | `ProtocolVersion.V1_3` |
+| `sourceChannel`            | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md)       | `undefined`            |
+| `targetProtocolVersion`    | [`ProtocolVersion`](../../../Protocol.types/enumerations/protocol-version/index.md)             | `ProtocolVersion.V1_3` |
 | `_filterRequestIdMismatch` | `boolean`                                                                             | `false`                |
-| `protocolHandlersModule`?  | [`ProtocolHandlersModule`](../../Protocol.types/interfaces/protocol-handlers-module/index.md) | `undefined`            |
+| `protocolHandlersModule`?  | [`ProtocolHandlersModule`](../../../Protocol.types/interfaces/protocol-handlers-module/index.md) | `undefined`            |
 
 #### Returns
 
-[`ChannelMessageListener`](channel-message-listener/index.md)
+[`ChannelMessageListener`](../channel-message-listener/index.md)
 
 ## Methods
 
@@ -53,13 +53,13 @@ didGetMessage<T>(message, requestId?): void
 
 | Type Parameter                                                                 |
 | ------------------------------------------------------------------------------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
+| `T` *extends* [`MessageType`](../../../Message.types/enumerations/message-type/index.md) |
 
 #### Parameters
 
 | Parameter    | Type                                                        |
 | ------------ | ----------------------------------------------------------- |
-| `message`    | [`Message`](../../Message.types/type-aliases/message/index.md)`T` |
+| `message`    | [`Message`](../../../Message.types/type-aliases/message/index.md)`T` |
 | `requestId`? | `string`                                                    |
 
 #### Returns
@@ -68,7 +68,7 @@ didGetMessage<T>(message, requestId?): void
 
 #### Implementation of
 
-[`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md).`didGetMessage`
+[`IChannelMessengerDelegate`](../../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate/index.md).`didGetMessage`
 
 <hr />
 
@@ -82,8 +82,8 @@ setTarget(targetChannel, targetChannelInfo): void
 
 | Parameter           | Type                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------- |
-| `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)     |
-| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md.md) |
+| `targetChannel`     | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md)     |
+| `targetChannelInfo` | [`TargetChannelInfo`](../../../ChannelMessenger.types/interfaces/target-channel-info/index.md) |
 
 #### Returns
 
@@ -101,7 +101,7 @@ removeTarget(targetChannel): void
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
+| `targetChannel` | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -119,7 +119,7 @@ hasTarget(targetChannel): boolean
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
+| `targetChannel` | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
@@ -137,11 +137,11 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 | Parameter       | Type                                                                            |
 | --------------- | ------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |
+| `targetChannel` | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md) |
 
 #### Returns
 
-`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md.md)
+`undefined` \| [`TargetChannelInfo`](../../../ChannelMessenger.types/interfaces/target-channel-info/index.md)
 
 <hr />
 
@@ -155,8 +155,8 @@ addListenerForTarget(targetChannel, callback): void
 
 | Parameter       | Type                                                                                      |
 | --------------- | ----------------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)           |
-| `callback`      | [`TargetAddedCallback`](../../ChannelMessenger.types/type-aliases/target-added-callback/index.md) |
+| `targetChannel` | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md)           |
+| `callback`      | [`TargetAddedCallback`](../../../ChannelMessenger.types/type-aliases/target-added-callback/index.md) |
 
 #### Returns
 
@@ -174,14 +174,14 @@ sendMessage<T>(targetChannel, message): boolean
 
 | Type Parameter                                                                 |
 | ------------------------------------------------------------------------------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
+| `T` *extends* [`MessageType`](../../../Message.types/enumerations/message-type/index.md) |
 
 #### Parameters
 
 | Parameter       | Type                                                                                                                                        |
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                             |
-| `message`       | [`SimpleMessageType/index.md`](../../Message.types/type-aliases/simple-message-type/index.md) \| [`Message`](../../Message.types/type-aliases/message/index.md)`T` |
+| `targetChannel` | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                             |
+| `message`       | [`SimpleMessageType/index.md`](../../../Message.types/type-aliases/simple-message-type/index.md) \| [`Message`](../../../Message.types/type-aliases/message/index.md)`T` |
 
 #### Returns
 
@@ -201,14 +201,14 @@ Sends a message using a message channel that is compatible with older version of
 
 | Type Parameter                                                                 | Description                         |
 | ------------------------------------------------------------------------------ | ----------------------------------- |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) | The type of the message being sent. |
+| `T` *extends* [`MessageType`](../../../Message.types/enumerations/message-type/index.md) | The type of the message being sent. |
 
 #### Parameters
 
 | Parameter       | Type                                                                            | Description          |
 | --------------- | ------------------------------------------------------------------------------- | -------------------- |
-| `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md) |                      |
-| `message`       | [`message-compat/index.md`](../../Message.types/type-aliases/message-compat/index.md.md)`T`         | The message to send. |
+| `targetChannel` | [`MessageChannel`](../../../ChannelMessenger.types/enumerations/message-channel/index.md) |                      |
+| `message`       | [`message-compat/index.md`](../../../Message.types/type-aliases/message-compat/index.md)`T`         | The message to send. |
 
 #### Returns
 
@@ -231,9 +231,9 @@ addListener(
 
 | Parameter        | Type                                                                          | Description                                                                                                                                |
 | ---------------- | ----------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
-| `messageType`    | [`MessageType`](../../Message.types/enumerations/message-type/index.md)              | Listener is invoked for incoming message of this message type.                                                                             |
-| `listener`       | [`Listener`](../type-aliases/listener/index.md)                                     | Callback function that is invoked when there is an incoming message.                                                                       |
-| `messageFilter`? | [`MessageFilter`](../../ChannelMessenger.types/type-aliases/message-filter/index.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
+| `messageType`    | [`MessageType`](../../../Message.types/enumerations/message-type/index.md)              | Listener is invoked for incoming message of this message type.                                                                             |
+| `listener`       | [`Listener`](../../type-aliases/listener/index.md)                                     | Callback function that is invoked when there is an incoming message.                                                                       |
+| `messageFilter`? | [`MessageFilter`](../../../ChannelMessenger.types/type-aliases/message-filter/index.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
 
 #### Returns
 
@@ -251,8 +251,8 @@ removeListener(messageType, listener): void
 
 | Parameter     | Type                                                             |
 | ------------- | ---------------------------------------------------------------- |
-| `messageType` | [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
-| `listener`    | [`Listener`](../type-aliases/listener/index.md)                        |
+| `messageType` | [`MessageType`](../../../Message.types/enumerations/message-type/index.md) |
+| `listener`    | [`Listener`](../../type-aliases/listener/index.md)                        |
 
 #### Returns
 

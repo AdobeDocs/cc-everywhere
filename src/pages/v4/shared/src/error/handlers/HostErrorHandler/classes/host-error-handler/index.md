@@ -2,7 +2,7 @@
 
 ## Extends
 
-- [`BaseHandler`](../../BaseHandler/classes/base-handler.md)
+- [`BaseHandler`](../../../BaseHandler/classes/base-handler.md)
 
 ## Type Parameters
 
@@ -12,7 +12,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md) `T`
+- [`IErrorMessageHandler`](../../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md) `T`
 
 ## Constructors
 
@@ -26,12 +26,12 @@ new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `hostErrorCallback` | [`ErrorCallback`](../../../CCEverywhereError.types/type-aliases/error-callback/index.md) `T` |
-| `logLevel`? | [`LogLevel`](../../../CCEverywhereError.types/enumerations/log-level/index.md) |
+| `hostErrorCallback` | [`ErrorCallback`](../../../../CCEverywhereError.types/type-aliases/error-callback/index.md) `T` |
+| `logLevel`? | [`LogLevel`](../../../../CCEverywhereError.types/enumerations/log-level/index.md) |
 
 #### Returns
 
-[`HostErrorHandler`](host-error-handler/index.md) `T`
+[`HostErrorHandler`](../host-error-handler/index.md) `T`
 
 #### Overrides
 
@@ -49,7 +49,7 @@ error(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/cc-everywhere-error.md) `T` |
+| `error` | [`CCEverywhereError`](../../../../CCEverywhereError/classes/cc-everywhere-error.md) `T` |
 
 #### Returns
 
@@ -57,7 +57,7 @@ error(error): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`error`
+[`IErrorMessageHandler`](../../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`error`
 
 <hr />
 
@@ -73,7 +73,7 @@ warn(): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`warn`
+[`IErrorMessageHandler`](../../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`warn`
 
 <hr />
 
@@ -89,4 +89,4 @@ info(): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`info`
+[`IErrorMessageHandler`](../../../../IErrorMessageHandler/interfaces/i-error-message-handler/index.md).`info`

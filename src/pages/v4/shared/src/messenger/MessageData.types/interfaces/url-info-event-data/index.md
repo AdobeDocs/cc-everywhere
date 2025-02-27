@@ -2,12 +2,12 @@
 
 ## Extends
 
-- [`HostEventData`](host-event-data/index.md)
+- [`HostEventData`](../host-event-data/index.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `type` | `URL_INFO` | [`HostEventData`](host-event-data/index.md).`type` |
-| `data` | `object` | [`HostEventData`](host-event-data/index.md).`data` |
+| `type` | `URL_INFO` | [`HostEventData`](../host-event-data/index.md).`type` |
+| `data` | `object` | [`HostEventData`](../host-event-data/index.md).`data` |
 | `data.url` | `string` | - |

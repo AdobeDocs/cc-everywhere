@@ -8,13 +8,13 @@ type MessageListener: <T>(event) => void;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../Message.types/enumerations/message-type/index.md) |
+| `T` *extends* [`MessageType`](../../../Message.types/enumerations/message-type/index.md) |
 
 ## Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `event` | `MessageEvent` [`ChannelMessage`](../interfaces/channel-message/index.md) `T` |
+| `event` | `MessageEvent` [`ChannelMessage`](../../interfaces/channel-message/index.md) `T` |
 
 ## Returns
 

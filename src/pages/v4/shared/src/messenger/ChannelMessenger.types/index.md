@@ -13,7 +13,7 @@
 | Interface                                                               | Description |
 | ----------------------------------------------------------------------- | ----------- |
 | [ChannelMessage](interfaces/channel-message/index.md)                         | -           |
-| [TargetChannelInfo](interfaces/target-channel-info/index.md.md)                  | -           |
+| [TargetChannelInfo](interfaces/target-channel-info/index.md)                  | -           |
 | [IChannelMessengerDelegate](interfaces/i-channel-messenger-delegate/index.md) | -           |
 
 ### Type Aliases

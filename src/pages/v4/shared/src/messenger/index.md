@@ -32,15 +32,15 @@ Re-exports [MessageDataMap](Message.types/interfaces/message-data-map/index.md)
 
 <hr />
 
-### data-message-type/index.md
+### DataMessageType
 
-Re-exports [data-message-type/index.md](Message.types/type-aliases/data-message-type/index.md)
+Re-exports [DataMessageType](Message.types/type-aliases/data-message-type/index.md)
 
 <hr />
 
-### SimpleMessageType/index.md
+### SimpleMessageType
 
-Re-exports [SimpleMessageType/index.md](Message.types/type-aliases/simple-message-type/index.md)
+Re-exports [SimpleMessageType](Message.types/type-aliases/simple-message-type/index.md)
 
 <hr />
 
@@ -50,15 +50,15 @@ Re-exports [Message](Message.types/type-aliases/message/index.md)
 
 <hr />
 
-### message-compat/index.md
+### MessageCompat
 
-Re-exports [message-compat/index.md](Message.types/type-aliases/message-compat/index.md.md)
+Re-exports [MessageCompat](./Message.types/type-aliases/message-compat/index.md)
 
 <hr />
 
-### did-target-load-message/index.md
+### DidTargetLoadMessage
 
-Re-exports [did-target-load-message/index.md](Message.types/type-aliases/did-target-load-message/index.md.md)
+Re-exports [DidTargetLoadMessage](./Message.types/type-aliases/did-target-load-message/index.md)
 
 <hr />
 
@@ -68,15 +68,15 @@ Re-exports [CancelMessage](Message.types/interfaces/cancel-message/index.md)
 
 <hr />
 
-### token-response-message/index.md
+### TokenResponseMessage
 
-Re-exports [token-response-message/index.md](Message.types/interfaces/token-response-message/index.md.md)
+Re-exports [TokenResponseMessage](./Message.types/interfaces/token-response-message/index.md)
 
 <hr />
 
-### params-response-message/index.md
+### ParamsResponseMessage
 
-Re-exports [params-response-message/index.md](Message.types/interfaces/params-response-message/index.md.md)
+Re-exports [ParamsResponseMessage](./Message.types/interfaces/params-response-message/index.md)
 
 <hr />
 

@@ -2,4 +2,4 @@
 
 ## Extended by
 
-- [`HostEventData`](host-event-data/index.md)
+- [`HostEventData`](../host-event-data/index.md)

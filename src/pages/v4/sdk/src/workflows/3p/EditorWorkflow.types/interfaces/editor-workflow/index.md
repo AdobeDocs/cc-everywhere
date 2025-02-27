@@ -16,10 +16,10 @@ create(
 
 | Parameter          | Type                                                                                                                 |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| `docConfig?`       | [`CreateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md)         |
-| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) |
-| `outputParams?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)               |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)        |
+| `docConfig?`       | [`CreateDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-doc-config/index.md)         |
+| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) |
+| `outputParams?`    | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)               |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)        |
 
 #### Returns
 
@@ -41,10 +41,10 @@ createWithAsset(
 
 | Parameter          | Type                                                                                                                           |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------ |
-| `docConfig`        | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config/index.md) |
-| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md)           |
-| `outputParams?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)                         |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)                  |
+| `docConfig`        | [`CreateWithAssetDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-asset-doc-config/index.md) |
+| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md)           |
+| `outputParams?`    | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)                         |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)                  |
 
 #### Returns
 
@@ -66,10 +66,10 @@ createWithTemplate(
 
 | Parameter          | Type                                                                                                                                 |
 | ------------------ | ------------------------------------------------------------------------------------------------------------------------------------ |
-| `docConfig`        | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config/index.md) |
-| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md)                 |
-| `outputParams?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)                               |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)                        |
+| `docConfig`        | [`CreateWithTemplateDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/create-with-template-doc-config/index.md) |
+| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md)                 |
+| `outputParams?`    | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)                               |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)                        |
 
 #### Returns
 
@@ -91,10 +91,10 @@ edit(
 
 | Parameter          | Type                                                                                                                 |
 | ------------------ | -------------------------------------------------------------------------------------------------------------------- |
-| `docConfig`        | [`EditDocConfig`](../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config/index.md)             |
-| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) |
-| `outputParams?`    | [`ExportOptions`](../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)               |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)        |
+| `docConfig`        | [`EditDocConfig`](../../../../../../../shared/src/types/editor/DocConfig.types/interfaces/edit-doc-config/index.md)             |
+| `appConfig?`       | [`BaseEditorAppConfig`](../../../../../../../shared/src/types/editor/AppConfig.types/interfaces/base-editor-app-config/index.md) |
+| `outputParams?`    | [`ExportOptions`](../../../../../../../shared/src/types/ExportConfig.types/type-aliases/export-options/index.md)               |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../../shared/src/types/ContainerConfig.types/type-aliases/container-config/index.md)        |
 
 #### Returns
 

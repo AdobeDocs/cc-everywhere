@@ -40,7 +40,7 @@ addTarget(targetChannel, targetChannelInfo): void
 | Parameter           | Type                                                                                |
 | ------------------- | ----------------------------------------------------------------------------------- |
 | `targetChannel`     | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)     |
-| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md.md) |
+| `targetChannelInfo` | [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md) |
 
 #### Returns
 
@@ -98,7 +98,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 #### Returns
 
-`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md.md)
+`undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info/index.md)
 
 <hr />
 
@@ -122,7 +122,7 @@ sendMessage<T>(
 | Parameter       | Type                                                                                                                                   |
 | --------------- | -------------------------------------------------------------------------------------------------------------------------------------- |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel/index.md)                                                        |
-| `message`       | [`Message`](../../Message.types/type-aliases/message/index.md)`T` \| [`message-compat/index.md`](../../Message.types/type-aliases/message-compat/index.md.md)`T` |
+| `message`       | [`Message`](../../Message.types/type-aliases/message/index.md)`T` \| [`message-compat/index.md`](../../Message.types/type-aliases/message-compat/index.md)`T` |
 | `requestId`?    | `string`                                                                                                                               |
 
 #### Returns
