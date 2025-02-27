@@ -12,15 +12,15 @@ keywords:
   - Fast Mode
   - Custom Firefly Models
   - Feature configurations
-title: Generate Image v2
-description: Generate Image v2
+title: Generate Image V2
+description: Generate Image V2
 contributors:
   - https://github.com/undavide
 ---
 
-# Generate Image v2
+# Generate Image V2
 
-Welcome to the new and improved Generate Image v2 experience in the Adobe Express Embed SDK! This upgraded version brings a host of exciting enhancements designed to empower your creative journey.
+Welcome to the new and improved Generate Image V2 experience in the Adobe Express Embed SDK! This upgraded version brings a host of exciting enhancements designed to empower your creative journey.
 
 ## Features overview
 
