@@ -4,4 +4,4 @@
 type UrlAsset: AssetBase<AssetDataType.URL>;
 ```
 
-Represents an Asset object containing video data within a presigned URL.
+Represents an Asset object containing video data within a presinged URL.

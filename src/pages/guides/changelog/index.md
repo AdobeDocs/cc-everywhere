@@ -22,10 +22,10 @@ contributors:
 
 #### Unlocked new Generate Image V2 experience
 
-- **CCEverywhere.TextToImageAppConfig.appVersion**: Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
-  - When set to `2`, users can access the updated interface and features.
-  - By default, this property is set to `1`, displaying the older experience.
-  
+- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
+  - When set to `"2"`, users can access the updated interface and features.
+  - By default, this property is set to `"1"`, displaying the older experience.
+
 **Key Features:**
 
 - **Enhanced User Interface**: Redesigned with a new Carousel and Grid view.
@@ -35,21 +35,21 @@ contributors:
 - **Rich Previews**: Provides a more interactive and engaging preview experience.
 - **And more!**
 
-**Configurations available after enabling the new UI:**
+**Configurations available in `CCEverywhere` after enabling the new UI:**
 
-- CCEverywhere.TextToImageAppConfig.thumbnailOptions: Options to be displayed on the thumbnail.
-- CCEverywhere.TextToImageAppConfig.editDropdownOptions: Options for the Edit dropdown.
-- CCEverywhere.TextToImageAppConfig.publishConfig: Configuration for the Publish action.
-- CCEverywhere.TextToImageAppConfig.fastModeConfig: Configuration for enabling or disabling fast mode.
-- CCEverywhere.TextToImageAppConfig.featureConfig: Configuration for enabling or disabling specific features.
+- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options to be displayed on the thumbnail.
+- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options for the Edit dropdown.
+- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for the Publish action.
+- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling fast mode default state.
+- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling specific features.
 
 #### Concept guide for Generate Image V2
 
-Added a new concept guide for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.
+Added a new [Concept Guide](../concepts/generate-image-v2.md) for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.
 
 #### Demo app updates for Generate Image V2
 
-Updated the [demo app](https://demo.expressembed.com/) to showcase the Generate Image V2 feature. To use the new feature:
+Updated the [Demo App](https://demo.expressembed.com/) to showcase the Generate Image V2 feature. To use the new feature:
 
 - Navigate to **Generative** -> **Generate image** -> **Next**
 - In the Configuration options, Select generate image version as V2.
@@ -58,13 +58,9 @@ Updated the [demo app](https://demo.expressembed.com/) to showcase the Generate 
 
 - Select all the options you need and click **Create with Adobe Express**
 
-#### Margin property to `ContainerConfig`
-
-Added margin property to ContainerConfig to override default values for the iframe container. Rendered the initial loading icon relative to the position of the iframe container.
-
 #### Support for `pdfPrint`
 
-- Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig`in addition to the existing `allowedFileTypes`.
+- Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig` in addition to the existing `allowedFileTypes`.
 
 ### Bug Fixes
 

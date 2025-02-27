@@ -12,6 +12,7 @@
 | [ImageFileType](enumerations/ImageFileType.md) | - |
 | [VideoFileType](enumerations/VideoFileType.md) | - |
 | [PdfFileType](enumerations/PdfFileType.md) | - |
+| [SubFileType](enumerations/SubFileType.md) | - |
 
 ### Interfaces
 

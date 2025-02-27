@@ -300,10 +300,22 @@ TEXT_TO_IMAGE_ME: object;
 BASE: string;
 ```
 
-### CLIENTS.CCX.TEXT\_TO\_IMAGE\_ME.PATH
+### CLIENTS.CCX.TEXT\_TO\_IMAGE\_ME.PATHS
 
 ```ts
-PATH: string;
+PATHS: object;
+```
+
+### CLIENTS.CCX.TEXT\_TO\_IMAGE\_ME.PATHS.EDITOR
+
+```ts
+EDITOR: string;
+```
+
+### CLIENTS.CCX.TEXT\_TO\_IMAGE\_ME.PATHS.INSPIRE
+
+```ts
+INSPIRE: string;
 ```
 
 ### CLIENTS.CCX.TEXT\_TO\_IMAGE\_ME.CLIENT\_ID
@@ -757,6 +769,18 @@ ACROBAT_EXT: object;
 ```
 
 ### CLIENTS.ACROBAT\_EXT.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
+### CLIENTS.ACROBAT\_EMBED\_VIEWER
+
+```ts
+ACROBAT_EMBED_VIEWER: object;
+```
+
+### CLIENTS.ACROBAT\_EMBED\_VIEWER.CLIENT\_ID
 
 ```ts
 CLIENT_ID: string;
