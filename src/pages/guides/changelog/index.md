@@ -64,7 +64,7 @@ Added margin property to ContainerConfig to override default values for the ifra
 
 #### Support for `pdfPrint`
 
-- Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig `in addition to the existing `allowedFileTypes`. 
+- Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig`in addition to the existing `allowedFileTypes`.
 
 ### Bug Fixes
 
