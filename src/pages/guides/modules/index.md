@@ -67,9 +67,9 @@ The only required property is `docConfig`.
 | exportConfig    | [ExportOptions](../../v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptions.md)[]            | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
 | containerConfig | [ContainerConfig](../../v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig.md)       | Properties to configure the SDK container                                                                          |
 
-## Example: Create image from text
+## Example: Generate from text
 
-The following code will invoke the text-to-image module. In this example, we pass a string to be used as a prompt. If that field is left empty, the user will be prompted to input a prompt once the modal is open.
+The following code will invoke the generate module. In this example, we pass a string to be used as a prompt. If that field is left empty, the user will be prompted to input a prompt once the modal is open.
 
 <InlineAlert variant="info" slots="header, text1" />
 

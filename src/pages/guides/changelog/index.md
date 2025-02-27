@@ -16,6 +16,60 @@ contributors:
 
 # Changelog
 
+## [4.21.17] 2025-02-27
+
+### Added
+
+#### Unlocked new Generate Image V2 experience
+
+- **CCEverywhere.TextToImageAppConfig.appVersion**: Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
+  - When set to `2`, users can access the updated interface and features.
+  - By default, this property is set to `1`, displaying the older experience.
+  
+**Key Features:**
+
+- **Enhanced User Interface**: Redesigned with a new Carousel and Grid view.
+- **Community Wall**: An endless collection of generated images with prompts for users to select from.
+- **Fast Mode**: Generates images faster with lesser details, suitable for simple topics, backgrounds, illustrations, and close portraits.
+- **Improved Prompt Bar**: Includes prompt suggestions for a better user experience.
+- **Rich Previews**: Provides a more interactive and engaging preview experience.
+- **And more!**
+
+**Configurations available after enabling the new UI:**
+
+- CCEverywhere.TextToImageAppConfig.thumbnailOptions: Options to be displayed on the thumbnail.
+- CCEverywhere.TextToImageAppConfig.editDropdownOptions: Options for the Edit dropdown.
+- CCEverywhere.TextToImageAppConfig.publishConfig: Configuration for the Publish action.
+- CCEverywhere.TextToImageAppConfig.fastModeConfig: Configuration for enabling or disabling fast mode.
+- CCEverywhere.TextToImageAppConfig.featureConfig: Configuration for enabling or disabling specific features.
+
+#### Concept guide for Generate Image V2
+
+Added a new concept guide for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.
+
+#### Demo app updates for Generate Image V2
+
+Updated the [demo app](https://demo.expressembed.com/) to showcase the Generate Image V2 feature. To use the new feature:
+
+- Navigate to **Generative** -> **Generate image** -> **Next**
+- In the Configuration options, Select generate image version as V2.
+
+  ![Demo App](./images/demo-app.png)
+
+- Select all the options you need and click **Create with Adobe Express**
+
+#### Margin property to `ContainerConfig`
+
+Added margin property to ContainerConfig to override default values for the iframe container. Rendered the initial loading icon relative to the position of the iframe container.
+
+#### Support for `pdfPrint`
+
+- Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig`in addition to the existing `allowedFileTypes`.
+
+### Bug Fixes
+
+Fixed loader CSS for frictionless experience.
+
 ## [4.20.46] 2025-02-18
 
 ### Bug Fixes
