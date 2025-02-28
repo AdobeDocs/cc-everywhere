@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         title: "Guides",
-        path: "guides/",
+        path: "/guides/",
       },
       {
         title: "SDK References",
@@ -33,27 +33,27 @@ module.exports = {
           {
             title: "v4 Reference",
             description: "🟢 Current version",
-            path: "v4/",
+            path: "/v4/",
           },
           // {
           //   title: "v4 Reference",
           //   description: "🟠 Legacy docs",
-          //   path: "reference/",
+          //   path: "/reference/",
           // },
           {
             title: "v3 Reference",
             description: "🟠 Deprecated soon",
-            path: "v3/reference/",
+            path: "/v3/reference/",
           },
           {
             title: "v2 Reference",
             description: "🔴 Deprecated",
-            path: "v2/reference/",
+            path: "/v2/reference/",
           },
           {
             title: "v1 Reference",
             description: "🔴 Deprecated",
-            path: "v1/reference/",
+            path: "/v1/reference/",
           },
         ],
       },
