@@ -106,7 +106,7 @@ The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK 
 var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js";
 ```
 
-You can check the [changelog](/src/pages/guides/changelog/index.md) to read about known issues as well as what changes have been made.
+You can check the [changelog](../changelog/index.md) to read about known issues as well as what changes have been made.
 
 ### Load via script tag
 
@@ -188,8 +188,8 @@ Our guides along with the [SDK references](../../reference/index.md) can help yo
 
 With the full editor component, your users are able to:
 
-- How to [create new projects](../../guides/full_editor/create_project/)
-- How to [edit existing projects](../../guides/full_editor/edit_project/)
+- How to [create new projects](../full_editor/create_project/index.md)
+- How to [edit existing projects](../full_editor/edit_project/index.md)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 

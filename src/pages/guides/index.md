@@ -44,15 +44,13 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<AnnouncementBlock  slots="heading, text, button" />
+<Announcement slots="heading, text, buttons" variant="secondary" />
 
 ### Demo App
 
 Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
 
-[Try our demo app](https://demo.expressembed.com/)
-
-<br/>
+- [Try our demo app](https://demo.expressembed.com/)
 
 ## Overview
 
@@ -115,31 +113,31 @@ Explore our tools:
 
 ## Additional resources
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="50%"/>
 
 [Quickstart Guide](./quickstart/index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="50%"/>
 
 [Tutorials](./tutorials/index.md)
 
 Explore the collection of tutorials.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="50%"/>
 
 [Sample Code](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample)
 
 Adobe Express Embed SDK Sample using V4 SDK.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="50%"/>
 
 [Community](https://developer.adobe.com/express/community)
 
 If you need assistance or have questions about the Adobe Express Embed SDK, visit the community section for access to community forums.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text"  width="100%"/>
 
 [Frequently Asked Questions](./troubleshooting/faq/index.md)
 

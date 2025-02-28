@@ -77,7 +77,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/DocConfig.types/interfaces/DocConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/DocConfig.types/interfaces/DocConfig"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/DocConfig.types/interfaces/doc-config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/DesignConfig.types/index.md",
@@ -101,7 +101,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/AppConfig.types/interfaces/AppConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/AppConfig.types/interfaces/AppConfig"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/quick-action/AppConfig.types/interfaces/app-config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/PublishParams.types/index.md",
@@ -145,7 +145,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/module/DocConfig.types/interfaces/EditImageDocConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/module/DocConfig.types/interfaces/EditImageDocConfig"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/module/DocConfig.types/interfaces/edit-image-doc-config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/module/DesignConfig.types/index.md",
@@ -173,7 +173,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/PublishConfig/",
@@ -185,7 +185,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/edit-image-app-config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/module/AppConfig.types/interfaces/EditDropdownOptionConfig/",
@@ -305,7 +305,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptions/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptions"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/type-aliases/export-options/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/type-aliases/ExportOptionOrGroup/",
@@ -445,7 +445,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/enumerations/edit-further-intent/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/enumerations/DownloadTarget/",
@@ -537,7 +537,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/type-aliases/container-config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/ModalContainerConfig/",
