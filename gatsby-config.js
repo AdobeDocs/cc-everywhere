@@ -16,7 +16,7 @@ module.exports = {
     product_name: process.env.GATSBY_PRODUCT_NAME,
     docs: {
       title: "Get credentials",
-      path: "get-credential/",
+      path: "/get-credential/",
     },
     pages: [
       {
