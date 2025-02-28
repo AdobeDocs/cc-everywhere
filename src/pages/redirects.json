@@ -1496,7 +1496,7 @@
             "Destination": "/express/embed-sdk/docs/guides/full_editor/create_project/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/guides/concepts/migration_v3_v4/",
+            "Source": "/express/embed-sdk/docs/guides/concepts/migration_v3_v4",
             "Destination": "/express/embed-sdk/docs/guides/concepts/migration-v3-v4"
         },
         {
