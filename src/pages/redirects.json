@@ -1317,7 +1317,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface/"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/index.md",
@@ -1329,7 +1329,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere"
         },
         {
             "Source": "/express/embed-sdk/docs/v3/reference/index.md",
