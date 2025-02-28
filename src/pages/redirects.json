@@ -1316,7 +1316,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/CCEverywhereInterface",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/interfaces/cc-everywhere-interface/"
         },
         {
