@@ -65,105 +65,105 @@ module.exports = {
     subPages: [
       {
         title: "Overview",
-        path: "guides/",
+        path: "/guides/",
       },
       {
         title: "Getting Started",
-        path: "guides/quickstart/",
+        path: "/guides/quickstart/",
         pages: [
           {
             title: "Quickstart",
-            path: "guides/quickstart/",
+            path: "/guides/quickstart/",
           },
           {
             title: "Technical requirements",
-            path: "guides/quickstart/technical-requirements.md",
+            path: "/guides/quickstart/technical-requirements.md",
           },
         ],
       },
       {
         title: "Tools",
-        path: "guides/full_editor/",
+        path: "/guides/full_editor/",
         pages: [
           {
             title: "Full editor",
-            path: "guides/full_editor/",
+            path: "/guides/full_editor/",
             pages: [
               {
                 title: "Create new project",
-                path: "guides/full_editor/create_project/",
+                path: "/guides/full_editor/create_project/",
               },
               {
                 title: "Edit existing project",
-                path: "guides/full_editor/edit_project/",
+                path: "/guides/full_editor/edit_project/",
               },
             ],
           },
           {
             title: "Modules",
-            path: "guides/modules/",
+            path: "/guides/modules/",
           },
           {
             title: "Quick actions",
-            path: "guides/quick_actions/",
+            path: "/guides/quick_actions/",
           },
         ],
       },
       {
         title: "Concepts",
-        path: "guides/concepts/generate-image-v2.md",
+        path: "/guides/concepts/generate-image-v2.md",
         pages: [
           {
             title: "Generate Image V2",
-            path: "guides/concepts/generate-image-v2.md",
+            path: "/guides/concepts/generate-image-v2.md",
           },
           {
             title: "V3 to V4 Migration guide",
-            path: "guides/concepts/migration_v3_v4.md",
+            path: "/guides/concepts/migration_v3_v4.md",
           },
           // {
           //   title: "UI Customization",
-          //   path: "guides/concepts/customization.md",
+          //   path: "/guides/concepts/customization.md",
           // },
           {
             title: "Error Handling",
-            path: "guides/concepts/error-handling.md",
+            path: "/guides/concepts/error-handling.md",
           },
         ],
       },
       {
         title: "Tutorials",
-        path: "guides/tutorials/",
+        path: "/guides/tutorials/",
         pages: [
           {
             title: "Embed SDK integration tutorial",
-            path: "guides/tutorials/getting-started.md",
+            path: "/guides/tutorials/getting-started.md",
           },
           {
             title: "Full Editor tutorial",
-            path: "guides/tutorials/full-editor.md",
+            path: "/guides/tutorials/full-editor.md",
           },
         ],
       },
       {
         title: "Submission and review",
-        path: "guides/review/",
+        path: "/guides/review/",
       },
       {
         title: "Changelog",
-        path: "guides/changelog/",
+        path: "/guides/changelog/",
       },
       {
         title: "Troubleshooting",
-        path: "guides/troubleshooting/faq/",
+        path: "/guides/troubleshooting/faq/",
         pages: [
           {
             title: "Adobe Express is not available",
-            path: "guides/troubleshooting/express-unavailable-error.md",
+            path: "/guides/troubleshooting/express-unavailable-error.md",
           },
           {
             title: "FAQ",
-            path: "guides/troubleshooting/faq/",
+            path: "/guides/troubleshooting/faq/",
           },
         ],
       },
@@ -173,112 +173,112 @@ module.exports = {
       // },
       {
         title: "v1 Reference",
-        path: "v1/reference/",
+        path: "/v1/reference/",
         header: true,
         pages: [
           {
             title: "Initialize SDK",
-            path: "v1/reference/",
+            path: "/v1/reference/",
           },
           {
             title: "Full editor",
-            path: "v1/reference/full_editor/",
+            path: "/v1/reference/full_editor/",
           },
           {
             title: "Quick actions",
-            path: "v1/reference/quick_actions/",
+            path: "/v1/reference/quick_actions/",
           },
           {
             title: "Shared types",
-            path: "v1/reference/shared_types/",
+            path: "/v1/reference/shared_types/",
           },
         ],
       },
       {
         title: "v2 Reference",
-        path: "v2/reference/",
+        path: "/v2/reference/",
         header: true,
         pages: [
           {
             title: "Initialize SDK",
-            path: "v2/reference/",
+            path: "/v2/reference/",
           },
           {
             title: "Full editor",
-            path: "v2/reference/full_editor/",
+            path: "/v2/reference/full_editor/",
           },
           {
             title: "Quick actions",
-            path: "v2/reference/quick_actions/",
+            path: "/v2/reference/quick_actions/",
           },
           {
             title: "Shared types",
-            path: "v2/reference/shared_types/",
+            path: "/v2/reference/shared_types/",
           },
         ],
       },
       {
         title: "Overview",
-        path: "v3/reference/index.md",
+        path: "/v3/reference/index.md",
       },
       {
         title: "Initialize SDK",
-        path: "v3/reference/initialize/",
+        path: "/v3/reference/initialize/",
       },
       {
         title: "v3 Reference",
-        path: "v3/reference/CCEverywhere/",
+        path: "/v3/reference/CCEverywhere/",
         pages: [
           {
             title: "createDesign",
-            path: "v3/reference/CCEverywhere/create_design/",
+            path: "/v3/reference/CCEverywhere/create_design/",
           },
           {
             title: "editDesign",
-            path: "v3/reference/CCEverywhere/edit_design/",
+            path: "/v3/reference/CCEverywhere/edit_design/",
           },
           {
             title: "openQuickAction",
-            path: "v3/reference/CCEverywhere/quick_actions/",
+            path: "/v3/reference/CCEverywhere/quick_actions/",
           },
           {
             title: "close",
-            path: "v3/reference/CCEverywhere/close/",
+            path: "/v3/reference/CCEverywhere/close/",
           },
           {
             title: "terminate",
-            path: "v3/reference/CCEverywhere/terminate/",
+            path: "/v3/reference/CCEverywhere/terminate/",
           },
         ],
       },
       {
         title: "Types",
-        path: "v3/reference/types/",
+        path: "/v3/reference/types/",
       },
       {
         title: "Overview",
-        path: "reference/",
+        path: "/reference/",
       },
       {
         title: "initialize",
-        path: "reference/initialize/",
+        path: "/reference/initialize/",
       },
       {
         title: "CCEverywhere",
-        path: "reference/CCEverywhere/",
+        path: "/reference/CCEverywhere/",
         expanded: "true",
         pages: [
           {
             title: "editor",
-            path: "reference/CCEverywhere/editor/",
+            path: "/reference/CCEverywhere/editor/",
           },
           {
             title: "quickAction",
-            path: "reference/CCEverywhere/quickAction/",
+            path: "/reference/CCEverywhere/quickAction/",
           },
           {
             title: "module",
-            path: "reference/CCEverywhere/miniEditor/",
+            path: "/reference/CCEverywhere/miniEditor/",
           },
           // {
           //   title: 'close',
@@ -292,38 +292,38 @@ module.exports = {
       },
       {
         title: "Types",
-        path: "reference/types/",
+        path: "/reference/types/",
       },
       {
         title: "Overview",
-        path: "v4/index.md",
+        path: "/v4/index.md",
       },
       {
         title: "Entrypoints",
-        path: "v4/",
+        path: "/v4/",
         header: true,
         pages: [
           {
             title: "CC Everywhere",
-            path: "v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+            path: "/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
           },
           {
             title: "Editor",
-            path: "v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
           },
           {
             title: "Module",
-            path: "v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
           },
           {
             title: "Quick Action",
-            path: "v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
           },
         ],
       },
       {
         title: "APIs Reference",
-        path: "v4/",
+        path: "/v4/",
         header: true,
         pages: [...require("./api-refs-sidebar.json")],
       },
@@ -334,5 +334,5 @@ module.exports = {
     FAST_DEV: true,
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "express/embed-sdk/docs/",
+  pathPrefix: process.env.PATH_PREFIX || "/express/embed-sdk/docs/",
 };
