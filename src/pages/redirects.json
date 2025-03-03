@@ -1329,7 +1329,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere"
         },
         {
             "Source": "/express/embed-sdk/docs/v3/reference/index.md",
