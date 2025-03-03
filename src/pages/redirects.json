@@ -1233,7 +1233,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/ModuleWorkflow/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/ModuleWorkflow"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/module-workflow/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/index.md",
