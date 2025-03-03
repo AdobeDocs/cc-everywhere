@@ -1177,23 +1177,23 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCodeMessage/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCodeMessage"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCallback"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereWarn/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereWarn"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereInfo/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereInfo"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-info/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/enumerations/LogLevel/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/enumerations/LogLevel"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/enumerations/log-level/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/index.md",
@@ -1201,7 +1201,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/classes/CCEverywhereError/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/classes/CCEverywhereError"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/classes/cc-everywhere-error"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/index.md",
@@ -1209,7 +1209,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/classes/BaseWorkflow/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/classes/BaseWorkflow"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/classes/base-workflow"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/index.md",
@@ -1217,7 +1217,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/QuickActionWorkflow/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/QuickActionWorkflow"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/quick-action-workflow/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/index.md",
@@ -1289,7 +1289,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/ErrorCode/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables//error-code"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/error-code"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCodeMessages/",
