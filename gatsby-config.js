@@ -122,9 +122,13 @@ module.exports = {
           //   path: "/guides/concepts/customization.md",
           // },
           {
-            title: "Error Handling",
+            title: "Error handling",
             path: "/guides/concepts/error-handling.md",
           },
+          {
+            title: "Customize your editor",
+            path: "/guides/concepts/appconfig.md"
+          }
         ],
       },
       {
