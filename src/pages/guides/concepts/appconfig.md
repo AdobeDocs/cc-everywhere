@@ -13,9 +13,9 @@ contributors:
   - https://github.com/nimithajalal
 ---
 
-# Comprehensive Guide to Embed SDK: Full Editor AppConfig
+# Customize your editor
 
-The Embed SDK's `Editor.AppConfig` is a powerful configuration object that allows developers to customize the behavior and capabilities of the editor.
+The Embed SDK's Editor.AppConfig is a powerful configuration object that allows developers to customize the editor's behavior and capabilities.
 
 ## Overview
 
