@@ -1109,7 +1109,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/Messages/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/Messages"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/messages/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/index.md",
@@ -1117,7 +1117,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/index.md",
@@ -1125,7 +1125,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/classes/HostErrorHandler/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/classes/HostErrorHandler"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/classes/host-error-handler/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/index.md",
@@ -1133,7 +1133,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/classes/ConsoleHandler/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/classes/ConsoleHandler"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/classes/console-handler"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/index.md",
@@ -1141,7 +1141,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/classes/BaseHandler/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/classes/BaseHandler"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/classes/base-handler"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/index.md",
@@ -1149,7 +1149,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/classes/ErrorHandlerDelegate/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/classes/ErrorHandlerDelegate"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/classes/error-handler-delegate"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/index.md",
@@ -1157,7 +1157,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/interfaces/ErrorData/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/interfaces/ErrorData"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/interfaces/error-data/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/index.md",
@@ -1165,11 +1165,11 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/variables/ErrorCodeMessages/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/variables/ErrorCodeMessages"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/variables/error-code-messages"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/enumerations/ErrorCode/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/enumerations/ErrorCode"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/enumerations/error-code"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/index.md",
