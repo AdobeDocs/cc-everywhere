@@ -1225,7 +1225,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/quick-action-workflow"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/index.md",
@@ -1241,7 +1241,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow.types/index.md",
@@ -1257,7 +1257,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/types/index.md",
@@ -1293,11 +1293,11 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCodeMessages/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCodeMessages"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/error-code-messages"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCode/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCode"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/error-code"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/enumerations/SDKErrorCode/",
@@ -1309,7 +1309,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/CCEverywhereBase/classes/CCEverywhereBase/",
-            "Destination": "/express/embed-sdk/docs/v4/sdk/src/CCEverywhereBase/classes/CCEverywhereBase"
+            "Destination": "/express/embed-sdk/docs/v4/sdk/src/CCEverywhereBase/classes/cc-everywhere-base"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere.types/index.md",
