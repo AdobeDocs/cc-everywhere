@@ -1208,7 +1208,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/classes/BaseWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/classes/BaseWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/BaseWorkflow/classes/base-workflow"
         },
         {
@@ -1216,7 +1216,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/QuickActionWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/QuickActionWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow.types/interfaces/quick-action-workflow/"
         },
         {
@@ -1224,7 +1224,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/quick-action-workflow"
         },
         {
@@ -1232,7 +1232,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/ModuleWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/ModuleWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow.types/interfaces/module-workflow/"
         },
         {
@@ -1240,7 +1240,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow"
         },
         {
