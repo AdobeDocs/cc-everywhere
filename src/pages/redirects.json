@@ -1248,7 +1248,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/EditorWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/EditorWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow.types/interfaces/editor-workflow/"
         },
         {
@@ -1256,7 +1256,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow"
         },
         {
@@ -1268,7 +1268,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/types/CCEverywhere.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/types/CCEverywhere.types/enumerations/State/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/types/CCEverywhere.types/enumerations/State",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/types/CCEverywhere.types/enumerations/state/"
         },
         {
@@ -1276,7 +1276,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorHandler/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorHandler/classes/ErrorHandler/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorHandler/classes/ErrorHandler",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorHandler/classes/error-handler"
         },
         {
@@ -1284,23 +1284,23 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/ErrorCodeMessages/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/ErrorCodeMessages",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/error-code-messages"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/ErrorCode/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/ErrorCode",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/variables/error-code"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCodeMessages/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCodeMessages",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/error-code-messages"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCode/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/ErrorCode",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/type-aliases/error-code"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/enumerations/SDKErrorCode/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/enumerations/SDKErrorCode",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/error/ErrorCodes/enumerations/sdk-error-code"
         },
         {
