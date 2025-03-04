@@ -536,160 +536,160 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/type-aliases/ContainerConfig",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/type-aliases/container-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/ModalContainerConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/ModalContainerConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/ModalContainerConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/modal-container-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/InlineOrModalContainerConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/InlineOrModalContainerConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/InlineOrModalContainerConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/inline-or-modal-container-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/InlineContainerConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/InlineContainerConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/InlineContainerConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/inline-container-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/FillContainerConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/FillContainerConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/FillContainerConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/fill-container-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/BaseContainerConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/BaseContainerConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/BaseContainerConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/interfaces/base-container-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/enumerations/ContainerMode/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/enumerations/ContainerMode"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/enumerations/ContainerMode",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ContainerConfig.types/enumerations/container-mode/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/index.md",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/variables/SDK_CDN_BASE/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/variables/SDK_CDN_BASE"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/variables/SDK_CDN_BASE",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/variables/sdk-cdn-base/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/Config/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/Config"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/Config",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/config/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/index.md",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/PublishStartCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/PublishStartCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/PublishStartCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/publish-start-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/PublishCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/PublishCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/PublishCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/publish-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadStartCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadStartCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadStartCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/load-start-callback/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadInitCallback/",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadInitCallback"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/LoadCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/load-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/IntentChangeCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/IntentChangeCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/IntentChangeCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/intent-change-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/EventCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/EventCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/EventCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/event-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/CancelCallback/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/CancelCallback"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/CancelCallback",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/type-aliases/cancel-callback/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/PublishStatus/",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/PublishStatus"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/IntentChangeConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/IntentChangeConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/IntentChangeConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/intent-change-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/Callbacks/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/Callbacks"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/Callbacks",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/callbacks/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/BrowserEvent.types/index.md",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/BrowserEvent.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/BrowserEvent.types/enumerations/BrowserEvent/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/BrowserEvent.types/enumerations/BrowserEvent"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/BrowserEvent.types/enumerations/BrowserEvent",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/BrowserEvent.types/enumerations/browser-event/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/index.md",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/variables/IMS_JUMP_ERROR_KEY/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/variables/IMS_JUMP_ERROR_KEY"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/variables/IMS_JUMP_ERROR_KEY",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/variables/ims-jump-error-key/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/variables/IMS_JUMP_ERROR_DESCRIPTION_KEY/",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/variables/IMS_JUMP_ERROR_DESCRIPTION_KEY"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/type-aliases/AuthOption/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/type-aliases/AuthOption"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/type-aliases/AuthOption",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/type-aliases/auth-option/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/UserInfo/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/UserInfo"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/UserInfo",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/user-info/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/UpfrontAuthOption/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/UpfrontAuthOption"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/UpfrontAuthOption",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/upfront-auth-option/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/PreSignedInAuthOption/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/PreSignedInAuthOption"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/PreSignedInAuthOption",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-option/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/PreSignedInAuthConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/PreSignedInAuthConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/PreSignedInAuthConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/pre-signed-in-auth-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/ImsJumpAuthOption/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/ImsJumpAuthOption"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/ImsJumpAuthOption",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/ims-jump-auth-option/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/IMSAuthConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/IMSAuthConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/IMSAuthConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/ims-auth-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/DelayedAuthOption/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/DelayedAuthOption"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/DelayedAuthOption",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/delayed-auth-option/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/BaseAuthOption/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/BaseAuthOption"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/BaseAuthOption",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/base-auth-option/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/AuthConfig/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/AuthConfig"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/AuthConfig",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/interfaces/auth-config/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/ValidateTokenError/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/ValidateTokenError"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/ValidateTokenError",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/validate-token-error/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/AuthMode/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/AuthMode"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/AuthMode",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Authentication.types/enumerations/auth-mode/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/index.md",
