@@ -924,27 +924,27 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/PREVIOUS_PROTOCOL_VERSION/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/PREVIOUS_PROTOCOL_VERSION",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/previous-protocol-version/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/NEXT_PROTOCOL_VERSION/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/NEXT_PROTOCOL_VERSION",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/next-protocol-version/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/EARLIEST_PROTOCOL_VERSION/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/EARLIEST_PROTOCOL_VERSION",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/earliest-protocol-version/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/CURRENT_PROTOCOL_VERSION/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/CURRENT_PROTOCOL_VERSION",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/current-protocol-version/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/interfaces/ProtocolHandlersModule/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/interfaces/ProtocolHandlersModule",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/interfaces/protocol-handlers-module/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/enumerations/ProtocolVersion/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/enumerations/ProtocolVersion",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/enumerations/protocol-version/"
         },
         {
@@ -952,35 +952,35 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/URLInfoEventData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/URLInfoEventData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/url-info-event-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/UpdateCloseButtonEventData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/UpdateCloseButtonEventData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/update-close-button-event-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/MessageData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/MessageData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/message-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/IntentChangeEventData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/IntentChangeEventData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/intent-change-event-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/HostEventData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/HostEventData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/host-event-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/ExportInfoEventData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/ExportInfoEventData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/export-info-event-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/DownloadCompleteEventData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/DownloadCompleteEventData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/interfaces/download-complete-event-data/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/enumerations/HostEventType/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/enumerations/HostEventType",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/MessageData.types/enumerations/host-event-type/"
         },
         {
@@ -988,55 +988,55 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/SimpleMessageType/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/SimpleMessageType",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/simple-message-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/MessageCompat/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/MessageCompat",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/message-compat/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/Message/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/Message",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/DidTargetLoadMessage/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/DidTargetLoadMessage",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/did-target-load-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/DataMessageType/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/DataMessageType",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/type-aliases/data-message-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/TokenResponseMessage/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/TokenResponseMessage",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/token-response-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/ParamsResponseMessage/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/ParamsResponseMessage",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/params-response-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/MessageDataMap/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/MessageDataMap",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/message-data-map/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/CancelMessage/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/CancelMessage",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/cancel-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/Status/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/Status",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/status/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/MessageType/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/MessageType",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/message-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/LoadStatus/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/LoadStatus",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/load-status/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/CancelReason/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/CancelReason",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/cancel-reason/"
         },
         {
@@ -1044,43 +1044,43 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/TargetAddedCallback/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/TargetAddedCallback",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/target-added-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageTarget/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageTarget",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-target/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageSender/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageSender",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageSender"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessagePayload/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessagePayload",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessagePayload"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageListener/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageListener",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-listener/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageFilter/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageFilter",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-filter/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/TargetChannelInfo/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/TargetChannelInfo",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/target-channel-info/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/IChannelMessengerDelegate/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/IChannelMessengerDelegate",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/i-channel-messenger-delegate/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/ChannelMessage/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/ChannelMessage",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/enumerations/MessageChannel/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/enumerations/MessageChannel",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/enumerations/message-channel/"
         },
         {
@@ -1096,11 +1096,11 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/Listener/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/Listener",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/listener/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/classes/ChannelMessageListener/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/classes/ChannelMessageListener",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/classes/channel-message-listener/"
         },
         {
