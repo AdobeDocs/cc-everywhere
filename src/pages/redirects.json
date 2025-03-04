@@ -1108,7 +1108,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/Messages/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/Messages/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/Messages",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/messages/"
         },
         {
@@ -1116,7 +1116,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/interfaces/IErrorMessageHandler",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler/"
         },
         {
@@ -1124,7 +1124,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/classes/HostErrorHandler/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/classes/HostErrorHandler",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/HostErrorHandler/classes/host-error-handler/"
         },
         {
@@ -1132,7 +1132,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/classes/ConsoleHandler/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/classes/ConsoleHandler",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/ConsoleHandler/classes/console-handler"
         },
         {
@@ -1140,7 +1140,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/classes/BaseHandler/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/classes/BaseHandler",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/handlers/BaseHandler/classes/base-handler"
         },
         {
@@ -1148,7 +1148,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/classes/ErrorHandlerDelegate/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/classes/ErrorHandlerDelegate",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorHandlerDelegate/classes/error-handler-delegate"
         },
         {
@@ -1156,7 +1156,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/interfaces/ErrorData/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/interfaces/ErrorData",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorData/interfaces/error-data/"
         },
         {
@@ -1164,11 +1164,11 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/variables/ErrorCodeMessages/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/variables/ErrorCodeMessages",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/variables/error-code-messages"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/enumerations/ErrorCode/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/enumerations/ErrorCode",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/ErrorCodes/enumerations/error-code"
         },
         {
@@ -1176,23 +1176,23 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCodeMessage/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCodeMessage",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/error-code-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCallback/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/ErrorCallback",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/type-aliases/error-callback/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereWarn/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereWarn",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereInfo/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/CCEverywhereInfo",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-info/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/enumerations/LogLevel/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/enumerations/LogLevel",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError.types/enumerations/log-level/"
         },
         {
@@ -1200,7 +1200,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/classes/CCEverywhereError/",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/classes/CCEverywhereError",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/error/CCEverywhereError/classes/cc-everywhere-error"
         },
         {
