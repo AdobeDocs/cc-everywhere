@@ -925,19 +925,19 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/PREVIOUS_PROTOCOL_VERSION/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/PREVIOUS_PROTOCOL_VERSION"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/previous-protocol-version/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/NEXT_PROTOCOL_VERSION/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/NEXT_PROTOCOL_VERSION"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/next-protocol-version/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/EARLIEST_PROTOCOL_VERSION/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/EARLIEST_PROTOCOL_VERSION"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/earliest-protocol-version/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/CURRENT_PROTOCOL_VERSION/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/CURRENT_PROTOCOL_VERSION"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/variables/current-protocol-version/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Protocol.types/interfaces/ProtocolHandlersModule/",
@@ -1049,7 +1049,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageTarget/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageTarget"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-target/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageSender/",
@@ -1061,7 +1061,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageListener/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageListener"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/message-listener/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/type-aliases/MessageFilter/",
@@ -1077,7 +1077,7 @@
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/ChannelMessage/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/ChannelMessage"
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/interfaces/channel-message/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessenger.types/enumerations/MessageChannel/",
