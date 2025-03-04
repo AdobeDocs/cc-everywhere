@@ -696,60 +696,60 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/ImageModuleFileTypes/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/ImageModuleFileTypes"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/ImageModuleFileTypes",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/image-module-file-types/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/FileType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/FileType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/FileType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/variables/file-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/UrlAsset/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/UrlAsset"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/UrlAsset",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/url-asset/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ProcessedImageDimensions/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ProcessedImageDimensions"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ProcessedImageDimensions",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/processed-image-dimensions/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ImageModuleFileTypes/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ImageModuleFileTypes"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ImageModuleFileTypes",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/image-module-file-types/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ImageDimensions/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ImageDimensions"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/ImageDimensions",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/image-dimensions/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/FileType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/FileType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/FileType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/file-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/BlobAsset/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/BlobAsset"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/BlobAsset",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/blob-asset/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/Base64Asset/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/Base64Asset"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/Base64Asset",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/base64-asset/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/Asset/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/Asset"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/Asset",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/asset/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/AspectRatio/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/AspectRatio"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/AspectRatio",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/aspect-ratio/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/Size/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/Size"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/Size",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/size/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/PixelSize/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/PixelSize"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/PixelSize",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/pixel-size/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/OutputAsset/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/OutputAsset"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/OutputAsset",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/output-asset/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/DataTypeMap/",
@@ -760,68 +760,68 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/Blob"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/AssetBase/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/AssetBase"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/AssetBase",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/asset-base/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/VideoFileType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/VideoFileType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/VideoFileType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/video-file-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/SubFileType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/SubFileType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/SubFileType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/sub-file-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/SizeUnit/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/SizeUnit"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/SizeUnit",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/size-unit/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/PdfFileType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/PdfFileType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/PdfFileType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/pdf-file-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/ImageFileType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/ImageFileType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/ImageFileType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/image-file-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/AssetType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/AssetType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/AssetType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/asset-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/AssetDataType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/AssetDataType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/AssetDataType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/enumerations/asset-data-type/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/index.md",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/variables/SearchCategory/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/variables/SearchCategory"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/variables/SearchCategory",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/variables/search-category/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/TemplateType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/TemplateType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/TemplateType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/template-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/TemplateMediaType/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/TemplateMediaType"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/TemplateMediaType",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/template-media-type/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/SpectrumTheme/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/SpectrumTheme"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/SpectrumTheme",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/spectrum-theme/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/Scale/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/Scale"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/Scale",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/scale/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/EditorPanelView/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/EditorPanelView"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/EditorPanelView",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/editor-panel-view/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/ColorTheme/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/ColorTheme"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/ColorTheme",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/AppConfig.types/enumerations/color-theme/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/ActionIntent.types/index.md",
