@@ -1328,7 +1328,7 @@
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/variables/default"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere/",
+            "Source": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere"
         },
         {
