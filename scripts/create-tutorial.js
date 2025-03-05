@@ -25,18 +25,26 @@ async function updateGatsbyConfig(tutorialName, title) {
     let configContent = fs.readFileSync(configPath, 'utf8');
     console.log('Reading gatsby-config.js...');
 
-    // Find the tutorials section in the navigation
-    const tutorialsNavRegex = /(title: "Tutorials",\s+path: "\/guides\/tutorials\/",\s+pages: \[)([\s\S]*?)(\s+\])/;
+    // Find the tutorials section in the navigation with a more flexible regex
+    const tutorialsNavRegex = /({[^}]*title:\s*["']Tutorials["'][^}]*path:\s*["']\/guides\/tutorials\/["'][^}]*pages:\s*\[)([\s\S]*?)(\s*\])/i;
     
     if (!tutorialsNavRegex.test(configContent)) {
-      throw new Error('Could not find tutorials section in gatsby-config.js');
+      // Try alternate format that might be used
+      const altTutorialsNavRegex = /({[^}]*path:\s*["']\/guides\/tutorials\/["'][^}]*title:\s*["']Tutorials["'][^}]*pages:\s*\[)([\s\S]*?)(\s*\])/i;
+      
+      if (!altTutorialsNavRegex.test(configContent)) {
+        throw new Error('Could not find tutorials section in gatsby-config.js');
+      }
+      
+      // Use the alternate regex if the first one didn't match
+      tutorialsNavRegex = altTutorialsNavRegex;
     }
 
     // Create new tutorial entry with path to index.md
     const newTutorialEntry = `
           {
             title: "${title}",
-            path: "/guides/tutorials/${tutorialName}/index.md",
+            path: "/guides/tutorials/${tutorialName}/index.md"
           },`;
 
     // Add the new entry to the pages array
