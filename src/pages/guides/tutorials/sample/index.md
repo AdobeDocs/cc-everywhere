@@ -14,13 +14,13 @@ keywords:
   - Web development
   - Creative tools
   - Content creation
-title: sample titlr
+title: sample title
 description: desc with Adobe Express Embed SDK
 contributors:
   - https://github.com/nimithajalal
 ---
 
-# sample titlr
+# sample title
 
 This tutorial demonstrates how to desc using the Adobe Express Embed SDK. By the end, you'll learn how to [key learning objectives].
 
