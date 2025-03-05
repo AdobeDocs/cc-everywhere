@@ -68,42 +68,6 @@ async function updateGatsbyConfig(tutorialName, title) {
   }
 }
 
-async function createPRTemplate(tutorialName) {
-  try {
-    const prTemplatePath = path.join(__dirname, `../src/pages/guides/tutorials/${tutorialName}/.github/pull_request_template.md`);
-    const prTemplateDir = path.dirname(prTemplatePath);
-
-    // Create .github directory if it doesn't exist
-    if (!fs.existsSync(prTemplateDir)) {
-      fs.mkdirSync(prTemplateDir, { recursive: true });
-    }
-
-    const prTemplate = `## Tutorial PR
-
-**Tutorial Name:** ${tutorialName}
-
-### Checklist
-- [ ] Tutorial follows the template structure
-- [ ] Code examples are tested and working
-- [ ] Screenshots/images are included where relevant
-- [ ] Links to documentation are valid
-- [ ] Gatsby config is updated
-
-### Reviewers
-@nimithajalal
-
-### Additional Notes
-[Add any additional information about the tutorial here]
-`;
-
-    fs.writeFileSync(prTemplatePath, prTemplate);
-    console.log('✅ Created PR template with reviewer');
-
-  } catch (error) {
-    console.error('❌ Error creating PR template:', error);
-  }
-}
-
 async function createTutorial() {
   try {
     // Gather information
@@ -142,9 +106,6 @@ async function createTutorial() {
     // Update Gatsby config
     await updateGatsbyConfig(folderName, title);
 
-    // Create PR template
-    await createPRTemplate(folderName);
-
     console.log('\n✅ Tutorial created successfully!');
     console.log(`📁 Location: ${destPath}`);
     console.log('\nNext steps:');
@@ -153,7 +114,6 @@ async function createTutorial() {
     console.log('3. Add code examples and screenshots');
     console.log('4. Test all code samples');
     console.log('5. Verify the tutorial appears in navigation');
-    console.log('6. When ready, create a PR and ensure @nimithajalal is added as reviewer');
 
   } catch (error) {
     console.error('❌ Error creating tutorial:', error);
