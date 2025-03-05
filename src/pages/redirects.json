@@ -876,8 +876,8 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/3p/HostInfo.types/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/3p/HostInfo.types/type-aliases/HostInfo/",
-            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/3p/HostInfo.types/type-aliases/HostInfo"
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/3p/HostInfo.types/type-aliases/HostInfo",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/3p/HostInfo.types/type-aliases/host-info/"
         },
         {
             "Source": "/express/embed-sdk/docs/v4/shared/src/types/3p/HostInfo.types/type-aliases/ConfigParams",
