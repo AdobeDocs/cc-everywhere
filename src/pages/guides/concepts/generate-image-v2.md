@@ -24,15 +24,17 @@ Welcome to the new and improved Generate Image V2 experience in the Adobe Expres
 
 ## Features overview
 
-In redesigning the Generate Image module, we’ve focused on making the image generation process more engaging, efficient, and inspiring. The **new User Interface** offers a fresh look and feel, with a Carousel and Grid view that make it easier to browse and select images.
+In redesigning the Generate Image module, we've focused on making the image generation process more engaging, efficient, and inspiring. The **new User Interface** offers a fresh look and feel, with a Carousel and Grid view that make it easier to browse and select images.
 
 ![Carousel and Grid view](./img/genimage_carousel.jpg)
 
-Upon launching the module, you’ll be greeted by an endless array of user-generated images on the **Community Wall**, that provide plenty of inspiration for your projects. The **Improved Prompt Bar** helps you with pop-up suggestions to craft the perfect prompt.
+Upon launching the module, you'll be greeted by an endless array of user-generated images on the **Community Wall**, that provide plenty of inspiration for your projects. The **Improved Prompt Bar** helps you with pop-up suggestions to craft the perfect prompt.
 
 ![Improved Prompt Bar](./img/genimage_prompt-suggestions.jpg)
 
-**Rich Previews** offer a more interactive and engaging preview experience, while with **Fast Mode** you can cut the generation time when fewer details and smaller sizes are enough. Lastly, **Custom Firefly Models** allow enterprise users to tailor outputs to unique brand or project requirements.
+**Rich Previews** offer a more interactive and engaging preview experience, while with **Fast Mode** you can cut the generation time when fewer details and smaller sizes are enough.
+
+<!-- Lastly, **Custom Firefly Models** allow enterprise users to tailor outputs to unique brand or project requirements. -->
 
 ## How to enable the new experience
 
