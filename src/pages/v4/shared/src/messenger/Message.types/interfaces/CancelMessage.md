@@ -4,4 +4,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `reason` | [`CancelReason`](../enumerations/CancelReason.md) |
+| `reason` | [`CancelReason`](../../../../../shared/src/messenger/Message.types/enumerations/CancelReason.md) |

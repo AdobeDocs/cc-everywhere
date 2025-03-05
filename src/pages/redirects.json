@@ -1024,7 +1024,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/interfaces/cancel-message/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/Status",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/status",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/status/"
         },
         {
