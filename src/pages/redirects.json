@@ -1388,8 +1388,8 @@
             "Destination": "/express/embed-sdk/docs/v1/reference/index.md/"
         },
         {
-            "Source": "/express/embed-sdk/docs/v1/reference/shared_types/index.md",
-            "Destination": "/express/embed-sdk/docs/v1/reference/shared-types/index.md/"
+            "Source": "/express/embed-sdk/docs/v1/reference/shared_types/",
+            "Destination": "/express/embed-sdk/docs/v1/reference/shared-types/"
         },
         {
             "Source": "/express/embed-sdk/docs/v1/reference/quick_actions/index.md",
