@@ -2,7 +2,7 @@
 
 ## Extends
 
-- [`CreateDocConfig`](CreateDocConfig.md)
+- [`CreateDocConfig`](../../DocConfig.types/interfaces/CreateDocConfig.md)
 
 ## Properties
 
