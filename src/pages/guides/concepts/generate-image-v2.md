@@ -182,7 +182,7 @@ const exportConfig = [
 ];
 ```
 
-<!-- ## Custom Firefly Models
+## Custom Firefly Models
 
 ### Before you begin
 
@@ -211,4 +211,4 @@ const appConfig = {
 };
 ```
 
-When enabled, the Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model. If your organization does not have a Custom Model enabled, the default model is used and the message "Powered by Firefly Image 3" is displayed in place of the dropdown. -->
+When enabled, the Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model. If your organization does not have a Custom Model enabled, the default model is used and the message "Powered by Firefly Image 3" is displayed in place of the dropdown.

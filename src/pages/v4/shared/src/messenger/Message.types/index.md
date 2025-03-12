@@ -7,6 +7,7 @@
 | Enumeration | Description |
 | ------ | ------ |
 | [Status](enumerations/Status.md) | - |
+| [PublishCallbackStatus](enumerations/PublishCallbackStatus.md) | - |
 | [LoadStatus](enumerations/LoadStatus.md) | - |
 | [CancelReason](enumerations/CancelReason.md) | - |
 | [MessageType](enumerations/MessageType.md) | - |
@@ -18,6 +19,7 @@
 | [MessageDataMap](interfaces/MessageDataMap.md) | - |
 | [CancelMessage](interfaces/CancelMessage.md) | - |
 | [TokenResponseMessage](interfaces/TokenResponseMessage.md) | - |
+| [PublishStatusMessage](interfaces/PublishStatusMessage.md) | - |
 | [ParamsResponseMessage](interfaces/ParamsResponseMessage.md) | - |
 
 ### Type Aliases

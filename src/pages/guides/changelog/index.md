@@ -16,6 +16,15 @@ contributors:
 
 # Changelog
 
+## [4.22.9] 2025-03-12
+
+### Added
+
+- Added support for [Firefly Custom Models](../concepts/generate-image-v2.md#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.
+
+<!-- - [`CCEverywhere.EditImageAppConfig.disableSaveButtonOnExport`](../../v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md#properties): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Introduced a feature to disable the save button based on the success of the save operation. This feature is controlled by the configuration option -->
+
 ## [4.21.17] 2025-02-27
 
 ### Added

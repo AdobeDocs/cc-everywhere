@@ -8,6 +8,12 @@ Re-exports [Status](Message.types/enumerations/Status.md)
 
 ***
 
+### PublishCallbackStatus
+
+Re-exports [PublishCallbackStatus](Message.types/enumerations/PublishCallbackStatus.md)
+
+***
+
 ### LoadStatus
 
 Re-exports [LoadStatus](Message.types/enumerations/LoadStatus.md)
@@ -71,6 +77,12 @@ Re-exports [CancelMessage](Message.types/interfaces/CancelMessage.md)
 ### TokenResponseMessage
 
 Re-exports [TokenResponseMessage](Message.types/interfaces/TokenResponseMessage.md)
+
+***
+
+### PublishStatusMessage
+
+Re-exports [PublishStatusMessage](Message.types/interfaces/PublishStatusMessage.md)
 
 ***
 
