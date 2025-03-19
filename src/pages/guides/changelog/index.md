@@ -16,6 +16,65 @@ contributors:
 
 # Changelog
 
+## [4.22.9] 2025-03-12
+
+### Added
+
+- Added support for [Firefly Custom Models](../concepts/generate-image-v2.md#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.
+
+<!-- - [`CCEverywhere.EditImageAppConfig.disableSaveButtonOnExport`](../../v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md#properties): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Introduced a feature to disable the save button based on the success of the save operation. This feature is controlled by the configuration option -->
+
+## [4.21.17] 2025-02-27
+
+### Added
+
+#### Unlocked new Generate Image V2 experience
+
+- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
+  - When set to `"2"`, users can access the updated interface and features.
+  - By default, this property is set to `"1"`, displaying the older experience.
+
+**Key Features:**
+
+- **Enhanced User Interface**: Redesigned with a new Carousel and Grid view.
+- **Community Wall**: An endless collection of generated images with prompts for users to select from.
+- **Fast Mode**: Generates images faster with lesser details, suitable for simple topics, backgrounds, illustrations, and close portraits.
+- **Improved Prompt Bar**: Includes prompt suggestions for a better user experience.
+- **Rich Previews**: Provides a more interactive and engaging preview experience.
+- **And more!**
+
+**Configurations available in `CCEverywhere` after enabling the new UI:**
+
+- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options to be displayed on the thumbnail.
+- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options for the Edit dropdown.
+- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for the Publish action.
+- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling fast mode default state.
+- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling specific features.
+
+#### Concept guide for Generate Image V2
+
+Added a new [Concept Guide](../concepts/generate-image-v2.md) for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.
+
+#### Demo app updates for Generate Image V2
+
+Updated the [Demo App](https://demo.expressembed.com/) to showcase the Generate Image V2 feature. To use the new feature:
+
+- Navigate to **Generative** -> **Generate image** -> **Next**
+- In the Configuration options, Select generate image version as V2.
+
+  ![Demo App](./images/demo-app.png)
+
+- Select all the options you need and click **Create with Adobe Express**
+
+#### Support for `pdfPrint`
+
+- Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig` in addition to the existing `allowedFileTypes`.
+
+### Bug Fixes
+
+Fixed loader CSS for frictionless experience.
+
 ## [4.20.46] 2025-02-18
 
 ### Bug Fixes

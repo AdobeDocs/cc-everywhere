@@ -24,3 +24,5 @@
 | [TargetAddedCallback](type-aliases/TargetAddedCallback.md) | - |
 | [MessageListener](type-aliases/MessageListener.md) | - |
 | [MessageFilter](type-aliases/MessageFilter.md) | - |
+| [MessagePayload](type-aliases/MessagePayload.md) | - |
+| [MessageSender](type-aliases/MessageSender.md) | - |

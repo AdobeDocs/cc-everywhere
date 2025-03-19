@@ -4,6 +4,7 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
+| `INIT_TARGET_LOAD` | `"INIT_TARGET_LOAD"` |
 | `WILL_TARGET_LOAD` | `"WILL_TARGET_LOAD"` |
 | `DID_TARGET_LOAD` | `"DID_TARGET_LOAD"` |
 | `WILL_PUBLISH` | `"WILL_PUBLISH"` |
@@ -17,4 +18,5 @@
 | `TOKEN_RESPONSE` | `"TOKEN_RESPONSE"` |
 | `PARAMS_REQUEST` | `"PARAMS_REQUEST"` |
 | `PARAMS_RESPONSE` | `"PARAMS_RESPONSE"` |
+| `PUBLISH_STATUS` | `"PUBLISH_STATUS"` |
 | `EVENT` | `"EVENT"` |
