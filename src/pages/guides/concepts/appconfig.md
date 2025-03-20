@@ -7,23 +7,24 @@ keywords:
  - Multi-Page Support
  - Callbacks
  - Template Type
-title: Understanding Editor AppConfig
+title: Editor Customization
 description: Learn about the configuration options available in Editor.AppConfig and how they affect the editor's behavior.
 contributors:
   - https://github.com/nimithajalal
 ---
 
-# Understanding Editor AppConfig
+# Editor Customization
 
 Editor.AppConfig provides a comprehensive set of configuration options to customize the editor's behavior and appearance. This guide explains each configuration option and its purpose.
 
 ## What is Editor.AppConfig?
 
 Editor.AppConfig is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
-- Control the editor's user interface
-- Manage file handling and publishing
-- Handle editor events
-- Customize user interactions
+
+  - Control the editor's user interface
+  - Manage file handling and publishing
+  - Handle editor events
+  - Customize user interactions
 
 ## Configuration Options Overview
 
