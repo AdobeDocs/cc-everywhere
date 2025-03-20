@@ -8,14 +8,14 @@ keywords:
  - Callbacks
  - Template Type
 title: Understanding Editor AppConfig
-description: Learn about the concepts and principles behind Editor.AppConfig, including its purpose, architecture, and key components.
+description: Learn about the configuration options available in Editor.AppConfig and how they affect the editor's behavior.
 contributors:
   - https://github.com/nimithajalal
 ---
 
 # Understanding Editor AppConfig
 
-Editor.AppConfig is a powerful configuration system that enables developers to customize the behavior and appearance of the Embed SDK's editor. This guide explains the core concepts, architecture, and principles behind AppConfig.
+Editor.AppConfig provides a comprehensive set of configuration options to customize the editor's behavior and appearance. This guide explains each configuration option and its purpose.
 
 ## What is Editor.AppConfig?
 
@@ -25,48 +25,59 @@ Editor.AppConfig is a configuration object that serves as the primary interface 
 - Handle editor events
 - Customize user interactions
 
-## Core Concepts
+## Configuration Options Overview
 
-### Configuration Architecture
+Editor.AppConfig offers several categories of configuration options:
 
-The AppConfig system follows a modular architecture where each configuration option serves a specific purpose:
-
-1. **Interface Configuration**
-   - Controls how the editor looks and behaves
-   - Manages user interaction patterns
-   - Defines the initial state of the editor
+1. **Modal Customization**
+   - Control modal titles and messages
+   - Customize user interactions
 
 2. **Event Handling**
-   - Provides hooks for editor events
-   - Enables integration with external systems
-   - Manages state changes and user actions
+   - Respond to editor events
+   - Integrate with your application
 
-3. **File Management**
-   - Controls file type restrictions
-   - Manages publishing options
-   - Handles export formats
+3. **Interface Settings**
+   - Control editor appearance
+   - Manage user navigation
 
-### Key Components
+4. **File Management**
+   - Control file type access
+   - Manage publishing options
 
-#### Modal System
+## Modal Configuration Options
 
-The modal system in AppConfig provides a way to customize user interactions during critical operations:
+### publishModalTitle
+
+- **Purpose**: Sets the title for the publish modal
+- **Type**: `string`
+- **Default**: `undefined`
 
 ```javascript
 const appConfig = {
-  publishModalTitle: 'Publish Your Content',
+  publishModalTitle: 'Publish Your Content'
+};
+```
+
+### publishErrorModalTitle
+
+- **Purpose**: Sets the title for the publish error modal
+- **Type**: `string`
+- **Default**: `undefined`
+
+```javascript
+const appConfig = {
   publishErrorModalTitle: 'Error Publishing Content'
 };
 ```
 
-This system:
-- Maintains consistent branding
-- Provides clear user feedback
-- Handles error states gracefully
+## Event Handling Options
 
-#### Event System
+### callbacks
 
-The event system enables developers to respond to editor actions:
+- **Purpose**: Defines functions to handle editor events
+- **Type**: `Callbacks`
+- **Default**: `undefined`
 
 ```javascript
 const appConfig = {
@@ -78,73 +89,87 @@ const appConfig = {
 };
 ```
 
-This system:
-- Enables custom behavior
-- Facilitates integration
-- Provides tracking capabilities
+## Interface Configuration Options
 
-#### Interface System
+### selectedCategory
 
-The interface system controls the editor's appearance and behavior:
+- **Purpose**: Sets the default category to display
+- **Type**: `EditorPanelView`
+- **Default**: `EditorPanelView.TEMPLATES`
 
 ```javascript
 const appConfig = {
-  selectedCategory: 'templates',
-  categorySearchText: 'nature',
-  templateType: 'business',
+  selectedCategory: 'templates'
+};
+```
+
+### categorySearchText
+
+- **Purpose**: Sets the search text for the selected panel
+- **Type**: `string`
+- **Default**: `undefined`
+
+```javascript
+const appConfig = {
+  categorySearchText: 'nature'
+};
+```
+
+### templateType
+
+- **Purpose**: Sets the canvas template type
+- **Type**: `TemplateType`
+- **Default**: `undefined`
+
+```javascript
+const appConfig = {
+  templateType: 'business'
+};
+```
+
+### multiPage
+
+- **Purpose**: Enables or disables multi-page support
+- **Type**: `boolean`
+- **Default**: `true`
+
+```javascript
+const appConfig = {
   multiPage: true
 };
 ```
 
-This system:
-- Guides user navigation
-- Controls content visibility
-- Manages editor state
+## File Management Options
 
-#### File Management System
+### allowedFileTypes
 
-The file management system handles file operations:
+- **Purpose**: Specifies allowed file types for publishing
+- **Type**: `(JPEG | PNG | PDF | MP4)[]`
+- **Default**: All formats enabled (PNG, JPEG, MP4, PDF)
 
 ```javascript
 const appConfig = {
-  allowedFileTypes: ['image/png', 'image/jpeg'],
+  allowedFileTypes: ['image/png', 'image/jpeg']
+};
+```
+
+### allowedSubFileTypes
+
+- **Purpose**: Specifies allowed PDF sub-file types
+- **Type**: `SubFileType[]`
+- **Default**: All types enabled (pdf, pdfPrint)
+
+```javascript
+const appConfig = {
+  allowedFileTypes: ['application/pdf'],
   allowedSubFileTypes: ['pdfPrint']
 };
 ```
 
-This system:
-- Controls file compatibility
-- Manages export options
-- Ensures system compatibility
+## Complete Configuration Example
 
-## Design Principles
+Here's an example showing how to combine multiple configuration options:
 
-### 1. Modularity
-
-AppConfig is designed with modularity in mind:
-- Each configuration option is independent
-- Options can be combined as needed
-- Systems can be enabled or disabled
-
-### 2. Extensibility
-
-The system is built to be extensible:
-- New options can be added
-- Existing options can be customized
-- Systems can be extended
-
-### 3. Consistency
-
-AppConfig maintains consistency through:
-- Standardized option naming
-- Predictable behavior
-- Clear documentation
-
-## System Integration
-
-### Editor Initialization
-
-AppConfig is applied during editor initialization:
 ```javascript
 const appConfig = {
   // Modal titles
@@ -170,50 +195,19 @@ const appConfig = {
 };
 ```
 
-This integration:
-- Sets up the editor environment
-- Configures user interactions
-- Establishes system boundaries
-
-## Common Patterns
-
-### 1. Event Handling
-
-Event handling follows a consistent pattern:
-- Events are defined in the callbacks object
-- Each event receives relevant data
-- Events can trigger custom behavior
-
-### 2. Interface Configuration
-
-Interface configuration uses a hierarchical structure:
-- Top-level options control major features
-- Nested options manage specific behaviors
-- Options can be combined for complex configurations
-
-### 3. File Management
-
-File management follows a permission-based model:
-- File types are explicitly allowed
-- Sub-types provide additional control
-- Restrictions are applied consistently
-
 ## Best Practices
 
-### 1. Configuration Management
+1. **Configuration Management**
+   - Keep configurations minimal and focused
+   - Document configuration choices
+   - Test configurations thoroughly
 
-- Keep configurations minimal and focused
-- Document configuration choices
-- Test configurations thoroughly
+2. **Event Handling**
+   - Implement proper error handling
+   - Log important events
+   - Maintain clean callback code
 
-### 2. Event Handling
-
-- Implement proper error handling
-- Log important events
-- Maintain clean callback code
-
-### 3. System Integration
-
-- Apply configurations early
-- Handle initialization errors
-- Monitor system performance
+3. **System Integration**
+   - Apply configurations early
+   - Handle initialization errors
+   - Monitor system performance
