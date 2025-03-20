@@ -118,6 +118,10 @@ module.exports = {
             path: "/guides/concepts/generate-image-v2.md",
           },
           {
+            title: "Editor Customization",
+            path: "/guides/concepts/appconfig.md"
+          },
+          {
             title: "V3 to V4 Migration guide",
             path: "/guides/concepts/migration_v3_v4.md",
           },
@@ -126,7 +130,7 @@ module.exports = {
           //   path: "/guides/concepts/customization.md",
           // },
           {
-            title: "Error Handling",
+            title: "Error handling",
             path: "/guides/concepts/error-handling.md",
           },
         ],
