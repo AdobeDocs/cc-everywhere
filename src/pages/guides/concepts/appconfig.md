@@ -7,61 +7,67 @@ keywords:
  - Multi-Page Support
  - Callbacks
  - Template Type
-title: Full Editor AppConfig Guide
-description: This guide provides an in-depth look at the various configuration options available in the Embed SDK's Editor AppConfig, along with practical use cases and code snippets.
+title: Understanding Editor AppConfig
+description: Learn about the concepts and principles behind Editor.AppConfig, including its purpose, architecture, and key components.
 contributors:
   - https://github.com/nimithajalal
 ---
 
-# Customize your editor
+# Understanding Editor AppConfig
 
-The Embed SDK's Editor.AppConfig is a powerful configuration object that allows developers to customize the editor's behavior and capabilities.
+Editor.AppConfig is a powerful configuration system that enables developers to customize the behavior and appearance of the Embed SDK's editor. This guide explains the core concepts, architecture, and principles behind AppConfig.
 
-## Overview
+## What is Editor.AppConfig?
 
-This guide will provide an in-depth look at the various configuration options available, along with practical use cases and code snippets. Whether you're looking to fine-tune the user experience or ensure compatibility with specific file types, this guide has you covered.
+Editor.AppConfig is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
+- Control the editor's user interface
+- Manage file handling and publishing
+- Handle editor events
+- Customize user interactions
 
-The `Editor.AppConfig` object in the Embed SDK provides a wide range of configuration options to tailor the editor to your specific needs. From setting default categories to specifying allowed file types, these options help create a seamless and user-friendly editing experience.
+## Core Concepts
 
-## Configuration Options
+### Configuration Architecture
 
-### publishModalTitle
+The AppConfig system follows a modular architecture where each configuration option serves a specific purpose:
 
-- **Type**: `string`
-- **Description**: Property to configure the Modal titles.
-- **Default**: `undefined`
+1. **Interface Configuration**
+   - Controls how the editor looks and behaves
+   - Manages user interaction patterns
+   - Defines the initial state of the editor
 
-**Use Case**: Set a custom title for the publish modal to provide a more personalized user experience.
+2. **Event Handling**
+   - Provides hooks for editor events
+   - Enables integration with external systems
+   - Manages state changes and user actions
 
-**Sample code**:
+3. **File Management**
+   - Controls file type restrictions
+   - Manages publishing options
+   - Handles export formats
+
+### Key Components
+
+#### Modal System
+
+The modal system in AppConfig provides a way to customize user interactions during critical operations:
+
 ```javascript
 const appConfig = {
-  publishModalTitle: 'Publish Your Content'
-};
-```
-
-### publishErrorModalTitle
-- **Type**: `string`
-- **Description**: Property to configure the error Modal titles.
-- **Default**: `undefined`
-
-**Use Case**: Set a custom title for the publish error modal to clearly communicate issues to the user.
-
-**Sample code**:
-```javascript
-const appConfig = {
+  publishModalTitle: 'Publish Your Content',
   publishErrorModalTitle: 'Error Publishing Content'
 };
 ```
 
-### callbacks
-- **Type**: `Callbacks`
-- **Description**: Object containing callback functions for various editor events.
-- **Default**: `undefined`
+This system:
+- Maintains consistent branding
+- Provides clear user feedback
+- Handles error states gracefully
 
-**Use Case**: Define a callback function that executes when the user publishes content.
+#### Event System
 
-**Sample code**:
+The event system enables developers to respond to editor actions:
+
 ```javascript
 const appConfig = {
   callbacks: {
@@ -72,156 +78,142 @@ const appConfig = {
 };
 ```
 
-### selectedCategory
-- **Type**: `EditorPanelView`
-- **Description**: Category to show by default.
-- **Default**: `EditorPanelView.TEMPLATES`
+This system:
+- Enables custom behavior
+- Facilitates integration
+- Provides tracking capabilities
 
-**Use Case**: Set the default category to "photos" when the editor loads.
+#### Interface System
 
-**Sample code**:
+The interface system controls the editor's appearance and behavior:
+
 ```javascript
 const appConfig = {
-  selectedCategory: 'photos'
-};
-```
-
-### categorySearchText
-- **Type**: `string`
-- **Description**: Search text to pass in the editor for the selected panel.
-- **Default**: `undefined`
-
-**Use Case**: Pre-fill the search text in the editor's category panel to streamline user workflows.
-
-**Sample code**:
-```javascript
-const appConfig = {
-  categorySearchText: 'nature'
-};
-```
-
-### templateType
-- **Type**: `TemplateType`
-- **Description**: Canvas template type.
-- **Default**: `undefined`
-
-**Use Case**: Specify a particular template type for the editor to ensure consistency in design.
-
-**Sample code**:
-```javascript
-const appConfig = {
-  templateType: 'business'
-};
-```
-
-### multiPage
-- **Type**: `boolean`
-- **Description**: Enables or disables multi-page support in the editor.
-- **Default**: `true`
-
-**Use Case 1**: Enable multi-page support for editing documents.
-
-**Sample code 1**:
-```javascript
-const appConfig = {
+  selectedCategory: 'templates',
+  categorySearchText: 'nature',
+  templateType: 'business',
   multiPage: true
 };
 ```
 
-**Use Case 2**: Disable multi-page support for a single-page editing experience.
+This system:
+- Guides user navigation
+- Controls content visibility
+- Manages editor state
 
-**Sample code 2**:
+#### File Management System
+
+The file management system handles file operations:
+
 ```javascript
 const appConfig = {
-  multiPage: false
-};
-```
-
-### allowedFileTypes
-- **Type**: `(JPEG | PNG | PDF | MP4)[]`
-- **Description**: Specifies the list of file types that the user can publish. This can be used to limit the publish options as per MIME types for end users. Only applicable for Editor workflows and Edit Image Module. Does not affect Quick Action export.
-- **Default**: Enable all formats (PNG, JPEG, MP4, and PDF)
-
-**Use Case 1**: Restrict users to only publish JPEG and PNG images in an image editing application.
-
-**Sample code 1**:
-```javascript
-const appConfig = {
-  allowedFileTypes: ['image/png', 'image/jpeg']
-};
-```
-
-**Use Case 2**: Allow users to publish only PDF documents and MP4 videos.
-
-**Sample code 2**:
-```javascript
-const appConfig = {
-  allowedFileTypes: ['application/pdf', 'video/mp4']
-};
-```
-
-**Use Case 3**: Enable all supported file types for maximum flexibility.
-
-**Sample code 3**:
-```javascript
-const appConfig = {
-  allowedFileTypes: ['image/png', 'image/jpeg', 'application/pdf', 'video/mp4']
-};
-```
-
-### allowedSubFileTypes
-- **Type**: `SubFileType[]`
-- **Description**: Specifies the list of sub-file types that the user can publish. This can be used to limit the publish options as per file types for end users. Currently, only PDF sub-file types are available, and hence used only if PDF MIME type is specified in `allowedFileTypes`.
-- **Default**: Enable all types (pdf and pdfPrint)
-
-**Use Case 1**: Allow users to publish PDFs but restrict them to only the `pdfPrint` sub-file type.
-
-**Sample code 1**:
-```javascript
-const appConfig = {
-  allowedFileTypes: ['application/pdf'],
+  allowedFileTypes: ['image/png', 'image/jpeg'],
   allowedSubFileTypes: ['pdfPrint']
 };
 ```
 
-**Use Case 2**: Enable all PDF sub-file types.
+This system:
+- Controls file compatibility
+- Manages export options
+- Ensures system compatibility
 
-**Sample code 2**:
+## Design Principles
+
+### 1. Modularity
+
+AppConfig is designed with modularity in mind:
+- Each configuration option is independent
+- Options can be combined as needed
+- Systems can be enabled or disabled
+
+### 2. Extensibility
+
+The system is built to be extensible:
+- New options can be added
+- Existing options can be customized
+- Systems can be extended
+
+### 3. Consistency
+
+AppConfig maintains consistency through:
+- Standardized option naming
+- Predictable behavior
+- Clear documentation
+
+## System Integration
+
+### Editor Initialization
+
+AppConfig is applied during editor initialization:
 ```javascript
 const appConfig = {
-  allowedFileTypes: ['application/pdf'],
-  allowedSubFileTypes: ['pdf', 'pdfPrint']
-};
-```
-
-### Complete App Configuration Example
-
-Here is an example of a complete app configuration that includes allowed file types, allowed sub-file types, and additional settings:
-
-```javascript
-const appConfig = {
+  // Modal titles
   publishModalTitle: 'Publish Your Content',
   publishErrorModalTitle: 'Error Publishing Content',
+  
+  // Callbacks
   callbacks: {
     onPublish: (data) => {
       console.log('Content published:', data);
     }
   },
+  
+  // Interface customization
   selectedCategory: 'templates',
   categorySearchText: 'nature',
   templateType: 'business',
   multiPage: true,
+  
+  // File type restrictions
   allowedFileTypes: ['image/png', 'image/jpeg', 'application/pdf', 'video/mp4'],
   allowedSubFileTypes: ['pdfPrint']
 };
 ```
 
+This integration:
+- Sets up the editor environment
+- Configures user interactions
+- Establishes system boundaries
+
+## Common Patterns
+
+### 1. Event Handling
+
+Event handling follows a consistent pattern:
+- Events are defined in the callbacks object
+- Each event receives relevant data
+- Events can trigger custom behavior
+
+### 2. Interface Configuration
+
+Interface configuration uses a hierarchical structure:
+- Top-level options control major features
+- Nested options manage specific behaviors
+- Options can be combined for complex configurations
+
+### 3. File Management
+
+File management follows a permission-based model:
+- File types are explicitly allowed
+- Sub-types provide additional control
+- Restrictions are applied consistently
+
 ## Best Practices
 
-- **File Size**: Ensure that files are optimized for size to improve performance.
-- **Naming Conventions**: Use clear and consistent naming conventions for easier management.
-- **Security**: Always scan files for malware before uploading to ensure security.
+### 1. Configuration Management
 
-## Conclusion
+- Keep configurations minimal and focused
+- Document configuration choices
+- Test configurations thoroughly
 
-The `Editor.AppConfig` in the Embed SDK offers a robust set of options to customize the editor to meet your specific needs. By understanding and utilizing these configuration options, you can create a more tailored and efficient user experience. Whether you're setting default categories, specifying allowed file types, or defining callback functions, the `Editor.AppConfig` provides the flexibility and control you need.
+### 2. Event Handling
+
+- Implement proper error handling
+- Log important events
+- Maintain clean callback code
+
+### 3. System Integration
+
+- Apply configurations early
+- Handle initialization errors
+- Monitor system performance
