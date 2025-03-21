@@ -16,6 +16,18 @@ contributors:
 
 # Changelog
 
+## [4.23.14] 2025-03-25
+
+### Added
+
+- [`BaseContainerConfig`](../../v4/shared/src/types/ContainerConfig.types/interfaces/BaseContainerConfig.md): Added two new properties to customize the Adobe Express loader experience:
+  - `showExpressIconWithText`: Show a white Adobe Express text below the icon.
+  - `showDarkerBackgroundForLoader`: Enable a darker background overlay.
+
+### Bug Fixes
+
+- [`EditImageDocConfig.EditImageIntent`](../../v4/shared/src/types/module/DocConfig.types/type-aliases/EditImageIntent.md): Removed unsupported intents (`add-text`, `add-icons-and-shapes`, `add-images` and `resize-image`) from the list of permitted intents for Edit Image Module.
+
 ## [4.22.9] 2025-03-12
 
 ### Added

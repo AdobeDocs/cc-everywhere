@@ -9,4 +9,4 @@
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `asset?` | [`Asset`](../../../Asset.types/type-aliases/Asset.md) | - |
-| `intent?` | [`EditFurtherIntent`](../../../ExportConfig.types/enumerations/EditFurtherIntent.md) | intent that needs to be performed on the asset |
+| `intent?` | [`EditImageIntent`](../type-aliases/EditImageIntent.md) | intent that needs to be performed on the asset |
