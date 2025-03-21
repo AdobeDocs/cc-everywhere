@@ -74,6 +74,12 @@ Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/WarmupDesignConfig
 
 ***
 
+### EditImageIntent
+
+Re-exports [EditImageIntent](DocConfig.types/type-aliases/EditImageIntent.md)
+
+***
+
 ### EditImageDocConfig
 
 Re-exports [EditImageDocConfig](DocConfig.types/interfaces/EditImageDocConfig.md)
