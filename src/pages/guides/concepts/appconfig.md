@@ -15,11 +15,11 @@ contributors:
 
 # Editor Customization
 
-Editor.AppConfig provides a comprehensive set of configuration options to customize the editor's behavior and appearance. This guide explains each configuration option and its purpose.
+`Editor.AppConfig` provides a comprehensive set of configuration options to customize the editor's behavior and appearance. This guide explains each configuration option and its purpose.
 
 ## What is Editor.AppConfig?
 
-Editor.AppConfig is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
+[Editor.AppConfig](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
 
   - Control the editor's user interface
   - Manage file handling and publishing
@@ -30,47 +30,17 @@ Editor.AppConfig is a configuration object that serves as the primary interface 
 
 Editor.AppConfig offers several categories of configuration options:
 
-1. **Modal Customization**
-   - Control modal titles and messages
-   - Customize user interactions
-
-2. **Event Handling**
+1. **Event Handling**
    - Respond to editor events
    - Integrate with your application
 
-3. **Interface Settings**
+2. **Interface Settings**
    - Control editor appearance
    - Manage user navigation
 
-4. **File Management**
+3. **File Management**
    - Control file type access
    - Manage publishing options
-
-## Modal Configuration Options
-
-### publishModalTitle
-
-- **Purpose**: Sets the title for the publish modal
-- **Type**: `string`
-- **Default**: `undefined`
-
-```javascript
-const appConfig = {
-  publishModalTitle: 'Publish Your Content'
-};
-```
-
-### publishErrorModalTitle
-
-- **Purpose**: Sets the title for the publish error modal
-- **Type**: `string`
-- **Default**: `undefined`
-
-```javascript
-const appConfig = {
-  publishErrorModalTitle: 'Error Publishing Content'
-};
-```
 
 ## Event Handling Options
 
@@ -173,10 +143,6 @@ Here's an example showing how to combine multiple configuration options:
 
 ```javascript
 const appConfig = {
-  // Modal titles
-  publishModalTitle: 'Publish Your Content',
-  publishErrorModalTitle: 'Error Publishing Content',
-  
   // Callbacks
   callbacks: {
     onPublish: (data) => {
@@ -196,6 +162,8 @@ const appConfig = {
 };
 ```
 
+For a reference implementation using these configuration options, visit our [demo application](https://demo.expressembed.com/).
+
 ## Best Practices
 
 1. **Configuration Management**
@@ -212,3 +180,48 @@ const appConfig = {
    - Apply configurations early
    - Handle initialization errors
    - Monitor system performance
+
+## Configuration Decision Tree
+
+Start by considering your primary integration needs:
+
+### 1. Are you customizing the publishing experience?
+
+   - **Yes** → Configure these options:
+     - `callbacks.onPublish`: Implement publish event handler
+     - `allowedFileTypes`: Restrict output formats based on your needs
+     - → **Export formats needed?**
+       - **PDF only** → Also set `allowedSubFileTypes`
+       - **Images only** → Set `allowedFileTypes: ['image/png', 'image/jpeg']`
+       - **Video only** → Set `allowedFileTypes: ['video/mp4']`
+       - **Multiple formats** → List all required formats in array
+
+   - **No** → Skip publishing-related configuration
+
+### 2. Are you customizing the default editor view?
+
+   - **Yes** → Configure these options:
+     - `selectedCategory`: Set initial panel view
+     - → **Need specific template search?**
+       - **Yes** → Also set `categorySearchText`
+       - **No** → Skip search text configuration
+
+### 3. Do you need specific template constraints?
+
+   - **Yes** → Configure these options:
+     - `templateType`: Set specific template category
+     - → **Need multiple pages?**
+       - **Yes** → Set `multiPage: true` (default)
+       - **No** → Set `multiPage: false`
+   - **No** → Use default template behavior
+
+### 4. Do you need custom event handling beyond publishing?
+
+   - **Yes** → Implement additional callback functions
+   - **No** → Basic configuration is complete
+
+## See Also
+
+- [Getting Started Guide](/guides/getting-started)
+- [API Reference](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md)
+- [Embed SDK Overview](/guides/concepts/embed-sdk)
