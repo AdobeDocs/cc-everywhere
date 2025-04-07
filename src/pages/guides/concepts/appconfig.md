@@ -187,6 +187,7 @@ For a reference implementation using these configuration options, visit our [dem
 Start by considering your primary integration needs:
 
 ### 1. Are you customizing the publishing experience?
+
    - **Yes** → Configure these options:
      - `callbacks.onPublish`: Implement publish event handler
      - `allowedFileTypes`: Restrict output formats based on your needs
@@ -199,6 +200,7 @@ Start by considering your primary integration needs:
    - **No** → Skip publishing-related configuration
 
 ### 2. Are you customizing the default editor view?
+
    - **Yes** → Configure these options:
      - `selectedCategory`: Set initial panel view
      - → **Need specific template search?**
@@ -206,6 +208,7 @@ Start by considering your primary integration needs:
        - **No** → Skip search text configuration
 
 ### 3. Do you need specific template constraints?
+
    - **Yes** → Configure these options:
      - `templateType`: Set specific template category
      - → **Need multiple pages?**
@@ -214,6 +217,7 @@ Start by considering your primary integration needs:
    - **No** → Use default template behavior
 
 ### 4. Do you need custom event handling beyond publishing?
+
    - **Yes** → Implement additional callback functions
    - **No** → Basic configuration is complete
 
