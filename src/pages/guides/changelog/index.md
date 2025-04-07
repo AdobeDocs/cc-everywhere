@@ -16,11 +16,11 @@ contributors:
 
 # Changelog
 
-## Documentation updates 
+## Documentation updates
 
 ### Added
 
-Added new [Editor Customization](../concepts/appconfig.md) concept guide with comprehensive configuration options, examples, and decision tree. 
+Added new [Editor Customization](../concepts/appconfig.md) concept guide with comprehensive configuration options, examples, and decision tree.
 
 ## [4.22.9] 2025-03-12
 
