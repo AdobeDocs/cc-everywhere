@@ -42,7 +42,6 @@ Editor.AppConfig offers several categories of configuration options:
    - Control file type access
    - Manage publishing options
 
-
 ## Event Handling Options
 
 ### callbacks
