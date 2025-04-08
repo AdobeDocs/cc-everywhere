@@ -17,7 +17,7 @@ contributors:
 
 `Editor.AppConfig` provides a comprehensive set of configuration options to customize the editor's behavior and appearance. This guide explains each configuration option and its purpose.
 
-## What is Editor.AppConfig?
+## What is `Editor.AppConfig`?
 
 [Editor.AppConfig](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
 
@@ -28,7 +28,7 @@ contributors:
 
 ## Configuration Options Overview
 
-Editor.AppConfig offers several categories of configuration options:
+`Editor.AppConfig` offers several categories of configuration options:
 
 1. **Event Handling**
    - Respond to editor events
@@ -222,6 +222,6 @@ Start by considering your primary integration needs:
 
 ## See Also
 
-- [Getting Started Guide](/guides/getting-started)
+- [Getting Started Guide](../quickstart/index.md)
 - [API Reference](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md)
-- [Embed SDK Overview](/guides/concepts/embed-sdk)
+- [Embed SDK Overview](../index.md)
