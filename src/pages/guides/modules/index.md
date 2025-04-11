@@ -78,68 +78,63 @@ New Generate Image experience
 The Adobe Express Embed SDK since v4.20 has added support for an all-new Generate Image (Text-to-Image) experience. This feature is disabled by default, displaying the classic interface. Toggle the `enableNewUI` boolean flag to `true` in the `appConfig` object to enable it.
 
 ```js
-// Initialize the SDK first
-const { module } = await window.CCEverywhere.initialize({
-  clientId: <CLIENT_ID>,
-  appName: <APP_NAME>,
-});
-
-const appConfig = {
-  promptText: "Flying cows",
-  thumbnailOptions: ["edit-dropdown", "rich-preview", "publish"],
-  enableNewUI: true, // 👈 Enable the new Generate Image experience
-  publishConfig: {
-    id: "saveToHostApp",
-    label: "Save in App",
-  },
-  editDropdownOptions: [
-    { option: "add-effects" },
-    { option: "remove-background" },
-    { option: "apply-adjustment" },
-    { option: "insert-object" },
-    { option: "remove-object" },
-  ],
-  featureConfig: {
-    "community-wall": true,
-    "fast-mode": true,
-  },
-  fastModeConfig: { defaultFastModeState: "on" },
-  callbacks: {
-    onCancel: () => {},
-    onError: (err) => {},
-    onLoadStart: () => {},
-    onLoad: () => {},
-    onPublishStart: () => {},
-    onPublish: (publishParams) => {},
-  },
-};
-
-const exportConfig = [
-  {
-    action: {
-      context: "new",
-      target: "express",
-    },
-    id: "editor",
-    label: "Create a design",
-    style: {
-      uiType: "button",
-    },
-  },
-  {
-    action: {
-      target: "publish",
-      outputype: "URL",
-      closeTargetOnExport: true,
-    },
-    id: "saveToHostApp",
-    label: "Save in App",
-    style: {
-      uiType: "button",
-    },
-  },
-];
-module.createImageFromText(appConfig, exportConfig);
+  // Initialize SDK and save CCEverywhere object as ccEverywhere 
+    ccEverywhere.module.createImageFromText(
+            promptText: "Flying cows",
+            appConfig : { 
+            thumbnailOptions : ["edit-dropdown","rich-preview","publish"],
+            publishConfig: {
+              id: "saveToHostApp",
+              label: "Publish"
+            },editDropdownOptions: [
+  		{"option": "add-effects"},
+  		{"option": "remove-background"},
+  		{"option": "insert-object"},
+  		{"option": "apply-adjustment"},
+  		{"option": "remove-object"}
+	      ],
+	     featureConfig: {
+              "community-wall": true,
+              "fast-mode": true,
+              "custom-models" : true
+            },
+	     fastModeConfig: { defaultFastModeState: "off" },
+           appVersion: '2',
+            callbacks: {
+              onCancel: () => {}, 
+              onError: (err) => {},
+              onLoadStart: () => {}, 
+              onLoad: () => {},
+             onPublishStart: () => {},
+             onPublish: (publishParams) => {},
+            }
+           },
+            exportConfig : [
+               {
+                 action: {
+                   context: 'new',
+                   target: 'express'
+                 },
+                 id: 'editor',
+                 label: 'Create a design',
+                 style: {
+                   uiType: 'button'
+                 }
+               }, 
+		  {
+                 action: {
+                   target: 'publish',
+                   outputype: "URL",
+                   closeTargetOnExport: true
+                 },
+                 id: 'saveToHostApp',
+                 label: "Publish",
+                 style: {
+                    uiType: 'button'
+                 }
+               },
+            ] 
+  );
 ```
 
 ## Example: Edit Image
