@@ -26,6 +26,12 @@ Re-exports [CancelReason](Message.types/enumerations/CancelReason.md)
 
 ***
 
+### WorkflowLoadCompleted
+
+Re-exports [WorkflowLoadCompleted](Message.types/enumerations/WorkflowLoadCompleted.md)
+
+***
+
 ### MessageType
 
 Re-exports [MessageType](Message.types/enumerations/MessageType.md)

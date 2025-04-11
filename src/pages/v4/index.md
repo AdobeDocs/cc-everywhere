@@ -13,7 +13,7 @@ contributors:
   - https://github.com/amandahuarng
   - https://github.com/undavide
   - https://github.com/nimithajalal
---- 
+---
 
 # Adobe Express Embed SDK API Reference
 
@@ -28,6 +28,12 @@ Before you dive into the API references, make sure you have completed the follow
 - Read the Documentation: Familiarize yourself with the SDK documentation to understand the available features and how to implement them.
 
 Learn more about in the [quick start guide](../guides/quickstart/).
+
+<InlineAlert variant="error" slots="header, text" />
+
+### SDK v1 and v2 End of Life
+
+Embed SDK v1 and v2 will reach end of life by the **end of April 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption.
 
 <InlineAlert variant="info" slots="header, text1" />
 
@@ -49,10 +55,10 @@ The asynchronous [`initialize()`](./sdk/src/3p/CCEverywhere/variables/default.md
 
 ```ts
 initialize: (
-    hostInfo:HostInfoSpecifiedBase, 
-    configParams?:ConfigParamsBase, 
-    authOption?:AuthOption) => Promise<CCEverywhere>;
-
+  hostInfo: HostInfoSpecifiedBase,
+  configParams?: ConfigParamsBase,
+  authOption?: AuthOption
+) => Promise<CCEverywhere>;
 ```
 
 <!-- Inline Alert -->
@@ -64,19 +70,20 @@ The SDK should be initialized only once on each page.
 
 ```ts
 (async () => {
-  let hostInfo = { /* HostInfo */
-    clientId: CLIENT_ID,
-    appName: APP_NAME, 
-    appVersion: { major: 1, minor: 0 }, 
-    platformCategory: 'web',
-  }
+  let hostInfo = {
+    /* HostInfo */ clientId: CLIENT_ID,
+    appName: APP_NAME,
+    appVersion: { major: 1, minor: 0 },
+    platformCategory: "web",
+  };
 
   const configParams = {
-    loginMode: 'delayed'
-  }
+    loginMode: "delayed",
+  };
 
   const ccEverywhere = await window.CCEverywhere.initialize(
-    hostInfo, configParams
+    hostInfo,
+    configParams
   );
 })();
 ```
@@ -90,7 +97,7 @@ After successfully initializing the SDK, a Promise will be returned containing t
 - `editor`: Contains APIs for launching and interacting with a full-featured embedded editor. Users can create and edit content with a comprehensive set of tools.
 - `quickAction`: Contains APIs for executing quick actions, such as removing backgrounds or resizing images, with minimal user interaction.
 - `module`: Contains APIs for launching specific modules like 'Generate Image' or 'Edit Image', which offer more focused editing capabilities.
-Types
+  Types
 
 As you interact with the SDK, you'll encounter various objects that are essential to the operation of the Adobe Express Embed SDK. The types reference page provides detailed information about these objects, which are shared across different parts of the SDK. Understanding these types is crucial for effectively utilizing the SDK's features.
 

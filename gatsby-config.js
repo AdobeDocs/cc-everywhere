@@ -35,24 +35,19 @@ module.exports = {
             description: "🟢 Current version",
             path: "/v4/",
           },
-          // {
-          //   title: "v4 Reference",
-          //   description: "🟠 Legacy docs",
-          //   path: "/reference/",
-          // },
           {
             title: "v3 Reference",
-            description: "🟠 Deprecated soon",
+            description: "🔴 Deprecated",
             path: "/v3/reference/",
           },
           {
             title: "v2 Reference",
-            description: "🔴 Deprecated",
+            description: "🪦 End of Life April 2025",
             path: "/v2/reference/",
           },
           {
             title: "v1 Reference",
-            description: "🔴 Deprecated",
+            description: "🪦 End of Life April 2025",
             path: "/v1/reference/",
           },
         ],
@@ -119,7 +114,7 @@ module.exports = {
           },
           {
             title: "Editor Customization",
-            path: "/guides/concepts/appconfig.md"
+            path: "/guides/concepts/appconfig.md",
           },
           {
             title: "V3 to V4 Migration guide",

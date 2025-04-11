@@ -19,6 +19,8 @@
 | `hideCloseButton?` | `public` | `boolean` | Don't show close button for container and header bars | [`BaseContainerConfig`](BaseContainerConfig.md).`hideCloseButton` |
 | `zIndex?` | `public` | `number` | Set the z-index of of the root container | [`BaseContainerConfig`](BaseContainerConfig.md).`zIndex` |
 | `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View | [`BaseContainerConfig`](BaseContainerConfig.md).`showReaderView` |
+| `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`BaseContainerConfig`](BaseContainerConfig.md).`showExpressIconWithText` |
+| `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`BaseContainerConfig`](BaseContainerConfig.md).`showDarkerBackgroundForLoader` |
 | `size?` | `public` | [`PixelSize`](../../Asset.types/interfaces/PixelSize.md) | Maximum size boundary of the iframe. | - |
 | `minSize?` | `public` | [`PixelSize`](../../Asset.types/interfaces/PixelSize.md) | Minimum size boundary of the iframe. | - |
 | `padding?` | `public` | `number` | Padding applied to the iframe in pixels. | - |

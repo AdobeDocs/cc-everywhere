@@ -9,6 +9,7 @@
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
 | `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/Callbacks.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/BaseAppConfig.md).`callbacks` |
+| `analyticsData?` | [`BaseAnalyticsData`](../../../AppConfig.types/type-aliases/BaseAnalyticsData.md) | Analytics data that can be provided by the host app | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/BaseAppConfig.md).`analyticsData` |
 | `headerBarColorTheme?` | [`ColorTheme`](../../../AppConfig.types/enumerations/ColorTheme.md) | Theming options for the TextToImage Editor header bar. **Default** `ColorTheme.LIGHT` | - |
 | `editorTitle?` | `string` | Property to configure the title | - |
 | `promptText?` | `string` | - | - |
@@ -21,3 +22,4 @@
 | `thumbnailOptions?` | [`ThumbnailOption`](../enumerations/ThumbnailOption.md)[] | Options passed to be displayed on the thumbnail. NOTE: This property is supported only in the new Generate Image experience. **Default** `[ ThumbnailOption.EDIT_DROPDOWN, ThumbnailOption.RICH_PREVIEW ]` | - |
 | `fastModeConfig?` | [`FastModeConfig`](FastModeConfig.md) | Configuration for enabling or disabling fast mode in the Text to Image module. NOTE: This property is supported only in the new Generate Image experience and when FAST_MODE is set to true in featureConfig. **Default** `{ * defaultFastModeState: 'off' * }` | - |
 | `featureConfig?` | `Partial`<`Record`<[`TextToImageFeature`](../enumerations/TextToImageFeature.md), `boolean`\>\> | Configuration for enabling or disabling specific features in the Text to Image module. NOTE: This property is supported only in the new Generate Image experience. **Default** `{ * [TextToImageFeatureType.COMMUNITY_WALL]: false, * [TextToImageFeatureType.FAST_MODE]: false * }` | - |
+| `communityWallConfig?` | [`CommunityWallConfig`](CommunityWallConfig.md) | - | - |

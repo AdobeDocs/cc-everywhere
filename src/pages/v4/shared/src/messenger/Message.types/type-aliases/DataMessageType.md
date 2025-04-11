@@ -9,5 +9,6 @@ type DataMessageType:
   | MessageType.PARAMS_RESPONSE
   | MessageType.EVENT
   | MessageType.ERROR
-  | MessageType.PUBLISH_STATUS;
+  | MessageType.PUBLISH_STATUS
+  | MessageType.CW_ASSET_RESPONSE;
 ```
