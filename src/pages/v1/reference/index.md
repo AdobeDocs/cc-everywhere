@@ -9,16 +9,17 @@ description: This is the reference page for the existing components in the SDK.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
---- 
+---
+
 # SDK Reference
 
-<InlineAlert variant="error" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text, text1" />
 
-IMPORTANT: Deprecation Warning
+### SDK v1 and v2 End of Life
 
-We are no longer approving integrations using using SDK V1, V2, or V3
+Embed SDK v1 and v2 will reach end of life by the **end of April 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption.
 
-V1 and V2 are deprecated and V3 will be deprecated in 2024.
+We're only accepting new integrations using the SDK version 4. Refer to our [migration guide](../../guides/concepts/migration_v3_v4.md) for detailed instructions.
 
 This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object.
 
@@ -29,34 +30,34 @@ The default method `initialize()` is the API used to initialize the SDK. Make su
 ```js
 // after loading the SDK into the window
 window.CCEverywhere.initialize(
-    /* HostInfo */
-    {
-        clientId: YOUR_CLIENT_ID,
-        appName: YOUR_PROJECT_NAME,
-        appVersion: { major: 1, minor: 0 },
-        platformCategory: 'web', 
-    },
-    /* ConfigParams (optional) */
-    {
-        locale: 'en_US',
-    }
+  /* HostInfo */
+  {
+    clientId: YOUR_CLIENT_ID,
+    appName: YOUR_PROJECT_NAME,
+    appVersion: { major: 1, minor: 0 },
+    platformCategory: "web",
+  },
+  /* ConfigParams (optional) */
+  {
+    locale: "en_US",
+  }
 );
 ```
 
 ### HostInfo
 
-| Property | Type | Description
-| :-- | :--| :--
-|clientId | string | Your API Key
-|appName | string | Name of project folder created in user's Adobe Express account
-|appVersion | { major: number, minor: number, patch?: number} | Your app version
-| platformCategory | 'web' | Specify host app platform
+| Property         | Type                                            | Description                                                    |
+| :--------------- | :---------------------------------------------- | :------------------------------------------------------------- |
+| clientId         | string                                          | Your API Key                                                   |
+| appName          | string                                          | Name of project folder created in user's Adobe Express account |
+| appVersion       | { major: number, minor: number, patch?: number} | Your app version                                               |
+| platformCategory | 'web'                                           | Specify host app platform                                      |
 
 ### ConfigParams
 
-| Property | Type | Description
-| :-- | :--| :--
-|locale | string | Language settings for SDK components
+| Property | Type   | Description                          |
+| :------- | :----- | :----------------------------------- |
+| locale   | string | Language settings for SDK components |
 
 ## CCEverywhere
 

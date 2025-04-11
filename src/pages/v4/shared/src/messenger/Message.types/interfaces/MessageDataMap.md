@@ -12,3 +12,4 @@
 | `EVENT` | [`HostEventData`](../../MessageData.types/interfaces/HostEventData.md) |
 | `ERROR` | [`ErrorData`](../../../error/ErrorData/interfaces/ErrorData.md)<`string`\> |
 | `PUBLISH_STATUS` | [`PublishStatusMessage`](PublishStatusMessage.md) |
+| `CW_ASSET_RESPONSE` | [`CWAssetResponse`](../../../types/CommunityWall.types/interfaces/CWAssetResponse.md) |

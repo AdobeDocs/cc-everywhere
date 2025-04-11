@@ -10,6 +10,7 @@
 | [PublishCallbackStatus](enumerations/PublishCallbackStatus.md) | - |
 | [LoadStatus](enumerations/LoadStatus.md) | - |
 | [CancelReason](enumerations/CancelReason.md) | - |
+| [WorkflowLoadCompleted](enumerations/WorkflowLoadCompleted.md) | - |
 | [MessageType](enumerations/MessageType.md) | - |
 
 ### Interfaces

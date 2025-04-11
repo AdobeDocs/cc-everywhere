@@ -14,6 +14,8 @@
 | `hideCloseButton?` | `public` | `boolean` | Don't show close button for container and header bars | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`hideCloseButton` |
 | `zIndex?` | `public` | `number` | Set the z-index of of the root container | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`zIndex` |
 | `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`showReaderView` |
+| `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`showExpressIconWithText` |
+| `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`showDarkerBackgroundForLoader` |
 | `size?` | `public` | [`PixelSize`](../../Asset.types/interfaces/PixelSize.md) | Maximum size boundary of the iframe. | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`size` |
 | `minSize?` | `public` | [`PixelSize`](../../Asset.types/interfaces/PixelSize.md) | Minimum size boundary of the iframe. | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`minSize` |
 | `padding?` | `public` | `number` | Padding applied to the iframe in pixels. | [`InlineOrModalContainerConfig`](InlineOrModalContainerConfig.md).`padding` |

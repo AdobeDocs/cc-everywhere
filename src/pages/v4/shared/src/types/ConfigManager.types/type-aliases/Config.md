@@ -252,6 +252,12 @@ PATH: string;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.CCX.QUICK\_ACTION.WARMUP
+
+```ts
+WARMUP: string;
+```
+
 ### CLIENTS.CCX.QUICK\_ACTION.QUERY\_PARAMS
 
 ```ts
