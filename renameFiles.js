@@ -123,9 +123,13 @@ try {
     files.forEach(file => {
         renameLinksInMarkdownFile(fileMap, file);
     });
-    renameLinksInRedirectsFile(fileMap);
-    appendRedirects(fileMap);
     renameFiles(fileMap);
+
+    const redirectsFile = getRedirectionsFilePath();
+    if(fs.existsSync(redirectsFile)) {
+        renameLinksInRedirectsFile(fileMap);
+        appendRedirects(fileMap);
+    }
 
 } catch (err) {
     console.error(err);
