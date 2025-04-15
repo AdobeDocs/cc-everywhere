@@ -114,6 +114,16 @@ function renameLinksInRedirectsFile(fileMap) {
     });
 }
 
+function renameLinksInGatsbyConfigFile(fileMap, file) {
+    const dir = 'src/pages';
+    replaceLinksInFile({
+        file,
+        linkMap: getLinkMap(fileMap, dir),
+        getFindPattern: (from) => `(path|"path")(\\s*:\\s*")(${from})(#[^"]*)?(")`,
+        getReplacePattern: (to) => `$1$2${to}$4$5`,
+    });
+}
+
 function appendRedirects(fileMap) {
     const file = getRedirectionsFilePath();
     const dir = path.dirname(file);
@@ -149,6 +159,12 @@ try {
         renameLinksInRedirectsFile(fileMap);
         appendRedirects(fileMap);
     }
+
+    const gatsbyConfigFiles = ['gatsby-config.js'];
+    gatsbyConfigFiles.forEach(file => {
+        renameLinksInGatsbyConfigFile(fileMap, file);
+    })
+
 
 } catch (err) {
     console.error(err);
