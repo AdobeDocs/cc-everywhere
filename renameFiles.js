@@ -147,10 +147,12 @@ function renameFiles(map) {
 }
 
 try {
-    const files = getMarkdownFiles('src/pages');
-    const fileMap = getFileMap(files);
-    files.forEach(file => {
-        // renameLinksInMarkdownFile(fileMap, file);
+    const markdownFilesToRename = getMarkdownFiles('src/pages');
+    const fileMap = getFileMap(markdownFilesToRename);
+
+    const markdownFilesToUpdate = getMarkdownFiles('src/pages');
+    markdownFilesToUpdate.forEach(file => {
+        renameLinksInMarkdownFile(fileMap, file);
     });
     // renameFiles(fileMap);
 
@@ -164,7 +166,6 @@ try {
     gatsbyConfigFiles.forEach(file => {
         renameLinksInGatsbyConfigFile(fileMap, file);
     })
-
 
 } catch (err) {
     console.error(err);
