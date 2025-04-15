@@ -84,7 +84,6 @@ function getLinkMap(fileMap, relativeToDir) {
 }
 
 function replaceLinksInFile({ file, linkMap, getFindPattern, getReplacePattern }) {
-    console.table(linkMap);
     let data = fs.readFileSync(file, 'utf8');
     linkMap.forEach((to, from) => {
         const find = getFindPattern(from);
@@ -140,8 +139,8 @@ function renameFiles(map) {
 try {
     const files = getMarkdownFiles('src/pages');
     const fileMap = getFileMap(files);
-    ['/Users/melissag/Projects/cc-everywhere/markdownLinks.md'].forEach(file => {
-        renameLinksInMarkdownFile(fileMap, file);
+    files.forEach(file => {
+        // renameLinksInMarkdownFile(fileMap, file);
     });
     // renameFiles(fileMap);
 
