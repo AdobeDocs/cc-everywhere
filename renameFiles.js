@@ -4,8 +4,8 @@ const { pathPrefix } = require('./gatsby-config.js');
 const { globSync }= require('glob');
 const { readRedirectionsFile, writeRedirectionsFile, getRedirectionsFilePath } = require('./scriptUtils.js');
 
-function getMarkdownFiles() {
-    return globSync(__dirname + '/src/pages/**/*.md')
+function getMarkdownFiles(subDir) {
+    return globSync(__dirname + `/${subDir}/**/*.md`)
         .map(f => path.resolve(f));
 }
 
@@ -118,7 +118,7 @@ function renameFiles(map) {
 }
 
 try {
-    const files = getMarkdownFiles();
+    const files = getMarkdownFiles('src/pages');
     const fileMap = getFileMap(files);
     files.forEach(file => {
         renameLinksInMarkdownFile(fileMap, file);
