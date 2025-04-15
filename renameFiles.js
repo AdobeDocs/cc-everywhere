@@ -60,23 +60,18 @@ function getLinkMap(fileMap, relativeToDir) {
     fileMap.forEach((toFile, fromFile) => {
 
         const fromRelFile = path.relative(relativeToDir, fromFile);
-        const toRelUrl = toRelativeUrl(relativeToDir, toFile);
+        const toRelFile = path.relative(relativeToDir, toFile);
 
-        let toNormalizedRelUrl = toRelUrl;
+        let toNormalizedRelFile = toRelFile;
         if (fromRelFile.endsWith('/index.md')) {
-            toNormalizedRelUrl = toNormalizedRelUrl.replace('/index', '/');
+            toNormalizedRelFile = toNormalizedRelFile.replace('/index.md', '/');
         }
         
-        linkMap.set(fromRelFile, toNormalizedRelUrl);
+        linkMap.set(fromRelFile, toNormalizedRelFile);
 
-        const fromRelUrl = toRelativeUrl(relativeToDir, fromFile);
-        linkMap.set(fromRelUrl, toNormalizedRelUrl);
-
-        if(!toNormalizedRelUrl.startsWith('.')) {
-            linkMap.set(`./${fromRelFile}`, toNormalizedRelUrl);
-            linkMap.set(`./${fromRelUrl}`, toNormalizedRelUrl);
-            linkMap.set(`/${fromRelFile}`, toNormalizedRelUrl);
-            linkMap.set(`/${fromRelUrl}`, toNormalizedRelUrl);
+        if(!toNormalizedRelFile.startsWith('.')) {
+            linkMap.set(`./${fromRelFile}`, toNormalizedRelFile);
+            linkMap.set(`/${fromRelFile}`, toNormalizedRelFile);
         }
 
     });
