@@ -147,7 +147,7 @@ function renameFiles(map) {
 }
 
 try {
-    const markdownFilesToRename = getMarkdownFiles('src/pages');
+    const markdownFilesToRename = getMarkdownFiles('src/pages/v4');
     const fileMap = getFileMap(markdownFilesToRename);
 
     const markdownFilesToUpdate = getMarkdownFiles('src/pages');
@@ -162,7 +162,7 @@ try {
         appendRedirects(fileMap);
     }
 
-    const gatsbyConfigFiles = ['gatsby-config.js'];
+    const gatsbyConfigFiles = ['gatsby-config.js', 'api-refs-sidebar.json'];
     gatsbyConfigFiles.forEach(file => {
         renameLinksInGatsbyConfigFile(fileMap, file);
     })
