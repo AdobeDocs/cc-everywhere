@@ -30,7 +30,7 @@ function toUrl(file, renameBaseWithoutExt) {
     return `${file.substring(0, end)}${newBaseWithoutExt}`
 }
 
-function toRelativeUrl(file, fromDir) {
+function toRelativeUrl(fromDir, file) {
     const relativeFile = path.relative(fromDir, file);
     return toUrl(relativeFile, f => f);
 }
@@ -55,8 +55,8 @@ function getFileMap(files) {
 function getLinkMap(fileMap, relativeToDir) {
     const linkMap = new Map();    
     fileMap.forEach((toFile, fromFile) => {
-        const fromUrl = toRelativeUrl(fromFile, relativeToDir);
-        const toUrl = toRelativeUrl(toFile, relativeToDir);
+        const fromUrl = toRelativeUrl(relativeToDir, fromFile);
+        const toUrl = toRelativeUrl(relativeToDir, toFile);
         linkMap.set(fromUrl, toUrl);
     });
     return linkMap;
