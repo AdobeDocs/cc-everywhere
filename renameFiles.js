@@ -58,9 +58,27 @@ function getFileMap(files) {
 function getLinkMap(fileMap, relativeToDir) {
     const linkMap = new Map();    
     fileMap.forEach((toFile, fromFile) => {
-        const fromUrl = toRelativeUrl(relativeToDir, fromFile);
-        const toUrl = toRelativeUrl(relativeToDir, toFile);
-        linkMap.set(fromUrl, toUrl);
+
+        const fromRelFile = path.relative(relativeToDir, fromFile);
+        const toRelUrl = toRelativeUrl(relativeToDir, toFile);
+
+        let toNormalizedRelUrl = toRelUrl;
+        if (fromRelFile.endsWith('/index.md')) {
+            toNormalizedRelUrl = toNormalizedRelUrl.replace('/index', '/');
+        }
+        
+        linkMap.set(fromRelFile, toNormalizedRelUrl);
+
+        const fromRelUrl = toRelativeUrl(relativeToDir, fromFile);
+        linkMap.set(fromRelUrl, toNormalizedRelUrl);
+
+        if(!toNormalizedRelUrl.startsWith('.')) {
+            linkMap.set(`./${fromRelFile}`, toNormalizedRelUrl);
+            linkMap.set(`./${fromRelUrl}`, toNormalizedRelUrl);
+            linkMap.set(`/${fromRelFile}`, toNormalizedRelUrl);
+            linkMap.set(`/${fromRelUrl}`, toNormalizedRelUrl);
+        }
+
     });
     return linkMap;
 }
