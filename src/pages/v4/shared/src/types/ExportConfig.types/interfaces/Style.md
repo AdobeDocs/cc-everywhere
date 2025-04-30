@@ -2,12 +2,12 @@
 
 ## Extended by
 
-- [`BaseButtonStyle`](BaseButtonStyle.md)
-- [`DropdownOptionStyle`](DropdownOptionStyle.md)
-- [`LinkStyle`](LinkStyle.md)
+- [`BaseButtonStyle`](base-button-style.md)
+- [`DropdownOptionStyle`](dropdown-option-style.md)
+- [`LinkStyle`](link-style.md)
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `uiType` | [`ExportOptionUI`](../enumerations/ExportOptionUI.md) |
+| `uiType` | [`ExportOptionUI`](../enumerations/export-option-ui.md) |

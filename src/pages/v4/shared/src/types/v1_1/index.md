@@ -4,16 +4,16 @@
 
 ### PublishParams
 
-Re-exports [PublishParams](OutputParams.types/interfaces/PublishParams.md)
+Re-exports [PublishParams](OutputParams.types/interfaces/publish-params.md)
 
 ***
 
 ### QuickActionPublishParams
 
-Re-exports [QuickActionPublishParams](OutputParams.types/interfaces/QuickActionPublishParams.md)
+Re-exports [QuickActionPublishParams](OutputParams.types/interfaces/quick-action-publish-params.md)
 
 ***
 
 ### CCXPublishParams
 
-Re-exports [CCXPublishParams](OutputParams.types/interfaces/CCXPublishParams.md)
+Re-exports [CCXPublishParams](OutputParams.types/interfaces/ccx-publish-params.md)

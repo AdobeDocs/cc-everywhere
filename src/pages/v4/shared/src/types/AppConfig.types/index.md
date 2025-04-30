@@ -6,15 +6,15 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [EditorPanelView](enumerations/EditorPanelView.md) | - |
-| [TemplateType](enumerations/TemplateType.md) | - |
-| [TemplateMediaType](enumerations/TemplateMediaType.md) | - |
-| [ColorTheme](enumerations/ColorTheme.md) | - |
-| [SpectrumTheme](enumerations/SpectrumTheme.md) | - |
-| [Scale](enumerations/Scale.md) | - |
+| [EditorPanelView](enumerations/editor-panel-view.md) | - |
+| [TemplateType](enumerations/template-type.md) | - |
+| [TemplateMediaType](enumerations/template-media-type.md) | - |
+| [ColorTheme](enumerations/color-theme.md) | - |
+| [SpectrumTheme](enumerations/spectrum-theme.md) | - |
+| [Scale](enumerations/scale.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [SearchCategory](variables/SearchCategory.md) | - |
+| [SearchCategory](variables/search-category.md) | - |

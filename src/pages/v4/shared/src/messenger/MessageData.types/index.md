@@ -6,16 +6,16 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [HostEventType](enumerations/HostEventType.md) | - |
+| [HostEventType](enumerations/host-event-type.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [MessageData](interfaces/MessageData.md) | - |
-| [HostEventData](interfaces/HostEventData.md) | - |
-| [IntentChangeEventData](interfaces/IntentChangeEventData.md) | - |
-| [UpdateCloseButtonEventData](interfaces/UpdateCloseButtonEventData.md) | - |
-| [URLInfoEventData](interfaces/URLInfoEventData.md) | - |
-| [ExportInfoEventData](interfaces/ExportInfoEventData.md) | - |
-| [DownloadCompleteEventData](interfaces/DownloadCompleteEventData.md) | - |
+| [MessageData](interfaces/message-data.md) | - |
+| [HostEventData](interfaces/host-event-data.md) | - |
+| [IntentChangeEventData](interfaces/intent-change-event-data.md) | - |
+| [UpdateCloseButtonEventData](interfaces/update-close-button-event-data.md) | - |
+| [URLInfoEventData](interfaces/url-info-event-data.md) | - |
+| [ExportInfoEventData](interfaces/export-info-event-data.md) | - |
+| [DownloadCompleteEventData](interfaces/download-complete-event-data.md) | - |

@@ -6,8 +6,8 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [PublishParams](interfaces/PublishParams.md) | Asset related information received with onPublish callback. |
-| [AssetTargetInfo](interfaces/AssetTargetInfo.md) | - |
-| [QuickActionPublishParams](interfaces/QuickActionPublishParams.md) | Asset related information received with onPublish callback in Quick Actions. |
-| [TextToImagePublishParams](interfaces/TextToImagePublishParams.md) | Asset related information received with onPublish callback. |
-| [EditorPublishParams](interfaces/EditorPublishParams.md) | Asset related information received with onPublish callback. |
+| [PublishParams](interfaces/publish-params.md) | Asset related information received with onPublish callback. |
+| [AssetTargetInfo](interfaces/asset-target-info.md) | - |
+| [QuickActionPublishParams](interfaces/quick-action-publish-params.md) | Asset related information received with onPublish callback in Quick Actions. |
+| [TextToImagePublishParams](interfaces/text-to-image-publish-params.md) | Asset related information received with onPublish callback. |
+| [EditorPublishParams](interfaces/editor-publish-params.md) | Asset related information received with onPublish callback. |

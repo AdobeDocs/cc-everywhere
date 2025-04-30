@@ -6,7 +6,7 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseDocConfig](interfaces/BaseDocConfig.md) | - |
-| [TargetDocConfig](interfaces/TargetDocConfig.md) | - |
-| [BaseAppConfig](interfaces/BaseAppConfig.md) | - |
-| [DesignConfig](interfaces/DesignConfig.md) | - |
+| [BaseDocConfig](interfaces/base-doc-config.md) | - |
+| [TargetDocConfig](interfaces/target-doc-config.md) | - |
+| [BaseAppConfig](interfaces/base-app-config.md) | - |
+| [DesignConfig](interfaces/design-config.md) | - |

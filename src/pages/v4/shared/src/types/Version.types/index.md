@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [Version](interfaces/Version.md) | Version details of any application. Reference : https://semver.org/ |
+| [Version](interfaces/version.md) | Version details of any application. Reference : https://semver.org/ |

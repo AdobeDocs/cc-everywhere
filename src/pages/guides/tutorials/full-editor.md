@@ -31,7 +31,7 @@ We'll look at a few **configuration parameters**, as well as the way to **handle
 Before we begin, make sure you have the following:
 
 - An **Adobe account**: use your existing Adobe ID or create one for free.
-- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/) for more information.
+- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/index.md) for more information.
 - Familiarity with **HTML, CSS, JavaScript**.
 - **Node.js** is installed on your development machine.
 
@@ -46,7 +46,7 @@ VITE_API_KEY="your-api-key-here!"
 <!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md).
 
 Now, you can install the dependencies and run the sample with the following two simple commands:
 
@@ -112,7 +112,7 @@ console.log("CCEverywhere loaded", window.CCEverywhere);
 <!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
 
 When the Embed SDK is imported, a `CCEverywhere` object is globally available and must be **initialized**. There are two sets of parameters that you can pass as option objects:
 
@@ -139,7 +139,7 @@ const { editor } = await window.CCEverywhere.initialize(
 );
 ```
 
-We're using the asynchronous [`initialize()`](../../reference/initialize/) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](../../reference/CCEverywhere/editor/).
+We're using the asynchronous [`initialize()`](../../reference/initialize/index.md) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](../../reference/CCEverywhere/editor/index.md).
 
 The [`hostInfo`](../../reference/initialize/index.md#hostinfo) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
@@ -209,7 +209,7 @@ document.getElementById("createDesign").onclick = async () => {
 <!-- Info Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.
 
 As you can see, integrating the full editor doesn't take much time! You can customize it to a great extent; even using all the default options, the result is brilliant.
 
@@ -434,7 +434,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
 
-- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
+- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/index.md).
+- Visit the [changelog](../changelog/index.md) page to keep up with the **latest updates** and improvements.
 - If you're looking for **more tutorials**, check out [here](../tutorials/).
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).

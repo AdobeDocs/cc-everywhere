@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [HostErrorHandler](classes/HostErrorHandler.md) | - |
+| [HostErrorHandler](classes/host-error-handler.md) | - |

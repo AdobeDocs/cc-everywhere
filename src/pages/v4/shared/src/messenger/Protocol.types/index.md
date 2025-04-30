@@ -6,19 +6,19 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ProtocolVersion](enumerations/ProtocolVersion.md) | - |
+| [ProtocolVersion](enumerations/protocol-version.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [ProtocolHandlersModule](interfaces/ProtocolHandlersModule.md) | - |
+| [ProtocolHandlersModule](interfaces/protocol-handlers-module.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [CURRENT\_PROTOCOL\_VERSION](variables/CURRENT_PROTOCOL_VERSION.md) | - |
-| [EARLIEST\_PROTOCOL\_VERSION](variables/EARLIEST_PROTOCOL_VERSION.md) | - |
-| [NEXT\_PROTOCOL\_VERSION](variables/NEXT_PROTOCOL_VERSION.md) | - |
-| [PREVIOUS\_PROTOCOL\_VERSION](variables/PREVIOUS_PROTOCOL_VERSION.md) | - |
+| [CURRENT\_PROTOCOL\_VERSION](variables/current-protocol-version.md) | - |
+| [EARLIEST\_PROTOCOL\_VERSION](variables/earliest-protocol-version.md) | - |
+| [NEXT\_PROTOCOL\_VERSION](variables/next-protocol-version.md) | - |
+| [PREVIOUS\_PROTOCOL\_VERSION](variables/previous-protocol-version.md) | - |

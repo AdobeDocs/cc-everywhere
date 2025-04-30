@@ -6,4 +6,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [BrowserEvent](enumerations/BrowserEvent.md) | - |
+| [BrowserEvent](enumerations/browser-event.md) | - |

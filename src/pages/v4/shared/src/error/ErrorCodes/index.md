@@ -6,10 +6,10 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ErrorCode](enumerations/ErrorCode.md) | - |
+| [ErrorCode](enumerations/error-code.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [ErrorCodeMessages](variables/ErrorCodeMessages.md) | - |
+| [ErrorCodeMessages](variables/error-code-messages.md) | - |

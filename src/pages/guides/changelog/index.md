@@ -22,7 +22,7 @@ contributors:
 
 #### Unlocked new Generate Image V2 experience
 
-- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
+- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
   - When set to `"2"`, users can access the updated interface and features.
   - By default, this property is set to `"1"`, displaying the older experience.
 
@@ -37,11 +37,11 @@ contributors:
 
 **Configurations available in `CCEverywhere` after enabling the new UI:**
 
-- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options to be displayed on the thumbnail.
-- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options for the Edit dropdown.
-- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for the Publish action.
-- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling fast mode default state.
-- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling specific features.
+- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): Options to be displayed on the thumbnail.
+- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): Options for the Edit dropdown.
+- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): Configuration for the Publish action.
+- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): Configuration for enabling or disabling fast mode default state.
+- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): Configuration for enabling or disabling specific features.
 
 #### Concept guide for Generate Image V2
 
@@ -70,8 +70,8 @@ Fixed loader CSS for frictionless experience.
 
 ### Bug Fixes
 
-- Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md#createwithasset) method.
-- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/Asset.types/type-aliases/UrlAsset.md) as the [`datatype`](../../v4/shared/src/types/Asset.types/enumerations/AssetDataType.md) for a video [`asset`](../../v4/shared/src/types/Asset.types/interfaces/AssetBase.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
+- Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md#createwithasset) method.
+- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/Asset.types/type-aliases/url-asset.md) as the [`datatype`](../../v4/shared/src/types/Asset.types/enumerations/asset-data-type.md) for a video [`asset`](../../v4/shared/src/types/Asset.types/interfaces/asset-base.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
 
 ## [4.19.22] 2025-01-31
 
@@ -83,7 +83,7 @@ Fixed loader CSS for frictionless experience.
 
 ### Added
 
-- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/edit-further-intent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
 - Added coverage for the [Asset](../../v4/shared/src/types/Asset.types/index.md) type.
 - Various performance improvements and bug fixes.
 
@@ -91,7 +91,7 @@ Fixed loader CSS for frictionless experience.
 
 ### Added
 
-- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/PublishParams.types/interfaces/TextToImagePublishParams.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
+- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/PublishParams.types/interfaces/text-to-image-publish-params.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
 
 ## [4.17.33] 2024-12-16
 
@@ -101,14 +101,14 @@ Fixed loader CSS for frictionless experience.
 
 ### Added
 
-- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
+- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
 
 ## [4.16.11] - 2024-11-18
 
 ### Enhancements
 
-- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
-- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
 
 <!-- ### Added
 
@@ -123,7 +123,7 @@ Fixed loader CSS for frictionless experience.
 ### Enhancements
 
 - Redesigned the entire [SDK Reference](../../v4/index.md) section, providing full APIs coverage.
-- Added a V3 to V4 [Migration Guide](../concepts/migration_v3_v4.md).
+- Added a V3 to V4 [Migration Guide](../concepts/migration-v3-v4.md).
 
 ### Added
 

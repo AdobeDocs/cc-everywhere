@@ -6,10 +6,10 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [Config](type-aliases/Config.md) | - |
+| [Config](type-aliases/config.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [SDK\_CDN\_BASE](variables/SDK_CDN_BASE.md) | - |
+| [SDK\_CDN\_BASE](variables/sdk-cdn-base.md) | - |

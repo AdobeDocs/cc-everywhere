@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [CCEverywhereError](classes/CCEverywhereError.md) | - |
+| [CCEverywhereError](classes/cc-everywhere-error.md) | - |

@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [EditorWorkflow](classes/EditorWorkflow.md) | - |
+| [EditorWorkflow](classes/editor-workflow.md) | - |

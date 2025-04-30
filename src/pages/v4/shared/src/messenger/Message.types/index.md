@@ -6,26 +6,26 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Status](enumerations/Status.md) | - |
-| [LoadStatus](enumerations/LoadStatus.md) | - |
-| [CancelReason](enumerations/CancelReason.md) | - |
-| [MessageType](enumerations/MessageType.md) | - |
+| [Status](enumerations/status.md) | - |
+| [LoadStatus](enumerations/load-status.md) | - |
+| [CancelReason](enumerations/cancel-reason.md) | - |
+| [MessageType](enumerations/message-type.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [MessageDataMap](interfaces/MessageDataMap.md) | - |
-| [CancelMessage](interfaces/CancelMessage.md) | - |
-| [TokenResponseMessage](interfaces/TokenResponseMessage.md) | - |
-| [ParamsResponseMessage](interfaces/ParamsResponseMessage.md) | - |
+| [MessageDataMap](interfaces/message-data-map.md) | - |
+| [CancelMessage](interfaces/cancel-message.md) | - |
+| [TokenResponseMessage](interfaces/token-response-message.md) | - |
+| [ParamsResponseMessage](interfaces/params-response-message.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [DataMessageType](type-aliases/DataMessageType.md) | - |
-| [SimpleMessageType](type-aliases/SimpleMessageType.md) | - |
-| [Message](type-aliases/Message.md) | - |
-| [MessageCompat](type-aliases/MessageCompat.md) | - |
-| [DidTargetLoadMessage](type-aliases/DidTargetLoadMessage.md) | - |
+| [DataMessageType](type-aliases/data-message-type.md) | - |
+| [SimpleMessageType](type-aliases/simple-message-type.md) | - |
+| [Message](type-aliases/message.md) | - |
+| [MessageCompat](type-aliases/message-compat.md) | - |
+| [DidTargetLoadMessage](type-aliases/did-target-load-message.md) | - |

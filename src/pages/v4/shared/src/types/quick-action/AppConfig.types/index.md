@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AppConfig](interfaces/AppConfig.md) | - |
+| [AppConfig](interfaces/app-config.md) | - |

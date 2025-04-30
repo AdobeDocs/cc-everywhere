@@ -119,7 +119,7 @@ module.exports = {
           },
           {
             title: "V3 to V4 Migration guide",
-            path: "/guides/concepts/migration_v3_v4.md",
+            path: "/guides/concepts/migration-v3-v4.md",
           },
           // {
           //   title: "UI Customization",
@@ -305,19 +305,19 @@ module.exports = {
         pages: [
           {
             title: "CC Everywhere",
-            path: "/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+            path: "/v4/sdk/src/3p/CCEverywhere/classes/cc-everywhere.md",
           },
           {
             title: "Editor",
-            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/editor-workflow.md",
           },
           {
             title: "Module",
-            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/module-workflow.md",
           },
           {
             title: "Quick Action",
-            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/quick-action-workflow.md",
           },
         ],
       },

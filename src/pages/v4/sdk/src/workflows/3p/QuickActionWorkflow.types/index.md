@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [QuickActionWorkflow](interfaces/QuickActionWorkflow.md) | - |
+| [QuickActionWorkflow](interfaces/quick-action-workflow.md) | - |

@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDocConfig](interfaces/EditImageDocConfig.md) | - |
+| [EditImageDocConfig](interfaces/edit-image-doc-config.md) | - |

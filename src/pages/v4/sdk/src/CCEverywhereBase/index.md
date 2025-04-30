@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [CCEverywhereBase](classes/CCEverywhereBase.md) | Class to create CCEverywhere object. |
+| [CCEverywhereBase](classes/cc-everywhere-base.md) | Class to create CCEverywhere object. |

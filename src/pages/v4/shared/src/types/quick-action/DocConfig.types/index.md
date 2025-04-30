@@ -6,5 +6,5 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [DocConfig](interfaces/DocConfig.md) | - |
-| [MergeVideoDocConfig](interfaces/MergeVideoDocConfig.md) | - |
+| [DocConfig](interfaces/doc-config.md) | - |
+| [MergeVideoDocConfig](interfaces/merge-video-doc-config.md) | - |

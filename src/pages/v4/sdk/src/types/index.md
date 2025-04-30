@@ -4,4 +4,4 @@
 
 ### State
 
-Re-exports [State](CCEverywhere.types/enumerations/State.md)
+Re-exports [State](CCEverywhere.types/enumerations/state.md)

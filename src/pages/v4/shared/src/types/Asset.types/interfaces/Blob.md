@@ -31,7 +31,7 @@ slice(
 
 #### Returns
 
-[`Blob`](Blob.md)
+[`Blob`](blob.md)
 
 ***
 

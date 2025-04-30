@@ -6,23 +6,23 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [MessageChannel](enumerations/MessageChannel.md) | - |
+| [MessageChannel](enumerations/message-channel.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [ChannelMessage](interfaces/ChannelMessage.md) | - |
-| [TargetChannelInfo](interfaces/TargetChannelInfo.md) | - |
-| [IChannelMessengerDelegate](interfaces/IChannelMessengerDelegate.md) | - |
+| [ChannelMessage](interfaces/channel-message.md) | - |
+| [TargetChannelInfo](interfaces/target-channel-info.md) | - |
+| [IChannelMessengerDelegate](interfaces/i-channel-messenger-delegate.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [MessageTarget](type-aliases/MessageTarget.md) | - |
-| [TargetAddedCallback](type-aliases/TargetAddedCallback.md) | - |
-| [MessageListener](type-aliases/MessageListener.md) | - |
-| [MessageFilter](type-aliases/MessageFilter.md) | - |
-| [MessagePayload](type-aliases/MessagePayload.md) | - |
-| [MessageSender](type-aliases/MessageSender.md) | - |
+| [MessageTarget](type-aliases/message-target.md) | - |
+| [TargetAddedCallback](type-aliases/target-added-callback.md) | - |
+| [MessageListener](type-aliases/message-listener.md) | - |
+| [MessageFilter](type-aliases/message-filter.md) | - |
+| [MessagePayload](type-aliases/message-payload.md) | - |
+| [MessageSender](type-aliases/message-sender.md) | - |

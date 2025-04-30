@@ -6,17 +6,17 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [TextToImageAppVersion](enumerations/TextToImageAppVersion.md) | - |
-| [ThumbnailOption](enumerations/ThumbnailOption.md) | - |
-| [TextToImageFeature](enumerations/TextToImageFeature.md) | - |
+| [TextToImageAppVersion](enumerations/text-to-image-app-version.md) | - |
+| [ThumbnailOption](enumerations/thumbnail-option.md) | - |
+| [TextToImageFeature](enumerations/text-to-image-feature.md) | - |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [FastModeConfig](interfaces/FastModeConfig.md) | - |
-| [EditDropdownOptionConfig](interfaces/EditDropdownOptionConfig.md) | - |
-| [PublishConfig](interfaces/PublishConfig.md) | - |
-| [TextToImageAppConfig](interfaces/TextToImageAppConfig.md) | - |
-| [EditImageAppConfig](interfaces/EditImageAppConfig.md) | - |
-| [WarmupAppConfig](interfaces/WarmupAppConfig.md) | - |
+| [FastModeConfig](interfaces/fast-mode-config.md) | - |
+| [EditDropdownOptionConfig](interfaces/edit-dropdown-option-config.md) | - |
+| [PublishConfig](interfaces/publish-config.md) | - |
+| [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
+| [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |
+| [WarmupAppConfig](interfaces/warmup-app-config.md) | - |

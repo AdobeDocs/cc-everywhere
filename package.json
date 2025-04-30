@@ -1,23 +1,21 @@
 {
   "private": true,
-  "name": "cc-everywhere",
+  "name": "dev-site-documentation-template",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/cc-everywhere"
+    "url": "https://github.com/AdobeDocs/dev-site-documentation-template"
   },
   "author": {
     "name": "Stephan Ringel",
     "url": "https://github.com/icaraps"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.14.18",
+    "@adobe/gatsby-theme-aio": "^4.14.6",
     "gatsby": "4.22.0",
-    "glob": "^11.0.1",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "webpack": "^5.97.1"
+    "react-dom": "^17.0.2"
   },
   "resolutions": {
     "sharp": "0.33.0",
@@ -29,21 +27,24 @@
     "dev": "gatsby develop",
     "dev:https": "gatsby develop --https --host localhost.corp.adobe.com --port 9000",
     "build": "gatsby build",
-    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test:links": "./node_modules/.bin/remark --use remark-validate-links src/pages --quiet --frail",
-    "test:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src",
-    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix",
-    "buildNavigation": "webpack --config webpack.config.js && node buildNavigation.js",
-    "buildRedirections": "node buildRedirections.js"
+    "test:links": "remark src/pages --quiet --frail",
+    "lint": "docker run --rm -e RUN_LOCAL=true --env-file '.github/super-linter.env' -v \"$PWD\":/tmp/lint github/super-linter:slim-v4.10.1",
+    "buildNavigation": "node buildNavigation.js",
+    "buildRedirections": "node buildRedirections.js",
+    "renameFiles": "node renameFiles.js",
+    "normalizeLinks": "node normalizeLinks.js"
   },
-  "packageManager": "yarn@3.2.2",
+  "remarkConfig": {
+    "plugins": [
+      "remark-validate-links"
+    ]
+  },
+  "packageManager": "yarn@3.2.1",
   "devDependencies": {
-    "markdownlint": "^0.35.0",
-    "markdownlint-cli": "^0.41.0",
-    "remark-cli": "^12.0.1",
-    "remark-validate-links": "^13.0.1",
-    "webpack-cli": "^6.0.1"
+    "glob": "11.0.0",
+    "remark-cli": "^11.0.0",
+    "remark-validate-links": "^12.1.0"
   }
 }
