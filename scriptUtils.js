@@ -25,8 +25,8 @@ function writeRedirectionsFile(data) {
     fs.writeFileSync(redirectionsFilePath, JSON.stringify(redirectionsData));
 }
 
-function getMarkdownFiles() {
-    return globSync(__dirname + '/src/pages/**/*.md')
+function getMarkdownFiles(subDir = 'src/pages') {
+    return globSync(__dirname + `/${subDir}/**/*.md`)
         .map(f => path.resolve(f));
 }
 

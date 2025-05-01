@@ -115,9 +115,11 @@ function renameFiles(map) {
 }
 
 try {
-    const markdownFiles = getMarkdownFiles();
-    const fileMap = getFileMap(markdownFiles);
-    markdownFiles.forEach(file => {
+    const markdownFilesToRename = getMarkdownFiles('src/pages/v4');
+    const fileMap = getFileMap(markdownFilesToRename);
+
+    const markdownFilesToUpdate = getMarkdownFiles('src/pages');
+    markdownFilesToUpdate.forEach(file => {
         renameLinksInMarkdownFile(fileMap, file);
     });
     renameFiles(fileMap);
