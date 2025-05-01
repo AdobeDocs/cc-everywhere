@@ -32,10 +32,13 @@
     "clean": "gatsby clean",
     "test:links": "./node_modules/.bin/remark --use remark-validate-links src/pages --quiet --frail",
     "test:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src",
-    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix"
+    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix",
+    "normalizeLinks": "node normalizeLinks.js",
+    "renameFiles": "node renameFiles.js"
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
+    "glob": "11.0.0",
     "markdownlint": "^0.35.0",
     "markdownlint-cli": "^0.41.0",
     "remark-cli": "^12.0.1",
