@@ -142,6 +142,10 @@ module.exports = {
             title: "Full Editor tutorial",
             path: "/guides/tutorials/full-editor.md",
           },
+          {
+            title: "sample title",
+            path: "/guides/tutorials/sample/index.md",
+          },
         ],
       },
       {
