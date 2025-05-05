@@ -45,7 +45,9 @@ The Adobe Express Embed SDK can be initialized with a customized locale. This fi
 | :-- | :-- | :-- | :--
 | locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
 | skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
-| loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
+| loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export. **Note: This parameter may not work as expected after your site has been approved by Adobe. Users may still be required to log in when opening the Adobe Embed screen or when editing projects, even with this parameter set.**
+
+> **Warning:** The `loginMode: 'delayed'` parameter may not work as expected once your integration is approved for production. In production or approved environments, users may be required to log in immediately even if you set `loginMode: 'delayed'`. This is a known limitation. Please refer to [Issue #182](https://github.com/AdobeDocs/cc-everywhere/issues/182) for up-to-date information.
 
 ### Example
 
