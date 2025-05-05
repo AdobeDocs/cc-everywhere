@@ -14,8 +14,6 @@ contributors:
 
 A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
 
-<!-- **TODO**: add a video, Hamza-style. -->
-
 ## Introduction
 
 Hi developers, and welcome to this tutorial! The Embed SDK is an amazing opportunity for any project, allowing you to **launch Adobe Express directly from your web applications.** This guide will walk you through setting up the credentials and starting to implement the SDK.
@@ -43,12 +41,11 @@ Log in with your Adobe ID if requested, or create a new account if you don't hav
 1. In the **Credential name** field, add a unique title. It will correspond with the project folder created for your end users in Adobe Express, and must match what's later referred to as `appName` in the SDK initialization.
 2. We'll test the Embed SDK locally: type `localhost:5555` in the **Allowed domain** field—this is where you would add a list of the domains through which your application is served.
 
-<!-- Warning Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
 Please note that **all connections must be secure (HTTPS)** for both production and development environments. The sample project will take care of this for you.
 
-3. Agree to the Terms of Use, and click the **Create credential** button; your API key will be displayed on the screen under the Credential details (see 1 below).
+1. Agree to the Terms of Use, and click the **Create credential** button; your API key will be displayed on the screen under the Credential details (see 1 below).
 
 ![](../images/quickstart_credentials-complete.png)
 
@@ -83,7 +80,6 @@ It is just a simple web page with one button: click it, and the Adobe Express lo
 
 The **full Adobe Express application** has been integrated! Your users can now create new documents directly from this page and download them locally.
 
-<!-- Info Alert -->
 <InlineAlert variant="info" slots="text1, text2" />
 
 Please don't be scared by the red warning toast at the bottom of the screen saying _"The use of this experience powered by Adobe Express has not been approved yet by Adobe"_.
@@ -139,8 +135,6 @@ document.getElementById("launchExpress").onclick = async () => {
 The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](/reference/CCEverywhere/editor.md#create) now for more information.
 
 ## Next steps
-
-<!-- Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you? -->
 
 Congratulations! You have successfully **set up the Adobe Express Embed SDK in your web application**. You've learned how to get the credentials, initialize the SDK, and integrate the full Adobe Express experience into your web page.
 
