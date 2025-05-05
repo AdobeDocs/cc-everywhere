@@ -1,5 +1,5 @@
 - pathPrefix:
-    - express/embed-sdk/docs/
+    - /express/embed-sdk/docs/
 
 - pages:
     - [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk)
