@@ -97,6 +97,66 @@
         "path": "/v4/sdk/src/error/ErrorCodes/index.md"
       },
       {
+        "title": "feature-flags",
+        "pages": [
+          {
+            "title": "FeatureFlagService",
+            "pages": [
+              {
+                "title": "FeatureFlagService",
+                "path": "/v4/sdk/src/feature-flags/FeatureFlagService/classes/FeatureFlagService.md"
+              }
+            ],
+            "path": "/v4/sdk/src/feature-flags/FeatureFlagService/index.md"
+          },
+          {
+            "title": "LocalFeatureFlagService",
+            "pages": [
+              {
+                "title": "LocalFeatureFlagService",
+                "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/classes/LocalFeatureFlagService.md"
+              },
+              {
+                "title": "HzFeatureFlag",
+                "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/enumerations/HzFeatureFlag.md"
+              },
+              {
+                "title": "FeatureFlagConfig",
+                "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/interfaces/FeatureFlagConfig.md"
+              },
+              {
+                "title": "type-aliases",
+                "pages": [
+                  {
+                    "title": "ClientFeatureFlags",
+                    "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/type-aliases/ClientFeatureFlags.md"
+                  },
+                  {
+                    "title": "IntentClientFeatureFlags",
+                    "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/type-aliases/IntentClientFeatureFlags.md"
+                  },
+                  {
+                    "title": "IntentFeatureFlags",
+                    "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/type-aliases/IntentFeatureFlags.md"
+                  }
+                ],
+                "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/type-aliases/ClientFeatureFlags.md"
+              },
+              {
+                "title": "DEFAULT_FEATURE_FLAG_CONFIG",
+                "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/variables/DEFAULT_FEATURE_FLAG_CONFIG.md"
+              }
+            ],
+            "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService/index.md"
+          },
+          {
+            "title": "LocalFeatureFlagService.test",
+            "path": "/v4/sdk/src/feature-flags/LocalFeatureFlagService.test/index.md"
+          }
+        ],
+        "path": "/v4/sdk/src/feature-flags/FeatureFlagService/index.md"
+      },
+      {
         "title": "types",
         "pages": [
           {
