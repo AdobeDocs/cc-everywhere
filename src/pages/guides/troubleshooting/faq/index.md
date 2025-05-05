@@ -18,7 +18,7 @@ contributors:
   - https://github.com/undavide
 ---
 
-<Hero slots="image, heading, text" background="rgb(64, 34, 138)" hideBreadcrumbNav={false}/>
+<HeroSimple slots="image, heading, text" background="rgb(64, 34, 138)" hideBreadcrumbNav={false}/>
 
 ![Hero image](../img/hero-image.png)
 
