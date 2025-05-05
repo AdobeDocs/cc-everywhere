@@ -34,8 +34,6 @@ Upon launching the module, you'll be greeted by an endless array of user-generat
 
 **Rich Previews** offer a more interactive and engaging preview experience, while with **Fast Mode** you can cut the generation time when fewer details and smaller sizes are enough.
 
-<!-- Lastly, **Custom Firefly Models** allow enterprise users to tailor outputs to unique brand or project requirements. -->
-
 ## How to enable the new experience
 
 Generate Image v2 is, at the moment, disabled by default, with the classic interface displayed. To activate the new experience, you need to set the new `appVersion` property to the string `"2"` in the [`appConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/text-to-image-app-config.md) object.
