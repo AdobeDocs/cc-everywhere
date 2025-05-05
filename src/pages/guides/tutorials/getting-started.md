@@ -149,7 +149,7 @@ Congratulations! You have successfully **set up the Adobe Express Embed SDK in y
 What's next for you? Here are a few suggestions:
 
 - Feel free to use this [sample project](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-getting-started) as a starting point for your experiments.
-- Check out more [tutorials](../tutorials/) to learn about the Embed SDK's many features.
+- Check out more [tutorials](index.md) to learn about the Embed SDK's many features.
 - The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](../../reference/index.md).
 - Visit the [changelog](../changelog/index.md) page to keep up with the **latest updates** and improvements.
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).

@@ -117,7 +117,7 @@ Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](..//guides/tutorials/)
+[Tutorials](../guides/tutorials/index.md)
 
 Explore the collection of tutorials.
 

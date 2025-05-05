@@ -95,7 +95,7 @@ Explore our tools:
 
 ### Modules: Focused Editing Experiences
 
-[Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
+[Modules](modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
 
 **Available modules:**
 
