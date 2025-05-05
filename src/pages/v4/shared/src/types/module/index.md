@@ -26,6 +26,24 @@ Re-exports [FastModeConfig](AppConfig.types/interfaces/fast-mode-config.md)
 
 ***
 
+### CommunityWallAssetData
+
+Re-exports [CommunityWallAssetData](AppConfig.types/interfaces/CommunityWallAssetData.md)
+
+***
+
+### CommunityWallAssetResponse
+
+Re-exports [CommunityWallAssetResponse](AppConfig.types/interfaces/CommunityWallAssetResponse.md)
+
+***
+
+### CommunityWallConfig
+
+Re-exports [CommunityWallConfig](AppConfig.types/interfaces/CommunityWallConfig.md)
+
+***
+
 ### EditDropdownOptionConfig
 
 Re-exports [EditDropdownOptionConfig](AppConfig.types/interfaces/edit-dropdown-option-config.md)
@@ -71,6 +89,12 @@ Re-exports [TextToImageDesignConfig](DesignConfig.types/interfaces/text-to-image
 ### WarmupDesignConfig
 
 Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/warmup-design-config.md)
+
+***
+
+### EditImageIntent
+
+Re-exports [EditImageIntent](DocConfig.types/type-aliases/EditImageIntent.md)
 
 ***
 

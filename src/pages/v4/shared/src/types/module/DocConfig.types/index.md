@@ -6,4 +6,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDocConfig](interfaces/edit-image-doc-config.md) | - |
+| [EditImageDocConfig](interfaces/EditImageDocConfig.md) | - |
+
+### Type Aliases
+
+| Type alias | Description |
+| ------ | ------ |
+| [EditImageIntent](type-aliases/EditImageIntent.md) | - |

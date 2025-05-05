@@ -14,9 +14,12 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [FastModeConfig](interfaces/fast-mode-config.md) | - |
-| [EditDropdownOptionConfig](interfaces/edit-dropdown-option-config.md) | - |
-| [PublishConfig](interfaces/publish-config.md) | - |
-| [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
-| [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |
-| [WarmupAppConfig](interfaces/warmup-app-config.md) | - |
+| [FastModeConfig](interfaces/FastModeConfig.md) | - |
+| [CommunityWallAssetData](interfaces/CommunityWallAssetData.md) | - |
+| [CommunityWallAssetResponse](interfaces/CommunityWallAssetResponse.md) | - |
+| [CommunityWallConfig](interfaces/CommunityWallConfig.md) | - |
+| [EditDropdownOptionConfig](interfaces/EditDropdownOptionConfig.md) | - |
+| [PublishConfig](interfaces/PublishConfig.md) | - |
+| [TextToImageAppConfig](interfaces/TextToImageAppConfig.md) | - |
+| [EditImageAppConfig](interfaces/EditImageAppConfig.md) | - |
+| [WarmupAppConfig](interfaces/WarmupAppConfig.md) | - |

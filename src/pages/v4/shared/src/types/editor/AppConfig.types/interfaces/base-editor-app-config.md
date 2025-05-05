@@ -8,8 +8,9 @@
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/base-app-config.md).`callbacks` |
-| `selectedCategory?` | [`EditorPanelView`](../../../AppConfig.types/enumerations/editor-panel-view.md) | Category to show by default **Default** `EditorPanelView.TEMPLATES` | - |
+| `callbacks?` | [`Callbacks`](../../../Callbacks.types/interfaces/Callbacks.md) | - | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/BaseAppConfig.md).`callbacks` |
+| `analyticsData?` | [`BaseAnalyticsData`](../../../AppConfig.types/type-aliases/BaseAnalyticsData.md) | Analytics data that can be provided by the host app | [`BaseAppConfig`](../../../DesignConfig.types/interfaces/BaseAppConfig.md).`analyticsData` |
+| `selectedCategory?` | [`EditorPanelView`](../../../AppConfig.types/enumerations/EditorPanelView.md) | Category to show by default **Default** `EditorPanelView.TEMPLATES` | - |
 | `categorySearchText?` | `string` | Search text to pass in the editor for selected panel. | - |
 | `templateType?` | [`TemplateType`](../../../AppConfig.types/enumerations/template-type.md) | Canvas template type | - |
 | `multiPage?` | `boolean` | Multi page export supported **Default** `true` | - |

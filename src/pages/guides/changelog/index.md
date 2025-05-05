@@ -16,6 +16,35 @@ contributors:
 
 # Changelog
 
+<InlineAlert variant="error" slots="header, text" />
+
+### SDK v1 and v2 End of Life
+
+Embed SDK v1 and v2 will reach end of life by the **end of April 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
+
+## [4.26.5] 2025-04-11
+
+### Added
+
+- [`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).
+- Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK.
+- Various performance improvements and bug fixes.
+
+## Documentation updates
+
+### Added
+
+Added new [Editor Customization](../concepts/appconfig.md) concept guide with comprehensive configuration options, examples, and decision tree.
+
+## [4.22.9] 2025-03-12
+
+### Added
+
+- Added support for [Firefly Custom Models](../concepts/generate-image-v2.md#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.
+
+<!-- - [`CCEverywhere.EditImageAppConfig.disableSaveButtonOnExport`](../../v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md#properties): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Introduced a feature to disable the save button based on the success of the save operation. This feature is controlled by the configuration option -->
+
 ## [4.21.17] 2025-02-27
 
 ### Added

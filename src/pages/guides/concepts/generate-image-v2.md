@@ -181,3 +181,34 @@ const exportConfig = [
   },
 ];
 ```
+
+## Custom Firefly Models
+
+### Before you begin
+
+Ensure that you have the right plan! Firefly custom models are available to organizations that use [Adobe storage for business](https://helpx.adobe.com/in/enterprise/using/storage-for-business.html), a feature that's being rolled out globally in a phased manner.
+
+<InlineAlert variant="warning" slots="header, text1" />
+
+Available only for enterprise users
+
+This feature requires users of your organization to have access to the Custom Firefly Models. To train custom models in Adobe Firefly, you must be entitled as a [trainer for Firefly custom models](https://helpx.adobe.com/in/enterprise/using/assign-users-to-firefly-custom-models.html). If you're using Firefly through a company-owned account, [contact your Adobe administrator](https://helpx.adobe.com/in/enterprise/kb/contact-administrator.html) to request access.
+
+### Enable Custom Firefly Models
+
+The new experience let you select fine-tuned Firefly Models, in addition to the standard generation model. This allows enterprise users to tailor the generated images to their unique brand or project requirements.
+
+![Custom Firefly Models](./img/genimage_custom-firefly-models.jpg)
+
+Provided that you have trained and uploaded your custom models, you can enable the Custom Firefly Models feature by setting the `custom-models` boolean property of the [`featureConfig`](../../v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageFeature.md) object:
+
+```js
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "custom-models": true, // 👈 Enable Custom Firefly Models
+  },
+};
+```
+
+When enabled, the Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model. If your organization does not have a Custom Model enabled, the default model is used and the message "Powered by Firefly Image 3" is displayed in place of the dropdown.

@@ -35,24 +35,19 @@ module.exports = {
             description: "🟢 Current version",
             path: "/v4/",
           },
-          // {
-          //   title: "v4 Reference",
-          //   description: "🟠 Legacy docs",
-          //   path: "/reference/",
-          // },
           {
             title: "v3 Reference",
-            description: "🟠 Deprecated soon",
+            description: "🔴 Deprecated",
             path: "/v3/reference/",
           },
           {
             title: "v2 Reference",
-            description: "🔴 Deprecated",
+            description: "🪦 End of Life April 2025",
             path: "/v2/reference/",
           },
           {
             title: "v1 Reference",
-            description: "🔴 Deprecated",
+            description: "🪦 End of Life April 2025",
             path: "/v1/reference/",
           },
         ],
@@ -118,6 +113,10 @@ module.exports = {
             path: "/guides/concepts/generate-image-v2.md",
           },
           {
+            title: "Editor Customization",
+            path: "/guides/concepts/appconfig.md",
+          },
+          {
             title: "V3 to V4 Migration guide",
             path: "/guides/concepts/migration-v3-v4.md",
           },
@@ -126,7 +125,7 @@ module.exports = {
           //   path: "/guides/concepts/customization.md",
           // },
           {
-            title: "Error Handling",
+            title: "Error handling",
             path: "/guides/concepts/error-handling.md",
           },
         ],
