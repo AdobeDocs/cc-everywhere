@@ -20,13 +20,13 @@ contributors:
 
 ### SDK v1 and v2 End of Life
 
-Embed SDK v1 and v2 will reach end of life by the **end of April 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
+Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
 ## [4.28.19] 2025-05-05
 
 ### Added
 
-- [`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md#properties): A new optional `assetCollection` property has been added to allow asset collection to filtering support in the Editor.
+- [`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md#properties): A new optional `assetCollection` property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.
 - [`CCEverywhere.Callbacks.onIntentChange`](../../v4/shared/src/types/Callbacks.types/interfaces/Callbacks.md#properties): A new optional `onIntentChange` callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.
 - Performance improvements and bug fixes.
 
