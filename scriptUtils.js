@@ -3,7 +3,8 @@ const fs = require('node:fs');
 const { globSync }= require('glob');
 
 function getRedirectionsFilePath() {
-    return path.resolve(__dirname + '/src/pages/redirects.json');
+    const redirectionsFilePath = path.join(__dirname, 'src', 'pages', 'redirects.json');
+    return path.resolve(redirectionsFilePath);
 }
 
 function readRedirectionsFile() {
@@ -25,9 +26,28 @@ function writeRedirectionsFile(data) {
     fs.writeFileSync(redirectionsFilePath, JSON.stringify(redirectionsData));
 }
 
-function getMarkdownFiles() {
-    return globSync(__dirname + '/src/pages/**/*.md')
+function getFiles(fileExtensions) {
+    const fileExtensionsPattern = fileExtensions.join('|');
+    return globSync(__dirname + `/src/pages/**/*+(${fileExtensionsPattern})`)
         .map(f => path.resolve(f));
+}
+
+function getDeployableFiles() {
+    // files types deployed to EDS in process-mds.sh 
+    return getFiles(['.md', '.json']);
+}
+
+function getMarkdownFiles() {
+    return getFiles(['.md']);
+}
+
+function removeFileExtension(file, renameBaseWithoutExt = name => name) {
+    const base = path.basename(file);
+    const ext = path.extname(file);
+    const end = file.length - base.length;
+    const baseWithoutExt = base.substring(0, base.length - ext.length);
+    const newBaseWithoutExt = renameBaseWithoutExt(baseWithoutExt);
+    return `${file.substring(0, end)}${newBaseWithoutExt}`
 }
 
 const getFindPatternForMarkdownFiles = (from) => `(\\[[^\\]]*]\\()(/|./)?(${from})(#[^\\()]*)?(\\))`;
@@ -47,8 +67,10 @@ module.exports = {
     getRedirectionsFilePath,
     readRedirectionsFile,
     writeRedirectionsFile,
+    getDeployableFiles,
     getMarkdownFiles,
     getFindPatternForMarkdownFiles,
     getReplacePatternForMarkdownFiles,
+    removeFileExtension,
     replaceLinksInFile
 };
