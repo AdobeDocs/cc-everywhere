@@ -106,13 +106,13 @@ Re-exports [Scale](AppConfig.types/enumerations/scale.md)
 
 ### HostAppTrigger
 
-Re-exports [HostAppTrigger](AppConfig.types/enumerations/HostAppTrigger.md)
+Re-exports [HostAppTrigger](AppConfig.types/enumerations/host-app-trigger.md)
 
 ***
 
 ### BaseAnalyticsData
 
-Re-exports [BaseAnalyticsData](AppConfig.types/type-aliases/BaseAnalyticsData.md)
+Re-exports [BaseAnalyticsData](AppConfig.types/type-aliases/base-analytics-data.md)
 
 ***
 
@@ -406,25 +406,25 @@ Re-exports [Callbacks](Callbacks.types/interfaces/callbacks.md)
 
 ### CWAssetResponse
 
-Re-exports [CWAssetResponse](CommunityWall.types/interfaces/CWAssetResponse.md)
+Re-exports [CWAssetResponse](CommunityWall.types/interfaces/cw-asset-response.md)
 
 ***
 
 ### DataResponse
 
-Re-exports [DataResponse](CommunityWall.types/interfaces/DataResponse.md)
+Re-exports [DataResponse](CommunityWall.types/interfaces/data-response.md)
 
 ***
 
 ### RequestMetaData
 
-Re-exports [RequestMetaData](CommunityWall.types/type-aliases/RequestMetaData.md)
+Re-exports [RequestMetaData](CommunityWall.types/type-aliases/request-meta-data.md)
 
 ***
 
 ### DataRequest
 
-Re-exports [DataRequest](CommunityWall.types/interfaces/DataRequest.md)
+Re-exports [DataRequest](CommunityWall.types/interfaces/data-request.md)
 
 ***
 

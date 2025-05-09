@@ -10,7 +10,7 @@ Re-exports [Status](Message.types/enumerations/status.md)
 
 ### PublishCallbackStatus
 
-Re-exports [PublishCallbackStatus](Message.types/enumerations/PublishCallbackStatus.md)
+Re-exports [PublishCallbackStatus](Message.types/enumerations/publish-callback-status.md)
 
 ***
 
@@ -28,7 +28,7 @@ Re-exports [CancelReason](./Message.types/enumerations/cancel-reason.md)
 
 ### WorkflowLoadCompleted
 
-Re-exports [WorkflowLoadCompleted](Message.types/enumerations/WorkflowLoadCompleted.md)
+Re-exports [WorkflowLoadCompleted](Message.types/enumerations/workflow-load-completed.md)
 
 ***
 
@@ -88,7 +88,7 @@ Re-exports [TokenResponseMessage](./Message.types/interfaces/token-response-mess
 
 ### PublishStatusMessage
 
-Re-exports [PublishStatusMessage](Message.types/interfaces/PublishStatusMessage.md)
+Re-exports [PublishStatusMessage](Message.types/interfaces/publish-status-message.md)
 
 ***
 

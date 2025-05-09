@@ -6,12 +6,12 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CWAssetResponse](interfaces/CWAssetResponse.md) | - |
-| [DataResponse](interfaces/DataResponse.md) | - |
-| [DataRequest](interfaces/DataRequest.md) | - |
+| [CWAssetResponse](interfaces/cw-asset-response.md) | - |
+| [DataResponse](interfaces/data-response.md) | - |
+| [DataRequest](interfaces/data-request.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [RequestMetaData](type-aliases/RequestMetaData.md) | Metadata for the data request from hz |
+| [RequestMetaData](type-aliases/request-meta-data.md) | Metadata for the data request from hz |

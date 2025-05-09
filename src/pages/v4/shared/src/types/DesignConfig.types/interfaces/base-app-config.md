@@ -12,4 +12,4 @@
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `callbacks?` | [`Callbacks`](../../Callbacks.types/interfaces/Callbacks.md) | - |
-| `analyticsData?` | [`BaseAnalyticsData`](../../AppConfig.types/type-aliases/BaseAnalyticsData.md) | Analytics data that can be provided by the host app |
+| `analyticsData?` | [`BaseAnalyticsData`](../../AppConfig.types/type-aliases/base-analytics-data.md) | Analytics data that can be provided by the host app |

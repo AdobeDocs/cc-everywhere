@@ -4,5 +4,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| `assets` | [`CommunityWallAssetData`](CommunityWallAssetData.md)[] |
+| `assets` | [`CommunityWallAssetData`](community-wall-asset-data.md)[] |
 | `cursor` | `string` |

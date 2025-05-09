@@ -12,13 +12,13 @@
 | [ColorTheme](enumerations/ColorTheme.md) | - |
 | [SpectrumTheme](enumerations/SpectrumTheme.md) | - |
 | [Scale](enumerations/Scale.md) | - |
-| [HostAppTrigger](enumerations/HostAppTrigger.md) | - |
+| [HostAppTrigger](enumerations/host-app-trigger.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [BaseAnalyticsData](type-aliases/BaseAnalyticsData.md) | - |
+| [BaseAnalyticsData](type-aliases/base-analytics-data.md) | - |
 
 ### Variables
 

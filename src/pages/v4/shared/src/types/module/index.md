@@ -28,19 +28,19 @@ Re-exports [FastModeConfig](AppConfig.types/interfaces/fast-mode-config.md)
 
 ### CommunityWallAssetData
 
-Re-exports [CommunityWallAssetData](AppConfig.types/interfaces/CommunityWallAssetData.md)
+Re-exports [CommunityWallAssetData](AppConfig.types/interfaces/community-wall-asset-data.md)
 
 ***
 
 ### CommunityWallAssetResponse
 
-Re-exports [CommunityWallAssetResponse](AppConfig.types/interfaces/CommunityWallAssetResponse.md)
+Re-exports [CommunityWallAssetResponse](AppConfig.types/interfaces/community-wall-asset-response.md)
 
 ***
 
 ### CommunityWallConfig
 
-Re-exports [CommunityWallConfig](AppConfig.types/interfaces/CommunityWallConfig.md)
+Re-exports [CommunityWallConfig](AppConfig.types/interfaces/community-wall-config.md)
 
 ***
 
@@ -94,7 +94,7 @@ Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/warmup-design-conf
 
 ### EditImageIntent
 
-Re-exports [EditImageIntent](DocConfig.types/type-aliases/EditImageIntent.md)
+Re-exports [EditImageIntent](DocConfig.types/type-aliases/edit-image-intent.md)
 
 ***
 
