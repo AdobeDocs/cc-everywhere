@@ -46,7 +46,7 @@ addTarget(targetChannel, targetChannelInfo): void
 
 `void`
 
-***
+<hr />
 
 ### removeTarget()
 
@@ -64,7 +64,7 @@ removeTarget(targetChannel): void
 
 `void`
 
-***
+<hr />
 
 ### hasTarget()
 
@@ -82,7 +82,7 @@ hasTarget(targetChannel): boolean
 
 `boolean`
 
-***
+<hr />
 
 ### getTarget()
 
@@ -100,7 +100,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 `undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md)
 
-***
+<hr />
 
 ### sendMessage()
 
@@ -122,14 +122,14 @@ sendMessage<T>(
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
-| `message` | [`Message`](../../Message.types/type-aliases/message.md)<`T`\> \| [`MessageCompat`](../../Message.types/type-aliases/message-compat.md)<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/message.md) `T` \| [`MessageCompat`](../../Message.types/type-aliases/message-compat.md) `T` |
 | `requestId`? | `string` |
 
 #### Returns
 
 `boolean`
 
-***
+<hr />
 
 ### removeListener()
 
