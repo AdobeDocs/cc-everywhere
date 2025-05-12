@@ -1,4 +1,4 @@
-# Class: CCEverywhereError<T\>
+# Class: CCEverywhereError T
 
 ## Extends
 
@@ -35,7 +35,7 @@ Constructor
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md) `T`
 
 #### Overrides
 
@@ -76,15 +76,15 @@ customData?): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../CCEverywhereError.types/type-aliases/error-code-message.md)<`T`\> |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../CCEverywhereError.types/type-aliases/error-code-message.md) `T` |
 | `subError`? | `string` \| `number` \| `Error` |
 | `customData`? | `unknown` |
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md) `T`
 
-***
+<hr />
 
 ### createErrorFromData()
 
@@ -102,13 +102,13 @@ static createErrorFromData<T>(data): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ErrorData`](../../ErrorData/interfaces/error-data.md)<`T`\> |
+| `data` | [`ErrorData`](../../ErrorData/interfaces/error-data.md) `T` |
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md) `T`
 
-***
+<hr />
 
 ### toData()
 
@@ -120,9 +120,9 @@ Get a plain-object representation of the error..
 
 #### Returns
 
-[`ErrorData`](../../ErrorData/interfaces/error-data.md)<`T`\>
+[`ErrorData`](../../ErrorData/interfaces/error-data.md) `T`
 
-***
+<hr />
 
 ### toString()
 
