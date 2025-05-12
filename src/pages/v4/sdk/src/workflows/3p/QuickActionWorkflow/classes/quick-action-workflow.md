@@ -39,7 +39,7 @@ Lower your file size by changing your PNG images into JPG files.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToJPEG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttojpeg)
 
-***
+<hr />
 
 ### convertToPNG()
 
@@ -70,7 +70,7 @@ Save your images as PNG files to improve file quality.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToPNG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttopng)
 
-***
+<hr />
 
 ### convertToSVG()
 
@@ -101,7 +101,7 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToSVG`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttosvg)
 
-***
+<hr />
 
 ### cropImage()
 
@@ -132,7 +132,7 @@ Transform your image into the perfect shape or size in seconds.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`cropImage`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#cropimage)
 
-***
+<hr />
 
 ### resizeImage()
 
@@ -163,7 +163,7 @@ Change the dimensions of any photo.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`resizeImage`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#resizeimage)
 
-***
+<hr />
 
 ### removeBackground()
 
@@ -194,7 +194,7 @@ Easily remove the background of your photos.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`removeBackground`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#removebackground)
 
-***
+<hr />
 
 ### generateQRCode()
 
@@ -225,7 +225,7 @@ Generate a QR Code for a URL.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`generateQRCode`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#generateqrcode)
 
-***
+<hr />
 
 ### convertToGIF()
 
@@ -256,7 +256,7 @@ Convert a video asset to GIF format.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToGIF`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttogif)
 
-***
+<hr />
 
 ### convertToMP4()
 
@@ -287,7 +287,7 @@ Convert a video asset to MP4 format.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`convertToMP4`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#converttomp4)
 
-***
+<hr />
 
 ### cropVideo()
 
@@ -318,7 +318,7 @@ Transform your video into the perfect shape or size in seconds.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`cropVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#cropvideo)
 
-***
+<hr />
 
 ### mergeVideos()
 
@@ -349,7 +349,7 @@ Collate multiple video/photo into a single video.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`mergeVideos`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#mergevideos)
 
-***
+<hr />
 
 ### resizeVideo()
 
@@ -380,7 +380,7 @@ Change the dimensions of any video.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`resizeVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#resizevideo)
 
-***
+<hr />
 
 ### trimVideo()
 
@@ -411,7 +411,7 @@ Trim a video to a desired length.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`trimVideo`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#trimvideo)
 
-***
+<hr />
 
 ### animateFromAudio()
 
@@ -442,7 +442,7 @@ Create an animated video from an audio.
 
 [`QuickActionWorkflow`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md).[`animateFromAudio`](../../QuickActionWorkflow.types/interfaces/quick-action-workflow.md#animatefromaudio)
 
-***
+<hr />
 
 ### captionVideo()
 
