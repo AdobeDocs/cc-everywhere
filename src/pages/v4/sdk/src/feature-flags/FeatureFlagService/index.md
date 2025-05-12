@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [FeatureFlagService](classes/FeatureFlagService.md) | Abstract class for feature flag services |
+| [FeatureFlagService](classes/feature-flag-service.md) | Abstract class for feature flag services |

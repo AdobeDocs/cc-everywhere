@@ -4,7 +4,7 @@ Abstract class for feature flag services
 
 ## Extended by
 
-- [`LocalFeatureFlagService`](../../LocalFeatureFlagService/classes/LocalFeatureFlagService.md)
+- [`LocalFeatureFlagService`](../../LocalFeatureFlagService/classes/local-feature-flag-service.md)
 
 ## Constructors
 
@@ -16,7 +16,7 @@ new FeatureFlagService(): FeatureFlagService
 
 #### Returns
 
-[`FeatureFlagService`](FeatureFlagService.md)
+[`FeatureFlagService`](feature-flag-service.md)
 
 ## Methods
 

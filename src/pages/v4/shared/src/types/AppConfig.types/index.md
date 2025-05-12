@@ -11,7 +11,7 @@
 | [TemplateMediaType](enumerations/TemplateMediaType.md) | - |
 | [ColorTheme](enumerations/ColorTheme.md) | - |
 | [SpectrumTheme](enumerations/SpectrumTheme.md) | - |
-| [Scale](enumerations/Scale.md) | - |
+| [Scale](enumerations/scale.md) | - |
 | [HostAppTrigger](enumerations/host-app-trigger.md) | - |
 
 ### Type Aliases

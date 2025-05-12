@@ -6,7 +6,7 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Status](enumerations/Status.md) | - |
+| [Status](enumerations/status.md) | - |
 | [PublishCallbackStatus](enumerations/publish-callback-status.md) | - |
 | [LoadStatus](enumerations/LoadStatus.md) | - |
 | [CancelReason](enumerations/CancelReason.md) | - |

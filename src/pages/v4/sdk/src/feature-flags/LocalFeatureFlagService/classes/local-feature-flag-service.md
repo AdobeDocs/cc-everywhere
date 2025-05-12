@@ -4,7 +4,7 @@ Service class for managing feature flags
 
 ## Extends
 
-- [`FeatureFlagService`](../../FeatureFlagService/classes/FeatureFlagService.md)
+- [`FeatureFlagService`](../../FeatureFlagService/classes/feature-flag-service.md)
 
 ## Constructors
 
@@ -18,15 +18,15 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
-| `_config` | [`FeatureFlagConfig`](../interfaces/FeatureFlagConfig.md) | `DEFAULT_FEATURE_FLAG_CONFIG` |
+| `_config` | [`FeatureFlagConfig`](../interfaces/feature-flag-config.md) | `DEFAULT_FEATURE_FLAG_CONFIG` |
 
 #### Returns
 
-[`LocalFeatureFlagService`](LocalFeatureFlagService.md)
+[`LocalFeatureFlagService`](local-feature-flag-service.md)
 
 #### Overrides
 
-[`FeatureFlagService`](../../FeatureFlagService/classes/FeatureFlagService.md).[`constructor`](../../FeatureFlagService/classes/FeatureFlagService.md#constructors)
+[`FeatureFlagService`](../../FeatureFlagService/classes/feature-flag-service.md).[`constructor`](../../FeatureFlagService/classes/feature-flag-service.md#constructors)
 
 ## Methods
 
@@ -57,4 +57,4 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 
 #### Inherited from
 
-[`FeatureFlagService`](../../FeatureFlagService/classes/FeatureFlagService.md).[`getFeatureFlagsParams`](../../FeatureFlagService/classes/FeatureFlagService.md#getfeatureflagsparams)
+[`FeatureFlagService`](../../FeatureFlagService/classes/feature-flag-service.md).[`getFeatureFlagsParams`](../../FeatureFlagService/classes/feature-flag-service.md#getfeatureflagsparams)
