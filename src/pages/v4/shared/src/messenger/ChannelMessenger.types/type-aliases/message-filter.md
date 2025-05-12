@@ -14,7 +14,7 @@ type MessageFilter: <T>(message) => boolean;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../Message.types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/message.md) `T` |
 
 ## Returns
 
