@@ -22,6 +22,22 @@ contributors:
 
 Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## 2025-05-15
+
+### Added
+
+#### Unlocked new Edit Image v2 experience
+
+- [**`CCEverywhere.module.editImage()`**](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md): Introduced a new Edit Image v2 experience, rearchitected to deliver significantly improved performance and a better user experience.
+
+**Key Features:**
+
+- **Reduced load times** in the range of 35% to 50%.
+- **Reduced memory consumption** by 35%.
+- **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.
+
+The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [this page](../concepts/edit-image-v2.md) to learn more.
+
 ## [4.28.19] 2025-05-05
 
 ### Added
