@@ -25,7 +25,7 @@ editImage(
 
 `void`
 
-***
+<hr />
 
 ### createImageFromText()
 
@@ -48,7 +48,7 @@ createImageFromText(
 
 `void`
 
-***
+<hr />
 
 ### createTemplateFromText()
 
