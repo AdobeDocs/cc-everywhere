@@ -39,7 +39,7 @@ Perform editing tasks on any image.
 
 [`ModuleWorkflow`](../../ModuleWorkflow.types/interfaces/module-workflow.md).[`editImage`](../../ModuleWorkflow.types/interfaces/module-workflow.md#editimage)
 
-***
+<hr />
 
 ### createImageFromText()
 
