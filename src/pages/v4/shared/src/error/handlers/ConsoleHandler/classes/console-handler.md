@@ -72,7 +72,7 @@ static error<T>(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](../../../CCEverywhereError/classes/cc-everywhere-error.md) `T` |
 
 #### Returns
 
