@@ -18,7 +18,7 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text" />
 
-### SDK v1 and v2 End of Life
+**SDK v1 and v2 End of Life**
 
 Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
