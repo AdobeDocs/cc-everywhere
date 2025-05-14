@@ -1,7 +1,7 @@
 {
-    "total": 679,
+    "total": 684,
     "offset": 0,
-    "limit": 679,
+    "limit": 684,
     "data": [
         {
             "Source": "/express/embed-sdk/docs/v4/index.md",
@@ -2640,15 +2640,15 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/HostInfo.types/enumerations/environment"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/interfaces/Style",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/interfaces/style",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/interfaces/style"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/Config",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/config",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/config"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/Callbacks",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/callbacks",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/callbacks"
         },
         {
@@ -2656,7 +2656,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/type-aliases/asset"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/Size",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/size",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/size"
         },
         {
@@ -2676,7 +2676,7 @@
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/Message.types/enumerations/status"
         },
         {
-            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/Listener",
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/listener",
             "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/listener"
         },
         {
@@ -2718,6 +2718,26 @@
         {
             "Source": "/express/embed-sdk/docs/v4/sdk/src/feature-flags/FeatureFlagService/classes/FeatureFlagService",
             "Destination": "/express/embed-sdk/docs/v4/sdk/src/feature-flags/FeatureFlagService/classes/feature-flag-service"
+        },
+        {
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/interfaces/Style",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ExportConfig.types/interfaces/style"
+        },
+        {
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/Config",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/ConfigManager.types/type-aliases/config"
+        },
+        {
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/Callbacks",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Callbacks.types/interfaces/callbacks"
+        },
+        {
+            "Source": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/Size",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/types/Asset.types/interfaces/size"
+        },
+        {
+            "Source": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/Listener",
+            "Destination": "/express/embed-sdk/docs/v4/shared/src/messenger/ChannelMessageListener/type-aliases/listener"
         }
     ],
     ":type": "sheet"
