@@ -6,13 +6,13 @@
 
 Re-exports [PublishParams](OutputParams.types/interfaces/publish-params.md)
 
-***
+<hr />
 
 ### QuickActionPublishParams
 
 Re-exports [QuickActionPublishParams](OutputParams.types/interfaces/quick-action-publish-params.md)
 
-***
+<hr />
 
 ### CCXPublishParams
 
