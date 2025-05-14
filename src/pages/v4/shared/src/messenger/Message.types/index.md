@@ -6,11 +6,11 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Status](enumerations/Status.md) | - |
-| [PublishCallbackStatus](enumerations/PublishCallbackStatus.md) | - |
+| [Status](enumerations/status.md) | - |
+| [PublishCallbackStatus](enumerations/publish-callback-status.md) | - |
 | [LoadStatus](enumerations/LoadStatus.md) | - |
 | [CancelReason](enumerations/CancelReason.md) | - |
-| [WorkflowLoadCompleted](enumerations/WorkflowLoadCompleted.md) | - |
+| [WorkflowLoadCompleted](enumerations/workflow-load-completed.md) | - |
 | [MessageType](enumerations/MessageType.md) | - |
 
 ### Interfaces
@@ -20,7 +20,7 @@
 | [MessageDataMap](interfaces/MessageDataMap.md) | - |
 | [CancelMessage](interfaces/CancelMessage.md) | - |
 | [TokenResponseMessage](interfaces/TokenResponseMessage.md) | - |
-| [PublishStatusMessage](interfaces/PublishStatusMessage.md) | - |
+| [PublishStatusMessage](interfaces/publish-status-message.md) | - |
 | [ParamsResponseMessage](interfaces/ParamsResponseMessage.md) | - |
 
 ### Type Aliases

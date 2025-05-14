@@ -15,9 +15,9 @@
 | Interface | Description |
 | ------ | ------ |
 | [FastModeConfig](interfaces/FastModeConfig.md) | - |
-| [CommunityWallAssetData](interfaces/CommunityWallAssetData.md) | - |
-| [CommunityWallAssetResponse](interfaces/CommunityWallAssetResponse.md) | - |
-| [CommunityWallConfig](interfaces/CommunityWallConfig.md) | - |
+| [CommunityWallAssetData](interfaces/community-wall-asset-data.md) | - |
+| [CommunityWallAssetResponse](interfaces/community-wall-asset-response.md) | - |
+| [CommunityWallConfig](interfaces/community-wall-config.md) | - |
 | [EditDropdownOptionConfig](interfaces/EditDropdownOptionConfig.md) | - |
 | [PublishConfig](interfaces/PublishConfig.md) | - |
 | [TextToImageAppConfig](interfaces/TextToImageAppConfig.md) | - |

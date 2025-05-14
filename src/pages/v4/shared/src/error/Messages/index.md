@@ -6,4 +6,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [Messages](variables/messages.md) | ********************************************************************** |
+| [Messages](variables/messages.md) | ** |

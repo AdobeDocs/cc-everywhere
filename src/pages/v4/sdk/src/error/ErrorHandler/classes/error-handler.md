@@ -12,7 +12,7 @@ static instance(): ErrorHandler
 
 [`ErrorHandler`](error-handler.md)
 
-***
+<hr />
 
 ### addHandler()
 
@@ -24,13 +24,13 @@ static addHandler(handler): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md)\> |
+| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler.md) [`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md) |
 
 #### Returns
 
 `void`
 
-***
+<hr />
 
 ### removeHandler()
 
@@ -42,13 +42,13 @@ static removeHandler(handler): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md)\> |
+| `handler` | [`IErrorMessageHandler`](../../../../../shared/src/error/IErrorMessageHandler/interfaces/i-error-message-handler.md) [`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md) |
 
 #### Returns
 
 `void`
 
-***
+<hr />
 
 ### error()
 
@@ -60,13 +60,13 @@ static error(error): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/cc-everywhere-error.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md)\> |
+| `error` | [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/cc-everywhere-error.md) [`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md) |
 
 #### Returns
 
 `void`
 
-***
+<hr />
 
 ### warn()
 
@@ -78,13 +78,13 @@ static warn(warn): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `warn` | [`CCEverywhereWarn`](../../../../../shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/cc-everywhere-error.md)<[`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md)\> |
+| `warn` | [`CCEverywhereWarn`](../../../../../shared/src/error/CCEverywhereError.types/interfaces/cc-everywhere-warn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/CCEverywhereError/classes/cc-everywhere-error.md) [`ErrorCode`](../../ErrorCodes/type-aliases/error-code.md) |
 
 #### Returns
 
 `void`
 
-***
+<hr />
 
 ### info()
 

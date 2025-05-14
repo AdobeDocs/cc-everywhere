@@ -41,7 +41,7 @@ reset(): void
 
 `void`
 
-***
+<hr />
 
 ### didGetMessage()
 
@@ -59,7 +59,7 @@ didGetMessage<T>(message, requestId?): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../Message.types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](../../Message.types/type-aliases/message.md) `T` |
 | `requestId`? | `string` |
 
 #### Returns
@@ -70,7 +70,7 @@ didGetMessage<T>(message, requestId?): void
 
 [`IChannelMessengerDelegate`](../../ChannelMessenger.types/interfaces/i-channel-messenger-delegate.md).`didGetMessage`
 
-***
+<hr />
 
 ### setTarget()
 
@@ -89,7 +89,7 @@ setTarget(targetChannel, targetChannelInfo): void
 
 `void`
 
-***
+<hr />
 
 ### removeTarget()
 
@@ -107,7 +107,7 @@ removeTarget(targetChannel): void
 
 `void`
 
-***
+<hr />
 
 ### hasTarget()
 
@@ -125,7 +125,7 @@ hasTarget(targetChannel): boolean
 
 `boolean`
 
-***
+<hr />
 
 ### getTarget()
 
@@ -143,7 +143,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 `undefined` \| [`TargetChannelInfo`](../../ChannelMessenger.types/interfaces/target-channel-info.md)
 
-***
+<hr />
 
 ### addListenerForTarget()
 
@@ -162,7 +162,7 @@ addListenerForTarget(targetChannel, callback): void
 
 `void`
 
-***
+<hr />
 
 ### sendMessage()
 
@@ -181,13 +181,13 @@ sendMessage<T>(targetChannel, message): boolean
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |
-| `message` | [`SimpleMessageType`](../../Message.types/type-aliases/simple-message-type.md) \| [`Message`](../../Message.types/type-aliases/message.md)<`T`\> |
+| `message` | [`SimpleMessageType`](../../Message.types/type-aliases/simple-message-type.md) \| [`Message`](../../Message.types/type-aliases/message.md) `T` |
 
 #### Returns
 
 `boolean`
 
-***
+<hr />
 
 ### sendMessageCompat()
 
@@ -208,7 +208,7 @@ Sends a message using a message channel that is compatible with older version of
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../ChannelMessenger.types/enumerations/message-channel.md) |  |
-| `message` | [`MessageCompat`](../../Message.types/type-aliases/message-compat.md)<`T`\> | The message to send. |
+| `message` | [`MessageCompat`](../../Message.types/type-aliases/message-compat.md) `T` | The message to send. |
 
 #### Returns
 
@@ -216,7 +216,7 @@ Sends a message using a message channel that is compatible with older version of
 
 - True if the message was successfully sent, false otherwise.
 
-***
+<hr />
 
 ### addListener()
 
@@ -239,7 +239,7 @@ addListener(
 
 `void`
 
-***
+<hr />
 
 ### removeListener()
 
@@ -258,7 +258,7 @@ removeListener(messageType, listener): void
 
 `void`
 
-***
+<hr />
 
 ### setRequestId()
 

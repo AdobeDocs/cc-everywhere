@@ -12,4 +12,4 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [EditImageIntent](type-aliases/EditImageIntent.md) | - |
+| [EditImageIntent](type-aliases/edit-image-intent.md) | - |

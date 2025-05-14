@@ -25,7 +25,7 @@ convertToJPEG(
 
 `void`
 
-***
+<hr />
 
 ### convertToPNG()
 
@@ -50,7 +50,7 @@ convertToPNG(
 
 `void`
 
-***
+<hr />
 
 ### convertToSVG()
 
@@ -75,7 +75,7 @@ convertToSVG(
 
 `void`
 
-***
+<hr />
 
 ### cropImage()
 
@@ -100,7 +100,7 @@ cropImage(
 
 `void`
 
-***
+<hr />
 
 ### resizeImage()
 
@@ -125,7 +125,7 @@ resizeImage(
 
 `void`
 
-***
+<hr />
 
 ### removeBackground()
 
@@ -150,7 +150,7 @@ removeBackground(
 
 `void`
 
-***
+<hr />
 
 ### generateQRCode()
 
@@ -175,7 +175,7 @@ generateQRCode(
 
 `void`
 
-***
+<hr />
 
 ### convertToGIF()
 
@@ -200,7 +200,7 @@ convertToGIF(
 
 `void`
 
-***
+<hr />
 
 ### convertToMP4()
 
@@ -225,7 +225,7 @@ convertToMP4(
 
 `void`
 
-***
+<hr />
 
 ### cropVideo()
 
@@ -250,7 +250,7 @@ cropVideo(
 
 `void`
 
-***
+<hr />
 
 ### mergeVideos()
 
@@ -275,7 +275,7 @@ mergeVideos(
 
 `void`
 
-***
+<hr />
 
 ### resizeVideo()
 
@@ -300,7 +300,7 @@ resizeVideo(
 
 `void`
 
-***
+<hr />
 
 ### trimVideo()
 
@@ -325,7 +325,7 @@ trimVideo(
 
 `void`
 
-***
+<hr />
 
 ### animateFromAudio()
 
@@ -350,7 +350,7 @@ animateFromAudio(
 
 `void`
 
-***
+<hr />
 
 ### captionVideo()
 

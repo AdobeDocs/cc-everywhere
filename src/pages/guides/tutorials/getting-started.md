@@ -45,7 +45,7 @@ Log in with your Adobe ID if requested, or create a new account if you don't hav
 
 Please note that **all connections must be secure (HTTPS)** for both production and development environments. The sample project will take care of this for you.
 
-1. Agree to the Terms of Use, and click the **Create credential** button; your API key will be displayed on the screen under the Credential details (see 1 below).
+3. Agree to the Terms of Use, and click the **Create credential** button; your API key will be displayed on the screen under the Credential details (see 1 below).
 
 ![](../images/quickstart_credentials-complete.png)
 

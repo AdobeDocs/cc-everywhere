@@ -28,22 +28,19 @@ Get answers to common questions about the Adobe Express Embed SDK, including set
 
 ## Questions
 
-- [FAQ](#faq)
-  - [Questions](#questions)
-  - [Answers](#answers)
-    - [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
-    - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
-    - [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
-    - [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
-    - [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
-    - [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
-    - [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
-    - [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
-    - [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
-    - [Which web browsers are supported?](#which-web-browsers-are-supported)
-    - [What operating systems are supported?](#what-operating-systems-are-supported)
-    - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
-    - [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
+- [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
+- [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
+- [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
+- [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
+- [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
+- [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
+- [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
+- [Would Adobe need to approve the integrations before my users can start using it?](#would-adobe-need-to-approve-the-integrations-before-my-users-can-start-using-it)
+- [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
+- [Which web browsers are supported?](#which-web-browsers-are-supported)
+- [What operating systems are supported?](#what-operating-systems-are-supported)
+- [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
+- [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
 
 ## Answers
 
