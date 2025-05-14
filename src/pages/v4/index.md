@@ -31,7 +31,7 @@ Learn more about in the [quick start guide](../guides/quickstart/index.md).
 
 <InlineAlert variant="error" slots="header, text" />
 
-### SDK v1 and v2 End of Life
+**SDK v1 and v2 End of Life**
 
 Embed SDK v1 and v2 will reach end of life by the **end of April 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption.
 
