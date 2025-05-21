@@ -75,7 +75,7 @@ const appConfig = {
 };
 ```
 
-When enabled, the Community Wall will be displayed upon launching the module; each image can be selected to preload the prompt and generate a new image, varying the other settings as needed.
+When enabled, the Community Wall will be displayed upon launching the module; each image can be selected to preload the prompt and generate a new image, varying the other settings as needed. It's possible to customize the Community Wall by providing your images; please see [this section](#custom-community-wall) for instructions.
 
 ### Fast Mode
 
@@ -212,3 +212,99 @@ const appConfig = {
 ```
 
 When enabled, the Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model. If your organization does not have a Custom Model enabled, the default model is used and the message "Powered by Firefly Image 3" is displayed in place of the dropdown.
+
+## Custom Community Wall
+
+The Community Wall can now showcase your imagery instead of (or in addition to) Firefly’s public gallery.
+
+XXX INSERT IMAGE HERE
+
+You do this by supplying a `communityWallConfig` object when you launch Generate Image v2. If you omit it, the wall continues to display Firefly assets exactly as before.
+
+```ts
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true, // 👈 still turn the wall on
+  },
+  communityWallConfig: {
+    // 👇 your own data-loader
+    fetchCommunityAssets: myFetchCommunityAssets,
+  },
+};
+```
+
+### The `fetchCommunityAssets` callback
+
+The `fetchCommunityAssets` callback is called with the `limit` and `cursor` parameters. The `limit` parameter is the number of assets to fetch, and the `cursor` parameter is the cursor to fetch the next page of assets.
+
+```ts
+async function myFetchCommunityAssets(
+  limit: number,
+  cursor: string // "Start_Page" on the first call, "Last_Page" on the last call
+): Promise<CommunityWallAssetReponse> {
+  /* …fetch and return your data… */
+}
+```
+
+The `fetchCommunityAssets` callback should return a `CommunityWallAssetReponse` object.
+
+```ts
+interface CommunityWallAssetReponse {
+  assets: CommunityWallAssetData[];
+  cursor: string; // The cursor for the next page of assets. "Last_Page" indicates the last set of assets.
+}
+```
+
+### Asset schema
+
+The `assets` array contains the assets to display in the Community Wall.
+
+```ts
+interface CommunityWallAssetData {
+  assetId: string; // Asset ID for the community asset
+  title: string; // Prompt for the thumbnail item
+  : string; // Source of the thumbnail image as a base64 string
+  fullRenditionSrc: string; // Source of the full rendition image for OneUp view as a base64 string
+  height: number; // Height of the thumbnail image
+  width: number; // Width of the thumbnail image
+  ownerInfo?: {
+    // Optional: Information about the owner
+    name: string; // Owner's display name
+    imgSrc: string; // Source URL of the owner's image
+  };
+}
+```
+
+<InlineAlert variant="info" slots="text1" />
+
+Both the `thumbnailSrc` and `fullRenditionSrc` must be base64 encoded strings.
+
+We have guardrails in place for the aspect ratio of the assets, to ensure that they are displayed correctly in the Community Wall. Assets outside these ranges are skipped and a console error is logged.
+
+| Shape      | Allowed ratio |
+| ---------- | ------------- |
+| Square     | 0.9 - 1.1     |
+| Portrait   | 0.68 - 0.88   |
+| Landscape  | 1.18 - 1.38   |
+| Widescreen | 1.65 - 1.85   |
+
+### Example loader
+
+```ts
+const gallery: CommunityWallAssetData[] = /* …your own data source… */;
+
+async function myFetchCommunityAssets(limit: number, cursor: string) {
+  const start = cursor === "Start_Page" ? 0 : parseInt(cursor, 10);
+  const slice  = gallery.slice(start, start + limit);
+  const next   = start + slice.length >= gallery.length ? "Last_Page" : String(start + slice.length);
+
+  return { assets: slice, cursor: next };
+}
+```
+
+## Demo App
+
+The [Adobe Express Embed SDK Demo App](https://demo.expressembed.com/) has been updated to showcase the new features, and it provides code snippets for each of the new configurations.
+
+XXX INSERT IMAGE HERE
