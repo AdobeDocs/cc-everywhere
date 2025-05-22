@@ -215,11 +215,11 @@ When enabled, the Custom Firefly Models dropdown will appear above all other gen
 
 ## Custom Community Wall
 
-The Community Wall can now showcase your imagery instead of (or in addition to) Firefly’s public gallery.
+The Community Wall is now able to showcase **your custom images** instead of, or in addition to, Firefly's publicly available gallery.
 
-XXX INSERT IMAGE HERE
+![Custom Community Wall](./img/genimage_custom-community-wall.png)
 
-You do this by supplying a `communityWallConfig` object when you launch Generate Image v2. If you omit it, the wall continues to display Firefly assets exactly as before.
+**To enable the Custom Community Wall**, you need to supply a `communityWallConfig` object to `appConfig` when you launch Generate Image v2. Please note, it's not available in the old, v1 experience. If you omit this property, the wall continues to display Firefly assets exactly as before.
 
 ```ts
 const appConfig = {
@@ -236,7 +236,15 @@ const appConfig = {
 
 ### The `fetchCommunityAssets` callback
 
-The `fetchCommunityAssets` callback is called with the `limit` and `cursor` parameters. The `limit` parameter is the number of assets to fetch, and the `cursor` parameter is the cursor to fetch the next page of assets.
+The `fetchCommunityAssets` property is nothing but a **callback function that you need to implement**, designed to fetch a list of your assets in a _paginated way_.
+
+<InlineAlert variant="info" slots="text1" />
+
+**Pagination**, that must be supported on your backend, allows the module to load data in smaller chunks as users scroll, reducing load times and improving the overall experience. As they keep scrolling through the Community Wall, the module will repeatedly invoke `fetchCommunityAssets` to get the next set of images.
+
+The function is called with a `limit` and `cursor` parameters. The `limit` is the number of assets to retrieve at any given time, and the `cursor` is used to keep track of the batch of assets to fetch next.
+
+The `cursor` defaults to `"Start_Page"` on the first call, and you can send `"Last_Page"` when there are no more custom assets to fetch. At that point, the module will stop asking for more data.
 
 ```ts
 async function myFetchCommunityAssets(
@@ -247,24 +255,24 @@ async function myFetchCommunityAssets(
 }
 ```
 
-The `fetchCommunityAssets` callback should return a `CommunityWallAssetReponse` object.
+The `fetchCommunityAssets` asynchronous callback should return a Promise that resolves to a `CommunityWallAssetReponse` object.
 
 ```ts
 interface CommunityWallAssetReponse {
   assets: CommunityWallAssetData[];
-  cursor: string; // The cursor for the next page of assets. "Last_Page" indicates the last set of assets.
+  cursor: string; // The cursor for the next page of assets.
 }
 ```
 
 ### Asset schema
 
-The `assets` array contains the assets to display in the Community Wall.
+The `assets` array contains the asset objects to display in the Community Wall.
 
 ```ts
 interface CommunityWallAssetData {
   assetId: string; // Asset ID for the community asset
   title: string; // Prompt for the thumbnail item
-  : string; // Source of the thumbnail image as a base64 string
+  thumbnailSrc: string; // Source of the thumbnail image as a base64 string
   fullRenditionSrc: string; // Source of the full rendition image for OneUp view as a base64 string
   height: number; // Height of the thumbnail image
   width: number; // Width of the thumbnail image
@@ -278,7 +286,7 @@ interface CommunityWallAssetData {
 
 <InlineAlert variant="info" slots="text1" />
 
-Both the `thumbnailSrc` and `fullRenditionSrc` must be base64 encoded strings.
+The `thumbnailSrc` is the smaller image, used to display in the Community Wall, while the `fullRenditionSrc` is the larger image, used to display in the OneUp view. Both must be **base64 encoded strings**.
 
 We have guardrails in place for the aspect ratio of the assets, to ensure that they are displayed correctly in the Community Wall. Assets outside these ranges are skipped and a console error is logged.
 
@@ -292,19 +300,59 @@ We have guardrails in place for the aspect ratio of the assets, to ensure that t
 ### Example loader
 
 ```ts
-const gallery: CommunityWallAssetData[] = /* …your own data source… */;
+async function myFetchCommunityAssets(
+  limit: number,
+  cursor: string
+): Promise<CommunityWallAssetReponse> {
+  try {
+    // In a real implementation, you would likely fetch from an API endpoint
+    const response = await fetch(
+      `https://your-api.com/community-assets?limit=${limit}&cursor=${cursor}`
+    );
 
-async function myFetchCommunityAssets(limit: number, cursor: string) {
-  const start = cursor === "Start_Page" ? 0 : parseInt(cursor, 10);
-  const slice  = gallery.slice(start, start + limit);
-  const next   = start + slice.length >= gallery.length ? "Last_Page" : String(start + slice.length);
+    if (!response.ok) {
+      throw new Error(`Failed to fetch assets: ${response.status}`);
+    }
 
-  return { assets: slice, cursor: next };
+    const data = await response.json();
+
+    // Transform API response to match expected format if needed
+    const assets = data.items.map((item) => ({
+      assetId: item.id,
+      title: item.prompt,
+      thumbnailSrc: item.thumbnail, // base64 encoded string
+      fullRenditionSrc: item.fullImage, // base64 encoded string
+      height: item.dimensions.height,
+      width: item.dimensions.width,
+      ownerInfo: item.creator
+        ? {
+            name: item.creator.displayName,
+            imgSrc: item.creator.avatarUrl,
+          }
+        : undefined,
+    }));
+
+    return {
+      assets,
+      cursor: data.nextCursor || "Last_Page",
+    };
+  } catch (error) {
+    console.error("Error fetching community assets:", error);
+    throw error; // Propagate error to be handled by the SDK
+  }
 }
 ```
 
-## Demo App
+### Error handling
+
+- **The `fetchCommunityAssets` Promise is rejected**: the Community Wall will display a loading skeleton for thumbnails along with the _"Failed to fetch community assets."_ error toast message. If the initial request fails, the module will retry fetching the assets a couple of times again.
+- **No assets property returned in the response**: the _"Could not find any community assets"_ toast error message will be shown.
+- **An asset doesn't conform to the expected format**: the asset will not be rendered, and _"The asset with the given ID could not be rendered due to the following error."_ will be logged.
+- **Error fetching the image data for the Community Wall**: a broken image or missing image icon will be displayed.
+- **Error fetching the image data for the OneUp view**: a broken image or missing image icon will be displayed, while the associated prompt text will still be shown in prompt bar.
+
+## Try it out in the Demo App
 
 The [Adobe Express Embed SDK Demo App](https://demo.expressembed.com/) has been updated to showcase the new features, and it provides code snippets for each of the new configurations.
 
-XXX INSERT IMAGE HERE
+[![Demo App](./img/genimage_demo-app.png)](https://demo.expressembed.com/)
