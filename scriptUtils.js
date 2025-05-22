@@ -26,19 +26,19 @@ function writeRedirectionsFile(data) {
     fs.writeFileSync(redirectionsFilePath, JSON.stringify(redirectionsData));
 }
 
-function getFiles(fileExtensions) {
+function getFiles(fileExtensions, subDir = 'src/pages') {
     const fileExtensionsPattern = fileExtensions.join('|');
-    return globSync(__dirname + `/src/pages/**/*+(${fileExtensionsPattern})`)
+    return globSync(__dirname + `/${subDir}/**/*+(${fileExtensionsPattern})`)
         .map(f => path.relative(__dirname, f));
 }
 
-function getDeployableFiles() {
+function getDeployableFiles(subDir = 'src/pages') {
     // files types deployed to EDS in process-mds.sh 
-    return getFiles(['.md', '.json']);
+    return getFiles(['.md', '.json'], subDir);
 }
 
-function getMarkdownFiles() {
-    return getFiles(['.md']);
+function getMarkdownFiles(subDir = 'src/pages') {
+    return getFiles(['.md'], subDir);
 }
 
 function removeFileExtension(file) {

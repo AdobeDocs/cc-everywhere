@@ -221,7 +221,7 @@ function renameFiles(map) {
 }
 
 try {
-    const files = getDeployableFiles();
+    const files = getDeployableFiles('src/pages/v4');
     const fileMap = getFileMap(files);
 
     const mdFiles = getMarkdownFiles();
