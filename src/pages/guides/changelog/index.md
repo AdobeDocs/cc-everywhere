@@ -28,15 +28,21 @@ Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this
 
 #### Unlocked new Edit Image v2 experience
 
-- [**`CCEverywhere.module.editImage()`**](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md): Introduced a new Edit Image v2 experience, rearchitected to deliver significantly improved performance and a better user experience.
+- [**`CCEverywhere.module.editImage()`**](../../v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md): Introduced a [new Edit Image v2 experience](../concepts/edit-image-v2.md), rearchitected to deliver significantly improved performance and a better user experience.
 
-**Key Features:**
+  **Key Features:**
 
-- **Reduced load times** in the range of 35% to 50%.
-- **Reduced memory consumption** by 35%.
-- **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.
+  - **Reduced load times** in the range of 35% to 50%.
+  - **Reduced memory consumption** by 35%.
+  - **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.
 
-The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [this page](../concepts/edit-image-v2.md) to learn more.
+  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [Edit Image v2](../concepts/edit-image-v2.md) page to learn more.
+
+#### Custom Community Wall
+
+- [**`CCEverywhere.TextToImageAppConfig.communityWallConfig`**](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Added a new `communityWallConfig` property to allow host applications to **populate the Community Wall with custom images** instead of Firefly's default assets.
+
+  Please refer to the [this section](../concepts/generate-image-v2.md#custom-community-wall) of the Generate Image v2 page for the implementation details.
 
 ## [4.28.19] 2025-05-05
 
@@ -107,7 +113,7 @@ Updated the [Demo App](https://demo.expressembed.com/) to showcase the Generate 
 - Navigate to **Generative** -> **Generate image** -> **Next**
 - In the Configuration options, Select generate image version as V2.
 
-  ![Demo App](./images/demo-app.png)
+[![Demo App](./images/demo-app.png)](https://demo.expressembed.com/)
 
 - Select all the options you need and click **Create with Adobe Express**
 
