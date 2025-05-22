@@ -26,28 +26,27 @@ function writeRedirectionsFile(data) {
     fs.writeFileSync(redirectionsFilePath, JSON.stringify(redirectionsData));
 }
 
-function getFiles(fileExtensions, subDir = 'src/pages') {
+function getFiles(fileExtensions) {
     const fileExtensionsPattern = fileExtensions.join('|');
-    return globSync(__dirname + `/${subDir}/**/*+(${fileExtensionsPattern})`)
-        .map(f => path.resolve(f));
+    return globSync(__dirname + `/src/pages/**/*+(${fileExtensionsPattern})`)
+        .map(f => path.relative(__dirname, f));
 }
 
-function getDeployableFiles(subDir = 'src/pages') {
+function getDeployableFiles() {
     // files types deployed to EDS in process-mds.sh 
-    return getFiles(['.md', '.json'], subDir);
+    return getFiles(['.md', '.json']);
 }
 
-function getMarkdownFiles(subDir = 'src/pages') {
-    return getFiles(['.md'], subDir);
+function getMarkdownFiles() {
+    return getFiles(['.md']);
 }
 
-function removeFileExtension(file, renameBaseWithoutExt = name => name) {
+function removeFileExtension(file) {
     const base = path.basename(file);
     const ext = path.extname(file);
     const end = file.length - base.length;
     const baseWithoutExt = base.substring(0, base.length - ext.length);
-    const newBaseWithoutExt = renameBaseWithoutExt(baseWithoutExt);
-    return `${file.substring(0, end)}${newBaseWithoutExt}`
+    return `${file.substring(0, end)}${baseWithoutExt}`
 }
 
 const getFindPatternForMarkdownFiles = (from) => `(\\[[^\\]]*]\\()(/|./)?(${from})(#[^\\()]*)?(\\))`;
