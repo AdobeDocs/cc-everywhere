@@ -50,6 +50,8 @@ const docConfig = {
 module.editImage(docConfig, appConfig);
 ```
 
-## Try it out
+## Try it out in the Demo App
 
-You can test the new Edit Image v2 experience in our [Demo app](https://demo.expressembed.com/) now!
+The [Adobe Express Embed SDK Demo App](https://demo.expressembed.com/) has been updated to showcase the new Edit Image v2 experience, and it provides code snippets for the new configuration.
+
+[![Demo App](./img/editimage_demo-app.png)](https://demo.expressembed.com/)
