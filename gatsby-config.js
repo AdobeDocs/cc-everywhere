@@ -42,12 +42,12 @@ module.exports = {
           },
           {
             title: "v2 Reference",
-            description: "🪦 End of Life April 2025",
+            description: "🪦 End of Life May 2025",
             path: "/v2/reference/",
           },
           {
             title: "v1 Reference",
-            description: "🪦 End of Life April 2025",
+            description: "🪦 End of Life May 2025",
             path: "/v1/reference/",
           },
         ],
@@ -111,6 +111,10 @@ module.exports = {
           {
             title: "Generate Image V2",
             path: "/guides/concepts/generate-image-v2.md",
+          },
+          {
+            title: "Edit Image V2",
+            path: "/guides/concepts/edit-image-v2.md",
           },
           {
             title: "Editor Customization",
