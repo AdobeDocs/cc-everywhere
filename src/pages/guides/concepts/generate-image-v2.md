@@ -215,11 +215,17 @@ When enabled, the Custom Firefly Models dropdown will appear above all other gen
 
 ## Custom Community Wall
 
-The Community Wall is now able to showcase **your custom images** instead of, or in addition to, Firefly's publicly available gallery.
+The Community Wall is now able to showcase **your custom images** instead of Firefly's publicly available gallery.
 
 ![Custom Community Wall](./img/genimage_custom-community-wall.png)
 
-**To enable the Custom Community Wall**, you need to supply a `communityWallConfig` object to `appConfig` when you launch Generate Image v2. Please note, it's not available in the old, v1 experience. If you omit this property, the wall continues to display Firefly assets exactly as before.
+**To enable the Custom Community Wall**, you need to supply a `communityWallConfig` object to `appConfig` when you launch Generate Image v2.
+
+<InlineAlert variant="info" slots="text1" />
+
+If you omit this property, the wall continues to display Firefly assets exactly as before. Please note, `communityWallConfig` is only available in the new, v2 experience.
+
+#### The `communityWallConfig` object
 
 ```ts
 const appConfig = {
@@ -245,6 +251,8 @@ The `fetchCommunityAssets` property is nothing but a **callback function that yo
 The function is called with a `limit` and `cursor` parameters. The `limit` is the number of assets to retrieve at any given time, and the `cursor` is used to keep track of the batch of assets to fetch next.
 
 The `cursor` defaults to `"Start_Page"` on the first call, and you can send `"Last_Page"` when there are no more custom assets to fetch. At that point, the module will stop asking for more data.
+
+#### The `fetchCommunityAssets` callback signature
 
 ```ts
 async function myFetchCommunityAssets(
