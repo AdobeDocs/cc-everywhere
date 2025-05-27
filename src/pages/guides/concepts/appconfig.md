@@ -25,15 +25,14 @@ The [Editor.AppConfig](../../v4/shared/src/types/editor/AppConfig.types/interfac
 - Manage file handling and export options
 - Handle editor events and user interactions
 - Customize the canvas display and layout
-- Integrate analytics and tracking data
+
 
 ## Configuration Categories
 
 The `Editor.AppConfig` object organizes configuration options into the following categories:
 
-1. **Event Handling and Analytics**
+1. **Event Handling**
    - Respond to editor events and user actions
-   - Integrate analytics and tracking data
    - Connect with your application's workflow
 
 2. **Interface and Navigation**
@@ -51,7 +50,7 @@ The `Editor.AppConfig` object organizes configuration options into the following
    - Manage page margins and bleed areas
    - Customize the editing environment
 
-## Event Handling and Analytics
+## Event Handling
 
 ### callbacks
 
@@ -77,27 +76,7 @@ const appConfig = {
 };
 ```
 
-### analyticsData
 
-Provide analytics and tracking data to monitor editor usage and user behavior.
-
-- **Type**: `BaseAnalyticsData`
-- **Default**: `undefined`
-- **Use case**: Track user sessions, measure engagement, and gather usage insights
-
-```javascript
-const appConfig = {
-  analyticsData: {
-    userId: 'user_12345',
-    sessionId: 'session_67890',
-    customProperties: {
-      source: 'marketing_campaign',
-      userTier: 'premium',
-      experimentGroup: 'variant_a'
-    }
-  }
-};
-```
 
 ## Interface and Navigation
 
@@ -258,7 +237,7 @@ This example demonstrates a comprehensive configuration for a marketing team's d
 
 ```javascript
 const appConfig = {
-  // Event handling and analytics
+  // Event handling
   callbacks: {
     onPublish: (publishData) => {
       // Send published content to marketing asset library
@@ -268,15 +247,6 @@ const appConfig = {
     onCancel: () => {
       // Track cancellation for analytics
       trackEvent('editor_cancelled');
-    }
-  },
-  analyticsData: {
-    userId: 'marketing_user_12345',
-    sessionId: 'session_67890',
-    customProperties: {
-      department: 'marketing',
-      campaign: 'spring_2024',
-      userRole: 'designer'
     }
   },
   
@@ -356,7 +326,7 @@ Use this decision guide to determine which configuration options best fit your u
 **Open Template Access**
 - Use default settings to allow access to all available templates
 
-### 3. Do you need event handling and analytics?
+### 3. Do you need event handling?
 
 **Basic Integration**
 ```javascript
@@ -365,16 +335,11 @@ callbacks: {
 }
 ```
 
-**Advanced Analytics**
+**Advanced Event Handling**
 ```javascript
 callbacks: {
   onPublish: (data) => handlePublishedContent(data),
   onCancel: () => trackCancellation()
-},
-analyticsData: {
-  userId: currentUser.id,
-  sessionId: currentSession.id,
-  customProperties: { source: 'your-app' }
 }
 ```
 
@@ -383,7 +348,7 @@ analyticsData: {
 - [ ] Choose content type configuration
 - [ ] Set up template access controls (if needed)
 - [ ] Implement event handlers
-- [ ] Add analytics tracking (if needed)
+
 - [ ] Test configuration with real users
 
 ## Related Resources

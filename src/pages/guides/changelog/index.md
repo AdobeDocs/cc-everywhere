@@ -26,7 +26,7 @@ Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this
 
 ### Documentation
 
-- Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`analyticsData`, `assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
+- Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
 
 ## [4.28.19] 2025-05-05
 
