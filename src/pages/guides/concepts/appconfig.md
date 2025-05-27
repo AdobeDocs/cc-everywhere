@@ -257,7 +257,7 @@ const appConfig = {
 This example demonstrates a comprehensive configuration for a marketing team's design workflow:
 
 ```javascript
-const marketingEditorConfig = {
+const appConfig = {
   // Event handling and analytics
   callbacks: {
     onPublish: (publishData) => {
