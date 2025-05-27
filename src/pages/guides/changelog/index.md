@@ -22,6 +22,12 @@ contributors:
 
 Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## TBD
+
+### Documentation
+
+- Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`analyticsData`, `assetCollection`, `showPageMargin`, `showBleedArea`), improved structure f, comprehensive use cases and examples, and implementation guidance.
+
 ## [4.28.19] 2025-05-05
 
 ### Added
@@ -37,12 +43,6 @@ Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this
 - [`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).
 - Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK.
 - Various performance improvements and bug fixes.
-
-## Documentation updates
-
-### Added
-
-Added new [Editor Customization](../concepts/appconfig.md) concept guide with comprehensive configuration options, examples, and decision tree.
 
 ## [4.22.9] 2025-03-12
 
