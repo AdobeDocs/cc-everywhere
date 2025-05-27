@@ -236,10 +236,12 @@ try {
         appendRedirects(fileMap, pathPrefix);
     }
 
-    const gatsbyConfigFile = 'gatsby-config.js';
-    if(fs.existsSync(gatsbyConfigFile)) {
-        renameLinksInGatsbyConfigFile(fileMap, gatsbyConfigFile);
-    }
+    const gatsbyConfigFiles = ['gatsby-config.js', 'api-refs-sidebar.json'];
+    gatsbyConfigFiles.forEach(file => {
+        if(fs.existsSync(file)) {
+            renameLinksInGatsbyConfigFile(fileMap, file);
+        }
+    })
 
     renameFiles(fileMap);
 
