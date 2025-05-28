@@ -44,6 +44,10 @@ Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this
 
   Please refer to the [this section](../concepts/generate-image-v2.md#custom-community-wall) of the Generate Image v2 page for the implementation details.
 
+### Documentation
+
+- Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
+
 ## [4.28.19] 2025-05-05
 
 ### Added
@@ -59,12 +63,6 @@ Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this
 - [`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).
 - Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK.
 - Various performance improvements and bug fixes.
-
-## Documentation updates
-
-### Added
-
-Added new [Editor Customization](../concepts/appconfig.md) concept guide with comprehensive configuration options, examples, and decision tree.
 
 ## [4.22.9] 2025-03-12
 
