@@ -28,7 +28,7 @@ A tabbed interface separates the editing tools (**Crop**, **Remove Background**,
 
 ## How to enable the new experience
 
-Edit Image v2 is, at the moment, disabled by default, with the classic interface displayed. To activate the new experience, you need to set the new `appVersion` property to the string `"2"` in the [`appConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/EditImageAppConfig.md) object.
+Edit Image v2 is, at the moment, disabled by default, with the classic interface displayed. To activate the new experience, you need to set the new `appVersion` property to the string `"2"` in the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) object.
 
 ```js
 await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");

@@ -308,19 +308,19 @@ module.exports = {
         pages: [
           {
             title: "CC Everywhere",
-            path: "/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+            path: "/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md",
           },
           {
             title: "Editor",
-            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md",
           },
           {
             title: "Module",
-            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md",
           },
           {
             title: "Quick Action",
-            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md",
           },
         ],
       },

@@ -4,28 +4,28 @@
 
 ### EditorAppConfig
 
-Re-exports [EditorAppConfig](AppConfig.types/type-aliases/EditorAppConfig.md)
+Re-exports [EditorAppConfig](app-config-types/type-aliases/editor-app-config.md)
 
 ***
 
 ### CreateDesignConfig
 
-Re-exports [CreateDesignConfig](DesignConfig.types/interfaces/CreateDesignConfig.md)
+Re-exports [CreateDesignConfig](design-config-types/interfaces/create-design-config.md)
 
 ***
 
 ### CreateWithAssetDesignConfig
 
-Re-exports [CreateWithAssetDesignConfig](DesignConfig.types/interfaces/CreateWithAssetDesignConfig.md)
+Re-exports [CreateWithAssetDesignConfig](design-config-types/interfaces/create-with-asset-design-config.md)
 
 ***
 
 ### CreateWithTemplateDesignConfig
 
-Re-exports [CreateWithTemplateDesignConfig](DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)
+Re-exports [CreateWithTemplateDesignConfig](design-config-types/interfaces/create-with-template-design-config.md)
 
 ***
 
 ### EditDesignConfig
 
-Re-exports [EditDesignConfig](DesignConfig.types/interfaces/EditDesignConfig.md)
+Re-exports [EditDesignConfig](design-config-types/interfaces/edit-design-config.md)

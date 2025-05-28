@@ -51,7 +51,7 @@ Once you have embedded the SDK into your application, the first step is to call 
 
 #### initialize()
 
-The asynchronous [`initialize()`](./sdk/src/3p/CCEverywhere/variables/default.md#initialize) method takes [hostInfo](./shared/src/types/HostInfo.types/interfaces/HostInfoSpecifiedBase.md), an optional [configParams](./shared/src/types/HostInfo.types/interfaces/ConfigParamsBase.md), an optional [authOption](./shared/src/types/Authentication.types/type-aliases/AuthOption.md) and returns a Promise with a [CCEverywhere](./sdk/src/3p/CCEverywhere/classes/CCEverywhere.md) object.
+The asynchronous [`initialize()`](./sdk/src/3p/cc-everywhere/variables/default.md#initialize) method takes [hostInfo](./shared/src/types/host-info-types/interfaces/host-info-specified-base.md), an optional [configParams](./shared/src/types/host-info-types/interfaces/config-params-base.md), an optional [authOption](./shared/src/types/authentication-types/type-aliases/auth-option.md) and returns a Promise with a [CCEverywhere](./sdk/src/3p/cc-everywhere/classes/cc-everywhere.md) object.
 
 ```ts
 initialize: (

@@ -19,7 +19,7 @@ contributors:
 
 ## What is `Editor.AppConfig`?
 
-[Editor.AppConfig](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
+[Editor.AppConfig](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) is a configuration object that serves as the primary interface for customizing the editor's behavior. It provides a structured way to:
 
   - Control the editor's user interface
   - Manage file handling and publishing
@@ -223,5 +223,5 @@ Start by considering your primary integration needs:
 ## See Also
 
 - [Getting Started Guide](../quickstart/index.md)
-- [API Reference](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md)
+- [API Reference](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md)
 - [Embed SDK Overview](../index.md)
