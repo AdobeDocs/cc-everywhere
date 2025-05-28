@@ -44,6 +44,13 @@ Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this
 
   Please refer to the [this section](../concepts/generate-image-v2.md#custom-community-wall) of the Generate Image v2 page for the implementation details.
 
+#### New APIs
+
+- Two new properties to the `AppConfig` object to control "Show margins" and "Show bleed" behavior have been added:
+  - [`CCEverywhere.EditorAppConfig.showPageMargin`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)
+  - [`CCEverywhere.EditorAppConfig.showBleedArea`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)
+- The PDF file type has been deprecated in the [`AppConfig.allowedFileTypes`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#properties) property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.
+
 ### Documentation
 
 - Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
