@@ -116,6 +116,12 @@ Re-exports [BaseAnalyticsData](AppConfig.types/type-aliases/BaseAnalyticsData.md
 
 ***
 
+### WarmupMode
+
+Re-exports [WarmupMode](AppConfig.types/enumerations/WarmupMode.md)
+
+***
+
 ### Blob
 
 Re-exports [Blob](Asset.types/interfaces/Blob.md)

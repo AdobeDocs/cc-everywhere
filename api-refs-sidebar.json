@@ -824,6 +824,10 @@
                   {
                     "title": "TemplateType",
                     "path": "/v4/shared/src/types/AppConfig.types/enumerations/TemplateType.md"
+                  },
+                  {
+                    "title": "WarmupMode",
+                    "path": "/v4/shared/src/types/AppConfig.types/enumerations/WarmupMode.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/AppConfig.types/enumerations/ColorTheme.md"
@@ -1689,6 +1693,10 @@
                     "title": "enumerations",
                     "pages": [
                       {
+                        "title": "EditImageAppVersion",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/EditImageAppVersion.md"
+                      },
+                      {
                         "title": "TextToImageAppVersion",
                         "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageAppVersion.md"
                       },
@@ -1701,7 +1709,7 @@
                         "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/ThumbnailOption.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/TextToImageAppVersion.md"
+                    "path": "/v4/shared/src/types/module/AppConfig.types/enumerations/EditImageAppVersion.md"
                   },
                   {
                     "title": "interfaces",
@@ -1733,6 +1741,10 @@
                       {
                         "title": "PublishConfig",
                         "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/PublishConfig.md"
+                      },
+                      {
+                        "title": "TemplateBrowserConfig",
+                        "path": "/v4/shared/src/types/module/AppConfig.types/interfaces/TemplateBrowserConfig.md"
                       },
                       {
                         "title": "TextToImageAppConfig",

@@ -13,6 +13,7 @@
 | [SpectrumTheme](enumerations/SpectrumTheme.md) | - |
 | [Scale](enumerations/Scale.md) | - |
 | [HostAppTrigger](enumerations/HostAppTrigger.md) | - |
+| [WarmupMode](enumerations/WarmupMode.md) | Enum for defining the different warmup modes for the background warmup process. |
 
 ### Type Aliases
 

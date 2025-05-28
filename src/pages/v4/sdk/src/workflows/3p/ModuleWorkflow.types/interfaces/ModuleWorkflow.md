@@ -47,15 +47,3 @@ createImageFromText(
 #### Returns
 
 `void`
-
-***
-
-### createTemplateFromText()
-
-```ts
-createTemplateFromText(): void
-```
-
-#### Returns
-
-`void`

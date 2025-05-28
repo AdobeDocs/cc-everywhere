@@ -8,9 +8,9 @@ Keeping callback type as void | `Promise<PublishStatus>` for the publish operati
 
 ## Parameters
 
-| Parameter       | Type                                                                     |
-| --------------- | ------------------------------------------------------------------------ |
-| `intent`        | [`ActionIntent`](../../ActionIntent.types/type-aliases/ActionIntent.md)  |
+| Parameter | Type |
+| ------ | ------ |
+| `intent` | [`ActionIntent`](../../ActionIntent.types/type-aliases/ActionIntent.md) |
 | `publishParams` | [`PublishParams`](../../PublishParams.types/interfaces/PublishParams.md) |
 
 ## Returns

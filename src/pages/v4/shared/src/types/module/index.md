@@ -8,6 +8,12 @@ Re-exports [TextToImageAppVersion](AppConfig.types/enumerations/TextToImageAppVe
 
 ***
 
+### EditImageAppVersion
+
+Re-exports [EditImageAppVersion](AppConfig.types/enumerations/EditImageAppVersion.md)
+
+***
+
 ### ThumbnailOption
 
 Re-exports [ThumbnailOption](AppConfig.types/enumerations/ThumbnailOption.md)
@@ -53,6 +59,12 @@ Re-exports [EditDropdownOptionConfig](AppConfig.types/interfaces/EditDropdownOpt
 ### PublishConfig
 
 Re-exports [PublishConfig](AppConfig.types/interfaces/PublishConfig.md)
+
+***
+
+### TemplateBrowserConfig
+
+Re-exports [TemplateBrowserConfig](AppConfig.types/interfaces/TemplateBrowserConfig.md)
 
 ***
 

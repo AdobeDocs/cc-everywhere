@@ -336,6 +336,36 @@ INSPIRE: string;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.CCX.START\_FROM\_CONTENT\_MODULE
+
+```ts
+START_FROM_CONTENT_MODULE: object;
+```
+
+### CLIENTS.CCX.START\_FROM\_CONTENT\_MODULE.BASE
+
+```ts
+BASE: string;
+```
+
+### CLIENTS.CCX.START\_FROM\_CONTENT\_MODULE.PATHS
+
+```ts
+PATHS: object;
+```
+
+### CLIENTS.CCX.START\_FROM\_CONTENT\_MODULE.PATHS.EDITOR
+
+```ts
+EDITOR: string;
+```
+
+### CLIENTS.CCX.START\_FROM\_CONTENT\_MODULE.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
 ### CLIENTS.IMS
 
 ```ts

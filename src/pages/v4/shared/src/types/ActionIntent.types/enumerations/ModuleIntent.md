@@ -8,3 +8,4 @@
 | `EDIT_IMAGE_V2` | `"edit-image-v2"` |
 | `CREATE_IMAGE_FROM_TEXT` | `"create-image-from-text"` |
 | `CREATE_TEMPLATE_FROM_TEXT` | `"create-template-from-text"` |
+| `START_FROM_CONTENT` | `"start-from-content"` |

@@ -179,3 +179,21 @@ Re-exports [PREVIOUS_PROTOCOL_VERSION](Protocol.types/variables/PREVIOUS_PROTOCO
 ### ProtocolHandlersModule
 
 Re-exports [ProtocolHandlersModule](Protocol.types/interfaces/ProtocolHandlersModule.md)
+
+***
+
+### MessageChannel
+
+Re-exports [MessageChannel](ChannelMessenger.types/enumerations/MessageChannel.md)
+
+***
+
+### MessagePayload
+
+Re-exports [MessagePayload](ChannelMessenger.types/type-aliases/MessagePayload.md)
+
+***
+
+### MessageSender
+
+Re-exports [MessageSender](ChannelMessenger.types/type-aliases/MessageSender.md)
