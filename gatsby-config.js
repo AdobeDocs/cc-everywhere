@@ -42,12 +42,12 @@ module.exports = {
           },
           {
             title: "v2 Reference",
-            description: "🪦 End of Life April 2025",
+            description: "🪦 End of Life May 2025",
             path: "/v2/reference/",
           },
           {
             title: "v1 Reference",
-            description: "🪦 End of Life April 2025",
+            description: "🪦 End of Life May 2025",
             path: "/v1/reference/",
           },
         ],
@@ -111,6 +111,10 @@ module.exports = {
           {
             title: "Generate Image V2",
             path: "/guides/concepts/generate-image-v2.md",
+          },
+          {
+            title: "Edit Image V2",
+            path: "/guides/concepts/edit-image-v2.md",
           },
           {
             title: "Editor Customization",
@@ -304,19 +308,19 @@ module.exports = {
         pages: [
           {
             title: "CC Everywhere",
-            path: "/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+            path: "/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md",
           },
           {
             title: "Editor",
-            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md",
           },
           {
             title: "Module",
-            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md",
           },
           {
             title: "Quick Action",
-            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md",
           },
         ],
       },

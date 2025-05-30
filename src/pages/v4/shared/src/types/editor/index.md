@@ -4,64 +4,64 @@
 
 ### BaseEditorAppConfig
 
-Re-exports [BaseEditorAppConfig](AppConfig.types/interfaces/BaseEditorAppConfig.md)
+Re-exports [BaseEditorAppConfig](app-config-types/interfaces/base-editor-app-config.md)
 
 ***
 
 ### AppConfig
 
-Re-exports [AppConfig](AppConfig.types/type-aliases/AppConfig.md)
+Re-exports [AppConfig](app-config-types/type-aliases/app-config.md)
 
 ***
 
 ### CreateDesignConfig
 
-Re-exports [CreateDesignConfig](DesignConfig.types/interfaces/CreateDesignConfig.md)
+Re-exports [CreateDesignConfig](design-config-types/interfaces/create-design-config.md)
 
 ***
 
 ### CreateWithAssetDesignConfig
 
-Re-exports [CreateWithAssetDesignConfig](DesignConfig.types/interfaces/CreateWithAssetDesignConfig.md)
+Re-exports [CreateWithAssetDesignConfig](design-config-types/interfaces/create-with-asset-design-config.md)
 
 ***
 
 ### CreateWithTemplateDesignConfig
 
-Re-exports [CreateWithTemplateDesignConfig](DesignConfig.types/interfaces/CreateWithTemplateDesignConfig.md)
+Re-exports [CreateWithTemplateDesignConfig](design-config-types/interfaces/create-with-template-design-config.md)
 
 ***
 
 ### EditDesignConfig
 
-Re-exports [EditDesignConfig](DesignConfig.types/interfaces/EditDesignConfig.md)
+Re-exports [EditDesignConfig](design-config-types/interfaces/edit-design-config.md)
 
 ***
 
 ### DesignConfig
 
-Re-exports [DesignConfig](DesignConfig.types/type-aliases/DesignConfig.md)
+Re-exports [DesignConfig](design-config-types/type-aliases/design-config.md)
 
 ***
 
 ### CreateDocConfig
 
-Re-exports [CreateDocConfig](DocConfig.types/interfaces/CreateDocConfig.md)
+Re-exports [CreateDocConfig](doc-config-types/interfaces/create-doc-config.md)
 
 ***
 
 ### CreateWithAssetDocConfig
 
-Re-exports [CreateWithAssetDocConfig](DocConfig.types/interfaces/CreateWithAssetDocConfig.md)
+Re-exports [CreateWithAssetDocConfig](doc-config-types/interfaces/create-with-asset-doc-config.md)
 
 ***
 
 ### CreateWithTemplateDocConfig
 
-Re-exports [CreateWithTemplateDocConfig](DocConfig.types/interfaces/CreateWithTemplateDocConfig.md)
+Re-exports [CreateWithTemplateDocConfig](doc-config-types/interfaces/create-with-template-doc-config.md)
 
 ***
 
 ### EditDocConfig
 
-Re-exports [EditDocConfig](DocConfig.types/interfaces/EditDocConfig.md)
+Re-exports [EditDocConfig](doc-config-types/interfaces/edit-doc-config.md)
