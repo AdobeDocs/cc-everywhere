@@ -4,100 +4,112 @@
 
 ### TextToImageAppVersion
 
-Re-exports [TextToImageAppVersion](AppConfig.types/enumerations/TextToImageAppVersion.md)
+Re-exports [TextToImageAppVersion](app-config-types/enumerations/text-to-image-app-version.md)
+
+***
+
+### EditImageAppVersion
+
+Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-version.md)
 
 ***
 
 ### ThumbnailOption
 
-Re-exports [ThumbnailOption](AppConfig.types/enumerations/ThumbnailOption.md)
+Re-exports [ThumbnailOption](app-config-types/enumerations/thumbnail-option.md)
 
 ***
 
 ### TextToImageFeature
 
-Re-exports [TextToImageFeature](AppConfig.types/enumerations/TextToImageFeature.md)
+Re-exports [TextToImageFeature](app-config-types/enumerations/text-to-image-feature.md)
 
 ***
 
 ### FastModeConfig
 
-Re-exports [FastModeConfig](AppConfig.types/interfaces/FastModeConfig.md)
+Re-exports [FastModeConfig](app-config-types/interfaces/fast-mode-config.md)
 
 ***
 
 ### CommunityWallAssetData
 
-Re-exports [CommunityWallAssetData](AppConfig.types/interfaces/CommunityWallAssetData.md)
+Re-exports [CommunityWallAssetData](app-config-types/interfaces/community-wall-asset-data.md)
 
 ***
 
 ### CommunityWallAssetResponse
 
-Re-exports [CommunityWallAssetResponse](AppConfig.types/interfaces/CommunityWallAssetResponse.md)
+Re-exports [CommunityWallAssetResponse](app-config-types/interfaces/community-wall-asset-response.md)
 
 ***
 
 ### CommunityWallConfig
 
-Re-exports [CommunityWallConfig](AppConfig.types/interfaces/CommunityWallConfig.md)
+Re-exports [CommunityWallConfig](app-config-types/interfaces/community-wall-config.md)
 
 ***
 
 ### EditDropdownOptionConfig
 
-Re-exports [EditDropdownOptionConfig](AppConfig.types/interfaces/EditDropdownOptionConfig.md)
+Re-exports [EditDropdownOptionConfig](app-config-types/interfaces/edit-dropdown-option-config.md)
 
 ***
 
 ### PublishConfig
 
-Re-exports [PublishConfig](AppConfig.types/interfaces/PublishConfig.md)
+Re-exports [PublishConfig](app-config-types/interfaces/publish-config.md)
+
+***
+
+### TemplateBrowserConfig
+
+Re-exports [TemplateBrowserConfig](app-config-types/interfaces/template-browser-config.md)
 
 ***
 
 ### TextToImageAppConfig
 
-Re-exports [TextToImageAppConfig](AppConfig.types/interfaces/TextToImageAppConfig.md)
+Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
 
 ***
 
 ### EditImageAppConfig
 
-Re-exports [EditImageAppConfig](AppConfig.types/interfaces/EditImageAppConfig.md)
+Re-exports [EditImageAppConfig](app-config-types/interfaces/edit-image-app-config.md)
 
 ***
 
 ### WarmupAppConfig
 
-Re-exports [WarmupAppConfig](AppConfig.types/interfaces/WarmupAppConfig.md)
+Re-exports [WarmupAppConfig](app-config-types/interfaces/warmup-app-config.md)
 
 ***
 
 ### EditImageDesignConfig
 
-Re-exports [EditImageDesignConfig](DesignConfig.types/interfaces/EditImageDesignConfig.md)
+Re-exports [EditImageDesignConfig](design-config-types/interfaces/edit-image-design-config.md)
 
 ***
 
 ### TextToImageDesignConfig
 
-Re-exports [TextToImageDesignConfig](DesignConfig.types/interfaces/TextToImageDesignConfig.md)
+Re-exports [TextToImageDesignConfig](design-config-types/interfaces/text-to-image-design-config.md)
 
 ***
 
 ### WarmupDesignConfig
 
-Re-exports [WarmupDesignConfig](DesignConfig.types/interfaces/WarmupDesignConfig.md)
+Re-exports [WarmupDesignConfig](design-config-types/interfaces/warmup-design-config.md)
 
 ***
 
 ### EditImageIntent
 
-Re-exports [EditImageIntent](DocConfig.types/type-aliases/EditImageIntent.md)
+Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
 
 ***
 
 ### EditImageDocConfig
 
-Re-exports [EditImageDocConfig](DocConfig.types/interfaces/EditImageDocConfig.md)
+Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-config.md)
