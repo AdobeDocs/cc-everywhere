@@ -67,6 +67,7 @@ The [Adobe Express Embed SDK Demo App](https://demo.expressembed.com/) has been 
 [![Demo App](./img/editimage_demo-app.png)](https://demo.expressembed.com/)
 
 **Demo Features:**
+
 - Live Edit Image V2 interface
 - Complete code examples
 - Configuration snippets
