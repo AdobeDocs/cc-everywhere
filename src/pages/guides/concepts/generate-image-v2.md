@@ -77,6 +77,10 @@ const appConfig = {
 
 When enabled, the Community Wall will be displayed upon launching the module; each image can be selected to preload the prompt and generate a new image, varying the other settings as needed. It's possible to customize the Community Wall by providing your images; please see [this section](#custom-community-wall) for instructions.
 
+<InlineAlert variant="info" slots="text1" />
+
+Please note, when passing a prompt to the module (via `appConfig.promptText`), the Community Wall will be disabled and the generation will start directly.
+
 ### Fast Mode
 
 ![Fast Mode](./img/genimage_fast-mode.jpg)
