@@ -19,7 +19,7 @@ Use `Editor.AppConfig` to customize the Adobe Express Embed SDK editor's behavio
 
 ## What is `Editor.AppConfig`?
 
-The [Editor.AppConfig](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md) object is the primary interface for customizing the Adobe Express Embed SDK editor. Use this configuration object to:
+The [Editor.AppConfig](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) object is the primary interface for customizing the Adobe Express Embed SDK editor. Use this configuration object to:
 
 - Control the editor's user interface and navigation
 - Manage file handling and export options
@@ -369,6 +369,6 @@ callbacks: {
 ## Related Resources
 
 - [Getting Started with Adobe Express Embed SDK](../quickstart/index.md)
-- [BaseEditorAppConfig API Reference](../../v4/shared/src/types/editor/AppConfig.types/interfaces/BaseEditorAppConfig.md)
+- [BaseEditorAppConfig API Reference](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md)
 - [Adobe Express Embed SDK Overview](../index.md)
 - [Demo Application](https://demo.expressembed.com/)
