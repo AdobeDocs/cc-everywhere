@@ -1,6 +1,6 @@
 ---
 keywords:
-  - Client-based entitlement
+  - Partner-based usage
   - Adobe Embed SDK
   - Firefly Services integration
   - OAuth Server-to-Server
@@ -20,26 +20,26 @@ keywords:
   - Token refresh
   - Business registration
   - Infrastructure setup
-title: Generate Image Module Client-Based Entitlement
-description: Complete onboarding guide for implementing client-based entitlement with Adobe SDK integration. Learn how to set up backend services, configure OAuth authentication, implement token management, and integrate with Adobe's Generate Image Module through secure service endpoints.
+title: Generate Image Module Partner-Based Usage
+description: Complete onboarding guide for implementing Partner-based usage with Adobe SDK integration. Learn how to set up backend services, configure OAuth authentication, implement token management, and integrate with Adobe's Generate Image Module through secure service endpoints.
 contributors:
   - https://github.com/nimithajalal
   - https://github.com/undavide
 noIndex: true
 ---
 
-# Generate Image Module: Client-Based Entitlement
+# Generate Image Module: Partner-based Usage
 
 ## Overview
 
-This guide will walk you through the process of onboarding as a partner to use the Generate Image Module with client-based entitlement. This integration allows you to provide Firefly Services credits directly to your users through your application. By the end of this onboarding, you'll have a fully configured environment that supports embedded SDK client functionality with Firefly Services integration.
+This guide will walk you through the process of onboarding as a partner to use the Generate Image Module with Partner-based Usage. This integration allows you to provide Firefly Services credits directly to your users through your application. By the end of this onboarding, you'll have a fully configured environment that supports embedded SDK client functionality with Firefly Services integration.
 
 ## Implementation Requirements
 
-To implement client-based entitlement, you need to set up three main components:
+To implement Partner-Based usage, you need to set up three main components:
 
   ![Implementation Architecture Overview](./img/Client-based-entitlement.png)
-  *Diagram showing the implementation requirements and architecture components for client-based entitlement*
+  *Diagram showing the implementation requirements and architecture components for partner-based usage*
 
 ### Business Requirements
 
@@ -98,7 +98,7 @@ Before you begin, ensure you have:
 - [ ] Admin access to your Adobe organization
 - [ ] Basic understanding of API integration concepts
 
-Now that you have the prerequisites in place, let's walk through the step-by-step process to onboard as a partner and configure client-based entitlement for the Generate Image Module.
+Now that you have the prerequisites in place, let's walk through the step-by-step process to onboard as a partner and configure partner-based usage for the Generate Image Module.
 
 ## Step 1: Add Firefly Services to Your Project
 
@@ -106,7 +106,7 @@ Now that you have the prerequisites in place, let's walk through the step-by-ste
 2. Follow [this guide](https://developer.adobe.com/firefly-services/docs/guides/get-started/) to add "Firefly - Firefly Services" API to your project
 3. Verify the API has been successfully added to your project
 
-## Step 2: Share Project Details with Adobe 
+## Step 2: Share Project Details with Adobe
 
 1. In your Developer Console project, navigate to the OAuth settings: **Projects > Your project > Credentials > OAuth Server-to-Server**
 
@@ -127,7 +127,7 @@ Adobe will use these credentials to configure rate limiting based on your Techni
 
 **Rate Limiting Coordination**: Work with your Adobe account manager or partner manager to determine an appropriate rate limit (RPM - Requests Per Minute) based on your expected traffic volume, Monthly Active Users (MAU), and peak usage patterns. Adobe Firefly API has default rate limits of **4 requests per minute (RPM)** and **9,000 requests per day (RPD)** per organization. Higher limits can be requested through your account manager. For more details, see the [Rate Limits documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/rate-limits/).
 
-## Step 3: Set Up Token Management 
+## Step 3: Set Up Token Management
 
 <InlineAlert variant="help" slots="text1, text2, text3" />
 
@@ -140,7 +140,7 @@ Adobe will configure token expiry settings for your service with the following r
 
 **Implementation Requirements:**
 
-- Generate new tokens regularly before expiry. 
+- Generate new tokens regularly before expiry
 - Implement proper token refresh logic in your application
 - Monitor token expiration to ensure uninterrupted service
 
@@ -148,7 +148,7 @@ For detailed implementation guidance on authentication and token management, ref
 
 ## Step 4: Implement Backend Authentication
 
-**Important:** You must set up a secure backend service to authenticate with Adobe IMS. This is a requirement for client-based entitlement integration.
+**Important:** You must set up a secure backend service to authenticate with Adobe IMS. This is a requirement for partner-based usage integration.
 
 Your backend service must securely authenticate with Adobe IMS to retrieve access tokens. Based on the [Firefly Services Authentication guide](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/authentication/), implement the following:
 
@@ -235,7 +235,6 @@ async function fetchClientToken() {
 **Initialize SDK with ClientAuthProvider:**
 
 ```javascript
-
 // Initialize SDK with client auth provider
 const ccEverywhere = await CCEverywhere.initialize({
     clientId: 'your-client-id',
@@ -258,7 +257,6 @@ const ccEverywhere = await CCEverywhere.initialize({
 The `clientAuthProvider` callback should return an object containing token, expiry time, and user GUID in the appropriate format:
 
 ```typescript
-
 interface ClientAuthProvider {
     (): Promise<ClientAuthDetails>;
 }
@@ -291,7 +289,6 @@ interface ClientAuthDetails {
 Set `useClientAuth` to `true` in `appConfig` when `createImageFromText` is invoked:
 
 ```typescript
-
 /**
  * Flag to explicitly opt-in to use client authentication.
  * When true, client access token will be fetched from the partner and used in the module.
