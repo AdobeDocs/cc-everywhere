@@ -52,12 +52,14 @@ You'll need to set up the following infrastructure components:
 You must implement a **Backend Service** that acts as a secure intermediary between your applications and Adobe services:
 
 **Key Responsibilities:**
+
 - **Token Generation**: Obtain client tokens using your client ID and secret
 - **Security Management**: Keep client secrets secure and never expose them to application-side code
 - **Token Refresh**: Handle token expiration and renewal automatically
 - **Authentication**: Integrate with Adobe IMS (Identity Management System) for secure token exchange
 
 **Service Requirements:**
+
 - Secure server environment (HTTPS required)
 - Ability to make server-to-server API calls to Adobe IMS
 - Token caching and management capabilities
@@ -68,12 +70,14 @@ You must implement a **Backend Service** that acts as a secure intermediary betw
 Your **Application** running in the browser will:
 
 **Integration Points:**
+
 - **Embed SDK Integration**: Initialize the Adobe Embed SDK with proper configuration
 - **Token Provider**: Implement a ClientAuthProvider that communicates with your Backend Service
 - **Token Management**: Handle token refresh scenarios (startup, expiry, errors)
 - **User Experience**: Provide seamless integration with Adobe's Generate Image Module
 
 **Token Flow Scenarios:**
+
 - **On Startup**: Request initial token from your Backend Service
 - **Token Expiry**: Automatically refresh tokens before they expire
 - **Token Error**: Handle token failures gracefully with fallback mechanisms
@@ -88,6 +92,7 @@ Your **Application** running in the browser will:
 ## Prerequisites
 
 Before you begin, ensure you have:
+
 - [ ] An organization created on [Admin Console](https://adminconsole.adobe.com/)
 - [ ] A developer account on [Developer Console](https://developer.adobe.com/console)
 - [ ] Admin access to your Adobe organization
@@ -109,6 +114,7 @@ Before you begin, ensure you have:
 *Screenshot showing where to find OAuth settings in Developer Console*
 
 2. Share your **Technical Account ID** and **Client ID** with Adobe (**Manual Process**)
+
    - You can find these details by clicking on "OAuth Server to Server" in the side panel
    - This is a manual coordination step that requires direct communication with Adobe
 
@@ -116,6 +122,7 @@ Before you begin, ensure you have:
 *Screenshot highlighting the location of Technical Account ID and Client ID in the OAuth Server to Server panel*
 
 3. Adobe will use these credentials to configure rate limiting based on your Technical Account ID
+
    - This process may take some time to complete
    - You'll be notified when the configuration is ready
 
@@ -124,10 +131,12 @@ Before you begin, ensure you have:
 Adobe will configure token expiry settings for your service with the following recommendations:
 
 **Recommended Configuration:**
+
 - **Token Expiry Time:** 5 minutes
 - **Refresh Interval:** 4 minutes (1 minute before expiry)
 
 **Implementation Requirements:**
+
 - Generate new tokens regularly before expiry
 - Implement proper token refresh logic in your application
 - Monitor token expiration to ensure uninterrupted service
@@ -140,6 +149,7 @@ For detailed implementation guidance, refer to the [token management documentati
 
 1. Set up a backend service endpoint to generate tokens
 2. Configure the endpoint to return:
+
    - `"clientAccessToken"`
    - `"tokenExpiryTimestampMs"`
    - `"tokenId"` (optional field for user identification)
@@ -231,6 +241,7 @@ useClientAuth?: boolean;
 ## Verification Checklist
 
 Before going live, verify the following:
+
 - [ ] Firefly Services API is added to your project
 - [ ] Technical Account ID and Client ID are shared with Adobe
 - [ ] Rate limiting configuration is confirmed by Adobe
@@ -257,6 +268,7 @@ Before going live, verify the following:
 ## Next Steps
 
 Once your setup is complete and verified:
+
 1. Test your integration in a development environment
 2. Monitor token usage and refresh patterns
 3. Implement proper error handling for token-related issues
