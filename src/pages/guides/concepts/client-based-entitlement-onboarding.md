@@ -20,14 +20,14 @@ keywords:
   - Token refresh
   - Business registration
   - Infrastructure setup
-title: Client-Based Entitlement Onboarding Guide
+title: Generate Image Module: Client-Based Entitlement
 description: Complete onboarding guide for implementing client-based entitlement with Adobe SDK integration. Learn how to set up backend services, configure OAuth authentication, implement token management, and integrate with Adobe's Generate Image Module through secure service endpoints.
 contributors:
   - https://github.com/nimithajalal
   - https://github.com/undavide
 ---
 
-# Client-Based Entitlement Onboarding Guide
+# Generate Image Module: Client-Based Entitlement
 
 ## Overview
 
