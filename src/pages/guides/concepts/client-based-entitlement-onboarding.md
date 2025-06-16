@@ -37,6 +37,9 @@ This guide will walk you through the process of onboarding as a partner to use t
 
 To implement client-based entitlement, you need to set up three main components:
 
+<!-- ![Implementation Architecture Overview](./img/implementation-requirements-diagram.png)
+*Diagram showing the implementation requirements and architecture components for client-based entitlement* -->
+
 ### Business Requirements
 
 - **Onboard with Adobe**: Onboard with [Adobe Firely Services](https://business.adobe.com/products/firefly-business/firefly-services.html)
@@ -110,7 +113,6 @@ Now that you have the prerequisites in place, let's walk through the step-by-ste
 
    - You can find these details in the OAuth Server-to-Server credentials section
    - This is a manual coordination step that requires direct communication with Adobe
-   - [CROSS CHECK ON RPM]
 
 ![Screenshot: Developer Console - OAuth Settings Location](./img/screenshot-oauth-settings.png)
 *Screenshot showing where to find OAuth settings in Developer Console*
@@ -119,6 +121,10 @@ Adobe will use these credentials to configure rate limiting based on your Techni
 
    - This process may take some time to complete
    - You'll be notified when the configuration is ready
+
+<InlineAlert variant="info" slots="text" />
+
+**Rate Limiting Coordination**: Work with your Adobe account manager or partner manager to determine an appropriate rate limit (RPM - Requests Per Minute) based on your expected traffic volume, Monthly Active Users (MAU), and peak usage patterns. Adobe Firefly API has default rate limits of **4 requests per minute (RPM)** and **9,000 requests per day (RPD)** per organization. Higher limits can be requested through your account manager. For more details, see the [Rate Limits documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/rate-limits/).
 
 ## Step 3: Set Up Token Management 
 
@@ -330,5 +336,3 @@ Once your setup is complete and verified:
 2. Monitor token usage and refresh patterns
 3. Implement proper error handling for token-related issues
 4. Plan for production deployment
-
-**Need Help?** Contact your Adobe integration team or refer to the support resources listed above.
