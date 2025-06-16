@@ -129,10 +129,6 @@ module.exports = {
           //   path: "/guides/concepts/customization.md",
           // },
           {
-            title: "Generate Image Module: Client-Based Entitlement",
-            path: "/guides/concepts/client-based-entitlement-onboarding.md",
-          },
-          {
             title: "Error handling",
             path: "/guides/concepts/error-handling.md",
           },
