@@ -129,6 +129,10 @@ module.exports = {
           //   path: "/guides/concepts/customization.md",
           // },
           {
+            title: "Client-Based Entitlement Onboarding Guide",
+            path: "/guides/concepts/client-based-entitlement-onboarding.md",
+          },
+          {
             title: "Error handling",
             path: "/guides/concepts/error-handling.md",
           },
