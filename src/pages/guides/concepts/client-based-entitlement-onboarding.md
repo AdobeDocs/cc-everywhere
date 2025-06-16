@@ -31,23 +31,19 @@ contributors:
 
 ## Overview
 
-This guide will walk you through the process of setting up client-based entitlement for your Adobe SDK integration. By the end of this onboarding, you'll have a fully configured environment that supports embedded SDK client functionality.
+This guide will walk you through the process of onboarding as a partner to use the Generate Image Module with client-based entitlement. This integration allows you to provide Firefly Services credits directly to your users through your application. By the end of this onboarding, you'll have a fully configured environment that supports embedded SDK client functionality with Firefly Services integration.
 
-## Architecture Overview
+## Implementation Requirements
 
-The client-based entitlement system consists of several components working together:
+To implement client-based entitlement, you need to set up three main components:
 
-### Infrastructure Requirements
+### Business Requirements
 
-You'll need to set up the following infrastructure components:
-
-#### 1. Business Registration
-
-- **Onboard with Adobe**: Register with Adobe Firely Services
+- **Onboard with Adobe**: Onboard with [Adobe Firely Services](https://business.adobe.com/products/firefly-business/firefly-services.html)
 - **Purchase Entitlements**: Acquire the necessary service entitlements for your use case
 - **Account Setup**: Ensure your organization has the appropriate licenses and permissions
 
-#### 2. Backend Service Layer
+### Backend Service Layer
 
 You must implement a **Backend Service** that acts as a secure intermediary between your applications and Adobe services:
 
@@ -65,7 +61,7 @@ You must implement a **Backend Service** that acts as a secure intermediary betw
 - Token caching and management capabilities
 - Error handling and retry logic for token requests
 
-#### 3. Application Layer
+### Application Layer
 
 Your **Application** running in the browser will:
 
@@ -82,7 +78,7 @@ Your **Application** running in the browser will:
 - **Token Expiry**: Automatically refresh tokens before they expire
 - **Token Error**: Handle token failures gracefully with fallback mechanisms
 
-#### 4. Security Considerations
+### Security Considerations
 
 - **Client Secrets**: Never expose client secrets in application-side code
 - **Token Scope**: Use appropriate scopes for your specific use case
@@ -98,35 +94,35 @@ Before you begin, ensure you have:
 - [ ] Admin access to your Adobe organization
 - [ ] Basic understanding of API integration concepts
 
-## Step-by-Step Setup
+Now that you have the prerequisites in place, let's walk through the step-by-step process to onboard as a partner and configure client-based entitlement for the Generate Image Module.
 
-### Step 1: Add Firefly Services to Your Project
+## Step 1: Add Firefly Services to Your Project
 
 1. Navigate to your project in Developer Console
 2. Follow [this guide](https://developer.adobe.com/firefly-services/docs/guides/get-started/) to add "Firefly - Firefly Services" API to your project
 3. Verify the API has been successfully added to your project
 
-### Step 2: Configure OAuth Server-to-Server
+## Step 2: Share Project Details with Adobe 
 
-1. In your Developer Console project, locate the OAuth settings
-
-![Screenshot: Developer Console - OAuth Settings Location](screenshot-placeholder-oauth-settings.png)
-*Screenshot showing where to find OAuth settings in Developer Console*
+1. In your Developer Console project, navigate to the OAuth settings: **Projects > Your project > Credentials > OAuth Server-to-Server**
 
 2. Share your **Technical Account ID** and **Client ID** with Adobe (**Manual Process**)
 
-   - You can find these details by clicking on "OAuth Server to Server" in the side panel
+   - You can find these details in the OAuth Server-to-Server credentials section
    - This is a manual coordination step that requires direct communication with Adobe
+   - [CROSS CHECK ON RPM]
 
-![Screenshot: Developer Console - Technical Account ID and Client ID](screenshot-placeholder-oauth-credentials.png)
-*Screenshot highlighting the location of Technical Account ID and Client ID in the OAuth Server to Server panel*
+![Screenshot: Developer Console - OAuth Settings Location](./img/screenshot-oauth-settings.png)
+*Screenshot showing where to find OAuth settings in Developer Console*
 
-3. Adobe will use these credentials to configure rate limiting based on your Technical Account ID
+Adobe will use these credentials to configure rate limiting based on your Technical Account ID
 
    - This process may take some time to complete
    - You'll be notified when the configuration is ready
 
-### Step 3: Set Up Token Management
+## Step 3: Set Up Token Management 
+
+<InlineAlert variant="help" slots="text1, text2, text3" />
 
 Adobe will configure token expiry settings for your service with the following recommendations:
 
@@ -137,17 +133,53 @@ Adobe will configure token expiry settings for your service with the following r
 
 **Implementation Requirements:**
 
-- Generate new tokens regularly before expiry
+- Generate new tokens regularly before expiry. 
 - Implement proper token refresh logic in your application
 - Monitor token expiration to ensure uninterrupted service
 
-For detailed implementation guidance, refer to the [token management documentation](https://developer.adobe.com/firefly-services/docs/guides/authentication/).
+For detailed implementation guidance on authentication and token management, refer to the [Firefly Services Authentication documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/authentication/).
 
-### Step 4: Configure Service Endpoint
+## Step 4: Implement Backend Authentication
 
-**Important:** You must set up your own service to fetch tokens. This is a requirement for client-based entitlement integration.
+**Important:** You must set up a secure backend service to authenticate with Adobe IMS. This is a requirement for client-based entitlement integration.
 
-1. Set up a backend service endpoint to generate tokens
+Your backend service must securely authenticate with Adobe IMS to retrieve access tokens. Based on the [Firefly Services Authentication guide](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/authentication/), implement the following:
+
+1. **Secure Credential Storage**: Store your Client ID and Client Secret securely on your server
+2. **Token Retrieval**: Make requests to Adobe IMS endpoint to obtain access tokens
+3. **Token Management**: Handle token expiration (tokens are valid for 24 hours)
+
+**Example Server-Side Token Retrieval:**
+
+```javascript
+// Server-side token retrieval
+async function getAccessToken() {
+  const response = await fetch('https://ims-na1.adobelogin.com/ims/token/v3', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    },
+    body: new URLSearchParams({
+      'grant_type': 'client_credentials',
+      'client_id': process.env.FIREFLY_SERVICES_CLIENT_ID,
+      'client_secret': process.env.FIREFLY_SERVICES_CLIENT_SECRET,
+      'scope': 'openid,AdobeID,session,additional_info,read_organizations,firefly_api,ff_apis'
+    })
+  });
+  
+  const data = await response.json();
+  return {
+    access_token: data.access_token,
+    expires_in: data.expires_in
+  };
+}
+```
+
+## Step 5: Create Your Backend API Endpoint
+
+Set up an API endpoint in your backend service that your client applications can call to retrieve tokens in the required format.
+
+1. Create a secure API endpoint (e.g., `/api/client-token`)
 2. Configure the endpoint to return:
 
    - `"clientAccessToken"`
@@ -164,13 +196,34 @@ For detailed implementation guidance, refer to the [token management documentati
 }
 ```
 
-### Step 5: Enable Client-Side Integration
+**Example Client-Side Token Request:**
+
+```javascript
+// Client-side token request to your backend
+async function fetchClientToken() {
+  const response = await fetch('/api/client-token', {
+    method: 'GET',
+    headers: {
+      'Authorization': 'Bearer your-internal-auth-token'
+    }
+  });
+  
+  const tokenData = await response.json();
+  return {
+    clientAccessToken: tokenData.clientAccessToken,
+    tokenExpiryTimestampMs: tokenData.tokenExpiryTimestampMs,
+    userGuid: tokenData.tokenId
+  };
+}
+```
+
+## Step 6: Enable Client-Side Integration
 
 1. Ensure your application can call your backend service
 2. Implement token refresh logic that triggers before expiry
 3. Configure your application to use the project's client ID, client secret, and scope for MPS API calls
 
-#### SDK Implementation Details
+### SDK Implementation Details
 
 **Initialize SDK with ClientAuthProvider:**
 
