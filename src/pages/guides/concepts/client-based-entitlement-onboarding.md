@@ -155,6 +155,7 @@ For detailed implementation guidance, refer to the [token management documentati
    - `"tokenId"` (optional field for user identification)
 
 **Response Format:**
+
 ```json
 {
   "clientAccessToken": "your-generated-token",
@@ -174,6 +175,7 @@ For detailed implementation guidance, refer to the [token management documentati
 **Initialize SDK with ClientAuthProvider:**
 
 ```javascript
+
 // Initialize SDK with client auth provider
 const ccEverywhere = await CCEverywhere.initialize({
     clientId: 'your-client-id',
@@ -196,6 +198,7 @@ const ccEverywhere = await CCEverywhere.initialize({
 The `clientAuthProvider` callback should return an object containing token, expiry time, and user GUID in the appropriate format:
 
 ```typescript
+
 interface ClientAuthProvider {
     (): Promise<ClientAuthDetails>;
 }
@@ -228,6 +231,7 @@ interface ClientAuthDetails {
 Set `useClientAuth` to `true` in `appConfig` when `createImageFromText` is invoked:
 
 ```typescript
+
 /**
  * Flag to explicitly opt-in to use client authentication.
  * When true, client access token will be fetched from the partner and used in the module.
