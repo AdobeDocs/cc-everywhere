@@ -20,7 +20,7 @@ keywords:
   - Token refresh
   - Business registration
   - Infrastructure setup
-title: Generate Image Module Partner-Based Usage
+title: Generate Image Module Partner-based usage
 description: Complete onboarding guide for implementing Partner-based usage with Adobe SDK integration. Learn how to set up backend services, configure OAuth authentication, implement token management, and integrate with Adobe's Generate Image Module through secure service endpoints.
 contributors:
   - https://github.com/nimithajalal
@@ -28,34 +28,34 @@ contributors:
 noIndex: true
 ---
 
-# Generate Image Module: Partner-based Usage
+# Generate Image Module: Partner-based usage
 
 ## Overview
 
-This guide will walk you through the process of onboarding as a partner to use the Generate Image Module with Partner-based Usage. This integration allows you to provide Firefly Services credits directly to your users through your application. By the end of this onboarding, you'll have a fully configured environment that supports embedded SDK client functionality with Firefly Services integration.
+Use this guide to onboard as a partner and integrate the Generate Image Module with Partner-based usage. This integration allows you to provide Firefly Services credits directly to your users through your application. By the end of this onboarding, you'll have a fully configured environment that supports embedded SDK client functionality with Firefly Services integration.
 
 ## Implementation Requirements
 
-To implement Partner-Based usage, you need to set up three main components:
+To implement Partner-based usage, set up three main components. These include **Business Requirements** for establishing your partnership with Adobe, a **Backend Service Layer** that securely manages authentication and token handling, and an **Application Layer** that integrates the SDK with your user interface.
 
-  ![Implementation Architecture Overview](./img/Client-based-entitlement.png)
-  *Diagram showing the implementation requirements and architecture components for partner-based usage*
+  ![Architecture diagram showing three connected layers: Business Requirements at the top containing onboarding and entitlements, Backend Service Layer in the middle handling token generation and security, and Application Layer at the bottom managing SDK integration and user experience](./img/Client-based-entitlement.png)
+  *Diagram showing the implementation requirements and architecture components for Partner-based usage*
 
 ### Business Requirements
 
-- **Onboard with Adobe**: Onboard with [Adobe Firely Services](https://business.adobe.com/products/firefly-business/firefly-services.html)
+- **Onboard with Adobe**: Complete the onboarding process with [Adobe Firefly Services](https://business.adobe.com/products/firefly-business/firefly-services.html)
 - **Purchase Entitlements**: Acquire the necessary service entitlements for your use case
 - **Account Setup**: Ensure your organization has the appropriate licenses and permissions
 
 ### Backend Service Layer
 
-You must implement a **Backend Service** that acts as a secure intermediary between your applications and Adobe services:
+Implement a **Backend Service** that acts as a secure intermediary between your applications and Adobe services:
 
 **Key Responsibilities:**
 
-- **Token Generation**: Obtain client tokens using your client ID and secret
+- **Token Generation**: Obtain client tokens using your client ID and secret. These tokens authenticate your application with Adobe services and ensure secure access to Firefly Services on behalf of your users
 - **Security Management**: Keep client secrets secure and never expose them to application-side code
-- **Token Refresh**: Handle token expiration and renewal automatically
+- **Token Refresh**: Handle token expiration and renewal automatically. Implement logic to refresh tokens before they expire to maintain uninterrupted service.
 - **Authentication**: Integrate with Adobe IMS (Identity Management System) for secure token exchange
 
 **Service Requirements:**
@@ -71,23 +71,23 @@ Your **Application** running in the browser will:
 
 **Integration Points:**
 
-- **Embed SDK Integration**: Initialize the Adobe Embed SDK with proper configuration
+- **Embed SDK Integration**: [Initialize](../../v4/index.md#initialize) the Adobe Embed SDK with proper configuration.
 - **Token Provider**: Implement a ClientAuthProvider that communicates with your Backend Service
 - **Token Management**: Handle token refresh scenarios (startup, expiry, errors)
 - **User Experience**: Provide seamless integration with Adobe's Generate Image Module
 
 **Token Flow Scenarios:**
 
-- **On Startup**: Request initial token from your Backend Service
-- **Token Expiry**: Automatically refresh tokens before they expire
-- **Token Error**: Handle token failures gracefully with fallback mechanisms
+1. **On Startup**: Request initial token from your Backend Service
+2. **Token Expiry**: Automatically refresh tokens before they expire
+3. **Token Error**: Handle token failures gracefully with fallback mechanisms
 
 ### Security Considerations
 
-- **Client Secrets**: Never expose client secrets in application-side code
-- **Token Scope**: Use appropriate scopes for your specific use case
-- **Rate Limiting**: Implement proper rate limiting to avoid exceeding quota
-- **User Privacy**: Handle user data according to privacy regulations
+- **Client Secrets**: Never expose client secrets in application-side code.
+- **Token Scope**: Use appropriate scopes for your specific use case.
+- **Rate Limiting**: If you exceed the rate limits, you'll receive an `HTTP 429 Too Many Requests` error. Contact your Account Manager to request higher rate limits if needed.
+- **User Privacy**: Handle user data according to privacy regulations of your user-base.
 
 ## Prerequisites
 
@@ -98,7 +98,7 @@ Before you begin, ensure you have:
 - [ ] Admin access to your Adobe organization
 - [ ] Basic understanding of API integration concepts
 
-Now that you have the prerequisites in place, let's walk through the step-by-step process to onboard as a partner and configure partner-based usage for the Generate Image Module.
+Now that you have the prerequisites in place, let's walk through the step-by-step process to onboard as a partner and configure Partner-based usage for the Generate Image Module.
 
 ## Step 1: Add Firefly Services to Your Project
 
@@ -112,26 +112,26 @@ Now that you have the prerequisites in place, let's walk through the step-by-ste
 
 2. Share your **Technical Account ID** and **Client ID** with Adobe (**Manual Process**)
 
-   - You can find these details in the OAuth Server-to-Server credentials section
-   - This is a manual coordination step that requires direct communication with Adobe
+   - Find these details in the OAuth Server-to-Server credentials section
+   - Contact Adobe directly to coordinate this step
 
-![Screenshot: Developer Console - OAuth Settings Location](./img/screenshot-oauth-settings.png)
+![Screenshot of Adobe Developer Console interface showing the left navigation panel with Projects expanded, displaying the path: Projects > Your project > Credentials > OAuth Server-to-Server, with the OAuth Server-to-Server option highlighted](./img/screenshot-oauth-settings.png)
 *Screenshot showing where to find OAuth settings in Developer Console*
 
-Adobe will use these credentials to configure rate limiting based on your Technical Account ID
+Adobe uses these credentials to configure rate limiting based on your Technical Account ID
 
-   - This process may take some time to complete
+   - This process takes 2-5 business days to complete
    - You'll be notified when the configuration is ready
 
 <InlineAlert variant="info" slots="text" />
 
-**Rate Limiting Coordination**: Work with your Adobe account manager or partner manager to determine an appropriate rate limit (RPM - Requests Per Minute) based on your expected traffic volume, Monthly Active Users (MAU), and peak usage patterns. Adobe Firefly API has default rate limits of **4 requests per minute (RPM)** and **9,000 requests per day (RPD)** per organization. Higher limits can be requested through your account manager. For more details, see the [Rate Limits documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/rate-limits/).
+**Rate Limiting Coordination**: Coordinate with your Adobe Account Manager or Partner Manager to determine an appropriate rate limit (RPM - Requests Per Minute). Consider your expected traffic volume, Monthly Active Users (MAU), and peak usage patterns. Adobe Firefly API has default rate limits of **4 requests per minute (RPM)** and **9,000 requests per day (RPD)** per organization. Higher limits can be requested through your Account Manager. For more details, see the [Rate Limits documentation](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/rate-limits/).
 
 ## Step 3: Set Up Token Management
 
 <InlineAlert variant="help" slots="text1, text2, text3" />
 
-Adobe will configure token expiry settings for your service with the following recommendations:
+Adobe configures token expiry settings for your service with the following recommendations:
 
 **Recommended Configuration:**
 
@@ -148,36 +148,39 @@ For detailed implementation guidance on authentication and token management, ref
 
 ## Step 4: Implement Backend Authentication
 
-**Important:** You must set up a secure backend service to authenticate with Adobe IMS. This is a requirement for partner-based usage integration.
+**Important:** Set up a secure backend service to authenticate with Adobe IMS. This is a requirement for Partner-based usage integration.
 
-Your backend service must securely authenticate with Adobe IMS to retrieve access tokens. Based on the [Firefly Services Authentication guide](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/authentication/), implement the following:
+Your backend service authenticates with Adobe IMS to retrieve access tokens. Based on the [Firefly Services Authentication guide](https://developer.adobe.com/firefly-services/docs/firefly-api/guides/concepts/authentication/), implement the following:
 
 1. **Secure Credential Storage**: Store your Client ID and Client Secret securely on your server
 2. **Token Retrieval**: Make requests to Adobe IMS endpoint to obtain access tokens
-3. **Token Management**: Handle token expiration (tokens are valid for 24 hours)
+3. **Token Management**: Handle token expiration (Recommended: 5 minutes)
 
 **Example Server-Side Token Retrieval:**
 
 ```javascript
 // Server-side token retrieval
 async function getAccessToken() {
+  // Make POST request to Adobe IMS token endpoint
   const response = await fetch('https://ims-na1.adobelogin.com/ims/token/v3', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/x-www-form-urlencoded'
     },
+    // Use client credentials grant type for server-to-server authentication
     body: new URLSearchParams({
       'grant_type': 'client_credentials',
-      'client_id': process.env.FIREFLY_SERVICES_CLIENT_ID,
-      'client_secret': process.env.FIREFLY_SERVICES_CLIENT_SECRET,
-      'scope': 'openid,AdobeID,session,additional_info,read_organizations,firefly_api,ff_apis'
+      'client_id': process.env.FIREFLY_SERVICES_CLIENT_ID, // Your client ID from environment variables
+      'client_secret': process.env.FIREFLY_SERVICES_CLIENT_SECRET, // Your client secret from environment variables
+      'scope': 'openid,AdobeID,session,additional_info,read_organizations,firefly_api,ff_apis' // Required scopes for Firefly Services
     })
   });
   
+  // Parse response and extract token information
   const data = await response.json();
   return {
-    access_token: data.access_token,
-    expires_in: data.expires_in
+    access_token: data.access_token, // The actual access token
+    expires_in: data.expires_in // Token expiration time in seconds
   };
 }
 ```
@@ -191,7 +194,7 @@ Set up an API endpoint in your backend service that your client applications can
 
    - `"clientAccessToken"`
    - `"tokenExpiryTimestampMs"`
-   - `"tokenId"` (optional field for user identification)
+   - `"userGuid"` (optional field for user identification)
 
 **Response Format:**
 
@@ -199,7 +202,7 @@ Set up an API endpoint in your backend service that your client applications can
 {
   "clientAccessToken": "your-generated-token",
   "tokenExpiryTimestampMs": 1234567890123,
-  "tokenId": "optional-user-identifier"
+  "userGuid": "optional-user-identifier"
 }
 ```
 
@@ -219,14 +222,14 @@ async function fetchClientToken() {
   return {
     clientAccessToken: tokenData.clientAccessToken,
     tokenExpiryTimestampMs: tokenData.tokenExpiryTimestampMs,
-    userGuid: tokenData.tokenId
+    userGuid: tokenData.userGuid
   };
 }
 ```
 
 ## Step 6: Enable Client-Side Integration
 
-1. Ensure your application can call your backend service
+1. Configure your application to call your backend service
 2. Implement token refresh logic that triggers before expiry
 3. Configure your application to use the project's client ID, client secret, and scope for MPS API calls
 
@@ -254,7 +257,7 @@ const ccEverywhere = await CCEverywhere.initialize({
 
 **ClientAuthProvider Interface:**
 
-The `clientAuthProvider` callback should return an object containing token, expiry time, and user GUID in the appropriate format:
+The `clientAuthProvider` callback should return an object containing token, expiry time, and userGuid in the appropriate format:
 
 ```typescript
 interface ClientAuthProvider {
