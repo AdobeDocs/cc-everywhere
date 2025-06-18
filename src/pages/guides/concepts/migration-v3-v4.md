@@ -66,8 +66,8 @@ We are introducing module APIs through module workflow.
 
 #### Deprecated APIs
 
-- [createDesign](../../v3/reference/CCEverywhere/create_design/)
-- [editDesign](../../v3/reference/CCEverywhere/edit_design/)
+- [createDesign](../../v3/reference/cc-everywhere/create-design/index.md)
+- [editDesign](../../v3/reference/cc-everywhere/edit-design/index.md)
 
 ### Quick action workflow
 
@@ -81,7 +81,7 @@ We are introducing module APIs through module workflow.
 
 #### Deprecated API
 
-[openQuickAction](../../v3/reference/CCEverywhere/quick_actions/index.md) has been replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
+[openQuickAction](../../v3/reference/cc-everywhere/quick-actions/index.md) has been replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
 
 ## Workflow API enhancements
 

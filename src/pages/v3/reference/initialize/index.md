@@ -25,11 +25,11 @@ IMPORTANT: Deprecation Warning
 
 We are no longer approving new integrations using SDK v3, which will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](../CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](../cc-everywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
 
 ```ts
 initialize: (hostInfo: HostInfo, configParams?: ConfigParams) =>

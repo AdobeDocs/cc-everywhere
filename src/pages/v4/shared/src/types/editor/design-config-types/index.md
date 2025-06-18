@@ -6,13 +6,13 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CreateDesignConfig](../design-config-types/interfaces/create-design-config.md) | - |
-| [CreateWithAssetDesignConfig](../design-config-types/interfaces/create-with-asset-design-config.md) | - |
-| [CreateWithTemplateDesignConfig](../design-config-types/interfaces/create-with-template-design-config.md) | - |
-| [EditDesignConfig](../design-config-types/interfaces/edit-design-config.md) | - |
+| [CreateDesignConfig](interfaces/create-design-config.md) | - |
+| [CreateWithAssetDesignConfig](interfaces/create-with-asset-design-config.md) | - |
+| [CreateWithTemplateDesignConfig](interfaces/create-with-template-design-config.md) | - |
+| [EditDesignConfig](interfaces/edit-design-config.md) | - |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [DesignConfig](../design-config-types/type-aliases/design-config.md) | - |
+| [DesignConfig](type-aliases/design-config.md) | - |

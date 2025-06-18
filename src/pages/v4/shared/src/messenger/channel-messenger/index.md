@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [default](../channel-messenger/classes/default.md) | - |
+| [default](classes/default.md) | - |

@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [ModuleWorkflow](../module-workflow-types/interfaces/module-workflow.md) | - |
+| [ModuleWorkflow](interfaces/module-workflow.md) | - |

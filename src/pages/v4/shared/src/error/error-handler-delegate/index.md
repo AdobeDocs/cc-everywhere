@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ErrorHandlerDelegate](../error-handler-delegate/classes/error-handler-delegate.md) | - |
+| [ErrorHandlerDelegate](classes/error-handler-delegate.md) | - |

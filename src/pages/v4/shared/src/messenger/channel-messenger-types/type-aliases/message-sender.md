@@ -8,7 +8,7 @@ type MessageSender: (messagePayload) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `messagePayload` | [`MessagePayload`](../../channel-messenger-types/type-aliases/message-payload.md) |
+| `messagePayload` | [`MessagePayload`](message-payload.md) |
 
 ## Returns
 

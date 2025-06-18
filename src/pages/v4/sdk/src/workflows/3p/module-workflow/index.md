@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ModuleWorkflow](../module-workflow/classes/module-workflow.md) | - |
+| [ModuleWorkflow](classes/module-workflow.md) | - |

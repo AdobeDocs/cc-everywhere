@@ -88,7 +88,7 @@ The **full Adobe Express application** has been integrated! Your users can now c
 
 Please don't be scared by the red warning toast at the bottom of the screen saying _"The use of this experience powered by Adobe Express has not been approved yet by Adobe"_.
 
-It is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+It is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.
 
 ### Inspecting the code
 
@@ -147,7 +147,7 @@ Congratulations! You have successfully **set up the Adobe Express Embed SDK in y
 What's next for you? Here are a few suggestions:
 
 - Feel free to use this [sample project](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-getting-started) as a starting point for your experiments.
-- Check out more [tutorials](../tutorials/) to learn about the Embed SDK's many features.
-- The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](../../reference/).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
+- Check out more [tutorials](index.md) to learn about the Embed SDK's many features.
+- The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](../../reference/index.md).
+- Visit the [changelog](../changelog/index.md) page to keep up with the **latest updates** and improvements.
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).

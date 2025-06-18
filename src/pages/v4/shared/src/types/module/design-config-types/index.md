@@ -6,6 +6,6 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDesignConfig](../design-config-types/interfaces/edit-image-design-config.md) | - |
-| [TextToImageDesignConfig](../design-config-types/interfaces/text-to-image-design-config.md) | - |
-| [WarmupDesignConfig](../design-config-types/interfaces/warmup-design-config.md) | - |
+| [EditImageDesignConfig](interfaces/edit-image-design-config.md) | - |
+| [TextToImageDesignConfig](interfaces/text-to-image-design-config.md) | - |
+| [WarmupDesignConfig](interfaces/warmup-design-config.md) | - |

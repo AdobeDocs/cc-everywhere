@@ -16,7 +16,7 @@ new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>
 
 #### Returns
 
-[`ErrorHandlerDelegate`](../../error-handler-delegate/classes/error-handler-delegate.md)<`T`\>
+[`ErrorHandlerDelegate`](error-handler-delegate.md)<`T`\>
 
 ## Methods
 

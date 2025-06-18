@@ -20,7 +20,7 @@ IMPORTANT: Deprecation Warning
 
 We're only accepting new integrations using the SDK version 4.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## Embed and initialize the SDK
 
@@ -29,7 +29,7 @@ Please migrate to V4 as soon as possible: we've created a [Migration Guide](../.
 
 ## CCEverywhere
 
-Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
+Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./cc-everywhere/index.md) object.
 
 As of today, it exposes 5 methods:
 

@@ -6,8 +6,8 @@
 
 ## Extended by
 
-- [`QuickActionDesignConfig`](../../design-config-types/interfaces/quick-action-design-config.md)
-- [`MergeVideosDesignConfig`](../../design-config-types/interfaces/merge-videos-design-config.md)
+- [`QuickActionDesignConfig`](quick-action-design-config.md)
+- [`MergeVideosDesignConfig`](merge-videos-design-config.md)
 
 ## Properties
 

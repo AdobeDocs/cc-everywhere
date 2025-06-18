@@ -14,7 +14,7 @@ type MessageListener: <T>(event) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `event` | `MessageEvent`<[`ChannelMessage`](../../channel-messenger-types/interfaces/channel-message.md)<`T`\>\> |
+| `event` | `MessageEvent`<[`ChannelMessage`](../interfaces/channel-message.md)<`T`\>\> |
 
 ## Returns
 

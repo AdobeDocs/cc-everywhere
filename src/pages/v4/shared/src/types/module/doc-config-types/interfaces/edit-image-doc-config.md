@@ -9,4 +9,4 @@
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) | - |
-| `intent?` | [`EditImageIntent`](../../doc-config-types/type-aliases/edit-image-intent.md) | intent that needs to be performed on the asset |
+| `intent?` | [`EditImageIntent`](../type-aliases/edit-image-intent.md) | intent that needs to be performed on the asset |

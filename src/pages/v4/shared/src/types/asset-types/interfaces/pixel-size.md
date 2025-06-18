@@ -2,12 +2,12 @@
 
 ## Extends
 
-- [`Size`](../../asset-types/interfaces/size.md)
+- [`Size`](size.md)
 
 ## Properties
 
 | Property | Type | Description | Overrides | Inherited from |
 | ------ | ------ | ------ | ------ | ------ |
-| `width` | `number` | **Minimum** 0 | - | [`Size`](../../asset-types/interfaces/size.md).`width` |
-| `height` | `number` | **Minimum** 0 | - | [`Size`](../../asset-types/interfaces/size.md).`height` |
-| `unit` | `PIXELS` | - | [`Size`](../../asset-types/interfaces/size.md).`unit` | - |
+| `width` | `number` | **Minimum** 0 | - | [`Size`](size.md).`width` |
+| `height` | `number` | **Minimum** 0 | - | [`Size`](size.md).`height` |
+| `unit` | `PIXELS` | - | [`Size`](size.md).`unit` | - |

@@ -30,7 +30,7 @@ new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>
 
 #### Returns
 
-[`ConsoleHandler`](../../console-handler/classes/console-handler.md)<`T`\>
+[`ConsoleHandler`](console-handler.md)<`T`\>
 
 #### Overrides
 

@@ -6,4 +6,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ConsoleHandler](../console-handler/classes/console-handler.md) | - |
+| [ConsoleHandler](classes/console-handler.md) | - |

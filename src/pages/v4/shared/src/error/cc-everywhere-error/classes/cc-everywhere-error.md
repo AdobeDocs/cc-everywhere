@@ -35,7 +35,7 @@ Constructor
 
 #### Returns
 
-[`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
 
 #### Overrides
 
@@ -82,7 +82,7 @@ customData?): CCEverywhereError<T>
 
 #### Returns
 
-[`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
 
 ***
 
@@ -106,7 +106,7 @@ static createErrorFromData<T>(data): CCEverywhereError<T>
 
 #### Returns
 
-[`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
 
 ***
 

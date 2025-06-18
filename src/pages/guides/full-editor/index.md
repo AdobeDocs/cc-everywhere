@@ -24,11 +24,11 @@ The SDK allows you to embed the full Adobe Express editor as an iframe in your o
 
 Users can access Adobe Express's huge template and asset library when starting to create in the editor. You can also launch the editor with a starting asset passed from your application. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
-* [Launch an embedded editor in your application](create_project/index.md)
-* [Load a previous project in the editor](edit_project/index.md)
+* [Launch an embedded editor in your application](../full-editor/create-project/index.md)
+* [Load a previous project in the editor](../full-editor/edit-project/index.md)
 
 ## Explore the SDK
 
-If you are more interested in quick editing tools, refer to our quick action [guide](../quick_actions/index.md).
+If you are more interested in quick editing tools, refer to our quick action [guide](../quick-actions/index.md).
 
 If you are more interested in surfacing a contextual editing experience, refer to our modules [guide](../modules/index.md).

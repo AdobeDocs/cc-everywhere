@@ -31,7 +31,7 @@ slice(
 
 #### Returns
 
-[`Blob`](../../asset-types/interfaces/blob.md)
+[`Blob`](blob.md)
 
 ***
 

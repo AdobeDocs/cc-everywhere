@@ -22,7 +22,7 @@ contributors:
 
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](../CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](../cc-everywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
 
 ```ts
 initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>

@@ -19,7 +19,7 @@ contributors:
 
 Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption.
 
-We're only accepting new integrations using the SDK version 4. Refer to our [migration guide](../../guides/concepts/migration_v3_v4.md) for detailed instructions.
+We're only accepting new integrations using the SDK version 4. Refer to our [migration guide](../../guides/concepts/migration-v3-v4.md) for detailed instructions.
 
 This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a [CCEverywhere](#cceverywhere) object.
 

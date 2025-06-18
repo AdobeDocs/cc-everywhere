@@ -16,7 +16,7 @@ new FeatureFlagService(): FeatureFlagService
 
 #### Returns
 
-[`FeatureFlagService`](../../feature-flag-service/classes/feature-flag-service.md)
+[`FeatureFlagService`](feature-flag-service.md)
 
 ## Methods
 

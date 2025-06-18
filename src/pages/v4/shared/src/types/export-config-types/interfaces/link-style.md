@@ -2,10 +2,10 @@
 
 ## Extends
 
-- [`Style`](../../export-config-types/interfaces/style.md)
+- [`Style`](style.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `uiType` | `LINK` | [`Style`](../../export-config-types/interfaces/style.md).`uiType` |
+| `uiType` | `LINK` | [`Style`](style.md).`uiType` |

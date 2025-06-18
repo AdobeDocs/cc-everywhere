@@ -10,7 +10,7 @@ static instance(): ErrorHandler
 
 #### Returns
 
-[`ErrorHandler`](../../error-handler/classes/error-handler.md)
+[`ErrorHandler`](error-handler.md)
 
 ***
 

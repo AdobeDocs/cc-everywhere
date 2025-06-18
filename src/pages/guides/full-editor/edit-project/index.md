@@ -34,8 +34,8 @@ editor.edit(docConfig, appConfig, exportConfig, containerConfig);
 
 | Property | Type| Description
 | :-- | :-- | :--
-| docConfig | [EditDocConfig](../../../reference/CCEverywhere/editor/index.md#editdocconfig) | Pass the ID of the document to open
-| appConfig | [BaseEditorAppConfig](../../../reference/CCEverywhere/editor/index.md#baseeditorappconfig) | Parameters to configure editor/modal UI
+| docConfig | [EditDocConfig](../../../reference/cc-everywhere/editor/index.md#editdocconfig) | Pass the ID of the document to open
+| appConfig | [BaseEditorAppConfig](../../../reference/cc-everywhere/editor/index.md#baseeditorappconfig) | Parameters to configure editor/modal UI
 | exportConfig | [ExportOptions](../../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
 | containerConfig | [ContainerConfig](../../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
 

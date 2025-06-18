@@ -221,7 +221,7 @@ function renameFiles(map) {
 }
 
 try {
-    const files = getDeployableFiles('src/pages/v4');
+    const files = getDeployableFiles();
     const fileMap = getFileMap(files);
 
     const mdFiles = getMarkdownFiles();
@@ -236,12 +236,10 @@ try {
         appendRedirects(fileMap, pathPrefix);
     }
 
-    const gatsbyConfigFiles = ['gatsby-config.js', 'api-refs-sidebar.json'];
-    gatsbyConfigFiles.forEach(file => {
-        if(fs.existsSync(file)) {
-            renameLinksInGatsbyConfigFile(fileMap, file);
-        }
-    })
+    const gatsbyConfigFile = 'gatsby-config.js';
+    if(fs.existsSync(gatsbyConfigFile)) {
+        renameLinksInGatsbyConfigFile(fileMap, gatsbyConfigFile);
+    }
 
     renameFiles(fileMap);
 

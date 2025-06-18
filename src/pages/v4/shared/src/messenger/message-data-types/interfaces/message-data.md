@@ -2,4 +2,4 @@
 
 ## Extended by
 
-- [`HostEventData`](../../message-data-types/interfaces/host-event-data.md)
+- [`HostEventData`](host-event-data.md)

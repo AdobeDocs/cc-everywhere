@@ -189,7 +189,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_IMAGE_DATA_URL
 
-- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided `Base64` image data is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/cc-everywhere/editor/index.md#createwithasset), the provided `Base64` image data is invalid.
 - **What to do**: Ensure the image data is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -214,7 +214,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_VIDEO_DATA_URL
 
-- **What it means**: While using [QuickAction](../../reference/CCEverywhere/quickAction/index.md), the provided video data URL is invalid.
+- **What it means**: While using [QuickAction](../../reference/cc-everywhere/quick-action/index.md), the provided video data URL is invalid.
 - **What to do**: Ensure the video data URL is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -239,7 +239,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASSET_TYPE_URL
 
-- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided asset type URL is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/cc-everywhere/editor/index.md#createwithasset), the provided asset type URL is invalid.
 - **What to do**: Ensure the asset type URL is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -255,7 +255,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASSET_TYPE
 
-- **What it means**: When [merging videos](../../reference/CCEverywhere/quickAction/index.md#mergevideo), the assets should only be either images or videos.
+- **What it means**: When [merging videos](../../reference/cc-everywhere/quick-action/index.md#mergevideo), the assets should only be either images or videos.
 - **What to do**: Ensure the assets are either images or videos.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -271,7 +271,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASSET_DATA_TYPE
 
-- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided asset data type is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/cc-everywhere/editor/index.md#createwithasset), the provided asset data type is invalid.
 - **What to do**: Ensure the asset data type is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -367,7 +367,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### NO_ACTIVE_WORKFLOW
 
-- **What it means**: You're trying to call [`close`](../../reference/CCEverywhere/close/) or [`terminate`](../../reference/CCEverywhere/terminate/) when there's no active workflow.
+- **What it means**: You're trying to call [`close`](../../reference/cc-everywhere/close/index.md) or [`terminate`](../../reference/cc-everywhere/terminate/index.md) when there's no active workflow.
 - **What to do**: Ensure a workflow is active before calling `close` or `terminate`.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -404,7 +404,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASPECT_RATIO_VALUE
 
-- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided aspect ratio value is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/cc-everywhere/editor/index.md#createwithasset), the provided aspect ratio value is invalid.
 - **What to do**: Ensure the aspect ratio value is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -424,7 +424,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_SIZE_VALUE
 
-- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the dimensions (aspect ratio, width, and height) of the asset are invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/cc-everywhere/editor/index.md#createwithasset), the dimensions (aspect ratio, width, and height) of the asset are invalid.
 - **What to do**: Validate the dimensions to ensure they meet the required constraints.
 - **User Experience**: This issue can be fixed.
 - **Example**:

@@ -37,7 +37,7 @@ Constructor to initialize CCEverywhere object.
 
 #### Returns
 
-[`CCEverywhereBase`](../../cc-everywhere-base/classes/cc-everywhere-base.md)
+[`CCEverywhereBase`](cc-everywhere-base.md)
 
 ## Accessors
 
@@ -51,7 +51,7 @@ set static activeInstance(instance): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| [`CCEverywhereBase`](../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+| `instance` | `undefined` \| [`CCEverywhereBase`](cc-everywhere-base.md) |
 
 ## Methods
 

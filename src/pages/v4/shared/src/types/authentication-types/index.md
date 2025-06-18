@@ -6,32 +6,32 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ValidateTokenError](../authentication-types/enumerations/validate-token-error.md) | - |
-| [AuthMode](../authentication-types/enumerations/auth-mode.md) | Enum representing different authentication modes. |
+| [ValidateTokenError](enumerations/validate-token-error.md) | - |
+| [AuthMode](enumerations/auth-mode.md) | Enum representing different authentication modes. |
 
 ### Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [AuthConfig](../authentication-types/interfaces/auth-config.md) | - |
-| [PreSignedInAuthConfig](../authentication-types/interfaces/pre-signed-in-auth-config.md) | - |
-| [IMSAuthConfig](../authentication-types/interfaces/ims-auth-config.md) | - |
-| [BaseAuthOption](../authentication-types/interfaces/base-auth-option.md) | - |
-| [UpfrontAuthOption](../authentication-types/interfaces/upfront-auth-option.md) | - |
-| [DelayedAuthOption](../authentication-types/interfaces/delayed-auth-option.md) | - |
-| [PreSignedInAuthOption](../authentication-types/interfaces/pre-signed-in-auth-option.md) | - |
-| [ImsJumpAuthOption](../authentication-types/interfaces/ims-jump-auth-option.md) | - |
-| [UserInfo](../authentication-types/interfaces/user-info.md) | Base class for user related information. |
+| [AuthConfig](interfaces/auth-config.md) | - |
+| [PreSignedInAuthConfig](interfaces/pre-signed-in-auth-config.md) | - |
+| [IMSAuthConfig](interfaces/ims-auth-config.md) | - |
+| [BaseAuthOption](interfaces/base-auth-option.md) | - |
+| [UpfrontAuthOption](interfaces/upfront-auth-option.md) | - |
+| [DelayedAuthOption](interfaces/delayed-auth-option.md) | - |
+| [PreSignedInAuthOption](interfaces/pre-signed-in-auth-option.md) | - |
+| [ImsJumpAuthOption](interfaces/ims-jump-auth-option.md) | - |
+| [UserInfo](interfaces/user-info.md) | Base class for user related information. |
 
 ### Type Aliases
 
 | Type alias | Description |
 | ------ | ------ |
-| [AuthOption](../authentication-types/type-aliases/auth-option.md) | - |
+| [AuthOption](type-aliases/auth-option.md) | - |
 
 ### Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [IMS\_JUMP\_ERROR\_KEY](../authentication-types/variables/ims-jump-error-key.md) | - |
-| [IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY](../authentication-types/variables/ims-jump-error-description-key.md) | - |
+| [IMS\_JUMP\_ERROR\_KEY](variables/ims-jump-error-key.md) | - |
+| [IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY](variables/ims-jump-error-description-key.md) | - |

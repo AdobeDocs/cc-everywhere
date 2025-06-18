@@ -6,4 +6,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Workflow](../workflow-types/enumerations/workflow.md) | - |
+| [Workflow](enumerations/workflow.md) | - |

@@ -6,4 +6,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [State](../cc-everywhere-types/enumerations/state.md) | - |
+| [State](enumerations/state.md) | - |

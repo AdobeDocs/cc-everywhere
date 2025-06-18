@@ -25,7 +25,7 @@ new default(
 
 #### Returns
 
-[`default`](../../channel-messenger/classes/default.md)
+[`default`](default.md)
 
 ## Methods
 

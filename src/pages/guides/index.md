@@ -97,7 +97,7 @@ Explore our tools:
 
 ### Modules: Focused Editing Experiences
 
-[Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
+[Modules](modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
 
 **Available modules:**
 
@@ -117,13 +117,13 @@ Explore our tools:
 
 <DiscoverBlock slots="link, text"/>
 
-[Quickstart Guide](./quickstart/)
+[Quickstart Guide](./quickstart/index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](./tutorials/)
+[Tutorials](./tutorials/index.md)
 
 Explore the collection of tutorials.
 
@@ -141,6 +141,6 @@ If you need assistance or have questions about the Adobe Express Embed SDK, visi
 
 <DiscoverBlock slots="link, text"/>
 
-[Frequently Asked Questions](./troubleshooting/faq/)
+[Frequently Asked Questions](./troubleshooting/faq/index.md)
 
 Read our FAQ.

@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [ErrorData](../error-data/interfaces/error-data.md) | ********************************************************************** |
+| [ErrorData](interfaces/error-data.md) | ********************************************************************** |

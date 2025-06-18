@@ -20,7 +20,7 @@ contributors:
 
 ## CCEverywhere
 
-Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
+Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./cc-everywhere/index.md) object.
 
 As of today, it exposes:
 

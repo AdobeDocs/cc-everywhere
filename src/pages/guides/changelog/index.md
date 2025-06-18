@@ -20,7 +20,7 @@ contributors:
 
 ### SDK v1 and v2 End of Life
 
-Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
+Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration-v3-v4.md) for detailed instructions.
 
 ## [4.29.22] 2025-05-28
 
@@ -187,7 +187,7 @@ Fixed loader CSS for frictionless experience.
 ### Enhancements
 
 - Redesigned the entire [SDK Reference](../../v4/index.md) section, providing full APIs coverage.
-- Added a V3 to V4 [Migration Guide](../concepts/migration_v3_v4.md).
+- Added a V3 to V4 [Migration Guide](../concepts/migration-v3-v4.md).
 
 ### Added
 

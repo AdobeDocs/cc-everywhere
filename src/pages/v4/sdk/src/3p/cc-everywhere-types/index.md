@@ -6,4 +6,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CCEverywhereInterface](../cc-everywhere-types/interfaces/cc-everywhere-interface.md) | - |
+| [CCEverywhereInterface](interfaces/cc-everywhere-interface.md) | - |

@@ -122,7 +122,7 @@ module.exports = {
           },
           {
             title: "V3 to V4 Migration guide",
-            path: "/guides/concepts/migration_v3_v4.md",
+            path: "/guides/concepts/migration-v3-v4.md",
           },
           // {
           //   title: "UI Customization",
