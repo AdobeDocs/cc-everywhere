@@ -39,7 +39,7 @@ Lower your file size by changing your PNG images into JPG files.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToJPEG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttojpeg)
 
-***
+<HorizontalLine />
 
 ### convertToPNG()
 
@@ -70,7 +70,7 @@ Save your images as PNG files to improve file quality.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToPNG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttopng)
 
-***
+<HorizontalLine />
 
 ### convertToSVG()
 
@@ -101,7 +101,7 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToSVG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttosvg)
 
-***
+<HorizontalLine />
 
 ### cropImage()
 
@@ -132,7 +132,7 @@ Transform your image into the perfect shape or size in seconds.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`cropImage`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#cropimage)
 
-***
+<HorizontalLine />
 
 ### resizeImage()
 
@@ -163,7 +163,7 @@ Change the dimensions of any photo.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`resizeImage`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#resizeimage)
 
-***
+<HorizontalLine />
 
 ### removeBackground()
 
@@ -194,7 +194,7 @@ Easily remove the background of your photos.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`removeBackground`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#removebackground)
 
-***
+<HorizontalLine />
 
 ### generateQRCode()
 
@@ -225,7 +225,7 @@ Generate a QR Code for a URL.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`generateQRCode`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#generateqrcode)
 
-***
+<HorizontalLine />
 
 ### convertToGIF()
 
@@ -256,7 +256,7 @@ Convert a video asset to GIF format.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToGIF`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttogif)
 
-***
+<HorizontalLine />
 
 ### convertToMP4()
 
@@ -287,7 +287,7 @@ Convert a video asset to MP4 format.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToMP4`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttomp4)
 
-***
+<HorizontalLine />
 
 ### cropVideo()
 
@@ -318,7 +318,7 @@ Transform your video into the perfect shape or size in seconds.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`cropVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#cropvideo)
 
-***
+<HorizontalLine />
 
 ### mergeVideos()
 
@@ -349,7 +349,7 @@ Collate multiple video/photo into a single video.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`mergeVideos`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#mergevideos)
 
-***
+<HorizontalLine />
 
 ### resizeVideo()
 
@@ -380,7 +380,7 @@ Change the dimensions of any video.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`resizeVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#resizevideo)
 
-***
+<HorizontalLine />
 
 ### trimVideo()
 
@@ -411,7 +411,7 @@ Trim a video to a desired length.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`trimVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#trimvideo)
 
-***
+<HorizontalLine />
 
 ### animateFromAudio()
 
@@ -442,7 +442,7 @@ Create an animated video from an audio.
 
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`animateFromAudio`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#animatefromaudio)
 
-***
+<HorizontalLine />
 
 ### captionVideo()
 

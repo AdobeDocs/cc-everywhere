@@ -35,7 +35,7 @@ Constructor
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md) `T`
 
 #### Overrides
 
@@ -82,9 +82,9 @@ customData?): CCEverywhereError<T>
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md) `T`
 
-***
+<HorizontalLine />
 
 ### createErrorFromData()
 
@@ -102,13 +102,13 @@ static createErrorFromData<T>(data): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ErrorData`](../../error-data/interfaces/error-data.md)<`T`\> |
+| `data` | [`ErrorData`](../../error-data/interfaces/error-data.md) `T` |
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md)<`T`\>
+[`CCEverywhereError`](cc-everywhere-error.md) `T`
 
-***
+<HorizontalLine />
 
 ### toData()
 
@@ -120,9 +120,9 @@ Get a plain-object representation of the error..
 
 #### Returns
 
-[`ErrorData`](../../error-data/interfaces/error-data.md)<`T`\>
+[`ErrorData`](../../error-data/interfaces/error-data.md) `T`
 
-***
+<HorizontalLine />
 
 ### toString()
 

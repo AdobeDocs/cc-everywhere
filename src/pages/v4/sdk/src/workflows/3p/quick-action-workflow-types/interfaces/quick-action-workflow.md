@@ -25,7 +25,7 @@ convertToJPEG(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### convertToPNG()
 
@@ -50,7 +50,7 @@ convertToPNG(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### convertToSVG()
 
@@ -75,7 +75,7 @@ convertToSVG(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### cropImage()
 
@@ -100,7 +100,7 @@ cropImage(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### resizeImage()
 
@@ -125,7 +125,7 @@ resizeImage(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeBackground()
 
@@ -150,7 +150,7 @@ removeBackground(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### generateQRCode()
 
@@ -175,7 +175,7 @@ generateQRCode(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### convertToGIF()
 
@@ -200,7 +200,7 @@ convertToGIF(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### convertToMP4()
 
@@ -225,7 +225,7 @@ convertToMP4(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### cropVideo()
 
@@ -250,7 +250,7 @@ cropVideo(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### mergeVideos()
 
@@ -275,7 +275,7 @@ mergeVideos(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### resizeVideo()
 
@@ -300,7 +300,7 @@ resizeVideo(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### trimVideo()
 
@@ -325,7 +325,7 @@ trimVideo(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### animateFromAudio()
 
@@ -350,7 +350,7 @@ animateFromAudio(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### captionVideo()
 

@@ -227,9 +227,6 @@ Asset-related information received with `onPublish` callback in quick actions.
 | YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
 | Zoom background | "ZoomBackground" | 1,920 x 1,080px
 
-<!-- | Name tag | "NameTag" | 
-| Place card | "PlaceCard" | -->
-
 ## CCXOutputParams
 
 All properties are optional. Allows you to define data type and file type of output asset.
@@ -264,16 +261,6 @@ Optional string value that determines if the left panel should open by default. 
 Export options to surface to your user in the iframe. If no export options are specified, the editor falls back to the default layout options.
 
 `ExportOptions`:  [CustomExportButton](#customexportbutton) | [CustomExportLink](#customexportlink) | [ExportButtonGroup](#exportbuttongroup) | [NativeExportButton](#nativeexportbutton)
-
-<!-- ### ExportOptionType
-
-`optionType` property of `ExportOption`. Describes the type of `ExportOption`
-
-| Type | Value | Description
-| :-- | :-- | :-
-| "group" | Quick action will render a drop-down button
-| "button" | Quick action will render a standalone single button
-| "link" | Quick action will render text with hyperlink to export asset -->
 
 ### CustomExportButton
 

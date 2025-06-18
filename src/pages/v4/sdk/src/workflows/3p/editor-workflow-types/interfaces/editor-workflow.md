@@ -25,7 +25,7 @@ create(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### createWithAsset()
 
@@ -50,7 +50,7 @@ createWithAsset(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### createWithTemplate()
 
@@ -75,7 +75,7 @@ createWithTemplate(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### edit()
 

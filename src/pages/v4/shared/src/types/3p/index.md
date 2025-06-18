@@ -6,13 +6,13 @@
 
 Re-exports [HostInfo](host-info-types/type-aliases/host-info.md)
 
-***
+<HorizontalLine />
 
 ### ConfigParams
 
 Re-exports [ConfigParams](host-info-types/type-aliases/config-params.md)
 
-***
+<HorizontalLine />
 
 ### Editor
 

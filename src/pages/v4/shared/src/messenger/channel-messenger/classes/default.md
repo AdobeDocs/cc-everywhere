@@ -46,7 +46,7 @@ addTarget(targetChannel, targetChannelInfo): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeTarget()
 
@@ -64,7 +64,7 @@ removeTarget(targetChannel): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### hasTarget()
 
@@ -82,7 +82,7 @@ hasTarget(targetChannel): boolean
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### getTarget()
 
@@ -100,7 +100,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 `undefined` \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
 
-***
+<HorizontalLine />
 
 ### sendMessage()
 
@@ -122,14 +122,14 @@ sendMessage<T>(
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> \| [`MessageCompat`](../../message-types/type-aliases/message-compat.md)<`T`\> |
+| `message` | [`Message`](../../message-types/type-aliases/message.md) `T` \| [`MessageCompat`](../../message-types/type-aliases/message-compat.md) `T` |
 | `requestId`? | `string` |
 
 #### Returns
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### removeListener()
 

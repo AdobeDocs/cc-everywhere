@@ -41,7 +41,7 @@ reset(): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### didGetMessage()
 
@@ -59,7 +59,7 @@ didGetMessage<T>(message, requestId?): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](../../message-types/type-aliases/message.md) `T` |
 | `requestId`? | `string` |
 
 #### Returns
@@ -70,7 +70,7 @@ didGetMessage<T>(message, requestId?): void
 
 [`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).`didGetMessage`
 
-***
+<HorizontalLine />
 
 ### setTarget()
 
@@ -89,7 +89,7 @@ setTarget(targetChannel, targetChannelInfo): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeTarget()
 
@@ -107,7 +107,7 @@ removeTarget(targetChannel): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### hasTarget()
 
@@ -125,7 +125,7 @@ hasTarget(targetChannel): boolean
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### getTarget()
 
@@ -143,7 +143,7 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 `undefined` \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
 
-***
+<HorizontalLine />
 
 ### addListenerForTarget()
 
@@ -162,7 +162,7 @@ addListenerForTarget(targetChannel, callback): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### sendMessage()
 
@@ -181,13 +181,13 @@ sendMessage<T>(targetChannel, message): boolean
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) \| [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) \| [`Message`](../../message-types/type-aliases/message.md) `T` |
 
 #### Returns
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### sendMessageCompat()
 
@@ -208,7 +208,7 @@ Sends a message using a message channel that is compatible with older version of
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |  |
-| `message` | [`MessageCompat`](../../message-types/type-aliases/message-compat.md)<`T`\> | The message to send. |
+| `message` | [`MessageCompat`](../../message-types/type-aliases/message-compat.md) `T` | The message to send. |
 
 #### Returns
 
@@ -216,7 +216,7 @@ Sends a message using a message channel that is compatible with older version of
 
 - True if the message was successfully sent, false otherwise.
 
-***
+<HorizontalLine />
 
 ### addListener()
 
@@ -239,7 +239,7 @@ addListener(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeListener()
 
@@ -258,7 +258,7 @@ removeListener(messageType, listener): void
 
 `void`
 
-***
+<HorizontalLine />
 
 ### setRequestId()
 

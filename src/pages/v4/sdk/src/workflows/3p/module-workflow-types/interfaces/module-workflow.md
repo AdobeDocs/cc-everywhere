@@ -25,7 +25,7 @@ editImage(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### createImageFromText()
 

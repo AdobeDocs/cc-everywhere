@@ -61,7 +61,6 @@ initialize: (
 ) => Promise<CCEverywhere>;
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 The SDK should be initialized only once on each page.

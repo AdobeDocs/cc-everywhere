@@ -33,7 +33,7 @@ slice(
 
 [`Blob`](blob.md)
 
-***
+<HorizontalLine />
 
 ### stream()
 
@@ -43,9 +43,9 @@ stream(): ReadableStream<any>
 
 #### Returns
 
-`ReadableStream`<`any`\>
+`ReadableStream` `any`
 
-***
+<HorizontalLine />
 
 ### text()
 
@@ -55,9 +55,9 @@ text(): Promise<string>
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise` `string`
 
-***
+<HorizontalLine />
 
 ### arrayBuffer()
 
@@ -67,4 +67,4 @@ arrayBuffer(): Promise<ArrayBuffer>
 
 #### Returns
 
-`Promise`<`ArrayBuffer`\>
+`Promise` `ArrayBuffer`

@@ -6,13 +6,13 @@
 
 Re-exports [PublishParams](output-params-types/interfaces/publish-params.md)
 
-***
+<HorizontalLine />
 
 ### QuickActionPublishParams
 
 Re-exports [QuickActionPublishParams](output-params-types/interfaces/quick-action-publish-params.md)
 
-***
+<HorizontalLine />
 
 ### CCXPublishParams
 

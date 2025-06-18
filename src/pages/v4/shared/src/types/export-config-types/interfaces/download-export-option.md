@@ -2,7 +2,7 @@
 
 ## Extends
 
-- [`BaseExportOption`](base-export-option.md)<`U`\>
+- [`BaseExportOption`](base-export-option.md) `U`
 
 ## Type Parameters
 
