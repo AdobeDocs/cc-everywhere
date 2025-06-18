@@ -36,7 +36,7 @@ contributors:
 ---
 import "./landing-styles.css";
 
-<HeroSimple slots="image, heading, text" background="linear-gradient(180deg, #c946eb, #6372f5)" variant="halfWidth" textColor="white" />
+<HeroSimple slots="image, heading, text" background="linear-gradient(180deg, #c946eb, #6372f5)" textColor="white" />
 
 ![Hero image](./images/wide-SDK-Banner-570x400.png)
 
@@ -44,7 +44,7 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<Announcement slots="heading, text, button" />
+<Announcement slots="heading, text, button" variant="secondary"/>
 
 ### Demo App
 
