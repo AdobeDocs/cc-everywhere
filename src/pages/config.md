@@ -32,7 +32,7 @@
         - [Embed SDK integration tutorial](/guides/tutorials/getting-started.md) 
         - [Full Editor tutorial](/guides/tutorials/full-editor.md) 
     - [Submission and review](/guides/review/) 
-    - [Changelog](/guides/changelog/) 
+    - [Changelog](guides/changelog/index.md) 
     - [Troubleshooting](/guides/troubleshooting/faq/) 
         - [Adobe Express is not available](/guides/troubleshooting/express-unavailable-error.md) 
         - [FAQ](/guides/troubleshooting/faq/) 
