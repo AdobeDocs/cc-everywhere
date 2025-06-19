@@ -32,7 +32,8 @@
     "clean": "gatsby clean",
     "test:links": "./node_modules/.bin/remark --use remark-validate-links src/pages --quiet --frail",
     "test:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src",
-    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix"
+    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix",
+    "create-tutorial": "node scripts/create-tutorial.js"
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
