@@ -26,11 +26,9 @@ Learn how to [accomplish specific task] using the Adobe Express Embed SDK. By th
 
 ## Introduction
 
-Welcome to this hands-on tutorial! We'll walk you through building [brief description of what you'll build] using the Adobe Express Embed SDK. This tutorial is designed to get you up and running quickly with practical, working code.
 Welcome to this hands-on tutorial! We'll walk you through building [Brief introduction explaining what this tutorial covers and why it's useful] using the Adobe Express Embed SDK. This tutorial is designed to get you up and running quickly with practical, working code.
 
 
-By completing this tutorial, you'll learn how to:
 ### What you'll learn
 
 - [Specific learning objective 1]
@@ -41,7 +39,6 @@ By completing this tutorial, you'll learn how to:
 
 [Brief description of the end result with specific details about functionality]
 
-<InlineAlert variant="info" slots="text1" />
 ## Prerequisites
 
 Before you start, make sure you have:
