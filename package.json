@@ -12,7 +12,7 @@
     "url": "https://github.com/icaraps"
   },
   "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.14.18",
+    "@adobe/gatsby-theme-aio": "^4.15.1",
     "gatsby": "4.22.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -37,6 +37,7 @@
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {
+    "glob": "11.0.0",
     "markdownlint": "^0.35.0",
     "markdownlint-cli": "^0.41.0",
     "remark-cli": "^12.0.1",

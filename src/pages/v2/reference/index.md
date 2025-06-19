@@ -9,17 +9,17 @@ description: This is the reference page for the existing components in the SDK.
 contributors:
   - https://github.com/amandahuarng
   - https://github.com/pklaschka
---- 
+---
 
 # SDK Reference
 
-<InlineAlert variant="error" slots="header, text1, text2" />
+<InlineAlert variant="error" slots="header, text, text1" />
 
-IMPORTANT: Deprecation Warning
+### SDK v1 and v2 End of Life
 
-We are no longer approving integrations using using SDK V1, V2, or V3
+Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption.
 
-V1 and V2 are deprecated and V3 will be deprecated in 2024.
+We're only accepting new integrations using the SDK version 4. Refer to our [migration guide](../../guides/concepts/migration_v3_v4.md) for detailed instructions.
 
 This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](#cceverywhere) object. The v2 release introduces a new method: `terminate()`.
 
@@ -29,41 +29,41 @@ Note: As of March 2023, the `redirectUri` parameter is no longer being checked b
 
 #### `initialize: (HostInfo, ConfigParams?) => Promise<null | CCEverywhere>`
 
-The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page.  With the v2 release of the SDK, this method is now async.
+The default method `initialize()` is the API used to initialize the SDK. Make sure to call it only once a page. With the v2 release of the SDK, this method is now async.
 
 ```js
 // after loading the SDK into the window
 await window.CCEverywhere.initialize(
-    /* HostInfo */
-    {
-        clientId: YOUR_CLIENT_ID,
-        appName: YOUR_PROJECT_NAME,
-        appVersion: { major: 1, minor: 0 },
-        platformCategory: 'web', 
-    },
-    /* ConfigParams (optional) */
-    {
-        locale: 'en_US',
-    }
+  /* HostInfo */
+  {
+    clientId: YOUR_CLIENT_ID,
+    appName: YOUR_PROJECT_NAME,
+    appVersion: { major: 1, minor: 0 },
+    platformCategory: "web",
+  },
+  /* ConfigParams (optional) */
+  {
+    locale: "en_US",
+  }
 );
 ```
 
 ### HostInfo
 
-| Property | Type | Description
-| :-- | :--| :--
-|clientId | string | Your API Key
-|appName | string | Name of project folder created in user's Adobe Express account
-|appVersion | { major: number, minor: number, patch?: number} | Your app version
-| platformCategory | 'web' | Specify host app platform
+| Property         | Type                                            | Description                                                    |
+| :--------------- | :---------------------------------------------- | :------------------------------------------------------------- |
+| clientId         | string                                          | Your API Key                                                   |
+| appName          | string                                          | Name of project folder created in user's Adobe Express account |
+| appVersion       | { major: number, minor: number, patch?: number} | Your app version                                               |
+| platformCategory | 'web'                                           | Specify host app platform                                      |
 
 ### ConfigParams
 
-The **locale** field defaults to **'en_US'** if nothing is specified.  Visit the [customization](../../guides/full_editor/customization/index.md) page for a full locale list.
+The **locale** field defaults to **'en_US'** if nothing is specified. Visit the [customization](../../guides/full_editor/customization/index.md) page for a full locale list.
 
-| Property | Type | Description
-| :-- | :--| :--
-|locale | string | Language settings for SDK components
+| Property | Type   | Description                          |
+| :------- | :----- | :----------------------------------- |
+| locale   | string | Language settings for SDK components |
 
 ## CCEverywhere
 
@@ -81,5 +81,5 @@ As of today, it exposes 4 methods:
 
 The default method `terminate()` is available with v2.0.1+ of the SDK. This method will:
 
-* Return **true** once it successfully terminates the active instance of `CCEverywhere`
-* Return **false** if there is no active `CCEverywhere` instance.
+- Return **true** once it successfully terminates the active instance of `CCEverywhere`
+- Return **false** if there is no active `CCEverywhere` instance.

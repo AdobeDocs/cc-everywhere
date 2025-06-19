@@ -1,0 +1,23 @@
+# Enumeration: MessageType
+
+## Enumeration Members
+
+| Enumeration Member | Value |
+| ------ | ------ |
+| `INIT_TARGET_LOAD` | `"INIT_TARGET_LOAD"` |
+| `WILL_TARGET_LOAD` | `"WILL_TARGET_LOAD"` |
+| `DID_TARGET_LOAD` | `"DID_TARGET_LOAD"` |
+| `WILL_PUBLISH` | `"WILL_PUBLISH"` |
+| `DID_PUBLISH` | `"DID_PUBLISH"` |
+| `CANCEL` | `"CANCEL"` |
+| `ERROR` | `"ERROR"` |
+| `DID_COMPLETE` | `"DID_COMPLETE"` |
+| `LOGIN_COMPLETE` | `"LOGIN_COMPLETE"` |
+| `LOGIN_REQUEST` | `"LOGIN_REQUEST"` |
+| `TOKEN_REQUEST` | `"TOKEN_REQUEST"` |
+| `TOKEN_RESPONSE` | `"TOKEN_RESPONSE"` |
+| `PARAMS_REQUEST` | `"PARAMS_REQUEST"` |
+| `PARAMS_RESPONSE` | `"PARAMS_RESPONSE"` |
+| `CW_ASSET_RESPONSE` | `"CW_ASSET_RESPONSE"` |
+| `PUBLISH_STATUS` | `"PUBLISH_STATUS"` |
+| `EVENT` | `"EVENT"` |

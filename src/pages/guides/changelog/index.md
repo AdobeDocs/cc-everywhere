@@ -16,13 +16,77 @@ contributors:
 
 # Changelog
 
+<InlineAlert variant="error" slots="header, text" />
+
+### SDK v1 and v2 End of Life
+
+Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
+
+## [4.29.22] 2025-05-28
+
+### Added
+
+#### Unlocked new Edit Image v2 experience
+
+- [**`CCEverywhere.module.editImage()`**](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md): Introduced a [new Edit Image v2 experience](../concepts/edit-image-v2.md), rearchitected to deliver significantly improved performance and a better user experience.
+
+  **Key Features:**
+
+  - **Reduced load times** in the range of 35% to 50%.
+  - **Reduced memory consumption** by 35%.
+  - **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.
+
+  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [Edit Image v2](../concepts/edit-image-v2.md) page to learn more.
+
+#### Custom Community Wall
+
+- [**`CCEverywhere.TextToImageAppConfig.communityWallConfig`**](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Added a new `communityWallConfig` property to allow host applications to **populate the Community Wall with custom images** instead of Firefly's default assets.
+
+  Please refer to the [this section](../concepts/generate-image-v2.md#custom-community-wall) of the Generate Image v2 page for the implementation details.
+
+#### New APIs
+
+- Two new properties to the `AppConfig` object to control "Show margins" and "Show bleed" behavior have been added:
+  - [`CCEverywhere.EditorAppConfig.showPageMargin`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)
+  - [`CCEverywhere.EditorAppConfig.showBleedArea`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)
+- The PDF file type has been deprecated in the [`AppConfig.allowedFileTypes`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#properties) property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.
+
+### Documentation
+
+- Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
+
+## [4.28.19] 2025-05-05
+
+### Added
+
+- [`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties): A new optional `assetCollection` property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.
+- [`CCEverywhere.Callbacks.onIntentChange`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md#properties): A new optional `onIntentChange` callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.
+- Performance improvements and bug fixes.
+
+## [4.26.5] 2025-04-11
+
+### Added
+
+- [`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).
+- Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK.
+- Various performance improvements and bug fixes.
+
+## [4.22.9] 2025-03-12
+
+### Added
+
+- Added support for [Firefly Custom Models](../concepts/generate-image-v2.md#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.
+
+<!-- - [`CCEverywhere.EditImageAppConfig.disableSaveButtonOnExport`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#properties): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Introduced a feature to disable the save button based on the success of the save operation. This feature is controlled by the configuration option -->
+
 ## [4.21.17] 2025-02-27
 
 ### Added
 
 #### Unlocked new Generate Image V2 experience
 
-- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
+- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
   - When set to `"2"`, users can access the updated interface and features.
   - By default, this property is set to `"1"`, displaying the older experience.
 
@@ -37,11 +101,11 @@ contributors:
 
 **Configurations available in `CCEverywhere` after enabling the new UI:**
 
-- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options to be displayed on the thumbnail.
-- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Options for the Edit dropdown.
-- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for the Publish action.
-- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling fast mode default state.
-- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): Configuration for enabling or disabling specific features.
+- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Options to be displayed on the thumbnail.
+- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Options for the Edit dropdown.
+- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Configuration for the Publish action.
+- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Configuration for enabling or disabling fast mode default state.
+- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Configuration for enabling or disabling specific features.
 
 #### Concept guide for Generate Image V2
 
@@ -54,7 +118,7 @@ Updated the [Demo App](https://demo.expressembed.com/) to showcase the Generate 
 - Navigate to **Generative** -> **Generate image** -> **Next**
 - In the Configuration options, Select generate image version as V2.
 
-  ![Demo App](./images/demo-app.png)
+[![Demo App](./images/demo-app.png)](https://demo.expressembed.com/)
 
 - Select all the options you need and click **Create with Adobe Express**
 
@@ -70,8 +134,8 @@ Fixed loader CSS for frictionless experience.
 
 ### Bug Fixes
 
-- Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md#createwithasset) method.
-- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/Asset.types/type-aliases/UrlAsset.md) as the [`datatype`](../../v4/shared/src/types/Asset.types/enumerations/AssetDataType.md) for a video [`asset`](../../v4/shared/src/types/Asset.types/interfaces/AssetBase.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
+- Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#createwithasset) method.
+- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/asset-types/type-aliases/url-asset.md) as the [`datatype`](../../v4/shared/src/types/asset-types/enumerations/asset-data-type.md) for a video [`asset`](../../v4/shared/src/types/asset-types/interfaces/asset-base.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
 
 ## [4.19.22] 2025-01-31
 
@@ -83,15 +147,15 @@ Fixed loader CSS for frictionless experience.
 
 ### Added
 
-- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/ExportConfig.types/enumerations/EditFurtherIntent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
-- Added coverage for the [Asset](../../v4/shared/src/types/Asset.types/index.md) type.
+- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Added coverage for the [Asset](../../v4/shared/src/types/asset-types/index.md) type.
 - Various performance improvements and bug fixes.
 
 ## [4.18.14] 2025-01-09
 
 ### Added
 
-- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/PublishParams.types/interfaces/TextToImagePublishParams.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
+- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
 
 ## [4.17.33] 2024-12-16
 
@@ -101,14 +165,14 @@ Fixed loader CSS for frictionless experience.
 
 ### Added
 
-- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
+- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
 
 ## [4.16.11] - 2024-11-18
 
 ### Enhancements
 
-- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
-- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/AppConfig.types/interfaces/TextToImageAppConfig.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
 
 <!-- ### Added
 

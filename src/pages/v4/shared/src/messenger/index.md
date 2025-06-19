@@ -4,160 +4,196 @@
 
 ### Status
 
-Re-exports [Status](Message.types/enumerations/Status.md)
+Re-exports [Status](message-types/enumerations/status.md)
+
+***
+
+### PublishCallbackStatus
+
+Re-exports [PublishCallbackStatus](message-types/enumerations/publish-callback-status.md)
 
 ***
 
 ### LoadStatus
 
-Re-exports [LoadStatus](Message.types/enumerations/LoadStatus.md)
+Re-exports [LoadStatus](message-types/enumerations/load-status.md)
 
 ***
 
 ### CancelReason
 
-Re-exports [CancelReason](Message.types/enumerations/CancelReason.md)
+Re-exports [CancelReason](message-types/enumerations/cancel-reason.md)
+
+***
+
+### WorkflowLoadCompleted
+
+Re-exports [WorkflowLoadCompleted](message-types/enumerations/workflow-load-completed.md)
 
 ***
 
 ### MessageType
 
-Re-exports [MessageType](Message.types/enumerations/MessageType.md)
+Re-exports [MessageType](message-types/enumerations/message-type.md)
 
 ***
 
 ### MessageDataMap
 
-Re-exports [MessageDataMap](Message.types/interfaces/MessageDataMap.md)
+Re-exports [MessageDataMap](message-types/interfaces/message-data-map.md)
 
 ***
 
 ### DataMessageType
 
-Re-exports [DataMessageType](Message.types/type-aliases/DataMessageType.md)
+Re-exports [DataMessageType](message-types/type-aliases/data-message-type.md)
 
 ***
 
 ### SimpleMessageType
 
-Re-exports [SimpleMessageType](Message.types/type-aliases/SimpleMessageType.md)
+Re-exports [SimpleMessageType](message-types/type-aliases/simple-message-type.md)
 
 ***
 
 ### Message
 
-Re-exports [Message](Message.types/type-aliases/Message.md)
+Re-exports [Message](message-types/type-aliases/message.md)
 
 ***
 
 ### MessageCompat
 
-Re-exports [MessageCompat](Message.types/type-aliases/MessageCompat.md)
+Re-exports [MessageCompat](message-types/type-aliases/message-compat.md)
 
 ***
 
 ### DidTargetLoadMessage
 
-Re-exports [DidTargetLoadMessage](Message.types/type-aliases/DidTargetLoadMessage.md)
+Re-exports [DidTargetLoadMessage](message-types/type-aliases/did-target-load-message.md)
 
 ***
 
 ### CancelMessage
 
-Re-exports [CancelMessage](Message.types/interfaces/CancelMessage.md)
+Re-exports [CancelMessage](message-types/interfaces/cancel-message.md)
 
 ***
 
 ### TokenResponseMessage
 
-Re-exports [TokenResponseMessage](Message.types/interfaces/TokenResponseMessage.md)
+Re-exports [TokenResponseMessage](message-types/interfaces/token-response-message.md)
+
+***
+
+### PublishStatusMessage
+
+Re-exports [PublishStatusMessage](message-types/interfaces/publish-status-message.md)
 
 ***
 
 ### ParamsResponseMessage
 
-Re-exports [ParamsResponseMessage](Message.types/interfaces/ParamsResponseMessage.md)
+Re-exports [ParamsResponseMessage](message-types/interfaces/params-response-message.md)
 
 ***
 
 ### MessageData
 
-Re-exports [MessageData](MessageData.types/interfaces/MessageData.md)
+Re-exports [MessageData](message-data-types/interfaces/message-data.md)
 
 ***
 
 ### HostEventType
 
-Re-exports [HostEventType](MessageData.types/enumerations/HostEventType.md)
+Re-exports [HostEventType](message-data-types/enumerations/host-event-type.md)
 
 ***
 
 ### HostEventData
 
-Re-exports [HostEventData](MessageData.types/interfaces/HostEventData.md)
+Re-exports [HostEventData](message-data-types/interfaces/host-event-data.md)
 
 ***
 
 ### IntentChangeEventData
 
-Re-exports [IntentChangeEventData](MessageData.types/interfaces/IntentChangeEventData.md)
+Re-exports [IntentChangeEventData](message-data-types/interfaces/intent-change-event-data.md)
 
 ***
 
 ### UpdateCloseButtonEventData
 
-Re-exports [UpdateCloseButtonEventData](MessageData.types/interfaces/UpdateCloseButtonEventData.md)
+Re-exports [UpdateCloseButtonEventData](message-data-types/interfaces/update-close-button-event-data.md)
 
 ***
 
 ### URLInfoEventData
 
-Re-exports [URLInfoEventData](MessageData.types/interfaces/URLInfoEventData.md)
+Re-exports [URLInfoEventData](message-data-types/interfaces/url-info-event-data.md)
 
 ***
 
 ### ExportInfoEventData
 
-Re-exports [ExportInfoEventData](MessageData.types/interfaces/ExportInfoEventData.md)
+Re-exports [ExportInfoEventData](message-data-types/interfaces/export-info-event-data.md)
 
 ***
 
 ### DownloadCompleteEventData
 
-Re-exports [DownloadCompleteEventData](MessageData.types/interfaces/DownloadCompleteEventData.md)
+Re-exports [DownloadCompleteEventData](message-data-types/interfaces/download-complete-event-data.md)
 
 ***
 
 ### ProtocolVersion
 
-Re-exports [ProtocolVersion](Protocol.types/enumerations/ProtocolVersion.md)
+Re-exports [ProtocolVersion](protocol-types/enumerations/protocol-version.md)
 
 ***
 
 ### CURRENT\_PROTOCOL\_VERSION
 
-Re-exports [CURRENT_PROTOCOL_VERSION](Protocol.types/variables/CURRENT_PROTOCOL_VERSION.md)
+Re-exports [CURRENT_PROTOCOL_VERSION](protocol-types/variables/current-protocol-version.md)
 
 ***
 
 ### EARLIEST\_PROTOCOL\_VERSION
 
-Re-exports [EARLIEST_PROTOCOL_VERSION](Protocol.types/variables/EARLIEST_PROTOCOL_VERSION.md)
+Re-exports [EARLIEST_PROTOCOL_VERSION](protocol-types/variables/earliest-protocol-version.md)
 
 ***
 
 ### NEXT\_PROTOCOL\_VERSION
 
-Re-exports [NEXT_PROTOCOL_VERSION](Protocol.types/variables/NEXT_PROTOCOL_VERSION.md)
+Re-exports [NEXT_PROTOCOL_VERSION](protocol-types/variables/next-protocol-version.md)
 
 ***
 
 ### PREVIOUS\_PROTOCOL\_VERSION
 
-Re-exports [PREVIOUS_PROTOCOL_VERSION](Protocol.types/variables/PREVIOUS_PROTOCOL_VERSION.md)
+Re-exports [PREVIOUS_PROTOCOL_VERSION](protocol-types/variables/previous-protocol-version.md)
 
 ***
 
 ### ProtocolHandlersModule
 
-Re-exports [ProtocolHandlersModule](Protocol.types/interfaces/ProtocolHandlersModule.md)
+Re-exports [ProtocolHandlersModule](protocol-types/interfaces/protocol-handlers-module.md)
+
+***
+
+### MessageChannel
+
+Re-exports [MessageChannel](channel-messenger-types/enumerations/message-channel.md)
+
+***
+
+### MessagePayload
+
+Re-exports [MessagePayload](channel-messenger-types/type-aliases/message-payload.md)
+
+***
+
+### MessageSender
+
+Re-exports [MessageSender](channel-messenger-types/type-aliases/message-sender.md)

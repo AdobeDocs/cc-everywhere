@@ -35,24 +35,19 @@ module.exports = {
             description: "🟢 Current version",
             path: "/v4/",
           },
-          // {
-          //   title: "v4 Reference",
-          //   description: "🟠 Legacy docs",
-          //   path: "/reference/",
-          // },
           {
             title: "v3 Reference",
-            description: "🟠 Deprecated soon",
+            description: "🔴 Deprecated",
             path: "/v3/reference/",
           },
           {
             title: "v2 Reference",
-            description: "🔴 Deprecated",
+            description: "🪦 End of Life May 2025",
             path: "/v2/reference/",
           },
           {
             title: "v1 Reference",
-            description: "🔴 Deprecated",
+            description: "🪦 End of Life May 2025",
             path: "/v1/reference/",
           },
         ],
@@ -118,6 +113,14 @@ module.exports = {
             path: "/guides/concepts/generate-image-v2.md",
           },
           {
+            title: "Edit Image V2",
+            path: "/guides/concepts/edit-image-v2.md",
+          },
+          {
+            title: "Editor Customization",
+            path: "/guides/concepts/appconfig.md",
+          },
+          {
             title: "V3 to V4 Migration guide",
             path: "/guides/concepts/migration_v3_v4.md",
           },
@@ -126,7 +129,7 @@ module.exports = {
           //   path: "/guides/concepts/customization.md",
           // },
           {
-            title: "Error Handling",
+            title: "Error handling",
             path: "/guides/concepts/error-handling.md",
           },
         ],
@@ -309,19 +312,19 @@ module.exports = {
         pages: [
           {
             title: "CC Everywhere",
-            path: "/v4/sdk/src/3p/CCEverywhere/classes/CCEverywhere.md",
+            path: "/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md",
           },
           {
             title: "Editor",
-            path: "/v4/sdk/src/workflows/3p/EditorWorkflow/classes/EditorWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md",
           },
           {
             title: "Module",
-            path: "/v4/sdk/src/workflows/3p/ModuleWorkflow/classes/ModuleWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md",
           },
           {
             title: "Quick Action",
-            path: "/v4/sdk/src/workflows/3p/QuickActionWorkflow/classes/QuickActionWorkflow.md",
+            path: "/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md",
           },
         ],
       },
