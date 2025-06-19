@@ -150,7 +150,7 @@ If it was rejected, we will include the reasons for rejection along with any nex
 - The app description is not ill-formatted, garbled, or improperly exposing character encoding.
 - The app description is clear in conveying the integration's functionality.
 - The integration is able to perform all advertised features.
-- Any website links that are provided successfully open and are safe (check with <https://urlvoid.com>).
+- Any website links that are provided successfully open and are safe (check with [https://urlvoid.com](https://urlvoid.com)).
 - Proper contact details or a contact form is provided on the GitHub/website link.
 - The privacy policy and terms of use URLs (if any) link to the right content.
 - Only developers should create projects in the Adobe Developer Console. Users should not be asked to create projects in the Console just to use an integration.
