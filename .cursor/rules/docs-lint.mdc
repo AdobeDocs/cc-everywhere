@@ -1,0 +1,75 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+# Documentation Linting Process
+
+This rule defines the process for running and fixing linting issues in documentation files.
+
+## Process Steps
+
+1. Run the linter:
+   ```sh
+   yarn lint
+   ```
+
+2. Review the output for markdown linting errors. Common issues include:
+   - MD047/single-trailing-newline: Missing newline at end of file
+   - MD009/no-trailing-spaces: Trailing spaces in lines
+   - MD013/line-length: Lines exceeding maximum length
+   - MD041/first-line-heading: Missing heading at start of file
+   - MD022/headings: Headings not following sentence case
+
+3. Fix identified issues:
+   - For missing newlines: Add a newline at the end of the file using:
+     ```sh
+     echo "" >> <file_path>
+     ```
+   - For trailing spaces: Remove trailing spaces using:
+     ```sh
+     sed -i '' 's/ $//' <file_path>
+     ```
+   - For heading case issues: Ensure headings follow sentence case (first word capitalized, rest lowercase)
+   - For line length issues: Break long lines at appropriate points
+   - For missing headings: Add appropriate heading at start of file
+
+4. Verify fixes:
+   ```sh
+   yarn lint
+   ```
+
+## Common Fixes
+
+### Adding Missing Newlines
+When a file is missing a newline at the end (MD047), use:
+```sh
+echo "" >> <file_path>
+```
+
+### Removing Trailing Spaces
+When a file has trailing spaces (MD009), use:
+```sh
+sed -i '' 's/ $//' <file_path>
+```
+
+### Fixing Multiple Issues
+To fix both trailing spaces and add a newline:
+```sh
+sed -i '' 's/ $//' <file_path> && echo "" >> <file_path>
+```
+
+## Notes
+
+- The linter may show warnings in YAML files about missing document start markers (`---`) and line length. These are not critical errors.
+- Some files may have platform-specific warnings (e.g., platform mismatch) which can be safely ignored.
+- The linter exits with code 0 when `DISABLE_ERRORS` is set to true, even if there are warnings.
+- Always verify fixes by running the linter again after making changes.
+
+## Checklist
+
+- [ ] Run `yarn lint`
+- [ ] Review and document all linting errors
+- [ ] Fix each identified issue
+- [ ] Run `yarn lint` again to verify fixes
+- [ ] Document any remaining warnings that are acceptable to ignore

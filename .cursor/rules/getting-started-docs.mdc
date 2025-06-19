@@ -1,0 +1,578 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+---
+description: How to add or edit Cursor rules in our project
+globs: 
+alwaysApply: false
+---
+
+# Getting Started Documentation Standards
+
+This document defines the standards and guidelines for creating and maintaining Getting Started documentation in the Substance 3D API documentation.
+
+## Document Structure
+
+### Frontmatter
+Every Getting Started document must include the following frontmatter:
+
+```yaml
+---
+title: [Clear, Action-Oriented Title]
+description: [Concise description of the guide's purpose]
+hideBreadcrumbNav: true
+keywords:
+  - [Relevant keyword 1]
+  - [Relevant keyword 2]
+---
+```
+
+#### Keywords Field
+
+- Add keywords in the frontmatter to optimize search
+
+#### Contributors Field
+
+- Create a contributors field that includes the user's Github name (if known)
+- Do not remove any contributors if the field already exists
+- Do NOT add an empty contributors field if the name is not known
+
+### Section requirements
+
+1. **Title (H1)**
+   - Use clear, action-oriented titles
+   - Avoid "How to" or "Guide to" prefixes
+   - Example: "Authentication" instead of "How to Authenticate"
+
+2. **Overview (H2)**
+   - Brief introduction (2-3 sentences)
+   - Clear statement of what the reader will learn
+   - No code examples in this section
+
+3. **Prerequisites (H2) - Optional**
+   - Only include if there are specific requirements needed before starting
+   - Not required for quickstart guides or simple reference documentation
+   - When included, should contain:
+     - Bulleted list of requirements
+     - Links to related documentation
+     - Required accounts, credentials, or tools
+   - Example for when prerequisites are needed:
+     ```markdown
+     ## Prerequisites
+
+     This tutorial assumes you have:
+     - An [Adobe Developer Console][1] account
+     - A project with [required credentials][2]
+     - [Required tool or software][3]
+     ```
+
+4. **Main Content (H2+)**
+   - Use clear, hierarchical headings (H2 → H3 → H4)
+   - Include practical examples
+   - Follow step-by-step format for tutorials
+   - Use code blocks with language specification
+
+5. **Code Examples**
+   - Use triple backticks with language specification
+   - Include comments explaining complex operations
+   - Show both request and response examples
+   - Example:
+     ```markdown
+     ```bash
+     # Export credentials as environment variables
+     export CLIENT_ID=<your_client_id>
+     ```
+     ```
+
+6. **Links and References**
+   - Place all links at the bottom of the document under a `<!-- Links -->` comment
+   - Use numbered references [1], [2], etc. in order of appearance in the document
+   - Number links sequentially based on their first appearance in the text
+   - Never include unused links in the footnotes
+   - Format inline links as `[Link Text][1]` where the number matches the footnote
+   - Format footnotes as `[1]: /path/to/link`
+   - Example:
+     ```markdown
+     To get started, follow the [Authentication Guide][1] and then check the [API Reference][2].
+
+     <!-- Links -->
+     [1]: /getting_started/authentication
+     [2]: /reference/api
+     ```
+
+   Common mistakes to avoid:
+   - ❌ Using unnumbered links: `[Link Text](mdc:path)`
+   - ❌ Including unused links in footnotes
+   - ❌ Not ordering links by appearance
+   - ❌ Missing the `<!-- Links -->` comment
+   - ❌ Inconsistent numbering between inline and footnote references
+
+## Documentation Types
+
+### Troubleshooting Guide
+Use this format for any troubleshooting or error resolution documentation.
+
+#### Structure
+```markdown
+---
+title: [Clear Title]
+description: [Brief description of the troubleshooting guide]
+keywords:
+  - [Relevant keywords]
+hideBreadcrumbNav: true
+---
+
+# [Title] Troubleshooting Guide
+
+[Brief introduction explaining the purpose of the guide]
+
+## Issue: [Error name in sentence case]
+
+[One sentence description of when/why this error occurs]
+
+**Sample error**
+
+```json
+{
+  "message": "[Actual error message from API]"
+}
+```
+
+<Accordion>
+<AccordionItem header="Solutions:" isChevronIcon position="right" iconColor="#1473E6">
+
+- [Actionable solution step 1]
+- [Actionable solution step 2]
+- [Actionable solution step 3]
+
+</AccordionItem>
+</Accordion>
+```
+
+#### Common Issues and Sample Errors
+
+1. **Authentication Issues**
+   ```json
+   {
+     "message": "JWT is invalid."
+   }
+   ```
+   ```json
+   {
+     "message": "Invalid client credentials"
+   }
+   ```
+
+2. **Rate Limiting**
+   ```json
+   {
+     "message": "Rate limit exceeded",
+     "retryAfter": 60
+   }
+   ```
+
+3. **Invalid Request**
+   ```json
+   {
+     "message": "Invalid request parameters",
+     "details": {
+       "field": "assetId",
+       "reason": "required"
+     }
+   }
+   ```
+
+4. **Server Errors**
+   ```json
+   {
+     "message": "Internal server error",
+     "code": 500
+   }
+   ```
+
+#### Best Practices
+
+1. **Issue Format**
+   - Use "Issue: [error name]" as H2 heading
+   - Keep error names in sentence case
+   - Use clear, specific error names
+   - Example: "Issue: Authentication failure"
+
+2. **Error Description**
+   - One sentence explaining when/why the error occurs
+   - Use active voice
+   - Be specific about the trigger
+   - Example: "An authentication error can occur when the credentials aren't correct."
+
+3. **Sample Errors**
+   - Include API error response schemas from the relevant API specification (where possible)
+   - Format as JSON code blocks
+   - Use **Sample error** as heading
+   - Include all relevant error fields
+
+4. **Solutions**
+   - Use Accordion component for solutions
+   - Format as bullet points
+   - Start with action verbs
+   - Keep steps clear and actionable
+   - Example:
+     ```markdown
+     <Accordion>
+     <AccordionItem header="Solutions:" isChevronIcon position="right" iconColor="#1473E6">
+     
+     - Verify the client ID and client secret
+     - Check that the token hasn't expired
+     - Ensure the endpoint URL is correct
+     
+     </AccordionItem>
+     </Accordion>
+     ```
+
+5. **Common Patterns**
+   - Group related issues together
+   - Use consistent formatting across all issues
+   - Include both common and edge cases
+   - Order issues by frequency/importance
+
+#### Review Checklist
+
+For troubleshooting documentation, ensure:
+
+- [ ] Follows the standard troubleshooting structure
+- [ ] Each issue has:
+  - [ ] Clear error name in sentence case
+  - [ ] One-sentence description
+  - [ ] Sample error in JSON format
+  - [ ] Solutions in Accordion component
+- [ ] Solutions are:
+  - [ ] Actionable
+  - [ ] In bullet points
+  - [ ] Start with verbs
+  - [ ] Clear and concise
+- [ ] Error messages are:
+  - [ ] Actual API responses
+  - [ ] Properly formatted as JSON
+  - [ ] Include all relevant fields
+- [ ] Uses consistent formatting throughout
+- [ ] Follows heading case standards
+- [ ] Uses appropriate contractions
+- [ ] Preserves technical terms
+
+## Writing Style
+
+1. **Tone and Voice**
+   - Use second person ("you") for direct address
+   - Write in active voice
+   - Keep sentences clear and concise
+   - Use present tense for instructions
+   - Use contractions for a more natural, conversational tone
+   - Common contractions to use:
+     - "it's" instead of "it is"
+     - "hasn't" instead of "has not"
+     - "don't" instead of "do not"
+     - "can't" instead of "cannot"
+     - "won't" instead of "will not"
+     - "isn't" instead of "is not"
+     - "that's" instead of "that is"
+     - "you'll" instead of "you will"
+     - "we'll" instead of "we will"
+   - Exception: Avoid contractions in error messages or technical specifications
+   - Example:
+     ```markdown
+     ✅ "It's important to verify your credentials"
+     ❌ "It is important to verify your credentials"
+     
+     ✅ "The token hasn't expired"
+     ❌ "The token has not expired"
+     ```
+
+2. **Heading Case Standards**
+   - H1 (#): Title Case (e.g., "Authentication")
+   - H2-H6 (##-######): Sentence case (e.g., "Getting started with authentication")
+   - Examples:
+     ```markdown
+     # Authentication Guide
+     
+     ## Getting started with authentication
+     
+     ### Setting up your credentials
+     
+     #### Using environment variables
+     ```
+   - Exception: Proper nouns and acronyms remain capitalized in sentence case
+   - Example: "Using the Adobe Developer Console"
+   - Special cases:
+     - Code block titles using `*filename*` format should preserve the asterisks
+     - Response status indicators in parentheses should not use asterisks
+     - Example:
+       ```markdown
+       #### *payload.json*  ✅
+       #### Response (succeeded)  ✅
+       #### Response (*succeeded*)  ❌
+       ```
+
+3. **Technical Terms**
+   - Define technical terms on first use
+   - Use consistent terminology
+   - Link to glossary or related documentation
+   - Common technical terms to preserve (ignore linter):
+     - OAuth
+     - JWT
+     - API
+     - CDN
+     - backoff
+     - HTTP status codes
+     - cURL (when not in code blocks; use lowercase in code blocks)
+     - pre-signed URL (when in text; use "presigned" in code/URLs)
+   - Example:
+     ```markdown
+     An **access token** is a temporary credential that validates your API requests.
+     Use the [cURL][1] command-line tool to make API requests. In code blocks, use lowercase:
+     ```bash
+     curl --url https://api.example.com
+     ```
+     ```
+
+     When discussing URLs in text, use "pre-signed URL", but in code or actual URLs use "presigned":
+     ```markdown
+     The response includes a pre-signed URL for downloading the file.
+     The URL format is: `https://example.com/presigned-token=xyz`
+     ```
+
+4. **Code and Commands**
+   - Use `code` formatting for:
+     - File names
+     - Command names
+     - API endpoints
+     - Environment variables
+   - Use **bold** for:
+     - Important terms
+     - UI elements
+     - Credential names
+
+## Best Practices
+
+1. **Documentation Organization**
+   - Keep related topics together
+   - Use consistent file naming (kebab-case)
+   - Maintain clear directory structure
+   - Example structure:
+     ```
+     getting_started/
+     ├── index.md
+     ├── authentication/
+     │   ├── index.md
+     │   └── advanced.md
+     └── quick_start/
+         ├── index.md
+         └── examples.md
+     ```
+
+2. **Code Examples**
+   - Include complete, working examples
+   - Show both success and error cases
+   - Use realistic values
+   - Include comments for complex operations
+   - For placeholder values in codeblocks, use <> formatting with snake_case
+   - Example:
+     ```markdown
+     ```json
+     {
+       // Required fields for authentication
+       "client_id": "<your_client_id>",
+       "client_secret": "<your_client_secret>",
+       "status_id": "<your_generated_id>"
+     }
+     ```
+     ```
+
+3. **Visual Elements**
+   - Use screenshots sparingly
+   - Include alt text for all images
+   - Place images alongside the .md file that references in the same directory
+   - Reference images with relative paths
+   - Example:
+     ```markdown
+     ![Adobe Developer Console Project Overview](mdc:../assets/project-overview.png)
+     ```
+
+4. **Error Handling**
+   - Include common error scenarios
+   - Provide troubleshooting steps
+   - Link to error reference documentation
+   - Example:
+     ```markdown
+     ## Troubleshooting
+
+     If you encounter a 403 error:
+     1. Verify your credentials
+     2. Check token expiration
+     3. [Review error codes](mdc:reference/errors)
+     ```
+
+## Review Checklist
+
+Before publishing or when I ask to "check the doc", ensure your documentation:
+
+- [ ] Follows the frontmatter structure
+  - [ ] Has title, description, hideBreadcrumbNav
+  - [ ] Includes contributors field
+  - [ ] Has relevant keywords
+
+- [ ] Has required sections
+  - [ ] Title (H1)
+  - [ ] Overview (H2)
+  - [ ] Prerequisites (H2) - only if specific requirements exist
+  - [ ] Main content sections
+
+- [ ] Heading case verification
+  - [ ] H1 (#): Title Case
+    - [ ] First word capitalized
+    - [ ] All major words capitalized
+    - [ ] Example: "Best Practices for Adobe Substance 3D API"
+  - [ ] H2-H6 (##-######): Sentence case
+    - [ ] Only first word capitalized
+    - [ ] Proper nouns remain capitalized
+    - [ ] No other words capitalized
+    - [ ] Examples:
+      - ✅ "Authentication best practices"
+      - ✅ "Getting started with the API"
+      - ✅ "Using the Adobe Developer Console"
+      - ❌ "Authentication Best Practices"
+      - ❌ "Getting Started With The API"
+  - [ ] H3-H4 specific checks
+    - [ ] Code block titles with `*filename*` preserve asterisks
+    - [ ] Response status indicators use plain parentheses
+    - [ ] Examples:
+      - ✅ "#### *payload.json*"
+      - ✅ "#### Response (succeeded)"
+      - ❌ "#### Response (*succeeded*)"
+      - ❌ "#### Upload Assets Request"
+      - ✅ "#### Upload assets request"
+
+- [ ] Spelling and grammar is correct
+- [ ] Uses appropriate contractions (Microsoft.Contractions)
+- [ ] Preserves technical terms (OAuth, JWT, etc.)
+- [ ] Uses UI components consistently
+- [ ] Sections are formatted correctly based on their type
+- [ ] Uses consistent formatting
+
+- [ ] Links and references
+  - [ ] All links use numbered references [1], [2], etc.
+  - [ ] Links are numbered in order of appearance
+  - [ ] Footnotes section starts with `<!-- Links -->`
+  - [ ] No unused links in footnotes
+  - [ ] All referenced links have corresponding footnotes
+  - [ ] Link numbers match between inline and footnote references
+
+- [ ] Writing style
+  - [ ] Uses appropriate contractions (Microsoft.Contractions)
+    - [ ] "it's" instead of "it is"
+    - [ ] "hasn't" instead of "has not"
+    - [ ] "don't" instead of "do not"
+    - [ ] "can't" instead of "cannot"
+    - [ ] "won't" instead of "will not"
+    - [ ] "isn't" instead of "is not"
+    - [ ] "that's" instead of "that is"
+    - [ ] "you'll" instead of "you will"
+    - [ ] "we'll" instead of "we will"
+  - [ ] No contractions in error messages or technical specifications
+  - [ ] Uses active voice
+  - [ ] Uses present tense for instructions
+  - [ ] Uses second person ("you") for direct address
+
+## Common Heading Case Mistakes
+
+When checking heading case, watch out for:
+
+1. **H2-H6 in Title Case**
+   ```markdown
+   ## Authentication Best Practices  ❌
+   ## Authentication best practices  ✅
+   ```
+
+2. **Inconsistent Proper Noun Capitalization**
+   ```markdown
+   ## Using the adobe developer console  ❌
+   ## Using the Adobe Developer Console  ✅
+   ```
+
+3. **Over-capitalization in Sentence Case**
+   ```markdown
+   ## Best Practices For Authentication  ❌
+   ## Best practices for authentication  ✅
+   ```
+
+4. **Mixed Case Styles**
+   ```markdown
+   ## Authentication Best practices  ❌
+   ## Authentication best practices  ✅
+   ```
+
+## Examples
+
+### Good Example
+```markdown
+---
+title: Authentication
+description: Learn how to authenticate requests to Substance 3D APIs
+hideBreadcrumbNav: true
+contributors:
+  - https://github.com/username
+---
+
+# Authentication
+
+## Overview
+
+Learn how to authenticate your applications with Substance 3D APIs using OAuth 2.0.
+
+## Prerequisites
+
+This guide assumes you have:
+- An [Adobe Developer Console][1] account
+- A project with [OAuth credentials][2]
+- Basic understanding of API authentication
+
+## Getting Started
+
+1. First, set up your credentials:
+   ```bash
+   export CLIENT_ID=<your_client_id>
+   export CLIENT_SECRET=<your_client_secret>
+   ```
+
+2. Generate an access token:
+   ```bash
+   curl -X POST https://ims-na1.adobelogin.com/ims/token/v3 \
+     -H "Content-Type: application/x-www-form-urlencoded" \
+     -d "grant_type=client_credentials&client_id=$CLIENT_ID&client_secret=$CLIENT_SECRET"
+   ```
+
+<!-- Links -->
+[1]: https://developer.adobe.com/
+[2]: /guides/oauth-setup
+```
+
+### Bad Example
+```markdown
+# How to Authenticate with the API
+
+In this guide, we will show you how to authenticate.
+
+## What You Need
+
+You need some stuff:
+- Developer account
+- Credentials
+- Some other things
+
+## Steps
+
+1. Do this
+2. Then do that
+3. Finally, do something else
+
+Check out our docs for more info!

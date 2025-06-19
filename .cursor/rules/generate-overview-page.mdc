@@ -1,0 +1,184 @@
+---
+description: Use when creating or editing a /src/pages/index.md for an API service.
+globs: 
+alwaysApply: false
+---
+# Generate Overview Page Rule
+
+This rule analyzes markdown files in `/getting_started` and `/guides` directories to automatically generate or update overview pages following the established pattern from the main index.md.
+
+## Overview Page Structure
+
+When generating overview pages, follow this exact structure and styling:
+
+### 1. Frontmatter
+```yaml
+---
+title: [Service Name] API Overview
+description: The overview page for [Service Name] API services.
+contributors:
+  - https://github.com/BaskarMitrah
+  - https://github.com/AEAbreu-hub
+---
+```
+
+### 2. Hero Section
+```markdown
+<Hero slots="heading, text" background="rgb(233, 80, 80)"/>
+
+# [Service Name] APIs
+
+[Service Name] APIs offer [brief description of what the service does].
+```
+
+### 3. Overview Section
+```markdown
+## Overview
+
+[Service Name] APIs are a collection of resources that leverage Firefly Services' AI to [describe the main functionality].
+```
+
+### 4. Discover Blocks Section
+```markdown
+<DiscoverBlock slots="heading, link, text"/>
+
+### Explore our APIs
+
+[API Name](mdc:guides)
+
+[Brief description of what this API does.]
+
+<DiscoverBlock slots="link, text"/>
+
+[Next API Name](mdc:guides)
+
+[Brief description of what this API does.]
+```
+
+### 5. Individual API Sections
+For each API, create a dedicated section:
+
+```markdown
+## [API Name]
+
+The [API Name] [brief description of functionality]. Features include:
+
+- **Feature 1**: Description
+- **Feature 2**: Description
+- **Feature 3**: Description
+```
+
+### 6. Special Content Blocks
+Use these components as needed:
+
+#### TextBlock with Image
+```markdown
+<TextBlock slots="image, heading, text" theme="dark" />
+
+![Image Alt Text](mdc:images/image-name.gif)
+
+[Heading Text]
+
+[Description text]
+```
+
+#### InlineAlert
+```markdown
+<InlineAlert variant="info" slots="text" />
+
+[Alert message text]
+```
+
+#### AnnouncementBlock
+```markdown
+<AnnouncementBlock slots="heading, text, button" />
+
+### [Heading]
+
+[Description text]
+
+[Button Text](mdc:getting_started)
+```
+
+## Content Analysis Guidelines
+
+### 1. Directory Scanning
+- Scan `/getting_started/` for usage notes, limitations, and technical details
+- Scan `/guides/` for API documentation and examples
+- Identify all available APIs and their descriptions
+
+### 2. Content Extraction
+- Extract API names and descriptions from guide files
+- Identify key features and capabilities
+- Note any special requirements or limitations
+- Capture technical specifications and supported formats
+
+### 3. Feature Identification
+For each API, identify:
+- Primary functionality
+- Key features (3-4 bullet points)
+- Supported input/output formats
+- Notable capabilities or restrictions
+
+### 4. Visual Elements
+- Use appropriate images when available (GIFs for demonstrations)
+- Include hero images with consistent styling
+- Maintain consistent color scheme (rgb(233, 80, 80) for hero background)
+
+## Writing Style Guidelines
+
+### 1. Tone and Voice
+- Use professional, technical but accessible language
+- Be concise and clear
+- Focus on benefits and capabilities
+- Use active voice where possible
+
+### 2. Formatting
+- Use **bold** for key terms and features
+- Use `code` formatting for technical terms, file formats, and API endpoints
+- Use proper heading hierarchy (## for sections, ### for subsections)
+- Include bullet points for feature lists
+
+### 3. Links and Navigation
+- Link to `/guides/` for API documentation
+- Link to `/getting_started/` for getting started content
+- Use relative paths for internal links
+- Ensure all links are functional and relevant
+
+## Special Considerations
+
+### 1. API-Specific Content
+- Include technical specifications when relevant
+- Mention supported languages, formats, and limitations
+- Reference usage notes for detailed information
+- Include performance characteristics when available
+
+### 2. Integration Notes
+- Mention integration capabilities
+- Reference third-party system support
+- Include terms and conditions notes when applicable
+- Mention performance variations based on input parameters
+
+### 3. Security and Compliance
+- Include CAI (Content Authenticity Initiative) mentions when relevant
+- Reference deepfake protection features
+- Mention content authenticity and verification capabilities
+
+## Example Implementation
+
+When analyzing files, look for patterns like:
+- API endpoint definitions
+- Feature descriptions
+- Technical specifications
+- Usage examples
+- Limitation notes
+- Integration information
+
+Generate content that follows the established pattern while accurately representing the current state of the APIs and their capabilities.
+
+## File Organization
+
+- Place generated overview pages in `/src/pages/index.md`
+- Maintain consistent file structure
+- Ensure all referenced images and assets exist
+- Validate all internal links and references
