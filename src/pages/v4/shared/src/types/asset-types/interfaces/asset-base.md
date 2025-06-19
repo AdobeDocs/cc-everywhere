@@ -10,7 +10,7 @@ Base interface for all asset types.
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`AssetDataType`](../enumerations/asset-data-type.md) |
+| `T` _extends_ [`AssetDataType`](../enumerations/asset-data-type.md) |
 
 ## Properties
 
