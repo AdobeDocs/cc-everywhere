@@ -79,9 +79,9 @@ async function updateGatsbyConfig(tutorialName, title) {
 async function createTutorial() {
   try {
     // Gather information
-    const tutorialName = await promptUser('Enter tutorial name (e.g., quick-actions): ');
+    const tutorialName = await promptUser('Enter tutorial file name (e.g., quick-actions): ');
     const title = await promptUser('Enter tutorial title: ');
-    const description = await promptUser('Enter tutorial description: ');
+    const description = await promptUser('Enter tutorial description (what users will learn/build): ');
     const username = await promptUser('Enter your GitHub username: ');
 
     // Format tutorial name for folder
@@ -100,13 +100,37 @@ async function createTutorial() {
     // Read template
     let template = fs.readFileSync(templatePath, 'utf8');
 
-    // Replace placeholders
+    // Extract key task/feature from description for various replacements
+    const taskDescription = description.toLowerCase();
+    
+    // Generate different variations of the description for different contexts
+    const buildDescription = description.charAt(0).toLowerCase() + description.slice(1);
+    const accomplishDescription = taskDescription;
+
+    // Replace placeholders with consistent descriptions
     template = template
+      // Replace title and basic info
+      .replace(/\[Tutorial Title\]/g, title)
       .replace('Tutorial Template', title)
-      .replace('Step-by-step guide for implementing [Feature/Task]', description)
       .replace('yourusername', username)
-      .replace('Tutorial Title', title)
-      .replace('[accomplish specific task]', description);
+      
+      // Replace description in frontmatter and meta
+      .replace('Step-by-step guide for implementing [Feature/Task] with Adobe Express Embed SDK', description)
+      
+      // Replace task descriptions consistently
+      .replace(/\[accomplish specific task\]/g, accomplishDescription)
+      .replace(/\[brief description of what you'll build\]/g, buildDescription)
+      .replace(/\[Brief description of the end result with specific details about functionality\]/g, description)
+      
+      // Replace feature/task references
+      .replace(/\[Feature\/Task\]/g, taskDescription.replace(/^(implementing?|building?|creating?)\s+/i, ''))
+      .replace(/\[feature\/task\]/g, taskDescription.replace(/^(implementing?|building?|creating?)\s+/i, ''))
+      .replace(/\[specific feature\/task\]/g, taskDescription.replace(/^(implementing?|building?|creating?)\s+/i, ''))
+      
+      // Replace project name references
+      .replace(/\[your-project-name\]/g, folderName)
+      .replace(/\[Your Project Title\]/g, title)
+      .replace(/\[tutorial-name\]/g, folderName);
 
     // Write new tutorial file
     fs.writeFileSync(destPath, template);
@@ -117,11 +141,16 @@ async function createTutorial() {
     console.log('\n✅ Tutorial created successfully!');
     console.log(`📁 Location: ${destPath}`);
     console.log('\nNext steps:');
-    console.log('1. Add your tutorial content');
-    console.log('2. Update the key learning objectives');
-    console.log('3. Add code examples and screenshots');
-    console.log('4. Test all code samples');
+    console.log('1. Replace remaining placeholders with specific content:');
+    console.log('   - [Specific learning objective 1-3]');
+    console.log('   - [Main Implementation Step]');
+    console.log('   - [Test scenario 1-3]');
+    console.log('   - [Expected result 1-2]');
+    console.log('2. Add actual implementation code');
+    console.log('3. Add screenshots and visual examples');
+    console.log('4. Test all code samples thoroughly');
     console.log('5. Verify the tutorial appears in navigation');
+    console.log('\n💡 Tip: The description you provided has been used consistently throughout the template.');
 
   } catch (error) {
     console.error('❌ Error creating tutorial:', error);
