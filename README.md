@@ -19,6 +19,7 @@ The template (`src/pages/guides/tutorials/tutorial-template.md`) provides a stan
 ### Creating a New Tutorial
 
 1. Use the provided script:
+
 ```bash
 npm run create-tutorial
 ```
@@ -38,7 +39,7 @@ npm run create-tutorial
 
 Each tutorial should include:
 
-```
+```markdown
 tutorials/
 └── your-tutorial-name/
     └── index.md
@@ -76,6 +77,7 @@ When creating a new tutorial:
 6. Test all code samples thoroughly
 
 For more information, see:
+
 - [Quickstart Guide](/guides/quickstart/)
 - [Full Documentation](/guides/)
 
