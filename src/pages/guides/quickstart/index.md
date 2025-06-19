@@ -106,7 +106,7 @@ The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK 
 var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js";
 ```
 
-You can check the [changelog](/src/pages/guides/changelog/index.md) to read about known issues as well as what changes have been made.
+You can check the [changelog](../changelog/index.md) to read about known issues as well as what changes have been made.
 
 ### Load via script tag
 
