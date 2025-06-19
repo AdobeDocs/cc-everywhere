@@ -73,7 +73,7 @@ The following code will invoke the generate module. In this example, we pass a s
 
 <InlineAlert variant="info" slots="header, text1" />
 
-New Generate Image experience
+**New Generate Image experience**
 
 The Adobe Express Embed SDK since v4.20 has added support for an all-new Generate Image (Text-to-Image) experience. This feature is disabled by default, displaying the classic interface. Toggle the `enableNewUI` boolean flag to `true` in the `appConfig` object to enable it.
 
