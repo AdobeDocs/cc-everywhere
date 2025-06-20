@@ -1,4 +1,4 @@
-# Class: CCEverywhereError<T\>
+# Class: CCEverywhereError T
 
 ## Extends
 
@@ -76,7 +76,7 @@ customData?): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md)<`T`\> |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md) `T` |
 | `subError`? | `string` \| `number` \| `Error` |
 | `customData`? | `unknown` |
 
