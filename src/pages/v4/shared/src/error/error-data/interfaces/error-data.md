@@ -1,4 +1,4 @@
-# Interface: ErrorData<T\>
+# Interface: ErrorData T
 
 ## Type Parameters
 
