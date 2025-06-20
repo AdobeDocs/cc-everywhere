@@ -143,7 +143,7 @@
                 - [IErrorMessageHandler](v4/shared/src/error/i-error-message-handler/index.md) 
                     - [IErrorMessageHandler](v4/shared/src/error/i-error-message-handler/interfaces/i-error-message-handler.md) 
                 - [Messages](v4/shared/src/error/messages/index.md) 
-                    - [Messages](v4/shared/src/error/Messages/variables/Messages.md) 
+                    - [Messages](v4/shared/src/error/messages/variables/messages.md) 
                 - [handlers](v4/shared/src/error/handlers/base-handler/index.md) 
                     - [BaseHandler](v4/shared/src/error/handlers/base-handler/index.md) 
                         - [BaseHandler](v4/shared/src/error/handlers/base-handler/classes/base-handler.md) 
