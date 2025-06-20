@@ -1,4 +1,4 @@
-# Interface: ChannelMessage<T\>
+# Interface: ChannelMessage T
 
 ## Type Parameters
 
