@@ -48,22 +48,22 @@ By completing this tutorial, you'll gain practical skills in:
 - [Specific learning objective 2]
 - [Specific learning objective 3]
 
-*Example objectives: "Initialize the Adobe Express Embed SDK in your web application", "Handle user-generated content with custom export options", "Implement error handling for common SDK failures"*
+_Example objectives: "Initialize the Adobe Express Embed SDK in your web application", "Handle user-generated content with custom export options", "Implement error handling for common SDK failures"_
 
-*This section helps users understand the concrete skills and knowledge they'll acquire, making the tutorial's value proposition clear from the start.*
+_This section helps users understand the concrete skills and knowledge they'll acquire, making the tutorial's value proposition clear from the start._
 
 ### What you'll build
 
 [Brief description of the end result with specific details about functionality]
 
-*Consider adding a screenshot or animation here to show the final result.*
+_Consider adding a screenshot or animation here to show the final result._
 
 ## Prerequisites
 
 Before you start, make sure you have:
 
 - An **Adobe account** (use your existing Adobe ID or [create one for free](https://account.adobe.com/))
-- **API credentials** from the Adobe Developer Console ([Get credentials](/guides/quickstart/#step-1-get-an-api-key))
+- **API credentials** from the Adobe Developer Console ([Get credentials](../quickstart/index.md#step-1-get-an-api-key))
 - Basic knowledge of **HTML, CSS, and JavaScript**
 - **Node.js** installed on your development machine
 - A **text editor or IDE** of your choice
@@ -85,7 +85,7 @@ Before you start, make sure you have:
 
 ## 3. Handle events and callbacks
 
-*Note: Include this section only if your tutorial involves user interactions, export functionality, or error handling that requires callbacks.*
+_Note: Include this section only if your tutorial involves user interactions, export functionality, or error handling that requires callbacks._
 
 [Instructions for setting up event handling]
 
@@ -99,9 +99,9 @@ Before you start, make sure you have:
 
 ### Common issues
 
-| Issue | Solution |
-|-------|----------|
-| [Common problem] | [Solution] |
+| Issue                    | Solution   |
+| ------------------------ | ---------- |
+| [Common problem]         | [Solution] |
 | [Another common problem] | [Solution] |
 
 ## Complete working example
@@ -120,8 +120,8 @@ Have questions or running into issues? Join our [Community Forum](https://commun
 
 ## Related resources
 
-- **[API Reference](/reference/)** - Complete SDK documentation
-- **[Adobe Express Embed SDK Overview](/guides/)** - High-level introduction
+- **[API Reference](../../v4/index.md)** - Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](../index.md)** - High-level introduction
 - **[Demo Application](https://demo.expressembed.com/)** - Interactive demo showcasing SDK capabilities
 - **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)** - Working code examples and tutorials
-- **[Changelog](/guides/changelog/)** - Latest updates and improvements
+- **[Changelog](../changelog/index.md)** - Latest updates and improvements

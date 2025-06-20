@@ -62,15 +62,27 @@ Re-exports [PublishConfig](app-config-types/interfaces/publish-config.md)
 
 ***
 
-### TemplateBrowserConfig
+### PromptSafetyCategory
 
-Re-exports [TemplateBrowserConfig](app-config-types/interfaces/template-browser-config.md)
+Re-exports [PromptSafetyCategory](app-config-types/enumerations/prompt-safety-category.md)
+
+***
+
+### PromptSafetyResult
+
+Re-exports [PromptSafetyResult](app-config-types/interfaces/prompt-safety-result.md)
 
 ***
 
 ### TextToImageAppConfig
 
 Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
+
+***
+
+### TemplateBrowserConfig
+
+Re-exports [TemplateBrowserConfig](app-config-types/interfaces/template-browser-config.md)
 
 ***
 

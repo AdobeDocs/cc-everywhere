@@ -32,6 +32,12 @@ Re-exports [PdfQuickActionIntent](action-intent-types/enumerations/pdf-quick-act
 
 ***
 
+### GenStudioQuickActionIntent
+
+Re-exports [GenStudioQuickActionIntent](action-intent-types/enumerations/gen-studio-quick-action-intent.md)
+
+***
+
 ### WarmupIntent
 
 Re-exports [WarmupIntent](action-intent-types/enumerations/warmup-intent.md)
@@ -407,6 +413,18 @@ Re-exports [IntentChangeCallback](callbacks-types/type-aliases/intent-change-cal
 ### Callbacks
 
 Re-exports [Callbacks](callbacks-types/interfaces/callbacks.md)
+
+***
+
+### ClientAuthDetails
+
+Re-exports [ClientAuthDetails](client-authentication-types/interfaces/client-auth-details.md)
+
+***
+
+### ClientAuthProvider
+
+Re-exports [ClientAuthProvider](client-authentication-types/interfaces/client-auth-provider.md)
 
 ***
 

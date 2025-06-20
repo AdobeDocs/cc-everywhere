@@ -14,3 +14,4 @@ Enum representing feature flags for HZ based target apps
 | `NO_LOGIN_EXPERIENCE` | `"no-login-experience"` |
 | `UTILITY_NAV_ENABLED` | `"utility-nav-enabled"` |
 | `ZOOM_CONTROL_V2` | `"zoom-control-v2"` |
+| `GS_CANVAS_DEBUG_UI` | `"gs-canvas-debug-ui-enabled"` |

@@ -9,7 +9,7 @@ default: object;
 ### initialize()
 
 ```ts
-initialize: (hostInfo, configParams?, authOption?) => Promise<CCEverywhere>;
+initialize: (hostInfo, configParams?, authOption?, clientAuthProvider?) => Promise<CCEverywhere>;
 ```
 
 This is the main API which is used for initializing the SDK.
@@ -22,6 +22,7 @@ Please ensure to call this API only once.
 | `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |  |
 | `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |  |
 | `authOption`? | [`AuthOption`](../../../../../shared/src/types/authentication-types/type-aliases/auth-option.md) | authentication configuration |
+| `clientAuthProvider`? | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | client authentication provider for fetching client authentication details. |
 
 #### Returns
 
