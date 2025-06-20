@@ -1,4 +1,4 @@
-# Type Alias: ErrorCallback()<T\>
+# Type Alias: ErrorCallback() T
 
 ```ts
 type ErrorCallback<T>: (error) => void;
@@ -14,7 +14,7 @@ type ErrorCallback<T>: (error) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md) `T` |
 
 ## Returns
 
