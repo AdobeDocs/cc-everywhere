@@ -7,3 +7,4 @@
 | `IMAGE` | `"Edit Image"` |
 | `VIDEO` | `"Edit Video"` |
 | `PDF` | `"Edit Document"` |
+| `GENSTUDIO` | `"GenStudio"` |

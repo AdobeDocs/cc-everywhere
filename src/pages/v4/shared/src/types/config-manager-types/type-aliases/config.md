@@ -708,6 +708,18 @@ DESKTOP: object;
 CLIENT_ID: string;
 ```
 
+### CLIENTS.ACROBAT\_MOBILE
+
+```ts
+ACROBAT_MOBILE: object;
+```
+
+### CLIENTS.ACROBAT\_MOBILE.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
 ### CLIENTS.CCD
 
 ```ts
@@ -823,6 +835,18 @@ ACROBAT_EMBED_VIEWER: object;
 ```
 
 ### CLIENTS.ACROBAT\_EMBED\_VIEWER.CLIENT\_ID
+
+```ts
+CLIENT_ID: string;
+```
+
+### CLIENTS.ACROBAT\_WEB\_BENCH
+
+```ts
+ACROBAT_WEB_BENCH: object;
+```
+
+### CLIENTS.ACROBAT\_WEB\_BENCH.CLIENT\_ID
 
 ```ts
 CLIENT_ID: string;

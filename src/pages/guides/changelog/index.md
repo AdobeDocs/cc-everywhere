@@ -22,6 +22,19 @@ contributors:
 
 Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## [4.30.13] 2025-06-20
+
+### Maintenance release
+
+<!--
+### Added
+
+- Added support for a new `isPromptSafe` callback in the [`TextToImageAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) interface and a new [`PromptSafetyResult`](../../v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result.md) interface. This allows partners to implement their own additional prompt moderation logic.
+
+ - Added support for [Partner-based Entitlement](../concepts/client-based-entitlement-onboarding.md) in the SDK. This allows the Generate Image module integration with Partner-based generative credits usage.
+  - New [`ClientAuthProvider`](../../v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) parameter for the `CCEverywhere.initialize()` method—the client authentication provider for fetching the partner authentication details.
+  - New `useClientAuth` property in the [`TextToImageAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) interface—a flag to explicitly opt-in to use client authentication. -->
+
 ## [4.29.22] 2025-05-28
 
 ### Added

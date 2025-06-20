@@ -360,7 +360,7 @@
             "pages": [
               {
                 "title": "Messages",
-                "path": "/v4/shared/src/error/Messages/variables/Messages.md"
+                "path": "/v4/shared/src/error/messages/variables/messages.md"
               }
             ],
             "path": "/v4/shared/src/error/messages/index.md"
@@ -744,6 +744,10 @@
                     "path": "/v4/shared/src/types/action-intent-types/enumerations/editor-intent.md"
                   },
                   {
+                    "title": "GenStudioQuickActionIntent",
+                    "path": "/v4/shared/src/types/action-intent-types/enumerations/gen-studio-quick-action-intent.md"
+                  },
+                  {
                     "title": "ImageQuickActionIntent",
                     "path": "/v4/shared/src/types/action-intent-types/enumerations/image-quick-action-intent.md"
                   },
@@ -1120,6 +1124,26 @@
               }
             ],
             "path": "/v4/shared/src/types/callbacks-types/index.md"
+          },
+          {
+            "title": "ClientAuthentication.types",
+            "pages": [
+              {
+                "title": "interfaces",
+                "pages": [
+                  {
+                    "title": "ClientAuthDetails",
+                    "path": "/v4/shared/src/types/client-authentication-types/interfaces/client-auth-details.md"
+                  },
+                  {
+                    "title": "ClientAuthProvider",
+                    "path": "/v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/client-authentication-types/interfaces/client-auth-details.md"
+              }
+            ],
+            "path": "/v4/shared/src/types/client-authentication-types/index.md"
           },
           {
             "title": "CommunityWall.types",
@@ -1697,6 +1721,10 @@
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version.md"
                       },
                       {
+                        "title": "PromptSafetyCategory",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category.md"
+                      },
+                      {
                         "title": "TextToImageAppVersion",
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version.md"
                       },
@@ -1737,6 +1765,10 @@
                       {
                         "title": "FastModeConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/fast-mode-config.md"
+                      },
+                      {
+                        "title": "PromptSafetyResult",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result.md"
                       },
                       {
                         "title": "PublishConfig",
