@@ -25,7 +25,7 @@ Please ensure to call this API only once.
 
 #### Returns
 
-`Promise`<[`CCEverywhere`](../classes/cc-everywhere.md)\>
+`Promise` [`CCEverywhere`](../classes/cc-everywhere.md)
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
 
