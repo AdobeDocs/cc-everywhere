@@ -1,4 +1,4 @@
-# Type Alias: MessageCompat<T\>
+# Type Alias: MessageCompat T
 
 ```ts
 type MessageCompat<T>: object;
