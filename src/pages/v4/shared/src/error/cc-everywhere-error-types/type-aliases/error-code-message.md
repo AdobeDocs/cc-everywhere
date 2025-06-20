@@ -1,4 +1,4 @@
-# Type Alias: ErrorCodeMessage<T\>
+# Type Alias: ErrorCodeMessage T
 
 ```ts
 type ErrorCodeMessage<T>: object;
