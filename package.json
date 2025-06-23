@@ -36,7 +36,8 @@
     "buildNavigation": "node buildNavigation.js",
     "buildRedirections": "node buildRedirections.js",
     "renameFiles": "node renameFiles.js",
-    "normalizeLinks": "node normalizeLinks.js"
+    "normalizeLinks": "node normalizeLinks.js",
+    "create-tutorial": "node scripts/create-tutorial.js"
   },
   "packageManager": "yarn@3.2.2",
   "devDependencies": {

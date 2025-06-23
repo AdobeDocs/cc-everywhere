@@ -20,7 +20,8 @@ new CCEverywhereBase(
    authControllerConstructor, 
    hostInfo, 
    configParams, 
-   authProvider): CCEverywhereBase
+   authProvider, 
+   clientAuthProvider): CCEverywhereBase
 ```
 
 Constructor to initialize CCEverywhere object.
@@ -34,6 +35,7 @@ Constructor to initialize CCEverywhere object.
 | `hostInfo` | [`HostInfo`](../../../../shared/src/types/host-info-types/type-aliases/host-info.md) | client application information - clientId, appName |
 | `configParams` | [`ConfigParams`](../../../../shared/src/types/host-info-types/type-aliases/config-params.md) | environment, locale, piipStatus, colorTheme, spectrumTheme, scale |
 | `authProvider` | `AuthProvider` | - |
+| `clientAuthProvider` | [`ClientAuthProvider`](../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | - |
 
 #### Returns
 

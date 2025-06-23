@@ -32,6 +32,12 @@ Re-exports [PdfQuickActionIntent](action-intent-types/enumerations/pdf-quick-act
 
 <HorizontalLine />
 
+### GenStudioQuickActionIntent
+
+Re-exports [GenStudioQuickActionIntent](action-intent-types/enumerations/gen-studio-quick-action-intent.md)
+
+<HorizontalLine />
+
 ### WarmupIntent
 
 Re-exports [WarmupIntent](action-intent-types/enumerations/warmup-intent.md)
@@ -421,6 +427,18 @@ Re-exports [ClientAuthDetails](client-authentication-types/interfaces/client-aut
 Re-exports [ClientAuthProvider](client-authentication-types/interfaces/client-auth-provider.md)
 
 <HorizontalLine />
+
+### ClientAuthDetails
+
+Re-exports [ClientAuthDetails](client-authentication-types/interfaces/client-auth-details.md)
+
+***
+
+### ClientAuthProvider
+
+Re-exports [ClientAuthProvider](client-authentication-types/interfaces/client-auth-provider.md)
+
+***
 
 ### CWAssetResponse
 
