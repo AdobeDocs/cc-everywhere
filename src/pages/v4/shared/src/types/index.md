@@ -410,6 +410,18 @@ Re-exports [Callbacks](callbacks-types/interfaces/callbacks.md)
 
 <HorizontalLine />
 
+### ClientAuthDetails
+
+Re-exports [ClientAuthDetails](client-authentication-types/interfaces/client-auth-details.md)
+
+<HorizontalLine />
+
+### ClientAuthProvider
+
+Re-exports [ClientAuthProvider](client-authentication-types/interfaces/client-auth-provider.md)
+
+<HorizontalLine />
+
 ### CWAssetResponse
 
 Re-exports [CWAssetResponse](community-wall-types/interfaces/cw-asset-response.md)
