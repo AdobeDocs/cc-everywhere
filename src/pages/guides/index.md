@@ -44,7 +44,7 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<Announcement slots="heading, text, button" variant="secondary"/>
+<Announcement slots="heading, text, button" variant="secondary" backgroundColor ="background-color-gray"/>
 
 ### Demo App
 
