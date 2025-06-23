@@ -36,7 +36,7 @@ contributors:
 ---
 import "./landing-styles.css";
 
-<HeroSimple slots="image, heading, text" background="linear-gradient(180deg, #c946eb, #6372f5)" textColor="white" />
+<HeroSimple slots="image, heading, text" background="linear-gradient(180deg, #c946eb, #6372f5)" variant="halfWidth" textColor="white"/>
 
 ![Hero image](./images/wide-SDK-Banner-570x400.png)
 
