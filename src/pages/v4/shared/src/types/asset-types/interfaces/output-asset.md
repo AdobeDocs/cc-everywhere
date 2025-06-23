@@ -4,7 +4,7 @@ Information related to output asset.
 
 ## Extends
 
-- [`AssetBase`](asset-base.md)<`AssetDataType.URL` \| `AssetDataType.BASE64`\>
+- [`AssetBase`](asset-base.md) `AssetDataType.URL` \| `AssetDataType.BASE64`
 
 ## Properties
 
