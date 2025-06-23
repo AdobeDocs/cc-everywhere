@@ -15,4 +15,4 @@ Keeping callback type as void | `Promise<PublishStatus>` for the publish operati
 
 ## Returns
 
-`void` \| `Promise`<[`PublishStatus`](../interfaces/publish-status.md)\>
+`void` \| `Promise` [`PublishStatus`](../interfaces/publish-status.md)
