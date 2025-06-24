@@ -1,7 +1,7 @@
 {
-   "total":494,
+   "total":475,
    "offset":0,
-   "limit":494,
+   "limit":475,
    "data":[
       {
          "Source":"/express/embed-sdk/v4/index.md",
@@ -196,6 +196,10 @@
          "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/index.md/"
       },
       {
+         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result/",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result"
+      },
+      {
          "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-response/",
          "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-response"
       },
@@ -214,6 +218,10 @@
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version/",
          "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version"
+      },
+      {
+         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category/",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version/",
@@ -564,6 +572,22 @@
          "Destination":"/express/embed-sdk/v4/shared/src/types/community-wall-types/interfaces/cw-asset-response"
       },
       {
+         "Source":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/index.md",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/index.md/"
+      },
+      {
+         "Source":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/index.md/index",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/index.md/"
+      },
+      {
+         "Source":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider/",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider"
+      },
+      {
+         "Source":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/interfaces/client-auth-details/",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/client-authentication-types/interfaces/client-auth-details"
+      },
+      {
          "Source":"/express/embed-sdk/v4/shared/src/types/callbacks-types/index.md",
          "Destination":"/express/embed-sdk/v4/shared/src/types/callbacks-types/index.md/"
       },
@@ -870,6 +894,10 @@
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/action-intent-types/enumerations/image-quick-action-intent/",
          "Destination":"/express/embed-sdk/v4/shared/src/types/action-intent-types/enumerations/image-quick-action-intent"
+      },
+      {
+         "Source":"/express/embed-sdk/v4/shared/src/types/action-intent-types/enumerations/gen-studio-quick-action-intent/",
+         "Destination":"/express/embed-sdk/v4/shared/src/types/action-intent-types/enumerations/gen-studio-quick-action-intent"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/action-intent-types/enumerations/editor-intent/",
@@ -1708,20 +1736,20 @@
          "Destination":"/express/embed-sdk/reference/cc-everywhere/terminate/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/reference/cc-everywhere/quickAction/index.md",
-         "Destination":"/express/embed-sdk/reference/cc-everywhere/quickAction/index.md/"
+         "Source":"/express/embed-sdk/reference/cc-everywhere/quick-action/index.md",
+         "Destination":"/express/embed-sdk/reference/cc-everywhere/quick-action/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/reference/cc-everywhere/quickAction/index.md/index",
-         "Destination":"/express/embed-sdk/reference/cc-everywhere/quickAction/index.md/"
+         "Source":"/express/embed-sdk/reference/cc-everywhere/quick-action/index.md/index",
+         "Destination":"/express/embed-sdk/reference/cc-everywhere/quick-action/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/reference/cc-everywhere/miniEditor/index.md",
-         "Destination":"/express/embed-sdk/reference/cc-everywhere/miniEditor/index.md/"
+         "Source":"/express/embed-sdk/reference/cc-everywhere/mini-editor/index.md",
+         "Destination":"/express/embed-sdk/reference/cc-everywhere/mini-editor/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/reference/cc-everywhere/miniEditor/index.md/index",
-         "Destination":"/express/embed-sdk/reference/cc-everywhere/miniEditor/index.md/"
+         "Source":"/express/embed-sdk/reference/cc-everywhere/mini-editor/index.md/index",
+         "Destination":"/express/embed-sdk/reference/cc-everywhere/mini-editor/index.md/"
       },
       {
          "Source":"/express/embed-sdk/reference/cc-everywhere/editor/index.md",
@@ -1746,6 +1774,10 @@
       {
          "Source":"/express/embed-sdk/guides/index.md/index",
          "Destination":"/express/embed-sdk/guides/index.md/"
+      },
+      {
+         "Source":"/express/embed-sdk/guides/tutorials/tutorial-template/",
+         "Destination":"/express/embed-sdk/guides/tutorials/tutorial-template"
       },
       {
          "Source":"/express/embed-sdk/guides/tutorials/index.md",
