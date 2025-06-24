@@ -83,12 +83,12 @@ All the callbacks are optional and return void. Callbacks are defined in the `ap
 
 | Property | Callback Function | Description
 | :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes the modal
-| onError | () => {} | Triggered upon error with associated error code
-| onLoadStart | () => {} | Triggered once modal begins to load
-| onLoad | () => {} | Triggered once modal is loaded
-| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | (intent, [PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
+| onCancel | `() => {}`| Triggered when user closes the modal
+| onError | `() => {}` | Triggered upon error with associated error code
+| onLoadStart | `() => {}` | Triggered once modal begins to load
+| onLoad | `() => {}` | Triggered once modal is loaded
+| onPublishStart | `() => {}` | Triggered when "Publish"/"Download" is clicked
+| onPublish | (intent, [PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => `{}` | Triggered when publish/download is complete
 
 ## CanvasAspectId
 
