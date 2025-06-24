@@ -45,7 +45,7 @@ All the callbacks are optional and return void.
 | onLoadStart | `() => {}` | Triggered once modal begins to load
 | onLoad | `() => {}` | Triggered once modal is loaded
 | onPublishStart | `() => {}` | Triggered when "Publish"/"Download" is clicked
-| onPublish | `([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {}` | Triggered when publish/download is complete
+| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => `{}` | Triggered when publish/download is complete
 
 ### PublishParams
 
