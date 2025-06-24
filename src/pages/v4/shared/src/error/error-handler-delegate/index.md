@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/error/ErrorHandlerDelegate
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: BaseAppConfig
 
 ## Extended by
@@ -11,5 +15,5 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `callbacks?` | [`Callbacks`](../../callbacks-types/interfaces/callbacks.md) | - |
-| `analyticsData?` | [`BaseAnalyticsData`](../../app-config-types/type-aliases/base-analytics-data.md) | Analytics data that can be provided by the host app |
+| <a id="callbacks"></a> `callbacks?` | [`Callbacks`](../../callbacks-types/interfaces/callbacks.md) | - |
+| <a id="analyticsdata"></a> `analyticsData?` | [`BaseAnalyticsData`](../../app-config-types/type-aliases/base-analytics-data.md) | Analytics data that can be provided by the host app |

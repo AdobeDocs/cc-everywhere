@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: PublishStatus
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `status` | `"SUCCESS"` \| `"DENIED"` |
+| <a id="status"></a> `status` | `"SUCCESS"` \| `"DENIED"` |

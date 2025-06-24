@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: HostEventData
 
 ## Extends
@@ -16,5 +20,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| `type` | [`HostEventType`](../../message-data-types/enumerations/host-event-type.md) |
-| `data?` | `unknown` |
+| <a id="type"></a> `type` | [`HostEventType`](../../message-data-types/enumerations/host-event-type.md) |
+| <a id="data"></a> `data?` | `unknown` |

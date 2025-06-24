@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # shared/src/types/editor/DocConfig.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

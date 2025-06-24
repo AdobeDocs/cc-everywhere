@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Variable: default
 
 ```ts
@@ -5,6 +9,8 @@ default: object;
 ```
 
 ## Type declaration
+
+<a id="initialize"></a>
 
 ### initialize()
 
@@ -20,15 +26,17 @@ Please ensure to call this API only once.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |  |
-| `configParams`? | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |  |
-| `authOption`? | [`AuthOption`](../../../../../shared/src/types/authentication-types/type-aliases/auth-option.md) | authentication configuration |
-| `clientAuthProvider`? | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | client authentication provider for fetching client authentication details. |
+| `configParams?` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |  |
+| `authOption?` | [`AuthOption`](../../../../../shared/src/types/authentication-types/type-aliases/auth-option.md) | authentication configuration |
+| `clientAuthProvider?` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | client authentication provider for fetching client authentication details. |
 
 #### Returns
 
 `Promise`<[`CCEverywhere`](../../cc-everywhere/classes/cc-everywhere.md)\>
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
+
+<a id="terminate"></a>
 
 ### terminate()
 

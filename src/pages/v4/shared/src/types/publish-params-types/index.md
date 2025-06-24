@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/PublishParams.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

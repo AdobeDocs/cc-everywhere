@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Variable: CURRENT\_PROTOCOL\_VERSION
 
 ```ts

@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/ChannelMessenger
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

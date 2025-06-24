@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/ExportConfig.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -13,7 +15,7 @@
 | [EditFurtherIntent](../export-config-types/enumerations/edit-further-intent.md) | - |
 | [ExportGroupType](../export-config-types/enumerations/export-group-type.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -28,17 +30,17 @@
 | [DownloadAction](../export-config-types/interfaces/download-action.md) | - |
 | [EditFurtherAction](../export-config-types/interfaces/edit-further-action.md) | - |
 | [BaseExportOption](../export-config-types/interfaces/base-export-option.md) | - |
-| [PublishExportOption](../export-config-types/interfaces/publish-export-option.md) | - |
-| [DownloadExportOption](../export-config-types/interfaces/download-export-option.md) | - |
-| [EditFurtherExportOption](../export-config-types/interfaces/edit-further-export-option.md) | - |
+| [PublishExportOption](../export-config-types/interfaces/publish-export-option.md) | Export option for publishing content to various targets. |
+| [DownloadExportOption](../export-config-types/interfaces/download-export-option.md) | Export option for downloading content to the user's device. |
+| [EditFurtherExportOption](../export-config-types/interfaces/edit-further-export-option.md) | Export option for continuing to edit content in other applications. |
 | [ContinueEditingDropdownOption](../export-config-types/interfaces/continue-editing-dropdown-option.md) | - |
 | [ExportGroup](../export-config-types/interfaces/export-group.md) | - |
 | [ExportOptionGroup](../export-config-types/interfaces/export-option-group.md) | - |
 | [ContinueEditingGroup](../export-config-types/interfaces/continue-editing-group.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [ExportTarget](../export-config-types/type-aliases/export-target.md) | - |
 | [ExportButtonTreatment](../export-config-types/type-aliases/export-button-treatment.md) | - |
@@ -50,8 +52,8 @@
 | [ExportStyle](../export-config-types/type-aliases/export-style.md) | - |
 | [ContinueEditingAction](../export-config-types/type-aliases/continue-editing-action.md) | - |
 | [ExportAction](../export-config-types/type-aliases/export-action.md) | - |
-| [ExportOption](../export-config-types/type-aliases/export-option.md) | - |
-| [DropdownExportOption](../export-config-types/type-aliases/dropdown-export-option.md) | - |
+| [ExportOption](../export-config-types/type-aliases/export-option.md) | Represents the available export options for the CC Everywhere SDK. |
+| [DropdownExportOption](../export-config-types/type-aliases/dropdown-export-option.md) | Represents export options specifically for dropdown UI components. |
 | [ExportOptionOrGroup](../export-config-types/type-aliases/export-option-or-group.md) | - |
 | [ExportOptions](../export-config-types/type-aliases/export-options.md) | - |
 | [ExportConfig](../export-config-types/type-aliases/export-config.md) | - |

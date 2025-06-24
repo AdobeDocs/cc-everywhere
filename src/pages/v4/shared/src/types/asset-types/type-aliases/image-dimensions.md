@@ -1,13 +1,19 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: ImageDimensions
 
 ```ts
-type ImageDimensions: object;
+type ImageDimensions = object;
 ```
 
 Represents the dimensions of an image.
 It takes the size of the image in pixels along with the aspect ratio.
 
-## Type declaration
+## Properties
+
+<a id="size"></a>
 
 ### size?
 
@@ -23,6 +29,10 @@ Maximum width and height values are as follows:
 - portrait: 1792x2304
 - landscape: 2304x1792
 - widescreen: 2688x1536
+
+***
+
+<a id="aspectratio"></a>
 
 ### aspectRatio
 

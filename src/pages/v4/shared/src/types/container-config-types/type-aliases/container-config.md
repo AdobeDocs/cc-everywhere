@@ -1,7 +1,14 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: ContainerConfig
 
 ```ts
-type ContainerConfig: InlineContainerConfig | ModalContainerConfig | FillContainerConfig;
+type ContainerConfig = 
+  | InlineContainerConfig
+  | ModalContainerConfig
+  | FillContainerConfig;
 ```
 
 Parameters to define target editor modal dialog UI constraints.

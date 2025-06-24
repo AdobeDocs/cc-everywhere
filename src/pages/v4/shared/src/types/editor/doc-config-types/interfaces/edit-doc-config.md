@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Interface: EditDocConfig
 
 ## Extends
@@ -8,4 +12,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `documentId` | `string` |
+| <a id="documentid"></a> `documentId` | `string` |

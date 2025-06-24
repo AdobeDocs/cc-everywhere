@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: BaseAction
 
 ## Extended by
@@ -10,4 +14,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `target` | [`ExportTarget`](../../export-config-types/type-aliases/export-target.md) |
+| <a id="target"></a> `target` | [`ExportTarget`](../../export-config-types/type-aliases/export-target.md) |

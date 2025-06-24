@@ -1,8 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: EditFurtherTarget
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `EXPRESS` | `"express"` |
-| `IMAGE_MODULE` | `"image-module"` |
+| <a id="express"></a> `EXPRESS` | `"express"` |
+| <a id="image_module"></a> `IMAGE_MODULE` | `"image-module"` |

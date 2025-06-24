@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: PublishTarget
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `PUBLISH` | `"publish"` |
+| <a id="publish"></a> `PUBLISH` | `"publish"` |

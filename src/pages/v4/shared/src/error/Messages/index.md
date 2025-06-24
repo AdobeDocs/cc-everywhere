@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/error/Messages
 
-## Index
-
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

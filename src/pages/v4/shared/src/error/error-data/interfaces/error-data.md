@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: ErrorData<T\>
 
 ## Type Parameters
@@ -10,9 +14,9 @@
 
 | Property | Type |
 | ------ | ------ |
-| `code` | `T` |
-| `message` | `string` |
-| `subError?` | `string` \| `number` \| `Error` |
-| `customData?` | `unknown` |
-| `debugId?` | `string` |
-| `stack?` | `string` |
+| <a id="code"></a> `code` | `T` |
+| <a id="message"></a> `message` | `string` |
+| <a id="suberror"></a> `subError?` | `string` \| `number` \| `Error` |
+| <a id="customdata"></a> `customData?` | `unknown` |
+| <a id="debugid"></a> `debugId?` | `string` |
+| <a id="stack"></a> `stack?` | `string` |

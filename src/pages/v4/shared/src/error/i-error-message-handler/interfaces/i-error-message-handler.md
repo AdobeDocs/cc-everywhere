@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: IErrorMessageHandler<T\>
 
 ## Type Parameters
@@ -10,6 +14,6 @@
 
 | Property | Type |
 | ------ | ------ |
-| `error` | (`error`: [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\>) => `void` |
-| `warn` | (`message`: [`CCEverywhereWarn`](../../cc-everywhere-error-types/interfaces/cc-everywhere-warn.md)) => `void` |
-| `info` | (`info`: [`CCEverywhereInfo`](../../cc-everywhere-error-types/interfaces/cc-everywhere-info.md)) => `void` |
+| <a id="error"></a> `error` | (`error`) => `void` |
+| <a id="warn"></a> `warn` | (`message`) => `void` |
+| <a id="info"></a> `info` | (`info`) => `void` |

@@ -1,15 +1,17 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/Authentication.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [ValidateTokenError](../authentication-types/enumerations/validate-token-error.md) | - |
 | [AuthMode](../authentication-types/enumerations/auth-mode.md) | Enum representing different authentication modes. |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -23,13 +25,13 @@
 | [ImsJumpAuthOption](../authentication-types/interfaces/ims-jump-auth-option.md) | - |
 | [UserInfo](../authentication-types/interfaces/user-info.md) | Base class for user related information. |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [AuthOption](../authentication-types/type-aliases/auth-option.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

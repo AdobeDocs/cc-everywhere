@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # sdk/src/types/CCEverywhere.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |

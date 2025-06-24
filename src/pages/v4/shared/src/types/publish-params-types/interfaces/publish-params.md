@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: PublishParams
 
 Asset related information received with onPublish callback.
@@ -12,6 +16,6 @@ Asset related information received with onPublish callback.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `asset` | [`OutputAsset`](../../asset-types/interfaces/output-asset.md)[] | Asset which is exported |
-| `exportButtonId` | `string` | id of the export option clicked |
-| `documentId?` | `string` | Unique identifier for the assets created/edited. |
+| <a id="asset"></a> `asset` | [`OutputAsset`](../../asset-types/interfaces/output-asset.md)[] | Asset which is exported |
+| <a id="exportbuttonid"></a> `exportButtonId` | `string` | id of the export option clicked |
+| <a id="documentid"></a> `documentId?` | `string` | Unique identifier for the assets created/edited. |

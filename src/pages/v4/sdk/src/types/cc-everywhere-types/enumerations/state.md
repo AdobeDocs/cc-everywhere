@@ -1,9 +1,13 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: State
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `NOT_INITIALIZED` | `0` |
-| `INITIALIZING` | `1` |
-| `INITIALIZED` | `2` |
+| <a id="not_initialized"></a> `NOT_INITIALIZED` | `0` |
+| <a id="initializing"></a> `INITIALIZING` | `1` |
+| <a id="initialized"></a> `INITIALIZED` | `2` |

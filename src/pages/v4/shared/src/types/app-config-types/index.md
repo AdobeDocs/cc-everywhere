@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/AppConfig.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -15,13 +17,13 @@
 | [HostAppTrigger](../app-config-types/enumerations/host-app-trigger.md) | - |
 | [WarmupMode](../app-config-types/enumerations/warmup-mode.md) | Enum for defining the different warmup modes for the background warmup process. |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [BaseAnalyticsData](../app-config-types/type-aliases/base-analytics-data.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

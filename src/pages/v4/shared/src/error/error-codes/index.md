@@ -1,14 +1,16 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/error/ErrorCodes
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [ErrorCode](../error-codes/enumerations/error-code.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

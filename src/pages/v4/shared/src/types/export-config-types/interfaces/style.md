@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: Style
 
 ## Extended by
@@ -10,4 +14,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `uiType` | [`ExportOptionUI`](../../export-config-types/enumerations/export-option-ui.md) |
+| <a id="uitype"></a> `uiType` | [`ExportOptionUI`](../../export-config-types/enumerations/export-option-ui.md) |

@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: LoadStartCallback()
 
 ```ts
-type LoadStartCallback: () => void;
+type LoadStartCallback = () => void;
 ```
 
 ## Returns

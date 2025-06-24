@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/ClientAuthentication.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

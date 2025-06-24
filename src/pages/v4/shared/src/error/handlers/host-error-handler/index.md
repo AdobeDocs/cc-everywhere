@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # shared/src/error/handlers/HostErrorHandler
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

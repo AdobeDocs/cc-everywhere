@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # sdk/src/workflows/3p/QuickActionWorkflow
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

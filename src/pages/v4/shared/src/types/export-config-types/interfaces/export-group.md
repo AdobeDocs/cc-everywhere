@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: ExportGroup
 
 ## Extended by
@@ -9,5 +13,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| `type` | [`ExportGroupType`](../../export-config-types/enumerations/export-group-type.md) |
-| `style` | [`ButtonStyle`](../../export-config-types/type-aliases/button-style.md) |
+| <a id="type"></a> `type` | [`ExportGroupType`](../../export-config-types/enumerations/export-group-type.md) |
+| <a id="style"></a> `style` | [`ButtonStyle`](../../export-config-types/type-aliases/button-style.md) |

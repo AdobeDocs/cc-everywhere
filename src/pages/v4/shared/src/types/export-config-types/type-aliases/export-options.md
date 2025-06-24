@@ -1,5 +1,9 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: ExportOptions
 
 ```ts
-type ExportOptions: ExportOptionOrGroup[];
+type ExportOptions = ExportOptionOrGroup[];
 ```

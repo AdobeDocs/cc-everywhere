@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: IChannelMessengerDelegate
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `didGetMessage` | <`T`\>(`message`: [`Message`](../../message-types/type-aliases/message.md)<`T`\>, `requestId`?: `string`) => `void` |
+| <a id="didgetmessage"></a> `didGetMessage` | <`T`\>(`message`, `requestId?`) => `void` |

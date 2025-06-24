@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: IntentChangeCallback()
 
 ```ts
-type IntentChangeCallback: (oldIntent, newIntent) => IntentChangeConfig | undefined;
+type IntentChangeCallback = (oldIntent, newIntent) => IntentChangeConfig | undefined;
 ```
 
 ## Parameters

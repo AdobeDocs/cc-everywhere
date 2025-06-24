@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: WarmupIntent
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `WARMUP` | `"warmup"` |
+| <a id="warmup"></a> `WARMUP` | `"warmup"` |

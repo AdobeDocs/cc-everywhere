@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: VideoFileType
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `MP4` | `"video/mp4"` |
+| <a id="mp4"></a> `MP4` | `"video/mp4"` |

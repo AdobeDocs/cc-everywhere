@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # sdk/src/error/ErrorHandler
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |

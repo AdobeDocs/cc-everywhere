@@ -1,8 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: ImageFileType
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `JPEG` | `"image/jpeg"` |
-| `PNG` | `"image/png"` |
+| <a id="jpeg"></a> `JPEG` | `"image/jpeg"` |
+| <a id="png"></a> `PNG` | `"image/png"` |

@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: Listener()
 
 ```ts
-type Listener: <T>(message) => void;
+type Listener = <T>(message) => void;
 ```
 
 ## Type Parameters

@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/Version.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

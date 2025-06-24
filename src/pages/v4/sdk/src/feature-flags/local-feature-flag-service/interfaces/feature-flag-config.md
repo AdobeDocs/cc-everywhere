@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: FeatureFlagConfig
 
 Configuration interface for feature flags
@@ -6,7 +10,7 @@ Configuration interface for feature flags
 
 | Property | Type |
 | ------ | ------ |
-| `baseFeatureFlags` | `Partial`<`Partial`<`Record`<[`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), `Partial`<`Record`<[`HzFeatureFlag`](../../local-feature-flag-service/enumerations/hz-feature-flag.md), `boolean`\>\>\>\>\> |
-| `firstPartyFeatureFlags` | `Partial`<`Partial`<`Record`<[`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), `Partial`<`Record`<[`HzFeatureFlag`](../../local-feature-flag-service/enumerations/hz-feature-flag.md), `boolean`\>\>\>\>\> |
-| `thirdPartyFeatureFlags` | `Partial`<`Partial`<`Record`<[`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), `Partial`<`Record`<[`HzFeatureFlag`](../../local-feature-flag-service/enumerations/hz-feature-flag.md), `boolean`\>\>\>\>\> |
-| `clientFeatureFlags` | `Partial`<`Partial`<`Record`<[`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), [`ClientFeatureFlags`](../../local-feature-flag-service/type-aliases/client-feature-flags.md)\>\>\> |
+| <a id="basefeatureflags"></a> `baseFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
+| <a id="firstpartyfeatureflags"></a> `firstPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
+| <a id="thirdpartyfeatureflags"></a> `thirdPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
+| <a id="clientfeatureflags"></a> `clientFeatureFlags` | `Partial`<[`IntentClientFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-client-feature-flags.md)\> |

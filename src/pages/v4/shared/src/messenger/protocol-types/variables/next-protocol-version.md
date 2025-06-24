@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Variable: NEXT\_PROTOCOL\_VERSION
 
 ```ts

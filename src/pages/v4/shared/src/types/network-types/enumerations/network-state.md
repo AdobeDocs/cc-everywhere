@@ -1,8 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: NetworkState
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `ONLINE` | `"online"` |
-| `OFFLINE` | `"offline"` |
+| <a id="online"></a> `ONLINE` | `"online"` |
+| <a id="offline"></a> `OFFLINE` | `"offline"` |

@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: Blob
 
 Custom interface that represents a Blob object.
@@ -7,10 +11,12 @@ Should be used instead of default Blob type.
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| `size` | `readonly` | `number` |
-| `type` | `readonly` | `string` |
+| <a id="size"></a> `size` | `readonly` | `number` |
+| <a id="type"></a> `type` | `readonly` | `string` |
 
 ## Methods
+
+<a id="slice"></a>
 
 ### slice()
 
@@ -18,39 +24,43 @@ Should be used instead of default Blob type.
 slice(
    start?, 
    end?, 
-   contentType?): Blob
+   contentType?): Blob;
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `start`? | `number` |
-| `end`? | `number` |
-| `contentType`? | `string` |
+| `start?` | `number` |
+| `end?` | `number` |
+| `contentType?` | `string` |
 
 #### Returns
 
-[`Blob`](../../asset-types/interfaces/blob.md)
+`Blob`
 
 ***
+
+<a id="stream"></a>
 
 ### stream()
 
 ```ts
-stream(): ReadableStream<any>
+stream(): ReadableStream;
 ```
 
 #### Returns
 
-`ReadableStream`<`any`\>
+`ReadableStream`
 
 ***
+
+<a id="text"></a>
 
 ### text()
 
 ```ts
-text(): Promise<string>
+text(): Promise<string>;
 ```
 
 #### Returns
@@ -59,10 +69,12 @@ text(): Promise<string>
 
 ***
 
+<a id="arraybuffer"></a>
+
 ### arrayBuffer()
 
 ```ts
-arrayBuffer(): Promise<ArrayBuffer>
+arrayBuffer(): Promise<ArrayBuffer>;
 ```
 
 #### Returns

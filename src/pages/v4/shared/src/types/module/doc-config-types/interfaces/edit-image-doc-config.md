@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Interface: EditImageDocConfig
 
 ## Extends
@@ -8,5 +12,5 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) | - |
-| `intent?` | [`EditImageIntent`](../../doc-config-types/type-aliases/edit-image-intent.md) | intent that needs to be performed on the asset |
+| <a id="asset"></a> `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) | - |
+| <a id="intent"></a> `intent?` | [`EditImageIntent`](../../doc-config-types/type-aliases/edit-image-intent.md) | intent that needs to be performed on the asset |

@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/Callbacks.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -10,9 +12,9 @@
 | [PublishStatus](../callbacks-types/interfaces/publish-status.md) | - |
 | [Callbacks](../callbacks-types/interfaces/callbacks.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [LoadStartCallback](../callbacks-types/type-aliases/load-start-callback.md) | - |
 | [LoadCallback](../callbacks-types/type-aliases/load-callback.md) | - |

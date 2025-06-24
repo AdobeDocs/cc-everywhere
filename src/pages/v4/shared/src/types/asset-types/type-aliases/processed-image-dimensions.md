@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: ProcessedImageDimensions
 
 ```ts
-type ProcessedImageDimensions: ImageDimensions & object;
+type ProcessedImageDimensions = ImageDimensions & object;
 ```
 
 Represents the processed image dimensions.
