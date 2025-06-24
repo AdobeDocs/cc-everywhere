@@ -13,7 +13,7 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
-IMPORTANT: Deprecation Warning
+**IMPORTANT: Deprecation Warning**
 
 We are no longer approving new integrations using SDK v3, which will be deprecated in 2024.
 
