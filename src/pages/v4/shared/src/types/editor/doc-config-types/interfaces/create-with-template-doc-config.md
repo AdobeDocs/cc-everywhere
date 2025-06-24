@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Interface: CreateWithTemplateDocConfig
 
 ## Extends
@@ -8,4 +12,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `templateId` | `string` |
+| <a id="templateid"></a> `templateId` | `string` |

@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # shared/src/types/module/AppConfig.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -12,7 +14,7 @@
 | [TextToImageFeature](../app-config-types/enumerations/text-to-image-feature.md) | - |
 | [PromptSafetyCategory](../app-config-types/enumerations/prompt-safety-category.md) | Categories for prompt safety assessment. This enum can be extended as new safety categories are identified. |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

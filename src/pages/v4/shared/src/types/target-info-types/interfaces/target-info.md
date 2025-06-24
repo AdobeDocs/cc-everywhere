@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: TargetInfo
 
 The information of target application (for eg : CCX) which host can open in the browser.
@@ -8,5 +12,5 @@ so that user doesn't need to perform a manual sign in.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `clientId` | `string` | Client id of the application to navigate to. |
-| `url` | `URL` | URL of the application to navigate to. |
+| <a id="clientid"></a> `clientId` | `string` | Client id of the application to navigate to. |
+| <a id="url"></a> `url` | `URL` | URL of the application to navigate to. |

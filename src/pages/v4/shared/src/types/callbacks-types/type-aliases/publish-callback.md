@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: PublishCallback()
 
 ```ts
-type PublishCallback: (intent, publishParams) => void | Promise<PublishStatus>;
+type PublishCallback = (intent, publishParams) => void | Promise<PublishStatus>;
 ```
 
 Keeping callback type as void | `Promise<PublishStatus>` for the publish operation, to handle promises as well

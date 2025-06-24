@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: TargetAddedCallback()
 
 ```ts
-type TargetAddedCallback: () => void;
+type TargetAddedCallback = () => void;
 ```
 
 ## Returns

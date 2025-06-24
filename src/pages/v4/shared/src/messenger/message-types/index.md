@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/Message.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -13,7 +15,7 @@
 | [WorkflowLoadCompleted](../message-types/enumerations/workflow-load-completed.md) | - |
 | [MessageType](../message-types/enumerations/message-type.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -23,9 +25,9 @@
 | [PublishStatusMessage](../message-types/interfaces/publish-status-message.md) | - |
 | [ParamsResponseMessage](../message-types/interfaces/params-response-message.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [DataMessageType](../message-types/type-aliases/data-message-type.md) | - |
 | [SimpleMessageType](../message-types/type-aliases/simple-message-type.md) | - |

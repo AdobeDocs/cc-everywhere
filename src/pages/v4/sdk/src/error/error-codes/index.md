@@ -1,21 +1,23 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # sdk/src/error/ErrorCodes
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [SDKErrorCode](../error-codes/enumerations/sdk-error-code.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [ErrorCode](../error-codes/type-aliases/error-code.md) | - |
 | [ErrorCodeMessages](../error-codes/type-aliases/error-code-messages.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

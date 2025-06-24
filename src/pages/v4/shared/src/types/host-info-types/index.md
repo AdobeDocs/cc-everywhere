@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/HostInfo.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -13,7 +15,7 @@
 | [HostId](../host-info-types/enumerations/host-id.md) | - |
 | [HostType](../host-info-types/enumerations/host-type.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -22,16 +24,16 @@
 | [HostInfoComputed](../host-info-types/interfaces/host-info-computed.md) | This interface describes the properties computed from host session. |
 | [HostInfoSpecifiedBase](../host-info-types/interfaces/host-info-specified-base.md) | This interface describes the properties provided by client. |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [ConfigParams](../host-info-types/type-aliases/config-params.md) | - |
 | [HostInfoSpecified](../host-info-types/type-aliases/host-info-specified.md) | - |
 | [HostInfo](../host-info-types/type-aliases/host-info.md) | - |
 | [HostInfoExtended](../host-info-types/type-aliases/host-info-extended.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

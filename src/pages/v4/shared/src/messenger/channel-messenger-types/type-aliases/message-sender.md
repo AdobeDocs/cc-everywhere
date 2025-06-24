@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: MessageSender()
 
 ```ts
-type MessageSender: (messagePayload) => void;
+type MessageSender = (messagePayload) => void;
 ```
 
 ## Parameters

@@ -1,10 +1,16 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: BaseAnalyticsData
 
 ```ts
-type BaseAnalyticsData: object;
+type BaseAnalyticsData = object;
 ```
 
-## Type declaration
+## Properties
+
+<a id="hostapptrigger"></a>
 
 ### hostAppTrigger?
 

@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Interface: DocConfig
 
 ## Extends
@@ -8,4 +12,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) |
+| <a id="asset"></a> `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) |

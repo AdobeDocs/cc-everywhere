@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # shared/src/types/editor/DesignConfig.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -11,8 +13,8 @@
 | [CreateWithTemplateDesignConfig](../design-config-types/interfaces/create-with-template-design-config.md) | - |
 | [EditDesignConfig](../design-config-types/interfaces/edit-design-config.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [DesignConfig](../design-config-types/type-aliases/design-config.md) | - |

@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: Size
 
 ## Extended by
@@ -8,6 +12,6 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `width` | `number` | **Minimum** 0 |
-| `height` | `number` | **Minimum** 0 |
-| `unit` | [`SizeUnit`](../../asset-types/enumerations/size-unit.md) | - |
+| <a id="width"></a> `width` | `number` | **Minimum** 0 |
+| <a id="height"></a> `height` | `number` | **Minimum** 0 |
+| <a id="unit"></a> `unit` | [`SizeUnit`](../../asset-types/enumerations/size-unit.md) | - |

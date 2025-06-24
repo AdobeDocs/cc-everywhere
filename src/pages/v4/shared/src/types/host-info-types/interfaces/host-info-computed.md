@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: HostInfoComputed
 
 This interface describes the properties computed from host session.
@@ -6,7 +10,7 @@ This interface describes the properties computed from host session.
 
 | Property | Type |
 | ------ | ------ |
-| `referrer` | `string` |
-| `id` | [`HostId`](../../host-info-types/enumerations/host-id.md) |
-| `type` | [`HostType`](../../host-info-types/enumerations/host-type.md) |
-| `isFirstPartyHost` | `boolean` |
+| <a id="referrer"></a> `referrer` | `string` |
+| <a id="id"></a> `id` | [`HostId`](../../host-info-types/enumerations/host-id.md) |
+| <a id="type"></a> `type` | [`HostType`](../../host-info-types/enumerations/host-type.md) |
+| <a id="isfirstpartyhost"></a> `isFirstPartyHost` | `boolean` |

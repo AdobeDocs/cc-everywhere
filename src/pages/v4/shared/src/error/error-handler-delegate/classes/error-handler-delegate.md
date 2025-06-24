@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Class: ErrorHandlerDelegate<T\>
 
 ## Type Parameters
@@ -8,22 +12,26 @@
 
 ## Constructors
 
-### new ErrorHandlerDelegate()
+<a id="constructor"></a>
+
+### Constructor
 
 ```ts
-new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>
+new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>;
 ```
 
 #### Returns
 
-[`ErrorHandlerDelegate`](../../error-handler-delegate/classes/error-handler-delegate.md)<`T`\>
+`ErrorHandlerDelegate`<`T`\>
 
 ## Methods
+
+<a id="addhandler"></a>
 
 ### addHandler()
 
 ```ts
-addHandler(handler): void
+addHandler(handler): void;
 ```
 
 #### Parameters
@@ -37,11 +45,13 @@ addHandler(handler): void
 `void`
 
 ***
+
+<a id="removehandler"></a>
 
 ### removeHandler()
 
 ```ts
-removeHandler(handler): void
+removeHandler(handler): void;
 ```
 
 #### Parameters
@@ -56,10 +66,12 @@ removeHandler(handler): void
 
 ***
 
+<a id="removeallhandlers"></a>
+
 ### removeAllHandlers()
 
 ```ts
-removeAllHandlers(): void
+removeAllHandlers(): void;
 ```
 
 #### Returns
@@ -68,10 +80,12 @@ removeAllHandlers(): void
 
 ***
 
+<a id="error"></a>
+
 ### error()
 
 ```ts
-error(error): void
+error(error): void;
 ```
 
 #### Parameters
@@ -86,10 +100,12 @@ error(error): void
 
 ***
 
+<a id="warn"></a>
+
 ### warn()
 
 ```ts
-warn(warning): void
+warn(warning): void;
 ```
 
 #### Parameters
@@ -104,10 +120,12 @@ warn(warning): void
 
 ***
 
+<a id="info"></a>
+
 ### info()
 
 ```ts
-info(information): void
+info(information): void;
 ```
 
 #### Parameters

@@ -1,20 +1,22 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/Protocol.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [ProtocolVersion](../protocol-types/enumerations/protocol-version.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
 | [ProtocolHandlersModule](../protocol-types/interfaces/protocol-handlers-module.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

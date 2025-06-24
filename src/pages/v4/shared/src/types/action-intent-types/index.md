@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/ActionIntent.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -16,9 +18,9 @@
 | [QuickActionSubCategories](../action-intent-types/enumerations/quick-action-sub-categories.md) | - |
 | [ModuleSubCategory](../action-intent-types/enumerations/module-sub-category.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [QuickActionIntent](../action-intent-types/type-aliases/quick-action-intent.md) | - |
 | [ActionIntent](../action-intent-types/type-aliases/action-intent.md) | - |
