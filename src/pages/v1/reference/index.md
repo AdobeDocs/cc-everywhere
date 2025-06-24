@@ -50,7 +50,7 @@ window.CCEverywhere.initialize(
 | :--------------- | :---------------------------------------------- | :------------------------------------------------------------- |
 | clientId         | string                                          | Your API Key                                                   |
 | appName          | string                                          | Name of project folder created in user's Adobe Express account |
-| appVersion       | { major: number, minor: number, patch?: number} | Your app version                                               |
+| appVersion       | `{ major: number, minor: number, patch?: number}` | Your app version                                               |
 | platformCategory | 'web'                                           | Specify host app platform                                      |
 
 ### ConfigParams
