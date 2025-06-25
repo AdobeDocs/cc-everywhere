@@ -1145,15 +1145,15 @@
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/error/Messages/index.md",
-         "Destination":"/express/embed-sdk/v4/shared/src/error/Messages/index.md/"
+         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/error/Messages/index.md/index",
-         "Destination":"/express/embed-sdk/v4/shared/src/error/Messages/index.md/"
+         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/error/Messages/variables/messages/",
-         "Destination":"/express/embed-sdk/v4/shared/src/error/Messages/variables/messages"
+         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/error/i-error-message-handler/index.md",
