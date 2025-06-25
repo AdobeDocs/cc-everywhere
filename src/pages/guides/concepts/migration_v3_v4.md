@@ -21,6 +21,7 @@ This guide will assist you in updating your Adobe Express Embed SDK integration 
 Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
 ### **Breaking Changes**
+
 - [ ] Update SDK version from V3 to V4
 - [ ] Restructure initialization parameters (3 parameters instead of 2)
 - [ ] Move callbacks from API-level to class-level
@@ -28,16 +29,19 @@ Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies par
 - [ ] Update parameter structure (4 new parameter types)
 
 ### **API Mapping**
+
 - [ ] `createDesign` → `editor.create`, `editor.createWithAsset`, or `editor.createWithTemplate`
 - [ ] `editDesign` → `editor.edit`
 - [ ] `openQuickAction` → specific `quickAction.*` methods
 
 ### **Parameter Changes**
+
 - [ ] Separate mixed parameters into: DocConfig, AppConfig, ExportConfig, ContainerConfig
 - [ ] Merge `userInfo` and `authInfo` into single `authOption`
 - [ ] Remove `quickActionId` (use specific methods instead)
 
 ### **Optional Enhancements**
+
 - [ ] Enable V2 module features (if using modules)
 - [ ] Review new workflow capabilities
 - [ ] Update internal documentation
@@ -84,12 +88,14 @@ The four parameters are:
 ### New V4 APIs by Workflow
 
 #### Module Workflow (New in V4)
+
 | V4 API | Description |
 |--------|-------------|
 | `CCEverywhere.module.editImage` | Start editing an asset using image module |
 | `CCEverywhere.module.createImageFromText` | Generate images using text prompts with mini editing experience |
 
-#### Editor Workflow 
+#### Editor Workflow
+
 | V3 API | V4 API | Description |
 |--------|--------|-------------|
 | `createDesign` (blank canvas) | `CCEverywhere.editor.create` | Initiates workflow using blank canvas |
@@ -98,6 +104,7 @@ The four parameters are:
 | `editDesign` | `CCEverywhere.editor.edit` | Modifies existing Adobe Express Document |
 
 #### Quick Action Workflow
+
 | V3 API | V4 API Examples | Description |
 |--------|-----------------|-------------|
 | `openQuickAction` (with ID) | `CCEverywhere.quickAction.cropImage` | Individual methods for each action |
@@ -106,6 +113,7 @@ The four parameters are:
 | | `CCEverywhere.quickAction.resizeImage` | Resize image dimensions |
 
 ### Deprecated Features
+
 - **APIs**: `createDesign`, `editDesign`, `openQuickAction`
 - **Parameters**: `quickActionId`, mixed input parameters, API-level callbacks
 - **Auth structure**: Separate `userInfo` and `authInfo` (now merged into `authOption`)
@@ -166,6 +174,7 @@ Update your initialization code to use the new configuration parameters.
 We have moved callbacks from an API-level to a class-level parameter. This enables partners to pass their callbacks once during the lifecycle of SDK. The list of callbacks supported by SDK remains the same as it was in V3.
 
 **Key Changes:**
+
 - **3 parameters instead of 2**: Added `authOption` as third parameter
 - **Merged auth parameters**: `userInfo` and `authInfo` combined into `authOption`
 - **Callbacks moved to class-level**: Set once during initialization instead of per API call
@@ -310,6 +319,7 @@ await ccEverywhere.quickAction.resizeImage(docConfig, appConfig, exportConfig, c
 ```
 
 **For complete API reference and all available methods, see:**
+
 - [V4 Editor API Reference](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)
 - [V4 Module API Reference](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)
 - [V4 Quick Action API Reference](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)
@@ -404,19 +414,22 @@ const result = await ccEverywhere.module.createImageFromText(
 #### V2 Module Enhancements:
 
 **Generate Image V2 features:**
+
 - Community Wall with user-generated inspiration
-- Fast Mode for quicker generation 
+- Fast Mode for quicker generation
 - Rich Preview for better image viewing
 - Thumbnail Actions for immediate editing
 - Custom Firefly Models (enterprise feature)
 
 **Edit Image V2 features:**
+
 - 35-50% reduced load times
 - 35% reduced memory consumption
 - Redesigned UI with Adobe Spectrum 2
 - Tabbed interface for better organization
 
 For detailed information on V2 module features and configuration options:
+
 - **[Generate Image V2 Guide](./generate-image-v2.md)**: Complete guide for the enhanced text-to-image experience
 - **[Edit Image V2 Guide](./edit-image-v2.md)**: Complete guide for the improved image editing experience
 
@@ -461,6 +474,7 @@ Here are some specific tests you can perform:
 Take advantage of new features introduced in V4:
 
 #### New V4 Features:
+
 - **[Module Workflow](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)**: New `editImage` and `createImageFromText` capabilities
 - **[Enhanced Editor APIs](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)**: More granular control with separate create methods
 - **[Individual Quick Actions](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)**: Specific methods for each quick action type
@@ -468,6 +482,7 @@ Take advantage of new features introduced in V4:
 - **Class-level Callbacks**: Set callbacks once during initialization instead of per API call
 
 #### Additional Resources:
+
 - **[V4 Release Notes](../changelog/)**: Complete list of changes and improvements
 - **[V4 API Reference](../../v4/)**: Full documentation of all V4 APIs
 - **[Troubleshooting Guide](../troubleshooting/)**: Common issues and solutions during migration
@@ -491,21 +506,25 @@ Ensure your internal documentation is updated to reflect the changes made during
 Congratulations! You've successfully migrated from Adobe Express Embed SDK V3 to V4. Here's what you've accomplished:
 
 ### ✅ Core Migration Complete
+
 - **Updated SDK version** from V3 to V4
 - **Restructured initialization** with new 3-parameter structure
 - **Migrated API calls** to workflow-specific methods
 - **Reorganized parameters** into the new 4-parameter structure
 
 ### 🎯 Key Benefits Achieved
+
 - **Cleaner API structure** with workflow-based organization
 - **Better parameter separation** for easier maintenance
 - **Enhanced functionality** with new module capabilities
 - **Improved performance** and scalability
 
 ### 📚 Next Steps
+
 If you encounter any issues during migration, consult our [Troubleshooting Guide](../troubleshooting/) for common solutions.
 
 For ongoing development, bookmark these essential resources:
+
 - **[V4 API Reference](../../v4/)** - Complete V4 documentation
 - **[V4 Release Notes](../changelog/)** - Latest updates and features
 - **[Migration Checklist](#migration-checklist)** - Review completed items
