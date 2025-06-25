@@ -204,9 +204,9 @@ Migrating from Adobe Express Embed SDK V3 to V4 involves updating initialization
 
 By following this guide, you can ensure a smooth transition and take advantage of V4's new features and improvements.
 
-<DiscoverBlock slots="heading, link, text"/>
-
 ## API References
+
+<DiscoverBlock slots="heading, link, text"/>
 
 [CCEverywhere](../../v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md)
 
