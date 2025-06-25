@@ -201,8 +201,6 @@ Once the selected quick action loads in the iframe, users can browse their files
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
-<DiscoverBlock width="100%" slots="heading, link, text"/>
-
 ## Techncial requirements
 
 Review the [technical requirements](./technical-requirements.md) for using Adobe Express Embed SDK in your web application and the app’s supported languages.
