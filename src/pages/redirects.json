@@ -60,14 +60,6 @@
          "Destination":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/interfaces/quick-action-publish-params/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/interfaces/quick-action-publish-params"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/interfaces/publish-params/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/interfaces/publish-params"
-      },
-      {
          "Source":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/interfaces/ccx-publish-params/",
          "Destination":"/express/embed-sdk/v4/shared/src/types/v1-1/output-params-types/interfaces/ccx-publish-params"
       },
@@ -196,32 +188,8 @@
          "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-response/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-response"
-      },
-      {
          "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-data/",
          "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-data"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version/",
@@ -918,10 +886,6 @@
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/3p/host-info-types/index.md/index",
          "Destination":"/express/embed-sdk/v4/shared/src/types/3p/host-info-types/index.md/"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/types/3p/host-info-types/type-aliases/host-info/",
-         "Destination":"/express/embed-sdk/v4/shared/src/types/3p/host-info-types/type-aliases/host-info"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/types/3p/host-info-types/type-aliases/config-params/",
