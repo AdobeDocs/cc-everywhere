@@ -12,6 +12,6 @@ This function should be implemented by partners to fetch client authentication d
 
 ## Returns
 
-`Promise` [`ClientAuthDetails`](../../client-authentication-types/interfaces/client-auth-details.md)
+`Promise` [`ClientAuthDetails`](client-auth-details.md)
 
 `Promise<ClientAuthDetails>` A promise that resolves to the client authentication details
