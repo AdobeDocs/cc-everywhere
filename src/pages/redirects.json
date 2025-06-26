@@ -1144,18 +1144,6 @@
          "Destination":"/express/embed-sdk/v4/shared/src/messenger/channel-message-listener/classes/channel-message-listener"
       },
       {
-         "Source":"/express/embed-sdk/v4/shared/src/error/Messages/index.md",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/error/Messages/index.md/index",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
-      },
-      {
-         "Source":"/express/embed-sdk/v4/shared/src/error/Messages/variables/messages/",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages"
-      },
-      {
          "Source":"/express/embed-sdk/v4/shared/src/error/i-error-message-handler/index.md",
          "Destination":"/express/embed-sdk/v4/shared/src/error/i-error-message-handler/index.md/"
       },
@@ -1868,14 +1856,6 @@
          "Destination":"/express/embed-sdk/get-credential/index.md/"
       },
       {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/messages/",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
-      },
-      {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages"
-      },
-      {
          "Source":"/express/embed-sdk/docs/v3/reference/cc-everywhere/",
          "Destination":"/express/embed-sdk/docs/v3/reference/cc-everywhere/"
       },
@@ -1968,14 +1948,6 @@
          "Destination":"/express/embed-sdk/docs/guides/concepts/migration-v3-v4"
       },
       {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/messages/",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
-      },
-      {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages"
-      },
-      {
          "Source":"/express/embed-sdk/docs/v4/shared/src/error/Messages/",
          "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
       },
@@ -1985,4 +1957,3 @@
       }]
       ,":type":"sheet"
    }
-   
