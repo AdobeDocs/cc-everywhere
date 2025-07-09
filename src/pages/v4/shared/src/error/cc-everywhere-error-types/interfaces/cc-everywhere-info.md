@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: CCEverywhereInfo
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `message` | `string` |
+| <a id="message"></a> `message` | `string` |

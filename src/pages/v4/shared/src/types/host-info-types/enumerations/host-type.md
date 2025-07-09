@@ -1,8 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: HostType
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `THIRD_PARTY` | `"THIRD_PARTY"` |
-| `FIRST_PARTY` | `"FIRST_PARTY"` |
+| <a id="third_party"></a> `THIRD_PARTY` | `"THIRD_PARTY"` |
+| <a id="first_party"></a> `FIRST_PARTY` | `"FIRST_PARTY"` |

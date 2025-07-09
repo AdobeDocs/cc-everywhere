@@ -1,8 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: SpectrumTheme
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `SPECTRUM` | `"spectrum"` |
-| `EXPRESS` | `"express"` |
+| <a id="spectrum"></a> `SPECTRUM` | `"spectrum"` |
+| <a id="express"></a> `EXPRESS` | `"express"` |

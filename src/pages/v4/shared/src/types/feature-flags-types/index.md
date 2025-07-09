@@ -1,9 +1,11 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/FeatureFlags.types
 
-## Index
+## Type Aliases
 
-### Type Aliases
-
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [FeatureFlags](../feature-flags-types/type-aliases/feature-flags.md) | - |

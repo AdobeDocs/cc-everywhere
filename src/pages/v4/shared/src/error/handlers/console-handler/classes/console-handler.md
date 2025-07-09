@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Class: ConsoleHandler<T\>
 
 ## Extends
@@ -16,32 +20,38 @@
 
 ## Constructors
 
-### new ConsoleHandler()
+<a id="constructor"></a>
+
+### Constructor
 
 ```ts
-new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>
+new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>;
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `logLevel`? | [`LogLevel`](../../../cc-everywhere-error-types/enumerations/log-level.md) |
+| `logLevel?` | [`LogLevel`](../../../cc-everywhere-error-types/enumerations/log-level.md) |
 
 #### Returns
 
-[`ConsoleHandler`](../../console-handler/classes/console-handler.md)<`T`\>
+`ConsoleHandler`<`T`\>
 
 #### Overrides
 
-`BaseHandler.constructor`
+```ts
+BaseHandler.constructor
+```
 
 ## Methods
+
+<a id="info"></a>
 
 ### info()
 
 ```ts
-static info(information): void
+static info(information): void;
 ```
 
 #### Parameters
@@ -56,10 +66,12 @@ static info(information): void
 
 ***
 
+<a id="error"></a>
+
 ### error()
 
 ```ts
-static error<T>(error): void
+static error<T>(error): void;
 ```
 
 #### Type Parameters
@@ -80,10 +92,12 @@ static error<T>(error): void
 
 ***
 
+<a id="error-2"></a>
+
 ### error()
 
 ```ts
-error(error): void
+error(error): void;
 ```
 
 #### Parameters
@@ -98,14 +112,16 @@ error(error): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).`error`
+[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`error`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#error)
 
 ***
+
+<a id="warn"></a>
 
 ### warn()
 
 ```ts
-warn(warning): void
+warn(warning): void;
 ```
 
 #### Parameters
@@ -120,14 +136,16 @@ warn(warning): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).`warn`
+[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`warn`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#warn)
 
 ***
+
+<a id="info-2"></a>
 
 ### info()
 
 ```ts
-info(information): void
+info(information): void;
 ```
 
 #### Parameters
@@ -142,4 +160,4 @@ info(information): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).`info`
+[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`info`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#info)

@@ -1,8 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: Scale
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `MEDIUM` | `"medium"` |
-| `LARGE` | `"large"` |
+| <a id="medium"></a> `MEDIUM` | `"medium"` |
+| <a id="large"></a> `LARGE` | `"large"` |

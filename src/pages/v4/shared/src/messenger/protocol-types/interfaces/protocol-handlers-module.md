@@ -1,6 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: ProtocolHandlersModule
 
 ## Methods
+
+<a id="handlemessage"></a>
 
 ### handleMessage()
 
@@ -8,7 +14,7 @@
 handleMessage(
    message, 
    sourceVersion, 
-   targetVersion): unknown
+   targetVersion): unknown;
 ```
 
 #### Parameters

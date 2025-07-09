@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: PublishStartCallback()
 
 ```ts
-type PublishStartCallback: () => void;
+type PublishStartCallback = () => void;
 ```
 
 ## Returns

@@ -1,14 +1,16 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/ChannelMessenger.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [MessageChannel](../channel-messenger-types/enumerations/message-channel.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -16,9 +18,9 @@
 | [TargetChannelInfo](../channel-messenger-types/interfaces/target-channel-info.md) | - |
 | [IChannelMessengerDelegate](../channel-messenger-types/interfaces/i-channel-messenger-delegate.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [MessageTarget](../channel-messenger-types/type-aliases/message-target.md) | - |
 | [TargetAddedCallback](../channel-messenger-types/type-aliases/target-added-callback.md) | - |

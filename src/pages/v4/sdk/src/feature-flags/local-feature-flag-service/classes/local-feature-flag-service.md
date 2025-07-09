@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Class: LocalFeatureFlagService
 
 Service class for managing feature flags
@@ -8,10 +12,12 @@ Service class for managing feature flags
 
 ## Constructors
 
-### new LocalFeatureFlagService()
+<a id="constructor"></a>
+
+### Constructor
 
 ```ts
-new LocalFeatureFlagService(_config): LocalFeatureFlagService
+new LocalFeatureFlagService(_config): LocalFeatureFlagService;
 ```
 
 #### Parameters
@@ -22,13 +28,15 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService
 
 #### Returns
 
-[`LocalFeatureFlagService`](../../local-feature-flag-service/classes/local-feature-flag-service.md)
+`LocalFeatureFlagService`
 
 #### Overrides
 
-[`FeatureFlagService`](../../feature-flag-service/classes/feature-flag-service.md).[`constructor`](../../feature-flag-service/classes/feature-flag-service.md#constructors)
+[`FeatureFlagService`](../../feature-flag-service/classes/feature-flag-service.md).[`constructor`](../../feature-flag-service/classes/feature-flag-service.md#constructor)
 
 ## Methods
+
+<a id="getfeatureflagsparams"></a>
 
 ### getFeatureFlagsParams()
 
@@ -37,7 +45,7 @@ getFeatureFlagsParams(
    intent, 
    isFirstParty, 
    clientId, 
-   analyticsClientId?): URLSearchParams
+   analyticsClientId?): URLSearchParams;
 ```
 
 Generates URL-encoded feature flag parameters for a specific client and intent
@@ -49,7 +57,7 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 | `intent` | [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md) |
 | `isFirstParty` | `boolean` |
 | `clientId` | `string` |
-| `analyticsClientId`? | `string` |
+| `analyticsClientId?` | `string` |
 
 #### Returns
 

@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: ErrorCallback()<T\>
 
 ```ts
-type ErrorCallback<T>: (error) => void;
+type ErrorCallback<T> = (error) => void;
 ```
 
 ## Type Parameters

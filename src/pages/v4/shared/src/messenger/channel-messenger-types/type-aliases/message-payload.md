@@ -1,10 +1,16 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: MessagePayload
 
 ```ts
-type MessagePayload: object;
+type MessagePayload = object;
 ```
 
-## Type declaration
+## Properties
+
+<a id="sourcechannel"></a>
 
 ### sourceChannel
 
@@ -12,11 +18,19 @@ type MessagePayload: object;
 sourceChannel: MessageChannel;
 ```
 
+***
+
+<a id="requestid"></a>
+
 ### requestId?
 
 ```ts
 optional requestId: string;
 ```
+
+***
+
+<a id="message"></a>
 
 ### message
 

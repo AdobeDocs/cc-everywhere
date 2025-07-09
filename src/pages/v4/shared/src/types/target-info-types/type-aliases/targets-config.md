@@ -1,10 +1,16 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: TargetsConfig
 
 ```ts
-type TargetsConfig: object;
+type TargetsConfig = object;
 ```
 
-## Type declaration
+## Properties
+
+<a id="base"></a>
 
 ### base
 

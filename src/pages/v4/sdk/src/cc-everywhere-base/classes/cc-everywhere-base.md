@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # Class: `abstract` CCEverywhereBase
 
 Class to create CCEverywhere object.
@@ -12,7 +16,9 @@ Class to create CCEverywhere object.
 
 ## Constructors
 
-### new CCEverywhereBase()
+<a id="constructor"></a>
+
+### Constructor
 
 ```ts
 new CCEverywhereBase(
@@ -21,7 +27,7 @@ new CCEverywhereBase(
    hostInfo, 
    configParams, 
    authProvider, 
-   clientAuthProvider): CCEverywhereBase
+   clientAuthProvider): CCEverywhereBase;
 ```
 
 Constructor to initialize CCEverywhere object.
@@ -39,28 +45,38 @@ Constructor to initialize CCEverywhere object.
 
 #### Returns
 
-[`CCEverywhereBase`](../../cc-everywhere-base/classes/cc-everywhere-base.md)
+`CCEverywhereBase`
 
 ## Accessors
 
+<a id="activeinstance"></a>
+
 ### activeInstance
 
+#### Set Signature
+
 ```ts
-set static activeInstance(instance): void
+set static activeInstance(instance): void;
 ```
 
-#### Parameters
+##### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| [`CCEverywhereBase`](../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+| `instance` | `undefined` \| `CCEverywhereBase` |
+
+##### Returns
+
+`void`
 
 ## Methods
+
+<a id="close"></a>
 
 ### close()
 
 ```ts
-close(): boolean
+close(): boolean;
 ```
 
 Closes any active design in progress.

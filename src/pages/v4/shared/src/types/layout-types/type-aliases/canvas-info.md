@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: CanvasInfo
 
 ```ts
-type CanvasInfo: object & Size;
+type CanvasInfo = object & Size;
 ```
 
 ## Type declaration

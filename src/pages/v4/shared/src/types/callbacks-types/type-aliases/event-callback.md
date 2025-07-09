@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: EventCallback()
 
 ```ts
-type EventCallback: (message) => void;
+type EventCallback = (message) => void;
 ```
 
 ## Parameters

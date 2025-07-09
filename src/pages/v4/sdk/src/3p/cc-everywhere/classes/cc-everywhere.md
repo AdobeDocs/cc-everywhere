@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Class: CCEverywhere
 
 Class to create CCEverywhere object.
@@ -14,23 +18,31 @@ Class to create CCEverywhere object.
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/editor-workflow/classes/editor-workflow.md) |
-| `module` | `readonly` | [`ModuleWorkflow`](../../../workflows/3p/module-workflow/classes/module-workflow.md) |
-| `quickAction` | `readonly` | [`QuickActionWorkflow`](../../../workflows/3p/quick-action-workflow/classes/quick-action-workflow.md) |
+| <a id="editor"></a> `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/editor-workflow/classes/editor-workflow.md) |
+| <a id="module"></a> `module` | `readonly` | [`ModuleWorkflow`](../../../workflows/3p/module-workflow/classes/module-workflow.md) |
+| <a id="quickaction"></a> `quickAction` | `readonly` | [`QuickActionWorkflow`](../../../workflows/3p/quick-action-workflow/classes/quick-action-workflow.md) |
 
 ## Accessors
 
+<a id="activeinstance"></a>
+
 ### activeInstance
 
+#### Set Signature
+
 ```ts
-set static activeInstance(instance): void
+set static activeInstance(instance): void;
 ```
 
-#### Parameters
+##### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+| `instance` | \| `undefined` \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
@@ -38,10 +50,12 @@ set static activeInstance(instance): void
 
 ## Methods
 
+<a id="close"></a>
+
 ### close()
 
 ```ts
-close(): boolean
+close(): boolean;
 ```
 
 Closes any active design in progress.

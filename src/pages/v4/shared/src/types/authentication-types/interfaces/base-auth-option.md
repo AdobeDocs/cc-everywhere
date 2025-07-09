@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: BaseAuthOption
 
 ## Extended by
@@ -11,4 +15,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `mode` | [`AuthMode`](../../authentication-types/enumerations/auth-mode.md) |
+| <a id="mode"></a> `mode` | [`AuthMode`](../../authentication-types/enumerations/auth-mode.md) |
