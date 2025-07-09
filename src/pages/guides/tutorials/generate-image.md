@@ -1,0 +1,462 @@
+---
+keywords:
+  - Adobe Express
+  - Embed SDK
+  - Tutorial
+  - Editor
+  - V4
+  - CCEverywhere
+title: Embed SDK Generate Image tutorial
+description: Step-by-step guide for implementing the Generate Image module with Adobe Express Embed SDK
+contributors:
+  - https://github.com/undavide
+---
+
+# Embed SDK Generate Image tutorial
+
+Learn how to implement the Generate Image module using the Adobe Express Embed SDK.
+
+## Introduction
+
+Welcome to this hands-on tutorial! We'll walk you through implementing the powerful Generate Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new V2 features, from the [Community Wall](../concepts/generate-image-v2.md#community-wall) to [Rich Preview](../concepts/generate-image-v2.md#rich-preview and [Thumbnail actions](../concepts/generate-image-v2.md#thumbnail-actions). As a bonus, we'll implement a [Custom version](../concepts/generate-image-v2.md#custom-community-wall) of the Community Wall, so that you can showcase your own images instead of Firefly's publicly available gallery.
+
+### What you'll learn
+
+By completing this tutorial, you'll gain practical skills in:
+
+- Implementing the **Generate Image module** with the Adobe Express Embed SDK.
+- Using the **new V2 features** of the Generate Image module.
+- Implementing the **Custom Community Wall**.
+
+### What you'll build
+
+You'll build a simple, JavaScript-based web application that allows users to generate images from text prompts using the Generate Image module of the Adobe Express Embed SDK.
+
+TODO: insert image
+
+## Prerequisites
+
+Before you start, make sure you have:
+
+- An **Adobe account** (use your existing Adobe ID or [create one for free](https://account.adobe.com/))
+- **API credentials** from the Adobe Developer Console ([Get credentials](../quickstart/index.md#step-1-get-an-api-key))
+- Basic knowledge of **HTML, CSS, and JavaScript**
+- **Node.js** installed on your development machine (v20.19.0 or higher)
+- A **text editor or IDE** of your choice
+
+## 1. Set up the project
+
+### 1.1 Clone the sample
+
+You can start by cloning the [Embed SDK Generate Image sample](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/) from GitHub and navigating to the project directory.
+
+```bash
+git clone https://github.com/AdobeDocs/embed-sdk-samples.git
+cd embed-sdk-samples/code-samples/tutorials/embed-sdk-generate-image
+```
+
+### 1.2 Set up the API key
+
+Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+
+```bash
+VITE_API_KEY="your-api-key-here!"
+```
+
+<!-- Inline Alert -->
+<InlineAlert variant="info" slots="text1" />
+
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/).
+
+### 1.3 Install dependencies
+
+Install the dependencies by running the following commands:
+
+```bash
+npm install
+npm run start
+```
+
+The web application will be served at `localhost:5555` on a secure HTTPS connection—which is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action.
+
+TODO: insert image
+
+When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](../concepts/generate-image-v2.md#community-wall). Users can browse the gallery, select an image, and use its prompt as a starting point for their own image generation.
+
+The sample project will handle the file transfer between Adobe Express and the web page hosting it, and the generated image will be displayed in lieu of the placeholder.
+
+TODO: insert image
+
+<!-- Inline Alert -->
+<InlineAlert variant="error" slots="header, text1" />
+
+Error: "Adobe Express is not available"
+
+In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the correct API Key in the `src/.env` file as described [here](#running-the-sample-project).
+
+## 2. Load the Generate Image v2 module
+
+You can just read the existing code in the sample, but it's always best to **learn by doing!** We suggest following along and typing the code in—even small mistakes can lead to important discoveries.
+
+The [sample project](#) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire HTTPS setup and hot reloading.[^1]
+
+[^1]: A Webpack setup is entirely possible, but it requires manual (or semi-automated) steps to integrate the `mkcert` CLI and ensure proper HTTPS handling. We've chosen Vite to keep that out of the way and focus on the actual integration code.
+
+### 2.1 Import the Embed SDK
+
+In this tutorial, we'll focus on the JavaScript side of things first—the HTML content is not overly important. Open the project in your code editor of choice. In `main.js`, remove everything below the Spectrum `import` statements—we'll rebuild it from scratch.
+
+```js
+import "./style.css";
+
+// Importing theme and typography styles from Spectrum Web Components
+import "@spectrum-web-components/styles/typography.css";
+import "@spectrum-web-components/theme/express/theme-light.js";
+import "@spectrum-web-components/theme/express/scale-medium.js";
+import "@spectrum-web-components/theme/sp-theme.js";
+
+// Importing Spectrum Web Components
+import "@spectrum-web-components/button/sp-button.js";
+import "@spectrum-web-components/button-group/sp-button-group.js";
+import "@spectrum-web-components/divider/sp-divider.js";
+```
+
+The imports above allow us to style our web application with [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/index.html) and the [Adobe Express theme](https://spectrum.adobe.com/page/theming/). Let's begin by importing the Embed SDK:
+
+```js
+// Importing the Adobe Express Embed SDK
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+console.log("CCEverywhere loaded", window.CCEverywhere);
+```
+
+<!-- Inline Alert -->
+<InlineAlert variant="info" slots="text1" />
+
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+
+### 2.2 Initialize the Embed SDK
+
+When the Embed SDK is imported, a `CCEverywhere` object is globally available and must be **initialized**. There are two sets of parameters that you can pass as option objects:
+
+- **Host Information**: containing the API key, Application name, etc.
+- **Configuration**: optional settings, like locale, delayed sign-in, etc.
+
+```javascript
+// 👀 Required parameters for initializing the Embed SDK
+const hostInfo = {
+  clientId: import.meta.env.VITE_API_KEY,
+  appName: "Embed SDK Sample",
+};
+
+// Optional parameters
+const configParams = {
+  // Users can log in only when exporting/saving the document
+  loginMode: "delayed",
+};
+
+// Initializing the Adobe Express Embed SDK
+const { module } = await window.CCEverywhere.initialize(
+  hostInfo,
+  configParams
+);
+```
+
+The [`hostInfo`](../../v4/index.md#hostinfo) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
+
+<!-- Inline Alert -->
+<InlineAlert variant="warning" slots="text1" />
+
+The `appName` must match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
+
+All [`configParams`](../../reference/initialize/index.md#configparams) are optional, instead: here, `loginMode` tells Adobe Express to delay the login until artworks are exported.
+
+### 2.3
+
+The asynchronous `initialize()` method returns an object with three properties. Here, we destructure the `module`, because we'll later need its [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method.
+
+Excellent! We have this `editor`: now what? We'll use it to spawn a new Adobe Express instance via the [`editor.create()`](../../reference/CCEverywhere/editor/index.md#create) method—which, in turn, accepts four option objects able to configure:
+
+- The [Document](../../reference/CCEverywhere/editor/index.md#createdocconfig) that will be created (e.g., its size).
+- The Adobe Express [Application](../../reference/CCEverywhere/editor/index.md#baseeditorappconfig) itself (e.g., the callbacks).
+- The allowed [Export Options](../../reference/types/index.md#exportoptions).
+- The [Container](../../reference/types/index.md#containerconfig) (modal dialog) of the Adobe Express application.
+
+The links above point to the respective SDK Reference pages. They are all optional—our sample makes use of the first three of them:
+
+```js
+// Document
+const docConfig = { canvasSize: "BusinessCard" };
+// Application
+const appConfig = {
+  selectedCategory: "media",
+  callbacks: {
+    onCancel: () => {},
+    onPublish: (intent, publishParams) => { /* ... */ },
+    onError: (err) => { /* ... */ }
+};
+// Export Options
+const exportConfig = [
+  {
+    id: "download",
+    label: "Download",
+    action: { target: "download" },
+    style: { uiType: "button" },
+  },
+  {
+    id: "save-modified-asset",
+    label: "Save image",
+    action: { target: "publish" },
+    style: { uiType: "button" },
+  },
+];
+```
+
+As you can see, we are:
+
+- Creating by default a document using the `"BusinessCard"` template.
+- Launching Adobe Express with the Media panel open on the left.
+- Setting a series of Callbacks that will fire when the user Cancels, Saves (that would be `onPublish`), or when something goes wrong.
+- Defining two ways for users to export content: download the file locally and save it in the user's Adobe Express folder and pass it back to the web application.
+
+On the **Create New** button click, Adobe Express is launched:
+
+```js
+document.getElementById("createDesign").onclick = async () => {
+  editor.create(docConfig, appConfig, exportConfig);
+};
+```
+
+![Launching the Full Editor](./images/full-editor_launch.png)
+
+<!-- Info Alert -->
+<InlineAlert variant="info" slots="text1" />
+
+Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+
+As you can see, integrating the full editor doesn't take much time! You can customize it to a great extent; even using all the default options, the result is brilliant.
+
+### 3. Managing images
+
+The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their image; we'd like our web application to capture and display it on the HTML page.
+
+We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](../../reference/types/index.md#callbacks). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../reference/types/index.md#publishparams) argument, with three crucial properties:
+
+- `documentId`: a unique identifier for the asset that has been created or modified.
+- `exportButtonId`: the identifier of the export button that has been clicked.
+- `asset`: an [`OutputAsset`](../../reference/types/index.md#outputasset) object, with several interesting properties like `data`—a Base64 string representation of the saved image.
+
+The `data` property sounds promising! The plan is to have an `<img>` element (in this example, it starts as a placeholder), which `src` attribute will be filled with the Base64 string coming from Adobe Express.
+
+<!-- CodeBlock -->
+<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
+
+#### main.js
+
+```js
+// Storing the image element
+var expressImage = document.getElementById("savedImage");
+
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  // ... other callbacks
+  onPublish: (intent, publishParams) => {                   // 👈
+    expressImage.src = publishParams.asset[0].data;         // 👈
+    console.log("Image data", publishParams.asset[0].data); // 👈
+  }
+};
+```
+
+#### index.html
+
+```html
+<!-- ... rest of the page -->
+<img id="savedImage"
+     src="https://placehold.co/300x300?text=Placeholder+Image&font=source-sans-pro"
+     alt="Your design will appear here." />
+<!-- ... rest of the page -->
+```
+
+Please note that `asset` is an array; we're getting just the first item here. If you open the Console, you'll see the Base64 string logged.
+
+![Logging Base64 data](./images/full-editor_console-base64.png)
+
+### 4. Editing projects
+
+The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before. As we've seen [earlier](#3-managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
+
+```js
+// Will hold the project ID when a document is saved
+var existingProjectId = null; // 👈
+
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  // ... other callbacks
+  onPublish: (intent, publishParams) => {
+    existingProjectId = publishParams.projectId;  // 👈
+    console.log("Project ID", existingProjectId); // 👈
+    expressImage.src = publishParams.asset[0].data;
+    console.log("Image data", publishParams.asset[0].data);
+  }
+};
+
+// Click handler for the Edit Design button
+document.getElementById("editBtn").onclick = async () => {
+  // Opening the existing project by ID
+  let docConfig = { documentId: existingProjectId };
+  // ...
+  editor.edit(docConfig, appConfig, exportConfig);
+};
+```
+
+Above, we're using `existingProjectId` to hold the project reference, collected in the `onPublish` callback every time the document is saved. Later, in the `editBtn` click handler, we're creating a new `docConfig` object passing the ID in the `documentId` property. This tells Adobe Express to look for an existing project and open it right away.
+
+![Logging the Project ID](./images/full-editor_console-project-id.png)
+
+## Final project
+
+We have all the required bits in place, but some simple refactoring is needed to keep the code clean.
+
+- The `appConfig` and `exportConfig` option objects are stored in constants, as they're shared in both the **Create new** and **Edit** buttons.
+- The `callbacks` follow suit; we've added a simple `onError` that logs a message, and now `onPublish` also enables the **Edit** button—that starts disabled.
+
+You can check the entire [`embed-sdk-full-editor-tutorial`](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) project code as part of the dedicated [`embed-sdk-samples`](https://github.com/AdobeDocs/embed-sdk-samples) repository. Find the most relevant files below for reference.
+
+<!-- CodeBlock -->
+<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
+
+#### main.js
+
+```js
+import "./style.css";
+
+// Importing theme and typography styles from Spectrum Web Components
+import "@spectrum-web-components/styles/typography.css";
+import "@spectrum-web-components/theme/express/theme-light.js";
+import "@spectrum-web-components/theme/express/scale-medium.js";
+import "@spectrum-web-components/theme/sp-theme.js";
+
+// Importing Spectrum Web Components
+import "@spectrum-web-components/button/sp-button.js";
+import "@spectrum-web-components/button-group/sp-button-group.js";
+import "@spectrum-web-components/divider/sp-divider.js";
+
+// Importing the Adobe Express Embed SDK
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+console.log("CCEverywhere loaded", window.CCEverywhere);
+
+// Parameters for initializing the Adobe Express Embed SDK
+const hostInfo = {
+  clientId: import.meta.env.VITE_API_KEY,
+  appName: "Embed SDK Sample",
+};
+
+// Prompts the user to log in only when exporting/saving the document
+const configParams = {
+  loginMode: "delayed",
+};
+
+// Initializing the Adobe Express Embed SDK
+const { editor } = await window.CCEverywhere.initialize(
+  hostInfo, configParams
+);
+
+// Will hold the project ID when a document is saved on Adobe Express
+var existingProjectId = null;
+var expressImage = document.getElementById("savedImage");
+
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  onCancel: () => {},
+  onPublish: (intent, publishParams) => {
+    existingProjectId = publishParams.projectId;
+    console.log("Project ID", existingProjectId);
+    expressImage.src = publishParams.asset[0].data;
+    console.log("Image data", publishParams.asset[0].data);
+    // enable the editDesign button
+    document.getElementById("editBtn").disabled = false;
+  },
+  onError: (err) => {
+    console.error("Error!", err.toString());
+  },
+};
+
+// Configuration for the app, shared by both Create and Edit flows
+const appConfig = { selectedCategory: "media", callbacks };
+
+// Configuration for the export options made available
+// to the user when creating or editing a document
+const exportConfig = [
+  {
+    id: "download",
+    label: "Download",
+    action: { target: "download" },
+    style: { uiType: "button" },
+  },
+  {
+    id: "save-modified-asset",
+    label: "Save image",
+    action: { target: "publish" },
+    style: { uiType: "button" },
+  },
+];
+
+// Click handler for the Create Design button
+document.getElementById("createBtn").onclick = async () => {
+  // Presetting the canvas size
+  let docConfig = { canvasSize: "BusinessCard" };
+  // Using the global appConfig and exportConfig
+  editor.create(docConfig, appConfig, exportConfig);
+};
+
+// Click handler for the Edit Design button
+document.getElementById("editBtn").onclick = async () => {
+  // Opening the existing project by ID
+  let docConfig = { documentId: existingProjectId };
+  // Using the global appConfig and exportConfig
+  editor.edit(docConfig, appConfig, exportConfig);
+};
+```
+
+#### index.html
+
+```html
+<body>
+  <sp-theme scale="medium" color="light" system="express">
+    <div class="container">
+      <header>
+        <h1>Adobe Express Embed SDK</h1>
+        <sp-divider size="l"></sp-divider>
+        <h2>Full Editor Sample</h2>
+        <p>
+          The <b>Create New</b> button launches a blank
+          new project in a full editor instance. <br />
+          Once you have published/saved a project, use the
+          <b>Edit</b> button to resume editing the same project.
+        </p>
+      </header>
+
+      <main>
+        <img id="savedImage"
+        src="https://placehold.co/300x300?text=Placeholder+Image"
+          alt="Your design will appear here." />
+        <sp-button-group>
+          <sp-button id="createBtn">Create New</sp-button>
+          <sp-button id="editBtn" disabled>Edit</sp-button>
+        </sp-button-group>
+      </main>
+    </div>
+  </sp-theme>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+```
+
+## Next steps
+
+Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
+
+- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/).
+- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
+- If you're looking for **more tutorials**, check out [here](../tutorials/).
+- Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
