@@ -32,7 +32,7 @@ By completing this tutorial, you'll gain practical skills in:
 
 You'll build a simple, JavaScript-based web application that allows users to generate images from text prompts using the Generate Image module of the Adobe Express Embed SDK.
 
-TODO: insert image
+![Generate image](./images/generate-image--final.png)
 
 ## Prerequisites
 
@@ -82,7 +82,7 @@ VITE_API_KEY="your-api-key-here!"
 <!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md). Make sure your API Key is set to allow the `localhost:5555` domain and port.
 
 ### 1.3 Install dependencies
 
@@ -95,13 +95,13 @@ npm run start
 
 The web application will be served at `localhost:5555` on a secure HTTPS connection—which is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action.
 
-TODO: insert image
+![Generate image integration UI](./images/generate-image--ui.png)
 
 When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](../concepts/generate-image-v2.md#community-wall)—optionally, populated with your own pictures. Users can browse the gallery, select an image, and use its prompt as a starting point for their own generation.
 
 The sample project will handle the file transfer between Adobe Express and the web page hosting it, and the generated image will be displayed in lieu of the placeholder.
 
-TODO: insert image
+![Generate image thumbnail](./images/generate-image--thumb.png)
 
 <!-- Inline Alert -->
 <InlineAlert variant="error" slots="header, text1" />
@@ -260,7 +260,7 @@ const appConfig = {
 };
 ```
 
-TODO: insert image
+![Generate image community wall](./images/generate-image--community-wall.png)
 
 <InlineAlert variant="warning" slots="header, text1" />
 
@@ -413,6 +413,8 @@ document.getElementById("generateBtn").onclick = async () => {
 
 When adding the Edit dropdown menu to each generated image (via the `"edit-dropdown"` option in the `thumbnailOptions` array, and selecting specific `editDropdownOptions`), users will be allowed to further edit the image. Technically, they will jump from the Generate Image to the Edit Image experience.
 
+![Generate image edit image](./images/generate-image--edit-image.png)
+
 Whenever users transition from one design workflow to another, Embed SDK will invoke the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) callback to inform you about the change. You can use this opportunity to configure the new intent by passing `appConfig`, `exportConfig`, or any other relevant settings. These configurations are applied while launching the new intent; if missing, the default settings will be used.
 
 The callback receives two parameters, the `oldIntent` and the `newIntent`, both of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/index.md). In our specific case, the `oldIntent` will be [`ModuleIntent.CREATE_IMAGE_FROM_TEXT`](../../v4/shared/src/types/action-intent-types/enumerations/module-intent.md) and the `newIntent` will be a [`ModuleIntent.EDIT_IMAGE`](../../v4/shared/src/types/action-intent-types/enumerations/module-intent.md).
@@ -436,6 +438,8 @@ const callbacks = {
   },
 };
 ```
+
+![Generate image intent change](./images/generate-image--intent-change.png)
 
 You may want to use the `onIntentChange()` callback to, say, configure different Export buttons that better suit the new intent. Please note that subscribing to the callback is totally optional.
 
@@ -520,7 +524,9 @@ For more information about the aspect ratio of the assets, please refer to the [
 
 ### 4.3 Implement the `fetchCommunityAssets` callback
 
-Now that we know how to provide assets for the Custom Community Wall, let's implement it in our sample project.
+Now that we know how to provide assets for the Custom Community Wall, let's implement it in our sample project. As follows, the final result.
+
+![Generate image Custom Community Wall](./images/generate-image--custom-community-wall.png)
 
 In the `src/images` folder, you'll find 24 images of cats enjoying some leisure time that have been generated with Adobe Firefly, alongside with an `images.json` file.
 
@@ -667,7 +673,7 @@ const appConfig = {
 //... rest of the main.js ...
 ```
 
-TODO: add a screenshot of the result
+![Generate image fetch community assets](./images/generate-image--fetch-community-assets.png)
 
 ## Troubleshooting
 
