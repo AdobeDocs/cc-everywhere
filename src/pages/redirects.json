@@ -1,7 +1,7 @@
 {
-   "total":490,
+   "total":489,
    "offset":0,
-   "limit":490,
+   "limit":489,
    "data":[
       {
          "Source":"/express/embed-sdk/v4/index.md",
@@ -1946,22 +1946,6 @@
       {
          "Source":"/express/embed-sdk/docs/guides/concepts/migration-v3-v4",
          "Destination":"/express/embed-sdk/docs/guides/concepts/migration-v3-v4"
-      },
-      {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/messages/",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
-      },
-      {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages"
-      },
-      {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/Messages/",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/"
-      },
-      {
-         "Source":"/express/embed-sdk/docs/v4/shared/src/error/Messages/variables/messages",
-         "Destination":"/express/embed-sdk/docs/v4/shared/src/error/messages/variables/messages"
       },
       {
          "Source":"/express/embed-sdk/v4/shared/src/error/Messages/index.md",
