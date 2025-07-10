@@ -18,7 +18,7 @@ Learn how to implement the Generate Image module using the Adobe Express Embed S
 
 ## Introduction
 
-Welcome to this hands-on tutorial! We'll walk you through implementing the powerful Generate Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new V2 features, from the [Community Wall](../concepts/generate-image-v2.md#community-wall) to [Rich Preview](../concepts/generate-image-v2.md#rich-preview and [Thumbnail actions](../concepts/generate-image-v2.md#thumbnail-actions). As a bonus, we'll implement a [Custom version](../concepts/generate-image-v2.md#custom-community-wall) of the Community Wall, so that you can showcase your own images instead of Firefly's publicly available gallery.
+Welcome to this hands-on tutorial! We'll walk you through implementing the powerful Generate Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new V2 features, from the [Community Wall](../concepts/generate-image-v2.md#community-wall) to [Rich Preview](../concepts/generate-image-v2.md#rich-preview) and [Thumbnail actions](../concepts/generate-image-v2.md#thumbnail-actions). As a bonus, we'll implement a [Custom version](../concepts/generate-image-v2.md#custom-community-wall) of the Community Wall, so that you can showcase your own images instead of Firefly's publicly available gallery.
 
 ### What you'll learn
 
@@ -55,6 +55,22 @@ git clone https://github.com/AdobeDocs/embed-sdk-samples.git
 cd embed-sdk-samples/code-samples/tutorials/embed-sdk-generate-image
 ```
 
+The project will have a structure like this:
+
+```txt
+.
+├── package.json             📦 Project configuration
+├── vite.config.js           🔧 Build configuration
+└── src
+    ├── images               📷 Images for the Custom Community Wall
+    │   └── ...
+    ├── index.html           🌐 UI container
+    ├── main.js              💻 Embed SDK logic
+    ├── community-wall.js    🖼️ Custom Community Wall logic
+    └── style.css            🎨 CSS styles
+
+```
+
 ### 1.2 Set up the API key
 
 Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
@@ -81,7 +97,7 @@ The web application will be served at `localhost:5555` on a secure HTTPS connect
 
 TODO: insert image
 
-When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](../concepts/generate-image-v2.md#community-wall). Users can browse the gallery, select an image, and use its prompt as a starting point for their own image generation.
+When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](../concepts/generate-image-v2.md#community-wall)—optionally, populated with your own pictures. Users can browse the gallery, select an image, and use its prompt as a starting point for their own generation.
 
 The sample project will handle the file transfer between Adobe Express and the web page hosting it, and the generated image will be displayed in lieu of the placeholder.
 
@@ -92,39 +108,41 @@ TODO: insert image
 
 Error: "Adobe Express is not available"
 
-In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the correct API Key in the `src/.env` file as described [here](#running-the-sample-project).
+In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the correct API Key in the `src/.env` file as described [here](#12-set-up-the-api-key).
 
 ## 2. Load the Generate Image v2 module
 
 You can just read the existing code in the sample, but it's always best to **learn by doing!** We suggest following along and typing the code in—even small mistakes can lead to important discoveries.
 
-The [sample project](#) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire HTTPS setup and hot reloading.[^1]
-
-[^1]: A Webpack setup is entirely possible, but it requires manual (or semi-automated) steps to integrate the `mkcert` CLI and ensure proper HTTPS handling. We've chosen Vite to keep that out of the way and focus on the actual integration code.
+The [sample project](#) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire local HTTPS setup and hot reloading.
 
 ### 2.1 Import the Embed SDK
 
 In this tutorial, we'll focus on the JavaScript side of things first—the HTML content is not overly important. Open the project in your code editor of choice. In `main.js`, remove everything below the Spectrum `import` statements—we'll rebuild it from scratch.
 
 ```js
-import "./style.css";
+// main.js
 
-// Importing theme and typography styles from Spectrum Web Components
+// Import theme and typography styles from Spectrum Web Components
 import "@spectrum-web-components/styles/typography.css";
 import "@spectrum-web-components/theme/express/theme-light.js";
 import "@spectrum-web-components/theme/express/scale-medium.js";
 import "@spectrum-web-components/theme/sp-theme.js";
 
-// Importing Spectrum Web Components
+// Import Spectrum Web Components
 import "@spectrum-web-components/button/sp-button.js";
 import "@spectrum-web-components/button-group/sp-button-group.js";
 import "@spectrum-web-components/divider/sp-divider.js";
+import "./style.css";
 ```
 
-The imports above allow us to style our web application with [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/index.html) and the [Adobe Express theme](https://spectrum.adobe.com/page/theming/). Let's begin by importing the Embed SDK:
+The imports above allow us to style our web application with [Spectrum Web Components](https://opensource.adobe.com/spectrum-web-components/index.html) and the [Adobe Express theme](https://spectrum.adobe.com/page/theming/). Let's begin working in `main.js` by importing the Embed SDK:
 
 ```js
-// Importing the Adobe Express Embed SDK
+// main.js
+//... previous imports ...
+
+// Import the Adobe Express Embed SDK
 await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
@@ -142,19 +160,20 @@ When the Embed SDK is imported, a `CCEverywhere` object is globally available an
 - **Configuration**: optional settings, like locale, delayed sign-in, etc.
 
 ```javascript
-// 👀 Required parameters for initializing the Embed SDK
+// main.js
+//... previous imports ...
+
+// 👀 Required parameters to initialize the Embed SDK
 const hostInfo = {
   clientId: import.meta.env.VITE_API_KEY,
   appName: "Embed SDK Sample",
 };
 
 // Optional parameters
-const configParams = {
-  // Users can log in only when exporting/saving the document
-  loginMode: "delayed",
-};
+const configParams = { /* ... */ };
 
-// Initializing the Adobe Express Embed SDK
+// Initialize the Adobe Express Embed SDK
+// Destructure the `module` property only
 const { module } = await window.CCEverywhere.initialize(
   hostInfo,
   configParams
@@ -166,181 +185,125 @@ The [`hostInfo`](../../v4/index.md#hostinfo) object is required: the `clientId` 
 <!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
-The `appName` must match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
+The `appName` must match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
 
-All [`configParams`](../../reference/initialize/index.md#configparams) are optional, instead: here, `loginMode` tells Adobe Express to delay the login until artworks are exported.
+### 2.3 Load the `module`
 
-### 2.3
+The asynchronous `CCEverywhere.initialize()` method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method. In the next section, we'll learn how to use it to launch the Generate Image experience.
 
-The asynchronous `initialize()` method returns an object with three properties. Here, we destructure the `module`, because we'll later need its [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method.
+```javascript
+module.createImageFromText({ /* ... */ });
+```
 
-Excellent! We have this `editor`: now what? We'll use it to spawn a new Adobe Express instance via the [`editor.create()`](../../reference/CCEverywhere/editor/index.md#create) method—which, in turn, accepts four option objects able to configure:
+## 3. Launch the Generate Image experience
 
-- The [Document](../../reference/CCEverywhere/editor/index.md#createdocconfig) that will be created (e.g., its size).
-- The Adobe Express [Application](../../reference/CCEverywhere/editor/index.md#baseeditorappconfig) itself (e.g., the callbacks).
-- The allowed [Export Options](../../reference/types/index.md#exportoptions).
-- The [Container](../../reference/types/index.md#containerconfig) (modal dialog) of the Adobe Express application.
+The [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method expects three optional parameters:
 
-The links above point to the respective SDK Reference pages. They are all optional—our sample makes use of the first three of them:
+```javascript
+// module.createImageFromText() function signature
 
-```js
-// Document
-const docConfig = { canvasSize: "BusinessCard" };
-// Application
+const appConfig       = { /* ... */ }; // Text to Image experience
+const exportConfig    = { /* ... */ }; // Export options
+const containerConfig = { /* ... */ }; // SDK container
+
+module.createImageFromText(appConfig, exportConfig, containerConfig);
+```
+
+In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) object; you can look at the [Full Editor tutorial](../tutorials/full-editor.md) for more details on the other two parameters.
+
+### 3.1 Enable the v2 experience
+
+The first thing we need to do is to enable the v2 experience.
+
+```javascript
+// main.js
+//... previous code ...
+
 const appConfig = {
-  selectedCategory: "media",
-  callbacks: {
-    onCancel: () => {},
-    onPublish: (intent, publishParams) => { /* ... */ },
-    onError: (err) => { /* ... */ }
-};
-// Export Options
-const exportConfig = [
-  {
-    id: "download",
-    label: "Download",
-    action: { target: "download" },
-    style: { uiType: "button" },
-  },
-  {
-    id: "save-modified-asset",
-    label: "Save image",
-    action: { target: "publish" },
-    style: { uiType: "button" },
-  },
-];
-```
-
-As you can see, we are:
-
-- Creating by default a document using the `"BusinessCard"` template.
-- Launching Adobe Express with the Media panel open on the left.
-- Setting a series of Callbacks that will fire when the user Cancels, Saves (that would be `onPublish`), or when something goes wrong.
-- Defining two ways for users to export content: download the file locally and save it in the user's Adobe Express folder and pass it back to the web application.
-
-On the **Create New** button click, Adobe Express is launched:
-
-```js
-document.getElementById("createDesign").onclick = async () => {
-  editor.create(docConfig, appConfig, exportConfig);
+  appVersion: "2",
+  // ...
 };
 ```
 
-![Launching the Full Editor](./images/full-editor_launch.png)
-
-<!-- Info Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+You can find a comprehensive list of all the new features of the Generate Image v2 experience in this [Concepts guide](../concepts/generate-image-v2.md).
 
-As you can see, integrating the full editor doesn't take much time! You can customize it to a great extent; even using all the default options, the result is brilliant.
+### 3.2 Toggle selected v2 features
 
-### 3. Managing images
+Among all the new features, here we'll focus on the following ones:
 
-The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their image; we'd like our web application to capture and display it on the HTML page.
+- [Community Wall](../concepts/generate-image-v2.md#community-wall), the endless gallery of images generated by other users that are displayed when the experience is launched.
+- [Rich Preview](../concepts/generate-image-v2.md#rich-preview), a larger preview of the generated image in the thumbnail.
+- [Thumbnail actions](../concepts/generate-image-v2.md#thumbnail-actions), a dropdown menu in the thumbnail to allow users to further edit the generated image.
 
-We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](../../reference/types/index.md#callbacks). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../reference/types/index.md#publishparams) argument, with three crucial properties:
+```javascript
+// main.js
+//... previous code ...
 
-- `documentId`: a unique identifier for the asset that has been created or modified.
-- `exportButtonId`: the identifier of the export button that has been clicked.
-- `asset`: an [`OutputAsset`](../../reference/types/index.md#outputasset) object, with several interesting properties like `data`—a Base64 string representation of the saved image.
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true, // 👈 Enable the Community Wall
+  },
+  thumbnailOptions: [
+    "rich-preview",         // 👈 Enable the Rich Preview
+    "edit-dropdown",        // 👈 Enable the Edit dropdown
+  ],
+  editDropdownOptions: [    // 👇 Set the options for the Edit dropdown
+    { option: "add-effects" },
+    { option: "remove-background" },
+    { option: "apply-adjustment" },
+    { option: "insert-object" },
+    { option: "remove-object" },
+  ],
+};
+```
 
-The `data` property sounds promising! The plan is to have an `<img>` element (in this example, it starts as a placeholder), which `src` attribute will be filled with the Base64 string coming from Adobe Express.
+TODO: insert image
 
-<!-- CodeBlock -->
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
+<InlineAlert variant="warning" slots="header, text1" />
+
+Prompt and Community Wall are mutually exclusive.
+
+In the `appConfig` object, you can pass a `promptText` string property to start generating images right away, as the experience is launched. Please note that adding a prompt will disable the Community Wall—it's either one or the other.
+
+### 3.3 Connect the UI with the Embed SDK logic
+
+The last step is to connect the UI in `index.html`, a simple button and an image placeholder, with the Embed SDK logic in `main.js`.
+
+In the UI:
+
+- The `generateBtn` button is used to launch the Generate Image experience.
+- An `<img>` element is used to display the generated image when it's ready.
+
+In `main.js`:
+
+- The `module.createImageFromText()` method is called when the `generateBtn` button is clicked.
+- A [`callbacks`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md) object is used to handle the experience lifecycle.
+  - [`onPublish()`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md) is called when the user publishes the generated image. The `publishParams` object contains a `projectId` and an `asset` object with the generated image data, that we've used to set the `src` attribute of the `<img>` element.
+- The `exportConfig` array is used to set the export options available to the user. Here, we've added two buttons:
+  - `download`: it allows users to download the generated image.
+  - `save-modified-asset`: it saves the generated image and passes it to the `onPublish()` callback.
+
+<CodeBlock slots="heading, code" repeat="2" languages="main.js, index.html"/>
 
 #### main.js
 
-```js
-// Storing the image element
-var expressImage = document.getElementById("savedImage");
-
-// Callbacks to be used when creating or editing a document
-const callbacks = {
-  // ... other callbacks
-  onPublish: (intent, publishParams) => {                   // 👈
-    expressImage.src = publishParams.asset[0].data;         // 👈
-    console.log("Image data", publishParams.asset[0].data); // 👈
-  }
-};
-```
-
-#### index.html
-
-```html
-<!-- ... rest of the page -->
-<img id="savedImage"
-     src="https://placehold.co/300x300?text=Placeholder+Image&font=source-sans-pro"
-     alt="Your design will appear here." />
-<!-- ... rest of the page -->
-```
-
-Please note that `asset` is an array; we're getting just the first item here. If you open the Console, you'll see the Base64 string logged.
-
-![Logging Base64 data](./images/full-editor_console-base64.png)
-
-### 4. Editing projects
-
-The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before. As we've seen [earlier](#3-managing-images), when a document is saved, we receive a [`PublishParams`](../../reference/types/index.md#publishparams) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
-
-```js
-// Will hold the project ID when a document is saved
-var existingProjectId = null; // 👈
-
-// Callbacks to be used when creating or editing a document
-const callbacks = {
-  // ... other callbacks
-  onPublish: (intent, publishParams) => {
-    existingProjectId = publishParams.projectId;  // 👈
-    console.log("Project ID", existingProjectId); // 👈
-    expressImage.src = publishParams.asset[0].data;
-    console.log("Image data", publishParams.asset[0].data);
-  }
-};
-
-// Click handler for the Edit Design button
-document.getElementById("editBtn").onclick = async () => {
-  // Opening the existing project by ID
-  let docConfig = { documentId: existingProjectId };
-  // ...
-  editor.edit(docConfig, appConfig, exportConfig);
-};
-```
-
-Above, we're using `existingProjectId` to hold the project reference, collected in the `onPublish` callback every time the document is saved. Later, in the `editBtn` click handler, we're creating a new `docConfig` object passing the ID in the `documentId` property. This tells Adobe Express to look for an existing project and open it right away.
-
-![Logging the Project ID](./images/full-editor_console-project-id.png)
-
-## Final project
-
-We have all the required bits in place, but some simple refactoring is needed to keep the code clean.
-
-- The `appConfig` and `exportConfig` option objects are stored in constants, as they're shared in both the **Create new** and **Edit** buttons.
-- The `callbacks` follow suit; we've added a simple `onError` that logs a message, and now `onPublish` also enables the **Edit** button—that starts disabled.
-
-You can check the entire [`embed-sdk-full-editor-tutorial`](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) project code as part of the dedicated [`embed-sdk-samples`](https://github.com/AdobeDocs/embed-sdk-samples) repository. Find the most relevant files below for reference.
-
-<!-- CodeBlock -->
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
-
-#### main.js
-
-```js
-import "./style.css";
-
-// Importing theme and typography styles from Spectrum Web Components
+```javascript
+// Import theme and typography styles from Spectrum Web Components
 import "@spectrum-web-components/styles/typography.css";
 import "@spectrum-web-components/theme/express/theme-light.js";
 import "@spectrum-web-components/theme/express/scale-medium.js";
 import "@spectrum-web-components/theme/sp-theme.js";
 
-// Importing Spectrum Web Components
+// Import Spectrum Web Components
 import "@spectrum-web-components/button/sp-button.js";
 import "@spectrum-web-components/button-group/sp-button-group.js";
 import "@spectrum-web-components/divider/sp-divider.js";
+import "./style.css";
 
-// Importing the Adobe Express Embed SDK
+// Import the Adobe Express Embed SDK
 await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 
@@ -350,15 +313,8 @@ const hostInfo = {
   appName: "Embed SDK Sample",
 };
 
-// Prompts the user to log in only when exporting/saving the document
-const configParams = {
-  loginMode: "delayed",
-};
-
 // Initializing the Adobe Express Embed SDK
-const { editor } = await window.CCEverywhere.initialize(
-  hostInfo, configParams
-);
+const { module } = await window.CCEverywhere.initialize(hostInfo, {});
 
 // Will hold the project ID when a document is saved on Adobe Express
 var existingProjectId = null;
@@ -372,8 +328,6 @@ const callbacks = {
     console.log("Project ID", existingProjectId);
     expressImage.src = publishParams.asset[0].data;
     console.log("Image data", publishParams.asset[0].data);
-    // enable the editDesign button
-    document.getElementById("editBtn").disabled = false;
   },
   onError: (err) => {
     console.error("Error!", err.toString());
@@ -381,10 +335,501 @@ const callbacks = {
 };
 
 // Configuration for the app, shared by both Create and Edit flows
-const appConfig = { selectedCategory: "media", callbacks };
+const appConfig = {
+  appVersion: "2",
+  featureConfig: { "community-wall": true },
+  thumbnailOptions: ["rich-preview","edit-dropdown"],
+  editDropdownOptions: [
+    { option: "add-effects" },
+    { option: "remove-background" },
+    { option: "apply-adjustment" },
+    { option: "insert-object" },
+    { option: "remove-object" },
+  ],
+  callbacks,
+};
 
-// Configuration for the export options made available
-// to the user when creating or editing a document
+// Configuration for the export options made available to the user
+// when creating or editing a document
+const exportConfig = [
+  {
+    id: "download", label: "Download",
+    action: { target: "download" }, style: { uiType: "button" }
+  },
+  {
+    id: "save-modified-asset", label: "Save image",
+    action: { target: "publish" }, style: { uiType: "button" }
+  },
+];
+
+// Click handler for the Create Design button
+document.getElementById("generateBtn").onclick = async () => {
+  module.createImageFromText(appConfig, exportConfig);
+};
+```
+
+#### index.html
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embed SDK Sample</title>
+</head>
+
+<body>
+  <sp-theme scale="medium" color="light" system="express">
+    <div class="container">
+      <header>
+        <h1>Adobe Express Embed SDK</h1>
+        <sp-divider size="l"></sp-divider>
+        <h2>Generate Image Sample</h2>
+        <p>
+          The <b>Generate Image</b> button generates an image from the current project.
+        </p>
+      </header>
+
+      <main>
+        <img id="savedImage" src="https://placehold.co/300x300?text=Placeholder+Image&font=source-sans-pro"
+          alt="Your design will appear here." />
+        <sp-button-group>
+          <sp-button id="generateBtn">Generate Image</sp-button>
+        </sp-button-group>
+      </main>
+    </div>
+  </sp-theme>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+
+</html>
+```
+
+### 3.4 Deal with new Intents
+
+When adding the Edit dropdown menu to each generated image (via the `"edit-dropdown"` option in the `thumbnailOptions` array, and selecting specific `editDropdownOptions`), users will be allowed to further edit the image. Technically, they will jump from the Generate Image to the Edit Image experience.
+
+Whenever users transition from one design workflow to another, Embed SDK will invoke the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) callback to inform you about the change. You can use this opportunity to configure the new intent by passing `appConfig`, `exportConfig`, or any other relevant settings. These configurations are applied while launching the new intent; if missing, the default settings will be used.
+
+The callback receives two parameters, the `oldIntent` and the `newIntent`, both of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/index.md). In our specific case, the `oldIntent` will be [`ModuleIntent.CREATE_IMAGE_FROM_TEXT`](../../v4/shared/src/types/action-intent-types/enumerations/module-intent.md) and the `newIntent` will be a [`ModuleIntent.EDIT_IMAGE`](../../v4/shared/src/types/action-intent-types/enumerations/module-intent.md).
+
+```javascript
+// main.js
+//... previous code ...
+
+const callbacks = {
+  onCancel:  ()                          => { /* ... */ },
+  onPublish: (intent, publishParams)     => { /* ... */ },
+  onError:   (err)                       => { /* ... */ },
+  // 👇
+  onIntentChange: (oldIntent, newIntent) => {
+    console.log("Intent changed from", oldIntent, "to", newIntent);
+    return {
+      appConfig:       { /* ... */ },
+      exportConfig:    [ /* ... */ ],
+      containerConfig: { /* ... */ }
+    }
+  },
+};
+```
+
+You may want to use the `onIntentChange()` callback to, say, configure different Export buttons that better suit the new intent. Please note that subscribing to the callback is totally optional.
+
+## 4. Customize the Community Wall
+
+The Community Wall is able to showcase custom images instead of the Firefly's publicly available gallery. This is ideal if your users need to generate specific subjects (say, sports team's crests, logos, etc.), and would appreciate a more relevant starting point.
+
+### 4.1 Enable the Custom Community Wall
+
+To enable the Custom Community Wall, you need to supply a `communityWallConfig` object to `appConfig` when you launch Generate Image v2.
+
+```javascript
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true, // 👈 turn the wall on
+  },
+  communityWallConfig: {
+    // 👇 your own data-loader
+    fetchCommunityAssets: myFetchCommunityAssets,
+  },
+};
+```
+
+### 4.2 Provide your own data-loader
+
+The `fetchCommunityAssets` property is nothing but a **callback function that you need to implement**, designed to fetch a list of your assets in a _paginated way_.
+
+<InlineAlert variant="info" slots="text1" />
+
+**Pagination**, that must be supported on your backend, allows the module to load data in smaller chunks as users scroll, reducing load times and improving the overall experience. As they keep scrolling through the Community Wall, the module will repeatedly invoke `fetchCommunityAssets` to get the next set of images.
+
+The function is called with a `limit` and `cursor` parameters. The `limit` is the number of assets to retrieve at any given time, and the `cursor` is used to keep track of the batch of assets to fetch next.
+
+The `cursor` defaults to `"Start_Page"` on the first call, and you can send `"Last_Page"` when there are no more custom assets to fetch. At that point, the module will stop asking for more data.
+
+#### The `fetchCommunityAssets` callback signature
+
+```ts
+async function myFetchCommunityAssets(
+  limit: number,
+  cursor: string // "Start_Page" on the first call, "Last_Page" on the last call
+): Promise<CommunityWallAssetReponse> {
+  /* …fetch and return your data… */
+}
+```
+
+The `fetchCommunityAssets` asynchronous callback should return a Promise that resolves to a `CommunityWallAssetReponse` object.
+
+```ts
+interface CommunityWallAssetReponse {
+  assets: CommunityWallAssetData[];
+  cursor: string; // The cursor for the next page of assets.
+}
+```
+
+#### The Asset schema
+
+The `assets` array contains the asset objects to display in the Community Wall.
+
+```ts
+interface CommunityWallAssetData {
+  assetId: string;          // Asset ID for the community asset
+  title: string;            // Prompt for the thumbnail item
+  height: number;           // Height of the thumbnail image
+  width: number;            // Width of the thumbnail image
+  thumbnailSrc: string;     // Source of the thumbnail image (base64 string)
+  fullRenditionSrc: string; // Source of the full rendition image
+                            // for one-up view (base64 string)
+  ownerInfo?: {             // Optional: Information about the owner
+    name: string;           // Owner's display name
+    imgSrc: string;         // Source URL of the owner's image
+  };
+}
+```
+
+<InlineAlert variant="info" slots="text1" />
+
+The `thumbnailSrc` is the smaller image, used to display in the Community Wall, while the `fullRenditionSrc` is the larger image, used to display in the OneUp view. Both must be **base64 encoded strings**.
+
+For more information about the aspect ratio of the assets, please refer to the [Generate Image v2 Concepts guide](../concepts/generate-image-v2.md#asset-schema).
+
+### 4.3 Implement the `fetchCommunityAssets` callback
+
+Now that we know how to provide assets for the Custom Community Wall, let's implement it in our sample project.
+
+In the `src/images` folder, you'll find 24 images of cats enjoying some leisure time that have been generated with Adobe Firefly, alongside with an `images.json` file.
+
+```json
+// images/images.json
+[
+  {
+    "file": "Firefly_A cat on a leather armchair sipping various cocktails 232431.jpg",
+    "prompt": "A cat on a leather armchair sipping various cocktails"
+  },
+  {
+    "file": "Firefly_A cat on a leather armchair sipping various cocktails 349610.jpg",
+    "prompt": "A cat on a leather armchair sipping various cocktails"
+  },
+  ...
+]
+```
+
+The `file` property is the name of the image file, and the `prompt` is the prompt used to generate it. We'll use this file to fetch the assets for the Custom Community Wall.
+
+We've created a separate `community-wall.js` module to handle everything.
+
+- The `"uuid"` module (the only external dependency) is a handy helper to assign a unique `assetId` to every thumbnail we feed to the Community Wall.
+- `fetchImages()`: grabs `images/images.json`, the tiny manifest that pairs each cat photo with the prompt that generated it. The function returns the parsed JSON or throws if the file can’t be reached.
+- `fileToBase64()`: fetches an individual image file, converts it to a Base-64 data URL with `FileReader`, and resolves a promise once the conversion is done. This is the heavy-lifting step that turns our static JPGs into strings the Community Wall, can digest.
+- We implemented a one-time memory cache to avoid hitting the network twice for the same file.
+  - `_cache`: stores `{ prompt, base64 }` pairs so we never hit the network twice for the same file.
+  - `_cursor`: remembers how many images we’ve already served to enable simple, stateless pagination.
+  - `PAGE_SIZE`: set to `12`, mirroring Firefly’s default number of wall tiles per “page.”
+  - `hydrateCache()`: lazily builds the cache on first use. It reads the manifest, converts every file to Base-64, then stashes the result in `_cache`. Subsequent calls return the already-hydrated data immediately.
+- `fetchCommunityAssets()` is the core function that the Embed SDK actually invokes.
+  - It first ensures the cache is loaded (`hydrateCache`).
+  - It resets `_cursor` when it reaches the end so a fresh Embed SDK session can still show the wall (otherwise it will try to load non-existing images).
+  - It slices the next `PAGE_SIZE` items out of the cache.
+  - It maps each slice entry into the schema the SDK expects, adding a freshly minted `uuidv4()` as `assetId`. Thumbnail dimensions are hard coded for simplicity.
+  - It advances `_cursor`, then returns `{ assets, cursor }` where `cursor` is `"Interim_Page"` until we exhaust the list, after which it switches to `"Last_Page"` to tell the SDK there’s nothing more to fetch.
+- Generous `console.log` statements are sprinkled throughout to make it easy to trace the pagination flow and verify that assets are loaded and served as expected.
+
+<CodeBlock slots="heading, code" repeat="1" languages="community-wall.js"/>
+
+#### community-wall.js
+
+```javascript
+import { v4 as uuidv4 } from "uuid";
+
+// Read images/images.json and return its raw data
+const fetchImages = async () => {
+  const resp = await fetch("images/images.json");
+  if (!resp.ok) {
+    throw new Error(
+      `Could not load images.json - ${resp.status} ${resp.statusText}`
+    );
+  }
+  return resp.json(); // [ {file, prompt}, …]
+};
+
+// Convert a single file in /images to a data-URL
+const fileToBase64 = async (fileName) => {
+  const resp = await fetch(`images/${fileName}`);
+  const blob = await resp.blob();
+
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result); // "data:image/jpeg;base64,…"
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+};
+
+// ------------------------------------------------------------------
+// one-time cache (so we only hit the network once)
+// ------------------------------------------------------------------
+let _cache = null; // [{ prompt, base64 }, …]
+let _cursor = 0; // how far we have already served
+const PAGE_SIZE = 12; // Firefly’s community wall default
+
+const hydrateCache = async () => {
+  if (_cache) return _cache; // already loaded
+
+  const meta = await fetchImages(); // from images.json
+  const base64List = await Promise.all(
+    meta.map((item) => fileToBase64(item.file))
+  );
+  _cache = base64List.map((b64, idx) => ({
+    prompt: meta[idx].prompt,
+    base64: b64,
+  }));
+  return _cache;
+};
+
+/**
+ * The very first call returns items 0-11, cursor = 'Interim_Page'
+ * The second call returns items 12-23, etc.
+ * When the last chunk is served, cursor = 'Last_Page'
+ * @returns {Promise<{assets: Array, cursor: 'Interim_Page'|'Last_Page'}>}
+ */
+export const fetchCommunityAssets = async () => {
+  console.log("fetchCommunityAssets called!");
+
+  // Implement your logic here to fetch the assets from the database
+  const data = await hydrateCache();
+  console.log("data", data);
+
+  // If we have already served all available assets (cursor at or past end),
+  // start over so that a fresh Embed SDK session can see the community wall.
+  if (_cursor >= data.length) { _cursor = 0 }
+  console.log("cursor", _cursor);
+
+  // slice next PAGE_SIZE elements
+  const slice = data.slice(_cursor, _cursor + PAGE_SIZE);
+
+  const assets = slice.map((item) => ({
+    assetId: uuidv4(),
+    title: item.prompt,
+    thumbnailSrc: item.base64,     // 👈 for simplicity, we're using the
+    fullRenditionSrc: item.base64, //    same image for both high/low res
+    width: 467,                    // 👈 hard-coded, or swap with
+    height: 600,                   //    real metadata if you like
+  }));
+
+  _cursor += slice.length;
+  const cursor = _cursor >= data.length ? "Last_Page" : "Interim_Page";
+
+  return { assets, cursor };
+};
+```
+
+The last thing we need to do is to import the `fetchCommunityAssets` function in our `main.js` file.
+
+```javascript
+// main.js
+
+import { fetchCommunityAssets } from "./community-wall.js";
+
+//... rest of the code ...
+
+const appConfig = {
+  appVersion: "2",
+  featureConfig: { "community-wall": true },
+  communityWallConfig: { fetchCommunityAssets }, // 👈 set the function
+  //... rest of the appConfig ...
+};
+
+//... rest of the main.js ...
+```
+
+TODO: add a screenshot of the result
+
+## Troubleshooting
+
+### Common issues
+
+| Issue                                   | Solution                                                                                                      |
+| --------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Error: "Adobe Express is not available" | Check to have entered the correct API Key in the `src/.env` file as described [here](#12-set-up-the-api-key). |
+| The Community Wall is not showing       | Make sure you've set the `fetchCommunityAssets` function in the `appConfig`                                   |
+
+## Complete working example
+
+<CodeBlock slots="heading, code" repeat="3" languages="index.html, main.js, community-wall.js"/>
+
+#### index.html
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embed SDK Sample</title>
+</head>
+
+<body>
+  <sp-theme scale="medium" color="light" system="express">
+    <div class="container">
+      <header>
+        <h1>Adobe Express Embed SDK</h1>
+        <sp-divider size="l"></sp-divider>
+        <h2>Generate Image Sample</h2>
+        <p>
+          The <b>Generate Image</b> button generates an image from the current project.
+        </p>
+      </header>
+
+      <main>
+        <img id="savedImage" src="https://placehold.co/300x300?text=Placeholder+Image&font=source-sans-pro"
+          alt="Your design will appear here." />
+        <sp-button-group>
+          <sp-button id="generateBtn">Generate Image</sp-button>
+        </sp-button-group>
+      </main>
+    </div>
+  </sp-theme>
+
+  <script type="module" src="./main.js"></script>
+
+</body>
+
+</html>
+```
+
+#### main.js
+
+```javascript
+import "./style.css";
+
+// Importing theme and typography styles from Spectrum Web Components
+import "@spectrum-web-components/styles/typography.css";
+import "@spectrum-web-components/theme/express/theme-light.js";
+import "@spectrum-web-components/theme/express/scale-medium.js";
+import "@spectrum-web-components/theme/sp-theme.js";
+
+// Importing Spectrum Web Components
+import "@spectrum-web-components/button/sp-button.js";
+import "@spectrum-web-components/button-group/sp-button-group.js";
+import "@spectrum-web-components/divider/sp-divider.js";
+
+import { fetchCommunityAssets } from "./community-wall.js";
+
+// Importing the Adobe Express Embed SDK
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+console.log("CCEverywhere loaded", window.CCEverywhere);
+
+// Parameters for initializing the Adobe Express Embed SDK
+const hostInfo = {
+  clientId: import.meta.env.VITE_API_KEY,
+  appName: "Embed SDK Sample",
+};
+
+// Prompts the user to login only when exporting/saving the document
+const configParams = {
+  loginMode: "delayed",
+};
+
+// Initializing the Adobe Express Embed SDK
+const { module } = await window.CCEverywhere.initialize(hostInfo, configParams);
+
+// Will hold the project ID when a document is saved on Adobe Express
+var existingProjectId = null;
+var expressImage = document.getElementById("savedImage");
+
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  onCancel: () => {},
+  onPublish: (intent, publishParams) => {
+    existingProjectId = publishParams.projectId;
+    console.log("Project ID", existingProjectId);
+    expressImage.src = publishParams.asset[0].data;
+    console.log("Image data", publishParams.asset[0].data);
+  },
+  onError: (err) => {
+    console.error("Error!", err.toString());
+  },
+  onIntentChange: (oldIntent, newIntent) => {
+    console.log("Intent changed from", oldIntent, "to", newIntent);
+    return {
+      callbacks: {
+        onCancel: () => {},
+        onPublish: (intent, publishParams) => {
+          existingProjectId = publishParams.projectId;
+          console.log("Project ID", existingProjectId);
+          expressImage.src = publishParams.asset[0].data;
+          console.log("Image data", publishParams.asset[0].data);
+        },
+      },
+      exportConfig: [
+        {
+          id: "download",
+          label: "Download",
+          action: { target: "download" },
+          style: { uiType: "button" },
+        },
+        {
+          id: "save-modified-asset",
+          label: "Save image",
+          action: { target: "publish" },
+          style: { uiType: "button" },
+        },
+      ],
+      containerConfig: {},
+    };
+  },
+};
+
+// Configuration for the app, shared by both Create and Edit flows
+const appConfig = {
+  appVersion: "2",
+  featureConfig: {
+    "community-wall": true,
+    "fast-mode": false,
+    "custom-models": false,
+  },
+  thumbnailOptions: ["rich-preview", "edit-dropdown"],
+  editDropdownOptions: [
+    { option: "add-effects" },
+    { option: "remove-background" },
+    { option: "apply-adjustment" },
+    { option: "insert-object" },
+    { option: "remove-object" },
+  ],
+  communityWallConfig: {
+    fetchCommunityAssets,
+  },
+  callbacks,
+};
+
+// Configuration for the export options made available to the user
+// when creating or editing a document
 const exportConfig = [
   {
     id: "download",
@@ -401,62 +846,119 @@ const exportConfig = [
 ];
 
 // Click handler for the Create Design button
-document.getElementById("createBtn").onclick = async () => {
-  // Presetting the canvas size
-  let docConfig = { canvasSize: "BusinessCard" };
-  // Using the global appConfig and exportConfig
-  editor.create(docConfig, appConfig, exportConfig);
-};
-
-// Click handler for the Edit Design button
-document.getElementById("editBtn").onclick = async () => {
-  // Opening the existing project by ID
-  let docConfig = { documentId: existingProjectId };
-  // Using the global appConfig and exportConfig
-  editor.edit(docConfig, appConfig, exportConfig);
+document.getElementById("generateBtn").onclick = async () => {
+  module.createImageFromText(appConfig, exportConfig);
 };
 ```
 
-#### index.html
+#### community-wall.js
 
-```html
-<body>
-  <sp-theme scale="medium" color="light" system="express">
-    <div class="container">
-      <header>
-        <h1>Adobe Express Embed SDK</h1>
-        <sp-divider size="l"></sp-divider>
-        <h2>Full Editor Sample</h2>
-        <p>
-          The <b>Create New</b> button launches a blank
-          new project in a full editor instance. <br />
-          Once you have published/saved a project, use the
-          <b>Edit</b> button to resume editing the same project.
-        </p>
-      </header>
+```javascript
+import { v4 as uuidv4 } from "uuid";
 
-      <main>
-        <img id="savedImage"
-        src="https://placehold.co/300x300?text=Placeholder+Image"
-          alt="Your design will appear here." />
-        <sp-button-group>
-          <sp-button id="createBtn">Create New</sp-button>
-          <sp-button id="editBtn" disabled>Edit</sp-button>
-        </sp-button-group>
-      </main>
-    </div>
-  </sp-theme>
+/** Read images/images.json and return its raw data */
+const fetchImages = async () => {
+  const resp = await fetch("images/images.json");
+  if (!resp.ok) {
+    throw new Error(
+      `Could not load images.json - ${resp.status} ${resp.statusText}`
+    );
+  }
+  return resp.json(); // [{file, prompt}, …]
+};
 
-  <script type="module" src="./main.js"></script>
+/** Convert a single file in /images to a data-URL */
+const fileToBase64 = async (fileName) => {
+  const resp = await fetch(`images/${fileName}`);
+  const blob = await resp.blob();
 
-</body>
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onloadend = () => resolve(reader.result); // “data:image/jpeg;base64,…”
+    reader.onerror = reject;
+    reader.readAsDataURL(blob);
+  });
+};
+
+/* ------------------------------------------------------------------
+ * one-time cache (so we only hit the network once)
+ * ------------------------------------------------------------------ */
+
+let _cache = null; // [{ prompt, base64 }, …]
+let _cursor = 0; // how far we have already served
+const PAGE_SIZE = 12; // Firefly’s community wall default
+
+const hydrateCache = async () => {
+  if (_cache) return _cache; // already loaded
+
+  const meta = await fetchImages(); // images.json
+  const base64List = await Promise.all(
+    meta.map((item) => fileToBase64(item.file))
+  );
+
+  _cache = base64List.map((b64, idx) => ({
+    prompt: meta[idx].prompt,
+    base64: b64,
+  }));
+
+  return _cache;
+};
+
+/* ------------------------------------------------------------------
+ * public API
+ * ------------------------------------------------------------------ */
+
+/**
+ * Mimics Adobe Express Community-Wall pagination.
+ *
+ * @returns {Promise<{assets: Array, cursor: 'Interim_Page'|'Last_Page'}>}
+ *
+ * The very first call returns items 0-11, cursor = 'Interim_Page'
+ * The second call returns items 12-23, etc.
+ * When the last chunk is served, cursor = 'Last_Page'
+ */
+export const fetchCommunityAssets = async () => {
+  console.log("fetchCommunityAssets called!");
+
+  // Implement your logic here to fetch the assets from the database
+  const data = await hydrateCache();
+  console.log("data", data);
+
+  // If we have already served all available assets (cursor at or past end),
+  // start over so that a fresh Embed SDK session can see the community wall.
+  if (_cursor >= data.length) {
+    _cursor = 0;
+  }
+  console.log("cursor", _cursor);
+
+  // slice next PAGE_SIZE elements
+  const slice = data.slice(_cursor, _cursor + PAGE_SIZE);
+
+  const assets = slice.map((item) => ({
+    assetId: uuidv4(),
+    title: item.prompt,
+    thumbnailSrc: item.base64,
+    fullRenditionSrc: item.base64,
+    width: 467, // hard-coded, or swap for real metadata if you like
+    height: 600,
+  }));
+
+  _cursor += slice.length;
+
+  const cursor = _cursor >= data.length ? "Last_Page" : "Interim_Page";
+
+  return { assets, cursor };
+};
 ```
 
-## Next steps
+## Need help?
 
-Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
+Have questions or running into issues? Join our [Community Forum](https://community.adobe.com/t5/adobe-express-developers/ct-p/ct-adobe-express-developers) to get help and connect with other developers working with the Adobe Express Embed SDK.
 
-- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../reference/).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
-- If you're looking for **more tutorials**, check out [here](../tutorials/).
-- Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).
+## Related resources
+
+- **[API Reference](../../v4/index.md)** - Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](../index.md)** - High-level introduction
+- **[Demo Application](https://demo.expressembed.com/)** - Interactive demo showcasing SDK capabilities
+- **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)** - Working code examples and tutorials
+- **[Changelog](../changelog/index.md)** - Latest updates and improvements
