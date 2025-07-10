@@ -116,7 +116,7 @@ _Note: Include this section only if your tutorial involves user interactions, ex
 
 ## Need help?
 
-Have questions or running into issues? Join our [Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk) to get help and connect with other developers working with the Adobe Express Embed SDK.
+Have questions or running into issues? Join our [Community Forum](https://community.adobe.com/t5/adobe-express-developers/ct-p/ct-adobe-express-developers) to get help and connect with other developers working with the Adobe Express Embed SDK.
 
 ## Related resources
 
