@@ -25,12 +25,12 @@ Welcome to this hands-on tutorial! We'll walk you through implementing the power
 By completing this tutorial, you'll gain practical skills in:
 
 - Implementing the **Generate Image module** with the Adobe Express Embed SDK.
-- Using the **new V2 features** of the Generate Image module.
+- Using several of the **new V2 features** of the Generate Image module.
 - Implementing the **Custom Community Wall**.
 
 ### What you'll build
 
-You'll build a simple, JavaScript-based web application that allows users to generate images from text prompts using the Generate Image module of the Adobe Express Embed SDK.
+You'll build a simple, JavaScript-based web application that allows users to generate images from text prompts using the Generate Image v2 module of the Adobe Express Embed SDK.
 
 ![Generate image](./images/generate-image--final.png)
 
@@ -48,7 +48,7 @@ Before you start, make sure you have:
 
 ### 1.1 Clone the sample
 
-You can start by cloning the [Embed SDK Generate Image sample](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/) from GitHub and navigating to the project directory.
+You can start by cloning the [Embed SDK Generate Image sample](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-generate-image) from GitHub and navigating to the project directory.
 
 ```bash
 git clone https://github.com/AdobeDocs/embed-sdk-samples.git
@@ -93,13 +93,15 @@ npm install
 npm run start
 ```
 
-The web application will be served at `localhost:5555` on a secure HTTPS connection—which is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action.
+The web application will be served at `localhost:5555` on a secure HTTPS connection; HTTPS is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action.
 
 ![Generate image integration UI](./images/generate-image--ui.png)
 
 When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](../concepts/generate-image-v2.md#community-wall)—optionally, populated with your own pictures. Users can browse the gallery, select an image, and use its prompt as a starting point for their own generation.
 
-The sample project will handle the file transfer between Adobe Express and the web page hosting it, and the generated image will be displayed in lieu of the placeholder.
+![Generate image integration UI](./images/generate-image--community-wall.png)
+
+When the users click the Save button, the sample project will handle the file transfer between Adobe Express and the web page hosting it, and the generated image will be displayed in lieu of the placeholder.
 
 ![Generate image thumbnail](./images/generate-image--thumb.png)
 
@@ -114,7 +116,7 @@ In case you get a popup when trying to launch the Adobe Express integration with
 
 You can just read the existing code in the sample, but it's always best to **learn by doing!** We suggest following along and typing the code in—even small mistakes can lead to important discoveries.
 
-The [sample project](#) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire local HTTPS setup and hot reloading.
+The [sample project](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-generate-image) is a simple web application built with [Vite](https://vitejs.dev/), which takes care of the entire local HTTPS setup and hot reloading.
 
 ### 2.1 Import the Embed SDK
 
@@ -180,7 +182,7 @@ const { module } = await window.CCEverywhere.initialize(
 );
 ```
 
-The [`hostInfo`](../../v4/index.md#hostinfo) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
+The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
 <!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1" />
@@ -189,7 +191,7 @@ The `appName` must match the name of your application, and it will be displayed 
 
 ### 2.3 Load the `module`
 
-The asynchronous `CCEverywhere.initialize()` method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method. In the next section, we'll learn how to use it to launch the Generate Image experience.
+The asynchronous [`CCEverywhere.initialize()`](../../v4/sdk/src/3p/cc-everywhere/variables/default.md#initialize) method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method. In the next section, we'll learn how to use it to launch the Generate Image experience.
 
 ```javascript
 module.createImageFromText({ /* ... */ });
@@ -281,8 +283,8 @@ In `main.js`:
 
 - The `module.createImageFromText()` method is called when the `generateBtn` button is clicked.
 - A [`callbacks`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md) object is used to handle the experience lifecycle.
-  - [`onPublish()`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md) is called when the user publishes the generated image. The `publishParams` object contains a `projectId` and an `asset` object with the generated image data, that we've used to set the `src` attribute of the `<img>` element.
-- The `exportConfig` array is used to set the export options available to the user. Here, we've added two buttons:
+  - [`onPublish()`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md) is called when the user publishes the generated image. The [`publishParams`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params.md) object contains a `projectId` and an `asset` object with the generated image data, that we've used to set the `src` attribute of the `<img>` element.
+- The [`exportConfig`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md) array is used to set the export options available to the user. Here, we've added two buttons:
   - `download`: it allows users to download the generated image.
   - `save-modified-asset`: it saves the generated image and passes it to the `onPublish()` callback.
 
@@ -528,7 +530,7 @@ Now that we know how to provide assets for the Custom Community Wall, let's impl
 
 ![Generate image Custom Community Wall](./images/generate-image--custom-community-wall.png)
 
-In the `src/images` folder, you'll find 24 images of cats enjoying some leisure time that have been generated with Adobe Firefly, alongside with an `images.json` file.
+In the `src/images` folder, you'll find 24 images of cats enjoying some comfy day-drinking leisure time that have been generated with Adobe Firefly, alongside with an `images.json` file.
 
 ```json
 // images/images.json
@@ -956,6 +958,10 @@ export const fetchCommunityAssets = async () => {
   return { assets, cursor };
 };
 ```
+
+## Next steps
+
+Congratulations, you've completed the Generate Image tutorial! You can now explore the [Generate Image v2 Concepts guide](../concepts/generate-image-v2.md) and learn about all its features.
 
 ## Need help?
 
