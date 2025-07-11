@@ -22,6 +22,16 @@ contributors:
 
 Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## 2025-07-11
+
+### Documentation
+
+- Added a new comprehensive [Generate Image tutorial](../tutorials/generate-image.md) that covers the implementation details of the new Generate Image v2 features, including the Custom Community Wall.
+
+### Enhancements
+
+- The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md))
+
 ## [4.30.13] 2025-06-20
 
 ### Maintenance release
