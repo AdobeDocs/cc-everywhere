@@ -783,35 +783,14 @@ const callbacks = {
   onError: (err) => {
     console.error("Error!", err.toString());
   },
-  onIntentChange: (oldIntent, newIntent) => {
-    console.log("Intent changed from", oldIntent, "to", newIntent);
-    return {
-      callbacks: {
-        onCancel: () => {},
-        onPublish: (intent, publishParams) => {
-          existingProjectId = publishParams.projectId;
-          console.log("Project ID", existingProjectId);
-          expressImage.src = publishParams.asset[0].data;
-          console.log("Image data", publishParams.asset[0].data);
-        },
-      },
-      exportConfig: [
-        {
-          id: "download",
-          label: "Download",
-          action: { target: "download" },
-          style: { uiType: "button" },
-        },
-        {
-          id: "save-modified-asset",
-          label: "Save image",
-          action: { target: "publish" },
-          style: { uiType: "button" },
-        },
-      ],
-      containerConfig: {},
-    };
-  },
+  // onIntentChange: (oldIntent, newIntent) => {
+  //   console.log("Intent changed from", oldIntent, "to", newIntent);
+  //   return {
+  //     appConfig: {},
+  //     exportConfig: [],
+  //     containerConfig: {},
+  //   };
+  // },
 };
 
 // Configuration for the app, shared by both Create and Edit flows
