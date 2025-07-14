@@ -2,10 +2,22 @@
 keywords:
   - Adobe Express
   - Embed SDK
-  - Tutorial
-  - Editor
-  - V4
+  - SDK v4
   - CCEverywhere
+  - Generate Image
+  - Generate Image v2
+  - Tutorial
+  - Firefly
+  - Module workflow
+  - Text to image
+  - text-to-image
+  - Community Wall
+  - Custom Community Wall
+  - Rich Preview
+  - Thumbnail actions
+  - onPublish callback
+  - onIntentChange callback
+  - Intent handling
 title: Embed SDK Generate Image tutorial
 description: Step-by-step guide for implementing the Generate Image module with Adobe Express Embed SDK
 contributors:
@@ -530,7 +542,17 @@ For more information about the aspect ratio of the assets, please refer to the [
 
 ### 4.3 Implement the `fetchCommunityAssets` callback
 
-Now that you know how to provide assets for the Custom Community Wall, let's implement it in the sample project. Here's the final result.
+Now that you know how to provide assets for the Custom Community Wall, let's implement it in the sample project.
+
+<InlineAlert variant="info" slots="header, text1, text2" />
+
+Real World implementation
+
+In this tutorial we keep things deliberately simple: the `fetchCommunityAssets` callback runs **entirely in the browser**, reads a tiny `images.json` manifest that lives in your `/src/images` folder, converts each JPEG to Base-64 on the fly, and serves it straight to the Community Wall.
+
+That works great for a demo, but in a production app you would swap that self-contained hack for a thin **HTTP call to your own back-end**. In practice the callback would `fetch('/community-assets?limit=12&cursor=…')`, your API (Node, Python, Go—anything that speaks JSON) would pull the next batch of thumbnails from object storage such as **Amazon S3, Cloudflare R2, Azure Blob,** etc., Base-64-encode them once, and respond with the exact shape the SDK expects. This keeps large image files off the client, lets you paginate efficiently, and opens the door to any business logic you need—all while the callback itself stays a few lines of front-end JavaScript.
+
+Here's the final result of this tutorial's implementation.
 
 ![Generate image Custom Community Wall](./images/generate-image--custom-community-wall.png)
 
