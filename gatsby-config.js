@@ -150,6 +150,10 @@ module.exports = {
             title: "Generate Image",
             path: "/guides/tutorials/generate-image.md",
           },
+          {
+            title: "Edit Image",
+            path: "/guides/tutorials/edit-image.md",
+          },
         ],
       },
       {
