@@ -35,7 +35,7 @@ By completing this tutorial, you'll gain practical skills in:
 
 You'll build a simple, JavaScript-based web application that allows users to edit images using the Edit Image v2 module of the Adobe Express Embed SDK.
 
-<!-- ![Edit image](./images/edit-image--final.png) -->
+![Embed SDK Edit Image experience](./images/edit-image--final.png)
 
 ## Prerequisites
 
@@ -97,15 +97,13 @@ npm run start
 
 The web application will be served at `localhost:5555` on a secure HTTPS connection; HTTPS is always required for any Embed SDK integration. Open your browser and navigate to this address to see it in action.
 
-<!-- ![Generate image integration UI](./images/generate-image--ui.png) -->
+![Embed SDK Edit Image integration UI](./images/edit-image--ui.png)
 
 When clicking the **Edit Image** button, the Adobe Express Edit Image module will launch, showing the new tabbed interface.
 
-<!-- ![Edit image integration UI](./images/edit-image--ui.png) -->
-
 When the users click the **Save button**—you need to actually edit the image before the button is enabled—the sample project will handle the file transfer between Adobe Express and the web page hosting it, and the edited image will be displayed in lieu of the original.
 
-<!-- ![Edit image thumbnail](./images/edit-image--thumb.png) -->
+![Embed SDK Edit Image edited image](./images/edit-image--edited-image.png)
 
 <!-- Inline Alert -->
 <InlineAlert variant="error" slots="header, text1" />
@@ -221,7 +219,8 @@ Before tackling the code needed to run the Edit Image experience, let's have a l
         <sp-divider size="l"></sp-divider>
         <h2>Edit Image Sample</h2>
         <p>
-          The <b>Edit Image</b> button launches an image editor instance.
+          The <b>Edit Image</b> button launches
+          an image editor instance.
         </p>
       </header>
 
@@ -233,7 +232,8 @@ Before tackling the code needed to run the Edit Image experience, let's have a l
           <sp-button id="uploadBtn">Choose Image</sp-button>
           <sp-button id="editBtn">Edit Image</sp-button>
         </sp-button-group>
-        <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+        <input type="file" id="fileInput" accept="image/*"
+               style="display: none;" />
       </main>
     </div>
   </sp-theme>
@@ -257,7 +257,7 @@ The [`editImage()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module
 ```javascript
 // module.editImage() function signature
 
-const docConfig       = { /* ... */ }; // Image to edit
+const docConfig       = { /* ... */ }; // Image to edit (required)
 const appConfig       = { /* ... */ }; // Edit Image experience
 const exportConfig    = { /* ... */ }; // Export options
 const containerConfig = { /* ... */ }; // SDK container
@@ -283,10 +283,10 @@ const appConfig = {
 
 ### 3.4 Familiarize with the `docConfig` object
 
-The [`docConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) object, that implements the [`EditImageDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) interface, is used for two purposes:
+The [`docConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) object, that implements the [`EditImageDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) interface, is used to pass:
 
-1. To pass the image to edit.
-2. To pass the intent to perform on the image; that is, the preselected action to perform on the image, among the available options.
+1. The image to edit.
+2. The intent to perform on the image; that is, the preselected action to perform on the image, among the available options.
 
 ```ts
 interface EditImageDocConfig {
@@ -335,9 +335,9 @@ const docConfig = {
 
 Presigned URLs
 
-A presigned URL for an image is a secure, time-limited link that grants temporary access to a private image stored on a cloud service like Amazon S3. It allows users to view or download the image without exposing authentication credentials or making the file public.
+A presigned URL for an image is a **secure, time-limited link** that grants temporary access to a private image stored on a cloud service like Amazon S3. It allows users to view or download the image without exposing authentication credentials or making the file public.
 
-These URLs are typically generated on the server using a cloud SDK and sent to the frontend, where they can be used like any regular image URL. Since they expire after a set time, they provide a balance between accessibility and security.
+These URLs are typically **generated on the server** using a cloud SDK and sent to the frontend, where they can be used like any regular image URL. Since they expire after a set time, they provide a balance between accessibility and security.
 
 In this tutorial, you can make the local URL work—with a caveat.
 
@@ -368,7 +368,7 @@ As is, this code would log the following error.
 
 This is because when passing an image by URL, the Edit Image module (served from `https://quick-actions.express.adobe.com`) needs to fetch that file from your development server (`https://localhost:5555`). Because the two origins differ, the browser blocks the request unless your server explicitly says, _"other sites may read this."_ This safeguard prevents a malicious site from poking around your network.
 
-During local development you can loosen the restriction by adding CORS headers in `vite.config.js`, either by setting the `cors.origin` property to the Adobe Express URL, or to `*` to allow all origins.
+During local development you can loosen the restriction by adding CORS headers in `vite.config.js`, either by setting the `cors.origin` property to that specific Adobe Express URL, or to `*` to allow all origins.
 
 <CodeBlock slots="heading, code" repeat="1" languages="vite.config.js"/>
 
@@ -476,7 +476,9 @@ type EditImageIntent = "add-effects"       |
                        "no-intent";
 ```
 
-TODO: add image
+In this screenshot, the intent was set to `"remove-background"`, which triggered the Remove Background feature as soon as the Edit Image experience was launched.
+
+![Edit Image Intent](./images/edit-image--remove-background.png)
 
 <InlineAlert variant="warning" slots="text1" />
 
@@ -492,7 +494,7 @@ Now that we have all the pieces in place, let's integrate the Edit Image module 
 
 ### 4.1 Edit the default image
 
-This has already been taken care of in the `main.js` file, where we set the `expressImage` variable to the `<img>` element, and cached it as a blob. Now, on the Edit Button click, we can call the `editImage()` method with a `docConfig` object where the Asset is a Blob, as we've seen in [section 3.5.2](#352-build-a-blob-type-asset).
+This has already been taken care of in the `main.js` file, where we set the `expressImage` variable to the `<img>` element, and cached it as a blob. Now, on the Edit Button click, we can call the `editImage()` method with a `docConfig` object where the Asset is a Blob, as we've seen in [Build a Blob type Asset](#352-build-a-blob-type-asset).
 
 ```javascript
 // main.js
@@ -532,6 +534,8 @@ document.getElementById("editBtn").onclick = async () => {
 ### 4.2 Select and Edit an alternative image
 
 In the [HTML file](#31-build-the-html-user-interface), we have a hidden `<input>` element that allows the user to select an alternative image. We can link it to the Choose Image button, so that when the user clicks the button, the File Picker is triggered.
+
+![Embed SDK Edit Image choose image](./images/edit-image--file-picker.png)
 
 When a new image has been selected, we must do two things:
 
@@ -808,7 +812,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 ## Next steps
 
-Congratulations, you've completed the Edit Image tutorial! Edit Image can be tethered to other modules, such as the [Generate Image v2](../concepts/generate-image-v2.md), to create a more complex experience, feel free to explore that as well
+Congratulations, you've completed the Edit Image tutorial! Edit Image can be tethered from other modules, such as the [Generate Image v2](../concepts/generate-image-v2.md), to create a more complex experience, feel free to explore that as well
 
 ## Need help?
 
