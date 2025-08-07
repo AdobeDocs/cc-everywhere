@@ -10,8 +10,6 @@ default: object;
 
 ## Type declaration
 
-<a id="initialize"></a>
-
 ### initialize()
 
 ```ts
@@ -35,8 +33,6 @@ Please ensure to call this API only once.
 `Promise`<[`CCEverywhere`](../../cc-everywhere/classes/cc-everywhere.md)\>
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
-
-<a id="terminate"></a>
 
 ### terminate()
 

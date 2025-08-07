@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: PromptSafetyResult
+# Interface: PromptSafetyCheckResponse
 
 Represents the safety status of a prompt
 

@@ -16,6 +16,7 @@
 | <a id="cancel"></a> `CANCEL` | `"CANCEL"` |
 | <a id="error"></a> `ERROR` | `"ERROR"` |
 | <a id="did_complete"></a> `DID_COMPLETE` | `"DID_COMPLETE"` |
+| <a id="invoke_close"></a> `INVOKE_CLOSE` | `"INVOKE_CLOSE"` |
 | <a id="login_complete"></a> `LOGIN_COMPLETE` | `"LOGIN_COMPLETE"` |
 | <a id="login_request"></a> `LOGIN_REQUEST` | `"LOGIN_REQUEST"` |
 | <a id="token_request"></a> `TOKEN_REQUEST` | `"TOKEN_REQUEST"` |
@@ -25,3 +26,7 @@
 | <a id="cw_asset_response"></a> `CW_ASSET_RESPONSE` | `"CW_ASSET_RESPONSE"` |
 | <a id="publish_status"></a> `PUBLISH_STATUS` | `"PUBLISH_STATUS"` |
 | <a id="event"></a> `EVENT` | `"EVENT"` |
+| <a id="workflow_context_update"></a> `WORKFLOW_CONTEXT_UPDATE` | `"WORKFLOW_CONTEXT_UPDATE"` |
+| <a id="close_status"></a> `CLOSE_STATUS` | `"CLOSE_STATUS"` |
+| <a id="prompt_safety_check_response"></a> `PROMPT_SAFETY_CHECK_RESPONSE` | `"PROMPT_SAFETY_CHECK_RESPONSE"` |
+| <a id="client_auth_details"></a> `CLIENT_AUTH_DETAILS` | `"CLIENT_AUTH_DETAILS"` |

@@ -8,5 +8,6 @@
 type ExportOptionOrGroup = 
   | ExportOption
   | ExportOptionGroup
-  | ContinueEditingGroup;
+  | ContinueEditingGroup
+  | PublishButtonGroup;
 ```

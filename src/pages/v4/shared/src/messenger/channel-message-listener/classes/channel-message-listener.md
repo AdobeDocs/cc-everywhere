@@ -10,8 +10,6 @@
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -37,8 +35,6 @@ new ChannelMessageListener(
 
 ## Methods
 
-<a id="reset"></a>
-
 ### reset()
 
 ```ts
@@ -50,8 +46,6 @@ reset(): void;
 `void`
 
 ***
-
-<a id="didgetmessage"></a>
 
 ### didGetMessage()
 
@@ -82,8 +76,6 @@ didGetMessage<T>(message, requestId?): void;
 
 ***
 
-<a id="settarget"></a>
-
 ### setTarget()
 
 ```ts
@@ -103,8 +95,6 @@ setTarget(targetChannel, targetChannelInfo): void;
 
 ***
 
-<a id="removetarget"></a>
-
 ### removeTarget()
 
 ```ts
@@ -123,8 +113,6 @@ removeTarget(targetChannel): void;
 
 ***
 
-<a id="hastarget"></a>
-
 ### hasTarget()
 
 ```ts
@@ -142,8 +130,6 @@ hasTarget(targetChannel): boolean;
 `boolean`
 
 ***
-
-<a id="gettarget"></a>
 
 ### getTarget()
 
@@ -166,8 +152,6 @@ getTarget(targetChannel):
 
 ***
 
-<a id="addlistenerfortarget"></a>
-
 ### addListenerForTarget()
 
 ```ts
@@ -186,8 +170,6 @@ addListenerForTarget(targetChannel, callback): void;
 `void`
 
 ***
-
-<a id="sendmessage"></a>
 
 ### sendMessage()
 
@@ -213,8 +195,6 @@ sendMessage<T>(targetChannel, message): boolean;
 `boolean`
 
 ***
-
-<a id="sendmessagecompat"></a>
 
 ### sendMessageCompat()
 
@@ -245,8 +225,6 @@ Sends a message using a message channel that is compatible with older version of
 
 ***
 
-<a id="addlistener"></a>
-
 ### addListener()
 
 ```ts
@@ -270,8 +248,6 @@ addListener(
 
 ***
 
-<a id="removelistener"></a>
-
 ### removeListener()
 
 ```ts
@@ -290,8 +266,6 @@ removeListener(messageType, listener): void;
 `void`
 
 ***
-
-<a id="setrequestid"></a>
 
 ### setRequestId()
 

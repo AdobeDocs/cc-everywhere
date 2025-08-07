@@ -14,8 +14,6 @@
 
 ## Methods
 
-<a id="create"></a>
-
 ### create()
 
 ```ts
@@ -46,8 +44,6 @@ Start the editor workflow with an empty canvas
 [`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md).[`create`](../../editor-workflow-types/interfaces/editor-workflow.md#create)
 
 ***
-
-<a id="createwithasset"></a>
 
 ### createWithAsset()
 
@@ -80,8 +76,6 @@ Start the editor workflow by passing an image asset
 
 ***
 
-<a id="createwithtemplate"></a>
-
 ### createWithTemplate()
 
 ```ts
@@ -112,8 +106,6 @@ Start the editor workflow by passing an Express Template ID
 [`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md).[`createWithTemplate`](../../editor-workflow-types/interfaces/editor-workflow.md#createwithtemplate)
 
 ***
-
-<a id="edit"></a>
 
 ### edit()
 

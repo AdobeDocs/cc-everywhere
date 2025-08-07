@@ -13,7 +13,6 @@
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
 | <a id="callbacks"></a> `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
-| <a id="analyticsdata"></a> `analyticsData?` | [`BaseAnalyticsData`](../../../app-config-types/type-aliases/base-analytics-data.md) | Analytics data that can be provided by the host app | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`analyticsData`](../../../design-config-types/interfaces/base-app-config.md#analyticsdata) |
 | <a id="selectedcategory"></a> `selectedCategory?` | [`EditorPanelView`](../../../app-config-types/enumerations/editor-panel-view.md) | Category to show by default **Default** `EditorPanelView.TEMPLATES` | - |
 | <a id="categorysearchtext"></a> `categorySearchText?` | `string` | Search text to pass in the editor for selected panel. | - |
 | <a id="assetcollection"></a> `assetCollection?` | `string` | Asset collection to filter templates | - |

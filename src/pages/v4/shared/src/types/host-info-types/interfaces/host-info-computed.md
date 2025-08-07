@@ -14,3 +14,4 @@ This interface describes the properties computed from host session.
 | <a id="id"></a> `id` | [`HostId`](../../host-info-types/enumerations/host-id.md) |
 | <a id="type"></a> `type` | [`HostType`](../../host-info-types/enumerations/host-type.md) |
 | <a id="isfirstpartyhost"></a> `isFirstPartyHost` | `boolean` |
+| <a id="deviceinfo"></a> `deviceInfo?` | [`DeviceInfo`](../../host-info-types/interfaces/device-info.md) |

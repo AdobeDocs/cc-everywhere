@@ -15,3 +15,4 @@
 | <a id="resize_image"></a> `RESIZE_IMAGE` | `"resize-image"` |
 | <a id="remove_background"></a> `REMOVE_BACKGROUND` | `"remove-background"` |
 | <a id="generate_qr_code"></a> `GENERATE_QR_CODE` | `"generate-qr-code"` |
+| <a id="card_maker"></a> `CARD_MAKER` | `"card-maker"` |

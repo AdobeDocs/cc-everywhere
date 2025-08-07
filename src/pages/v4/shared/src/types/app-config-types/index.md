@@ -17,11 +17,11 @@
 | [HostAppTrigger](../app-config-types/enumerations/host-app-trigger.md) | - |
 | [WarmupMode](../app-config-types/enumerations/warmup-mode.md) | Enum for defining the different warmup modes for the background warmup process. |
 
-## Type Aliases
+## Interfaces
 
-| Type Alias | Description |
+| Interface | Description |
 | ------ | ------ |
-| [BaseAnalyticsData](../app-config-types/type-aliases/base-analytics-data.md) | - |
+| [BaseAnalyticsData](../app-config-types/interfaces/base-analytics-data.md) | - |
 
 ## Variables
 

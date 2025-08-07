@@ -17,3 +17,4 @@
 | <a id="featureflags"></a> `featureFlags` | [`FeatureFlags`](../../../types/feature-flags-types/type-aliases/feature-flags.md) |
 | <a id="requestid"></a> `requestId?` | `string` |
 | <a id="visitorid"></a> `visitorId?` | `string` |
+| <a id="performancemetrics"></a> `performanceMetrics?` | [`PerformanceMetrics`](../../../types/performance-metrics-types/interfaces/performance-metrics.md) |

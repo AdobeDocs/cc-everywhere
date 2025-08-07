@@ -17,3 +17,4 @@
 | `data.oldIntent` | [`ActionIntent`](../../../types/action-intent-types/type-aliases/action-intent.md) | - |
 | `data.newIntent` | [`ActionIntent`](../../../types/action-intent-types/type-aliases/action-intent.md) | - |
 | `data.targetUrl?` | `string` | - |
+| `data.intentChangeTimestamp?` | `number` | - |

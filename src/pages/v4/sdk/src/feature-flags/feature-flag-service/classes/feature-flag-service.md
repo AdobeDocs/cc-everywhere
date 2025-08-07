@@ -12,8 +12,6 @@ Abstract class for feature flag services
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -26,8 +24,6 @@ new FeatureFlagService(): FeatureFlagService;
 
 ## Methods
 
-<a id="getfeatureflagsparams"></a>
-
 ### getFeatureFlagsParams()
 
 ```ts
@@ -35,7 +31,8 @@ getFeatureFlagsParams(
    intent, 
    isFirstParty, 
    clientId, 
-   analyticsClientId?): URLSearchParams;
+   analyticsClientId?, 
+   appConfig?): URLSearchParams;
 ```
 
 Generates URL-encoded feature flag parameters for a specific client and intent
@@ -48,6 +45,7 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 | `isFirstParty` | `boolean` |
 | `clientId` | `string` |
 | `analyticsClientId?` | `string` |
+| `appConfig?` | `AppConfig` |
 
 #### Returns
 

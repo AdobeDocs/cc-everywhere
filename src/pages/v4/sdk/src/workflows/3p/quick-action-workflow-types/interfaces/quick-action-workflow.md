@@ -6,8 +6,6 @@
 
 ## Methods
 
-<a id="converttojpeg"></a>
-
 ### convertToJPEG()
 
 ```ts
@@ -32,8 +30,6 @@ convertToJPEG(
 `void`
 
 ***
-
-<a id="converttopng"></a>
 
 ### convertToPNG()
 
@@ -60,8 +56,6 @@ convertToPNG(
 
 ***
 
-<a id="converttosvg"></a>
-
 ### convertToSVG()
 
 ```ts
@@ -86,8 +80,6 @@ convertToSVG(
 `void`
 
 ***
-
-<a id="cropimage"></a>
 
 ### cropImage()
 
@@ -114,8 +106,6 @@ cropImage(
 
 ***
 
-<a id="resizeimage"></a>
-
 ### resizeImage()
 
 ```ts
@@ -140,8 +130,6 @@ resizeImage(
 `void`
 
 ***
-
-<a id="removebackground"></a>
 
 ### removeBackground()
 
@@ -168,8 +156,6 @@ removeBackground(
 
 ***
 
-<a id="generateqrcode"></a>
-
 ### generateQRCode()
 
 ```ts
@@ -194,8 +180,6 @@ generateQRCode(
 `void`
 
 ***
-
-<a id="converttogif"></a>
 
 ### convertToGIF()
 
@@ -222,8 +206,6 @@ convertToGIF(
 
 ***
 
-<a id="converttomp4"></a>
-
 ### convertToMP4()
 
 ```ts
@@ -248,8 +230,6 @@ convertToMP4(
 `void`
 
 ***
-
-<a id="cropvideo"></a>
 
 ### cropVideo()
 
@@ -276,8 +256,6 @@ cropVideo(
 
 ***
 
-<a id="mergevideos"></a>
-
 ### mergeVideos()
 
 ```ts
@@ -302,8 +280,6 @@ mergeVideos(
 `void`
 
 ***
-
-<a id="resizevideo"></a>
 
 ### resizeVideo()
 
@@ -330,8 +306,6 @@ resizeVideo(
 
 ***
 
-<a id="trimvideo"></a>
-
 ### trimVideo()
 
 ```ts
@@ -357,8 +331,6 @@ trimVideo(
 
 ***
 
-<a id="animatefromaudio"></a>
-
 ### animateFromAudio()
 
 ```ts
@@ -383,8 +355,6 @@ animateFromAudio(
 `void`
 
 ***
-
-<a id="captionvideo"></a>
 
 ### captionVideo()
 

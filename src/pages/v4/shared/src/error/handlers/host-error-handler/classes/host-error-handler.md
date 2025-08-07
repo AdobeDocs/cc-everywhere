@@ -20,8 +20,6 @@
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -47,8 +45,6 @@ BaseHandler.constructor
 
 ## Methods
 
-<a id="error"></a>
-
 ### error()
 
 ```ts
@@ -71,8 +67,6 @@ error(error): void;
 
 ***
 
-<a id="warn"></a>
-
 ### warn()
 
 ```ts
@@ -88,8 +82,6 @@ warn(): void;
 [`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`warn`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#warn)
 
 ***
-
-<a id="info"></a>
 
 ### info()
 

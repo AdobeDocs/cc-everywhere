@@ -22,5 +22,8 @@
 | <a id="all_content_loaded"></a> `ALL_CONTENT_LOADED` | `"ALL_CONTENT_LOADED"` |
 | <a id="document_loaded_and_writable"></a> `DOCUMENT_LOADED_AND_WRITABLE` | `"DOCUMENT_LOADED_AND_WRITABLE"` |
 | <a id="cw_asset_request"></a> `CW_ASSET_REQUEST` | `"CW_ASSET_REQUEST"` |
+| <a id="prompt_safety_check_request"></a> `PROMPT_SAFETY_CHECK_REQUEST` | `"PROMPT_SAFETY_CHECK_REQUEST"` |
 | <a id="set_tou_state"></a> `SET_TOU_STATE` | `"SET_TOU_STATE"` |
 | <a id="clear_tou_state"></a> `CLEAR_TOU_STATE` | `"CLEAR_TOU_STATE"` |
+| <a id="client_auth_details_request"></a> `CLIENT_AUTH_DETAILS_REQUEST` | `"CLIENT_AUTH_DETAILS_REQUEST"` |
+| <a id="custom_event"></a> `CUSTOM_EVENT` | `"CUSTOM_EVENT"` |

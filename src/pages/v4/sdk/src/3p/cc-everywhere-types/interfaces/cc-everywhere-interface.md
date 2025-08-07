@@ -14,8 +14,6 @@
 
 ## Methods
 
-<a id="close"></a>
-
 ### close()
 
 ```ts

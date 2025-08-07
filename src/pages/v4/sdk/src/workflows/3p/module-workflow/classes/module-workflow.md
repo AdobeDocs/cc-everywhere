@@ -14,8 +14,6 @@
 
 ## Methods
 
-<a id="editimage"></a>
-
 ### editImage()
 
 ```ts
@@ -46,8 +44,6 @@ Perform editing tasks on any image.
 [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`editImage`](../../module-workflow-types/interfaces/module-workflow.md#editimage)
 
 ***
-
-<a id="createimagefromtext"></a>
 
 ### createImageFromText()
 

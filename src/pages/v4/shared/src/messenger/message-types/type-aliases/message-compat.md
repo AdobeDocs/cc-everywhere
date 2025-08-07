@@ -16,8 +16,6 @@ type MessageCompat<T> = object;
 
 ## Properties
 
-<a id="type"></a>
-
 ### type
 
 ```ts
@@ -25,8 +23,6 @@ type: T;
 ```
 
 ***
-
-<a id="data"></a>
 
 ### data?
 

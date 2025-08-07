@@ -12,8 +12,6 @@
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -25,8 +23,6 @@ new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>;
 `ErrorHandlerDelegate`<`T`\>
 
 ## Methods
-
-<a id="addhandler"></a>
 
 ### addHandler()
 
@@ -46,8 +42,6 @@ addHandler(handler): void;
 
 ***
 
-<a id="removehandler"></a>
-
 ### removeHandler()
 
 ```ts
@@ -66,8 +60,6 @@ removeHandler(handler): void;
 
 ***
 
-<a id="removeallhandlers"></a>
-
 ### removeAllHandlers()
 
 ```ts
@@ -79,8 +71,6 @@ removeAllHandlers(): void;
 `void`
 
 ***
-
-<a id="error"></a>
 
 ### error()
 
@@ -100,8 +90,6 @@ error(error): void;
 
 ***
 
-<a id="warn"></a>
-
 ### warn()
 
 ```ts
@@ -119,8 +107,6 @@ warn(warning): void;
 `void`
 
 ***
-
-<a id="info"></a>
 
 ### info()
 
