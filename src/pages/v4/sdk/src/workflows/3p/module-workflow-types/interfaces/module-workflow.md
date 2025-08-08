@@ -6,8 +6,6 @@
 
 ## Methods
 
-<a id="editimage"></a>
-
 ### editImage()
 
 ```ts
@@ -32,8 +30,6 @@ editImage(
 `void`
 
 ***
-
-<a id="createimagefromtext"></a>
 
 ### createImageFromText()
 

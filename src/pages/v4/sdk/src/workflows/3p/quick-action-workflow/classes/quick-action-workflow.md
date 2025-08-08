@@ -14,8 +14,6 @@
 
 ## Methods
 
-<a id="converttojpeg"></a>
-
 ### convertToJPEG()
 
 ```ts
@@ -46,8 +44,6 @@ Lower your file size by changing your PNG images into JPG files.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToJPEG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttojpeg)
 
 ***
-
-<a id="converttopng"></a>
 
 ### convertToPNG()
 
@@ -80,8 +76,6 @@ Save your images as PNG files to improve file quality.
 
 ***
 
-<a id="converttosvg"></a>
-
 ### convertToSVG()
 
 ```ts
@@ -112,8 +106,6 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToSVG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttosvg)
 
 ***
-
-<a id="cropimage"></a>
 
 ### cropImage()
 
@@ -146,8 +138,6 @@ Transform your image into the perfect shape or size in seconds.
 
 ***
 
-<a id="resizeimage"></a>
-
 ### resizeImage()
 
 ```ts
@@ -178,8 +168,6 @@ Change the dimensions of any photo.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`resizeImage`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#resizeimage)
 
 ***
-
-<a id="removebackground"></a>
 
 ### removeBackground()
 
@@ -212,8 +200,6 @@ Easily remove the background of your photos.
 
 ***
 
-<a id="generateqrcode"></a>
-
 ### generateQRCode()
 
 ```ts
@@ -244,8 +230,6 @@ Generate a QR Code for a URL.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`generateQRCode`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#generateqrcode)
 
 ***
-
-<a id="converttogif"></a>
 
 ### convertToGIF()
 
@@ -278,8 +262,6 @@ Convert a video asset to GIF format.
 
 ***
 
-<a id="converttomp4"></a>
-
 ### convertToMP4()
 
 ```ts
@@ -310,8 +292,6 @@ Convert a video asset to MP4 format.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToMP4`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttomp4)
 
 ***
-
-<a id="cropvideo"></a>
 
 ### cropVideo()
 
@@ -344,8 +324,6 @@ Transform your video into the perfect shape or size in seconds.
 
 ***
 
-<a id="mergevideos"></a>
-
 ### mergeVideos()
 
 ```ts
@@ -376,8 +354,6 @@ Collate multiple video/photo into a single video.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`mergeVideos`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#mergevideos)
 
 ***
-
-<a id="resizevideo"></a>
 
 ### resizeVideo()
 
@@ -410,8 +386,6 @@ Change the dimensions of any video.
 
 ***
 
-<a id="trimvideo"></a>
-
 ### trimVideo()
 
 ```ts
@@ -443,8 +417,6 @@ Trim a video to a desired length.
 
 ***
 
-<a id="animatefromaudio"></a>
-
 ### animateFromAudio()
 
 ```ts
@@ -475,8 +447,6 @@ Create an animated video from an audio.
 [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`animateFromAudio`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#animatefromaudio)
 
 ***
-
-<a id="captionvideo"></a>
 
 ### captionVideo()
 

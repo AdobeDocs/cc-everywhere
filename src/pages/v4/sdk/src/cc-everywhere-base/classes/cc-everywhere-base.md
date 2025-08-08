@@ -16,8 +16,6 @@ Class to create CCEverywhere object.
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -49,8 +47,6 @@ Constructor to initialize CCEverywhere object.
 
 ## Accessors
 
-<a id="activeinstance"></a>
-
 ### activeInstance
 
 #### Set Signature
@@ -71,18 +67,25 @@ set static activeInstance(instance): void;
 
 ## Methods
 
-<a id="close"></a>
-
 ### close()
 
 ```ts
-close(): boolean;
+close(showConfirmationDialog?): 
+  | boolean
+| Promise<CloseStatusMessage>;
 ```
 
 Closes any active design in progress.
 
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `showConfirmationDialog?` | `boolean` | boolean value indicating whether to show confirmation dialog or not. |
+
 #### Returns
 
-`boolean`
+  \| `boolean`
+  \| `Promise`<[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
 
 boolean value indicating whether the close operation was successful or not.

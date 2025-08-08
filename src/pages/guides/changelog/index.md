@@ -20,7 +20,47 @@ contributors:
 
 ### SDK v1 and v2 End of Life
 
-Embed SDK v1 and v2 will reach end of life by the **May 12th, 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
+Embed SDK v1 and v2 have reached End of Life on **May 12th, 2025** and they're no longer supported. Please upgrade to the latest SDK version to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
+
+## [4.32.26] 2025-08-07
+
+### Added
+
+#### Enhanced Panel Settings for Generate Image
+
+- **[`CCEverywhere.TextToImageAppConfig.panelSettings`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#panelsettings)**: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:
+  - [`PanelSettings`](../../v4/shared/src/types/panel-settings-types/interfaces/panel-settings.md): Container interface for all panel settings.
+  - [`StyleSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/style-setting.md): Configuration for artistic styles with support for multiple style categories.
+  - [`ContentTypeSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/content-type-setting.md): Setting for content type selection (photo, graphic, art).
+- **[`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#hidefeedbackmenu)**: Added option to hide feedback menu in header bar.
+- **[`CCEverywhere.TextToImageAppConfig.isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#ispromptsafe)**: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic.
+- **[`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#promptinputplaceholder)**: Added placeholder text configuration for prompt input field (Generate Image v2 only).
+
+Both the [Generate Image tutorial](../tutorials/generate-image.md) and the [Concept Guide](../concepts/generate-image-v2.md) have been updated to reflect the new updates.
+
+#### New Style Enumerations for Advanced Image Customization
+
+Added comprehensive style enumerations to provide granular control over image generation aesthetics:
+
+- [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md): Primary content types (photo, graphic, art)
+- [`ImageThemeStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-theme-style.md): 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more
+- [`ImageTechniqueStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-technique-style.md): 12 artistic techniques from painting and sketching to watercolor and linocut
+- [`ImageLightingStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-lighting-style.md): five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting
+- [`ImageCompositionStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-composition-style.md): seven composition styles for camera angles and framing
+- [`ImageEffectStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-effect-style.md): nine visual effects including bokeh, fisheye, neon, and bioluminescent
+- [`ImageColorStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-color-style.md): six color palette options from black & white to vibrant and pastel colors
+- [`ImageMovementStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-movement-style.md): 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque
+- [`ImageMaterialStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-material-style.md): nine material simulations from claymation to marble sculpture
+- [`ImageConceptStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md): six conceptual moods for emotional tone
+- [`ImageStyleId`](../../v4/shared/src/types/panel-settings-types/type-aliases/image-style-id.md): Union type combining all available style options
+
+#### Enhanced User Experience Features
+
+- **[`CCEverywhere.EditImageAppConfig.inlineTOUConsent`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#inlinetouconsent)**: Added inline Terms of Use consent configuration.
+
+#### Export Configuration Enhancements
+
+- **[`PublishButtonGroup`](../../v4/shared/src/types/export-config-types/interfaces/publish-button-group.md)**: New publish button group interface for better export organization.
 
 ## 2025-07-11
 

@@ -16,8 +16,6 @@ type ErrorCodeMessage<T> = object;
 
 ## Properties
 
-<a id="code"></a>
-
 ### code
 
 ```ts
@@ -25,8 +23,6 @@ code: T;
 ```
 
 ***
-
-<a id="message"></a>
 
 ### message
 

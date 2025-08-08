@@ -24,8 +24,9 @@
 | [CommunityWallConfig](../app-config-types/interfaces/community-wall-config.md) | - |
 | [EditDropdownOptionConfig](../app-config-types/interfaces/edit-dropdown-option-config.md) | - |
 | [PublishConfig](../app-config-types/interfaces/publish-config.md) | - |
-| [PromptSafetyResult](../app-config-types/interfaces/prompt-safety-result.md) | Represents the safety status of a prompt |
+| [PromptSafetyCheckResponse](../app-config-types/interfaces/prompt-safety-check-response.md) | Represents the safety status of a prompt |
 | [TextToImageAppConfig](../app-config-types/interfaces/text-to-image-app-config.md) | - |
-| [TemplateBrowserConfig](../app-config-types/interfaces/template-browser-config.md) | - |
+| [StartFromContentAppConfig](../app-config-types/interfaces/start-from-content-app-config.md) | StartFromContentAppConfig is the app config for the Start From Content module. |
+| [ContentBrowseConfig](../app-config-types/interfaces/content-browse-config.md) | - |
 | [EditImageAppConfig](../app-config-types/interfaces/edit-image-app-config.md) | - |
 | [WarmupAppConfig](../app-config-types/interfaces/warmup-app-config.md) | - |

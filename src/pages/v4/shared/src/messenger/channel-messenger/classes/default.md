@@ -6,8 +6,6 @@
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -35,8 +33,6 @@ new default(
 
 ## Methods
 
-<a id="addtarget"></a>
-
 ### addTarget()
 
 ```ts
@@ -56,8 +52,6 @@ addTarget(targetChannel, targetChannelInfo): void;
 
 ***
 
-<a id="removetarget"></a>
-
 ### removeTarget()
 
 ```ts
@@ -76,8 +70,6 @@ removeTarget(targetChannel): void;
 
 ***
 
-<a id="hastarget"></a>
-
 ### hasTarget()
 
 ```ts
@@ -95,8 +87,6 @@ hasTarget(targetChannel): boolean;
 `boolean`
 
 ***
-
-<a id="gettarget"></a>
 
 ### getTarget()
 
@@ -118,8 +108,6 @@ getTarget(targetChannel):
   \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
 
 ***
-
-<a id="sendmessage"></a>
 
 ### sendMessage()
 
@@ -149,8 +137,6 @@ sendMessage<T>(
 `boolean`
 
 ***
-
-<a id="removelistener"></a>
 
 ### removeListener()
 

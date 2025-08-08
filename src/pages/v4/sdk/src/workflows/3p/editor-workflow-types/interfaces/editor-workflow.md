@@ -6,8 +6,6 @@
 
 ## Methods
 
-<a id="create"></a>
-
 ### create()
 
 ```ts
@@ -32,8 +30,6 @@ create(
 `void`
 
 ***
-
-<a id="createwithasset"></a>
 
 ### createWithAsset()
 
@@ -60,8 +56,6 @@ createWithAsset(
 
 ***
 
-<a id="createwithtemplate"></a>
-
 ### createWithTemplate()
 
 ```ts
@@ -86,8 +80,6 @@ createWithTemplate(
 `void`
 
 ***
-
-<a id="edit"></a>
 
 ### edit()
 

@@ -10,3 +10,4 @@
 | ------ | ------ |
 | <a id="web"></a> `WEB` | `"web"` |
 | <a id="desktop"></a> `DESKTOP` | `"desktop"` |
+| <a id="mobile"></a> `MOBILE` | `"mobile"` |

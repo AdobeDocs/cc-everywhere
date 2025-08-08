@@ -10,8 +10,6 @@ type Config = object;
 
 ## Properties
 
-<a id="environment"></a>
-
 ### ENVIRONMENT
 
 ```ts
@@ -19,8 +17,6 @@ ENVIRONMENT: Environment;
 ```
 
 ***
-
-<a id="clients"></a>
 
 ### CLIENTS
 
