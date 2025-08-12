@@ -62,6 +62,12 @@ Added comprehensive style enumerations to provide granular control over image ge
 
 - **[`PublishButtonGroup`](../../v4/shared/src/types/export-config-types/interfaces/publish-button-group.md)**: New publish button group interface for better export organization.
 
+## 2025-08-06
+
+### Added
+
+- Added a new [Edit Image tutorial](../tutorials/edit-image.md) that covers the implementation details of the new Edit Image v2 features.
+
 ## 2025-07-11
 
 ### Documentation
