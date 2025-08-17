@@ -153,8 +153,27 @@ module.exports = {
         ],
       },
       {
-        title: "Submission and review",
+        title: "Integration submission and approval",
         path: "/guides/review/",
+        pages:
+        [
+          {
+            title: "Submission guidelines",
+            path: "/guides/review/submission_guidelines.md"
+          },
+          {
+            title: "Review test cases",
+            path: "/guides/review/test_cases.md"
+          },
+          {
+            title: "Our review process",
+            path: "/guides/review/review_process.md"
+          },
+          {
+            title:" Handle rejections",
+            path: "/guides/review/rejections.md"
+          }
+        ]
       },
       {
         title: "Changelog",
