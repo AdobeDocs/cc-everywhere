@@ -67,6 +67,30 @@ The only required property is `docConfig`.
 | exportConfig    | [ExportOptions](../../v4/shared/src/types/export-config-types/type-aliases/export-options.md)[]            | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
 | containerConfig | [ContainerConfig](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md)       | Properties to configure the SDK container                                                                          |
 
+## startFromContent()
+
+The `startFromContent()` API launches a content discovery and selection interface that enables users to browse through curated collections of creative assets—templates, photos, and other design resources—to kickstart their creative projects. This module provides a guided, inspiration-driven approach to content creation.
+
+```js
+// Initialize the SDK first
+const { module } = await window.CCEverywhere.initialize({
+  clientId: <CLIENT_ID>,
+  appName: <APP_NAME>,
+});
+
+module.startFromContent();
+```
+
+### StartFromContentParams
+
+All the properties in this object are optional.
+
+| Property        | Type                                                                                                     | Description                                                                                                        |
+| :-------------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| appConfig       | [StartFromContentAppConfig](../../v4/shared/src/types/module/app-config-types/interfaces/start-from-content-app-config.md) | Configure the content discovery interface and callback functions                                                    |
+| exportConfig    | [ExportOptions](../../v4/shared/src/types/export-config-types/type-aliases/export-options.md)[]            | Configure export options for selected content                                                                      |
+| containerConfig | [ContainerConfig](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md)       | Properties to configure the SDK container                                                                          |
+
 ## Example: Generate from text
 
 The following code will invoke the generate module. In this example, we pass a string to be used as a prompt. If that field is left empty, the user will be prompted to input a prompt once the modal is open.
@@ -198,4 +222,82 @@ const exportOptions = [
 ];
 
 module.editImage(docConfig, exportOptions);
+```
+
+## Example: Start from Content
+
+The following code will invoke the Start from Content module, allowing users to browse and select from curated collections of templates, photos, and other design resources.
+
+```js
+const { module } = await window.CCEverywhere.initialize({
+  clientId: <CLIENT_ID>,
+  appName: <APP_NAME>,
+});
+
+const appConfig = {
+  callbacks: {
+    onCancel: () => {
+      console.log('User cancelled content selection');
+    },
+    onError: (err) => {
+      console.error('Error in content discovery:', err);
+    },
+    onLoadStart: () => {
+      console.log('Content discovery interface loading...');
+    },
+    onLoad: () => {
+      console.log('Content discovery interface loaded');
+    },
+    onContentSelect: (selectedContent) => {
+      console.log('User selected content:', selectedContent);
+      // Handle the selected content - could open in editor, download, etc.
+    },
+    onPublishStart: () => {
+      console.log('Publishing selected content...');
+    },
+    onPublish: (publishParams) => {
+      console.log('Content published:', publishParams);
+    }
+  },
+  featureConfig: {
+    "community-wall": true,
+    "search": true,
+    "collections": true,
+    "categories": true
+  },
+  uiConfig: {
+    showSearchBar: true,
+    showFilters: true,
+    showCategories: true,
+    showCollections: true
+  }
+};
+
+const exportOptions = [
+  {
+    action: {
+      context: 'new',
+      target: 'express'
+    },
+    id: 'create-design',
+    label: 'Create a design',
+    style: {
+      uiType: 'button'
+    }
+  },
+  {
+    action: {
+      target: 'download',
+      outputType: 'URL',
+      closeTargetOnExport: true
+    },
+    id: 'download-content',
+    label: 'Download',
+    style: {
+      uiType: 'button'
+    }
+  }
+];
+
+module.startFromContent(appConfig, exportOptions);
 ```
