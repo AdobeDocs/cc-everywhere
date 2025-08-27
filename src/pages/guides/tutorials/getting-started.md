@@ -30,7 +30,7 @@ Before you start, make sure you have the following:
 
 ## Getting the credentials
 
-The first crucial step is to acquire an **API Key** from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](../quickstart/index.md) guide, and we'll summarize it here.
+The first crucial step is to acquire an **API Key** from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide, and we'll summarize it here.
 
 Visit the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
 

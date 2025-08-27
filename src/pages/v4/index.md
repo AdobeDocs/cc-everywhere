@@ -39,7 +39,7 @@ Embed SDK v1 and v2 have reached End of Life on **May 12th, 2025** and they're n
 
 Migrating from V3
 
-We've created a [Migration Guide](../guides/concepts/migration_v3_v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 will be deprecated in 2024.
+We've created a [Migration Guide](../guides/concepts/migration_v3_v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 is officially deprecated.
 
 ## API Reference
 

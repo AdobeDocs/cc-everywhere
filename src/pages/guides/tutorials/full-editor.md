@@ -46,7 +46,7 @@ VITE_API_KEY="your-api-key-here!"
 <!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md). Make sure your API Key is set to allow the `localhost:5555` domain and port.
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
 
 Now, you can install the dependencies and run the sample with the following two simple commands:
 
@@ -123,6 +123,7 @@ When the Embed SDK is imported, a `CCEverywhere` object is globally available an
 // 👀 Required parameters for initializing the Embed SDK
 const hostInfo = {
   clientId: import.meta.env.VITE_API_KEY,
+  // The appName must match the Project Name in the Developer Console
   appName: "Embed SDK Sample",
 };
 
@@ -146,7 +147,7 @@ The [`hostInfo`](../../v4/shared/src/types/host-info-types/interfaces/host-info-
 <!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
-The `appName` must match the name of your application, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
+The `appName` must match the Project Name as set in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
 
 All [`configParams`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) are optional, instead: here, `loginMode` tells Adobe Express to delay the login until artworks are exported.
 
