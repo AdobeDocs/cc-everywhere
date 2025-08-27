@@ -34,7 +34,6 @@
 | <a id="target_load_failed"></a> `TARGET_LOAD_FAILED` | `"TARGET_LOAD_FAILED"` |
 | <a id="target_load_cancelled"></a> `TARGET_LOAD_CANCELLED` | `"TARGET_LOAD_CANCELLED"` |
 | <a id="auth_provider_error"></a> `AUTH_PROVIDER_ERROR` | `"AUTH_PROVIDER_ERROR"` |
-| <a id="client_auth_provider_error"></a> `CLIENT_AUTH_PROVIDER_ERROR` | `"CLIENT_AUTH_PROVIDER_ERROR"` |
 | <a id="ims_jump_failed"></a> `IMS_JUMP_FAILED` | `"IMS_JUMP_FAILED"` |
 | <a id="analytics_error"></a> `ANALYTICS_ERROR` | `"ANALYTICS_ERROR"` |
 | <a id="performance_logging_error"></a> `PERFORMANCE_LOGGING_ERROR` | `"PERFORMANCE_LOGGING_ERROR"` |

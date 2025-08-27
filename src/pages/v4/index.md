@@ -33,7 +33,7 @@ Learn more about in the [quick start guide](../guides/quickstart/).
 
 ### SDK v1 and v2 End of Life
 
-Embed SDK v1 and v2 have reached end of life in **May 2025** and are no longer supported. Please upgrade to the latest SDK to avoid disruption.
+Embed SDK v1 and v2 have reached End of Life on **May 12th, 2025** and they're no longer supported. Please upgrade to the latest SDK version to avoid disruption.
 
 <InlineAlert variant="info" slots="header, text1" />
 

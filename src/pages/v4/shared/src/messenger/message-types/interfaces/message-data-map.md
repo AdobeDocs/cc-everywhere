@@ -17,3 +17,7 @@
 | <a id="error"></a> `ERROR` | [`ErrorData`](../../../error/error-data/interfaces/error-data.md)<`string`\> |
 | <a id="publish_status"></a> `PUBLISH_STATUS` | [`PublishStatusMessage`](../../message-types/interfaces/publish-status-message.md) |
 | <a id="cw_asset_response"></a> `CW_ASSET_RESPONSE` | [`CWAssetResponse`](../../../types/community-wall-types/interfaces/cw-asset-response.md) |
+| <a id="workflow_context_update"></a> `WORKFLOW_CONTEXT_UPDATE` | [`WorkflowMessage`](../../message-types/interfaces/workflow-message.md) |
+| <a id="close_status"></a> `CLOSE_STATUS` | [`CloseStatusMessage`](../../message-types/interfaces/close-status-message.md) |
+| <a id="prompt_safety_check_response"></a> `PROMPT_SAFETY_CHECK_RESPONSE` | [`PromptSafetyCheckResponse`](../../../types/module/app-config-types/interfaces/prompt-safety-check-response.md) |
+| <a id="client_auth_details"></a> `CLIENT_AUTH_DETAILS` | [`ClientAuthDetailsMessage`](../../message-types/interfaces/client-auth-details-message.md) |

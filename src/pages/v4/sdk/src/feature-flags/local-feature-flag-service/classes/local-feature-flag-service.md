@@ -12,8 +12,6 @@ Service class for managing feature flags
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -36,8 +34,6 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService;
 
 ## Methods
 
-<a id="getfeatureflagsparams"></a>
-
 ### getFeatureFlagsParams()
 
 ```ts
@@ -45,7 +41,8 @@ getFeatureFlagsParams(
    intent, 
    isFirstParty, 
    clientId, 
-   analyticsClientId?): URLSearchParams;
+   analyticsClientId?, 
+   appConfig?): URLSearchParams;
 ```
 
 Generates URL-encoded feature flag parameters for a specific client and intent
@@ -58,6 +55,7 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 | `isFirstParty` | `boolean` |
 | `clientId` | `string` |
 | `analyticsClientId?` | `string` |
+| `appConfig?` | `AppConfig` |
 
 #### Returns
 

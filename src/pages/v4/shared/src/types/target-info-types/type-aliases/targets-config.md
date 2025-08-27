@@ -10,8 +10,6 @@ type TargetsConfig = object;
 
 ## Properties
 
-<a id="base"></a>
-
 ### base
 
 ```ts

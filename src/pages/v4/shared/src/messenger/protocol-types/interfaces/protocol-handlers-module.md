@@ -6,8 +6,6 @@
 
 ## Methods
 
-<a id="handlemessage"></a>
-
 ### handleMessage()
 
 ```ts

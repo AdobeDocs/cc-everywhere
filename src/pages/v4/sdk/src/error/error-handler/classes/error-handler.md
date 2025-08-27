@@ -6,8 +6,6 @@
 
 ## Methods
 
-<a id="instance"></a>
-
 ### instance()
 
 ```ts
@@ -19,8 +17,6 @@ static instance(): ErrorHandler;
 `ErrorHandler`
 
 ***
-
-<a id="addhandler"></a>
 
 ### addHandler()
 
@@ -40,8 +36,6 @@ static addHandler(handler): void;
 
 ***
 
-<a id="removehandler"></a>
-
 ### removeHandler()
 
 ```ts
@@ -59,8 +53,6 @@ static removeHandler(handler): void;
 `void`
 
 ***
-
-<a id="error"></a>
 
 ### error()
 
@@ -80,8 +72,6 @@ static error(error): void;
 
 ***
 
-<a id="warn"></a>
-
 ### warn()
 
 ```ts
@@ -99,8 +89,6 @@ static warn(warn): void;
 `void`
 
 ***
-
-<a id="info"></a>
 
 ### info()
 

@@ -16,8 +16,6 @@ Should be used instead of default Blob type.
 
 ## Methods
 
-<a id="slice"></a>
-
 ### slice()
 
 ```ts
@@ -41,8 +39,6 @@ slice(
 
 ***
 
-<a id="stream"></a>
-
 ### stream()
 
 ```ts
@@ -55,8 +51,6 @@ stream(): ReadableStream;
 
 ***
 
-<a id="text"></a>
-
 ### text()
 
 ```ts
@@ -68,8 +62,6 @@ text(): Promise<string>;
 `Promise`<`string`\>
 
 ***
-
-<a id="arraybuffer"></a>
 
 ### arrayBuffer()
 

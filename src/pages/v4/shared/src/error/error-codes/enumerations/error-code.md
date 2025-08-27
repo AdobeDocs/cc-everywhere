@@ -34,3 +34,6 @@
 | <a id="error_in_dispatching_message_to_platform"></a> `ERROR_IN_DISPATCHING_MESSAGE_TO_PLATFORM` | `"ERROR_IN_DISPATCHING_MESSAGE_TO_PLATFORM"` |
 | <a id="data_request_error"></a> `DATA_REQUEST_ERROR` | `"DATA_REQUEST_ERROR"` |
 | <a id="deferred_promise_reset"></a> `DEFERRED_PROMISE_RESET` | `"DEFERRED_PROMISE_RESET"` |
+| <a id="prompt_safety_check_timed_out"></a> `PROMPT_SAFETY_CHECK_TIMED_OUT` | `"PROMPT_SAFETY_CHECK_TIMED_OUT"` |
+| <a id="client_auth_provider_error"></a> `CLIENT_AUTH_PROVIDER_ERROR` | `"CLIENT_AUTH_PROVIDER_ERROR"` |
+| <a id="workflow_context_update_error"></a> `WORKFLOW_CONTEXT_UPDATE_ERROR` | `"WORKFLOW_CONTEXT_UPDATE_ERROR"` |

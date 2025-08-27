@@ -16,8 +16,6 @@
 
 ## Constructors
 
-<a id="constructor"></a>
-
 ### Constructor
 
 ```ts
@@ -51,8 +49,6 @@ Error.constructor
 
 ## Accessors
 
-<a id="code"></a>
-
 ### code
 
 #### Get Signature
@@ -68,8 +64,6 @@ getter code
 `T`
 
 ## Methods
-
-<a id="create"></a>
 
 ### create()
 
@@ -100,8 +94,6 @@ customData?): CCEverywhereError<T>;
 
 ***
 
-<a id="createerrorfromdata"></a>
-
 ### createErrorFromData()
 
 ```ts
@@ -126,8 +118,6 @@ static createErrorFromData<T>(data): CCEverywhereError<T>;
 
 ***
 
-<a id="todata"></a>
-
 ### toData()
 
 ```ts
@@ -141,8 +131,6 @@ Get a plain-object representation of the error..
 [`ErrorData`](../../error-data/interfaces/error-data.md)<`T`\>
 
 ***
-
-<a id="tostring"></a>
 
 ### toString()
 
