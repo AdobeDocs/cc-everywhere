@@ -33,13 +33,13 @@ Learn more about in the [quick start guide](../guides/quickstart/).
 
 ### SDK v1 and v2 End of Life
 
-Embed SDK v1 and v2 will reach end of life by the **end of April 2025**. After this date, they will no longer be supported. Please upgrade to the latest SDK version to avoid disruption.
+Embed SDK v1 and v2 have reached end of life in **May 2025** and are no longer supported. Please upgrade to the latest SDK to avoid disruption.
 
 <InlineAlert variant="info" slots="header, text1" />
 
 Migrating from V3
 
-We've created a [Migration Guide](../guides/concepts/migration_v3_v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 will be deprecated in 2024.
+We've created a [Migration Guide](../guides/concepts/migration_v3_v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 is officially deprecated.
 
 ## API Reference
 
