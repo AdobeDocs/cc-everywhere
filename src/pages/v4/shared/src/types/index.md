@@ -972,27 +972,9 @@ Re-exports [ImageTechniqueStyle](panel-settings-types/enumerations/image-techniq
 
 ***
 
-### ImageLightingStyle
-
-Re-exports [ImageLightingStyle](panel-settings-types/enumerations/image-lighting-style.md)
-
-***
-
-### ImageCompositionStyle
-
-Re-exports [ImageCompositionStyle](panel-settings-types/enumerations/image-composition-style.md)
-
-***
-
 ### ImageEffectStyle
 
 Re-exports [ImageEffectStyle](panel-settings-types/enumerations/image-effect-style.md)
-
-***
-
-### ImageColorStyle
-
-Re-exports [ImageColorStyle](panel-settings-types/enumerations/image-color-style.md)
 
 ***
 
@@ -1052,7 +1034,7 @@ Re-exports [TextToImagePublishParams](publish-params-types/interfaces/text-to-im
 
 ### EditorPublishParams
 
-Re-exports [EditorPublishParams](publish-params-types/interfaces/editor-publish-params.md)
+Re-exports [EditorPublishParams](publish-params-types/type-aliases/editor-publish-params.md)
 
 ***
 

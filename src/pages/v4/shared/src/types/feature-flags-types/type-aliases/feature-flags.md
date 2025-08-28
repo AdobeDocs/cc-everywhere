@@ -5,5 +5,5 @@
 # Type Alias: FeatureFlags
 
 ```ts
-type FeatureFlags = Record<string, String | Number | Boolean>;
+type FeatureFlags = Record<string, string | number | boolean>;
 ```

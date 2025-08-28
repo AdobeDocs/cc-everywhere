@@ -10,7 +10,6 @@ Asset related information received with onPublish callback.
 
 - [`QuickActionPublishParams`](../../publish-params-types/interfaces/quick-action-publish-params.md)
 - [`TextToImagePublishParams`](../../publish-params-types/interfaces/text-to-image-publish-params.md)
-- [`EditorPublishParams`](../../publish-params-types/interfaces/editor-publish-params.md)
 
 ## Properties
 

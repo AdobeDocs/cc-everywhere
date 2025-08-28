@@ -8,6 +8,7 @@
 
 - [`EditImageDesignConfig`](../../module/design-config-types/interfaces/edit-image-design-config.md)
 - [`TextToImageDesignConfig`](../../module/design-config-types/interfaces/text-to-image-design-config.md)
+- [`StartFromContentDesignConfig`](../../module/design-config-types/interfaces/start-from-content-design-config.md)
 - [`WarmupDesignConfig`](../../module/design-config-types/interfaces/warmup-design-config.md)
 - [`BaseDesignConfig`](../../quick-action/design-config-types/interfaces/base-design-config.md)
 

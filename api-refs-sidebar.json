@@ -1706,14 +1706,6 @@
                 "title": "enumerations",
                 "pages": [
                   {
-                    "title": "ImageColorStyle",
-                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-color-style.md"
-                  },
-                  {
-                    "title": "ImageCompositionStyle",
-                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-composition-style.md"
-                  },
-                  {
                     "title": "ImageConceptStyle",
                     "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md"
                   },
@@ -1724,10 +1716,6 @@
                   {
                     "title": "ImageEffectStyle",
                     "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style.md"
-                  },
-                  {
-                    "title": "ImageLightingStyle",
-                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-lighting-style.md"
                   },
                   {
                     "title": "ImageMaterialStyle",
@@ -1746,7 +1734,7 @@
                     "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style.md"
                   }
                 ],
-                "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-color-style.md"
+                "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md"
               },
               {
                 "title": "interfaces",
@@ -1798,10 +1786,6 @@
                     "path": "/v4/shared/src/types/publish-params-types/interfaces/asset-target-info.md"
                   },
                   {
-                    "title": "EditorPublishParams",
-                    "path": "/v4/shared/src/types/publish-params-types/interfaces/editor-publish-params.md"
-                  },
-                  {
                     "title": "PublishParams",
                     "path": "/v4/shared/src/types/publish-params-types/interfaces/publish-params.md"
                   },
@@ -1815,6 +1799,10 @@
                   }
                 ],
                 "path": "/v4/shared/src/types/publish-params-types/interfaces/asset-target-info.md"
+              },
+              {
+                "title": "EditorPublishParams",
+                "path": "/v4/shared/src/types/publish-params-types/type-aliases/editor-publish-params.md"
               }
             ],
             "path": "/v4/shared/src/types/publish-params-types/index.md"
@@ -2035,6 +2023,10 @@
                       {
                         "title": "EditImageDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
+                      },
+                      {
+                        "title": "StartFromContentDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/start-from-content-design-config.md"
                       },
                       {
                         "title": "TextToImageDesignConfig",

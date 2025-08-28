@@ -55,7 +55,7 @@ Sends a message to the SDK Agent to update the state of current running  workflo
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | `any` | incoming data coming from client to update the workflow. Note - Type of data is limited to what postMessage supports. |
+| `data` | `unknown` | incoming data coming from client to update the workflow. Note - Type of data is limited to what postMessage supports. |
 
 #### Returns
 
@@ -84,9 +84,9 @@ The agent will handle displaying the toast.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `message` | `string` | The message to display in the toast |
-| `options?` | \{ `duration?`: `number`; `type?`: `"info"` \| `"error"` \| `"success"` \| `"warning"`; \} | Optional toast configuration |
+| `options?` | \{ `duration?`: `number`; `type?`: `"error"` \| `"success"` \| `"info"` \| `"warning"`; \} | Optional toast configuration |
 | `options.duration?` | `number` | - |
-| `options.type?` | `"info"` \| `"error"` \| `"success"` \| `"warning"` | - |
+| `options.type?` | `"error"` \| `"success"` \| `"info"` \| `"warning"` | - |
 
 #### Returns
 

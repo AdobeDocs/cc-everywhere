@@ -14,3 +14,4 @@
 | <a id="media"></a> `MEDIA` | `"media"` |
 | <a id="text"></a> `TEXT` | `"text"` |
 | <a id="elements"></a> `ELEMENTS` | `"elements"` |
+| <a id="hidden"></a> `HIDDEN` | `"hidden"` |
