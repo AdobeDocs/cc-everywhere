@@ -8,10 +8,7 @@
 type ImageStyleId = 
   | ImageThemeStyle
   | ImageTechniqueStyle
-  | ImageLightingStyle
-  | ImageCompositionStyle
   | ImageEffectStyle
-  | ImageColorStyle
   | ImageMovementStyle
   | ImageMaterialStyle
   | ImageConceptStyle;

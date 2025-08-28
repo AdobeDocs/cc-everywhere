@@ -55,7 +55,7 @@ Sends a message to the SDK Agent to update the state of current running  workflo
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `data` | `any` | incoming data coming from client to update the workflow. Note - Type of data is limited to what postMessage supports. |
+| `data` | `unknown` | incoming data coming from client to update the workflow. Note - Type of data is limited to what postMessage supports. |
 
 #### Returns
 

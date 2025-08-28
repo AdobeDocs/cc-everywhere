@@ -114,6 +114,12 @@ Re-exports [TextToImageDesignConfig](design-config-types/interfaces/text-to-imag
 
 ***
 
+### StartFromContentDesignConfig
+
+Re-exports [StartFromContentDesignConfig](design-config-types/interfaces/start-from-content-design-config.md)
+
+***
+
 ### WarmupDesignConfig
 
 Re-exports [WarmupDesignConfig](design-config-types/interfaces/warmup-design-config.md)

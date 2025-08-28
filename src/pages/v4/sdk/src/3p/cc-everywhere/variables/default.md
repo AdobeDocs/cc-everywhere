@@ -23,7 +23,7 @@ Please ensure to call this API only once.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |  |
+| `hostInfo` | [`HostInfo`](../../../../../shared/src/types/host-info-types/type-aliases/host-info.md) |  |
 | `configParams?` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |  |
 | `authOption?` | [`AuthOption`](../../../../../shared/src/types/authentication-types/type-aliases/auth-option.md) | authentication configuration |
 | `clientAuthProvider?` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | client authentication provider for fetching client authentication details. |

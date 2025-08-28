@@ -49,6 +49,20 @@ Constructor to initialize CCEverywhere object.
 
 ### activeInstance
 
+#### Get Signature
+
+```ts
+get static activeInstance(): undefined | CCEverywhereBase;
+```
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Returns
+
+`undefined` \| `CCEverywhereBase`
+
 #### Set Signature
 
 ```ts
@@ -65,7 +79,83 @@ set static activeInstance(instance): void;
 
 `void`
 
+***
+
+### state
+
+#### Get Signature
+
+```ts
+get static state(): State;
+```
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Returns
+
+[`State`](../../types/cc-everywhere-types/enumerations/state.md)
+
+#### Set Signature
+
+```ts
+set static state(value): void;
+```
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `value` | [`State`](../../types/cc-everywhere-types/enumerations/state.md) |
+
+##### Returns
+
+`void`
+
+***
+
+### version
+
+#### Get Signature
+
+```ts
+get version(): string;
+```
+
+Get version of SDK
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Returns
+
+`string`
+
 ## Methods
+
+### terminate()
+
+```ts
+terminate(): void;
+```
+
+Method to un-initialize cceverywhere object
+
+#### Returns
+
+`void`
+
+#### Hidden
+
+-- hide from typedocs
+
+***
 
 ### close()
 
@@ -89,3 +179,31 @@ Closes any active design in progress.
   \| `Promise`<[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
 
 boolean value indicating whether the close operation was successful or not.
+
+***
+
+### onRequestIdUpdate()
+
+```ts
+onRequestIdUpdate(requestId): void;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `requestId` | `string` |
+
+#### Returns
+
+`void`
+
+#### Hidden
+
+-- hide from typedocs
+
+#### Implementation of
+
+```ts
+RequestIdUpdateListener.onRequestIdUpdate
+```

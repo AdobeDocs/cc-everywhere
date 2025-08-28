@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
----
+***
 
 # Interface: ClientAuthProvider()
 

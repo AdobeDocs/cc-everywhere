@@ -14,6 +14,42 @@ Class to create CCEverywhere object.
 
 - [`CCEverywhereInterface`](../../cc-everywhere-types/interfaces/cc-everywhere-interface.md)
 
+## Constructors
+
+### Constructor
+
+```ts
+new CCEverywhere(
+   validator, 
+   hostInfo, 
+   configParams, 
+   authProvider, 
+   clientAuthProvider): CCEverywhere;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `validator` | `Validator` |
+| `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |
+| `configParams` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |
+| `authProvider` | `AuthProvider` |
+| `clientAuthProvider` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) |
+
+#### Returns
+
+`CCEverywhere`
+
+#### Hidden
+
+-- hide from typedocs
+Constructor to initialize CCEverywhere object.
+
+#### Overrides
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`constructor`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#constructor)
+
 ## Properties
 
 | Property | Modifier | Type |
@@ -25,6 +61,23 @@ Class to create CCEverywhere object.
 ## Accessors
 
 ### activeInstance
+
+#### Get Signature
+
+```ts
+get static activeInstance(): 
+  | undefined
+  | CCEverywhereBase;
+```
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Returns
+
+  \| `undefined`
+  \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md)
 
 #### Set Signature
 
@@ -46,7 +99,95 @@ set static activeInstance(instance): void;
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`activeInstance`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#activeinstance)
 
+***
+
+### state
+
+#### Get Signature
+
+```ts
+get static state(): State;
+```
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Returns
+
+[`State`](../../../types/cc-everywhere-types/enumerations/state.md)
+
+#### Set Signature
+
+```ts
+set static state(value): void;
+```
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `value` | [`State`](../../../types/cc-everywhere-types/enumerations/state.md) |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`state`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#state)
+
+***
+
+### version
+
+#### Get Signature
+
+```ts
+get version(): string;
+```
+
+Get version of SDK
+
+##### Hidden
+
+-- hide from typedocs
+
+##### Returns
+
+`string`
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`version`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#version)
+
 ## Methods
+
+### terminate()
+
+```ts
+terminate(): void;
+```
+
+Method to un-initialize cceverywhere object
+
+#### Returns
+
+`void`
+
+#### Hidden
+
+-- hide from typedocs
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`terminate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#terminate)
+
+***
 
 ### close()
 
@@ -78,3 +219,29 @@ boolean value indicating whether the close operation was successful or not.
 #### Inherited from
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`close`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#close)
+
+***
+
+### onRequestIdUpdate()
+
+```ts
+onRequestIdUpdate(requestId): void;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `requestId` | `string` |
+
+#### Returns
+
+`void`
+
+#### Hidden
+
+-- hide from typedocs
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`onRequestIdUpdate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#onrequestidupdate)

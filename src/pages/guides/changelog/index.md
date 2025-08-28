@@ -22,7 +22,11 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
-## 2025-08-27
+## [4.34.26] 2025-08-28
+
+### Fixed
+
+- Removed the `ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` enumerations from the `CCEverywhere.TextToImageAppConfig.panelSettings` property.
 
 ### Added
 

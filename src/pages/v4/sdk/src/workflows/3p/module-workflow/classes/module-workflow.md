@@ -12,6 +12,33 @@
 
 - [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md)
 
+## Constructors
+
+### Constructor
+
+```ts
+new ModuleWorkflow(actionManager, context): ModuleWorkflow;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `actionManager` | `ActionManager` |
+| `context` | `SDKContext` |
+
+#### Returns
+
+`ModuleWorkflow`
+
+#### Hidden
+
+-- hide from typedocs
+
+#### Inherited from
+
+[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
+
 ## Methods
 
 ### editImage()
@@ -71,3 +98,34 @@ Generate images by just passing a text prompt.
 #### Implementation of
 
 [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`createImageFromText`](../../module-workflow-types/interfaces/module-workflow.md#createimagefromtext)
+
+***
+
+### startFromContent()
+
+```ts
+startFromContent(
+   appConfig?, 
+   exportConfig?, 
+   containerConfig?): void;
+```
+
+Open the Start From Content module.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `appConfig?` | [`StartFromContentAppConfig`](../../../../../../shared/src/types/module/app-config-types/interfaces/start-from-content-app-config.md) | properties to configure the Start From Content module |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options (currently not used for Start From Content) |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container This field is internal and not ready for public SDK exposure |
+
+#### Returns
+
+`void`
+
+#### Ignore
+
+#### Implementation of
+
+[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`startFromContent`](../../module-workflow-types/interfaces/module-workflow.md#startfromcontent)
