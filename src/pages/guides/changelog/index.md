@@ -22,6 +22,12 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## [4.34.27] 2025-09-01
+
+### Added
+
+- **`AUTO` content type**: Added the `AUTO` option to [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md) that allows the system to automatically determine the most appropriate content type based on the prompt and context.
+
 ## [4.34.26] 2025-08-28
 
 ### Fixed
