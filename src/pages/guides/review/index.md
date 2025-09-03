@@ -169,7 +169,7 @@ If it was rejected, we will include the reasons for rejection along with any nex
 - Your **website is not functioning**.
 - You have deployed your app in a **staging environment**. Our review team only reviews apps in a production environment.
 - Your app **description is not complete** in the **Notes to reviewer** section, and our review team **cannot test all the entrypoints**. Make sure you are clear about what your app integrates (full editor, modules, and/or quick actions) and where/how to invoke them.
-- Your **app name should correspond with the name of your projec**t in Adobe Developer Console. This `appName` should also be consistent throughout your application. We use this property in our analytics checks so if there are any discrepancies, we will ask that you make that change before you are able to release the integration to your users.
+- Your **app name** should correspond with the **public app name** in Adobe Developer Console. This `appName` should also be consistent throughout your application. We use this property in our analytics checks so if there are any discrepancies, we will ask that you make that change before you are able to release the integration to your users.
 
 ## Marketing
 

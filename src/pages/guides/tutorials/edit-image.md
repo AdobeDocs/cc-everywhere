@@ -172,7 +172,7 @@ When the Embed SDK is imported, a `CCEverywhere` object is globally available an
 // 👀 Required parameters to initialize the Embed SDK
 const hostInfo = {
   clientId: import.meta.env.VITE_API_KEY,
-  // The appName must match the Project Name in the Developer Console
+  // The appName must match the Public App Name in the Developer Console
   appName: "Embed SDK Sample",
 };
 
@@ -192,7 +192,7 @@ The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains 
 <!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
-The `appName` **must match** the Project Name as set in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
+ The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
 
 ### 2.3 Load the `module`
 
