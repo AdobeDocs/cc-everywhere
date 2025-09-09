@@ -62,6 +62,51 @@
             <span class="spectrum-Button-label">Hide</span>
         </button>
 
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Start From Template</h2>
+
+        <div class="spectrum-Textfield">
+            <label for="header-text" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Header Text</label>
+            <input id="header-text" type="text" name="header-text"
+                value="Jump-start your inspiration with thousands of professionally designed templates"
+                placeholder="Jump-start your inspiration with thousands..." class="spectrum-Textfield-input">
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="hide-search-bar">
+            <label class="spectrum-Checkbox-label" for="hide-search-bar">Hide Search Bar</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Textfield">
+            <label for="search-query" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Search Query</label>
+            <input id="search-query" type="text" name="search-query" value="Instagram story"
+                class="spectrum-Textfield-input">
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="hide-filters">
+            <label class="spectrum-Checkbox-label" for="hide-filters">Hide Filters</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Textfield">
+            <label for="shortcut-pills" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Shortcut Pill
+                Terms</label>
+            <input id="shortcut-pills" type="text" name="shortcut-pills" value="Social, Business, Events, Personal"
+                class="spectrum-Textfield-input">
+        </div>
+        <p></p>
+
+         <button id="start-from-template"
+             class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
+             <span class="spectrum-Button-label">Start From Template</span>
+         </button>
+         <button id="reset-template" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL">
+             <span class="spectrum-Button-label">Reset</span>
+         </button>
+
         <img id="image-container" style="visibility:hidden;"/>
         <hr class="solid">
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Other SDK Components</h2>
@@ -91,7 +136,6 @@
             onCancel: () => {},
             onPublish: (intent, publishParams) => {
                 const localData = { asset: publishParams.asset[0].data}
-                console.log("Published asset", publishParams)
                 if(publishParams.exportButtonId=="save-modified-asset"){
                     appImage.src = localData.asset;
                     appImage.style.visibility="visible";
@@ -197,6 +241,39 @@
             }
         ];
 
+        // Start From Template functionality
+        let templateImageURL = null;
+        const setImageURL = (url) => {
+            templateImageURL = url;
+        }
+
+        const templateExportConfig = [
+            {
+                id: 'download',
+                label: 'Download',
+                action: {
+                    target: 'download'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'save-template-asset',
+                label: 'Save Template',
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            }
+        ];
+
+        const containerConfig = {
+            width: '100%',
+            height: '600px'
+        };
     
         const getAllowedFileTypes = () => {
             const allowedFileTypes = ['image/png', 'image/jpeg'];
@@ -228,6 +305,46 @@
             module.editImage(docConfig, appConfig, exportConfig);
         }
 
+        const startFromTemplateModule = () => {
+            // Get values from form inputs
+            const headerText = document.getElementById('header-text').value;
+            const searchQuery = document.getElementById('search-query').value;
+            const hideSearchBar = document.getElementById('hide-search-bar').checked;
+            const hideFilters = document.getElementById('hide-filters').checked;
+            const shortcutPillTerms = document.getElementById('shortcut-pills').value;
+
+
+            let appConfig = {
+                colorTheme: "light",
+                contentBrowseConfig: {
+                    headerText,
+                    searchQuery,
+                    hideSearchBar,
+                    hideFilters,
+                    shortcutPillTerms: Array.from(new Set(shortcutPillTerms.split(",").map(term => term.trim()).filter(term => term.length > 0))),
+                    categoriesConfig: [
+                        {
+                            "category": "templates"
+                        }
+                    ]
+                },
+                callbacks: {
+                    onPublish: (intent, publishParams) => {
+                        appImage.src = publishParams.asset[0].data;
+                        appImage.style.visibility = "visible";
+                        setImageURL(publishParams.asset[0].data);
+                    },
+                    onIntentChange: () => {
+                        return {
+                            exportConfig: templateExportConfig
+                        }
+                    }
+                }
+            }
+
+            module.startFromContent(appConfig, null, containerConfig);
+        }
+
         // Button event listeners 
 
         document.getElementById('text-to-image').addEventListener('click', () => {
@@ -237,6 +354,26 @@
         document.getElementById('image-edit').addEventListener('click', () => {
             imageEditingModule();
         })
+
+        document.getElementById('start-from-template').addEventListener('click', () => {
+            startFromTemplateModule();
+        })
+
+         document.getElementById('reset-template').addEventListener('click', () => {
+             // Reset all Start From Template form fields to default values
+             document.getElementById('header-text').value = 'Jump-start your inspiration with thousands of professionally designed templates';
+             document.getElementById('hide-search-bar').checked = false;
+             document.getElementById('search-query').value = 'Instagram story';
+             document.getElementById('hide-filters').checked = false;
+             document.getElementById('shortcut-pills').value = 'Social, Business, Events, Personal';
+             
+             // Clear any template image if displayed
+             if (templateImageURL) {
+                 appImage.src = null;
+                 appImage.style.visibility = "hidden";
+                 templateImageURL = null;
+             }
+         })
         
         document.getElementById('clear').addEventListener('click', () => {
             appImage.src=null;
