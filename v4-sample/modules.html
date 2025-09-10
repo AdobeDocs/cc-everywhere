@@ -19,6 +19,29 @@
         .spacer {
             margin-bottom: 10px;
         }
+        
+        /* Validation error styles */
+        .validation-error {
+            border-color: #666 !important;
+        }
+        
+        .error-message {
+            color: #d73a49;
+            font-size: 12px;
+            margin-top: 4px;
+            display: none;
+        }
+        
+        .error-message.show {
+            display: block;
+        }
+        
+        /* Disabled button styling */
+        .spectrum-Button:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+            pointer-events: none;
+        }
     </style>
   </head>
   <body>
@@ -62,6 +85,55 @@
             <span class="spectrum-Button-label">Hide</span>
         </button>
 
+        <hr class="solid">
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Start From Template</h2>
+
+        <div class="spectrum-Textfield">
+            <label for="header-text" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Header Text *</label>
+            <input id="header-text" type="text" name="header-text"
+                value="Jump-start your inspiration with thousands of professionally designed templates"
+                placeholder="Jump-start your inspiration with thousands..." class="spectrum-Textfield-input" required>
+            <div id="header-text-error" class="error-message">Header text is required</div>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="hide-search-bar">
+            <label class="spectrum-Checkbox-label" for="hide-search-bar">Hide Search Bar</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Textfield">
+            <label for="search-query" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Search Query</label>
+            <input id="search-query" type="text" name="search-query" value="Instagram story"
+                class="spectrum-Textfield-input">
+            <div id="search-query-error" class="error-message">Search query is required</div>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="hide-filters">
+            <label class="spectrum-Checkbox-label" for="hide-filters">Hide Filters</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Textfield">
+            <label for="shortcut-pills" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Shortcut Pill
+                Terms</label>
+            <input id="shortcut-pills" type="text" name="shortcut-pills" value="Social, Business, Events, Personal, Creative"
+                class="spectrum-Textfield-input" placeholder="Enter exactly 5 comma-separated terms">
+            <div id="shortcut-pills-error" class="error-message">Please enter exactly 5 valid comma-separated terms (alphanumeric only, 1-30 chars each)</div>
+        </div>
+        <p></p>
+
+         <button id="start-from-template" disabled
+             class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
+             <span class="spectrum-Button-label">Start From Template</span>
+         </button>
+         <button id="reset-template" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL">
+             <span class="spectrum-Button-label">Reset</span>
+         </button>
+
         <img id="image-container" style="visibility:hidden;"/>
         <hr class="solid">
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Other SDK Components</h2>
@@ -91,7 +163,6 @@
             onCancel: () => {},
             onPublish: (intent, publishParams) => {
                 const localData = { asset: publishParams.asset[0].data}
-                console.log("Published asset", publishParams)
                 if(publishParams.exportButtonId=="save-modified-asset"){
                     appImage.src = localData.asset;
                     appImage.style.visibility="visible";
@@ -197,6 +268,91 @@
             }
         ];
 
+        // Start From Template functionality
+        let templateImageURL = null;
+        const setImageURL = (url) => {
+            templateImageURL = url;
+        }
+
+        const templateExportConfig = [
+            {
+                id: 'download',
+                label: 'Download',
+                action: {
+                    target: 'download'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            },
+            {
+                id: 'save-template-asset',
+                label: 'Save Template',
+                action: {
+                    target: 'publish'
+                },
+                style: {
+                    uiType: 'button'
+                }
+            }
+        ];
+
+        const containerConfig = {
+            width: '100%',
+            height: '600px',
+            showDarkerBackgroundForLoader: true,
+            showExpressIconWithText: true
+        };
+
+        // validation functions
+        const clearValidationErrors = () => {
+            document.querySelectorAll('.validation-error').forEach(el => el.classList.remove('validation-error'));
+            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+        };
+
+        const showValidationError = (fieldId, errorId) => {
+            const fieldElement = document.getElementById(fieldId);
+            const errorElement = document.getElementById(errorId);
+            if (fieldElement && errorElement) {
+                fieldElement.classList.add('validation-error');
+                errorElement.classList.add('show');
+            }
+        };
+
+        const validateTemplateForm = () => {
+            clearValidationErrors();
+            let isValid = true;
+
+            // Check header text
+            const headerText = document.getElementById('header-text').value.trim();
+            if (!headerText) {
+                showValidationError('header-text', 'header-text-error');
+                isValid = false;
+            }
+
+            // Check search query is not empty
+            const searchQuery = document.getElementById('search-query').value.trim();
+            if (!searchQuery) {
+                showValidationError('search-query', 'search-query-error');
+                isValid = false;
+            }
+
+            
+            // Check shortcut pills (exactly 5)
+            const pillsInput = document.getElementById('shortcut-pills').value.trim();
+            const pills = pillsInput ? pillsInput.split(',').map(p => p.trim()).filter(p => p) : [];
+            if (pills.length !== 5) {
+                showValidationError('shortcut-pills', 'shortcut-pills-error');
+                isValid = false;
+            }
+
+            return isValid;
+        };
+
+        const updateButtonState = () => {
+            const button = document.getElementById('start-from-template');
+            if (button) button.disabled = !validateTemplateForm();
+        };
     
         const getAllowedFileTypes = () => {
             const allowedFileTypes = ['image/png', 'image/jpeg'];
@@ -228,16 +384,87 @@
             module.editImage(docConfig, appConfig, exportConfig);
         }
 
+         const startFromTemplateModule = () => {
+                if (!validateTemplateForm()) return;
+
+                 // Get values from form inputs
+                const headerText = document.getElementById('header-text').value.trim();
+                const searchQuery = document.getElementById('search-query').value;
+                const hideSearchBar = document.getElementById('hide-search-bar').checked;
+                const hideFilters = document.getElementById('hide-filters').checked;
+                const shortcutPills = document.getElementById('shortcut-pills').value.split(',').map(p => p.trim());
+
+
+            let appConfig = {
+                    colorTheme: "light",
+                    contentBrowseConfig: {
+                        headerText,
+                        searchQuery,
+                        hideSearchBar,
+                        hideFilters,
+                        shortcutPillTerms: shortcutPills,
+                        categoriesConfig: [{ "category": "templates" }] // Use "photos" to launch with photos
+                    },
+                    callbacks: {
+                        onPublish: (intent, publishParams) => {
+                            appImage.src = publishParams.asset[0].data;
+                            appImage.style.visibility = "visible";
+                            setImageURL(publishParams.asset[0].data);
+                        },
+                        onIntentChange: () => ({ exportConfig: templateExportConfig })
+                    }
+                };
+
+                try {
+                    module.startFromContent(appConfig, null, containerConfig);
+                } catch (error) {
+                    console.error('Error launching template module:', error);
+                    alert('Failed to launch template browser. Please try again.');
+                }
+            };
+
         // Button event listeners 
 
         document.getElementById('text-to-image').addEventListener('click', () => {
             textToImageModule();
-        })
+        });
 
         document.getElementById('image-edit').addEventListener('click', () => {
             imageEditingModule();
-        })
+        });
+
+        // Event listeners for real-time validation
+        ['header-text', 'search-query', 'shortcut-pills'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('input', updateButtonState);
+        });
         
+        ['hide-search-bar', 'hide-filters'].forEach(id => {
+            const el = document.getElementById(id);
+            if (el) el.addEventListener('change', updateButtonState);
+        });
+
+        setTimeout(updateButtonState, 100);
+
+        document.getElementById('start-from-template').addEventListener('click', startFromTemplateModule);
+
+        document.getElementById('reset-template').addEventListener('click', () => {
+            clearValidationErrors();
+            document.getElementById('header-text').value = "Jump-start your inspiration with thousands of professionally designed templates";
+            document.getElementById('search-query').value = "Instagram story";
+            document.getElementById('hide-search-bar').checked = false;
+            document.getElementById('hide-filters').checked = false;
+            document.getElementById('shortcut-pills').value = "Social, Business, Events, Personal, Creative";
+            
+            if (appImage) {
+                appImage.src = null;
+                appImage.style.visibility = "hidden";
+                templateImageURL = null;
+            }
+            
+            updateButtonState();
+        });
+
         document.getElementById('clear').addEventListener('click', () => {
             appImage.src=null;
             appImage.style.visibility="hidden";
