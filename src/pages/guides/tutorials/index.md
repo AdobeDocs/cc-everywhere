@@ -19,6 +19,8 @@ Each tutorial provides step-by-step instructions on integrating the SDK into you
 1. [Getting Started with the Adobe Express Embed SDK](./getting-started.md): A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
 2. [Building a Custom Image Editor with the Full Editor Module](./full-editor.md): How to implement Adobe Express Full Editor.
 3. [Generating Images with the Generate Image v2 Module](./generate-image.md): How to implement Adobe Express Generate Image v2.
+4. [Editing Images with the Edit Image v2 Module](./edit-image.md): How to implement Adobe Express Edit Image v2.
+5. [Workflow Tethering](./workflow-tethering.md): How to implement workflow tethering between Generate Image, Edit Image, and Full Editor modules.
 
 <!-- This will be a landing page for Tutorials.
 
