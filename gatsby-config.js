@@ -117,6 +117,10 @@ module.exports = {
             path: "/guides/concepts/edit-image-v2.md",
           },
           {
+            title: "Tethering workflow",
+            path: "/guides/concepts/tethering.md",
+          },
+          {
             title: "Editor Customization",
             path: "/guides/concepts/appconfig.md",
           },
