@@ -4,6 +4,10 @@ keywords:
   - Embed SDK
   - Workflow Tethering
   - Feature configurations
+  - onIntentChange callback
+  - Intent handling
+  - Workflow transitions
+  - JavaScript integration
 title: Workflow Tethering
 description: Workflow Tethering
 contributors:
@@ -29,7 +33,7 @@ You can tether more than two modules together to create even more complex experi
 
 Targets
 
-While you can initiate the workflow from any module, the target module must be either **Edit Image** or **Full Editor**. At the moment, only the Generate Image module can tether to Edit Image.
+While you can initiate the workflow from any module (for example, Quick Actions), the target module must be either **Edit Image** or **Full Editor**. At the moment, only the Generate Image module can tether to Edit Image.
 
 ## How to implement Workflow Tethering
 
@@ -37,6 +41,8 @@ There are two crucial elements to any tethering workflow:
 
 - The **Export Configurations**: set the exporting options for a module.
 - The **Intent Change Handler**: sets additional configurations for the next modules in the transition.
+
+Please read along to learn more about each of these elements, or try the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) to see them in action in a demo application.
 
 ## Export Configurations
 
@@ -79,7 +85,7 @@ Default buttons
 
 The `exportConfig` is always an **optional parameter**. If no export configuration is provided, the module will fall back to the default layout options—which usually includes tethering options to the Full Editor.
 
-If you need tighter control over what your users can create—for example, restricting text additions to avoid content moderation—you should always define a custom `exportConfig` that excludes the Full Editor option.
+If you need _tighter control_ over what your users can create—for example, restricting text additions to avoid content moderation—you should always define a custom `exportConfig` that excludes the Full Editor option.
 
 ### Export Options explained
 
@@ -197,10 +203,127 @@ const exportConfig = [
 ];
 ```
 
-## Intent Change Handler
+## Customize the Tethered Experience
 
-The Intent Change Handler is a callback that is called when the intent changes. It is used to set new `appConfig` and `exportConfig` for the next module in the transition.
+In the Embed SDK, every workflow can be customized by setting the `appConfig`, `exportConfig`, and `containerConfig` properties at launch. However, when two or more modules are chained together, the initial set of configurations _may not be ideal_ for the next experience in the transition. For example, you may want to use some Export Options in the first module, but not in the second; or the `onPublish()` callback may be different, because it needs to communicate with a dedicated backend service—only, say, in the last module.
+
+No matter the use case, wouldn't it be great if you could **set new configurations tailored for each module** in a tethered workflow? Enter the Intent Change Handler.
+
+### The Intent Change Handler
+
+The [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) callback is automatically run when the user passes from one module to another. It receives the old and new intent of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/type-aliases/action-intent.md) as parameters—so that you can implement different logic for each transition—and returns an object containing the new [`appConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), [`exportConfig`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md), or [`containerConfig`](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md) objects.
+
+```typescript
+// The Intent Change Handler callback signature
+onIntentChange(
+  oldIntent: ActionIntent,
+  newIntent: ActionIntent
+): undefined | IntentChangeConfig;
+
+// The Intent Change Config return object
+interface IntentChangeConfig {
+  appConfig?: BaseAppConfig;
+  exportConfig?: ExportOptions;
+  containerConfig?: ContainerConfig;
+}
+```
+
+<InlineAlert variant="info" slots="header, text1, text2" />
+
+A simpler `appConfig`
+
+If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), which is the base configuration object for all modules.
+
+It **only contains** the `callbacks` property, which you are free to set as needed for the next module in the transition. Any other properties (for instance, the `appVersion` when tethering to the Edit Image module) cannot be passed.
+
+Thanks to the Intent Change Handler, you can **conditionally return the appropriate configuration** settings, for example to:
+
+- Implement a different logic for the callbacks.
+- Provide users with a new set of Export Options.
+- Customize the iframe container to fit the new module better.
+
+### `onIntentChange()` Example
+
+Here's an example of how you can use the Intent Change Handler to customize the tethered experience and **serve a different set of Export Options** for each module in a tethered workflow of the kind Generate Image → Edit Image → Full Editor.
 
 ```javascript
+// Initialize the SDK
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+const { module } = await window.CCEverywhere.initialize(
+  { clientId: "your-client-id", appName: "your-app-name" },
+  {}
+);
 
+// Shared Export Options for all modules
+const defaultExportConfig = [
+  {
+    id: "download", label: "Download",
+    action: { target: "download" }, style: { uiType: "button" },
+  },
+  {
+    id: "save-generated-image", label: "Save generated image",
+    action: { target: "publish" }, style: { uiType: "button" },
+  },
+];
+
+// Generate Image custom Export Options
+const generateImageExportConfig = [
+  ...defaultExportConfig,
+  {
+    id: "open-edit-image", label: "Edit image",
+    action: { target: "image-module" }, style: { uiType: "button" },
+  },
+];
+
+// Edit Image custom Export Options
+const editImageExportConfig = [
+  ...defaultExportConfig,
+  {
+    id: "open-full-editor", label: "Full editor",
+    action: { target: "express" }, style: { uiType: "button" },
+  },
+];
+
+const appConfig = {
+  appVersion: "2",
+  featureConfig: { "community-wall": true },
+  callbacks: {
+    onPublish: (intent, publishParams) => {
+      console.log("Publish callback", intent, publishParams);
+      // Implement your logic for the publish callback here...
+    },
+    // 👁️👁️ The Intent Change Handler 👁️👁️
+    onIntentChange: (oldIntent, newIntent) => {
+      console.log("Intent change", oldIntent, "→", newIntent);
+      if (newIntent === "edit-image-v2") {
+        return {
+          // appConfig: { callbacks: { /* ... */ } },
+          // containerConfig: { /* ... */ },
+          exportConfig: editImageExportConfig,     // 👈
+        };
+      }
+      if (newIntent === "full-editor") {
+        return {
+          // appConfig: { callbacks: { /* ... */ } },
+          // containerConfig: { /* ... */ },
+          exportConfig: fullEditorExportConfig,    // 👈
+        };
+      }
+    },
+  },
+};
+
+const containerConfig = { /* ... */ };
+
+module.createImageFromText(
+  appConfig,
+  generateImageExportConfig,    // 👈
+  containerConfig
+);
 ```
+
+## Try it out in the Tutorial
+
+Congratulations! You've learned how to implement Workflow Tethering in your application.
+
+Please refer to the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) for a more comprehensive, real-world example with complete code that covers all the concepts discussed in this guide.
