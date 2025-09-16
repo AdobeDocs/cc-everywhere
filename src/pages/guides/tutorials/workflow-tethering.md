@@ -753,7 +753,7 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
   - `currentImageBlob` cache updates for future edits
   - Workflow completes with advanced editing applied
 
-<!-- ![Workflow Tethering - All workflows](./images/tethering--all-workflows.png) -->
+![Workflow Tethering - All workflows](./images/tethering--all-workflows.png)
 
 ## Troubleshooting
 
