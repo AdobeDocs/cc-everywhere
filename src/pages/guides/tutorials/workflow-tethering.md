@@ -707,23 +707,23 @@ Let's trace through the complete user journeys to understand how all the pieces 
 
 ### 5.1 Generate Image → Edit Image → Save
 
-- The user selects "Generate Image"
+- The user selects **Generate Image**:
 
   - `main.js` sets `currentWorkflow = "generate"`
   - SDK launches with `generateImageAppConfig` + `startGenImageExportConfig`
 
-- The user generates image
+- The user generates an image
 
   - `handleGenerateImagePublish()` updates `generateImage.src`
   - Workflow state resets
 
-- The user selects "Edit image" in the Generate Image experience
+- The user selects **Edit image** in the Generate Image experience:
 
   - `onIntentChange()` detects `"create-image-from-text"` as the old intent
   - `createGenerateToEditTransition()` returns `endEditImageExportConfig`
   - SDK transitions to Edit Image with different export buttons
 
-- The user edits and clicks "Save final image"
+- The user edits and clicks **Save final image**
 
   - `handleEditImagePublish()` would be called
   - Image updates and workflow completes
@@ -736,18 +736,18 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
 
 ### 5.2 Edit Image → Full Editor → Save
 
-- The user selects "Edit Image" (direct entry)
+- The user selects **Edit Image** (direct entry):
 
   - `main.js` sets `currentWorkflow = "edit"`
   - SDK launches with `editImageAppConfig` + `startEditImageExportConfig`
 
-- The user selects "Do More" → "Add text" (or other advanced option)
+- The user selects **Do More** → **Add text** (or other advanced option):
 
   - `onIntentChange()` detects `"edit-image-v2"` as the old intent
   - `createEditToFullEditorTransition()` returns `endFullEditorExportConfig`
   - SDK launches the Full Editor with different export buttons
 
-- The user performs advanced editing and clicks "Save design"
+- The user performs advanced editing and clicks **Save design**
 
   - `handleFullEditorPublish()` updates `expressImage.src`
   - `currentImageBlob` cache updates for future edits
@@ -765,9 +765,9 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
 
 ## Complete working example
 
-The complete implementation demonstrates all the concepts covered in this tutorial.
+The complete implementation demonstrates all the concepts covered in this tutorial. The code is split in two blocks below for convenience.
 
-<CodeBlock slots="heading, code" repeat="7" languages="index.html, main.js, utils/shared.js, config/exportConfigs.js, config/appConfigs.js, workflows/generateToEdit.js, workflows/editToFullEditor.js"/>
+<CodeBlock slots="heading, code" repeat="3" languages="index.html, main.js, utils/shared.js"/>
 
 #### index.html
 
@@ -777,7 +777,7 @@ The complete implementation demonstrates all the concepts covered in this tutori
 
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Embed SDK Sample</title>
 </head>
 
@@ -796,20 +796,26 @@ The complete implementation demonstrates all the concepts covered in this tutori
       <main class="two-column-layout">
         <div class="column">
           <h3>Generate Image → Edit Image</h3>
-          <img id="image1" src="./images/generate-image.png" alt="Generate Image" />
+          <img id="image1" src="./images/generate-image.png"
+               alt="Generate Image" />
           <sp-button-group>
             <sp-button id="generateBtn">Generate Image</sp-button>
           </sp-button-group>
-          <input type="file" id="fileInput1" accept="image/*" style="display: none;" />
+          <input type="file" id="fileInput1"
+                 accept="image/*" style="display: none;" />
         </div>
         <div class="column">
           <h3>Edit Image → Full Editor</h3>
-          <img id="image2" src="./images/demo-image-1.jpg" alt="An Indian woman holding a cat" />
+          <img id="image2" src="./images/demo-image-1.jpg"
+               alt="An Indian woman holding a cat" />
           <sp-button-group>
-            <sp-button id="uploadBtn" treatment="outline">Choose Image</sp-button>
+            <sp-button id="uploadBtn" treatment="outline">
+              Choose Image
+            </sp-button>
             <sp-button id="editBtn">Edit Image</sp-button>
           </sp-button-group>
-          <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+          <input type="file" id="fileInput"
+                 accept="image/*" style="display: none;" />
         </div>
       </main>
     </div>
@@ -997,6 +1003,8 @@ export async function updateImageAndCache(
   }
 }
 ```
+
+<CodeBlock slots="heading, code" repeat="4" languages="config/exportConfigs.js, config/appConfigs.js, workflows/generateToEdit.js, workflows/editToFullEditor.js"/>
 
 #### config/exportConfigs.js
 
