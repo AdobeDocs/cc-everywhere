@@ -46,17 +46,18 @@ You'll build a web application that demonstrates two key workflow tethering patt
 1. **Generate Image → Edit Image**: Users generate images and seamlessly transition to basic editing
 2. **Edit Image → Full Editor**: Users performing basic edits can access advanced editing capabilities
 
-<!-- ![Workflow Tethering experience](./images/tethering-workflows--final.png) -->
+![Workflow Tethering tutorial](./images/tethering--initial-state.png)
 
 ## Prerequisites
 
 <!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1, text2" />
 
-This is an **advanced tutorial** that builds upon foundational concepts. Before starting, ensure you have completed:
+This is an **advanced tutorial** that builds upon foundational concepts. Before starting, ensure you have read:
 
-- **[Edit Image tutorial](./edit-image.md)** - Understanding of Edit Image module implementation.
-- **[Generate Image tutorial](./generate-image.md)** - Knowledge of Generate Image module.
+- **[Workflow Tethering guide](../concepts/tethering.md)**: Comprehensive guide to understanding workflow tethering.
+- **[Edit Image tutorial](./edit-image.md)**: Understanding of Edit Image module implementation.
+- **[Generate Image tutorial](./generate-image.md)**: Knowledge of Generate Image module.
 
 Additionally, make sure you have:
 
@@ -70,11 +71,11 @@ Additionally, make sure you have:
 
 ### 1.1 Clone the sample
 
-Clone the [Embed SDK Workflow Tethering Modular sample](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-workflows-tethering) from GitHub and navigate to the project directory.
+Clone the [Embed SDK Workflow Tethering sample](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-workflow-tethering) from GitHub and navigate to the project directory.
 
 ```bash
 git clone https://github.com/AdobeDocs/embed-sdk-samples.git
-cd embed-sdk-samples/code-samples/tutorials/embed-sdk-workflows-tethering-modular
+cd embed-sdk-samples/code-samples/tutorials/embed-sdk-workflow-tethering
 ```
 
 The project features a **modular architecture** with this structure:
@@ -145,14 +146,16 @@ We have organized the code into focused modules:
 
 The `main.js` module is the orchestrator of the application.
 
-```javascript
-// main.js
+<CodeBlock slots="heading, code" repeat="1" languages="main.js"/>
 
-//  Image management utilities and state
+#### main.js
+
+```javascript
+// 👇 Image management utilities and state
 import { cacheDefaultImageBlob, handleFileSelection, setCurrentWorkflow } from "./utils/shared.js";
-// Button configurations for different workflow starts
+// 👇 Button configurations for different workflow starts
 import { startGenImageExportConfig, startEditImageExportConfig } from "./config/exportConfigs.js";
-// Workflow-specific configurations
+// 👇 Workflow-specific configurations
 import { createGenerateImageAppConfig, createEditImageAppConfig } from "./config/appConfigs.js";
 ```
 
@@ -167,7 +170,6 @@ The `utils/shared.js` module serves as the **single source of truth** for applic
 #### utils/shared.js
 
 ```javascript
-
 // Global state management
 // Tracks which workflow initiated the session
 export let currentWorkflow = null;
@@ -221,14 +223,17 @@ One of the most critical aspects of workflow tethering is providing users with *
 
 This sample application defines **four distinct export configurations** that correspond to different stages in the user's workflow:
 
-```javascript
-// config/exportConfigs.js
+<CodeBlock slots="heading, code" repeat="1" languages="config/exportConfigs.js"/>
 
+#### config/exportConfigs.js
+
+```javascript
 // 1. Starting with the Generate Image workflow...
 export const startGenImageExportConfig = [
   { id: "download", label: "Download", /* ... */ },
   { id: "save-generated-image", label: "Save generated image", /* ... */ },
-  { id: "open-edit-image", label: "Edit image", /* ... */ }, // 👈 Enables transition
+  // 👇 Enables transition
+  { id: "open-edit-image", label: "Edit image", /* ... */ },
 ];
 
 // ... and ending with the Edit Image workflow
@@ -241,7 +246,8 @@ export const endEditImageExportConfig = [
 export const startEditImageExportConfig = [
   { id: "download", label: "Download", /* ... */ },
   { id: "save-edited-image", label: "Save edited image", /* ... */ },
-  { type: "continue-editing", label: "Do More", /* ... */ }, // 👈 Enables options
+  // 👇 Enables options
+  { type: "continue-editing", label: "Do More", /* ... */ },
 ];
 
 // ... and ending with the Full Editor workflow
@@ -260,7 +266,7 @@ Please note, **each workflow can only define its own export configurations**. In
 
 ## 4. Workflow tethering patterns
 
-The application demonstrates **two tethering patterns**, each implemented as a dedicated module.
+The application demonstrates **two tethering patterns**, each implemented as a dedicated module. Let's dive into each one in detail.
 
 ### 4.1 Generate Image → Edit Image workflow
 
@@ -270,8 +276,13 @@ The `workflows/generateToEdit.js` module handles the transition from the Generat
 
 When users click "Generate Image", the system uses the **full-featured configuration**.
 
+![Workflow Tethering - Generate Image](./images/tethering--generate-image.png)
+
+<CodeBlock slots="heading, code" repeat="1" languages="main.js"/>
+
+#### main.js
+
 ```javascript
-// main.js
 //... other imports...
 import { startGenImageExportConfig    } from "./config/exportConfigs.js";
 import { createGenerateImageAppConfig } from "./config/appConfigs.js";
@@ -399,10 +410,15 @@ The `generateImageAppConfig` object creation follows a dependency chain across t
 
 #### 4.1.2 Handling the transition
 
-When users click the "Edit image" button in the Generate Image interface to move to the Edit Image experience, the **intent change mechanism** activates:
+When users click the "Edit image" button in the Generate Image interface to move to the Edit Image experience, the **intent change mechanism** activates
+
+![Workflow Tethering - Generate Image to Edit Image](./images/tethering--generate-to-edit-image.png)
+
+<CodeBlock slots="heading, code" repeat="2" languages="config/appConfigs.js, workflows/generateToEdit.js"/>
+
+#### config/appConfigs.js
 
 ```javascript
-// config/appConfigs.js
 export function createIntentChangeHandler() {
   return (oldIntent, newIntent) => {
     console.log("Intent transition:", oldIntent, "→", newIntent);
@@ -415,8 +431,11 @@ export function createIntentChangeHandler() {
     return undefined;
   };
 }
+```
 
-// workflows/generateToEdit.js
+#### workflows/generateToEdit.js
+
+```javascript
 import { endEditImageExportConfig } from "../config/exportConfigs.js";
 
 // Creates the workflow transition configuration for Generate Image → Edit Image
@@ -432,11 +451,22 @@ export function createGenerateToEditTransition() {
 
 The `createIntentChangeHandler()` function is used to create the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) handler for workflow transitions; it returns an object of type [`IntentChangeConfig`](../../v4/shared/src/types/callbacks-types/interfaces/intent-change-config.md), which contains the appropriate `exportConfig` for the Edit Image workflow that follows after Generate Image.
 
+The user is now able to perform Image Editing routines, such as Removing Background, Adding Effects, and more.
+
+![Workflow Tethering - Edit Image editing](./images/tethering--edit-image-editing.png)
+
 #### 4.1.3 State synchronization
 
-The publish callback ensures **proper state management**:
+The publish callback ensures **proper state management**, and the image is updated with the generated content.
+
+![Workflow Tethering - Edit Image publishing](./images/tethering--edit-image-publishing.png)
+
+<CodeBlock slots="heading, code" repeat="1" languages="workflows/generateToEdit.js"/>
+
+#### workflows/generateToEdit.js
 
 ```javascript
+// ...
 export async function handleGenerateImagePublish(intent, publishParams) {
   // Update the left image (image1) with generated content
   generateImage.src = publishParams.asset[0].data;
@@ -453,10 +483,15 @@ The `workflows/editToFullEditor.js` module manages the transition from the Edit 
 
 #### 4.2.1 Initial workflow launch
 
-When users click "Edit Image", the Edit Image workflow starts with a minimal configuration:
+When users click "Edit Image", the Edit Image workflow starts with a minimal export configuration.
+
+![Workflow Tethering - Edit Image](./images/tethering--edit-image.png)
+
+<CodeBlock slots="heading, code" repeat="1" languages="main.js"/>
+
+#### main.js
 
 ```javascript
-// main.js
 //... other imports...
 import { startEditImageExportConfig } from "./config/exportConfigs.js";
 import { createEditImageAppConfig   } from "./config/appConfigs.js";
@@ -577,10 +612,15 @@ The `editImageAppConfig` object creation follows a dependency chain across these
 
 #### 4.2.2 Handling the transition
 
-When users click the "Do more" button in the Edit Image interface to move to the Full Editor experience, the **intent change mechanism** activates:
+When users click the "Do more" button in the Edit Image interface to move to the Full Editor experience, the **intent change mechanism** activates.
+
+![Workflow Tethering - Edit Image to Full Editor](./images/tethering--edit-to-full-editor.png)
+
+<CodeBlock slots="heading, code" repeat="2" languages="config/appConfigs.js, workflows/editToFullEditor.js"/>
+
+#### config/appConfigs.js
 
 ```javascript
-// config/appConfigs.js
 export function createIntentChangeHandler() {
   return (oldIntent, newIntent) => {
     console.log("Intent transition:", oldIntent, "→", newIntent);
@@ -593,8 +633,11 @@ export function createIntentChangeHandler() {
     return undefined;
   };
 }
+```
 
-// workflows/editToFullEditor.js
+#### workflows/editToFullEditor.js
+
+```javascript
 import { endFullEditorExportConfig } from "../config/exportConfigs.js";
 
 // Creates the workflow transition configuration for Edit Image → Full Editor
@@ -613,9 +656,17 @@ export function createEditToFullEditorTransition() {
 }
 ```
 
+The user is now able to use the entire set of features available in Adobe Express, such as Adding Text or shapes.
+
+![Workflow Tethering - Full Editor](./images/tethering--full-editor.png)
+
 #### 4.2.3 Dual state management
 
 This workflow manages **two different publish scenarios**:
+
+<CodeBlock slots="heading, code" repeat="1" languages="workflows/editToFullEditor.js"/>
+
+#### workflows/editToFullEditor.js
 
 ```javascript
 // workflows/editToFullEditor.js
@@ -645,6 +696,10 @@ export async function handleFullEditorPublish(intent, publishParams) {
   console.log("Updated expressImage (image2) with full editor content");
 }
 ```
+
+This ensures that the image is updated with either the content from the Edit Image workflow or the Full Editor workflow.
+
+![Workflow Tethering - Dual publishing](./images/tethering--dual-publishing.png)
 
 ## 5. End-to-end user journeys
 
@@ -677,7 +732,7 @@ Let's trace through the complete user journeys to understand how all the pieces 
 
 Tethering to Edit Image v1
 
-Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon.
+Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon. More information about the current limitations can be found in the [Workflow Tethering guide](../concepts/tethering.md#caveats).
 
 ### 5.2 Edit Image → Full Editor → Save
 
@@ -698,6 +753,8 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
   - `currentImageBlob` cache updates for future edits
   - Workflow completes with advanced editing applied
 
+<!-- ![Workflow Tethering - All workflows](./images/tethering--all-workflows.png) -->
+
 ## Troubleshooting
 
 ### Common issues
@@ -710,7 +767,58 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
 
 The complete implementation demonstrates all the concepts covered in this tutorial.
 
-<CodeBlock slots="heading, code" repeat="6" languages="main.js, utils/shared.js, config/exportConfigs.js, config/appConfigs.js, workflows/generateToEdit.js, workflows/editToFullEditor.js"/>
+<CodeBlock slots="heading, code" repeat="7" languages="index.html, main.js, utils/shared.js, config/exportConfigs.js, config/appConfigs.js, workflows/generateToEdit.js, workflows/editToFullEditor.js"/>
+
+#### index.html
+
+```html
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Embed SDK Sample</title>
+</head>
+
+<body>
+  <sp-theme scale="medium" color="light" system="express">
+    <div class="container">
+      <header>
+        <h1>Adobe Express Embed SDK</h1>
+        <sp-divider size="l"></sp-divider>
+        <h2>Workflows Tethering Sample</h2>
+        <p>
+          Click either CTA button to test the tethered experiences.
+        </p>
+      </header>
+
+      <main class="two-column-layout">
+        <div class="column">
+          <h3>Generate Image → Edit Image</h3>
+          <img id="image1" src="./images/generate-image.png" alt="Generate Image" />
+          <sp-button-group>
+            <sp-button id="generateBtn">Generate Image</sp-button>
+          </sp-button-group>
+          <input type="file" id="fileInput1" accept="image/*" style="display: none;" />
+        </div>
+        <div class="column">
+          <h3>Edit Image → Full Editor</h3>
+          <img id="image2" src="./images/demo-image-1.jpg" alt="An Indian woman holding a cat" />
+          <sp-button-group>
+            <sp-button id="uploadBtn" treatment="outline">Choose Image</sp-button>
+            <sp-button id="editBtn">Edit Image</sp-button>
+          </sp-button-group>
+          <input type="file" id="fileInput" accept="image/*" style="display: none;" />
+        </div>
+      </main>
+    </div>
+  </sp-theme>
+
+  <script type="module" src="./main.js"></script>
+</body>
+</html>
+```
 
 #### main.js
 
@@ -1195,7 +1303,7 @@ export function createEditImageWorkflowConfig(
 
 ## Next steps
 
-Congratulations! You've completed the advanced Workflow Tethering tutorial and built a sophisticated, modular architecture for complex Adobe Express integrations. You can now try to add new workflow transitions using the established patterns, for example, Generate Image → Full Editor.
+Congratulations! You've completed the advanced Workflow Tethering tutorial and built a sophisticated, modular architecture for complex Adobe Express integrations. You can now try to add new workflow transitions using the established patterns.
 
 ## Need help?
 
@@ -1203,10 +1311,11 @@ Need help or have questions? Join our [Community Forum](https://community.adobe.
 
 ## Related resources
 
-- **[Edit Image tutorial](./edit-image.md)** - Foundation for understanding basic image editing workflows
-- **[Generate Image tutorial](./generate-image.md)** - Essential knowledge for image generation workflows
-- **[API Reference](../../v4/index.md)** - Complete SDK documentation
-- **[Adobe Express Embed SDK Overview](../index.md)** - High-level introduction
-- **[Demo Application](https://demo.expressembed.com/)** - Interactive demo showcasing SDK capabilities
-- **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)** - Working code examples and tutorials
-- **[Changelog](../changelog/index.md)** - Latest updates and improvements
+- **[Workflow Tethering guide](../concepts/tethering.md)**: Comprehensive guide to understanding workflow tethering.
+- **[Edit Image tutorial](./edit-image.md)**: Foundation for understanding basic image editing workflows.
+- **[Generate Image tutorial](./generate-image.md)**: Essential knowledge for image generation workflows.
+- **[API Reference](../../v4/index.md)**: Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](../index.md)**: High-level introduction
+- **[Demo Application](https://demo.expressembed.com/)**: Interactive demo showcasing SDK capabilities
+- **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)**: Working code examples and tutorials
+- **[Changelog](../changelog/index.md)**: Latest updates and improvements
