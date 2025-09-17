@@ -20,15 +20,9 @@ The Adobe Express Embed SDK allows you to tether multiple workflows to create a 
 
 ## What is Tethering?
 
-You can surface the Embed SDK across multiple entry points in your application; for example, a Quick Action in one page and Generate Image in a different section of your website. To keep your users engaged, you can also **chain different workflows** to create more complex experiences tailored to your audience's needs.
+You can surface the Embed SDK across multiple entry points in your application; for example, a Quick Action such as Crop Image on one page, and Generate Image in a different section of your website. To keep your users engaged, you can also **chain different workflows** to create more complex experiences tailored to your audience's needs
 
-**Tethering** refers to the ability for you, as a developer, to **allow users to seamlessly switch from one module to another** in a controlled manner. For example, a single Embed SDK experience may start with Background Removal, and then transition to Full Editor.
-
-<InlineAlert variant="info" slots="header, text1" />
-
-Workflow vs. Module
-
-While the two terms can be used interchangeably, in this guide we refer to a Workflow as the experience, and a Module as the API.
+**Tethering** refers to the ability for you, as a developer, to **allow users to seamlessly switch from one workflow to another** in a controlled manner. For example, a single Embed SDK experience may start with Background Removal, and then transition to Full Editor.
 
 ### Use Cases
 
@@ -37,7 +31,7 @@ While there are many use cases for tethering, two of the most common ones are:
 - **Generate Image → Edit Image**: Users generate images from a text prompt and seamlessly transition to image editing to refine the output further.
 - **Edit Image → Full Editor**: Users start with an existing image with the goal of performing basic edits and can transition to a Full Editor experience to access advanced features (e.g., adding text, shapes, and more).
 
-You can tether more than two modules together to create even more complex experiences, for example, Generate Image → Edit Image → Full Editor.
+You can tether more than two workflows together to create even more complex experiences, for example, Generate Image → Edit Image → Full Editor.
 
 ![Workflow Tethering](./img/tethering--sample.png)
 
@@ -45,7 +39,7 @@ You can tether more than two modules together to create even more complex experi
 
 Targets
 
-While you can initiate the workflow from any module (for example, Quick Actions), the target module must be either **Edit Image** or **Full Editor**. At the moment, only the Generate Image module can tether to Edit Image.
+While you can initiate tethering from any workflow (for example, Quick Actions), the target workflow must be either **Edit Image** or **Full Editor**. At the moment, only the Generate Image experience can tether to Edit Image.
 
 ## How to implement Workflow Tethering
 
@@ -74,7 +68,7 @@ const exportConfig = [
     id: "save", label: "Save",
     action: { target: "publish" }, style: { uiType: "button" },
   },
-  // Trigger the transition to a new module
+  // Trigger the transition to a new experience
   {
     id: "open-edit-image", label: "Edit image",     // 👈
     action: { target: "image-module" },             // 👈
@@ -95,7 +89,7 @@ module.createImageFromText(appConfig, exportConfig);
 
 Default buttons
 
-The `exportConfig` is always an **optional parameter**. If no export configuration is provided, the module will fall back to the default layout options—which usually include tethering options to the Full Editor.
+The `exportConfig` is always an **optional parameter**. If no export configuration is provided, the workflow will fall back to the default layout options—which usually include tethering options to the Full Editor.
 
 If you need _tighter control_ over what your users can create—for example, prevent adding Text to avoid content moderation—you should always define a custom `exportConfig` that doesn't contain the Full Editor option.
 
@@ -244,7 +238,7 @@ interface IntentChangeConfig {
 
 A simpler `appConfig`
 
-If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), which is the base configuration object for all modules.
+If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), which is the base configuration object for all workflows.
 
 It **only contains** the `callbacks` property, which you are free to set as needed for the next workflow in the transition. Any other properties (for instance, the `appVersion` when tethering to the Edit Image workflow) cannot be passed.
 
@@ -256,7 +250,7 @@ Thanks to the Intent Change Handler, you can **conditionally return the appropri
 
 ### `onIntentChange()` example
 
-Here's an example of how you can use the Intent Change Handler to customize the tethered experience and **serve a different set of Export Options** for each module in a tethered workflow of the kind Generate Image → Edit Image → Full Editor.
+Here's an example of how you can use the Intent Change Handler to customize the tethered experience and **serve a different set of Export Options** for each step in the Generate Image → Edit Image → Full Editor workflow.
 
 ```javascript
 // Initialize the SDK
@@ -266,7 +260,7 @@ const { module } = await window.CCEverywhere.initialize(
   {}
 );
 
-// Shared Export Options for all modules
+// Shared Export Options for all workflows
 const defaultExportConfig = [
   {
     id: "download", label: "Download",

@@ -10,23 +10,22 @@ keywords:
   - Full Editor
   - Tutorial
   - Advanced
-  - Module workflow
   - onPublish callback
   - onIntentChange callback
   - Intent handling
 title: Embed SDK Workflow Tethering tutorial
-description: Advanced guide for implementing workflow tethering between Generate Image, Edit Image, and Full Editor modules using modular architecture
+description: Advanced guide for implementing workflow tethering between Generate Image, Edit Image, and Full Editor using modular architecture
 contributors:
   - https://github.com/undavide
 ---
 
 # Embed SDK Workflow Tethering tutorial
 
-Learn how to combine multiple modules to create a more complex workflow with the Adobe Express Embed SDK.
+Learn how to combine multiple workflows to create a more complex experience with the Adobe Express Embed SDK.
 
 ## Introduction
 
-Welcome! This advanced hands-on tutorial will walk you through implementing workflow tethering that seamlessly connects the Generate Image, Edit Image, and Full Editor modules.
+Welcome! This advanced hands-on tutorial will walk you through implementing workflow tethering that seamlessly connects the Generate Image, Edit Image, and Full Editor experiences.
 
 By the end of this tutorial, you'll have built a complete workflow tethering system where users can generate images, edit them with basic tools, and seamlessly transition to the full Adobe Express editor for advanced editing capabilities.
 
@@ -34,10 +33,10 @@ By the end of this tutorial, you'll have built a complete workflow tethering sys
 
 By completing this tutorial, you'll gain practical skills in:
 
-- Implementing **workflow tethering** between multiple Adobe Express modules
-- Building a **modular architecture** for complex SDK integrations
-- Managing **intent transitions** and **export configurations**
-- Creating **reusable workflow components**
+- Implementing **workflow tethering** between multiple Adobe Express experiences.
+- Building a **modular architecture** for complex SDK integrations.
+- Managing **intent transitions** and **export configurations**.
+- Creating **reusable workflow components**.
 
 ### What you'll build
 
@@ -56,8 +55,8 @@ You'll build a web application that demonstrates two key workflow tethering patt
 This is an **advanced tutorial** that builds upon foundational concepts. Before starting, ensure you have read:
 
 - **[Workflow Tethering guide](../concepts/tethering.md)**: Comprehensive guide to understanding workflow tethering.
-- **[Edit Image tutorial](./edit-image.md)**: Understanding of Edit Image module implementation.
-- **[Generate Image tutorial](./generate-image.md)**: Knowledge of Generate Image module.
+- **[Edit Image tutorial](./edit-image.md)**: Understanding of Edit Image workflow. implementation.
+- **[Generate Image tutorial](./generate-image.md)**: Knowledge of Generate Image workflow.
 
 Additionally, make sure you have:
 
@@ -321,7 +320,7 @@ import {
 } from "../workflows/generateToEdit.js";
 
 // Intent change handler factory
-// Manages transitions between different workflow modules
+// Manages transitions between different workflows
 export function createIntentChangeHandler() {
   return (oldIntent, newIntent) => {
     console.log("Intent transition:", oldIntent, "→", newIntent);
@@ -479,7 +478,7 @@ export async function handleGenerateImagePublish(intent, publishParams) {
 
 ### 4.2 Edit Image → Full Editor workflow
 
-The `workflows/editToFullEditor.js` module manages the transition from the Edit Image to Full Editor Experience.
+The `workflows/editToFullEditor.js` module manages the transition from the Edit Image to Full Editor experience.
 
 #### 4.2.1 Initial workflow launch
 
@@ -533,7 +532,7 @@ import {
 } from "../workflows/editToFullEditor.js";
 
 // Intent change handler factory
-// Manages transitions between different workflow modules
+// Manages transitions between different workflows
 export function createIntentChangeHandler() {
   return (oldIntent, newIntent) => {
     console.log("Intent transition:", oldIntent, "→", newIntent);
@@ -732,7 +731,7 @@ Let's trace through the complete user journeys to understand how all the pieces 
 
 Tethering to Edit Image v1
 
-Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon. More information about the current limitations can be found in the [Workflow Tethering guide](../concepts/tethering.md#caveats).
+Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon. More information about the current limitations can be found in the [Workflow Tethering guide](../concepts/tethering.md#known-limitations).
 
 ### 5.2 Edit Image → Full Editor → Save
 
@@ -1122,7 +1121,7 @@ import {
 
 /**
  * Intent change handler factory
- * Manages transitions between different workflow modules
+ * Manages transitions between different workflows
  */
 export function createIntentChangeHandler() {
   return (oldIntent, newIntent) => {
