@@ -16,13 +16,23 @@ contributors:
 
 # Workflow Tethering
 
-The Adobe Express Embed SDK allows you to tether multiple modules to create a more complex workflow.
+The Adobe Express Embed SDK allows you to tether multiple workflows to create a more complex workflow.
 
-## Use Cases
+## What is Tethering?
 
-You can surface the Embed SDK across multiple entry points in your application. To keep your users engaged, you can chain different workflows to create more complex experiences tailored to your audience's needs.
+You can surface the Embed SDK across multiple entry points in your application; for example, a Quick Action in one page and Generate Image in a different section of your website. To keep your users engaged, you can also **chain different workflows** to create more complex experiences tailored to your audience's needs.
 
-Two of the most common use cases are:
+**Tethering** refers to the ability for you, as a developer, to **allow users to seamlessly switch from one module to another** in a controlled manner. For example, a single Embed SDK experience may start with Background Removal, and then transition to Full Editor.
+
+<InlineAlert variant="info" slots="header, text1" />
+
+Workflow vs. Module
+
+While the two terms can be used interchangeably, in this guide we refer to a Workflow as the experience, and a Module as the API.
+
+### Use Cases
+
+While there are many use cases for tethering, two of the most common ones are:
 
 - **Generate Image → Edit Image**: Users generate images from a text prompt and seamlessly transition to image editing to refine the output further.
 - **Edit Image → Full Editor**: Users start with an existing image with the goal of performing basic edits and can transition to a Full Editor experience to access advanced features (e.g., adding text, shapes, and more).
@@ -41,14 +51,14 @@ While you can initiate the workflow from any module (for example, Quick Actions)
 
 There are two crucial elements to any tethering workflow:
 
-- The **Export Configurations**: set the exporting options for a module.
-- The **Intent Change Handler**: sets additional configurations for the next modules in the transition.
+- The **Export Configurations**: set the exporting options for a workflow.
+- The **Intent Change Handler**: sets additional configurations for the next workflows in the transition.
 
 Please read along to learn more about each of these elements, or try the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) to see them in action.
 
 ## Export Configurations
 
-An Export Configuration defines the buttons displayed in the module's interface. These buttons are used to download assets, save them back to the application that initiated the workflow, or **trigger the transition to the next module**.
+An Export Configuration defines the buttons displayed in the workflow's interface. These buttons are used to download assets, save them back to the application that initiated the workflow, or **trigger the transition to the next workflow**.
 
 ![Workflow Tethering Export Options](./img/tethering--export-options.png)
 
@@ -95,8 +105,8 @@ The `exportConfig` parameter is an array of [`exportOption`](../../v4/shared/src
 
 - [`PublishExportOption`](../../v4/shared/src/types/export-config-types/interfaces/publish-export-option.md): save back to the application that initiated the workflow.
 - [`DownloadExportOption`](../../v4/shared/src/types/export-config-types/interfaces/download-export-option.md): download the asset to the user's device.
-- [`EditFurtherExportOption`](../../v4/shared/src/types/export-config-types/interfaces/edit-further-export-option.md): tether to another module.
-- [`ContinueEditingDropdownOption`](../../v4/shared/src/types/export-config-types/interfaces/continue-editing-dropdown-option.md): tether to another module (dropdown-style buttons).
+- [`EditFurtherExportOption`](../../v4/shared/src/types/export-config-types/interfaces/edit-further-export-option.md): tether to another workflow.
+- [`ContinueEditingDropdownOption`](../../v4/shared/src/types/export-config-types/interfaces/continue-editing-dropdown-option.md): tether to another workflow (dropdown-style buttons).
 
 All `exportOption`s can be either of type [`ButtonStyle`](../../v4/shared/src/types/export-config-types/type-aliases/button-style.md) or [`LinkStyle`](../../v4/shared/src/types/export-config-types/interfaces/link-style.md) (additionally, [`EnabledButtonStyle`](../../v4/shared/src/types/export-config-types/type-aliases/enabled-button-style.md) for `EditFurtherExportOption`). They all have the following properties:
 
@@ -165,15 +175,15 @@ const exportConfig = [
 ];
 ```
 
-### Caveats
+### Known limitations
 
 Currently, there are some limitations to the usage of the `exportConfig` parameter that are subject to change in the future:
 
-- When tethering **from Edit Image V2** to the Full Editor module, only Dropdown-style buttons will work.
-- When tethering **to the Edit Image module**, you cannot launch the V2 experience; only Edit Image V1 is supported.
+- When tethering **from Edit Image V2** to the Full Editor workflow, only Dropdown-style buttons will work.
+- When tethering **to the Edit Image workflow**, you cannot launch the V2 experience; only Edit Image V1 is supported.
 
 ```javascript
-// ⚠️ Only ⚠️ when tethering from Edit Image V2 to the Full Editor module
+// ⚠️ Only ⚠️ when tethering from Edit Image V2 to the Full Editor workflow
 const exportConfig = [
   // ❌ Won't work
   {
@@ -207,13 +217,13 @@ const exportConfig = [
 
 ## Customize the Tethered Experience
 
-In the Embed SDK, every workflow can be customized by setting the `appConfig`, `exportConfig`, and `containerConfig` properties at launch. However, when two or more modules are chained together, **the initial set of configurations may not be ideal for the next experience** in the transition. For example, you may want to use some Export Options in the first module, but not in the second; or the `onPublish()` callback may be different because it needs to communicate with a dedicated backend service—only, say, in the last module.
+In the Embed SDK, every workflow can be customized by setting the `appConfig`, `exportConfig`, and `containerConfig` properties at launch. However, when two or more workflows are chained together, **the initial set of configurations may not be ideal for the next experience** in the transition. For example, you may want to use some Export Options in the first workflow, but not in the second; or the `onPublish()` callback may be different because it needs to communicate with a dedicated backend service—only, say, in the last workflow.
 
-No matter the use case, it would be great to **set new configurations tailored for each module** in a tethered workflow. Enter the Intent Change Handler.
+No matter the use case, it would be great to **set new configurations tailored for each workflow** in a tethered experience. Enter the Intent Change Handler.
 
 ### The Intent Change Handler
 
-The [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) is one of the available handlers that belong to the `appConfig.callbacks` object; it automatically runs when the user passes from one module to another. It receives the old and new intent of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/type-aliases/action-intent.md) as parameters—so you can implement different logic for each transition—and returns an object containing the new [`appConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), [`exportConfig`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md), or [`containerConfig`](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md) objects.
+The [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) is one of the available handlers that belong to the `appConfig.callbacks` object; it automatically runs when the user passes from one workflow to another. It receives the old and new intent of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/type-aliases/action-intent.md) as parameters—so you can implement different logic for each transition—and returns an object containing the new [`appConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), [`exportConfig`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md), or [`containerConfig`](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md) objects.
 
 ```typescript
 // The Intent Change Handler callback signature
@@ -236,13 +246,13 @@ A simpler `appConfig`
 
 If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), which is the base configuration object for all modules.
 
-It **only contains** the `callbacks` property, which you are free to set as needed for the next module in the transition. Any other properties (for instance, the `appVersion` when tethering to the Edit Image module) cannot be passed.
+It **only contains** the `callbacks` property, which you are free to set as needed for the next workflow in the transition. Any other properties (for instance, the `appVersion` when tethering to the Edit Image workflow) cannot be passed.
 
 Thanks to the Intent Change Handler, you can **conditionally return the appropriate configuration** settings, for example, to:
 
 - Implement a different logic for the callbacks.
 - Provide users with a new set of Export Options.
-- Customize the iframe container to fit the new module better.
+- Customize the iframe container to fit the new workflow better.
 
 ### `onIntentChange()` example
 
@@ -326,7 +336,7 @@ module.createImageFromText(
 
 <InlineAlert variant="info" slots="text1" />
 
-In the snippet above, we check the `newIntent` to decide which module to transition to and return the corresponding configuration object. In this simple example, checking the `oldIntent` instead would produce the same result. However, in more complex cases, you may need to consider both `newIntent` and `oldIntent`.
+In the snippet above, we check the `newIntent` to decide which workflow to transition to and return the corresponding configuration object. In this simple example, checking the `oldIntent` instead would produce the same result. However, in more complex cases, you may need to consider both `newIntent` and `oldIntent`.
 
 ## Try it out in the Tutorial
 
