@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="url"></a> `url` | `string` |
+| `url` | `string` |

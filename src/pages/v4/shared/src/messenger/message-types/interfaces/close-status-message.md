@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="closestatus"></a> `closeStatus` | [`CloseStatus`](../../message-types/enumerations/close-status.md) |
+| `closeStatus` | [`CloseStatus`](../../message-types/enumerations/close-status.md) |

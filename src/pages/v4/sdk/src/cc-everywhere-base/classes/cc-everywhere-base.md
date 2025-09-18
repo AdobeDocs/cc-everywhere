@@ -55,10 +55,6 @@ Constructor to initialize CCEverywhere object.
 get static activeInstance(): undefined | CCEverywhereBase;
 ```
 
-##### Hidden
-
--- hide from typedocs
-
 ##### Returns
 
 `undefined` \| `CCEverywhereBase`
@@ -89,10 +85,6 @@ set static activeInstance(instance): void;
 get static state(): State;
 ```
 
-##### Hidden
-
--- hide from typedocs
-
 ##### Returns
 
 [`State`](../../types/cc-everywhere-types/enumerations/state.md)
@@ -102,10 +94,6 @@ get static state(): State;
 ```ts
 set static state(value): void;
 ```
-
-##### Hidden
-
--- hide from typedocs
 
 ##### Parameters
 
@@ -129,10 +117,6 @@ get version(): string;
 
 Get version of SDK
 
-##### Hidden
-
--- hide from typedocs
-
 ##### Returns
 
 `string`
@@ -150,12 +134,6 @@ Method to un-initialize cceverywhere object
 #### Returns
 
 `void`
-
-#### Hidden
-
--- hide from typedocs
-
-***
 
 ### close()
 
@@ -197,10 +175,6 @@ onRequestIdUpdate(requestId): void;
 #### Returns
 
 `void`
-
-#### Hidden
-
--- hide from typedocs
 
 #### Implementation of
 

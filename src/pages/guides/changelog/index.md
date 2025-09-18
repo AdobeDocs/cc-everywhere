@@ -22,6 +22,13 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## [4.35.15] 2025-09-18
+
+### Documentation
+
+- Added a new [Concept guide](../concepts/tethering.md) that covers the **Workflow Tethering** details—the possibility to chain multiple workflows together to create a more complex experience.
+- Added a new comprehensive [Workflow Tethering tutorial](../tutorials/workflow-tethering.md) which builds on the Concept guide and provides a more practical example of how to implement two of the most common workflow tethering patterns: Generate Image → Edit Image and Edit Image → Full Editor.
+
 ## [4.34.27] 2025-09-01
 
 ### Added
@@ -34,7 +41,7 @@ Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no long
 
 - Removed the `ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` enumerations from the `CCEverywhere.TextToImageAppConfig.panelSettings` property.
 
-### Added
+### Documentation
 
 - Added a new [Edit Image tutorial](../tutorials/edit-image.md) that covers the implementation details of the new Edit Image v2 features.
 

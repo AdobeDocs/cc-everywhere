@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="download"></a> `DOWNLOAD` | `"download"` |
-| <a id="download_all"></a> `DOWNLOAD_ALL` | `"download-all"` |
+| `DOWNLOAD` | `"download"` |
+| `DOWNLOAD_ALL` | `"download-all"` |

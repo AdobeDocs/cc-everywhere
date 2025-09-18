@@ -11,8 +11,8 @@ Should be used instead of default Blob type.
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| <a id="size"></a> `size` | `readonly` | `number` |
-| <a id="type"></a> `type` | `readonly` | `string` |
+| `size` | `readonly` | `number` |
+| `type` | `readonly` | `string` |
 
 ## Methods
 

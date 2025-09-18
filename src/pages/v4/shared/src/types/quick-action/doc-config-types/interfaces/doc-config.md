@@ -12,4 +12,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="asset"></a> `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) |
+| `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) |

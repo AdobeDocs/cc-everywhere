@@ -11,15 +11,15 @@ These styles draw from various art movements and cultural aesthetics for inspira
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="steampunk"></a> `STEAMPUNK` | `"steampunk"` |
-| <a id="synthwave"></a> `SYNTHWAVE` | `"synthwave"` |
-| <a id="vaporwave"></a> `VAPORWAVE` | `"vaporwave"` |
-| <a id="science_fiction"></a> `SCIENCE_FICTION` | `"science_fiction"` |
-| <a id="psychedelic"></a> `PSYCHEDELIC` | `"psychedelic"` |
-| <a id="fantasy"></a> `FANTASY` | `"fantasy"` |
-| <a id="pop_art"></a> `POP_ART` | `"pop_art"` |
-| <a id="minimalism"></a> `MINIMALISM` | `"minimalism"` |
-| <a id="maximalism"></a> `MAXIMALISM` | `"maximalism"` |
-| <a id="cubism"></a> `CUBISM` | `"cubism"` |
-| <a id="cyberpunk"></a> `CYBERPUNK` | `"cyberpunk"` |
-| <a id="baroque"></a> `BAROQUE` | `"baroque"` |
+| `STEAMPUNK` | `"steampunk"` |
+| `SYNTHWAVE` | `"synthwave"` |
+| `VAPORWAVE` | `"vaporwave"` |
+| `SCIENCE_FICTION` | `"science_fiction"` |
+| `PSYCHEDELIC` | `"psychedelic"` |
+| `FANTASY` | `"fantasy"` |
+| `POP_ART` | `"pop_art"` |
+| `MINIMALISM` | `"minimalism"` |
+| `MAXIMALISM` | `"maximalism"` |
+| `CUBISM` | `"cubism"` |
+| `CYBERPUNK` | `"cyberpunk"` |
+| `BAROQUE` | `"baroque"` |

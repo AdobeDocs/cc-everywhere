@@ -8,4 +8,4 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="smart_stylize"></a> `SMART_STYLIZE` | `"smart-stylize"` |
+| `SMART_STYLIZE` | `"smart-stylize"` |

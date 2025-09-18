@@ -8,15 +8,15 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="add_text"></a> `ADD_TEXT` | `"add-text"` |
-| <a id="add_icons_and_shapes"></a> `ADD_ICONS_AND_SHAPES` | `"add-icons-and-shapes"` |
-| <a id="add_images"></a> `ADD_IMAGES` | `"add-images"` |
-| <a id="add_effects"></a> `ADD_EFFECTS` | `"add-effects"` |
-| <a id="remove_background"></a> `REMOVE_BACKGROUND` | `"remove-background"` |
-| <a id="resize_image"></a> `RESIZE_IMAGE` | `"resize-image"` |
-| <a id="crop_image"></a> `CROP_IMAGE` | `"crop-image"` |
-| <a id="apply_adjustment"></a> `APPLY_ADJUSTMENT` | `"apply-adjustment"` |
-| <a id="gen_fill"></a> `GEN_FILL` | `"gen-fill"` |
-| <a id="remove_object"></a> `REMOVE_OBJECT` | `"remove-object"` |
-| <a id="insert_object"></a> `INSERT_OBJECT` | `"insert-object"` |
-| <a id="no_intent"></a> `NO_INTENT` | `"no-intent"` |
+| `ADD_TEXT` | `"add-text"` |
+| `ADD_ICONS_AND_SHAPES` | `"add-icons-and-shapes"` |
+| `ADD_IMAGES` | `"add-images"` |
+| `ADD_EFFECTS` | `"add-effects"` |
+| `REMOVE_BACKGROUND` | `"remove-background"` |
+| `RESIZE_IMAGE` | `"resize-image"` |
+| `CROP_IMAGE` | `"crop-image"` |
+| `APPLY_ADJUSTMENT` | `"apply-adjustment"` |
+| `GEN_FILL` | `"gen-fill"` |
+| `REMOVE_OBJECT` | `"remove-object"` |
+| `INSERT_OBJECT` | `"insert-object"` |
+| `NO_INTENT` | `"no-intent"` |

@@ -8,12 +8,12 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="assetid"></a> `assetId` | `string` |
-| <a id="title"></a> `title` | `string` |
-| <a id="thumbnailsrc"></a> `thumbnailSrc` | `string` |
-| <a id="fullrenditionsrc"></a> `fullRenditionSrc` | `string` |
-| <a id="height"></a> `height` | `number` |
-| <a id="width"></a> `width` | `number` |
-| <a id="ownerinfo"></a> `ownerInfo?` | `object` |
+| `assetId` | `string` |
+| `title` | `string` |
+| `thumbnailSrc` | `string` |
+| `fullRenditionSrc` | `string` |
+| `height` | `number` |
+| `width` | `number` |
+| `ownerInfo?` | `object` |
 | `ownerInfo.name` | `string` |
 | `ownerInfo.imgSrc` | `string` |

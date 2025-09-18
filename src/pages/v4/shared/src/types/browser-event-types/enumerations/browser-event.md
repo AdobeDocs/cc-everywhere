@@ -8,4 +8,4 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="close"></a> `CLOSE` | `"pagehide"` |
+| `CLOSE` | `"pagehide"` |

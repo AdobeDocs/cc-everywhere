@@ -10,5 +10,5 @@ Base class for user related information.
 
 | Property | Type |
 | ------ | ------ |
-| <a id="userid"></a> `userId?` | `string` |
-| <a id="piipstatus"></a> `piipStatus?` | [`PIIPStatus`](../../host-info-types/enumerations/piip-status.md) |
+| `userId?` | `string` |
+| `piipStatus?` | [`PIIPStatus`](../../host-info-types/enumerations/piip-status.md) |

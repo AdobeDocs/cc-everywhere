@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="online"></a> `ONLINE` | `"online"` |
-| <a id="offline"></a> `OFFLINE` | `"offline"` |
+| `ONLINE` | `"online"` |
+| `OFFLINE` | `"offline"` |

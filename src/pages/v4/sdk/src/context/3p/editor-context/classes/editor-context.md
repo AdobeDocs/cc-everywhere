@@ -37,7 +37,7 @@ new EditorContext(context): EditorContext;
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="context"></a> `context` | `public` | `ActionContext` | [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`context`](../../../workflow-context/classes/workflow-context.md#context) |
+| `context` | `public` | `ActionContext` | [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`context`](../../../workflow-context/classes/workflow-context.md#context) |
 
 ## Methods
 

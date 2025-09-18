@@ -14,4 +14,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="target"></a> `target` | [`ExportTarget`](../../export-config-types/type-aliases/export-target.md) |
+| `target` | [`ExportTarget`](../../export-config-types/type-aliases/export-target.md) |

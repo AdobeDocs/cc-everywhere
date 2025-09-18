@@ -19,6 +19,6 @@ It includes the following properties:
 
 | Property | Type |
 | ------ | ------ |
-| <a id="blob"></a> `blob` | [`Blob`](../../asset-types/interfaces/blob.md) |
-| <a id="url"></a> `url` | `string` |
-| <a id="base64"></a> `base64` | `string` |
+| `blob` | [`Blob`](../../asset-types/interfaces/blob.md) |
+| `url` | `string` |
+| `base64` | `string` |

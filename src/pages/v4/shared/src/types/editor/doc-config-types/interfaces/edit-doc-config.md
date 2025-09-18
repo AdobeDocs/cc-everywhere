@@ -12,4 +12,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="documentid"></a> `documentId` | `string` |
+| `documentId` | `string` |

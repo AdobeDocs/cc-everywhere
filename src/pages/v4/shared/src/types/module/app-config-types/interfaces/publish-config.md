@@ -8,5 +8,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="id"></a> `id` | `string` |
-| <a id="label"></a> `label` | `string` |
+| `id` | `string` |
+| `label` | `string` |

@@ -11,9 +11,9 @@ Reference : https://semver.org/
 
 | Property | Type |
 | ------ | ------ |
-| <a id="major"></a> `major` | `number` |
-| <a id="minor"></a> `minor` | `number` |
-| <a id="patch"></a> `patch?` | `number` |
-| <a id="build"></a> `build?` | `number` |
-| <a id="prefix"></a> `prefix?` | `string` |
-| <a id="suffix"></a> `suffix?` | `string` |
+| `major` | `number` |
+| `minor` | `number` |
+| `patch?` | `number` |
+| `build?` | `number` |
+| `prefix?` | `string` |
+| `suffix?` | `string` |

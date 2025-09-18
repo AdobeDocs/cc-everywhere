@@ -41,11 +41,6 @@ new CCEverywhere(
 
 `CCEverywhere`
 
-#### Hidden
-
--- hide from typedocs
-Constructor to initialize CCEverywhere object.
-
 #### Overrides
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`constructor`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#constructor)
@@ -54,9 +49,9 @@ Constructor to initialize CCEverywhere object.
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| <a id="editor"></a> `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/editor-workflow/classes/editor-workflow.md) |
-| <a id="module"></a> `module` | `readonly` | [`ModuleWorkflow`](../../../workflows/3p/module-workflow/classes/module-workflow.md) |
-| <a id="quickaction"></a> `quickAction` | `readonly` | [`QuickActionWorkflow`](../../../workflows/3p/quick-action-workflow/classes/quick-action-workflow.md) |
+| `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/editor-workflow/classes/editor-workflow.md) |
+| `module` | `readonly` | [`ModuleWorkflow`](../../../workflows/3p/module-workflow/classes/module-workflow.md) |
+| `quickAction` | `readonly` | [`QuickActionWorkflow`](../../../workflows/3p/quick-action-workflow/classes/quick-action-workflow.md) |
 
 ## Accessors
 
@@ -69,10 +64,6 @@ get static activeInstance():
   | undefined
   | CCEverywhereBase;
 ```
-
-##### Hidden
-
--- hide from typedocs
 
 ##### Returns
 
@@ -109,10 +100,6 @@ set static activeInstance(instance): void;
 get static state(): State;
 ```
 
-##### Hidden
-
--- hide from typedocs
-
 ##### Returns
 
 [`State`](../../../types/cc-everywhere-types/enumerations/state.md)
@@ -122,10 +109,6 @@ get static state(): State;
 ```ts
 set static state(value): void;
 ```
-
-##### Hidden
-
--- hide from typedocs
 
 ##### Parameters
 
@@ -153,10 +136,6 @@ get version(): string;
 
 Get version of SDK
 
-##### Hidden
-
--- hide from typedocs
-
 ##### Returns
 
 `string`
@@ -178,10 +157,6 @@ Method to un-initialize cceverywhere object
 #### Returns
 
 `void`
-
-#### Hidden
-
--- hide from typedocs
 
 #### Inherited from
 
@@ -237,10 +212,6 @@ onRequestIdUpdate(requestId): void;
 #### Returns
 
 `void`
-
-#### Hidden
-
--- hide from typedocs
 
 #### Inherited from
 

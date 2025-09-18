@@ -11,7 +11,7 @@ Choose from photo, graphic, or art to set the overall approach for your generate
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="photo"></a> `PHOTO` | `"photo"` |
-| <a id="graphic"></a> `GRAPHIC` | `"graphic"` |
-| <a id="art"></a> `ART` | `"art"` |
-| <a id="auto"></a> `AUTO` | `"auto"` |
+| `AUTO` | `"auto"` |
+| `PHOTO` | `"photo"` |
+| `GRAPHIC` | `"graphic"` |
+| `ART` | `"art"` |

@@ -8,4 +8,4 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="pdf"></a> `PDF` | `"application/pdf"` |
+| `PDF` | `"application/pdf"` |

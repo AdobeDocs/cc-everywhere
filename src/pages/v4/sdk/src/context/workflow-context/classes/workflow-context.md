@@ -39,7 +39,7 @@ new WorkflowContext<T>(context): WorkflowContext<T>;
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| <a id="context"></a> `context` | `public` | `T` |
+| `context` | `public` | `T` |
 
 ## Methods
 

@@ -16,4 +16,4 @@ Used to specify the type of content to be generated (e.g., photo, graphic, art).
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="value"></a> `value` | [`ImageContentType`](../../panel-settings-types/enumerations/image-content-type.md) | The value of the setting. Generic type allows for different value types. | [`BasePanelSetting`](../../panel-settings-types/interfaces/base-panel-setting.md).[`value`](../../panel-settings-types/interfaces/base-panel-setting.md#value) |
+| `value` | [`ImageContentType`](../../panel-settings-types/enumerations/image-content-type.md) | The value of the setting. Generic type allows for different value types. | [`BasePanelSetting`](../../panel-settings-types/interfaces/base-panel-setting.md).[`value`](../../panel-settings-types/interfaces/base-panel-setting.md#value) |

@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="success"></a> `SUCCESS` | `"SUCCESS"` |
-| <a id="failure"></a> `FAILURE` | `"FAILURE"` |
+| `SUCCESS` | `"SUCCESS"` |
+| `FAILURE` | `"FAILURE"` |

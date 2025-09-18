@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="pdf"></a> `pdf` | `"pdf"` |
-| <a id="pdfprint"></a> `pdfPrint` | `"pdfPrint"` |
+| `pdf` | `"pdf"` |
+| `pdfPrint` | `"pdfPrint"` |

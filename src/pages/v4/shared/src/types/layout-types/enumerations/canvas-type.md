@@ -10,134 +10,134 @@ Canvas Layout supported in Project X
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="album_cover"></a> `ALBUM_COVER` | `"AlbumCover"` |
-| <a id="banner_print"></a> `BANNER_PRINT` | `"BannerPrint"` |
-| <a id="banner_web"></a> `BANNER_WEB` | `"BannerWeb"` |
-| <a id="blog_graphic"></a> `BLOG_GRAPHIC` | `"BlogGraphic"` |
-| <a id="blog_header"></a> `BLOG_HEADER` | `"BlogHeader"` |
-| <a id="book_cover"></a> `BOOK_COVER` | `"BookCover"` |
-| <a id="bookmark"></a> `BOOKMARK` | `"Bookmark"` |
-| <a id="brochure"></a> `BROCHURE` | `"Brochure"` |
-| <a id="business_card"></a> `BUSINESS_CARD` | `"BusinessCard"` |
-| <a id="calendar"></a> `CALENDAR` | `"Calendar"` |
-| <a id="card_greeting"></a> `CARD_GREETING` | `"CardGreeting"` |
-| <a id="certificate"></a> `CERTIFICATE` | `"Certificate"` |
-| <a id="checklist"></a> `CHECKLIST` | `"Checklist"` |
-| <a id="class_schedule"></a> `CLASS_SCHEDULE` | `"ClassSchedule"` |
-| <a id="comic_strip"></a> `COMIC_STRIP` | `"ComicStrip"` |
-| <a id="concept_map"></a> `CONCEPT_MAP` | `"ConceptMap"` |
-| <a id="coupon_sheet"></a> `COUPON_SHEET` | `"CouponSheet"` |
-| <a id="cover_page"></a> `COVER_PAGE` | `"CoverPage"` |
-| <a id="display_ad"></a> `DISPLAY_AD` | `"DisplayAd"` |
-| <a id="divider_page"></a> `DIVIDER_PAGE` | `"DividerPage"` |
-| <a id="ebook_cover"></a> `EBOOK_COVER` | `"EbookCover"` |
-| <a id="email_header"></a> `EMAIL_HEADER` | `"EmailHeader"` |
-| <a id="etsy_cover"></a> `ETSY_COVER` | `"EtsyCover"` |
-| <a id="etsy_shop_banner"></a> `ETSY_SHOP_BANNER` | `"EtsyShopBanner"` |
-| <a id="eventbrite_event_image"></a> `EVENTBRITE_EVENT_IMAGE` | `"EventbriteEventImage"` |
-| <a id="facebook"></a> `FACEBOOK` | `"Facebook"` |
-| <a id="facebook_ad"></a> `FACEBOOK_AD` | `"FacebookAd"` |
-| <a id="facebook_event_cover"></a> `FACEBOOK_EVENT_COVER` | `"FacebookEventCover"` |
-| <a id="facebook_group_cover"></a> `FACEBOOK_GROUP_COVER` | `"FacebookGroupCover"` |
-| <a id="facebook_page_cover"></a> `FACEBOOK_PAGE_COVER` | `"FacebookPageCover"` |
-| <a id="facebook_profile_cover"></a> `FACEBOOK_PROFILE_COVER` | `"FacebookProfileCover"` |
-| <a id="facebook_shop_cover"></a> `FACEBOOK_SHOP_COVER` | `"FacebookShopCover"` |
-| <a id="facebook_story"></a> `FACEBOOK_STORY` | `"FacebookStory"` |
-| <a id="flash_card"></a> `FLASH_CARD` | `"FlashCard"` |
-| <a id="flash_card_sheet"></a> `FLASH_CARD_SHEET` | `"FlashCardSheet"` |
-| <a id="flyer"></a> `FLYER` | `"Flyer"` |
-| <a id="gift_certificate"></a> `GIFT_CERTIFICATE` | `"GiftCertificate"` |
-| <a id="gift_tag"></a> `GIFT_TAG` | `"GiftTag"` |
-| <a id="google_classroom_banner"></a> `GOOGLE_CLASSROOM_BANNER` | `"GoogleClassroomBanner"` |
-| <a id="graph"></a> `GRAPH` | `"Graph"` |
-| <a id="graphic_organizer"></a> `GRAPHIC_ORGANIZER` | `"GraphicOrganizer"` |
-| <a id="id_card"></a> `ID_CARD` | `"IdCard"` |
-| <a id="infographic"></a> `INFOGRAPHIC` | `"Infographic"` |
-| <a id="instagram"></a> `INSTAGRAM` | `"Instagram"` |
-| <a id="instagram_ad"></a> `INSTAGRAM_AD` | `"InstagramAd"` |
-| <a id="instagram_carousel"></a> `INSTAGRAM_CAROUSEL` | `"InstagramCarousel"` |
-| <a id="instagram_landscape"></a> `INSTAGRAM_LANDSCAPE` | `"InstagramLandscape"` |
-| <a id="instagram_portrait_post"></a> `INSTAGRAM_PORTRAIT_POST` | `"InstagramPortraitPost"` |
-| <a id="instagram_reel"></a> `INSTAGRAM_REEL` | `"InstagramReel"` |
-| <a id="instagram_story"></a> `INSTAGRAM_STORY` | `"InstagramStory"` |
-| <a id="instagram_story_ad"></a> `INSTAGRAM_STORY_AD` | `"InstagramStoryAd"` |
-| <a id="invitation"></a> `INVITATION` | `"Invitation"` |
-| <a id="invoice"></a> `INVOICE` | `"Invoice"` |
-| <a id="label"></a> `LABEL` | `"Label"` |
-| <a id="label_sheet"></a> `LABEL_SHEET` | `"LabelSheet"` |
-| <a id="leaflet_trifold"></a> `LEAFLET_TRIFOLD` | `"LeafletTrifold"` |
-| <a id="lesson_plan"></a> `LESSON_PLAN` | `"LessonPlan"` |
-| <a id="letter"></a> `LETTER` | `"Letter"` |
-| <a id="line_ad_small"></a> `LINE_AD_SMALL` | `"LineAdSmall"` |
-| <a id="line_ad_square"></a> `LINE_AD_SQUARE` | `"LineAdSquare"` |
-| <a id="line_ad_vertical"></a> `LINE_AD_VERTICAL` | `"LineAdVertical"` |
-| <a id="line_rich_menu_large"></a> `LINE_RICH_MENU_LARGE` | `"LineRichMenuLarge"` |
-| <a id="line_rich_menu_small"></a> `LINE_RICH_MENU_SMALL` | `"LineRichMenuSmall"` |
-| <a id="line_rich_message"></a> `LINE_RICH_MESSAGE` | `"LineRichMessage"` |
-| <a id="line_ad_square_image"></a> `LINE_AD_SQUARE_IMAGE` | `"LineAdSquareImage"` |
-| <a id="line_ad_square_video"></a> `LINE_AD_SQUARE_VIDEO` | `"LineAdSquareVideo"` |
-| <a id="letterhead"></a> `LETTERHEAD` | `"Letterhead"` |
-| <a id="linkedin_blogpost"></a> `LINKEDIN_BLOGPOST` | `"LinkedInBlogPost"` |
-| <a id="linkedin_post"></a> `LINKEDIN_POST` | `"LinkedinPost"` |
-| <a id="linkedin_profile_cover"></a> `LINKEDIN_PROFILE_COVER` | `"LinkedInProfileCover"` |
-| <a id="logo"></a> `LOGO` | `"Logo"` |
-| <a id="magazine"></a> `MAGAZINE` | `"Magazine"` |
-| <a id="media_kit"></a> `MEDIA_KIT` | `"MediaKit"` |
-| <a id="meme"></a> `MEME` | `"Meme"` |
-| <a id="memo"></a> `MEMO` | `"Memo"` |
-| <a id="menu"></a> `MENU` | `"Menu"` |
-| <a id="mindmap"></a> `MINDMAP` | `"Mindmap"` |
-| <a id="mobile_video"></a> `MOBILE_VIDEO` | `"MobileVideo"` |
-| <a id="mug"></a> `MUG` | `"Mug"` |
-| <a id="name_tag"></a> `NAME_TAG` | `"NameTag"` |
-| <a id="newsletter"></a> `NEWSLETTER` | `"Newsletter"` |
-| <a id="note_header_image"></a> `NOTE_HEADER_IMAGE` | `"NoteHeaderImage"` |
-| <a id="pamphlet"></a> `PAMPHLET` | `"Pamphlet"` |
-| <a id="photo_book"></a> `PHOTO_BOOK` | `"PhotoBook"` |
-| <a id="pinterest"></a> `PINTEREST` | `"Pinterest"` |
-| <a id="pinterest_idea_pin"></a> `PINTEREST_IDEA_PIN` | `"PinterestIdeaPin"` |
-| <a id="pinterest_square"></a> `PINTEREST_SQUARE` | `"PinterestSquare"` |
-| <a id="pinterest_vertical"></a> `PINTEREST_VERTICAL` | `"PinterestVertical"` |
-| <a id="place_card"></a> `PLACE_CARD` | `"PlaceCard"` |
-| <a id="planner"></a> `PLANNER` | `"Planner"` |
-| <a id="playlist_cover"></a> `PLAYLIST_COVER` | `"PlaylistCover"` |
-| <a id="podcast_cover"></a> `PODCAST_COVER` | `"PodcastCover"` |
-| <a id="postcard"></a> `POSTCARD` | `"Postcard"` |
-| <a id="poster"></a> `POSTER` | `"Poster"` |
-| <a id="presentation"></a> `PRESENTATION` | `"Presentation"` |
-| <a id="print_ad"></a> `PRINT_AD` | `"PrintAd"` |
-| <a id="program"></a> `PROGRAM` | `"Program"` |
-| <a id="proposal"></a> `PROPOSAL` | `"Proposal"` |
-| <a id="recipe_card"></a> `RECIPE_CARD` | `"RecipeCard"` |
-| <a id="reddit_cover"></a> `REDDIT_COVER` | `"RedditCover"` |
-| <a id="report"></a> `REPORT` | `"Report"` |
-| <a id="report_card"></a> `REPORT_CARD` | `"ReportCard"` |
-| <a id="resume"></a> `RESUME` | `"Resume"` |
-| <a id="rubric"></a> `RUBRIC` | `"Rubric"` |
-| <a id="snapchat_ad"></a> `SNAPCHAT_AD` | `"SnapchatAd"` |
-| <a id="snapchat_story"></a> `SNAPCHAT_STORY` | `"SnapchatStory"` |
-| <a id="soundcloud_banner"></a> `SOUNDCLOUD_BANNER` | `"SoundcloudBanner"` |
-| <a id="table_of_contents"></a> `TABLE_OF_CONTENTS` | `"TableOfContents"` |
-| <a id="ticket"></a> `TICKET` | `"Ticket"` |
-| <a id="tiktok_ad"></a> `TIKTOK_AD` | `"TiktokAd"` |
-| <a id="tiktok_video"></a> `TIKTOK_VIDEO` | `"TiktokVideo"` |
-| <a id="tshirt"></a> `TSHIRT` | `"Tshirt"` |
-| <a id="tumblr_banner"></a> `TUMBLR_BANNER` | `"TumblrBanner"` |
-| <a id="twitch_banner"></a> `TWITCH_BANNER` | `"TwitchBanner"` |
-| <a id="twitch_overlay"></a> `TWITCH_OVERLAY` | `"TwitchOverlay"` |
-| <a id="twitter"></a> `TWITTER` | `"Twitter"` |
-| <a id="twitter_header"></a> `TWITTER_HEADER` | `"TwitterHeader"` |
-| <a id="twitter_video"></a> `TWITTER_VIDEO` | `"TwitterVideo"` |
-| <a id="video"></a> `VIDEO` | `"Video"` |
-| <a id="wallpaper_desktop"></a> `WALLPAPER_DESKTOP` | `"WallpaperDesktop"` |
-| <a id="wallpaper_mobile"></a> `WALLPAPER_MOBILE` | `"WallpaperMobile"` |
-| <a id="worksheet"></a> `WORKSHEET` | `"Worksheet"` |
-| <a id="yahoo_web_banner_ad"></a> `YAHOO_WEB_BANNER_AD` | `"YahooWebBannerAd"` |
-| <a id="youtube_channel_art"></a> `YOUTUBE_CHANNEL_ART` | `"YouTubeChannelArt"` |
-| <a id="youtube_display_ads"></a> `YOUTUBE_DISPLAY_ADS` | `"YoutubeDisplayAds"` |
-| <a id="youtube_profile_photo"></a> `YOUTUBE_PROFILE_PHOTO` | `"YoutubeProfilePhoto"` |
-| <a id="youtube_shorts"></a> `YOUTUBE_SHORTS` | `"YoutubeShorts"` |
-| <a id="youtube_thumbnail"></a> `YOUTUBE_THUMBNAIL` | `"YoutubeThumbnail"` |
-| <a id="youtube_video"></a> `YOUTUBE_VIDEO` | `"YoutubeVideo"` |
-| <a id="youtube_video_ad"></a> `YOUTUBE_VIDEO_AD` | `"YoutubeVideoAd"` |
-| <a id="zoom_background"></a> `ZOOM_BACKGROUND` | `"ZoomBackground"` |
+| `ALBUM_COVER` | `"AlbumCover"` |
+| `BANNER_PRINT` | `"BannerPrint"` |
+| `BANNER_WEB` | `"BannerWeb"` |
+| `BLOG_GRAPHIC` | `"BlogGraphic"` |
+| `BLOG_HEADER` | `"BlogHeader"` |
+| `BOOK_COVER` | `"BookCover"` |
+| `BOOKMARK` | `"Bookmark"` |
+| `BROCHURE` | `"Brochure"` |
+| `BUSINESS_CARD` | `"BusinessCard"` |
+| `CALENDAR` | `"Calendar"` |
+| `CARD_GREETING` | `"CardGreeting"` |
+| `CERTIFICATE` | `"Certificate"` |
+| `CHECKLIST` | `"Checklist"` |
+| `CLASS_SCHEDULE` | `"ClassSchedule"` |
+| `COMIC_STRIP` | `"ComicStrip"` |
+| `CONCEPT_MAP` | `"ConceptMap"` |
+| `COUPON_SHEET` | `"CouponSheet"` |
+| `COVER_PAGE` | `"CoverPage"` |
+| `DISPLAY_AD` | `"DisplayAd"` |
+| `DIVIDER_PAGE` | `"DividerPage"` |
+| `EBOOK_COVER` | `"EbookCover"` |
+| `EMAIL_HEADER` | `"EmailHeader"` |
+| `ETSY_COVER` | `"EtsyCover"` |
+| `ETSY_SHOP_BANNER` | `"EtsyShopBanner"` |
+| `EVENTBRITE_EVENT_IMAGE` | `"EventbriteEventImage"` |
+| `FACEBOOK` | `"Facebook"` |
+| `FACEBOOK_AD` | `"FacebookAd"` |
+| `FACEBOOK_EVENT_COVER` | `"FacebookEventCover"` |
+| `FACEBOOK_GROUP_COVER` | `"FacebookGroupCover"` |
+| `FACEBOOK_PAGE_COVER` | `"FacebookPageCover"` |
+| `FACEBOOK_PROFILE_COVER` | `"FacebookProfileCover"` |
+| `FACEBOOK_SHOP_COVER` | `"FacebookShopCover"` |
+| `FACEBOOK_STORY` | `"FacebookStory"` |
+| `FLASH_CARD` | `"FlashCard"` |
+| `FLASH_CARD_SHEET` | `"FlashCardSheet"` |
+| `FLYER` | `"Flyer"` |
+| `GIFT_CERTIFICATE` | `"GiftCertificate"` |
+| `GIFT_TAG` | `"GiftTag"` |
+| `GOOGLE_CLASSROOM_BANNER` | `"GoogleClassroomBanner"` |
+| `GRAPH` | `"Graph"` |
+| `GRAPHIC_ORGANIZER` | `"GraphicOrganizer"` |
+| `ID_CARD` | `"IdCard"` |
+| `INFOGRAPHIC` | `"Infographic"` |
+| `INSTAGRAM` | `"Instagram"` |
+| `INSTAGRAM_AD` | `"InstagramAd"` |
+| `INSTAGRAM_CAROUSEL` | `"InstagramCarousel"` |
+| `INSTAGRAM_LANDSCAPE` | `"InstagramLandscape"` |
+| `INSTAGRAM_PORTRAIT_POST` | `"InstagramPortraitPost"` |
+| `INSTAGRAM_REEL` | `"InstagramReel"` |
+| `INSTAGRAM_STORY` | `"InstagramStory"` |
+| `INSTAGRAM_STORY_AD` | `"InstagramStoryAd"` |
+| `INVITATION` | `"Invitation"` |
+| `INVOICE` | `"Invoice"` |
+| `LABEL` | `"Label"` |
+| `LABEL_SHEET` | `"LabelSheet"` |
+| `LEAFLET_TRIFOLD` | `"LeafletTrifold"` |
+| `LESSON_PLAN` | `"LessonPlan"` |
+| `LETTER` | `"Letter"` |
+| `LINE_AD_SMALL` | `"LineAdSmall"` |
+| `LINE_AD_SQUARE` | `"LineAdSquare"` |
+| `LINE_AD_VERTICAL` | `"LineAdVertical"` |
+| `LINE_RICH_MENU_LARGE` | `"LineRichMenuLarge"` |
+| `LINE_RICH_MENU_SMALL` | `"LineRichMenuSmall"` |
+| `LINE_RICH_MESSAGE` | `"LineRichMessage"` |
+| `LINE_AD_SQUARE_IMAGE` | `"LineAdSquareImage"` |
+| `LINE_AD_SQUARE_VIDEO` | `"LineAdSquareVideo"` |
+| `LETTERHEAD` | `"Letterhead"` |
+| `LINKEDIN_BLOGPOST` | `"LinkedInBlogPost"` |
+| `LINKEDIN_POST` | `"LinkedinPost"` |
+| `LINKEDIN_PROFILE_COVER` | `"LinkedInProfileCover"` |
+| `LOGO` | `"Logo"` |
+| `MAGAZINE` | `"Magazine"` |
+| `MEDIA_KIT` | `"MediaKit"` |
+| `MEME` | `"Meme"` |
+| `MEMO` | `"Memo"` |
+| `MENU` | `"Menu"` |
+| `MINDMAP` | `"Mindmap"` |
+| `MOBILE_VIDEO` | `"MobileVideo"` |
+| `MUG` | `"Mug"` |
+| `NAME_TAG` | `"NameTag"` |
+| `NEWSLETTER` | `"Newsletter"` |
+| `NOTE_HEADER_IMAGE` | `"NoteHeaderImage"` |
+| `PAMPHLET` | `"Pamphlet"` |
+| `PHOTO_BOOK` | `"PhotoBook"` |
+| `PINTEREST` | `"Pinterest"` |
+| `PINTEREST_IDEA_PIN` | `"PinterestIdeaPin"` |
+| `PINTEREST_SQUARE` | `"PinterestSquare"` |
+| `PINTEREST_VERTICAL` | `"PinterestVertical"` |
+| `PLACE_CARD` | `"PlaceCard"` |
+| `PLANNER` | `"Planner"` |
+| `PLAYLIST_COVER` | `"PlaylistCover"` |
+| `PODCAST_COVER` | `"PodcastCover"` |
+| `POSTCARD` | `"Postcard"` |
+| `POSTER` | `"Poster"` |
+| `PRESENTATION` | `"Presentation"` |
+| `PRINT_AD` | `"PrintAd"` |
+| `PROGRAM` | `"Program"` |
+| `PROPOSAL` | `"Proposal"` |
+| `RECIPE_CARD` | `"RecipeCard"` |
+| `REDDIT_COVER` | `"RedditCover"` |
+| `REPORT` | `"Report"` |
+| `REPORT_CARD` | `"ReportCard"` |
+| `RESUME` | `"Resume"` |
+| `RUBRIC` | `"Rubric"` |
+| `SNAPCHAT_AD` | `"SnapchatAd"` |
+| `SNAPCHAT_STORY` | `"SnapchatStory"` |
+| `SOUNDCLOUD_BANNER` | `"SoundcloudBanner"` |
+| `TABLE_OF_CONTENTS` | `"TableOfContents"` |
+| `TICKET` | `"Ticket"` |
+| `TIKTOK_AD` | `"TiktokAd"` |
+| `TIKTOK_VIDEO` | `"TiktokVideo"` |
+| `TSHIRT` | `"Tshirt"` |
+| `TUMBLR_BANNER` | `"TumblrBanner"` |
+| `TWITCH_BANNER` | `"TwitchBanner"` |
+| `TWITCH_OVERLAY` | `"TwitchOverlay"` |
+| `TWITTER` | `"Twitter"` |
+| `TWITTER_HEADER` | `"TwitterHeader"` |
+| `TWITTER_VIDEO` | `"TwitterVideo"` |
+| `VIDEO` | `"Video"` |
+| `WALLPAPER_DESKTOP` | `"WallpaperDesktop"` |
+| `WALLPAPER_MOBILE` | `"WallpaperMobile"` |
+| `WORKSHEET` | `"Worksheet"` |
+| `YAHOO_WEB_BANNER_AD` | `"YahooWebBannerAd"` |
+| `YOUTUBE_CHANNEL_ART` | `"YouTubeChannelArt"` |
+| `YOUTUBE_DISPLAY_ADS` | `"YoutubeDisplayAds"` |
+| `YOUTUBE_PROFILE_PHOTO` | `"YoutubeProfilePhoto"` |
+| `YOUTUBE_SHORTS` | `"YoutubeShorts"` |
+| `YOUTUBE_THUMBNAIL` | `"YoutubeThumbnail"` |
+| `YOUTUBE_VIDEO` | `"YoutubeVideo"` |
+| `YOUTUBE_VIDEO_AD` | `"YoutubeVideoAd"` |
+| `ZOOM_BACKGROUND` | `"ZoomBackground"` |

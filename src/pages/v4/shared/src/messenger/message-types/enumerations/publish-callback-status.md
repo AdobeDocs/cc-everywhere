@@ -8,6 +8,7 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="success"></a> `SUCCESS` | `"SUCCESS"` |
-| <a id="denied"></a> `DENIED` | `"DENIED"` |
-| <a id="noop"></a> `NOOP` | `"NOOP"` |
+| `SUCCESS` | `"SUCCESS"` |
+| `DENIED` | `"DENIED"` |
+| `ERROR` | `"ERROR"` |
+| `NOOP` | `"NOOP"` |

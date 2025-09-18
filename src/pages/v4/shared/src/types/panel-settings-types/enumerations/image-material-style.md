@@ -11,12 +11,12 @@ These styles create the appearance of various physical materials and their chara
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="layered_paper"></a> `LAYERED_PAPER` | `"layered_paper"` |
-| <a id="claymation"></a> `CLAYMATION` | `"claymation"` |
-| <a id="origami"></a> `ORIGAMI` | `"origami"` |
-| <a id="fur"></a> `FUR` | `"fur"` |
-| <a id="yarn"></a> `YARN` | `"yarn"` |
-| <a id="made_of_metal"></a> `MADE_OF_METAL` | `"made_of_metal"` |
-| <a id="marble_sculpture"></a> `MARBLE_SCULPTURE` | `"marble_sculpture"` |
-| <a id="wood_carving"></a> `WOOD_CARVING` | `"wood_carving"` |
-| <a id="fabric"></a> `FABRIC` | `"fabric"` |
+| `LAYERED_PAPER` | `"layered_paper"` |
+| `CLAYMATION` | `"claymation"` |
+| `ORIGAMI` | `"origami"` |
+| `FUR` | `"fur"` |
+| `YARN` | `"yarn"` |
+| `MADE_OF_METAL` | `"made_of_metal"` |
+| `MARBLE_SCULPTURE` | `"marble_sculpture"` |
+| `WOOD_CARVING` | `"wood_carving"` |
+| `FABRIC` | `"fabric"` |

@@ -764,7 +764,7 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
 
 ## Complete working example
 
-The complete implementation demonstrates all the concepts covered in this tutorial. The code is split in two blocks below for convenience.
+The complete implementation demonstrates all the concepts covered in this tutorial. You can either find it in the [Embed SDK samples repository](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-workflow-tethering) or below, split in two blocks for convenience.
 
 <CodeBlock slots="heading, code" repeat="3" languages="index.html, main.js, utils/shared.js"/>
 

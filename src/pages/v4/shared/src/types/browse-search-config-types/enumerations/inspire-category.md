@@ -10,5 +10,5 @@ Category to be displayed in the Browse Search
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="photos"></a> `PHOTOS` | `"photos"` |
-| <a id="templates"></a> `TEMPLATES` | `"templates"` |
+| `PHOTOS` | `"photos"` |
+| `TEMPLATES` | `"templates"` |
