@@ -31,10 +31,6 @@ new QuickActionWorkflow(actionManager, context): QuickActionWorkflow;
 
 `QuickActionWorkflow`
 
-#### Hidden
-
--- hide from typedocs
-
 #### Inherited from
 
 [`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)

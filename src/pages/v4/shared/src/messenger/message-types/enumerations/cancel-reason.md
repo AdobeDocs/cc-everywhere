@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="user"></a> `USER` | `"USER"` |
-| <a id="other"></a> `OTHER` | `"OTHER"` |
+| `USER` | `"USER"` |
+| `OTHER` | `"OTHER"` |

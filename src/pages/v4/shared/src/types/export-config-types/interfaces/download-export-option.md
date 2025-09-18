@@ -25,7 +25,7 @@ Export option for downloading content to the user's device.
 
 | Property | Type | Overrides | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="id"></a> `id` | `string` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`id`](../../export-config-types/interfaces/base-export-option.md#id) |
-| <a id="style"></a> `style` | `U` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`style`](../../export-config-types/interfaces/base-export-option.md#style) |
-| <a id="action"></a> `action` | [`DownloadAction`](../../export-config-types/interfaces/download-action.md) | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`action`](../../export-config-types/interfaces/base-export-option.md#action) | - |
-| <a id="label"></a> `label?` | `string` | - | - |
+| `id` | `string` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`id`](../../export-config-types/interfaces/base-export-option.md#id) |
+| `style` | `U` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`style`](../../export-config-types/interfaces/base-export-option.md#style) |
+| `action` | [`DownloadAction`](../../export-config-types/interfaces/download-action.md) | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`action`](../../export-config-types/interfaces/base-export-option.md#action) | - |
+| `label?` | `string` | - | - |

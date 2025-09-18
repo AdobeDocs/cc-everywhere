@@ -21,5 +21,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="type"></a> `type` | [`HostEventType`](../../message-data-types/enumerations/host-event-type.md) |
-| <a id="data"></a> `data?` | `unknown` |
+| `type` | [`HostEventType`](../../message-data-types/enumerations/host-event-type.md) |
+| `data?` | `unknown` |

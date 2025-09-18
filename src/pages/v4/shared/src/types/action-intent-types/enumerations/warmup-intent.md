@@ -8,4 +8,4 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="warmup"></a> `WARMUP` | `"warmup"` |
+| `WARMUP` | `"warmup"` |

@@ -12,5 +12,5 @@ so that user doesn't need to perform a manual sign in.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| <a id="clientid"></a> `clientId` | `string` | Client id of the application to navigate to. |
-| <a id="url"></a> `url` | `URL` | URL of the application to navigate to. |
+| `clientId` | `string` | Client id of the application to navigate to. |
+| `url` | `URL` | URL of the application to navigate to. |

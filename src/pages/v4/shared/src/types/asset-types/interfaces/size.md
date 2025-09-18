@@ -12,6 +12,6 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| <a id="width"></a> `width` | `number` | **Minimum** 0 |
-| <a id="height"></a> `height` | `number` | **Minimum** 0 |
-| <a id="unit"></a> `unit` | [`SizeUnit`](../../asset-types/enumerations/size-unit.md) | - |
+| `width` | `number` | **Minimum** 0 |
+| `height` | `number` | **Minimum** 0 |
+| `unit` | [`SizeUnit`](../../asset-types/enumerations/size-unit.md) | - |

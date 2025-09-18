@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="launchtimestamp"></a> `launchTimestamp` | `number` |
+| `launchTimestamp` | `number` |

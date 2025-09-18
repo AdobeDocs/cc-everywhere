@@ -8,4 +8,4 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="publish"></a> `PUBLISH` | `"publish"` |
+| `PUBLISH` | `"publish"` |

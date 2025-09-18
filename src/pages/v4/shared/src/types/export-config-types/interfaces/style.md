@@ -14,4 +14,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="uitype"></a> `uiType` | [`ExportOptionUI`](../../export-config-types/enumerations/export-option-ui.md) |
+| `uiType` | [`ExportOptionUI`](../../export-config-types/enumerations/export-option-ui.md) |

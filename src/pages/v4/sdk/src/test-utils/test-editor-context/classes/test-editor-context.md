@@ -39,7 +39,7 @@ EditorContext.constructor
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="context"></a> `context` | `public` | `ActionContext` | `EditorContext.context` |
+| `context` | `public` | `ActionContext` | `EditorContext.context` |
 
 ## Methods
 

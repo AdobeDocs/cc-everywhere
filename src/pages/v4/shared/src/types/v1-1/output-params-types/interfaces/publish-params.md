@@ -15,4 +15,4 @@ Asset related information received with onPublish callback.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| <a id="asset"></a> `asset` | [`OutputAsset`](../../../asset-types/interfaces/output-asset.md) | Asset which is exported |
+| `asset` | [`OutputAsset`](../../../asset-types/interfaces/output-asset.md) | Asset which is exported |

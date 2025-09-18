@@ -16,4 +16,4 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| <a id="canvassize"></a> `canvasSize?` | \| [`Size`](../../../asset-types/interfaces/size.md) \| [`CanvasType`](../../../layout-types/enumerations/canvas-type.md) | Canvas and template size or aspect ratio. **Default** `CanvasType.INSTAGRAM` |
+| `canvasSize?` | \| [`Size`](../../../asset-types/interfaces/size.md) \| [`CanvasType`](../../../layout-types/enumerations/canvas-type.md) | Canvas and template size or aspect ratio. **Default** `CanvasType.INSTAGRAM` |

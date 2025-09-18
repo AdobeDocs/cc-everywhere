@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="status"></a> `status` | `"SUCCESS"` \| `"DENIED"` |
+| `status` | `"SUCCESS"` \| `"DENIED"` |

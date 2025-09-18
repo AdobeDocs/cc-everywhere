@@ -8,6 +8,6 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="origin"></a> `origin` | `string` |
-| <a id="target"></a> `target` | `Window` |
-| <a id="senderfn"></a> `senderFn` | [`MessageSender`](../../channel-messenger-types/type-aliases/message-sender.md) |
+| `origin` | `string` |
+| `target` | `Window` |
+| `senderFn` | [`MessageSender`](../../channel-messenger-types/type-aliases/message-sender.md) |

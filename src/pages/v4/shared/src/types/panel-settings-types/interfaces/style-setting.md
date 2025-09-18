@@ -16,4 +16,4 @@ Used to specify which styles (themes, techniques, etc.) are applied in the panel
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="value"></a> `value` | [`ImageStyleId`](../../panel-settings-types/type-aliases/image-style-id.md)[] | The value of the setting. Generic type allows for different value types. | [`BasePanelSetting`](../../panel-settings-types/interfaces/base-panel-setting.md).[`value`](../../panel-settings-types/interfaces/base-panel-setting.md#value) |
+| `value` | [`ImageStyleId`](../../panel-settings-types/type-aliases/image-style-id.md)[] | The value of the setting. Generic type allows for different value types. | [`BasePanelSetting`](../../panel-settings-types/interfaces/base-panel-setting.md).[`value`](../../panel-settings-types/interfaces/base-panel-setting.md#value) |

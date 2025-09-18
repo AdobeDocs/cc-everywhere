@@ -11,12 +11,12 @@ These effects provide special enhancements and atmospheric qualities.
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="bokeh"></a> `BOKEH` | `"bokeh"` |
-| <a id="fisheye"></a> `FISHEYE` | `"fisheye"` |
-| <a id="misty"></a> `MISTY` | `"misty"` |
-| <a id="antique_photo"></a> `ANTIQUE_PHOTO` | `"antique_photo"` |
-| <a id="isometric"></a> `ISOMETRIC` | `"isometric"` |
-| <a id="dark"></a> `DARK` | `"dark"` |
-| <a id="neon"></a> `NEON` | `"neon"` |
-| <a id="iridescent"></a> `IRIDESCENT` | `"iridescent"` |
-| <a id="bioluminescent"></a> `BIOLUMINESCENT` | `"bioluminescent"` |
+| `BOKEH` | `"bokeh"` |
+| `FISHEYE` | `"fisheye"` |
+| `MISTY` | `"misty"` |
+| `ANTIQUE_PHOTO` | `"antique_photo"` |
+| `ISOMETRIC` | `"isometric"` |
+| `DARK` | `"dark"` |
+| `NEON` | `"neon"` |
+| `IRIDESCENT` | `"iridescent"` |
+| `BIOLUMINESCENT` | `"bioluminescent"` |

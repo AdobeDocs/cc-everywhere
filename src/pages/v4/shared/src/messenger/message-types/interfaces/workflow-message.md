@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="workflowtype"></a> `workflowType` | [`Workflow`](../../../types/workflow-types/enumerations/workflow.md) |
+| `workflowType` | [`Workflow`](../../../types/workflow-types/enumerations/workflow.md) |

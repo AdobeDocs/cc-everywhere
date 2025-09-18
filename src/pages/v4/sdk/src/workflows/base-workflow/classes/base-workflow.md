@@ -28,7 +28,3 @@ new BaseWorkflow(actionManager, context): BaseWorkflow;
 #### Returns
 
 `BaseWorkflow`
-
-#### Hidden
-
--- hide from typedocs

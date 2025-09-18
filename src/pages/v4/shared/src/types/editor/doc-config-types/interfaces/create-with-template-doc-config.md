@@ -12,4 +12,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="templateid"></a> `templateId` | `string` |
+| `templateId` | `string` |

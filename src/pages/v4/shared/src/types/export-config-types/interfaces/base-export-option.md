@@ -21,6 +21,6 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="id"></a> `id` | `string` |
-| <a id="style"></a> `style` | `U` |
-| <a id="action"></a> `action` | [`ExportAction`](../../export-config-types/type-aliases/export-action.md) |
+| `id` | `string` |
+| `style` | `U` |
+| `action` | [`ExportAction`](../../export-config-types/type-aliases/export-action.md) |

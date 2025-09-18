@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="message"></a> `message` | `string` |
+| `message` | `string` |

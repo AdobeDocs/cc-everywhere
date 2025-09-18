@@ -31,10 +31,6 @@ new EditorWorkflow(actionManager, context): EditorWorkflow;
 
 `EditorWorkflow`
 
-#### Hidden
-
--- hide from typedocs
-
 #### Inherited from
 
 [`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)

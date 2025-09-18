@@ -15,4 +15,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="mode"></a> `mode` | [`AuthMode`](../../authentication-types/enumerations/auth-mode.md) |
+| `mode` | [`AuthMode`](../../authentication-types/enumerations/auth-mode.md) |

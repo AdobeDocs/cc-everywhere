@@ -14,6 +14,6 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="error"></a> `error` | (`error`) => `void` |
-| <a id="warn"></a> `warn` | (`message`) => `void` |
-| <a id="info"></a> `info` | (`info`) => `void` |
+| `error` | (`error`) => `void` |
+| `warn` | (`message`) => `void` |
+| `info` | (`info`) => `void` |

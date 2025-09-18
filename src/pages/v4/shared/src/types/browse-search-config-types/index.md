@@ -21,5 +21,5 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [BrowseSearchConfigUnion](../browse-search-config-types/type-aliases/browse-search-config-union.md) | - |
+| [BrowseSearchConfigUnion](../browse-search-config-types/type-aliases/browse-search-config-union.md) | Union type representing all possible browse search configurations. |
 | [BrowseSearchGenericConfig](../browse-search-config-types/type-aliases/browse-search-generic-config.md) | - |

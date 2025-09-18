@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="didgetmessage"></a> `didGetMessage` | <`T`\>(`message`, `requestId?`) => `void` |
+| `didGetMessage` | <`T`\>(`message`, `requestId?`) => `void` |

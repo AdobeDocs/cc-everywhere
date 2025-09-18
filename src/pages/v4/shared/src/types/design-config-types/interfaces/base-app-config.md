@@ -18,4 +18,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="callbacks"></a> `callbacks?` | [`Callbacks`](../../callbacks-types/interfaces/callbacks.md) |
+| `callbacks?` | [`Callbacks`](../../callbacks-types/interfaces/callbacks.md) |

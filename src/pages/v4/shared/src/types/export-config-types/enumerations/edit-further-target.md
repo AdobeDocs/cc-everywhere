@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="express"></a> `EXPRESS` | `"express"` |
-| <a id="image_module"></a> `IMAGE_MODULE` | `"image-module"` |
+| `EXPRESS` | `"express"` |
+| `IMAGE_MODULE` | `"image-module"` |

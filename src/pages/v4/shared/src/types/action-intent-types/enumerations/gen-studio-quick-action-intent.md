@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="template"></a> `TEMPLATE` | `"genstudio-template"` |
-| <a id="canvas"></a> `CANVAS` | `"genstudio-canvas"` |
+| `TEMPLATE` | `"genstudio-template"` |
+| `CANVAS` | `"genstudio-canvas"` |

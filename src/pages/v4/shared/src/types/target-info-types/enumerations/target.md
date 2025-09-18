@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="editor"></a> `EDITOR` | `"EDITOR"` |
-| <a id="quick_action"></a> `QUICK_ACTION` | `"QUICK_ACTION"` |
+| `EDITOR` | `"EDITOR"` |
+| `QUICK_ACTION` | `"QUICK_ACTION"` |

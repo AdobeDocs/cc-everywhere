@@ -8,4 +8,4 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="mp4"></a> `MP4` | `"video/mp4"` |
+| `MP4` | `"video/mp4"` |

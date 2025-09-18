@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="reason"></a> `reason` | [`CancelReason`](../../message-types/enumerations/cancel-reason.md) |
+| `reason` | [`CancelReason`](../../message-types/enumerations/cancel-reason.md) |

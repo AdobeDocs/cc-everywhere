@@ -8,5 +8,5 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="jpeg"></a> `JPEG` | `"image/jpeg"` |
-| <a id="png"></a> `PNG` | `"image/png"` |
+| `JPEG` | `"image/jpeg"` |
+| `PNG` | `"image/png"` |

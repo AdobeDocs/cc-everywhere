@@ -16,7 +16,7 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="docconfig"></a> `docConfig?` | [`BaseDocConfig`](../../design-config-types/interfaces/base-doc-config.md) |
-| <a id="appconfig"></a> `appConfig?` | \| `AppConfig` \| [`AppConfig`](../../3p/app-config-types/interfaces/app-config.md) |
-| <a id="exportconfig"></a> `exportConfig?` | [`ExportOptions`](../../export-config-types/type-aliases/export-options.md) |
-| <a id="containerconfig"></a> `containerConfig?` | [`ContainerConfig`](../../container-config-types/type-aliases/container-config.md) |
+| `docConfig?` | [`BaseDocConfig`](../../design-config-types/interfaces/base-doc-config.md) |
+| `appConfig?` | \| `AppConfig` \| [`AppConfig`](../../3p/app-config-types/interfaces/app-config.md) |
+| `exportConfig?` | [`ExportOptions`](../../export-config-types/type-aliases/export-options.md) |
+| `containerConfig?` | [`ContainerConfig`](../../container-config-types/type-aliases/container-config.md) |

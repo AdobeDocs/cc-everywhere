@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="ispublishsuccessful"></a> `isPublishSuccessful` | [`PublishCallbackStatus`](../../message-types/enumerations/publish-callback-status.md) |
+| `isPublishSuccessful` | [`PublishCallbackStatus`](../../message-types/enumerations/publish-callback-status.md) |

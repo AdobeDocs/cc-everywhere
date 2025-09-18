@@ -22,4 +22,4 @@ Provides common properties for value.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| <a id="value"></a> `value` | `T` | The value of the setting. Generic type allows for different value types. |
+| `value` | `T` | The value of the setting. Generic type allows for different value types. |

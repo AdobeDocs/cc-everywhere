@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| <a id="option"></a> `option` | [`EditFurtherIntent`](../../../export-config-types/enumerations/edit-further-intent.md) |
+| `option` | [`EditFurtherIntent`](../../../export-config-types/enumerations/edit-further-intent.md) |

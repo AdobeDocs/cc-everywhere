@@ -12,6 +12,6 @@
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| <a id="callbacks"></a> `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
-| <a id="warmupintent"></a> `warmupIntent` | [`ActionIntent`](../../../action-intent-types/type-aliases/action-intent.md) | The intent to warmup the target. | - |
-| <a id="warmupmode"></a> `warmupMode` | [`WarmupMode`](../../../app-config-types/enumerations/warmup-mode.md) | Configuration options for controlling how warmup behavior is handled. The partner invoking warmup can select one of these modes to control the warmup lifecycle. **Default** `WarmupMode.STANDARD` | - |
+| `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
+| `warmupIntent` | [`ActionIntent`](../../../action-intent-types/type-aliases/action-intent.md) | The intent to warmup the target. | - |
+| `warmupMode` | [`WarmupMode`](../../../app-config-types/enumerations/warmup-mode.md) | Configuration options for controlling how warmup behavior is handled. The partner invoking warmup can select one of these modes to control the warmup lifecycle. **Default** `WarmupMode.STANDARD` | - |

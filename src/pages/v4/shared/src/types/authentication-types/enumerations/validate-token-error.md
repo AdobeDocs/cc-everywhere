@@ -8,7 +8,7 @@
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| <a id="unknown"></a> `UNKNOWN` | `"UNKNOWN"` |
-| <a id="bad_signature"></a> `BAD_SIGNATURE` | `"BAD_SIGNATURE"` |
-| <a id="invalid_token"></a> `INVALID_TOKEN` | `"INVALID_TOKEN"` |
-| <a id="timeout"></a> `TIMEOUT` | `"TIMEOUT"` |
+| `UNKNOWN` | `"UNKNOWN"` |
+| `BAD_SIGNATURE` | `"BAD_SIGNATURE"` |
+| `INVALID_TOKEN` | `"INVALID_TOKEN"` |
+| `TIMEOUT` | `"TIMEOUT"` |

@@ -10,5 +10,5 @@ Represents the configuration for custom content in a Dropdown option.
 
 | Property | Type |
 | ------ | ------ |
-| <a id="type"></a> `type` | `"markdown"` |
-| <a id="content"></a> `content` | `string` |
+| `type` | `"markdown"` |
+| `content` | `string` |
