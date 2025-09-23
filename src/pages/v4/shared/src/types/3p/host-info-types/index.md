@@ -1,10 +1,12 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # shared/src/types/3p/HostInfo.types
 
-## Index
+## Type Aliases
 
-### Type Aliases
-
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [HostInfo](type-aliases/host-info.md) | - |
 | [ConfigParams](type-aliases/config-params.md) | - |

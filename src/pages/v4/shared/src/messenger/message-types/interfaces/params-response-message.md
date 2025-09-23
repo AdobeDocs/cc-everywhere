@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: ParamsResponseMessage
 
 ## Properties
@@ -13,3 +17,4 @@
 | `featureFlags` | [`FeatureFlags`](../../../types/feature-flags-types/type-aliases/feature-flags.md) |
 | `requestId?` | `string` |
 | `visitorId?` | `string` |
+| `performanceMetrics?` | [`PerformanceMetrics`](../../../types/performance-metrics-types/interfaces/performance-metrics.md) |

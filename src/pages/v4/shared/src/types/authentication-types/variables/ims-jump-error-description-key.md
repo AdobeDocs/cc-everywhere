@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Variable: IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY
 
 ```ts

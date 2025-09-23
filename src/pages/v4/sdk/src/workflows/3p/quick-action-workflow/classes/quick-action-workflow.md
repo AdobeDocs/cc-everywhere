@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Class: QuickActionWorkflow
 
 ## Extends
@@ -8,6 +12,29 @@
 
 - [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md)
 
+## Constructors
+
+### Constructor
+
+```ts
+new QuickActionWorkflow(actionManager, context): QuickActionWorkflow;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `actionManager` | `ActionManager` |
+| `context` | `SDKContext` |
+
+#### Returns
+
+`QuickActionWorkflow`
+
+#### Inherited from
+
+[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
+
 ## Methods
 
 ### convertToJPEG()
@@ -17,7 +44,7 @@ convertToJPEG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Lower your file size by changing your PNG images into JPG files.
@@ -26,10 +53,10 @@ Lower your file size by changing your PNG images into JPG files.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -48,7 +75,7 @@ convertToPNG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Save your images as PNG files to improve file quality.
@@ -57,10 +84,10 @@ Save your images as PNG files to improve file quality.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -79,7 +106,7 @@ convertToSVG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Drag and drop a JPG or PNG image file to convert to SVG.
@@ -88,10 +115,10 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -110,7 +137,7 @@ cropImage(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Transform your image into the perfect shape or size in seconds.
@@ -119,10 +146,10 @@ Transform your image into the perfect shape or size in seconds.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -141,7 +168,7 @@ resizeImage(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Change the dimensions of any photo.
@@ -150,10 +177,10 @@ Change the dimensions of any photo.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -172,7 +199,7 @@ removeBackground(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Easily remove the background of your photos.
@@ -181,10 +208,10 @@ Easily remove the background of your photos.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -203,7 +230,7 @@ generateQRCode(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Generate a QR Code for a URL.
@@ -212,10 +239,10 @@ Generate a QR Code for a URL.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -234,7 +261,7 @@ convertToGIF(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Convert a video asset to GIF format.
@@ -243,10 +270,10 @@ Convert a video asset to GIF format.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -265,7 +292,7 @@ convertToMP4(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Convert a video asset to MP4 format.
@@ -274,10 +301,10 @@ Convert a video asset to MP4 format.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -296,7 +323,7 @@ cropVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Transform your video into the perfect shape or size in seconds.
@@ -305,10 +332,10 @@ Transform your video into the perfect shape or size in seconds.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -327,7 +354,7 @@ mergeVideos(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Collate multiple video/photo into a single video.
@@ -336,10 +363,10 @@ Collate multiple video/photo into a single video.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`MergeVideoDocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/merge-video-doc-config.md) | pass an array of assets to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`MergeVideoDocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/merge-video-doc-config.md) | pass an array of assets to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -358,7 +385,7 @@ resizeVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Change the dimensions of any video.
@@ -367,10 +394,10 @@ Change the dimensions of any video.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -389,7 +416,7 @@ trimVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Trim a video to a desired length.
@@ -398,10 +425,10 @@ Trim a video to a desired length.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -420,7 +447,7 @@ animateFromAudio(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Create an animated video from an audio.
@@ -429,10 +456,10 @@ Create an animated video from an audio.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -451,7 +478,7 @@ captionVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Add captions to any video.
@@ -460,10 +487,10 @@ Add captions to any video.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig`? | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 

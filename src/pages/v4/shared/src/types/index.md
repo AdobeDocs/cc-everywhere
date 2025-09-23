@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../index.md)
+
+***
+
 # shared/src/types
 
 ## References
@@ -118,7 +122,7 @@ Re-exports [HostAppTrigger](app-config-types/enumerations/host-app-trigger.md)
 
 ### BaseAnalyticsData
 
-Re-exports [BaseAnalyticsData](app-config-types/type-aliases/base-analytics-data.md)
+Re-exports [BaseAnalyticsData](app-config-types/interfaces/base-analytics-data.md)
 
 <HorizontalLine />
 
@@ -342,7 +346,7 @@ Re-exports [IMS_JUMP_ERROR_KEY](authentication-types/variables/ims-jump-error-ke
 
 Re-exports [IMS_JUMP_ERROR_DESCRIPTION_KEY](authentication-types/variables/ims-jump-error-description-key.md)
 
-<HorizontalLine />
+***
 
 ### BrowserEvent
 
@@ -756,7 +760,7 @@ Re-exports [ExportOptionGroup](export-config-types/interfaces/export-option-grou
 
 Re-exports [ContinueEditingGroup](export-config-types/interfaces/continue-editing-group.md)
 
-<HorizontalLine />
+***
 
 ### ExportOptionOrGroup
 
@@ -834,7 +838,7 @@ Re-exports [HostType](host-info-types/enumerations/host-type.md)
 
 Re-exports [HostTypeName](host-info-types/variables/host-type-name.md)
 
-<HorizontalLine />
+***
 
 ### HostInfoSession
 
@@ -894,7 +898,7 @@ Re-exports [CanvasTypeInfo](layout-types/variables/canvas-type-info.md)
 
 Re-exports [NetworkState](network-types/enumerations/network-state.md)
 
-<HorizontalLine />
+***
 
 ### PublishParams
 
@@ -922,7 +926,7 @@ Re-exports [TextToImagePublishParams](publish-params-types/interfaces/text-to-im
 
 ### EditorPublishParams
 
-Re-exports [EditorPublishParams](publish-params-types/interfaces/editor-publish-params.md)
+Re-exports [EditorPublishParams](publish-params-types/type-aliases/editor-publish-params.md)
 
 <HorizontalLine />
 
@@ -977,9 +981,3 @@ Renames and re-exports [shared/src/types/editor](editor/index.md)
 ### QuickAction
 
 Renames and re-exports [shared/src/types/quick-action](quick-action/index.md)
-
-<HorizontalLine />
-
-### Module
-
-Renames and re-exports [shared/src/types/module](module/index.md)

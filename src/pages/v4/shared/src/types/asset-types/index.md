@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/Asset.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
@@ -14,7 +16,7 @@
 | [PdfFileType](enumerations/pdf-file-type.md) | - |
 | [SubFileType](enumerations/sub-file-type.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
@@ -25,21 +27,21 @@
 | [PixelSize](interfaces/pixel-size.md) | - |
 | [OutputAsset](interfaces/output-asset.md) | Information related to output asset. |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
-| [ImageModuleFileTypes](type-aliases/image-module-file-types.md) | - |
-| [FileType](type-aliases/file-type.md) | - |
-| [Base64Asset](type-aliases/base64-asset.md) | Represents an Asset object containing Base64 encoded data. |
-| [UrlAsset](type-aliases/url-asset.md) | Represents an Asset object containing video data within a presinged URL. |
-| [BlobAsset](type-aliases/blob-asset.md) | Represents an Asset object containing blob/file data. |
-| [Asset](type-aliases/asset.md) | Asset interface used as an input data for all SDK workflows. |
-| [AspectRatio](type-aliases/aspect-ratio.md) | - |
-| [ImageDimensions](type-aliases/image-dimensions.md) | Represents the dimensions of an image. It takes the size of the image in pixels along with the aspect ratio. |
-| [ProcessedImageDimensions](type-aliases/processed-image-dimensions.md) | Represents the processed image dimensions. It includes the size of the image in pixels along with the aspect ratio. It would have computed the aspect ratio value if it was provided as a number in ImageDimensions by bucketing it into one of the predefined aspect ratios. |
+| [ImageModuleFileTypes](../asset-types/type-aliases/image-module-file-types.md) | - |
+| [FileType](../asset-types/type-aliases/file-type.md) | - |
+| [Base64Asset](../asset-types/type-aliases/base64-asset.md) | Represents an Asset object containing Base64 encoded data. |
+| [UrlAsset](../asset-types/type-aliases/url-asset.md) | Represents an Asset object containing video data within a presigned URL. |
+| [BlobAsset](../asset-types/type-aliases/blob-asset.md) | Represents an Asset object containing blob/file data. |
+| [Asset](../asset-types/type-aliases/asset.md) | Asset interface used as an input data for all SDK workflows. |
+| [AspectRatio](../asset-types/type-aliases/aspect-ratio.md) | - |
+| [ImageDimensions](../asset-types/type-aliases/image-dimensions.md) | Represents the dimensions of an image. It takes the size of the image in pixels along with the aspect ratio. |
+| [ProcessedImageDimensions](../asset-types/type-aliases/processed-image-dimensions.md) | Represents the processed image dimensions. It includes the size of the image in pixels along with the aspect ratio. It would have computed the aspect ratio value if it was provided as a number in ImageDimensions by bucketing it into one of the predefined aspect ratios. |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

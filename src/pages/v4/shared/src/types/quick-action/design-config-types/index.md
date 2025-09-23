@@ -1,8 +1,10 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # shared/src/types/quick-action/DesignConfig.types
 
-## Index
-
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |

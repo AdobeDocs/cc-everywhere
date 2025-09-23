@@ -1,4 +1,8 @@
-# Class: HostErrorHandler T
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
+# Class: HostErrorHandler<T\>
 
 ## Extends
 
@@ -16,33 +20,35 @@
 
 ## Constructors
 
-### new HostErrorHandler()
+### Constructor
 
 ```ts
-new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>
+new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>;
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `hostErrorCallback` | [`ErrorCallback`](../../../cc-everywhere-error-types/type-aliases/error-callback.md) `T` |
-| `logLevel`? | [`LogLevel`](../../../cc-everywhere-error-types/enumerations/log-level.md) |
+| `hostErrorCallback` | [`ErrorCallback`](../../../cc-everywhere-error-types/type-aliases/error-callback.md)<`T`\> |
+| `logLevel?` | [`LogLevel`](../../../cc-everywhere-error-types/enumerations/log-level.md) |
 
 #### Returns
 
-[`HostErrorHandler`](host-error-handler.md) `T`
+`HostErrorHandler`<`T`\>
 
 #### Overrides
 
-`BaseHandler.constructor`
+```ts
+BaseHandler.constructor
+```
 
 ## Methods
 
 ### error()
 
 ```ts
-error(error): void
+error(error): void;
 ```
 
 #### Parameters
@@ -57,14 +63,14 @@ error(error): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).`error`
+[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`error`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#error)
 
 <HorizontalLine />
 
 ### warn()
 
 ```ts
-warn(): void
+warn(): void;
 ```
 
 #### Returns
@@ -73,14 +79,14 @@ warn(): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).`warn`
+[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`warn`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#warn)
 
 <HorizontalLine />
 
 ### info()
 
 ```ts
-info(): void
+info(): void;
 ```
 
 #### Returns
@@ -89,4 +95,4 @@ info(): void
 
 #### Implementation of
 
-[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).`info`
+[`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`info`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#info)

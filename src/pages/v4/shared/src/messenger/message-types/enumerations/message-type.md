@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: MessageType
 
 ## Enumeration Members
@@ -12,6 +16,7 @@
 | `CANCEL` | `"CANCEL"` |
 | `ERROR` | `"ERROR"` |
 | `DID_COMPLETE` | `"DID_COMPLETE"` |
+| `INVOKE_CLOSE` | `"INVOKE_CLOSE"` |
 | `LOGIN_COMPLETE` | `"LOGIN_COMPLETE"` |
 | `LOGIN_REQUEST` | `"LOGIN_REQUEST"` |
 | `TOKEN_REQUEST` | `"TOKEN_REQUEST"` |
@@ -21,3 +26,7 @@
 | `CW_ASSET_RESPONSE` | `"CW_ASSET_RESPONSE"` |
 | `PUBLISH_STATUS` | `"PUBLISH_STATUS"` |
 | `EVENT` | `"EVENT"` |
+| `WORKFLOW_CONTEXT_UPDATE` | `"WORKFLOW_CONTEXT_UPDATE"` |
+| `CLOSE_STATUS` | `"CLOSE_STATUS"` |
+| `PROMPT_SAFETY_CHECK_RESPONSE` | `"PROMPT_SAFETY_CHECK_RESPONSE"` |
+| `CLIENT_AUTH_DETAILS` | `"CLIENT_AUTH_DETAILS"` |

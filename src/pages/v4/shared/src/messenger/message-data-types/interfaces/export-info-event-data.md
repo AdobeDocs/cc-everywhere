@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: ExportInfoEventData
 
 ## Extends
@@ -8,7 +12,7 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `type` | `EXPORT_INFO` | [`HostEventData`](host-event-data.md).`type` |
-| `data` | `object` | [`HostEventData`](host-event-data.md).`data` |
+| `type` | [`EXPORT_INFO`](../../message-data-types/enumerations/host-event-type.md#export_info) | [`HostEventData`](../../message-data-types/interfaces/host-event-data.md).[`type`](../../message-data-types/interfaces/host-event-data.md#type) |
+| `data` | `object` | [`HostEventData`](../../message-data-types/interfaces/host-event-data.md).[`data`](../../message-data-types/interfaces/host-event-data.md#data) |
 | `data.buttonId` | `string` | - |
 | `data.targetInfo?` | [`AssetTargetInfo`](../../../types/publish-params-types/interfaces/asset-target-info.md) | - |

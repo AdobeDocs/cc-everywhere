@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: CanvasType
 
 Canvas Layout supported in Project X

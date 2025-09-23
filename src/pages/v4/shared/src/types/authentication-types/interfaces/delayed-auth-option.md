@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: DelayedAuthOption
 
 ## Extends
@@ -8,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | `DELAYED` | [`BaseAuthOption`](base-auth-option.md).`mode` |
-| `config?` | [`AuthConfig`](auth-config.md) | - |
+| `mode` | [`DELAYED`](../../authentication-types/enumerations/auth-mode.md#delayed) | [`BaseAuthOption`](../../authentication-types/interfaces/base-auth-option.md).[`mode`](../../authentication-types/interfaces/base-auth-option.md#mode) |
+| `config?` | [`AuthConfig`](../../authentication-types/interfaces/auth-config.md) | - |

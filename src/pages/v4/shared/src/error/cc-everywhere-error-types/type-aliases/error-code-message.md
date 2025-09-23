@@ -1,7 +1,11 @@
-# Type Alias: ErrorCodeMessage T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Type Alias: ErrorCodeMessage<T\>
 
 ```ts
-type ErrorCodeMessage<T>: object;
+type ErrorCodeMessage<T> = object;
 ```
 
 ## Type Parameters
@@ -10,13 +14,15 @@ type ErrorCodeMessage<T>: object;
 | ------ |
 | `T` |
 
-## Type declaration
+## Properties
 
 ### code
 
 ```ts
 code: T;
 ```
+
+***
 
 ### message
 

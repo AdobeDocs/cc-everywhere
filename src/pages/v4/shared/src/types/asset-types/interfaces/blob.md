@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: Blob
 
 Custom interface that represents a Blob object.
@@ -18,39 +22,39 @@ Should be used instead of default Blob type.
 slice(
    start?, 
    end?, 
-   contentType?): Blob
+   contentType?): Blob;
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `start`? | `number` |
-| `end`? | `number` |
-| `contentType`? | `string` |
+| `start?` | `number` |
+| `end?` | `number` |
+| `contentType?` | `string` |
 
 #### Returns
 
-[`Blob`](blob.md)
+`Blob`
 
 <HorizontalLine />
 
 ### stream()
 
 ```ts
-stream(): ReadableStream<any>
+stream(): ReadableStream;
 ```
 
 #### Returns
 
-`ReadableStream` `any`
+`ReadableStream`
 
 <HorizontalLine />
 
 ### text()
 
 ```ts
-text(): Promise<string>
+text(): Promise<string>;
 ```
 
 #### Returns
@@ -62,7 +66,7 @@ text(): Promise<string>
 ### arrayBuffer()
 
 ```ts
-arrayBuffer(): Promise<ArrayBuffer>
+arrayBuffer(): Promise<ArrayBuffer>;
 ```
 
 #### Returns

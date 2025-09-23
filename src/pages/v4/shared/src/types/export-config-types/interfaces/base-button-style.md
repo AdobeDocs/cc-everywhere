@@ -1,4 +1,8 @@
-# Interface: BaseButtonStyle T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Interface: BaseButtonStyle<T\>
 
 Represents the style of a button, extending the base Style interface.
 
@@ -16,7 +20,7 @@ Represents the style of a button, extending the base Style interface.
 
 | Property | Type | Description | Overrides |
 | ------ | ------ | ------ | ------ |
-| `uiType` | `T` | The UI type for the button. | [`Style`](style.md).`uiType` |
+| `uiType` | `T` | The UI type for the button. | [`Style`](../../export-config-types/interfaces/style.md).[`uiType`](../../export-config-types/interfaces/style.md#uitype) |
 | `icon?` | `string` | The optional icon URL for the button. | - |
 | `variant?` | [`ExportButtonVariant`](../type-aliases/export-button-variant.md) | The optional variant for the button. | - |
 | `treatment?` | [`ExportButtonTreatment`](../type-aliases/export-button-treatment.md) | The optional treatment for the button. | - |

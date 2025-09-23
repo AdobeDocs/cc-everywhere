@@ -117,6 +117,10 @@ module.exports = {
             path: "/guides/concepts/edit-image-v2.md",
           },
           {
+            title: "Workflow Tethering",
+            path: "/guides/concepts/tethering.md",
+          },
+          {
             title: "Editor Customization",
             path: "/guides/concepts/appconfig.md",
           },
@@ -139,12 +143,24 @@ module.exports = {
         path: "/guides/tutorials/",
         pages: [
           {
-            title: "Embed SDK integration tutorial",
+            title: "Embed SDK integration",
             path: "/guides/tutorials/getting-started.md",
           },
           {
-            title: "Full Editor tutorial",
+            title: "Full Editor",
             path: "/guides/tutorials/full-editor.md",
+          },
+          {
+            title: "Generate Image",
+            path: "/guides/tutorials/generate-image.md",
+          },
+          {
+            title: "Edit Image",
+            path: "/guides/tutorials/edit-image.md",
+          },
+          {
+            title: "Workflow Tethering",
+            path: "/guides/tutorials/workflow-tethering.md",
           },
         ],
       },

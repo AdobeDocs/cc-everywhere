@@ -43,6 +43,32 @@
         "path": "/v4/sdk/src/cc-everywhere-base/index.md"
       },
       {
+        "title": "context",
+        "pages": [
+          {
+            "title": "EditorContext",
+            "pages": [
+              {
+                "title": "EditorContext",
+                "path": "/v4/sdk/src/context/3p/editor-context/classes/editor-context.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/3p/editor-context/index.md"
+          },
+          {
+            "title": "WorkflowContext",
+            "pages": [
+              {
+                "title": "WorkflowContext",
+                "path": "/v4/sdk/src/context/workflow-context/classes/workflow-context.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/workflow-context/index.md"
+          }
+        ],
+        "path": "/v4/sdk/src/context/3p/editor-context/index.md"
+      },
+      {
         "title": "error",
         "pages": [
           {
@@ -155,6 +181,16 @@
           }
         ],
         "path": "/v4/sdk/src/feature-flags/feature-flag-service/index.md"
+      },
+      {
+        "title": "TestEditorContext",
+        "pages": [
+          {
+            "title": "TestEditorContext",
+            "path": "/v4/sdk/src/test-utils/test-editor-context/classes/test-editor-context.md"
+          }
+        ],
+        "path": "/v4/sdk/src/test-utils/test-editor-context/index.md"
       },
       {
         "title": "types",
@@ -500,6 +536,10 @@
                     "path": "/v4/shared/src/messenger/message-types/enumerations/cancel-reason.md"
                   },
                   {
+                    "title": "CloseStatus",
+                    "path": "/v4/shared/src/messenger/message-types/enumerations/close-status.md"
+                  },
+                  {
                     "title": "LoadStatus",
                     "path": "/v4/shared/src/messenger/message-types/enumerations/load-status.md"
                   },
@@ -530,6 +570,14 @@
                     "path": "/v4/shared/src/messenger/message-types/interfaces/cancel-message.md"
                   },
                   {
+                    "title": "ClientAuthDetailsMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/client-auth-details-message.md"
+                  },
+                  {
+                    "title": "CloseStatusMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/close-status-message.md"
+                  },
+                  {
                     "title": "MessageDataMap",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/message-data-map.md"
                   },
@@ -544,6 +592,10 @@
                   {
                     "title": "TokenResponseMessage",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/token-response-message.md"
+                  },
+                  {
+                    "title": "WorkflowMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/workflow-message.md"
                   }
                 ],
                 "path": "/v4/shared/src/messenger/message-types/interfaces/cancel-message.md"
@@ -588,6 +640,10 @@
                 "title": "interfaces",
                 "pages": [
                   {
+                    "title": "CustomHostEventData",
+                    "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
+                  },
+                  {
                     "title": "DownloadCompleteEventData",
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/download-complete-event-data.md"
                   },
@@ -616,7 +672,7 @@
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/update-close-button-event-data.md"
                   }
                 ],
-                "path": "/v4/shared/src/messenger/message-data-types/interfaces/download-complete-event-data.md"
+                "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
               }
             ],
             "path": "/v4/shared/src/messenger/message-data-types/index.md"
@@ -666,6 +722,20 @@
           {
             "title": "3p",
             "pages": [
+              {
+                "title": "AppConfig.types",
+                "pages": [
+                  {
+                    "title": "AppConfig",
+                    "path": "/v4/shared/src/types/3p/app-config-types/interfaces/app-config.md"
+                  },
+                  {
+                    "title": "AnalyticsData",
+                    "path": "/v4/shared/src/types/3p/app-config-types/type-aliases/analytics-data.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/3p/app-config-types/index.md"
+              },
               {
                 "title": "HostInfo.types",
                 "pages": [
@@ -729,6 +799,32 @@
                   }
                 ],
                 "path": "/v4/shared/src/types/3p/editor/index.md"
+              },
+              {
+                "title": "module",
+                "pages": [
+                  {
+                    "title": "AppConfig.types",
+                    "pages": [
+                      {
+                        "title": "interfaces",
+                        "pages": [
+                          {
+                            "title": "EditImageAppConfig",
+                            "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/edit-image-app-config.md"
+                          },
+                          {
+                            "title": "TextToImageAppConfig",
+                            "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/text-to-image-app-config.md"
+                          }
+                        ],
+                        "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/edit-image-app-config.md"
+                      }
+                    ],
+                    "path": "/v4/shared/src/types/3p/module/app-config-types/index.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/3p/module/index.md"
               }
             ],
             "path": "/v4/shared/src/types/3p/index.md"
@@ -838,7 +934,7 @@
               },
               {
                 "title": "BaseAnalyticsData",
-                "path": "/v4/shared/src/types/app-config-types/type-aliases/base-analytics-data.md"
+                "path": "/v4/shared/src/types/app-config-types/interfaces/base-analytics-data.md"
               },
               {
                 "title": "SearchCategory",
@@ -1052,6 +1148,44 @@
               }
             ],
             "path": "/v4/shared/src/types/authentication-types/index.md"
+          },
+          {
+            "title": "BrowseSearchConfig.types",
+            "pages": [
+              {
+                "title": "InspireCategory",
+                "path": "/v4/shared/src/types/browse-search-config-types/enumerations/inspire-category.md"
+              },
+              {
+                "title": "interfaces",
+                "pages": [
+                  {
+                    "title": "BrowseSearchBaseConfig",
+                    "path": "/v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config.md"
+                  },
+                  {
+                    "title": "HostContextualDataForImages",
+                    "path": "/v4/shared/src/types/browse-search-config-types/interfaces/host-contextual-data-for-images.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config.md"
+              },
+              {
+                "title": "type-aliases",
+                "pages": [
+                  {
+                    "title": "BrowseSearchConfigUnion",
+                    "path": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union.md"
+                  },
+                  {
+                    "title": "BrowseSearchGenericConfig",
+                    "path": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-generic-config.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union.md"
+              }
+            ],
+            "path": "/v4/shared/src/types/browse-search-config-types/index.md"
           },
           {
             "title": "BrowserEvent.types",
@@ -1356,6 +1490,10 @@
                     "path": "/v4/shared/src/types/export-config-types/interfaces/publish-action.md"
                   },
                   {
+                    "title": "PublishButtonGroup",
+                    "path": "/v4/shared/src/types/export-config-types/interfaces/publish-button-group.md"
+                  },
+                  {
                     "title": "PublishExportOption",
                     "path": "/v4/shared/src/types/export-config-types/interfaces/publish-export-option.md"
                   },
@@ -1486,6 +1624,10 @@
                     "path": "/v4/shared/src/types/host-info-types/interfaces/config-params-base.md"
                   },
                   {
+                    "title": "DeviceInfo",
+                    "path": "/v4/shared/src/types/host-info-types/interfaces/device-info.md"
+                  },
+                  {
                     "title": "HostInfoComputed",
                     "path": "/v4/shared/src/types/host-info-types/interfaces/host-info-computed.md"
                   },
@@ -1558,6 +1700,82 @@
             "path": "/v4/shared/src/types/network-types/index.md"
           },
           {
+            "title": "PanelSettings.types",
+            "pages": [
+              {
+                "title": "enumerations",
+                "pages": [
+                  {
+                    "title": "ImageConceptStyle",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md"
+                  },
+                  {
+                    "title": "ImageContentType",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md"
+                  },
+                  {
+                    "title": "ImageEffectStyle",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style.md"
+                  },
+                  {
+                    "title": "ImageMaterialStyle",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-material-style.md"
+                  },
+                  {
+                    "title": "ImageMovementStyle",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-movement-style.md"
+                  },
+                  {
+                    "title": "ImageTechniqueStyle",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-technique-style.md"
+                  },
+                  {
+                    "title": "ImageThemeStyle",
+                    "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md"
+              },
+              {
+                "title": "interfaces",
+                "pages": [
+                  {
+                    "title": "BasePanelSetting",
+                    "path": "/v4/shared/src/types/panel-settings-types/interfaces/base-panel-setting.md"
+                  },
+                  {
+                    "title": "ContentTypeSetting",
+                    "path": "/v4/shared/src/types/panel-settings-types/interfaces/content-type-setting.md"
+                  },
+                  {
+                    "title": "PanelSettings",
+                    "path": "/v4/shared/src/types/panel-settings-types/interfaces/panel-settings.md"
+                  },
+                  {
+                    "title": "StyleSetting",
+                    "path": "/v4/shared/src/types/panel-settings-types/interfaces/style-setting.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/panel-settings-types/interfaces/base-panel-setting.md"
+              },
+              {
+                "title": "ImageStyleId",
+                "path": "/v4/shared/src/types/panel-settings-types/type-aliases/image-style-id.md"
+              }
+            ],
+            "path": "/v4/shared/src/types/panel-settings-types/index.md"
+          },
+          {
+            "title": "PerformanceMetrics.types",
+            "pages": [
+              {
+                "title": "PerformanceMetrics",
+                "path": "/v4/shared/src/types/performance-metrics-types/interfaces/performance-metrics.md"
+              }
+            ],
+            "path": "/v4/shared/src/types/performance-metrics-types/index.md"
+          },
+          {
             "title": "PublishParams.types",
             "pages": [
               {
@@ -1566,10 +1784,6 @@
                   {
                     "title": "AssetTargetInfo",
                     "path": "/v4/shared/src/types/publish-params-types/interfaces/asset-target-info.md"
-                  },
-                  {
-                    "title": "EditorPublishParams",
-                    "path": "/v4/shared/src/types/publish-params-types/interfaces/editor-publish-params.md"
                   },
                   {
                     "title": "PublishParams",
@@ -1585,6 +1799,10 @@
                   }
                 ],
                 "path": "/v4/shared/src/types/publish-params-types/interfaces/asset-target-info.md"
+              },
+              {
+                "title": "EditorPublishParams",
+                "path": "/v4/shared/src/types/publish-params-types/type-aliases/editor-publish-params.md"
               }
             ],
             "path": "/v4/shared/src/types/publish-params-types/index.md"
@@ -1755,6 +1973,10 @@
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/community-wall-config.md"
                       },
                       {
+                        "title": "ContentBrowseConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/content-browse-config.md"
+                      },
+                      {
                         "title": "EditDropdownOptionConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/edit-dropdown-option-config.md"
                       },
@@ -1767,16 +1989,16 @@
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/fast-mode-config.md"
                       },
                       {
-                        "title": "PromptSafetyResult",
-                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-result.md"
+                        "title": "PromptSafetyCheckResponse",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-check-response.md"
                       },
                       {
                         "title": "PublishConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/publish-config.md"
                       },
                       {
-                        "title": "TemplateBrowserConfig",
-                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/template-browser-config.md"
+                        "title": "StartFromContentAppConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/start-from-content-app-config.md"
                       },
                       {
                         "title": "TextToImageAppConfig",
@@ -1801,6 +2023,10 @@
                       {
                         "title": "EditImageDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
+                      },
+                      {
+                        "title": "StartFromContentDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/start-from-content-design-config.md"
                       },
                       {
                         "title": "TextToImageDesignConfig",

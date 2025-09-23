@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: LinkStyle
 
 ## Extends
@@ -8,4 +12,4 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `uiType` | `LINK` | [`Style`](style.md).`uiType` |
+| `uiType` | [`LINK`](../../export-config-types/enumerations/export-option-ui.md#link) | [`Style`](../../export-config-types/interfaces/style.md).[`uiType`](../../export-config-types/interfaces/style.md#uitype) |

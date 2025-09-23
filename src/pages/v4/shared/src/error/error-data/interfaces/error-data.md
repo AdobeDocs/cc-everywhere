@@ -1,4 +1,8 @@
-# Interface: ErrorData T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Interface: ErrorData<T\>
 
 ## Type Parameters
 

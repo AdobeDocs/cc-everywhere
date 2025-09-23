@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: Workflow
 
 ## Enumeration Members
@@ -8,3 +12,4 @@
 | `EDITOR` | `"EDITOR"` |
 | `QUICK_ACTION` | `"QUICK_ACTION"` |
 | `MODULES` | `"MODULES"` |
+| `GENSTUDIO` | `"GENSTUDIO"` |

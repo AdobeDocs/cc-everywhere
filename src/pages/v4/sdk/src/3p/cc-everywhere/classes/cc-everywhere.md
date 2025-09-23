@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Class: CCEverywhere
 
 Class to create CCEverywhere object.
@@ -9,6 +13,37 @@ Class to create CCEverywhere object.
 ## Implements
 
 - [`CCEverywhereInterface`](../../cc-everywhere-types/interfaces/cc-everywhere-interface.md)
+
+## Constructors
+
+### Constructor
+
+```ts
+new CCEverywhere(
+   validator, 
+   hostInfo, 
+   configParams, 
+   authProvider, 
+   clientAuthProvider): CCEverywhere;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `validator` | `Validator` |
+| `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |
+| `configParams` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |
+| `authProvider` | `AuthProvider` |
+| `clientAuthProvider` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) |
+
+#### Returns
+
+`CCEverywhere`
+
+#### Overrides
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`constructor`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#constructor)
 
 ## Properties
 
@@ -22,33 +57,133 @@ Class to create CCEverywhere object.
 
 ### activeInstance
 
+#### Get Signature
+
 ```ts
-set static activeInstance(instance): void
+get static activeInstance(): 
+  | undefined
+  | CCEverywhereBase;
 ```
 
-#### Parameters
+##### Returns
+
+  \| `undefined`
+  \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md)
+
+#### Set Signature
+
+```ts
+set static activeInstance(instance): void;
+```
+
+##### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+| `instance` | \| `undefined` \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+
+##### Returns
+
+`void`
 
 #### Inherited from
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`activeInstance`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#activeinstance)
 
+***
+
+### state
+
+#### Get Signature
+
+```ts
+get static state(): State;
+```
+
+##### Returns
+
+[`State`](../../../types/cc-everywhere-types/enumerations/state.md)
+
+#### Set Signature
+
+```ts
+set static state(value): void;
+```
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `value` | [`State`](../../../types/cc-everywhere-types/enumerations/state.md) |
+
+##### Returns
+
+`void`
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`state`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#state)
+
+***
+
+### version
+
+#### Get Signature
+
+```ts
+get version(): string;
+```
+
+Get version of SDK
+
+##### Returns
+
+`string`
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`version`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#version)
+
 ## Methods
+
+### terminate()
+
+```ts
+terminate(): void;
+```
+
+Method to un-initialize cceverywhere object
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`terminate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#terminate)
+
+***
 
 ### close()
 
 ```ts
-close(): boolean
+close(showConfirmationDialog?): 
+  | boolean
+| Promise<CloseStatusMessage>;
 ```
 
 Closes any active design in progress.
 
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `showConfirmationDialog?` | `boolean` | boolean value indicating whether to show confirmation dialog or not. |
+
 #### Returns
 
-`boolean`
+  \| `boolean`
+  \| `Promise`<[`CloseStatusMessage`](../../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
 
 boolean value indicating whether the close operation was successful or not.
 
@@ -59,3 +194,25 @@ boolean value indicating whether the close operation was successful or not.
 #### Inherited from
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`close`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#close)
+
+***
+
+### onRequestIdUpdate()
+
+```ts
+onRequestIdUpdate(requestId): void;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `requestId` | `string` |
+
+#### Returns
+
+`void`
+
+#### Inherited from
+
+[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`onRequestIdUpdate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#onrequestidupdate)

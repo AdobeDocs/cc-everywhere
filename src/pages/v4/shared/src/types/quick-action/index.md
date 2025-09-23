@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/quick-action
 
 ## References

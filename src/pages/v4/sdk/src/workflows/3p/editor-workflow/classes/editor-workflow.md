@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Class: EditorWorkflow
 
 ## Extends
@@ -8,6 +12,29 @@
 
 - [`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md)
 
+## Constructors
+
+### Constructor
+
+```ts
+new EditorWorkflow(actionManager, context): EditorWorkflow;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `actionManager` | `ActionManager` |
+| `context` | `SDKContext` |
+
+#### Returns
+
+`EditorWorkflow`
+
+#### Inherited from
+
+[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
+
 ## Methods
 
 ### create()
@@ -17,7 +44,7 @@ create(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Start the editor workflow with an empty canvas
@@ -26,10 +53,10 @@ Start the editor workflow with an empty canvas
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig`? | [`CreateDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-doc-config.md) | pass a custom canvas size |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`CreateDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-doc-config.md) | pass a custom canvas size |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -48,7 +75,7 @@ createWithAsset(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Start the editor workflow by passing an image asset
@@ -58,9 +85,9 @@ Start the editor workflow by passing an image asset
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-with-asset-doc-config.md) | pass an image asset as base64 |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -79,7 +106,7 @@ createWithTemplate(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Start the editor workflow by passing an Express Template ID
@@ -89,9 +116,9 @@ Start the editor workflow by passing an Express Template ID
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-with-template-doc-config.md) | pass a template ID |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -110,7 +137,7 @@ edit(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void
+   containerConfig?): void;
 ```
 
 Start the editor workflow by passing an Express Document ID
@@ -120,9 +147,9 @@ Start the editor workflow by passing an Express Document ID
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/edit-doc-config.md) | pass an Express Document ID |
-| `appConfig`? | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig`? | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig`? | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 

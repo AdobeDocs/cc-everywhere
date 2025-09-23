@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Class: ErrorHandler
 
 ## Methods
@@ -5,19 +9,19 @@
 ### instance()
 
 ```ts
-static instance(): ErrorHandler
+static instance(): ErrorHandler;
 ```
 
 #### Returns
 
-[`ErrorHandler`](error-handler.md)
+`ErrorHandler`
 
 <HorizontalLine />
 
 ### addHandler()
 
 ```ts
-static addHandler(handler): void
+static addHandler(handler): void;
 ```
 
 #### Parameters
@@ -35,7 +39,7 @@ static addHandler(handler): void
 ### removeHandler()
 
 ```ts
-static removeHandler(handler): void
+static removeHandler(handler): void;
 ```
 
 #### Parameters
@@ -53,7 +57,7 @@ static removeHandler(handler): void
 ### error()
 
 ```ts
-static error(error): void
+static error(error): void;
 ```
 
 #### Parameters
@@ -71,14 +75,14 @@ static error(error): void
 ### warn()
 
 ```ts
-static warn(warn): void
+static warn(warn): void;
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `warn` | [`CCEverywhereWarn`](../../../../../shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/cc-everywhere-error/classes/cc-everywhere-error.md) [`ErrorCode`](../../error-codes/type-aliases/error-code.md) |
+| `warn` | \| [`CCEverywhereWarn`](../../../../../shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/cc-everywhere-error/classes/cc-everywhere-error.md)<[`ErrorCode`](../../error-codes/type-aliases/error-code.md)\> |
 
 #### Returns
 
@@ -89,7 +93,7 @@ static warn(warn): void
 ### info()
 
 ```ts
-static info(information): void
+static info(information): void;
 ```
 
 #### Parameters

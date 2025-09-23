@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../index.md)
+
+***
+
 # shared/src/messenger
 
 ## References
@@ -92,11 +96,35 @@ Re-exports [PublishStatusMessage](message-types/interfaces/publish-status-messag
 
 <HorizontalLine />
 
+### CloseStatus
+
+Re-exports [CloseStatus](message-types/enumerations/close-status.md)
+
+***
+
+### CloseStatusMessage
+
+Re-exports [CloseStatusMessage](message-types/interfaces/close-status-message.md)
+
+***
+
 ### ParamsResponseMessage
 
 Re-exports [ParamsResponseMessage](message-types/interfaces/params-response-message.md)
 
 <HorizontalLine />
+
+### WorkflowMessage
+
+Re-exports [WorkflowMessage](message-types/interfaces/workflow-message.md)
+
+***
+
+### ClientAuthDetailsMessage
+
+Re-exports [ClientAuthDetailsMessage](message-types/interfaces/client-auth-details-message.md)
+
+***
 
 ### MessageData
 
@@ -115,6 +143,12 @@ Re-exports [HostEventType](message-data-types/enumerations/host-event-type.md)
 Re-exports [HostEventData](message-data-types/interfaces/host-event-data.md)
 
 <HorizontalLine />
+
+### CustomHostEventData
+
+Re-exports [CustomHostEventData](message-data-types/interfaces/custom-host-event-data.md)
+
+***
 
 ### IntentChangeEventData
 

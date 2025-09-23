@@ -1,12 +1,15 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: PublishParams
 
 Asset related information received with onPublish callback.
 
 ## Extended by
 
-- [`QuickActionPublishParams`](quick-action-publish-params.md)
-- [`TextToImagePublishParams`](text-to-image-publish-params.md)
-- [`EditorPublishParams`](editor-publish-params.md)
+- [`QuickActionPublishParams`](../../publish-params-types/interfaces/quick-action-publish-params.md)
+- [`TextToImagePublishParams`](../../publish-params-types/interfaces/text-to-image-publish-params.md)
 
 ## Properties
 

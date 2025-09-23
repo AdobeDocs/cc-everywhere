@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: HostInfoSpecifiedBase
 
 This interface describes the properties provided by client.

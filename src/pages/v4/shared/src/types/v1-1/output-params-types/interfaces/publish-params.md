@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Interface: PublishParams
 
 Asset related information received with onPublish callback.

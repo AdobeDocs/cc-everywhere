@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Class: ChannelMessageListener
 
 ## Implements
@@ -6,14 +10,14 @@
 
 ## Constructors
 
-### new ChannelMessageListener()
+### Constructor
 
 ```ts
 new ChannelMessageListener(
    sourceChannel, 
    targetProtocolVersion, 
    _filterRequestIdMismatch, 
-   protocolHandlersModule?): ChannelMessageListener
+   protocolHandlersModule?): ChannelMessageListener;
 ```
 
 #### Parameters
@@ -23,18 +27,18 @@ new ChannelMessageListener(
 | `sourceChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) | `undefined` |
 | `targetProtocolVersion` | [`ProtocolVersion`](../../protocol-types/enumerations/protocol-version.md) | `ProtocolVersion.V1_3` |
 | `_filterRequestIdMismatch` | `boolean` | `false` |
-| `protocolHandlersModule`? | [`ProtocolHandlersModule`](../../protocol-types/interfaces/protocol-handlers-module.md) | `undefined` |
+| `protocolHandlersModule?` | [`ProtocolHandlersModule`](../../protocol-types/interfaces/protocol-handlers-module.md) | `undefined` |
 
 #### Returns
 
-[`ChannelMessageListener`](channel-message-listener.md)
+`ChannelMessageListener`
 
 ## Methods
 
 ### reset()
 
 ```ts
-reset(): void
+reset(): void;
 ```
 
 #### Returns
@@ -46,7 +50,7 @@ reset(): void
 ### didGetMessage()
 
 ```ts
-didGetMessage<T>(message, requestId?): void
+didGetMessage<T>(message, requestId?): void;
 ```
 
 #### Type Parameters
@@ -59,8 +63,8 @@ didGetMessage<T>(message, requestId?): void
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../message-types/type-aliases/message.md) `T` |
-| `requestId`? | `string` |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `requestId?` | `string` |
 
 #### Returns
 
@@ -68,14 +72,14 @@ didGetMessage<T>(message, requestId?): void
 
 #### Implementation of
 
-[`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).`didGetMessage`
+[`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).[`didGetMessage`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md#didgetmessage)
 
 <HorizontalLine />
 
 ### setTarget()
 
 ```ts
-setTarget(targetChannel, targetChannelInfo): void
+setTarget(targetChannel, targetChannelInfo): void;
 ```
 
 #### Parameters
@@ -94,7 +98,7 @@ setTarget(targetChannel, targetChannelInfo): void
 ### removeTarget()
 
 ```ts
-removeTarget(targetChannel): void
+removeTarget(targetChannel): void;
 ```
 
 #### Parameters
@@ -112,7 +116,7 @@ removeTarget(targetChannel): void
 ### hasTarget()
 
 ```ts
-hasTarget(targetChannel): boolean
+hasTarget(targetChannel): boolean;
 ```
 
 #### Parameters
@@ -130,7 +134,9 @@ hasTarget(targetChannel): boolean
 ### getTarget()
 
 ```ts
-getTarget(targetChannel): undefined | TargetChannelInfo
+getTarget(targetChannel): 
+  | undefined
+  | TargetChannelInfo;
 ```
 
 #### Parameters
@@ -141,14 +147,15 @@ getTarget(targetChannel): undefined | TargetChannelInfo
 
 #### Returns
 
-`undefined` \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
+  \| `undefined`
+  \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
 
 <HorizontalLine />
 
 ### addListenerForTarget()
 
 ```ts
-addListenerForTarget(targetChannel, callback): void
+addListenerForTarget(targetChannel, callback): void;
 ```
 
 #### Parameters
@@ -167,7 +174,7 @@ addListenerForTarget(targetChannel, callback): void
 ### sendMessage()
 
 ```ts
-sendMessage<T>(targetChannel, message): boolean
+sendMessage<T>(targetChannel, message): boolean;
 ```
 
 #### Type Parameters
@@ -181,7 +188,7 @@ sendMessage<T>(targetChannel, message): boolean
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) \| [`Message`](../../message-types/type-aliases/message.md) `T` |
+| `message` | \| [`Message`](../../message-types/type-aliases/message.md)<`T`\> \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
 
 #### Returns
 
@@ -192,7 +199,7 @@ sendMessage<T>(targetChannel, message): boolean
 ### sendMessageCompat()
 
 ```ts
-sendMessageCompat<T>(targetChannel, message): boolean
+sendMessageCompat<T>(targetChannel, message): boolean;
 ```
 
 Sends a message using a message channel that is compatible with older version of SDK.
@@ -224,7 +231,7 @@ Sends a message using a message channel that is compatible with older version of
 addListener(
    messageType, 
    listener, 
-   messageFilter?): void
+   messageFilter?): void;
 ```
 
 #### Parameters
@@ -232,8 +239,8 @@ addListener(
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `messageType` | [`MessageType`](../../message-types/enumerations/message-type.md) | Listener is invoked for incoming message of this message type. |
-| `listener` | [`Listener`](../type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
-| `messageFilter`? | [`MessageFilter`](../../channel-messenger-types/type-aliases/message-filter.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
+| `listener` | [`Listener`](../../channel-message-listener/type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
+| `messageFilter?` | [`MessageFilter`](../../channel-messenger-types/type-aliases/message-filter.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
 
 #### Returns
 
@@ -244,7 +251,7 @@ addListener(
 ### removeListener()
 
 ```ts
-removeListener(messageType, listener): void
+removeListener(messageType, listener): void;
 ```
 
 #### Parameters
@@ -263,7 +270,7 @@ removeListener(messageType, listener): void
 ### setRequestId()
 
 ```ts
-setRequestId(requestId): void
+setRequestId(requestId): void;
 ```
 
 #### Parameters

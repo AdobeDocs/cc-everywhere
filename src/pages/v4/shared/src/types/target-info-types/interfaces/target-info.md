@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: TargetInfo
 
 The information of target application (for eg : CCX) which host can open in the browser.

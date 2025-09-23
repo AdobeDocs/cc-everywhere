@@ -1,21 +1,24 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/MessageData.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [HostEventType](enumerations/host-event-type.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [MessageData](interfaces/message-data.md) | - |
-| [HostEventData](interfaces/host-event-data.md) | - |
-| [IntentChangeEventData](interfaces/intent-change-event-data.md) | - |
-| [UpdateCloseButtonEventData](interfaces/update-close-button-event-data.md) | - |
-| [URLInfoEventData](interfaces/url-info-event-data.md) | - |
-| [ExportInfoEventData](interfaces/export-info-event-data.md) | - |
-| [DownloadCompleteEventData](interfaces/download-complete-event-data.md) | - |
+| [MessageData](../message-data-types/interfaces/message-data.md) | - |
+| [HostEventData](../message-data-types/interfaces/host-event-data.md) | - |
+| [CustomHostEventData](../message-data-types/interfaces/custom-host-event-data.md) | - |
+| [IntentChangeEventData](../message-data-types/interfaces/intent-change-event-data.md) | - |
+| [UpdateCloseButtonEventData](../message-data-types/interfaces/update-close-button-event-data.md) | - |
+| [URLInfoEventData](../message-data-types/interfaces/url-info-event-data.md) | - |
+| [ExportInfoEventData](../message-data-types/interfaces/export-info-event-data.md) | - |
+| [DownloadCompleteEventData](../message-data-types/interfaces/download-complete-event-data.md) | - |

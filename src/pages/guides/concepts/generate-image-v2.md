@@ -26,13 +26,13 @@ Welcome to the new and improved Generate Image V2 experience in the Adobe Expres
 
 In redesigning the Generate Image module, we've focused on making the image generation process more engaging, efficient, and inspiring. The **new User Interface** offers a fresh look and feel, with a Carousel and Grid view that make it easier to browse and select images.
 
-![Carousel and Grid view](./img/genimage_carousel.jpg)
+![Carousel and Grid view](./img/generate-image--carousel.jpg)
 
 Upon launching the module, you'll be greeted by an endless array of user-generated images on the **Community Wall**, that provide plenty of inspiration for your projects. The **Improved Prompt Bar** helps you with pop-up suggestions to craft the perfect prompt.
 
-![Improved Prompt Bar](./img/genimage_prompt-suggestions.jpg)
+![Improved Prompt Bar](./img/generate-image--prompt-suggestions.jpg)
 
-**Rich Previews** offer a more interactive and engaging preview experience, while with **Fast Mode** you can cut the generation time when fewer details and smaller sizes are enough.
+**Rich Previews** offer a more interactive and engaging preview experience, while with **Fast Mode** you can cut the generation time when fewer details and smaller sizes are enough. You can also enter a dedicated **Prompt Placeholder** to guide your users.
 
 Lastly, **Custom Firefly Models** allow enterprise users to tailor outputs to unique brand or project requirements.
 
@@ -62,7 +62,7 @@ The new experience introduces several new feature configurations to the [`TextTo
 
 ### Community Wall
 
-![Community Wall](./img/genimage_community-wall.jpg)
+![Community Wall](./img/generate-image--community-wall.jpg)
 
 The infinite-scroll collection of user-generated images with prompts is controlled by the boolean `community-wall` property of the [`featureConfig`](../../v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature.md) object:
 
@@ -83,7 +83,7 @@ Please note, when passing a prompt to the module (via `appConfig.promptText`), t
 
 ### Fast Mode
 
-![Fast Mode](./img/genimage_fast-mode.jpg)
+![Fast Mode](./img/generate-image--fast-mode.jpg)
 
 This new option allows for faster generation of smaller images (1K, or 1024x1024 for a 1:1 ratio, compared to the usual 2K, or 2048x2048) with fewer details. It's a great choice when timely generations are needed, and less precision doesn't matter, for example, in backgrounds, or simpler illustrations. The same [`featureConfig`](../../v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature.md) object allows you to toggle the `fast-mode` boolean:
 
@@ -114,7 +114,7 @@ const appConfig = {
 
 ### Rich Preview
 
-![Rich Preview](./img/genimage_rich-preview.jpg)
+![Rich Preview](./img/generate-image--rich-preview.jpg)
 
 In addition to the Grid and Carousel view, the new experience introduces the possibility to isolate one of the four generated images, and display it in a larger, focused preview. This feature is controlled by the [`thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md) property of the `appConfig` object, which array can now include `"rich-preview"`:
 
@@ -125,11 +125,11 @@ const appConfig = {
 };
 ```
 
-![Rich Preview](./img/genimage_rich-preview-single.jpg)
+![Rich Preview](./img/generate-image--rich-preview-single.jpg)
 
 ### Thumbnail Actions
 
-![Thumbnail Actions](./img/genimage_further-intent.jpg)
+![Thumbnail Actions](./img/generate-image--further-intent.jpg)
 
 You now have a set of actions you can immediately perform on the generated image. You can allow your user to transfer the image directly to the editor. These actions are collected in a dropdown menu within the thumbnail. They include adding text, cropping, and applying filters. Similar to the Rich Preview, these actions are controlled by the [`thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md) property of the `appConfig` object, which array can now include `"edit-dropdown"`. Additionally, the actual options are set in the [`editDropdownOptions`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) array, as option objects:
 
@@ -150,9 +150,22 @@ const appConfig = {
 
 For an updated list of all the available options, refer to the [`EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) enumeration.
 
+### Prompt Placeholder
+
+![Prompt Placeholder](./img/generate-image--prompt-placeholder.jpg)
+
+The Prompt Placeholder is a custom string passed with the [`promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#promptinputplaceholder) property of the `appConfig` object. It can be useful to guide your users with a specific instruction.
+
+```js
+const appConfig = {
+  appVersion: "2",
+  promptInputPlaceholder: "Hangover cat sleeping on a couch", // 👈 this
+};
+```
+
 ### Publish
 
-![Publish](./img/genimage_publish.jpg)
+![Publish](./img/generate-image--publish.jpg)
 
 The SDK also introduces the possibility of running a publish callback for the generated image directly from the module. Label and ID of this feature are controlled by the [`publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/publish-config.md) property of the `appConfig` object, which can include the following options:
 
@@ -202,7 +215,7 @@ This feature requires users of your organization to have access to the Custom Fi
 
 The new experience let you select fine-tuned Firefly Models, in addition to the standard generation model. This allows enterprise users to tailor the generated images to their unique brand or project requirements.
 
-![Custom Firefly Models](./img/genimage_custom-firefly-models.jpg)
+![Custom Firefly Models](./img/generate-image--custom-firefly-models.jpg)
 
 Provided that you have trained and uploaded your custom models, you can enable the Custom Firefly Models feature by setting the `custom-models` boolean property of the [`featureConfig`](../../v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature.md) object:
 
@@ -221,7 +234,7 @@ When enabled, the Custom Firefly Models dropdown will appear above all other gen
 
 The Community Wall is now able to showcase **your custom images** instead of Firefly's publicly available gallery.
 
-![Custom Community Wall](./img/genimage_custom-community-wall.png)
+![Custom Community Wall](./img/generate-image--custom-community-wall.png)
 
 **To enable the Custom Community Wall**, you need to supply a `communityWallConfig` object to `appConfig` when you launch Generate Image v2.
 
@@ -367,4 +380,4 @@ async function myFetchCommunityAssets(
 
 The [Adobe Express Embed SDK Demo App](https://demo.expressembed.com/) has been updated to showcase the new features, and it provides code snippets for each of the new configurations.
 
-[![Demo App](./img/genimage_demo-app.png)](https://demo.expressembed.com/)
+[![Demo App](./img/generate-image--demo-app.png)](https://demo.expressembed.com/)

@@ -1,15 +1,17 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/ChannelMessageListener
 
-## Index
-
-### Classes
+## Classes
 
 | Class | Description |
 | ------ | ------ |
 | [ChannelMessageListener](classes/channel-message-listener.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [Listener](type-aliases/listener.md) | - |

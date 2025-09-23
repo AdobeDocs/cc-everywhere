@@ -1,4 +1,8 @@
-# Interface: AssetBase T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Interface: AssetBase<T\>
 
 Base interface for all asset types.
 

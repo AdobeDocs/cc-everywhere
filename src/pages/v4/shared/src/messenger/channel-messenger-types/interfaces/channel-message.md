@@ -1,4 +1,8 @@
-# Interface: ChannelMessage T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Interface: ChannelMessage<T\>
 
 ## Type Parameters
 

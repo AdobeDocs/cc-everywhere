@@ -1,31 +1,37 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/messenger/Message.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Status](enumerations/status.md) | - |
-| [PublishCallbackStatus](enumerations/publish-callback-status.md) | - |
-| [LoadStatus](enumerations/load-status.md) | - |
-| [CancelReason](enumerations/cancel-reason.md) | - |
-| [WorkflowLoadCompleted](enumerations/workflow-load-completed.md) | - |
-| [MessageType](enumerations/message-type.md) | - |
+| [Status](../message-types/enumerations/status.md) | - |
+| [PublishCallbackStatus](../message-types/enumerations/publish-callback-status.md) | - |
+| [LoadStatus](../message-types/enumerations/load-status.md) | - |
+| [CancelReason](../message-types/enumerations/cancel-reason.md) | - |
+| [WorkflowLoadCompleted](../message-types/enumerations/workflow-load-completed.md) | - |
+| [MessageType](../message-types/enumerations/message-type.md) | - |
+| [CloseStatus](../message-types/enumerations/close-status.md) | - |
 
-### Interfaces
+## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [MessageDataMap](interfaces/message-data-map.md) | - |
-| [CancelMessage](interfaces/cancel-message.md) | - |
-| [TokenResponseMessage](interfaces/token-response-message.md) | - |
-| [PublishStatusMessage](interfaces/publish-status-message.md) | - |
-| [ParamsResponseMessage](interfaces/params-response-message.md) | - |
+| [MessageDataMap](../message-types/interfaces/message-data-map.md) | - |
+| [CancelMessage](../message-types/interfaces/cancel-message.md) | - |
+| [TokenResponseMessage](../message-types/interfaces/token-response-message.md) | - |
+| [PublishStatusMessage](../message-types/interfaces/publish-status-message.md) | - |
+| [CloseStatusMessage](../message-types/interfaces/close-status-message.md) | - |
+| [ParamsResponseMessage](../message-types/interfaces/params-response-message.md) | - |
+| [WorkflowMessage](../message-types/interfaces/workflow-message.md) | - |
+| [ClientAuthDetailsMessage](../message-types/interfaces/client-auth-details-message.md) | - |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [DataMessageType](type-aliases/data-message-type.md) | - |
 | [SimpleMessageType](type-aliases/simple-message-type.md) | - |

@@ -1,20 +1,22 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/Layout.types
 
-## Index
-
-### Enumerations
+## Enumerations
 
 | Enumeration | Description |
 | ------ | ------ |
 | [CanvasType](enumerations/canvas-type.md) | Canvas Layout supported in Project X |
 
-### Type Aliases
+## Type Aliases
 
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [CanvasInfo](type-aliases/canvas-info.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

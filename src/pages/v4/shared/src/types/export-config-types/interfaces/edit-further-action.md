@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: EditFurtherAction
 
 ## Extends
@@ -8,6 +12,6 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`EditFurtherTarget`](../enumerations/edit-further-target.md) | [`BaseAction`](base-action.md).`target` |
-| `intent?` | [`EditFurtherIntent`](../enumerations/edit-further-intent.md) | - |
-| `context?` | [`ExportContext`](../type-aliases/export-context.md) | - |
+| `target` | [`EditFurtherTarget`](../../export-config-types/enumerations/edit-further-target.md) | [`BaseAction`](../../export-config-types/interfaces/base-action.md).[`target`](../../export-config-types/interfaces/base-action.md#target) |
+| `intent?` | [`EditFurtherIntent`](../../export-config-types/enumerations/edit-further-intent.md) | - |
+| `context?` | [`ExportContext`](../../export-config-types/type-aliases/export-context.md) | - |

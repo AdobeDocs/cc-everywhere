@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: CCEverywhereInterface
 
 ## Properties
@@ -13,7 +17,7 @@
 ### close()
 
 ```ts
-close(): void
+close(): void;
 ```
 
 #### Returns

@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: PreSignedInAuthConfig
 
 ## Extended by

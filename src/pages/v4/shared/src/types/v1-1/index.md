@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/v1\_1
 
 ## References

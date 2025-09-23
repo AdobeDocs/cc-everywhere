@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: MessageFilter()
 
 ```ts
-type MessageFilter: <T>(message) => boolean;
+type MessageFilter = <T>(message) => boolean;
 ```
 
 ## Type Parameters

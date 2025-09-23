@@ -1,9 +1,14 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: ExportGroup
 
 ## Extended by
 
-- [`ExportOptionGroup`](export-option-group.md)
-- [`ContinueEditingGroup`](continue-editing-group.md)
+- [`ExportOptionGroup`](../../export-config-types/interfaces/export-option-group.md)
+- [`ContinueEditingGroup`](../../export-config-types/interfaces/continue-editing-group.md)
+- [`PublishButtonGroup`](../../export-config-types/interfaces/publish-button-group.md)
 
 ## Properties
 

@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: FeatureFlagConfig
 
 Configuration interface for feature flags
@@ -6,7 +10,7 @@ Configuration interface for feature flags
 
 | Property | Type |
 | ------ | ------ |
-| `baseFeatureFlags` | `Partial` `Partial` `Record` [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), `Partial` `Record` [`HzFeatureFlag`](../enumerations/hz-feature-flag.md), `boolean`|
-| `firstPartyFeatureFlags` | `Partial` `Partial` `Record` [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), `Partial` `Record` [`HzFeatureFlag`](../enumerations/hz-feature-flag.md), `boolean` |
-| `thirdPartyFeatureFlags` | `Partial` `Partial` `Record` [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), `Partial` `Record` [`HzFeatureFlag`](../enumerations/hz-feature-flag.md), `boolean` |
-| `clientFeatureFlags` | `Partial` `Partial` `Record` [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md), [`ClientFeatureFlags`](../type-aliases/client-feature-flags.md) |
+| `baseFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
+| `firstPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
+| `thirdPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
+| `clientFeatureFlags` | `Partial`<[`IntentClientFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-client-feature-flags.md)\> |

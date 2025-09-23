@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: GenStudioQuickActionIntent
 
 ## Enumeration Members

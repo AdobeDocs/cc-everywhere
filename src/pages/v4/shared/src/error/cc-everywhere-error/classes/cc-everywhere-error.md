@@ -1,4 +1,8 @@
-# Class: CCEverywhereError T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Class: CCEverywhereError<T\>
 
 ## Extends
 
@@ -12,14 +16,14 @@
 
 ## Constructors
 
-### new CCEverywhereError()
+### Constructor
 
 ```ts
 new CCEverywhereError<T>(
    code, 
    message?, 
    subError?, 
-customData?): CCEverywhereError<T>
+customData?): CCEverywhereError<T>;
 ```
 
 Constructor
@@ -29,29 +33,33 @@ Constructor
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `code` | `T` | The error code associated with this error. |
-| `message`? | `string` | The message associated with this error. |
-| `subError`? | `string` \| `number` \| `Error` | Source error or a number tell more about the error. |
-| `customData`? | `unknown` | Any kind of custom data related to error, which is converted to valid JSON |
+| `message?` | `string` | The message associated with this error. |
+| `subError?` | `string` \| `number` \| `Error` | Source error or a number tell more about the error. |
+| `customData?` | `unknown` | Any kind of custom data related to error, which is converted to valid JSON |
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md) `T`
+`CCEverywhereError`<`T`\>
 
 #### Overrides
 
-`Error.constructor`
+```ts
+Error.constructor
+```
 
 ## Accessors
 
 ### code
 
+#### Get Signature
+
 ```ts
-get code(): T
+get code(): T;
 ```
 
 getter code
 
-#### Returns
+##### Returns
 
 `T`
 
@@ -63,7 +71,7 @@ getter code
 static create<T>(
    errorCodeMessage, 
    subError?, 
-customData?): CCEverywhereError<T>
+customData?): CCEverywhereError<T>;
 ```
 
 #### Type Parameters
@@ -76,20 +84,20 @@ customData?): CCEverywhereError<T>
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md) `T` |
-| `subError`? | `string` \| `number` \| `Error` |
-| `customData`? | `unknown` |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md)<`T`\> |
+| `subError?` | `string` \| `number` \| `Error` |
+| `customData?` | `unknown` |
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md) `T`
+`CCEverywhereError`<`T`\>
 
 <HorizontalLine />
 
 ### createErrorFromData()
 
 ```ts
-static createErrorFromData<T>(data): CCEverywhereError<T>
+static createErrorFromData<T>(data): CCEverywhereError<T>;
 ```
 
 #### Type Parameters
@@ -106,14 +114,14 @@ static createErrorFromData<T>(data): CCEverywhereError<T>
 
 #### Returns
 
-[`CCEverywhereError`](cc-everywhere-error.md) `T`
+`CCEverywhereError`<`T`\>
 
 <HorizontalLine />
 
 ### toData()
 
 ```ts
-toData(): ErrorData<T>
+toData(): ErrorData<T>;
 ```
 
 Get a plain-object representation of the error..
@@ -127,7 +135,7 @@ Get a plain-object representation of the error..
 ### toString()
 
 ```ts
-toString(): string
+toString(): string;
 ```
 
 Get complete message

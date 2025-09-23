@@ -1,14 +1,16 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/ConfigManager.types
 
-## Index
+## Type Aliases
 
-### Type Aliases
-
-| Type alias | Description |
+| Type Alias | Description |
 | ------ | ------ |
 | [Config](type-aliases/config.md) | - |
 
-### Variables
+## Variables
 
 | Variable | Description |
 | ------ | ------ |

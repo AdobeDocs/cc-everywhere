@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: PlatformCategory
 
 ## Enumeration Members
@@ -6,3 +10,4 @@
 | ------ | ------ |
 | `WEB` | `"web"` |
 | `DESKTOP` | `"desktop"` |
+| `MOBILE` | `"mobile"` |

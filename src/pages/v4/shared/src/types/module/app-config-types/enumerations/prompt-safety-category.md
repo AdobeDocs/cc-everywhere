@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
 # Enumeration: PromptSafetyCategory
 
 Categories for prompt safety assessment.

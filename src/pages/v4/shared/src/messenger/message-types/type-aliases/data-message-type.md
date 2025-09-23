@@ -1,14 +1,22 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: DataMessageType
 
 ```ts
-type DataMessageType: 
-  | MessageType.DID_TARGET_LOAD
-  | MessageType.DID_PUBLISH
-  | MessageType.CANCEL
-  | MessageType.TOKEN_RESPONSE
-  | MessageType.PARAMS_RESPONSE
-  | MessageType.EVENT
-  | MessageType.ERROR
-  | MessageType.PUBLISH_STATUS
-  | MessageType.CW_ASSET_RESPONSE;
+type DataMessageType = 
+  | DID_TARGET_LOAD
+  | DID_PUBLISH
+  | CANCEL
+  | TOKEN_RESPONSE
+  | PARAMS_RESPONSE
+  | EVENT
+  | ERROR
+  | PUBLISH_STATUS
+  | CW_ASSET_RESPONSE
+  | WORKFLOW_CONTEXT_UPDATE
+  | CLOSE_STATUS
+  | PROMPT_SAFETY_CHECK_RESPONSE
+  | CLIENT_AUTH_DETAILS;
 ```

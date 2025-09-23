@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: FillContainerConfig
 
 ## Extends
@@ -8,13 +12,13 @@
 
 | Property | Modifier | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ | ------ |
-| `backgroundColor?` | `public` | `string` | Override the background color of the iframe. By default this is as per theme. | [`BaseContainerConfig`](base-container-config.md).`backgroundColor` |
-| `showLoader?` | `public` | `boolean` | Show spinner while loading target app. Default is true. | [`BaseContainerConfig`](base-container-config.md).`showLoader` |
-| `loadTimeout?` | `public` | `number` | If target app does't open within this time (in ms, same as of setTimeout), the error callback is invoked with error code TARGET_LOAD_TIMED_OUT. | [`BaseContainerConfig`](base-container-config.md).`loadTimeout` |
-| `hideCloseButton?` | `public` | `boolean` | Don't show close button for container and header bars | [`BaseContainerConfig`](base-container-config.md).`hideCloseButton` |
-| `zIndex?` | `public` | `number` | Set the z-index of of the root container | [`BaseContainerConfig`](base-container-config.md).`zIndex` |
-| `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View | [`BaseContainerConfig`](base-container-config.md).`showReaderView` |
-| `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`BaseContainerConfig`](base-container-config.md).`showExpressIconWithText` |
-| `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`BaseContainerConfig`](base-container-config.md).`showDarkerBackgroundForLoader` |
-| `mode` | `public` | `FILL` | - | - |
+| `backgroundColor?` | `public` | `string` | Override the background color of the iframe. By default this is as per theme. | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`backgroundColor`](../../container-config-types/interfaces/base-container-config.md#backgroundcolor) |
+| `showLoader?` | `public` | `boolean` | Show spinner while loading target app. Default is true. | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showLoader`](../../container-config-types/interfaces/base-container-config.md#showloader) |
+| `loadTimeout?` | `public` | `number` | If target app does't open within this time (in ms, same as of setTimeout), the error callback is invoked with error code TARGET_LOAD_TIMED_OUT. | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`loadTimeout`](../../container-config-types/interfaces/base-container-config.md#loadtimeout) |
+| `hideCloseButton?` | `public` | `boolean` | Don't show close button for container and header bars | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`hideCloseButton`](../../container-config-types/interfaces/base-container-config.md#hideclosebutton) |
+| `zIndex?` | `public` | `number` | Set the z-index of of the root container | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`zIndex`](../../container-config-types/interfaces/base-container-config.md#zindex) |
+| `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showReaderView`](../../container-config-types/interfaces/base-container-config.md#showreaderview) |
+| `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showExpressIconWithText`](../../container-config-types/interfaces/base-container-config.md#showexpressiconwithtext) |
+| `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showDarkerBackgroundForLoader`](../../container-config-types/interfaces/base-container-config.md#showdarkerbackgroundforloader) |
+| `mode` | `public` | [`FILL`](../../container-config-types/enumerations/container-mode.md#fill) | - | - |
 | `parentElementId?` | `public` | `string` | Id of element to which iframe must be appended. By default it is appended to body. | - |

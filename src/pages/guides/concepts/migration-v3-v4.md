@@ -20,72 +20,55 @@ This guide will assist you in updating your Adobe Express Embed SDK integration 
 
 Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
-SDK V4 was developed to streamline the existing APIs and create a scalable model to accommodate the expanding range of SDK Target Applications. Accordingly, APIs are categorized into distinct workflows, each corresponding to one of the SDK's supported target applications. This categorization further refines the APIs, making them more detailed and aligned with user intent.
+### **Breaking Changes**
 
-## Introducing workflows
+- Update SDK version from V3 to V4
+- Restructure initialization parameters (3 parameters instead of 2)
+- Move callbacks from API-level to class-level
+- Replace single APIs with workflow-specific methods
+- Update parameter structure (4 new parameter types)
 
-In V3, there were three main APIs: `createDesign`, `EditDesign`, and `openQuickActions`. These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents.
+### **API Mapping**
+
+- `createDesign()` → `editor.create()`, `editor.createWithAsset()`, or `editor.createWithTemplate()`
+- `editDesign()` → `editor.edit()`
+- `openQuickAction()` → specific `quickAction.*()` methods
+
+### **Parameter Changes**
+
+- Separate mixed parameters into: `DocConfig`, `AppConfig`, `ExportConfig`, `ContainerConfig`
+- Merge `userInfo` and `authInfo` into single `authOption`
+- Remove `quickActionId` (use specific methods instead)
+
+### **Optional Enhancements**
+
+- Enable V2 module features (if using modules)
+- Review new workflow capabilities
+- Update internal documentation
+
+## Understanding V4 Workflows
+
+In V3, there were three main APIs: `createDesign()`, `EditDesign()`, and `openQuickActions()`. These APIs differentiated user intent by analyzing parameters provided by partner teams, subsequently initiating the appropriate workflow. However, this approach increased the parameters for each API, as they were designed to cater to multiple user intents.
 
 We have addressed this issue in V4 by segmenting the APIs into ***workflows*** based on user intent and providing more descriptive API names.
 
 The three workflows are as follows:
 
-- Module Workflow
-- Editor Workflow
-- Quickaction Workflow
+- **Module Workflow** - For focused editing tasks
+- **Editor Workflow** - For full design creation and editing
+- **Quickaction Workflow** - For quick image/video transformations
 
-Let us see in detail about the V4 changes through these workflows.
-
-## V4 key changes
+## API Migration Overview
 
 The following diagram shows how the previous API relates to the current new APIs:
 
-![V3 V4 comparison](./img/v3-v4.png)
+![V3 V4 API Migration Overview](./img/v3-v4-api-migration-overview.png)
 
-### Module workflow
+### Parameter Restructuring
 
-We are introducing module APIs through module workflow.
+V4 introduces a cleaner parameter structure with four distinct parameter types instead of mixed parameters:
 
-#### New APIs
-
-| API Name                                  | Description                                                                                                                                                                                         |
-|-------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `CCEverywhere.module.editImage`           | Start editing an asset using image module.                                                                                                                                                          |
-| `CCEverywhere.module.createImageFromText` | Generate images using a text prompt. SDK unlocks a mini editing experience, allowing users to create images from text prompts and then be able to make necessary edits via Embedded Express Editor. |
-
-### Editor workflow
-
-#### New APIs
-
-| API Name             | Description                                                      |
-|----------------------|------------------------------------------------------------------|
-| `CCEverywhere.editor.create`             | Initiates a workflow using a blank canvas                        |
-| `CCEverywhere.editor.createWithAsset`    | Allows an image asset to be preloaded onto the canvas.           |
-| `CCEverywhere.editor.createWithTemplate` | Enables starting with a given Adobe Express template ID.         |
-| `CCEverywhere.editor.edit`               | Allows modification using an existing Adobe Express Document ID. |
-
-#### Deprecated APIs
-
-- [createDesign](../../v3/reference/cc-everywhere/create-design/index.md)
-- [editDesign](../../v3/reference/cc-everywhere/edit-design/index.md)
-
-### Quick action workflow
-
-#### New APIs
-
-| API Name                                 | Description                            |
-|------------------------------------------|----------------------------------------|
-| `CCEverywhere.quickAction.convertToJPEG` | Convert an image asset to JPEG format. |
-| `CCEverywhere.quickAction.convertToPNG`  | Convert an image asset to PNG format.  |
-| ... so on                                |                                        |
-
-#### Deprecated API
-
-[openQuickAction](../../v3/reference/cc-everywhere/quick-actions/index.md) has been replaced with individual `quick action-named` APIs such as `cropImage`, eliminating the need for partners to submit a quick action ID.
-
-## Workflow API enhancements
-
-For all the workflow APIs, we will now have four parameters.
+![V3 to V4 Parameter Migration](./img/v3-v4-parameter-migration.png)
 
 The four parameters are:
 
@@ -94,21 +77,90 @@ The four parameters are:
 - `ExportConfig` - properties that govern the export behaviour of a workflow.
 - `ContainerConfig` - UI properties that customize the SDK container.
 
-**Editor Workflow API example**
+**Example transformation:**
 
 **V3**: `ccEverywhere.createDesign(inputParams);`
 
 **V4**: `ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);`
 
-## Step-by-Step migration
+## Complete API Reference
 
-### 1. Update SDK version
+### New V4 APIs by Workflow
 
-Use this link to get the latest version: [https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js](https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js). You can check it directly in the JavaScript file.
+#### Module Workflow (New in V4)
+
+| V4 API | Description |
+|--------|-------------|
+| `CCEverywhere.module.editImage` | Start editing an asset using image module |
+| `CCEverywhere.module.createImageFromText` | Generate images using text prompts with mini editing experience |
+
+#### Editor Workflow
+
+| V3 API | V4 API | Description |
+|--------|--------|-------------|
+| `createDesign()` (blank canvas) | `CCEverywhere.editor.create()` | Initiates workflow using blank canvas |
+| `createDesign()` (with asset) | `CCEverywhere.editor.createWithAsset()` | Preloads image asset onto canvas |
+| `createDesign()` (with template) | `CCEverywhere.editor.createWithTemplate()` | Starts with Adobe Express template ID |
+| `editDesign()` | `CCEverywhere.editor.edit()` | Modifies existing Adobe Express Document |
+
+#### Quick Action Workflow
+
+| V3 API | V4 API Examples | Description |
+|--------|-----------------|-------------|
+| `openQuickAction()` (with ID) | `CCEverywhere.quickAction.cropImage()` | Individual methods for each action |
+| | `CCEverywhere.quickAction.convertToJPEG()` | Convert image to JPEG format |
+| | `CCEverywhere.quickAction.convertToPNG()` | Convert image to PNG format |
+| | `CCEverywhere.quickAction.resizeImage()` | Resize image dimensions |
+
+### Deprecated Features
+
+- **APIs**: `createDesign()`, `editDesign()`, `openQuickAction()`
+- **Parameters**: `quickActionId`, mixed input parameters, API-level callbacks
+- **Auth structure**: Separate `userInfo` and `authInfo` (now merged into `authOption`)
+
+## Step-by-Step Migration Guide
+
+Now that you understand the conceptual changes, let's walk through the practical migration steps:
+
+### 1:Update SDK Version
+
+First, update your script tag or import statement to use the V4 SDK.
+
+**Find the latest version:** Check [https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js](https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js) for the current version number.
 
 ![version](./img/version.png)
 
-### 2. Update initialization code
+<CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, JavaScript" />
+
+#### V4 HTML Script Tag
+
+```html
+<!-- V4 - Updated version -->
+<script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
+```
+
+#### V3 HTML Script Tag
+
+```html
+<!-- V3 - Previous version -->
+<script src="https://cc-embed.adobe.com/sdk/v3/CCEverywhere.js"></script>
+```
+
+#### npm/Bundler Import Update
+
+```javascript
+
+// V4 - Updated import
+import CCEverywhere from '@adobe/cc-everywhere-sdk/v4';
+
+// Alternative CDN import for modules
+await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
+
+// V3 - Previous import
+import CCEverywhere from '@adobe/cc-everywhere-sdk/v3';
+```
+
+### 2: Update Initialization Code
 
 Update your initialization code to use the new configuration parameters.
 
@@ -122,31 +174,269 @@ Update your initialization code to use the new configuration parameters.
 
 We have moved callbacks from an API-level to a class-level parameter. This enables partners to pass their callbacks once during the lifecycle of SDK. The list of callbacks supported by SDK remains the same as it was in V3.
 
-With all the above changes, the SDK initialization API can be visualized using the following diagram:
+**Key Changes:**
 
-![SDK initialization](./img/initialization-v4.png)
+- **3 parameters instead of 2**: Added `authOption` as third parameter
+- **Merged auth parameters**: `userInfo` and `authInfo` combined into `authOption`
+- **Callbacks moved to class-level**: Set once during initialization instead of per API call
 
-**V3:**
+<CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, TypeScript" />
 
-```ts
+#### V3 HTML Script Tag
+
+```html
+<script src="https://cc-embed.adobe.com/sdk/v3/CCEverywhere.js"></script>
+<script>
+  // V3 Initialization
+  const ccEverywhere = await window.CCEverywhere.initialize(
+    { clientId: "your-client-id", appName: "your-app-name" },
+    { /* configParams */ }
+  );
+</script>
+```
+
+#### V4 HTML Script Tag
+
+```javascript
+<script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
+<script>
+  // V4 Initialization with enhanced parameters
+  const ccEverywhere = await window.CCEverywhere.initialize(
+    { clientId: "your-client-id", appName: "your-app-name" }, // hostInfo
+    { /* configParams */ }, // configParams
+    { /* merged auth options */ } // authOption
+  );
+</script>
+```
+
+#### V3 vs V4 TypeScript Signatures
+
+```typescript
+// V3 - Basic initialization
 initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
+
+// V4 - Enhanced initialization with merged auth
+initialize: (
+  hostInfo: HostInfoSpecifiedBase, 
+  configParams?: ConfigParamsBase, 
+  authOption?: AuthOption
+) => Promise<CCEverywhere>
 ```
 
-**V4:**
+### 3: Migrate Your API Calls
 
-```ts
-initialize: ((hostInfo: HostInfoSpecifiedBase, configParams?: ConfigParamsBase, authOption?: AuthOption) => Promise<CCEverywhere>); terminate: (() => boolean)
+The most significant change in V4 is the move from single APIs to workflow-specific methods. Here's how to migrate each type:
+
+#### Editor workflow API migration
+
+<CodeBlock slots="heading, code" repeat="3" languages="JavaScript, JavaScript, JavaScript" />
+
+#### V3 createDesign - Single API
+
+```javascript
+// V3 - Single API with complex parameters
+const result = await ccEverywhere.createDesign({
+  callbacks: {
+    onCancel: () => console.log('Cancelled'),
+    onPublish: (publishParams) => console.log('Published', publishParams),
+    onError: (err) => console.log('Error', err)
+  },
+  inputParams: {
+    // Mixed parameters for different intents
+    canvasSize: { width: 800, height: 600 },
+    templateId: 'some-template-id',
+    assetId: 'some-asset-id'
+  }
+});
 ```
 
-### 3. Adjust API calls
+#### V4 editor.create - Blank Canvas
 
-Review and update your API calls to match the new method signatures and parameters in V4.
+```javascript
+// V4 - Separate method for blank canvas
+const result = await ccEverywhere.editor.create(
+  { canvasSize: { width: 800, height: 600 } }, // docConfig
+  { /* app configuration */ }, // appConfig
+  { /* export settings */ }, // exportConfig
+  { /* UI customization */ }  // containerConfig
+);
+```
 
-### 4. Handle deprecated parameters
+#### V4 Specific Methods - Templates & Assets
 
-Identify and replace any deprecated features in your codebase. For alternatives and updated methods, refer to the V4 documentation.
+```javascript
+// V4 - For templates:
+const result = await ccEverywhere.editor.createWithTemplate(
+  { templateId: 'some-template-id' }, // docConfig
+  { /* app configuration */ }, // appConfig
+  { /* export settings */ }, // exportConfig
+  { /* UI customization */ }  // containerConfig
+);
 
-### 5. Test your implementation
+// V4 - For assets:
+await ccEverywhere.editor.createWithAsset(
+  { asset: { dataUrl: 'data:image/jpeg;base64,...' } }, // docConfig
+  { /* app configuration */ }, // appConfig
+  { /* export settings */ }, // exportConfig
+  { /* UI customization */ }  // containerConfig
+);
+```
+
+#### Quick Action workflow API migration
+
+<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+
+#### V3 openQuickAction - Single API with ID
+
+```javascript
+// V3 - Single API with action ID
+const result = await ccEverywhere.openQuickAction({
+  quickActionId: 'crop-image',
+  inputParams: {
+    asset: { dataUrl: 'data:image/jpeg;base64,...' }
+  },
+  callbacks: {
+    onCancel: () => console.log('Cancelled'),
+    onPublish: (publishParams) => console.log('Published', publishParams)
+  }
+});
+```
+
+#### V4 quickAction - Specific Methods
+
+```javascript
+// V4 - Specific method for each action (no ID needed)
+const result = await ccEverywhere.quickAction.cropImage(
+  { asset: { dataUrl: 'data:image/jpeg;base64,...' } }, // docConfig
+  { /* app configuration */ }, // appConfig
+  { /* export settings */ }, // exportConfig
+  { /* UI customization */ }  // containerConfig
+);
+
+// Other quick actions available:
+await ccEverywhere.quickAction.convertToJPEG(docConfig, appConfig, exportConfig, containerConfig);
+await ccEverywhere.quickAction.convertToPNG(docConfig, appConfig, exportConfig, containerConfig);
+await ccEverywhere.quickAction.resizeImage(docConfig, appConfig, exportConfig, containerConfig);
+```
+
+**For complete API reference and all available methods, see:**
+
+- [V4 Editor API Reference](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)
+- [V4 Module API Reference](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)
+- [V4 Quick Action API Reference](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)
+
+### 4: Update Parameter Structure
+
+V4 uses a consistent four-parameter structure across all APIs. Here's how to restructure your existing parameters:
+
+#### Parameter restructuring:
+
+<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+
+#### V3 Mixed Parameters Structure
+
+```javascript
+// V3 - Mixed parameters in single object
+const v3Params = {
+  callbacks: { /* callbacks */ },
+  inputParams: {
+    canvasSize: { width: 800, height: 600 },
+    exportOptions: { format: 'jpeg' },
+    containerStyle: { backgroundColor: 'white' }
+  }
+};
+
+// Usage
+await ccEverywhere.createDesign(v3Params);
+```
+
+#### V4 Separated Parameter Structure
+
+```javascript
+// V4 - Organized into four distinct parameter objects
+const docConfig = { canvasSize: { width: 800, height: 600 } };
+const appConfig = { /* application settings */ };
+const exportConfig = { format: 'jpeg' };
+const containerConfig = { backgroundColor: 'white' };
+
+// Usage (callbacks moved to initialization)
+await ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerConfig);
+```
+
+### 5: Enable V2 Module Features (Optional)
+
+If you want to access the latest module features with enhanced capabilities, you need to enable V2 modules by setting `appVersion` to `"2"` in your app configuration:
+
+<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+
+#### V1 Module Configuration (Default)
+
+```javascript
+// V1 - Default module experience
+const appConfig = {
+  // appVersion not specified defaults to V1
+  // ... other app configuration
+};
+
+// Standard module functionality
+const result = await ccEverywhere.module.createImageFromText(
+  { prompt: 'A beautiful sunset over mountains' }, // docConfig
+  appConfig, // V1 configuration
+  exportConfig,
+  containerConfig
+);
+```
+
+#### V2 Module Configuration (Enhanced)
+
+```javascript
+// V2 - Enhanced module features
+const appConfig = {
+  appVersion: "2", // This enables V2 module features
+  // Additional V2-specific configurations:
+  featureConfig: {
+    "community-wall": true,
+    "fast-mode": true
+  },
+  thumbnailOptions: ["rich-preview", "edit-dropdown"]
+};
+
+// Enhanced V2 module functionality
+const result = await ccEverywhere.module.createImageFromText(
+  { prompt: 'A beautiful sunset over mountains' }, // docConfig
+  appConfig, // V2 configuration with enhanced features
+  exportConfig,
+  containerConfig
+);
+```
+
+**Note:** Setting `appVersion: "2"` is separate from the V3→V4 SDK migration but is required to access the full range of new module capabilities. This step is only relevant if you're using module workflows.
+
+#### V2 Module Enhancements:
+
+**Generate Image V2 features:**
+
+- Community Wall with user-generated inspiration
+- Fast Mode for quicker generation
+- Rich Preview for better image viewing
+- Thumbnail Actions for immediate editing
+- Custom Firefly Models (enterprise feature)
+
+**Edit Image V2 features:**
+
+- 35-50% reduced load times
+- 35% reduced memory consumption
+- Redesigned UI with Adobe Spectrum 2
+- Tabbed interface for better organization
+
+<InlineAlert variant="info" slots="text1, text2" />
+
+For detailed information on V2 module features and configuration options:
+
+- **[Generate Image V2 Guide](./generate-image-v2.md)**: Complete guide for the enhanced text-to-image experience
+- **[Edit Image V2 Guide](./edit-image-v2.md)**: Complete guide for the improved image editing experience
+
+### 6: Test Your Implementation
 
 After updating your code, thoroughly test your implementation to ensure everything works as expected. Pay particular attention to:
 
@@ -182,15 +472,31 @@ Here are some specific tests you can perform:
 - Verify that the asset is displayed and editable.
 - Check that export options and allowed file types are correctly configured.
 
-### 6. Review new features
+### 7: Explore New V4 Features
 
-Take advantage of new features introduced in V4. Review the release notes and documentation to explore new functionalities that could enhance your application. Some new features might include:
+Take advantage of new features introduced in V4:
+
+#### New V4 Features:
+
+- **[Module Workflow](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)**: New `editImage` and `createImageFromText` capabilities
+- **[Enhanced Editor APIs](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)**: More granular control with separate create methods
+- **[Individual Quick Actions](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)**: Specific methods for each quick action type
+- **Improved Parameter Structure**: Cleaner separation of concerns with four parameter types
+- **Class-level Callbacks**: Set callbacks once during initialization instead of per API call
+
+#### Additional Resources:
+
+- **[V4 Release Notes](../changelog/)**: Complete list of changes and improvements
+- **[V4 API Reference](../../v4/)**: Full documentation of all V4 APIs
+- **[Troubleshooting Guide](../troubleshooting/)**: Common issues and solutions during migration
+
+Some new features might include:
 
 - Enhanced configuration options for better customization.
 - New methods and parameters to provide more control over the SDK.
 - Improved performance and security features.
 
-### 7. Update documentation and dependencies
+### 8: Update Documentation and Dependencies
 
 Ensure your internal documentation is updated to reflect the changes made during the migration. Also, update any dependencies interacting with Adobe Express Embed SDK to ensure compatibility. This includes:
 
@@ -198,11 +504,35 @@ Ensure your internal documentation is updated to reflect the changes made during
 - Modifying any integration guides or setup instructions.
 - Ensuring all team members know the changes and how to use the new SDK features.
 
-## Conclusion
+## Migration Summary
 
-Migrating from Adobe Express Embed SDK V3 to V4 involves updating initialization code and API calls and handling deprecated features.
+Congratulations! You've successfully migrated from Adobe Express Embed SDK V3 to V4. Here's what you've accomplished:
 
-By following this guide, you can ensure a smooth transition and take advantage of V4's new features and improvements.
+### ✅ Core Migration Complete
+
+- **Updated SDK version** from V3 to V4
+- **Restructured initialization** with new 3-parameter structure
+- **Migrated API calls** to workflow-specific methods
+- **Reorganized parameters** into the new 4-parameter structure
+
+### 🎯 Key Benefits Achieved
+
+- **Cleaner API structure** with workflow-based organization
+- **Better parameter separation** for easier maintenance
+- **Enhanced functionality** with new module capabilities
+- **Improved performance** and scalability
+
+### 📚 Next Steps
+
+If you encounter any issues during migration, consult our [Troubleshooting Guide](../troubleshooting/) for common solutions.
+
+For ongoing development, bookmark these essential resources:
+
+- **[V4 API Reference](../../v4/)** - Complete V4 documentation
+- **[V4 Release Notes](../changelog/)** - Latest updates and features
+- **[Migration Checklist](#migration-summary)** - Review completed items
+
+<DiscoverBlock slots="heading, link, text"/>
 
 ## API References
 

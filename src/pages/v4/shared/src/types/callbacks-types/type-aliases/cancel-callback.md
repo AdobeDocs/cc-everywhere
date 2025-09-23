@@ -1,7 +1,11 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Type Alias: CancelCallback()
 
 ```ts
-type CancelCallback: () => void;
+type CancelCallback = () => void;
 ```
 
 ## Returns

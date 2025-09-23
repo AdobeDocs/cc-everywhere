@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # Class: `abstract` CCEverywhereBase
 
 Class to create CCEverywhere object.
@@ -12,7 +16,7 @@ Class to create CCEverywhere object.
 
 ## Constructors
 
-### new CCEverywhereBase()
+### Constructor
 
 ```ts
 new CCEverywhereBase(
@@ -21,7 +25,7 @@ new CCEverywhereBase(
    hostInfo, 
    configParams, 
    authProvider, 
-   clientAuthProvider): CCEverywhereBase
+   clientAuthProvider): CCEverywhereBase;
 ```
 
 Constructor to initialize CCEverywhere object.
@@ -39,34 +43,141 @@ Constructor to initialize CCEverywhere object.
 
 #### Returns
 
-[`CCEverywhereBase`](cc-everywhere-base.md)
+`CCEverywhereBase`
 
 ## Accessors
 
 ### activeInstance
 
+#### Get Signature
+
 ```ts
-set static activeInstance(instance): void
+get static activeInstance(): undefined | CCEverywhereBase;
+```
+
+##### Returns
+
+`undefined` \| `CCEverywhereBase`
+
+#### Set Signature
+
+```ts
+set static activeInstance(instance): void;
+```
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `instance` | `undefined` \| `CCEverywhereBase` |
+
+##### Returns
+
+`void`
+
+***
+
+### state
+
+#### Get Signature
+
+```ts
+get static state(): State;
+```
+
+##### Returns
+
+[`State`](../../types/cc-everywhere-types/enumerations/state.md)
+
+#### Set Signature
+
+```ts
+set static state(value): void;
+```
+
+##### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `value` | [`State`](../../types/cc-everywhere-types/enumerations/state.md) |
+
+##### Returns
+
+`void`
+
+***
+
+### version
+
+#### Get Signature
+
+```ts
+get version(): string;
+```
+
+Get version of SDK
+
+##### Returns
+
+`string`
+
+## Methods
+
+### terminate()
+
+```ts
+terminate(): void;
+```
+
+Method to un-initialize cceverywhere object
+
+#### Returns
+
+`void`
+
+### close()
+
+```ts
+close(showConfirmationDialog?): 
+  | boolean
+| Promise<CloseStatusMessage>;
+```
+
+Closes any active design in progress.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `showConfirmationDialog?` | `boolean` | boolean value indicating whether to show confirmation dialog or not. |
+
+#### Returns
+
+  \| `boolean`
+  \| `Promise`<[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
+
+boolean value indicating whether the close operation was successful or not.
+
+***
+
+### onRequestIdUpdate()
+
+```ts
+onRequestIdUpdate(requestId): void;
 ```
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| [`CCEverywhereBase`](cc-everywhere-base.md) |
-
-## Methods
-
-### close()
-
-```ts
-close(): boolean
-```
-
-Closes any active design in progress.
+| `requestId` | `string` |
 
 #### Returns
 
-`boolean`
+`void`
 
-boolean value indicating whether the close operation was successful or not.
+#### Implementation of
+
+```ts
+RequestIdUpdateListener.onRequestIdUpdate
+```

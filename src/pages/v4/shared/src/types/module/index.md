@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../index.md)
+
+***
+
 # shared/src/types/module
 
 ## References
@@ -18,13 +22,7 @@ Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-ve
 
 Re-exports [ThumbnailOption](app-config-types/enumerations/thumbnail-option.md)
 
-<HorizontalLine />
-
-### TextToImageFeature
-
-Re-exports [TextToImageFeature](app-config-types/enumerations/text-to-image-feature.md)
-
-<HorizontalLine />
+***
 
 ### FastModeConfig
 
@@ -68,9 +66,9 @@ Re-exports [PromptSafetyCategory](app-config-types/enumerations/prompt-safety-ca
 
 <HorizontalLine />
 
-### PromptSafetyResult
+### PromptSafetyCheckResponse
 
-Re-exports [PromptSafetyResult](app-config-types/interfaces/prompt-safety-result.md)
+Re-exports [PromptSafetyCheckResponse](app-config-types/interfaces/prompt-safety-check-response.md)
 
 <HorizontalLine />
 
@@ -78,11 +76,11 @@ Re-exports [PromptSafetyResult](app-config-types/interfaces/prompt-safety-result
 
 Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
 
-<HorizontalLine />
+***
 
 ### TemplateBrowserConfig
 
-Re-exports [TemplateBrowserConfig](app-config-types/interfaces/template-browser-config.md)
+Re-exports [ContentBrowseConfig](app-config-types/interfaces/content-browse-config.md)
 
 <HorizontalLine />
 
@@ -108,7 +106,7 @@ Re-exports [EditImageDesignConfig](design-config-types/interfaces/edit-image-des
 
 Re-exports [TextToImageDesignConfig](design-config-types/interfaces/text-to-image-design-config.md)
 
-<HorizontalLine />
+***
 
 ### WarmupDesignConfig
 

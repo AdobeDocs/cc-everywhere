@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Interface: DataTypeMap
 
 Represents a mapping of data types for assets.

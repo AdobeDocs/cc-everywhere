@@ -1,4 +1,8 @@
-# Class: ErrorHandlerDelegate T
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
+# Class: ErrorHandlerDelegate<T\>
 
 ## Type Parameters
 
@@ -8,22 +12,22 @@
 
 ## Constructors
 
-### new ErrorHandlerDelegate()
+### Constructor
 
 ```ts
-new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>
+new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>;
 ```
 
 #### Returns
 
-[`ErrorHandlerDelegate`](error-handler-delegate.md) `T`
+`ErrorHandlerDelegate`<`T`\>
 
 ## Methods
 
 ### addHandler()
 
 ```ts
-addHandler(handler): void
+addHandler(handler): void;
 ```
 
 #### Parameters
@@ -41,7 +45,7 @@ addHandler(handler): void
 ### removeHandler()
 
 ```ts
-removeHandler(handler): void
+removeHandler(handler): void;
 ```
 
 #### Parameters
@@ -59,7 +63,7 @@ removeHandler(handler): void
 ### removeAllHandlers()
 
 ```ts
-removeAllHandlers(): void
+removeAllHandlers(): void;
 ```
 
 #### Returns
@@ -71,7 +75,7 @@ removeAllHandlers(): void
 ### error()
 
 ```ts
-error(error): void
+error(error): void;
 ```
 
 #### Parameters
@@ -89,7 +93,7 @@ error(error): void
 ### warn()
 
 ```ts
-warn(warning): void
+warn(warning): void;
 ```
 
 #### Parameters
@@ -107,7 +111,7 @@ warn(warning): void
 ### info()
 
 ```ts
-info(information): void
+info(information): void;
 ```
 
 #### Parameters

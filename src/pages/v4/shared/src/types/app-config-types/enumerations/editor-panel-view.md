@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: EditorPanelView
 
 ## Enumeration Members
@@ -10,3 +14,4 @@
 | `MEDIA` | `"media"` |
 | `TEXT` | `"text"` |
 | `ELEMENTS` | `"elements"` |
+| `HIDDEN` | `"hidden"` |

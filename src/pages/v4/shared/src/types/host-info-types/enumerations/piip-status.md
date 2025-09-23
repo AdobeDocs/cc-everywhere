@@ -1,3 +1,7 @@
+[**cc-everywhere**](../../../../../index.md)
+
+***
+
 # Enumeration: PIIPStatus
 
 Represents whether analytics are sent.

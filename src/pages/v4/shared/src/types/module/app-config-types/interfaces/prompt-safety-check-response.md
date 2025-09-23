@@ -1,4 +1,8 @@
-# Interface: PromptSafetyResult
+[**cc-everywhere**](../../../../../../index.md)
+
+***
+
+# Interface: PromptSafetyCheckResponse
 
 Represents the safety status of a prompt
 
