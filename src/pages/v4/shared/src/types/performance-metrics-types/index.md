@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [PerformanceMetrics](../performance-metrics-types/interfaces/performance-metrics.md) | - |
+| [PerformanceMetrics](interfaces/performance-metrics.md) | - |

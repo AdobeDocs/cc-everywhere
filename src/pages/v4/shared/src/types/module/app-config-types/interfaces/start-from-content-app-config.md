@@ -16,4 +16,4 @@ StartFromContentAppConfig is the app config for the Start From Content module.
 | ------ | ------ | ------ | ------ |
 | `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
 | `colorTheme?` | [`ColorTheme`](../../../app-config-types/enumerations/color-theme.md) | The color theme of the Start From Content module. SFC supports light and dark themes. **Default** `ColorTheme.LIGHT` | - |
-| `contentBrowseConfig?` | [`ContentBrowseConfig`](../../app-config-types/interfaces/content-browse-config.md) | - | - |
+| `contentBrowseConfig?` | [`ContentBrowseConfig`](content-browse-config.md) | - | - |

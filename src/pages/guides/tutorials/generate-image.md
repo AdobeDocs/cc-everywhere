@@ -164,7 +164,7 @@ console.log("CCEverywhere loaded", window.CCEverywhere);
 <!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
 
 ### 2.2 Initialize the Embed SDK
 
@@ -224,7 +224,7 @@ const containerConfig = { /* ... */ }; // SDK container
 module.createImageFromText(appConfig, exportConfig, containerConfig);
 ```
 
-In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) object; you can look at the [Full Editor tutorial](../tutorials/full-editor.md) for more details on the other two parameters.
+In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) object; you can look at the [Full Editor tutorial](full-editor.md) for more details on the other two parameters.
 
 ### 3.1 Enable the v2 experience
 

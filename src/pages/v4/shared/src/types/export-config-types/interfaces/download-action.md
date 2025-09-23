@@ -12,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`DownloadTarget`](../../export-config-types/enumerations/download-target.md) | [`BaseAction`](../../export-config-types/interfaces/base-action.md).[`target`](../../export-config-types/interfaces/base-action.md#target) |
+| `target` | [`DownloadTarget`](../enumerations/download-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
 | `closeTargetOnExport?` | `boolean` | - |

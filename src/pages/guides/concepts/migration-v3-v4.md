@@ -486,8 +486,8 @@ Take advantage of new features introduced in V4:
 
 #### Additional Resources:
 
-- **[V4 Release Notes](../changelog/)**: Complete list of changes and improvements
-- **[V4 API Reference](../../v4/)**: Full documentation of all V4 APIs
+- **[V4 Release Notes](../changelog/index.md)**: Complete list of changes and improvements
+- **[V4 API Reference](../../v4/index.md)**: Full documentation of all V4 APIs
 - **[Troubleshooting Guide](../troubleshooting/)**: Common issues and solutions during migration
 
 Some new features might include:
@@ -528,8 +528,8 @@ If you encounter any issues during migration, consult our [Troubleshooting Guide
 
 For ongoing development, bookmark these essential resources:
 
-- **[V4 API Reference](../../v4/)** - Complete V4 documentation
-- **[V4 Release Notes](../changelog/)** - Latest updates and features
+- **[V4 API Reference](../../v4/index.md)** - Complete V4 documentation
+- **[V4 Release Notes](../changelog/index.md)** - Latest updates and features
 - **[Migration Checklist](#migration-summary)** - Review completed items
 
 <DiscoverBlock slots="heading, link, text"/>

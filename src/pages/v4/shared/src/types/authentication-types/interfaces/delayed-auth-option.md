@@ -12,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`DELAYED`](../../authentication-types/enumerations/auth-mode.md#delayed) | [`BaseAuthOption`](../../authentication-types/interfaces/base-auth-option.md).[`mode`](../../authentication-types/interfaces/base-auth-option.md#mode) |
-| `config?` | [`AuthConfig`](../../authentication-types/interfaces/auth-config.md) | - |
+| `mode` | [`DELAYED`](../enumerations/auth-mode.md#delayed) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `config?` | [`AuthConfig`](auth-config.md) | - |

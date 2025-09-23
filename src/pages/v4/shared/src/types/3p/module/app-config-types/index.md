@@ -8,5 +8,5 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [TextToImageAppConfig](../app-config-types/interfaces/text-to-image-app-config.md) | - |
-| [EditImageAppConfig](../app-config-types/interfaces/edit-image-app-config.md) | - |
+| [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
+| [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |

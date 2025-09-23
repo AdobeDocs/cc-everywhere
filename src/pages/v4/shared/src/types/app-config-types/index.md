@@ -21,7 +21,7 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseAnalyticsData](../app-config-types/interfaces/base-analytics-data.md) | - |
+| [BaseAnalyticsData](interfaces/base-analytics-data.md) | - |
 
 ## Variables
 

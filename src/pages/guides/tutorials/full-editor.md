@@ -427,6 +427,6 @@ document.getElementById("editBtn").onclick = async () => {
 Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
 
 - The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../v4/index.md).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
-- If you're looking for **more tutorials**, check out [here](../tutorials/index.md).
+- Visit the [changelog](../changelog/index.md) page to keep up with the **latest updates** and improvements.
+- If you're looking for **more tutorials**, check out [here](index.md).
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).

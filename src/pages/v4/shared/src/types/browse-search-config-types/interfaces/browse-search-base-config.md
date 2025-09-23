@@ -8,7 +8,7 @@
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`InspireCategory`](../../browse-search-config-types/enumerations/inspire-category.md) |
+| `T` *extends* [`InspireCategory`](../enumerations/inspire-category.md) |
 
 ## Properties
 

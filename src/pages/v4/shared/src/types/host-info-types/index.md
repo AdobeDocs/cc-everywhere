@@ -19,11 +19,11 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [ConfigParamsBase](../host-info-types/interfaces/config-params-base.md) | Params to configure the application. |
-| [DeviceInfo](../host-info-types/interfaces/device-info.md) | - |
-| [HostInfoSession](../host-info-types/interfaces/host-info-session.md) | - |
-| [HostInfoComputed](../host-info-types/interfaces/host-info-computed.md) | This interface describes the properties computed from host session. |
-| [HostInfoSpecifiedBase](../host-info-types/interfaces/host-info-specified-base.md) | This interface describes the properties provided by client. |
+| [ConfigParamsBase](interfaces/config-params-base.md) | Params to configure the application. |
+| [DeviceInfo](interfaces/device-info.md) | - |
+| [HostInfoSession](interfaces/host-info-session.md) | - |
+| [HostInfoComputed](interfaces/host-info-computed.md) | This interface describes the properties computed from host session. |
+| [HostInfoSpecifiedBase](interfaces/host-info-specified-base.md) | This interface describes the properties provided by client. |
 
 ## Type Aliases
 

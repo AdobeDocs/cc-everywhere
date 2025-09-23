@@ -48,7 +48,7 @@ There are two crucial elements to any tethering workflow:
 - The **Export Configurations**: set the exporting options for a workflow.
 - The **Intent Change Handler**: sets additional configurations for the next workflows in the transition.
 
-Please read along to learn more about each of these elements, or try the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) to see them in action.
+Please read along to learn more about each of these elements, or try the [Workflow Tethering tutorial](../tutorials/workflow-tethering.md) to see them in action.
 
 ## Export Configurations
 
@@ -336,4 +336,4 @@ In the snippet above, we check the `newIntent` to decide which workflow to trans
 
 Congratulations! You've learned how to implement Workflow Tethering in your application.
 
-Please refer to the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) for a more comprehensive, real-world example with complete code that covers all the concepts discussed in this guide.
+Please refer to the [Workflow Tethering tutorial](../tutorials/workflow-tethering.md) for a more comprehensive, real-world example with complete code that covers all the concepts discussed in this guide.

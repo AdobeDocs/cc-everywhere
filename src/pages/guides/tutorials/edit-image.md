@@ -156,7 +156,7 @@ console.log("CCEverywhere loaded", window.CCEverywhere);
 <!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
 
 ### 2.2 Initialize the Embed SDK
 
@@ -268,7 +268,7 @@ const containerConfig = { /* ... */ }; // SDK container
 module.editImage(docConfig, appConfig, exportConfig, containerConfig);
 ```
 
-In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) and [`docConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) objects, as they are the most relevant for the Edit Image module; you can look at the [Full Editor tutorial](../tutorials/full-editor.md) for more details on the other two parameters.
+In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) and [`docConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) objects, as they are the most relevant for the Edit Image module; you can look at the [Full Editor tutorial](full-editor.md) for more details on the other two parameters.
 
 ### 3.3 Enable the v2 experience in `appConfig`
 

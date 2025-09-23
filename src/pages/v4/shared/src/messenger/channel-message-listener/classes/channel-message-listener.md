@@ -239,7 +239,7 @@ addListener(
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `messageType` | [`MessageType`](../../message-types/enumerations/message-type.md) | Listener is invoked for incoming message of this message type. |
-| `listener` | [`Listener`](../../channel-message-listener/type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
+| `listener` | [`Listener`](../type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
 | `messageFilter?` | [`MessageFilter`](../../channel-messenger-types/type-aliases/message-filter.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
 
 #### Returns
