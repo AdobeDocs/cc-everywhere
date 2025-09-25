@@ -50,16 +50,17 @@ The Adobe Express Embed SDK works on mobile web by default. The [`skipBrowserSup
 
 ### Generate Image Module
 
-The **Generate Image module** works well on mobile web with full functionality:
+The **[Generate Image module](./generate-image-v2.md#features-overview)** works well on mobile web with full functionality:
 
 - Text-to-image generation
 - AI-powered image creation
 - Export options
 - All standard features supported
+- **[Rich Preview](./generate-image-v2.md#rich-preview)**: Not available on mobile phones, but available on tablets
 
 ### Edit Image Module
 
-The **Edit Image module** is possible on mobile web but may have some limitations:
+The **[Edit Image module](./edit-image-v2.md)** is possible on mobile web but may have some limitations:
 
 - Basic editing features work
 - Some advanced features may have issues
