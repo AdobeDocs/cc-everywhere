@@ -64,7 +64,7 @@ For production-ready mobile experiences:
 2. Implement performance optimizations
 3. Configure mobile-specific UI elements
 
-### 🚀 Advanced Features 
+### 🚀 Advanced Features
 
 For optimized, custom mobile experiences:
 
@@ -99,7 +99,6 @@ The **[Edit Image module](./edit-image-v2.md)** is possible on mobile web but ma
 ### 🚀 Quick Setup (Recommended)
 
 Get mobile web support working in minutes
-
 
 ```javascript
 const hostInfo = {
@@ -355,7 +354,6 @@ const appConfig = {
 ### 1. Graceful Degradation
 
 Always provide fallback experiences for when mobile web support is limited. Implement proper error handling and alternative experiences when the SDK fails to initialize on mobile devices.
-
 
 ### 2. User Experience Considerations
 
