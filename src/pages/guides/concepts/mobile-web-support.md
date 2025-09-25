@@ -68,15 +68,14 @@ For production-ready mobile experiences:
 
 For optimized, custom mobile experiences:
 
-1. CDN mode for performance
-2. Custom UI patterns for mobile
-3. PWA integration
+1. Custom UI patterns for mobile
+2. PWA integration
 
-### Module Compatibility
+## Module Compatibility
 
 While the Adobe Express Embed SDK works well across all workflows on mobile web, this section focuses on the Generate Image and Edit Image modules as they represent the most common use cases for mobile implementations.
 
-#### Generate Image Module
+### Generate Image Module
 
 The **[Generate Image module](./generate-image-v2.md#features-overview)** works well on mobile web with full functionality:
 
@@ -84,8 +83,9 @@ The **[Generate Image module](./generate-image-v2.md#features-overview)** works 
 - Export options
 - All standard such as styles, content types, etc.
 - **[Rich Preview](./generate-image-v2.md#rich-preview)**: Not available on mobile phones, but available on tablets
+- Prompt Bar suggestions: Not available
 
-#### Edit Image Module
+### Edit Image Module
 
 The **[Edit Image module](./edit-image-v2.md)** is possible on mobile web but may have some limitations:
 
@@ -94,13 +94,12 @@ The **[Edit Image module](./edit-image-v2.md)** is possible on mobile web but ma
 - Performance may vary based on device capabilities
 - Touch interface optimizations may be limited on mobile phones
 
-### Configuration
+## Configuration
 
-#### 🚀 Quick Setup (Recommended)
+### 🚀 Quick Setup (Recommended)
 
 Get mobile web support working in minutes
 
-Use [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) to bypass browser compatibility checks and prevent SDK initialization failures on mobile browsers:
 
 ```javascript
 const hostInfo = {
@@ -120,7 +119,9 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
-#### ⚙️ Advanced Configuration
+Use [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) to bypass browser compatibility checks and prevent SDK initialization failures on mobile browsers.
+
+### ⚙️ Advanced Configuration
 
 For developers who need custom mobile optimizations
 
@@ -145,13 +146,13 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
-### Understanding Browser Support
+## Understanding Browser Support
 
-#### Standard Browser Requirements
+### Standard Browser Requirements
 
 By default, the Adobe Express Embed SDK has specific technical requirements for optimal performance. For complete details on browser versions, hardware requirements, and system specifications, see the [Technical Requirements](../quickstart/technical-requirements.md) guide.
 
-#### Mobile Browser Considerations
+### Mobile Browser Considerations
 
 Mobile browsers may have limitations that affect SDK functionality:
 
@@ -161,17 +162,16 @@ Mobile browsers may have limitations that affect SDK functionality:
 - **Screen size**: Smaller display areas
 - **Network conditions**: Variable connectivity
 
-### Implementation Strategies
+## Implementation Strategies
 
 Choose the approach that best fits your application:
 
 | Strategy | Purpose | Complexity | Mobile Impact | When to Use |
 |----------|---------|------------|---------------|-------------|
-| [Mobile Detection](#1-mobile-detection-and-ui-configuration--essential) | Apply mobile configs automatically | Low | High | Every mobile implementation |
-| [Container Sizing](#3-mobile-ui-container-sizing--essential) | Optimize UI for mobile screens | Low | High | Essential for good UX |
-| [Dynamic Loading](#2-dynamic-sdk-loading) | Handle loading failures gracefully | Medium | Medium | Production applications |
-| [CDN Mode](#4-cdn-mode-support) | Reduce bundle size | Medium | Medium | Performance optimization |
-| [UI Patterns](#5-mobile-ui-implementation-pattern) | Custom touch interfaces | High | High | Advanced customization |
+| [Mobile Detection](#mobile-detection-and-ui-configuration--essential) | Apply mobile configs automatically | Low | High | Every mobile implementation |
+| [Container Sizing](#mobile-ui-container-sizing--essential) | Optimize UI for mobile screens | Low | High | Essential for good UX |
+| [Dynamic Loading](#dynamic-sdk-loading) | Handle loading failures gracefully | Medium | Medium | Production applications |
+| [UI Patterns](#mobile-ui-implementation-pattern) | Custom touch interfaces | High | High | Advanced customization |
 
 ### Essential Strategies (Start Here)
 
@@ -290,6 +290,7 @@ async function loadSDK() {
     // Check if features are available
     if (module && typeof module.createImageFromText === 'function') {
       // Enable text-to-image features in your UI
+      // Add your own code here to enable text-to-image functionality
       document.getElementById('generate-image-btn').style.display = 'block';
       console.log('Text-to-image generation available');
     } else {
@@ -304,45 +305,6 @@ async function loadSDK() {
     console.error("SDK loading failed:", error);
     // Handle SDK loading failure
     return null;
-  }
-}
-```
-
-#### CDN Mode Support
-
-*Necessary to reduce bundle size and improve loading performance, especially important for mobile users with slower connections.*
-
-Implement CDN mode for loading SDK from external URLs:
-
-```javascript
-// CDN mode support for mobile web
-async function loadSDKFromCDN(sdkLink, enableCdnMode = false) {
-  if (enableCdnMode) {
-    return new Promise((resolve) => {
-      const script = document.createElement('script');
-      script.src = sdkLink;
-      script.onload = async () => {
-        // Initialize SDK after script loads
-        const configParams = {
-          skipBrowserSupportCheck: true
-        };
-        
-        const { editor, module, quickAction } = await window.CCEverywhere.initialize(
-          hostInfo,
-          configParams
-        );
-        
-        resolve({ editor, module, quickAction });
-      };
-      script.onerror = (error) => {
-        console.error("CDN SDK loading failed:", error);
-        resolve(null);
-      };
-      document.body.appendChild(script);
-    });
-  } else {
-    // Use local SDK loading
-    return loadSDK();
   }
 }
 ```
@@ -394,27 +356,8 @@ const appConfig = {
 
 Always provide fallback experiences for when mobile web support is limited. Implement proper error handling and alternative experiences when the SDK fails to initialize on mobile devices.
 
-### 2. Performance Optimization
 
-Optimize for mobile performance:
-
-```javascript
-const configParams = {
-  skipBrowserSupportCheck: true,
-  // Mobile-optimized settings
-  loginMode: "delayed", // Reduce initial load time
-};
-
-// Use lighter configurations for mobile
-const mobileAppConfig = {
-  allowedFileTypes: ['image/png', 'image/jpeg'], // Skip heavy formats
-  multiPage: false, // Disable multi-page for mobile
-  showPageMargin: false, // Reduce UI complexity
-  showBleedArea: false
-};
-```
-
-### 3. User Experience Considerations
+### 2. User Experience Considerations
 
 Design your mobile experience with these considerations:
 
@@ -496,6 +439,12 @@ const debugMobileSupport = async () => {
       module: !!module,
       quickAction: !!quickAction
     });
+    
+    // Log app config for debugging
+    console.log('App Config:', appConfig);
+    
+    // Log export config for debugging
+    console.log('Export Config:', exportConfig);
   } catch (error) {
     console.error('SDK initialization failed:', error);
   }
