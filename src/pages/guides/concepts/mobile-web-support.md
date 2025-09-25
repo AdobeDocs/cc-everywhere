@@ -7,7 +7,7 @@ keywords:
   - Mobile Devices
   - Cross-Platform
   - Responsive Design
-description: Learn how to enable mobile web support using the Adobe Express Embed SDK and the skipBrowserSupportCheck configuration parameter.
+description: Enable mobile web support using the Adobe Express Embed SDK and the skipBrowserSupportCheck configuration parameter.
 contributors:
   - https://github.com/nimithajalal
 ---
@@ -46,30 +46,59 @@ Mobile web support builds upon these core concepts, so familiarity with standard
 
 The Adobe Express Embed SDK works on mobile web by default. The [`skipBrowserSupportCheck`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) parameter is specifically designed to bypass browser compatibility checks that might otherwise cause the SDK to fail initialization on mobile browsers.
 
+## Implementation Path
+
+### 🎯 Quick Start
+
+Perfect for getting mobile web support working immediately:
+
+1. Set `skipBrowserSupportCheck: true`
+2. Add basic mobile detection
+3. Configure container sizing
+
+### 🔧 Standard Implementation
+
+For production-ready mobile experiences:
+
+1. Add dynamic loading with error handling
+2. Implement performance optimizations
+3. Configure mobile-specific UI elements
+
+### 🚀 Advanced Features 
+
+For optimized, custom mobile experiences:
+
+1. CDN mode for performance
+2. Custom UI patterns for mobile
+3. PWA integration
+
 ### Module Compatibility
 
-### Generate Image Module
+While the Adobe Express Embed SDK works well across all workflows on mobile web, this section focuses on the Generate Image and Edit Image modules as they represent the most common use cases for mobile implementations.
+
+#### Generate Image Module
 
 The **[Generate Image module](./generate-image-v2.md#features-overview)** works well on mobile web with full functionality:
 
-- Text-to-image generation
-- AI-powered image creation
+- Generate image from text
 - Export options
-- All standard features supported
+- All standard such as styles, content types, etc.
 - **[Rich Preview](./generate-image-v2.md#rich-preview)**: Not available on mobile phones, but available on tablets
 
-### Edit Image Module
+#### Edit Image Module
 
 The **[Edit Image module](./edit-image-v2.md)** is possible on mobile web but may have some limitations:
 
-- Basic editing features work
-- Some advanced features may have issues
+- Basic editing features such as crop, remove background, etc. work
+- Some advanced features such as export options may have issues
 - Performance may vary based on device capabilities
-- Touch interface optimizations may be limited
+- Touch interface optimizations may be limited on mobile phones
 
 ### Configuration
 
-#### Basic Setup
+#### 🚀 Quick Setup (Recommended)
+
+Get mobile web support working in minutes
 
 Use [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) to bypass browser compatibility checks and prevent SDK initialization failures on mobile browsers:
 
@@ -91,7 +120,10 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
-#### Complete Configuration Example
+---
+
+#### ⚙️ Advanced Configuration
+*For developers who need custom mobile optimizations*
 
 ```javascript
 const hostInfo = {
@@ -132,7 +164,19 @@ Mobile browsers may have limitations that affect SDK functionality:
 
 ### Implementation Strategies
 
-#### 1. Mobile Detection and UI Configuration
+Choose the approach that best fits your application:
+
+| Strategy | Purpose | Complexity | Mobile Impact | When to Use |
+|----------|---------|------------|---------------|-------------|
+| [Mobile Detection](#1-mobile-detection-and-ui-configuration--essential) | Apply mobile configs automatically | Low | High | Every mobile implementation |
+| [Container Sizing](#3-mobile-ui-container-sizing--essential) | Optimize UI for mobile screens | Low | High | Essential for good UX |
+| [Dynamic Loading](#2-dynamic-sdk-loading) | Handle loading failures gracefully | Medium | Medium | Production applications |
+| [CDN Mode](#4-cdn-mode-support) | Reduce bundle size | Medium | Medium | Performance optimization |
+| [UI Patterns](#5-mobile-ui-implementation-pattern) | Custom touch interfaces | High | High | Advanced customization |
+
+### Essential Strategies (Start Here)
+
+#### 1. Mobile Detection and UI Configuration ⭐ **Essential**
 
 *Necessary to apply mobile-specific configurations only when needed, preventing desktop users from getting suboptimal mobile UI.*
 
@@ -175,51 +219,13 @@ try {
 }
 ```
 
-#### 2. Dynamic SDK Loading
-
-*Necessary to handle SDK loading failures gracefully and provide feature detection before attempting to use SDK functionality.*
-
-Implement dynamic SDK loading patterns:
-
-```javascript
-// Dynamic SDK import
-async function loadSDK() {
-  try {
-    // Load SDK dynamically for applications
-    let CCEverywhere = await import(`cc-everywhere-test-app/3p/CCEverywhere`);
-    
-    const configParams = {
-      skipBrowserSupportCheck: true
-    };
-
-    const { editor, module, quickAction } = await CCEverywhere.initialize(
-      hostInfo,
-      configParams
-    );
-
-    // Check if features are available
-    if (module && typeof module.createImageFromText === 'function') {
-      // Enable text-to-image features
-      enableTextToImageFeature();
-    } else {
-      // Fallback for limited mobile support
-      showLimitedFeatureMessage();
-    }
-    
-    return { editor, module, quickAction };
-  } catch (error) {
-    console.error("SDK loading failed:", error);
-    // Handle SDK loading failure
-    return null;
-  }
-}
-```
-
-#### 3. Mobile UI Container Sizing
+#### 3. Mobile UI Container Sizing ⭐ **Essential**
 
 *Necessary to ensure the SDK interface fits properly on smaller mobile screens and provides optimal user experience across devices.*
 
-Implement mobile-specific container sizing:
+> **Quick Start**: Use `{ width: 390, height: 850, unit: 'px' }` for mobile container sizing
+
+**Complete implementation example:**
 
 ```javascript
 // Mobile container constants
@@ -254,6 +260,53 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
   ccEverywhereConfig.hostInfo,
   ccEverywhereConfig.configParams
 );
+```
+
+### Advanced Strategies
+
+#### 2. Dynamic SDK Loading
+
+*Necessary to handle SDK loading failures gracefully and provide feature detection before attempting to use SDK functionality.*
+
+> **Quick Start**: Add try-catch around SDK initialization and check feature availability before use
+
+**Complete implementation example:**
+
+```javascript
+// Dynamic SDK import
+async function loadSDK() {
+  try {
+    // Load SDK dynamically for applications
+    let CCEverywhere = await import(`cc-everywhere-test-app/3p/CCEverywhere`);
+    
+    const configParams = {
+      skipBrowserSupportCheck: true
+    };
+
+    const { editor, module, quickAction } = await CCEverywhere.initialize(
+      hostInfo,
+      configParams
+    );
+
+    // Check if features are available
+    if (module && typeof module.createImageFromText === 'function') {
+      // Enable text-to-image features in your UI
+      document.getElementById('generate-image-btn').style.display = 'block';
+      console.log('Text-to-image generation available');
+    } else {
+      // Provide fallback for limited mobile support
+      document.getElementById('generate-image-btn').style.display = 'none';
+      document.getElementById('feature-message').textContent = 'Some features are not available on your device';
+      console.log('Limited feature set available on this device');
+    }
+    
+    return { editor, module, quickAction };
+  } catch (error) {
+    console.error("SDK loading failed:", error);
+    // Handle SDK loading failure
+    return null;
+  }
+}
 ```
 
 #### 4. CDN Mode Support
