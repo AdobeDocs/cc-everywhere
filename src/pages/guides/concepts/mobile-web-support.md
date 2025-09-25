@@ -120,10 +120,9 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
----
-
 #### ⚙️ Advanced Configuration
-*For developers who need custom mobile optimizations*
+
+For developers who need custom mobile optimizations
 
 ```javascript
 const hostInfo = {
@@ -176,7 +175,7 @@ Choose the approach that best fits your application:
 
 ### Essential Strategies (Start Here)
 
-#### 1. Mobile Detection and UI Configuration ⭐ **Essential**
+#### Mobile Detection and UI Configuration ⭐ **Essential**
 
 *Necessary to apply mobile-specific configurations only when needed, preventing desktop users from getting suboptimal mobile UI.*
 
@@ -219,7 +218,7 @@ try {
 }
 ```
 
-#### 3. Mobile UI Container Sizing ⭐ **Essential**
+#### Mobile UI Container Sizing ⭐ **Essential**
 
 *Necessary to ensure the SDK interface fits properly on smaller mobile screens and provides optimal user experience across devices.*
 
@@ -264,7 +263,7 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 
 ### Advanced Strategies
 
-#### 2. Dynamic SDK Loading
+#### Dynamic SDK Loading
 
 *Necessary to handle SDK loading failures gracefully and provide feature detection before attempting to use SDK functionality.*
 
@@ -309,7 +308,7 @@ async function loadSDK() {
 }
 ```
 
-#### 4. CDN Mode Support
+#### CDN Mode Support
 
 *Necessary to reduce bundle size and improve loading performance, especially important for mobile users with slower connections.*
 
@@ -348,7 +347,7 @@ async function loadSDKFromCDN(sdkLink, enableCdnMode = false) {
 }
 ```
 
-#### 5. Mobile UI Implementation Pattern
+#### Mobile UI Implementation Pattern
 
 *Necessary to provide different UI layouts and interactions optimized for touch interfaces and smaller screens.*
 
@@ -435,7 +434,6 @@ The Generate Image module works well on mobile web, making it perfect for social
 - **Mobile-optimized container sizing**: Use responsive dimensions that work well on mobile screens
 - **Touch-friendly export options**: Implement easy-to-tap sharing buttons
 - **Prompt handling**: Allow users to easily input text prompts on mobile keyboards
-- **Quick sharing**: Integrate with mobile sharing APIs for seamless social media posting
 
 ### 2. Mobile Photo Editing
 
