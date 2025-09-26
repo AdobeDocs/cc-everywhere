@@ -121,6 +121,14 @@ module.exports = {
             path: "/guides/concepts/tethering.md",
           },
           {
+            title: "Mobile Web Support",
+            path: "/guides/concepts/mobile-web-support.md",
+          },
+          {
+            title: "V3 to V4 Migration guide",
+            path: "/guides/concepts/migration_v3_v4.md",
+          },
+          {
             title: "Editor Customization",
             path: "/guides/concepts/appconfig.md",
           },
