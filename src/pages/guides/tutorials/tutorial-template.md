@@ -26,7 +26,7 @@ Learn how to [accomplish specific task] using the Adobe Express Embed SDK. By th
 
 ## Introduction
 
-<!--
+&lt;!--
 Tutorial Best Practices:
 • Do include screenshots and animations to illustrate key concepts (max size 2500px)
 • Use collapsible sections when possible to organize long content
@@ -36,7 +36,7 @@ Tutorial Best Practices:
 • Provide complete, working code samples that users can copy and run
 • Use consistent naming conventions throughout the tutorial
 • Include performance considerations and optimization tips where relevant
--->
+--&gt;
 
 Welcome to this hands-on tutorial! We'll walk you through building [Brief introduction explaining what this tutorial covers and why it's useful] using the Adobe Express Embed SDK. This tutorial is designed to get you up and running quickly with practical, working code.
 

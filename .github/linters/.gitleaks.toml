@@ -1,4 +1,0 @@
-[allowlist]
-description = "global allow list"
-# Allowing the following paths, to avoid conflicts (the content is safe)
-paths = ['''^/github/workspace/src/pages/reference/types/index\.md$''']
