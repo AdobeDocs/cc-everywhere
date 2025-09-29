@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/module
 
@@ -22,7 +22,7 @@ Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-ve
 
 Re-exports [ThumbnailOption](app-config-types/enumerations/thumbnail-option.md)
 
-***
+<HorizontalLine />
 
 ### FastModeConfig
 
@@ -76,9 +76,15 @@ Re-exports [PromptSafetyCheckResponse](app-config-types/interfaces/prompt-safety
 
 Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
 
-***
+<HorizontalLine />
 
-### TemplateBrowserConfig
+### StartFromContentAppConfig
+
+Re-exports [StartFromContentAppConfig](app-config-types/interfaces/start-from-content-app-config.md)
+
+<HorizontalLine />
+
+### ContentBrowseConfig
 
 Re-exports [ContentBrowseConfig](app-config-types/interfaces/content-browse-config.md)
 
@@ -106,7 +112,13 @@ Re-exports [EditImageDesignConfig](design-config-types/interfaces/edit-image-des
 
 Re-exports [TextToImageDesignConfig](design-config-types/interfaces/text-to-image-design-config.md)
 
-***
+<HorizontalLine />
+
+### StartFromContentDesignConfig
+
+Re-exports [StartFromContentDesignConfig](design-config-types/interfaces/start-from-content-design-config.md)
+
+<HorizontalLine />
 
 ### WarmupDesignConfig
 

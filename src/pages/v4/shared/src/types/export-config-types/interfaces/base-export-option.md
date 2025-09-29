@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: BaseExportOption<U\>
+# Interface: BaseExportOption U
 
 ## Extended by
 

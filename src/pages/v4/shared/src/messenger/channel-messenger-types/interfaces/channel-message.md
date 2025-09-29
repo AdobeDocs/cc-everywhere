@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: ChannelMessage<T\>
+# Interface: ChannelMessage T
 
 ## Type Parameters
 

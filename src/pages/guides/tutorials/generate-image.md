@@ -91,7 +91,6 @@ Locate the `src/.env` file and replace the placeholder string in the `VITE_API_K
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
@@ -117,7 +116,6 @@ When the users click the Save button, the sample project will handle the file tr
 
 ![Generate image thumbnail](./images/generate-image--thumb.png)
 
-<!-- Inline Alert -->
 <InlineAlert variant="error" slots="header, text1" />
 
 Error: "Adobe Express is not available"
@@ -161,7 +159,6 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
@@ -197,7 +194,6 @@ const { module } = await window.CCEverywhere.initialize(
 
 The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
-<!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
 The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
@@ -281,7 +277,7 @@ const appConfig = {
 
 <InlineAlert variant="warning" slots="header, text1" />
 
-Prompt and Community Wall are mutually exclusive.
+**Prompt and Community Wall are mutually exclusive.**
 
 In the `appConfig` object, you can pass a `promptText` string property to start generating images right away, as the experience is launched. Please note that adding a prompt will disable the Community Wall—it's either one or the other.
 
@@ -648,7 +644,7 @@ We've created a separate `community-wall.js` module to handle everything.
   - It advances `_cursor`, then returns `{ assets, cursor }` where `cursor` is `"Interim_Page"` until we exhaust the list, after which it switches to `"Last_Page"` to tell the SDK there’s nothing more to fetch.
 - Generous `console.log` statements are sprinkled throughout to make it easy to trace the pagination flow and verify that assets are loaded and served as expected.
 
-<CodeBlock slots="heading, code" repeat="1" languages="community-wall.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### community-wall.js
 
@@ -771,7 +767,7 @@ const appConfig = {
 
 ## Complete working example
 
-<CodeBlock slots="heading, code" repeat="3" languages="index.html, main.js, community-wall.js"/>
+<CodeBlock slots="heading, code" repeat="3"/>
 
 #### index.html
 

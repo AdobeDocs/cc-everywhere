@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: PublishExportOption<U\>
+# Interface: PublishExportOption U
 
 Export option for publishing content to various targets.
 

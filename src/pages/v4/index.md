@@ -39,7 +39,7 @@ Embed SDK v1 and v2 have reached End of Life on **May 12th, 2025** and they're n
 
 **Migrating from V3**
 
-We've created a [Migration Guide](../guides/concepts/migration_v3_v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 is officially deprecated.
+We've created a [Migration Guide](../guides/concepts/migration-v3-v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 is officially deprecated.
 
 ## API Reference
 
@@ -108,25 +108,25 @@ The shared reference page contains details about objects that are shared across 
 
 ## Additional Resources
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="100%"/>
 
 [Quickstart Guide](../guides/quickstart/index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="100%"/>
 
 [Tutorials](../guides/tutorials/index.md)
 
 Explore the collection of tutorials.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="100%"/>
 
 [Sample Code](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample)
 
 Adobe Express Embed SDK Sample using V4 SDK.
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="100%"/>
 
 [Community](https://developer.adobe.com/express/community)
 

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ContentTypeSetting
 
@@ -10,7 +10,7 @@ Used to specify the type of content to be generated (e.g., photo, graphic, art).
 
 ## Extends
 
-- [`BasePanelSetting`](base-panel-setting.md)<[`ImageContentType`](../enumerations/image-content-type.md)\>
+- [`BasePanelSetting`](base-panel-setting.md) [`ImageContentType`](../enumerations/image-content-type.md)
 
 ## Properties
 

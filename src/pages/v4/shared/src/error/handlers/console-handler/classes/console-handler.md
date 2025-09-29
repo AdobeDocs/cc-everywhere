@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Class: ConsoleHandler<T\>
+# Class: ConsoleHandler T
 
 ## Extends
 
@@ -34,7 +34,7 @@ new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>;
 
 #### Returns
 
-`ConsoleHandler`<`T`\>
+`ConsoleHandler` `T`
 
 #### Overrides
 

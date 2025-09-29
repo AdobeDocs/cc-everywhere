@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types
 
@@ -346,7 +346,37 @@ Re-exports [IMS_JUMP_ERROR_KEY](authentication-types/variables/ims-jump-error-ke
 
 Re-exports [IMS_JUMP_ERROR_DESCRIPTION_KEY](authentication-types/variables/ims-jump-error-description-key.md)
 
-***
+<HorizontalLine />
+
+### InspireCategory
+
+Re-exports [InspireCategory](browse-search-config-types/enumerations/inspire-category.md)
+
+<HorizontalLine />
+
+### HostContextualDataForImages
+
+Re-exports [HostContextualDataForImages](browse-search-config-types/interfaces/host-contextual-data-for-images.md)
+
+<HorizontalLine />
+
+### BrowseSearchBaseConfig
+
+Re-exports [BrowseSearchBaseConfig](browse-search-config-types/interfaces/browse-search-base-config.md)
+
+<HorizontalLine />
+
+### BrowseSearchConfigUnion
+
+Re-exports [BrowseSearchConfigUnion](browse-search-config-types/type-aliases/browse-search-config-union.md)
+
+<HorizontalLine />
+
+### BrowseSearchGenericConfig
+
+Re-exports [BrowseSearchGenericConfig](browse-search-config-types/type-aliases/browse-search-generic-config.md)
+
+<HorizontalLine />
 
 ### BrowserEvent
 
@@ -431,18 +461,6 @@ Re-exports [ClientAuthDetails](client-authentication-types/interfaces/client-aut
 Re-exports [ClientAuthProvider](client-authentication-types/interfaces/client-auth-provider.md)
 
 <HorizontalLine />
-
-### ClientAuthDetails
-
-Re-exports [ClientAuthDetails](client-authentication-types/interfaces/client-auth-details.md)
-
-***
-
-### ClientAuthProvider
-
-Re-exports [ClientAuthProvider](client-authentication-types/interfaces/client-auth-provider.md)
-
-***
 
 ### CWAssetResponse
 
@@ -760,7 +778,13 @@ Re-exports [ExportOptionGroup](export-config-types/interfaces/export-option-grou
 
 Re-exports [ContinueEditingGroup](export-config-types/interfaces/continue-editing-group.md)
 
-***
+<HorizontalLine />
+
+### PublishButtonGroup
+
+Re-exports [PublishButtonGroup](export-config-types/interfaces/publish-button-group.md)
+
+<HorizontalLine />
 
 ### ExportOptionOrGroup
 
@@ -838,7 +862,13 @@ Re-exports [HostType](host-info-types/enumerations/host-type.md)
 
 Re-exports [HostTypeName](host-info-types/variables/host-type-name.md)
 
-***
+<HorizontalLine />
+
+### DeviceInfo
+
+Re-exports [DeviceInfo](host-info-types/interfaces/device-info.md)
+
+<HorizontalLine />
 
 ### HostInfoSession
 
@@ -898,7 +928,85 @@ Re-exports [CanvasTypeInfo](layout-types/variables/canvas-type-info.md)
 
 Re-exports [NetworkState](network-types/enumerations/network-state.md)
 
-***
+<HorizontalLine />
+
+### BasePanelSetting
+
+Re-exports [BasePanelSetting](panel-settings-types/interfaces/base-panel-setting.md)
+
+<HorizontalLine />
+
+### StyleSetting
+
+Re-exports [StyleSetting](panel-settings-types/interfaces/style-setting.md)
+
+<HorizontalLine />
+
+### ContentTypeSetting
+
+Re-exports [ContentTypeSetting](panel-settings-types/interfaces/content-type-setting.md)
+
+<HorizontalLine />
+
+### PanelSettings
+
+Re-exports [PanelSettings](panel-settings-types/interfaces/panel-settings.md)
+
+<HorizontalLine />
+
+### ImageContentType
+
+Re-exports [ImageContentType](panel-settings-types/enumerations/image-content-type.md)
+
+<HorizontalLine />
+
+### ImageThemeStyle
+
+Re-exports [ImageThemeStyle](panel-settings-types/enumerations/image-theme-style.md)
+
+<HorizontalLine />
+
+### ImageTechniqueStyle
+
+Re-exports [ImageTechniqueStyle](panel-settings-types/enumerations/image-technique-style.md)
+
+<HorizontalLine />
+
+### ImageEffectStyle
+
+Re-exports [ImageEffectStyle](panel-settings-types/enumerations/image-effect-style.md)
+
+<HorizontalLine />
+
+### ImageMovementStyle
+
+Re-exports [ImageMovementStyle](panel-settings-types/enumerations/image-movement-style.md)
+
+<HorizontalLine />
+
+### ImageMaterialStyle
+
+Re-exports [ImageMaterialStyle](panel-settings-types/enumerations/image-material-style.md)
+
+<HorizontalLine />
+
+### ImageConceptStyle
+
+Re-exports [ImageConceptStyle](panel-settings-types/enumerations/image-concept-style.md)
+
+<HorizontalLine />
+
+### ImageStyleId
+
+Re-exports [ImageStyleId](panel-settings-types/type-aliases/image-style-id.md)
+
+<HorizontalLine />
+
+### PerformanceMetrics
+
+Re-exports [PerformanceMetrics](performance-metrics-types/interfaces/performance-metrics.md)
+
+<HorizontalLine />
 
 ### PublishParams
 

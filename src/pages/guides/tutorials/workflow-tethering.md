@@ -49,7 +49,6 @@ You'll build a web application that demonstrates two key workflow tethering patt
 
 ## Prerequisites
 
-<!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1, text2" />
 
 This is an **advanced tutorial** that builds upon foundational concepts. Before starting, ensure you have read:
@@ -105,7 +104,6 @@ Locate the `src/.env` file and replace the placeholder string in the `VITE_API_K
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
@@ -121,12 +119,9 @@ npm run start
 
 The web application will be served at `localhost:5555` on a secure HTTPS connection. Open your browser and navigate to this address to see the workflow tethering in action.
 
-<!-- ![Workflow Tethering UI](./images/tethering-workflows--ui.png) -->
-
-<!-- Inline Alert -->
 <InlineAlert variant="error" slots="header, text1" />
 
-Error: "Adobe Express is not available"
+### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the **correct API Key** in the `src/.env` file as described [here](#12-set-up-the-api-key).
 
@@ -222,7 +217,7 @@ One of the most critical aspects of workflow tethering is providing users with *
 
 This sample application defines **four distinct export configurations** that correspond to different stages in the user's workflow:
 
-<CodeBlock slots="heading, code" repeat="1" languages="config/exportConfigs.js"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### config/exportConfigs.js
 
@@ -277,7 +272,7 @@ When users click "Generate Image", the system uses the **full-featured configura
 
 ![Workflow Tethering - Generate Image](./images/tethering--generate-image.png)
 
-<CodeBlock slots="heading, code" repeat="1" languages="main.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### main.js
 
@@ -308,7 +303,7 @@ In `main.js`, the export configuration object `startGenImageExportConfig` is imp
 
 The initial application configuration object `generateImageAppConfig` is created with the `createGenerateImageAppConfig()` factory function, imported from `config/appConfigs.js`. This function returns a workflow-specific configuration object for the Generate Image workflow.
 
-<CodeBlock slots="heading, code" repeat="3" languages="config/appConfigs.js, workflows/generateToEdit.js, utils/shared.js"/>
+<CodeBlock slots="heading, code" repeat="3" />
 
 #### config/appConfigs.js
 
@@ -413,7 +408,7 @@ When users click the "Edit image" button in the Generate Image interface to move
 
 ![Workflow Tethering - Generate Image to Edit Image](./images/tethering--generate-to-edit-image.png)
 
-<CodeBlock slots="heading, code" repeat="2" languages="config/appConfigs.js, workflows/generateToEdit.js"/>
+<CodeBlock slots="heading, code" repeat="2"/>
 
 #### config/appConfigs.js
 
@@ -460,7 +455,7 @@ The publish callback ensures **proper state management**, and the image is updat
 
 ![Workflow Tethering - Edit Image publishing](./images/tethering--edit-image-publishing.png)
 
-<CodeBlock slots="heading, code" repeat="1" languages="workflows/generateToEdit.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### workflows/generateToEdit.js
 
@@ -486,7 +481,7 @@ When users click "Edit Image", the Edit Image workflow starts with a minimal exp
 
 ![Workflow Tethering - Edit Image](./images/tethering--edit-image.png)
 
-<CodeBlock slots="heading, code" repeat="1" languages="main.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### main.js
 
@@ -520,7 +515,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 Similarly to the Generate Image workflow, the export configuration object `startEditImageExportConfig` is imported from `config/exportConfigs.js`—as we've seen in [Section 3.1](#31-the-four-export-configuration-stages).
 
-<CodeBlock slots="heading, code" repeat="3" languages="config/appConfigs.js, workflows/editToFullEditor.js, utils/shared.js"/>
+<CodeBlock slots="heading, code" repeat="3"/>
 
 #### config/appConfigs.js
 
@@ -615,7 +610,7 @@ When users click the "Do more" button in the Edit Image interface to move to the
 
 ![Workflow Tethering - Edit Image to Full Editor](./images/tethering--edit-to-full-editor.png)
 
-<CodeBlock slots="heading, code" repeat="2" languages="config/appConfigs.js, workflows/editToFullEditor.js"/>
+<CodeBlock slots="heading, code" repeat="2"/>
 
 #### config/appConfigs.js
 
@@ -663,7 +658,7 @@ The user is now able to use the entire set of features available in Adobe Expres
 
 This workflow manages **two different publish scenarios**:
 
-<CodeBlock slots="heading, code" repeat="1" languages="workflows/editToFullEditor.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### workflows/editToFullEditor.js
 
@@ -729,7 +724,7 @@ Let's trace through the complete user journeys to understand how all the pieces 
 
 <InlineAlert variant="warning" slots="header, text1" />
 
-Tethering to Edit Image v1
+**Tethering to Edit Image v1**
 
 Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon. More information about the current limitations can be found in the [Workflow Tethering guide](../concepts/tethering.md#known-limitations).
 
@@ -766,7 +761,7 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
 
 The complete implementation demonstrates all the concepts covered in this tutorial. You can either find it in the [Embed SDK samples repository](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-workflow-tethering) or below, split in two blocks for convenience.
 
-<CodeBlock slots="heading, code" repeat="3" languages="index.html, main.js, utils/shared.js"/>
+<CodeBlock slots="heading, code" repeat="3"/>
 
 #### index.html
 
@@ -1003,7 +998,7 @@ export async function updateImageAndCache(
 }
 ```
 
-<CodeBlock slots="heading, code" repeat="4" languages="config/exportConfigs.js, config/appConfigs.js, workflows/generateToEdit.js, workflows/editToFullEditor.js"/>
+<CodeBlock slots="heading, code" repeat="4" />
 
 #### config/exportConfigs.js
 

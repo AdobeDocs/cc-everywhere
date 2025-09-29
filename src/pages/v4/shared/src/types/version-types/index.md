@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/Version.types
 

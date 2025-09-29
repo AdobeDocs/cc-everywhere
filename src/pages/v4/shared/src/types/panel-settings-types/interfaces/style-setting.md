@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: StyleSetting
 
@@ -10,7 +10,7 @@ Used to specify which styles (themes, techniques, etc.) are applied in the panel
 
 ## Extends
 
-- [`BasePanelSetting`](base-panel-setting.md)<[`ImageStyleId`](../type-aliases/image-style-id.md)[]\>
+- [`BasePanelSetting`](base-panel-setting.md) [`ImageStyleId`](../type-aliases/image-style-id.md)[]
 
 ## Properties
 

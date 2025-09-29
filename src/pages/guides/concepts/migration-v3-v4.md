@@ -20,7 +20,7 @@ This guide will assist you in updating your Adobe Express Embed SDK integration 
 
 Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies parameters, and removes redundancies.
 
-### **Breaking Changes**
+### Breaking Changes
 
 - Update SDK version from V3 to V4
 - Restructure initialization parameters (3 parameters instead of 2)
@@ -28,19 +28,19 @@ Adobe Express Embed SDK V4 introduces a more verbose set of APIs, simplifies par
 - Replace single APIs with workflow-specific methods
 - Update parameter structure (4 new parameter types)
 
-### **API Mapping**
+### API Mapping
 
 - `createDesign()` → `editor.create()`, `editor.createWithAsset()`, or `editor.createWithTemplate()`
 - `editDesign()` → `editor.edit()`
 - `openQuickAction()` → specific `quickAction.*()` methods
 
-### **Parameter Changes**
+### Parameter Changes
 
 - Separate mixed parameters into: `DocConfig`, `AppConfig`, `ExportConfig`, `ContainerConfig`
 - Merge `userInfo` and `authInfo` into single `authOption`
 - Remove `quickActionId` (use specific methods instead)
 
-### **Optional Enhancements**
+### Optional Enhancements
 
 - Enable V2 module features (if using modules)
 - Review new workflow capabilities
@@ -108,9 +108,9 @@ The four parameters are:
 | V3 API | V4 API Examples | Description |
 |--------|-----------------|-------------|
 | `openQuickAction()` (with ID) | `CCEverywhere.quickAction.cropImage()` | Individual methods for each action |
-| | `CCEverywhere.quickAction.convertToJPEG()` | Convert image to JPEG format |
-| | `CCEverywhere.quickAction.convertToPNG()` | Convert image to PNG format |
-| | `CCEverywhere.quickAction.resizeImage()` | Resize image dimensions |
+| `CCEverywhere.quickAction.convertToJPEG()` | Convert image to JPEG format |
+| `CCEverywhere.quickAction.convertToPNG()` | Convert image to PNG format |
+| `CCEverywhere.quickAction.resizeImage()` | Resize image dimensions |
 
 ### Deprecated Features
 
@@ -532,11 +532,9 @@ For ongoing development, bookmark these essential resources:
 - **[V4 Release Notes](../changelog/index.md)** - Latest updates and features
 - **[Migration Checklist](#migration-summary)** - Review completed items
 
-<DiscoverBlock slots="heading, link, text"/>
-
 ## API References
 
-<DiscoverBlock slots="link, text"/>
+<DiscoverBlock slots="link, text" width="100%"/>
 
 [CCEverywhere](../../v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md)
 

@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Class: CCEverywhereError<T\>
+# Class: CCEverywhereError T
 
 ## Extends
 
@@ -39,7 +39,7 @@ Constructor
 
 #### Returns
 
-`CCEverywhereError`<`T`\>
+`CCEverywhereError` `T`
 
 #### Overrides
 
@@ -84,13 +84,13 @@ customData?): CCEverywhereError<T>;
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md)<`T`\> |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md) `T` |
 | `subError?` | `string` \| `number` \| `Error` |
 | `customData?` | `unknown` |
 
 #### Returns
 
-`CCEverywhereError`<`T`\>
+`CCEverywhereError` `T`
 
 <HorizontalLine />
 
@@ -114,7 +114,7 @@ static createErrorFromData<T>(data): CCEverywhereError<T>;
 
 #### Returns
 
-`CCEverywhereError`<`T`\>
+`CCEverywhereError` `T`
 
 <HorizontalLine />
 

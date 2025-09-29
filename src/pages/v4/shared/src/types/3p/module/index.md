@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/3p/module
 
@@ -10,7 +10,7 @@
 
 Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
 
-***
+<HorizontalLine />
 
 ### EditImageAppConfig
 

@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: DownloadExportOption<U\>
+# Interface: DownloadExportOption U
 
 Export option for downloading content to the user's device.
 

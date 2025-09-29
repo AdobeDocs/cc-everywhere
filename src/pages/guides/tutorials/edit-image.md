@@ -81,7 +81,6 @@ Locate the `src/.env` file and replace the placeholder string in the `VITE_API_K
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
@@ -107,10 +106,9 @@ When the users click the **Save image** button in the top-right corner—this on
 
 ![Embed SDK Edit Image edited image](./images/edit-image--edited-image.png)
 
-<!-- Inline Alert -->
 <InlineAlert variant="error" slots="header, text1" />
 
-Error: "Adobe Express is not available"
+**Error: "Adobe Express is not available"**
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the **correct API Key** in the `src/.env` file as described [here](#12-set-up-the-api-key).
 
@@ -153,7 +151,6 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
@@ -189,7 +186,6 @@ const { module } = await window.CCEverywhere.initialize(
 
 The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
-<!-- Inline Alert -->
 <InlineAlert variant="warning" slots="text1" />
 
  The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
@@ -208,7 +204,7 @@ module.editImage({ /* ... */ });
 
 Before tackling the code needed to run the Edit Image experience, let's have a look at the very simple HTML in our example project.
 
-<CodeBlock slots="heading, code" repeat="1" languages="index.html"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### index.html
 
@@ -336,7 +332,7 @@ const docConfig = {
 
 <InlineAlert variant="info" slots="header,  text1, text2" />
 
-Presigned URLs
+**Presigned URLs**
 
 A presigned URL for an image is a **secure, time-limited link** that grants temporary access to a private image stored on a cloud service like Amazon S3. It allows users to view or download the image without exposing authentication credentials or making the file public.
 

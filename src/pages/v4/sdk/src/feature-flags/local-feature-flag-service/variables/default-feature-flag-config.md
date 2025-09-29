@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Variable: DEFAULT\_FEATURE\_FLAG\_CONFIG
 

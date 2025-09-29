@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: `abstract` CCEverywhereBase
 
@@ -75,7 +75,7 @@ set static activeInstance(instance): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### state
 
@@ -105,7 +105,7 @@ set static state(value): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### version
 
@@ -154,11 +154,11 @@ Closes any active design in progress.
 #### Returns
 
   \| `boolean`
-  \| `Promise`<[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
+  \| `Promise` [`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)
 
 boolean value indicating whether the close operation was successful or not.
 
-***
+<HorizontalLine />
 
 ### onRequestIdUpdate()
 

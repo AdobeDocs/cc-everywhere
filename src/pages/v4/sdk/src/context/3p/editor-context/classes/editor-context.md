@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: EditorContext
 
@@ -9,7 +9,7 @@ This should be extended by all the workflow contexts like EditorContext, GenStud
 
 ## Extends
 
-- [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md)<`ActionContext`<[`DesignConfig`](../../../../../../shared/src/types/editor/design-config-types/type-aliases/design-config.md)\>\>
+- [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md) `ActionContext` [`DesignConfig`](../../../../../../shared/src/types/editor/design-config-types/type-aliases/design-config.md)
 
 ## Constructors
 

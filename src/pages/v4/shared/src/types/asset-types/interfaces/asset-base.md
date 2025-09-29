@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: AssetBase<T\>
+# Interface: AssetBase T
 
 Base interface for all asset types.
 

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: ChannelMessageListener
 
@@ -63,7 +63,7 @@ didGetMessage<T>(message, requestId?): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](../../message-types/type-aliases/message.md) `T`|
 | `requestId?` | `string` |
 
 #### Returns
@@ -188,7 +188,7 @@ sendMessage<T>(targetChannel, message): boolean;
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | \| [`Message`](../../message-types/type-aliases/message.md)<`T`\> \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
+| `message` | \| [`Message`](../../message-types/type-aliases/message.md) `T` \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
 
 #### Returns
 

@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Class: HostErrorHandler<T\>
+# Class: HostErrorHandler T
 
 ## Extends
 
@@ -30,12 +30,12 @@ new HostErrorHandler<T>(hostErrorCallback, logLevel?): HostErrorHandler<T>;
 
 | Parameter | Type |
 | ------ | ------ |
-| `hostErrorCallback` | [`ErrorCallback`](../../../cc-everywhere-error-types/type-aliases/error-callback.md)<`T`\> |
+| `hostErrorCallback` | [`ErrorCallback`](../../../cc-everywhere-error-types/type-aliases/error-callback.md) `T` |
 | `logLevel?` | [`LogLevel`](../../../cc-everywhere-error-types/enumerations/log-level.md) |
 
 #### Returns
 
-`HostErrorHandler`<`T`\>
+`HostErrorHandler` `T`
 
 #### Overrides
 

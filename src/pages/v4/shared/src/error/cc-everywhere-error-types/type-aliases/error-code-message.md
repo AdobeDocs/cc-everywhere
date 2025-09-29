@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Type Alias: ErrorCodeMessage<T\>
+# Type Alias: ErrorCodeMessage T
 
 ```ts
 type ErrorCodeMessage<T> = object;
@@ -22,7 +22,7 @@ type ErrorCodeMessage<T> = object;
 code: T;
 ```
 
-***
+<HorizontalLine />
 
 ### message
 

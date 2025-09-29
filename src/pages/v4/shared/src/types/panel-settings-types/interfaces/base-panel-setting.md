@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: BasePanelSetting<T\>
+# Interface: BasePanelSetting T
 
 Base setting interface that all settings should extend.
 Provides common properties for value.

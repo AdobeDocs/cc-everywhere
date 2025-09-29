@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: CCEverywhere
 
@@ -90,7 +90,7 @@ set static activeInstance(instance): void;
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`activeInstance`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#activeinstance)
 
-***
+<HorizontalLine />
 
 ### state
 
@@ -124,7 +124,7 @@ set static state(value): void;
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`state`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#state)
 
-***
+<HorizontalLine />
 
 ### version
 
@@ -162,7 +162,7 @@ Method to un-initialize cceverywhere object
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`terminate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#terminate)
 
-***
+<HorizontalLine />
 
 ### close()
 
@@ -183,7 +183,7 @@ Closes any active design in progress.
 #### Returns
 
   \| `boolean`
-  \| `Promise`<[`CloseStatusMessage`](../../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
+  \| `Promise` [`CloseStatusMessage`](../../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)
 
 boolean value indicating whether the close operation was successful or not.
 
@@ -195,7 +195,7 @@ boolean value indicating whether the close operation was successful or not.
 
 [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`close`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#close)
 
-***
+<HorizontalLine />
 
 ### onRequestIdUpdate()
 

@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: EditFurtherExportOption<U\>
+# Interface: EditFurtherExportOption U
 
 Export option for continuing to edit content in other applications.
 

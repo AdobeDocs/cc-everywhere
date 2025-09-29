@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: default
 
@@ -129,7 +129,7 @@ sendMessage<T>(
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | \| [`Message`](../../message-types/type-aliases/message.md)<`T`\> \| [`MessageCompat`](../../message-types/type-aliases/message-compat.md)<`T`\> |
+| `message` | \| [`Message`](../../message-types/type-aliases/message.md) `T` \| [`MessageCompat`](../../message-types/type-aliases/message-compat.md) `T` |
 | `requestId?` | `string` |
 
 #### Returns

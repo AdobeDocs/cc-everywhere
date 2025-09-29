@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Type Alias: Message<T\>
+# Type Alias: Message T
 
 ```ts
 type Message<T> = T extends DataMessageType ? object : object;

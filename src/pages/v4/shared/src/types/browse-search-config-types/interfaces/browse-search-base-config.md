@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: BrowseSearchBaseConfig<T\>
+# Interface: BrowseSearchBaseConfig T
 
 ## Type Parameters
 

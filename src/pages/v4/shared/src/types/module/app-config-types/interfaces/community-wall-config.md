@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: CommunityWallConfig
 
@@ -8,4 +8,4 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `fetchCommunityAssets` | (`limit`, `cursor`) => `Promise`<[`CommunityWallAssetResponse`](community-wall-asset-response.md)\> | The callback to fetch community wall assets. |
+| `fetchCommunityAssets` | (`limit`, `cursor`) => `Promise` [`CommunityWallAssetResponse`](community-wall-asset-response.md) | The callback to fetch community wall assets. |

@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Class: ErrorHandlerDelegate<T\>
+# Class: ErrorHandlerDelegate T
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>;
 
 #### Returns
 
-`ErrorHandlerDelegate`<`T`\>
+`ErrorHandlerDelegate` `T`
 
 ## Methods
 

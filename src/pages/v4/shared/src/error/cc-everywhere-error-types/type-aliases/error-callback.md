@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Type Alias: ErrorCallback()<T\>
+# Type Alias: ErrorCallback() T
 
 ```ts
 type ErrorCallback<T> = (error) => void;

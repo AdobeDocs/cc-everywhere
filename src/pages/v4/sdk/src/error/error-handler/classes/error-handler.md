@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: ErrorHandler
 
@@ -82,7 +82,7 @@ static warn(warn): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `warn` | \| [`CCEverywhereWarn`](../../../../../shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/cc-everywhere-error/classes/cc-everywhere-error.md)<[`ErrorCode`](../../error-codes/type-aliases/error-code.md)\> |
+| `warn` | \| [`CCEverywhereWarn`](../../../../../shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) \| [`CCEverywhereError`](../../../../../shared/src/error/cc-everywhere-error/classes/cc-everywhere-error.md) [`ErrorCode`](../../error-codes/type-aliases/error-code.md) |
 
 #### Returns
 
