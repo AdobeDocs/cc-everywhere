@@ -24,7 +24,7 @@ on:
 jobs:
   deployment:
     name: Deployment
-    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@main
+    uses: AdobeDocs/adp-devsite-workflow/.github/workflows/deploy.yml@deploy-delay
     with:
       env: ${{ inputs.env }}
       baseSha: ${{ inputs.baseSha }}
