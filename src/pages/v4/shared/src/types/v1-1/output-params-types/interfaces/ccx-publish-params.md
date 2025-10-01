@@ -6,7 +6,7 @@
 
 Asset related information received with onPublish callback.
 
-## Extends
+## Extends 
 
 - [`PublishParams`](publish-params.md)
 
