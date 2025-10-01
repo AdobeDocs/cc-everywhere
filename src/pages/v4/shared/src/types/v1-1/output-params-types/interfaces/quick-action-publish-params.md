@@ -6,7 +6,7 @@
 
 Asset related information received with onPublish callback in Quick Actions.
 
-## Extends
+## Extends 
 
 - [`PublishParams`](publish-params.md)
 
