@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="spectrum spectrum--medium spectrum--light spectrum--express">
-  <head>
+<head>
     <title>Adobe Express Embed SDK Sample</title>
     <link rel="stylesheet" href="node_modules/@spectrum-css/tokens/dist/index.css">
     <link rel="stylesheet" href="node_modules/@spectrum-css/page/dist/index-vars.css">
@@ -19,32 +19,37 @@
         .spacer {
             margin-bottom: 10px;
         }
-        
+
         /* Validation error styles */
         .validation-error {
             border-color: #666 !important;
         }
-        
+
         .error-message {
             color: #d73a49;
             font-size: 12px;
             margin-top: 4px;
             display: none;
         }
-        
+
         .error-message.show {
             display: block;
         }
-        
+
         /* Disabled button styling */
         .spectrum-Button:disabled {
             opacity: 0.4;
             cursor: not-allowed;
             pointer-events: none;
         }
+
+        /* Gen V2 sub-option indentation */
+        .gen-v2-sub-option {
+            margin-left: 24px;
+        }
     </style>
-  </head>
-  <body>
+</head>
+<body>
     <div class="sample spectrum-Typography">
         <h1 class="spectrum-Heading spectrum-Heading--sizeXXL"> Embed SDK: Modules </h1>
         <p class="spectrum-Body spectrum-Body--sizeL" > 
@@ -53,37 +58,149 @@
         <p class="spectrum-Body spectrum-Body--sizeL">1. [Native] <b>Download</b>: Downloads the modified asset to the user's computer.
             <br>2. [Native] <b>Customize</b>: Sends user to an embedded editor to continue editing the modified asset.
             <br>3. [Custom] <b>Save image</b>: Save and display the modified asset on this page. Use the button below to hide the image.
-        </p> 
-        <hr class="solid"> 
+        </p>
+        <hr class="solid">
 
-        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Text to Image</h2>
-        <p class="spectrum-Body spectrum-Body--sizeL">You can also launch the module, and input the prompt once the modal is open.</p>
-        <div class="spectrum-Textfield is-focused">
-            <label for="textfield-focused" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Enter your prompt</label>
-            <input id="textfield-focused" type="text" name="field" value="" class="spectrum-Textfield-input">
-        </div>
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Generate Image</h2>
         <div class="spacer"></div>
-        <button id="text-to-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
-            <span class="spectrum-Button-label">Text to Image</span>
-        </button>
-        <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
-            <span class="spectrum-Button-label">Clear Prompt</span>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="community-wall" checked>
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="community-wall">Community Wall</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox gen-v2-sub-option" id="custom-community-wall-container" style="display: block;">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="custom-community-wall">
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="custom-community-wall">Custom Community Wall</label>
+        </div>
+        <p id="custom-community-wall-spacer" style="display: block;"></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="fast-mode" checked>
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="fast-mode">FastMode</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="custom-modal" checked>
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="custom-modal">Custom Modal</label>
+        </div>
+        <p></p>
+
+        <h3 class="spectrum-Heading spectrum-Heading--sizeM">Thumbnail</h3>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="edit-dropdown" checked>
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="edit-dropdown">EditDropdown</label>
+        </div>
+        <p></p>
+
+        <div class="gen-v2-sub-option" id="edit-dropdown-options-container" style="display: block;">
+            <h4 class="spectrum-Heading spectrum-Heading--sizeS">EditDropDown Options</h4>
+
+            <div class="spectrum-Checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="add-effects" checked>
+                <span class="spectrum-Checkbox-box"></span>
+                <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                    for="add-effects">Add effects</label>
+            </div>
+
+            <div class="spectrum-Checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="remove-background" checked>
+                <span class="spectrum-Checkbox-box"></span>
+                <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                    for="remove-background">Remove background</label>
+            </div>
+
+            <div class="spectrum-Checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="apply-adjustment">
+                <span class="spectrum-Checkbox-box"></span>
+                <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                    for="apply-adjustment">Apply adjustment</label>
+            </div>
+
+            <div class="spectrum-Checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="insert-object">
+                <span class="spectrum-Checkbox-box"></span>
+                <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                    for="insert-object">Insert object</label>
+            </div>
+
+            <div class="spectrum-Checkbox">
+                <input type="checkbox" class="spectrum-Checkbox-input" id="remove-object">
+                <span class="spectrum-Checkbox-box"></span>
+                <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                    for="remove-object">Remove object</label>
+            </div>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="rich-preview" checked>
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="rich-preview">Rich Preview</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Checkbox">
+            <input type="checkbox" class="spectrum-Checkbox-input" id="publish" checked>
+            <span class="spectrum-Checkbox-box"></span>
+            <label class="spectrum-Checkbox-label spectrum-FieldLabel spectrum-FieldLabel--sizeM"
+                for="publish">Publish</label>
+        </div>
+        <p></p>
+
+        <div class="spectrum-Textfield gen-v2-sub-option" id="publish-label-container" style="display: block;">
+            <label for="publish-label" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Publish Label</label>
+            <input id="publish-label" type="text" name="publish-label" value="" class="spectrum-Textfield-input"
+                placeholder="Enter publish label">
+        </div>
+        <p id="publish-label-spacer" style="display: block;"></p>
+
+        <button id="gen-v2-image"
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
+            <span class="spectrum-Button-label">Generate Image</span>
         </button>
 
+        <button id="gen-v2-reset"
+            class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL">
+            <span class="spectrum-Button-label">Reset</span>
+        </button>
+
+        <img id="gen-v2-image-container" style="visibility:hidden; max-width: 100%; margin-top: 10px;" />
+
+        <hr class="solid">
 
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Edit Image</h2>
 
-        <input type="file" id="fileInput" accept="image/*,video/*"/>
-        <button id="reset">Reset</button><p></p>
+        <input type="file" id="fileInput" accept="image/*,video/*" />
+        <button id="reset">Reset</button>
+        <p></p>
         <p class="spectrum-Body spectrum-Body--sizeL">Select a file before you launch the module.</p>
 
-        <button id="image-edit" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+        <button id="image-edit"
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
             <span class="spectrum-Button-label">Edit Image</span>
         </button>
-        
-        <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+
+        <button id="clear"
+            class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL">
             <span class="spectrum-Button-label">Hide</span>
         </button>
+
+        <img id="edit-image-container" style="visibility:hidden; max-width: 100%; margin-top: 10px;" />
 
         <hr class="solid">
         <h2 class="spectrum-Heading spectrum-Heading--sizeXL">Start From Template</h2>
@@ -120,19 +237,21 @@
         <div class="spectrum-Textfield">
             <label for="shortcut-pills" class="spectrum-FieldLabel spectrum-FieldLabel--sizeM">Shortcut Pill
                 Terms</label>
-            <input id="shortcut-pills" type="text" name="shortcut-pills" value="Social, Business, Events, Personal, Creative"
-                class="spectrum-Textfield-input" placeholder="Enter exactly 5 comma-separated terms">
-            <div id="shortcut-pills-error" class="error-message">Please enter exactly 5 valid comma-separated terms (alphanumeric only, 1-30 chars each)</div>
+            <input id="shortcut-pills" type="text" name="shortcut-pills"
+                value="Social, Business, Events, Personal, Creative" class="spectrum-Textfield-input"
+                placeholder="Enter exactly 5 comma-separated terms">
+            <div id="shortcut-pills-error" class="error-message">Please enter exactly 5 valid comma-separated terms
+                (alphanumeric only, 1-30 chars each)</div>
         </div>
         <p></p>
 
-         <button id="start-from-template" disabled
-             class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
-             <span class="spectrum-Button-label">Start From Template</span>
-         </button>
+        <button id="start-from-template" disabled
+            class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL">
+            <span class="spectrum-Button-label">Start From Template</span>
+        </button>
          <button id="reset-template" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL">
-             <span class="spectrum-Button-label">Reset</span>
-         </button>
+            <span class="spectrum-Button-label">Reset</span>
+        </button>
 
         <img id="image-container" style="visibility:hidden;"/>
         <hr class="solid">
@@ -146,248 +265,406 @@
     </div>
     <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
     <script type="text/javascript" >
-        
-    (async () => {
-        const initializeParams = {
+
+        (async () => {
+            const initializeParams = {
             clientId: 'your-client-id',
             appName: 'V4 Sample',
-        }
-        const configParams = {
-            loginMode: 'delayed'
-        }
-
-         /* appImage:  the image container displayed in sample */
-        var appImage = document.getElementById('image-container');
-        
-        const callbacks = {
-            onCancel: () => {},
-            onPublish: (intent, publishParams) => {
-                const localData = { asset: publishParams.asset[0].data}
-                if(publishParams.exportButtonId=="save-modified-asset"){
-                    appImage.src = localData.asset;
-                    appImage.style.visibility="visible";
-                }
-            },
-            onError: (err) => {
-                console.error('Error received is', err.toString())
             }
-        }
-
-        const {module} = await window.CCEverywhere.initialize(initializeParams, configParams);
-
-        document.getElementById("full-editor").addEventListener('click', () => {
-            window.location.href = "https://localhost:8000/";
-        });
-        document.getElementById("QA").addEventListener('click', () => {
-            window.location.href = "https://localhost:8000/quickactions.html";
-        });
-
-
-        /* inputFile: file input picker */
-        var inputFile = document.getElementById('fileInput');
-
-        /* base64Asset: base64 representation we pass into QA function */
-        var base64Asset; 
-
-        // Text to image prompt
-        var inputField = document.getElementById('textfield-focused');
-
-        /* This event listener checks to see if the user uploads a new file 
-        and reads it into base64 data type for SDK ingestion later */
-        inputFile.addEventListener('change', (e) => {
-            const reader = new FileReader();
-            // reads file into base 64 data type
-            reader.readAsDataURL(e.target.files[0]);
-            reader.onload = () => {
-                base64Asset = reader.result;
+            const configParams = {
+                loginMode: 'delayed'
             }
-            reader.onerror = (error) => {
-                console.log('error', error);
-            };
-        })
 
-        const exportOptions = [
-            {
-                id: 'save-modified-asset',
-                label: 'Save image',
-                action: {
-                    target: 'publish'
+             /* appImage:  the image container displayed in sample */
+             var appImage = document.getElementById('image-container');
+             var genV2Image = document.getElementById('gen-v2-image-container');
+             var editImage = document.getElementById('edit-image-container');
+
+            const callbacks = {
+                onCancel: () => { },
+                onPublish: (intent, publishParams) => {
+                    const localData = { asset: publishParams.asset[0].data }
+                    console.log("Export Button ID:", publishParams.exportButtonId);
+                    if (publishParams.exportButtonId == "save-modified-asset") {
+                        console.log("Showing in edit image section");
+                        editImage.src = localData.asset;
+                        editImage.style.visibility = "visible";
+                    }
+                    if (publishParams.exportButtonId == "saveToHostApp") {
+                        console.log("Showing in gen v2 image section");
+                        genV2Image.src = localData.asset;
+                        genV2Image.style.visibility = "visible";
+                    }
+                    if (publishParams.exportButtonId == "save-template-asset") {
+                        console.log("Showing in template section");
+                        appImage.src = localData.asset;
+                        appImage.style.visibility = "visible";
+                    }
                 },
-                style: {
-                    uiType: 'button'
+                onError: (err) => {
+                    console.error('Error received is', err.toString())
                 }
-            },
-            {
-                type: 'continue-editing',
-                label: 'Continue Editing',
-                style: {
-                    uiType: 'button'
+            }
+
+            const {module} = await window.CCEverywhere.initialize(initializeParams, configParams);
+
+            const checkbox = document.getElementById('community-wall');
+
+            // Force it to always be checked
+            checkbox.checked = true;
+
+            // Stop it from ever being unchecked
+            checkbox.addEventListener('click', (e) => {
+                e.preventDefault();
+                checkbox.checked = true;
+            });
+
+            document.getElementById("full-editor").addEventListener('click', () => {
+                window.location.href = "https://localhost:8000/";
+            });
+            document.getElementById("QA").addEventListener('click', () => {
+                window.location.href = "https://localhost:8000/quickactions.html";
+            });
+
+
+            /* inputFile: file input picker */
+            var inputFile = document.getElementById('fileInput');
+
+            /* base64Asset: base64 representation we pass into QA function */
+            var base64Asset;
+
+            // Text to image prompt
+            var inputField = document.getElementById('textfield-focused');
+
+            /* This event listener checks to see if the user uploads a new file 
+            and reads it into base64 data type for SDK ingestion later */
+            inputFile.addEventListener('change', (e) => {
+                const reader = new FileReader();
+                // reads file into base 64 data type
+                reader.readAsDataURL(e.target.files[0]);
+                reader.onload = () => {
+                    base64Asset = reader.result;
+                }
+                reader.onerror = (error) => {
+                    console.log('error', error);
+                };
+            })
+
+            const exportOptions = [
+                {
+                    id: 'save-modified-asset',
+                    label: 'Save image',
+                    action: {
+                        target: 'publish'
+                    },
+                    style: {
+                        uiType: 'button'
+                    }
                 },
-                options: [
-                  {
-                        id: 'exportOption1',
-                        style: {
-                            uiType: 'dropdown'
+                {
+                    type: 'continue-editing',
+                    label: 'Continue Editing',
+                    style: {
+                        uiType: 'button'
+                    },
+                    options: [
+                        {
+                            id: 'exportOption1',
+                            style: {
+                                uiType: 'dropdown'
+                            },
+                            action: {
+                                target: 'express',
+                                intent: 'add-icons-and-shapes'
+                            }
                         },
-                        action: {
-                            target: 'express',
-                            intent: 'add-icons-and-shapes'
+                        {
+                            id: 'exportOption2',
+                            style: {
+                                uiType: 'dropdown'
+                            },
+                            action: {
+                                target: 'image-module',
+                                intent: 'remove-background'
+                            }
+                        },
+                        {
+                            id: 'exportOption3',
+                            style: {
+                                uiType: 'dropdown'
+                            },
+                            action: {
+                                target: 'express',
+                                intent: 'add-images'
+                            }
+                        },
+                        {
+                            id: 'exportOption4',
+                            style: {
+                                uiType: 'dropdown'
+                            },
+                            action: {
+                                target: 'express',
+                                intent: 'add-text'
+                            }
                         }
-                  },
-                  {
-                    id: 'exportOption2',
-                    style: {
-                        uiType: 'dropdown'
-                    },
-                    action: {
-                        target: 'image-module',
-                        intent: 'remove-background'
-                    }
-                  },
-                  {
-                    id: 'exportOption3',
-                    style: {
-                        uiType: 'dropdown'
-                    },
-                    action: {
-                        target: 'express',
-                        intent: 'add-images'
-                    }
-                  },
-                  {
-                    id: 'exportOption4',
-                    style: {
-                        uiType: 'dropdown'
-                    },
-                    action: {
-                        target: 'express',
-                        intent: 'add-text'
-                    }
-                  }
-                ]
-            }
-        ];
-
-        // Start From Template functionality
-        let templateImageURL = null;
-        const setImageURL = (url) => {
-            templateImageURL = url;
-        }
-
-        const templateExportConfig = [
-            {
-                id: 'download',
-                label: 'Download',
-                action: {
-                    target: 'download'
-                },
-                style: {
-                    uiType: 'button'
+                    ]
                 }
-            },
-            {
-                id: 'save-template-asset',
-                label: 'Save Template',
-                action: {
-                    target: 'publish'
+            ];
+
+            // Start From Template functionality
+            let templateImageURL = null;
+            const setImageURL = (url) => {
+                templateImageURL = url;
+            }
+
+            const templateExportConfig = [
+                {
+                    id: 'download',
+                    label: 'Download',
+                    action: {
+                        target: 'download'
+                    },
+                    style: {
+                        uiType: 'button'
+                    }
                 },
-                style: {
-                    uiType: 'button'
+                {
+                    id: 'save-template-asset',
+                    label: 'Save Template',
+                    action: {
+                        target: 'publish'
+                    },
+                    style: {
+                        uiType: 'button'
+                    }
                 }
-            }
-        ];
+            ];
 
-        const containerConfig = {
-            width: '100%',
-            height: '600px',
-            showDarkerBackgroundForLoader: true,
-            showExpressIconWithText: true
-        };
+            const containerConfig = {
+                width: '100%',
+                height: '600px',
+                showDarkerBackgroundForLoader: true,
+                showExpressIconWithText: true
+            };
 
-        // validation functions
-        const clearValidationErrors = () => {
-            document.querySelectorAll('.validation-error').forEach(el => el.classList.remove('validation-error'));
-            document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
-        };
+            // validation functions
+            const clearValidationErrors = () => {
+                document.querySelectorAll('.validation-error').forEach(el => el.classList.remove('validation-error'));
+                document.querySelectorAll('.error-message').forEach(el => el.classList.remove('show'));
+            };
 
-        const showValidationError = (fieldId, errorId) => {
-            const fieldElement = document.getElementById(fieldId);
-            const errorElement = document.getElementById(errorId);
-            if (fieldElement && errorElement) {
-                fieldElement.classList.add('validation-error');
-                errorElement.classList.add('show');
-            }
-        };
+            const showValidationError = (fieldId, errorId) => {
+                const fieldElement = document.getElementById(fieldId);
+                const errorElement = document.getElementById(errorId);
+                if (fieldElement && errorElement) {
+                    fieldElement.classList.add('validation-error');
+                    errorElement.classList.add('show');
+                }
+            };
 
-        const validateTemplateForm = () => {
-            clearValidationErrors();
-            let isValid = true;
+            const validateTemplateForm = () => {
+                clearValidationErrors();
+                let isValid = true;
 
-            // Check header text
-            const headerText = document.getElementById('header-text').value.trim();
-            if (!headerText) {
-                showValidationError('header-text', 'header-text-error');
-                isValid = false;
-            }
+                // Check header text
+                const headerText = document.getElementById('header-text').value.trim();
+                if (!headerText) {
+                    showValidationError('header-text', 'header-text-error');
+                    isValid = false;
+                }
 
-            // Check search query is not empty
-            const searchQuery = document.getElementById('search-query').value.trim();
-            if (!searchQuery) {
-                showValidationError('search-query', 'search-query-error');
-                isValid = false;
-            }
+                // Check search query is not empty
+                const searchQuery = document.getElementById('search-query').value.trim();
+                if (!searchQuery) {
+                    showValidationError('search-query', 'search-query-error');
+                    isValid = false;
+                }
 
-            
-            // Check shortcut pills (exactly 5)
-            const pillsInput = document.getElementById('shortcut-pills').value.trim();
-            const pills = pillsInput ? pillsInput.split(',').map(p => p.trim()).filter(p => p) : [];
-            if (pills.length !== 5) {
-                showValidationError('shortcut-pills', 'shortcut-pills-error');
-                isValid = false;
-            }
 
-            return isValid;
-        };
+                // Check shortcut pills (exactly 5)
+                const pillsInput = document.getElementById('shortcut-pills').value.trim();
+                const pills = pillsInput ? pillsInput.split(',').map(p => p.trim()).filter(p => p) : [];
+                if (pills.length !== 5) {
+                    showValidationError('shortcut-pills', 'shortcut-pills-error');
+                    isValid = false;
+                }
 
-        const updateButtonState = () => {
-            const button = document.getElementById('start-from-template');
-            if (button) button.disabled = !validateTemplateForm();
-        };
-    
-        const getAllowedFileTypes = () => {
-            const allowedFileTypes = ['image/png', 'image/jpeg'];
+                return isValid;
+            };
+
+            const updateButtonState = () => {
+                const button = document.getElementById('start-from-template');
+                if (button) button.disabled = !validateTemplateForm();
+            };
+
+            const getAllowedFileTypes = () => {
+                const allowedFileTypes = ['image/png', 'image/jpeg'];
             return {allowedFileTypes};
-        }
-
-        
-
-        const textToImageModule = () => {
-            let appConfig = {
-                promptText: (document.getElementById('textfield-focused').value),
-                callbacks: callbacks
             }
-            // The export options defined for the Text to Image module don't appear until the user selects a generative image
-            let exportConfig = exportOptions;
-            module.createImageFromText(appConfig, exportConfig);
-        }
 
-        const imageEditingModule = () => {
-            const docConfig = {
-                asset: {
-                    data: base64Asset,
-                    type: 'image',
-                    dataType: 'base64'
+
+            // Global variables for community wall (replacing React state)
+            let base64Image = [];
+
+            // Helper function to generate fake UUID
+            const generateFakeUUID = () => {
+                return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {
+                    const r = Math.random() * 16 | 0;
+                    const v = c == 'x' ? r : (r & 0x3 | 0x8);
+                    return v.toString(16);
+                });
+            };
+
+            // Load files as base64 (converted from React)
+            const loadFilesAsBase64 = async (fileNames) => {
+                try {
+                    const base64List = await Promise.all(
+                        fileNames.map(async (fileName) => {
+                            const response = await fetch(`/images/ccw/${fileName}`);
+                            const blob = await response.blob();
+
+                            const base64Data = await new Promise((resolve, reject) => {
+                                const reader = new FileReader();
+                                reader.onloadend = () => resolve(reader.result);
+                                reader.onerror = reject;
+                                reader.readAsDataURL(blob);
+                            });
+
+                            return base64Data;
+                        })
+                    );
+                    return base64List;
+                } catch (error) {
+                    console.error('Error loading files as base64:', error);
+                    return [];
+                }
+            };
+
+            // Fetch file list (converted from React)
+            const fetchFileList = async () => {
+                try {
+                    const response = await fetch("/images/ccw/CCW-list.json");
+                    const fileList = await response.json();
+                    const base64Array = await loadFilesAsBase64(fileList);
+                    base64Image = base64Array; // Set global variable instead of React state
+                    console.log("Loaded base64 images:", base64Image.length);
+                } catch (error) {
+                    console.error('Error fetching file list:', error);
+                    base64Image = []; // Fallback to empty array
+                }
+            };
+
+            // Community assets fetch function
+            let communityAssetsIndex = 0;
+            const fetchCommunityAssets = async () => {
+                let nextCursor = "Interim_Page";
+                console.log("base64Image", base64Image);
+
+                if (base64Image.length === 0) {
+                    // Return empty assets if no images loaded
+                    return { assets: [], cursor: "Last_Page" };
+                }
+
+                const assets = base64Image.map((image) => ({
+                    assetId: generateFakeUUID(),
+                    title: "A cat on a leather armchair sipping various cocktails",
+                    thumbnailSrc: image,
+                    width: 467,
+                    height: 600,
+                    fullRenditionSrc: image,
+                }));
+
+                communityAssetsIndex += assets.length;
+                if (communityAssetsIndex >= 12) {
+                    nextCursor = "Last_Page";
+                }
+
+                return new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                        resolve({ assets: assets.slice(0, 12), cursor: nextCursor });
+                    }, 1000);
+                });
+            };
+
+            // Initialize community wall data
+            fetchFileList();
+
+            const genV2ImageModule = () => {
+                const getChecked = (id) => document.getElementById(id).checked;
+                const getValue = (id) => document.getElementById(id).value;
+                
+                const isCustomCommunityWall = getChecked('custom-community-wall');
+                const isEditDropDown = getChecked('edit-dropdown');
+                const isPublish = getChecked('publish');
+                const publishLabel = getValue('publish-label') || 'Publish';
+
+                // Build options arrays
+                const thumbnailOptions = [
+                    isEditDropDown && 'edit-dropdown',
+                    getChecked('rich-preview') && 'rich-preview',
+                    isPublish && 'publish'
+                ].filter(Boolean);
+
+                const editDropdownOptions = [
+                    'add-effects', 'remove-background', 'apply-adjustment', 
+                    'insert-object', 'remove-object'
+                ].filter(option => getChecked(option)).map(option => ({ "option": option }));
+
+                const exportConfig = [
+                    { action: { context: 'new', target: 'express' }, id: 'editor', label: "Create a design", style: { uiType: 'button' } },
+                    { action: { target: 'download' }, id: 'download', label: 'Download', style: { uiType: 'button' } },
+                    isPublish && { action: { target: 'publish' }, id: 'saveToHostApp', label: publishLabel, style: { uiType: 'button' } }
+                ].filter(Boolean);
+
+                const appConfig = {
+                    appVersion: "2",
+                    thumbnailOptions,
+                    featureConfig: {
+                        "community-wall": true,
+                        "fast-mode": getChecked('fast-mode'),
+                        "custom-models": getChecked('custom-modal')
+                    },
+                    fastModeConfig: { defaultFastModeState: "off" },
+                    ...(isPublish && { publishConfig: { id: "saveToHostApp", label: publishLabel } }),
+                    ...(isEditDropDown && { editDropdownOptions }),
+                    ...(isCustomCommunityWall && { communityWallConfig: { fetchCommunityAssets } }),
+                    callbacks
+                };
+
+                try {
+                    module.createImageFromText(appConfig, exportConfig, containerConfig);
+                } catch (error) {
+                    console.error('Error generating image:', error);
+                    alert('Failed to generate image. Please try again.');
                 }
             }
-            let appConfig = { callbacks: callbacks };
-            let exportConfig = exportOptions;
-            module.editImage(docConfig, appConfig, exportConfig);
-        }
 
-         const startFromTemplateModule = () => {
+            const imageEditingModule = () => {
+                module.editImage(
+                    {
+                        asset: { data: base64Asset, type: 'image', dataType: 'base64' }
+                    },
+                    {
+                        appVersion: "2",
+                        callbacks: {
+                            onCancel: () => { },
+                            onPublish: (intent, publishParams) => {
+                                editImage.src = publishParams.asset[0].data;
+                                editImage.style.visibility = "visible";
+                            },
+                            onError: (err) => console.error('Edit Image Error:', err)
+                        }
+                    },
+                    exportOptions,
+                    containerConfig
+                );
+            }
+
+            const startFromTemplateModule = () => {
                 if (!validateTemplateForm()) return;
 
-                 // Get values from form inputs
+                // Get values from form inputs
                 const headerText = document.getElementById('header-text').value.trim();
                 const searchQuery = document.getElementById('search-query').value;
                 const hideSearchBar = document.getElementById('hide-search-bar').checked;
@@ -395,7 +672,7 @@
                 const shortcutPills = document.getElementById('shortcut-pills').value.split(',').map(p => p.trim());
 
 
-            let appConfig = {
+                let appConfig = {
                     colorTheme: "light",
                     contentBrowseConfig: {
                         headerText,
@@ -423,60 +700,125 @@
                 }
             };
 
-        // Button event listeners 
+            // Conditional rendering functions for Gen V2
+            const toggleCustomCommunityWall = () => {
+                const communityWallChecked = document.getElementById('community-wall').checked;
+                const container = document.getElementById('custom-community-wall-container');
+                const spacer = document.getElementById('custom-community-wall-spacer');
 
-        document.getElementById('text-to-image').addEventListener('click', () => {
-            textToImageModule();
-        });
+                if (communityWallChecked) {
+                    container.style.display = 'block';
+                    spacer.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                    spacer.style.display = 'none';
+                    document.getElementById('custom-community-wall').checked = false;
+                }
+            };
 
-        document.getElementById('image-edit').addEventListener('click', () => {
-            imageEditingModule();
-        });
+            const togglePublishLabel = () => {
+                const publishChecked = document.getElementById('publish').checked;
+                const container = document.getElementById('publish-label-container');
+                const spacer = document.getElementById('publish-label-spacer');
 
-        // Event listeners for real-time validation
-        ['header-text', 'search-query', 'shortcut-pills'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.addEventListener('input', updateButtonState);
-        });
-        
-        ['hide-search-bar', 'hide-filters'].forEach(id => {
-            const el = document.getElementById(id);
-            if (el) el.addEventListener('change', updateButtonState);
-        });
+                if (publishChecked) {
+                    container.style.display = 'block';
+                    spacer.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                    spacer.style.display = 'none';
+                    // Clear the input when hiding
+                    document.getElementById('publish-label').value = '';
+                }
+            };
 
-        setTimeout(updateButtonState, 100);
+            const toggleEditDropdownOptions = () => {
+                const editDropdownChecked = document.getElementById('edit-dropdown').checked;
+                const container = document.getElementById('edit-dropdown-options-container');
 
-        document.getElementById('start-from-template').addEventListener('click', startFromTemplateModule);
+                if (editDropdownChecked) {
+                    container.style.display = 'block';
+                } else {
+                    container.style.display = 'none';
+                    // Uncheck all dropdown options when hiding
+                    document.getElementById('add-effects').checked = false;
+                    document.getElementById('remove-background').checked = false;
+                    document.getElementById('apply-adjustment').checked = false;
+                    document.getElementById('insert-object').checked = false;
+                    document.getElementById('remove-object').checked = false;
+                }
+            };
 
-        document.getElementById('reset-template').addEventListener('click', () => {
-            clearValidationErrors();
-            document.getElementById('header-text').value = "Jump-start your inspiration with thousands of professionally designed templates";
-            document.getElementById('search-query').value = "Instagram story";
-            document.getElementById('hide-search-bar').checked = false;
-            document.getElementById('hide-filters').checked = false;
-            document.getElementById('shortcut-pills').value = "Social, Business, Events, Personal, Creative";
-            
-            if (appImage) {
-                appImage.src = null;
-                appImage.style.visibility = "hidden";
-                templateImageURL = null;
-            }
-            
-            updateButtonState();
-        });
+            // Add event listeners for conditional rendering
+            document.getElementById('community-wall').addEventListener('change', toggleCustomCommunityWall);
+            document.getElementById('publish').addEventListener('change', togglePublishLabel);
+            document.getElementById('edit-dropdown').addEventListener('change', toggleEditDropdownOptions);
 
-        document.getElementById('clear').addEventListener('click', () => {
-            appImage.src=null;
-            appImage.style.visibility="hidden";
-            inputField.value = '';
+            // Initialize conditional rendering on page load
+            toggleCustomCommunityWall();
+            togglePublishLabel();
+            toggleEditDropdownOptions();
 
-        })
+            // Button event listeners 
 
-        document.getElementById('reset').addEventListener('click', () => {
-            base64Asset = null;
-            appImage.src = null;
-        })
-    })();
+            document.getElementById('gen-v2-image').addEventListener('click', () => {
+                genV2ImageModule();
+            });
+
+
+            document.getElementById('image-edit').addEventListener('click', () => {
+                imageEditingModule();
+            });
+
+            // Event listeners for real-time validation
+            ['header-text', 'search-query', 'shortcut-pills'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('input', updateButtonState);
+            });
+
+            ['hide-search-bar', 'hide-filters'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.addEventListener('change', updateButtonState);
+            });
+
+            setTimeout(updateButtonState, 100);
+
+            document.getElementById('start-from-template').addEventListener('click', startFromTemplateModule);
+
+            document.getElementById('reset-template').addEventListener('click', () => {
+                clearValidationErrors();
+                document.getElementById('header-text').value = "Jump-start your inspiration with thousands of professionally designed templates";
+                document.getElementById('search-query').value = "Instagram story";
+                document.getElementById('hide-search-bar').checked = false;
+                document.getElementById('hide-filters').checked = false;
+                document.getElementById('shortcut-pills').value = "Social, Business, Events, Personal, Creative";
+
+                if (appImage) {
+                    appImage.src = null;
+                    appImage.style.visibility = "hidden";
+                    templateImageURL = null;
+                }
+
+                updateButtonState();
+            });
+
+            document.getElementById('clear').addEventListener('click', () => {
+                editImage.src = null;
+                editImage.style.visibility = "hidden";
+            })
+
+            document.getElementById('reset').addEventListener('click', () => {
+                base64Asset = null;
+                editImage.src = null;
+                editImage.style.visibility = "hidden";
+                inputFile.value = '';
+            })
+
+            document.getElementById('gen-v2-reset').addEventListener('click', () => {
+                genV2Image.src = null;
+                genV2Image.style.visibility = "hidden";
+            })
+        })();
     </script>
-  </body>
+</body>
 </html>
