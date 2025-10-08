@@ -24,7 +24,19 @@ Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no long
 
 ## [4.36.26] 2025-10-08
 
-- ...
+### API Enhancement
+
+- **[`CCEverywhere.ModuleWorkflow.CancelCallback`](../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback.md)**: Added optional parameter `isEscapePressed` as part of `onCancel` callback which is `true` if the cancel was triggered by escape key press during loading.
+- **[`CCEverywhere.HostInfo.coiEnabled`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base.md#properties)**: Added property in `HostInfo` to indicate if COI (Cross-Origin Isolation) is enabled for client.
+- **[`CCEverywhere.BaseContainerConfig.iframeTitle`](../../v4/shared/src/types/container-config-types/interfaces/base-container-config.md#properties)**: Added support to configure iframe title for accessibility.
+
+### Tech Enhancement
+
+- **[`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`](../../v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config.md#properties)**: Added support to surface collections other than Express collections.
+
+### Documentation
+
+- Added a new comprehensive [Mobile Web Support](../concepts/mobile-web-support.md) concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility.
 
 ## [4.35.15] 2025-09-18
 
