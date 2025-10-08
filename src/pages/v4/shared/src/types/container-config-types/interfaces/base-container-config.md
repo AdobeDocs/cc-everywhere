@@ -21,3 +21,4 @@
 | `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View |
 | `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text |
 | `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader |
+| `iframeTitle?` | `public` | `string` | Title of the iframe for accessibility |

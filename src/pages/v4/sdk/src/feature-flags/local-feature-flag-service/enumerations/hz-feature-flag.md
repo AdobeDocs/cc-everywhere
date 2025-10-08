@@ -30,3 +30,5 @@ Enum representing feature flags for HZ based target apps
 | `SHOW_CUSTOM_CLIENT_NAV` | `"show-custom-client-nav"` |
 | `SHOW_FIREFLY_PAYWALL_FOR_UNENTITLED_USERS` | `"show-firefly-paywall-for-unentitled-users"` |
 | `USE_IMS_REDIRECT_VIA_STORAGE` | `"use-ims-redirect-via-storage"` |
+| `SHOW_REFERENCE_IMAGE_SECTION` | `"show-reference-image-section"` |
+| `MIGRATE_TUS_VIDEO_UPLOADING_TO_ACP` | `"migrate-tus-video-uploading-to-acp"` |
