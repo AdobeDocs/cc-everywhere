@@ -14,3 +14,4 @@ This interface describes the properties provided by client.
 | `appName` | `string` | Client's application name. This name may be used in creating folder for projects in target application. |
 | `appVersion?` | [`Version`](../../version-types/interfaces/version.md) | Client's current version. |
 | `platformCategory?` | [`PlatformCategory`](../../host-info-types/enumerations/platform-category.md) | Client's application type. |
+| `coiEnabled?` | `boolean` | Indicates if COI is enabled for client. |

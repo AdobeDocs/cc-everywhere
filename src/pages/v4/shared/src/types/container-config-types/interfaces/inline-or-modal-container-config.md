@@ -25,6 +25,7 @@
 | `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showReaderView`](../../container-config-types/interfaces/base-container-config.md#showreaderview) |
 | `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showExpressIconWithText`](../../container-config-types/interfaces/base-container-config.md#showexpressiconwithtext) |
 | `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`showDarkerBackgroundForLoader`](../../container-config-types/interfaces/base-container-config.md#showdarkerbackgroundforloader) |
+| `iframeTitle?` | `public` | `string` | Title of the iframe for accessibility | [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md).[`iframeTitle`](../../container-config-types/interfaces/base-container-config.md#iframetitle) |
 | `size?` | `public` | [`PixelSize`](../../asset-types/interfaces/pixel-size.md) | Maximum size boundary of the iframe. | - |
 | `minSize?` | `public` | [`PixelSize`](../../asset-types/interfaces/pixel-size.md) | Minimum size boundary of the iframe. | - |
 | `padding?` | `public` | `number` | Padding applied to the iframe in pixels. | - |
