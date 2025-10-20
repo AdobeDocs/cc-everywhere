@@ -248,6 +248,14 @@ Thanks to the Intent Change Handler, you can **conditionally return the appropri
 - Provide users with a new set of Export Options.
 - Customize the iframe container to fit the new workflow better.
 
+<InlineAlert variant="warning" slots="header, text1, text2" />
+
+Beware the `z-index`
+
+In tethering workflows, any property that can be customized via `onIntentChange()` but is not handled in the callback will **reset to its default value**. This includes the iframe container's [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
+
+If your integration needs to manipulate the z-index, you should do so in the `containerConfig` property of the `IntentChangeConfig` object, which accepts a new [`zIndex` property](../../v4/shared/src/types/container-config-types/interfaces/modal-container-config.md#properties).
+
 ### `onIntentChange()` example
 
 Here's an example of how you can use the Intent Change Handler to customize the tethered experience and **serve a different set of Export Options** for each step in the Generate Image → Edit Image → Full Editor workflow.
