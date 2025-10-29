@@ -34,6 +34,7 @@ contributors:
   - https://github.com/undavide
   - https://github.com/amandahuarng
 ---
+
 import "./landing-styles.css";
 
 <Hero slots="image, heading, text" background="rgb(193, 72, 273)"/>
@@ -44,7 +45,7 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<AnnouncementBlock slots="heading, text, button"/>
+<AnnouncementBlock slots="heading, text, button" className="closing-gates-announcement"/>
 
 ### Adobe Express Embed SDK Access Update
 
@@ -54,6 +55,12 @@ Starting November 1, 2025, access to the Embed SDK will be available only throug
 
 <br/>
 
+<!-- ### Demo App
+
+Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
+
+[Try our demo app](https://demo.expressembed.com/) -->
+
 ## Overview
 
 The Adobe Express Embed SDK lets you integrate powerful online design tools, photo editing features, video editing options, and AI-powered content generation into your platform.
@@ -61,8 +68,6 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 ## Why Choose Adobe Express Embed SDK?
 
 With just a few lines of code, you can embed [Adobe Express editor](https://www.adobe.com/in/express/) tools and provide your users with seamless access to professional design capabilities.
-
-
 
 ## Embed SDK Developer Journey
 

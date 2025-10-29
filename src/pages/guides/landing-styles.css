@@ -6,3 +6,11 @@ main > section {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.closing-gates-announcement {
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border: 2px solid #c148ed;
+  height: 250px !important;
+}
