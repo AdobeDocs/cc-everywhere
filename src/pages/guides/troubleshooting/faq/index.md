@@ -43,6 +43,11 @@ Get answers to common questions about the Adobe Express Embed SDK, including set
 - [What operating systems are supported?](#what-operating-systems-are-supported)
 - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
 - [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
+- [Can I still use the SDK for personal or experimental projects?](#can-i-still-use-the-sdk-for-personal-or-experimental-projects)
+- [What happens to existing integrations?](#what-happens-to-existing-integrations)
+- [How do I request access?](#how-do-i-request-access)
+- [What criteria are used to evaluate access requests?](#what-criteria-are-used-to-evaluate-access-requests)
+- [Who can I contact for help?](#who-can-i-contact-for-help)
 
 ## Answers
 
@@ -58,7 +63,7 @@ Creating an account for Adobe Express is always free with premium upgrades avail
 
 ### Is there a cost to use the SDK?
 
-While there is currently no cost to access the Adobe Express Embed SDK, this may change over time. We look forward to working with our partners and developer community to better understand your users’ needs as we continue to evolve our strategy.
+Access to the Adobe Express Embed SDK now requires a business approval process. While there is currently no cost to use the SDK once approved, access is focused on use cases with clear business or user impact. [Request access](https://www.adobe.com/go/embed-access) to submit your use case for evaluation. For more details, see [Embed SDK access](#embed-sdk-access).
 
 ### How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?
 
@@ -115,3 +120,25 @@ Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 ### How can I debug and troubleshoot errors effectively?
 
 Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
+
+## Embed SDK access
+
+### Can I still use the SDK for personal or experimental projects?
+
+Access is currently focused on use cases with clear business or user impact. We strongly recommend validating your use case through the [request process](https://www.adobe.com/go/embed-access) before starting any integration.
+
+### What happens to existing integrations?
+
+Approved integrations will remain active until December 2027. After that, they'll need to go through the new business approval process.
+
+### How do I request access?
+
+Use [this form](https://www.adobe.com/go/embed-access) to submit your use case. Our team will review and follow up.
+
+### What criteria are used to evaluate access requests?
+
+We prioritize use cases that demonstrate clear business impact, meaningful user engagement, and strong alignment with Adobe Express goals. Ideal candidates often include enterprise or strategic partner integrations, a well-defined user base, and clear plans to implement the SDK effectively.
+
+### Who can I contact for help?
+
+If you have any questions about the process, please contact [ccintrev@adobe.com](mailto:ccintrev@adobe.com).

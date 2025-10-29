@@ -46,11 +46,11 @@ Seamlessly embed Adobe Express on your website with our SDK.
 
 <AnnouncementBlock slots="heading, text, button"/>
 
-### Demo App
+### Adobe Express Embed SDK Access Update
 
-Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
+Starting November 1, 2025, access to the Embed SDK will be available only through a business approval process. This change is intended to ensure that integrations deliver high value to Adobe Express users and that we can provide the best possible support to our partners. Existing production integrations will continue uninterrupted until December 2027, after which time they will need to go through the business approval process.
 
-[Try our demo app](https://demo.expressembed.com/)
+[Apply now](https://www.adobe.com/go/embed-access)
 
 <br/>
 
@@ -61,6 +61,8 @@ The Adobe Express Embed SDK lets you integrate powerful online design tools, pho
 ## Why Choose Adobe Express Embed SDK?
 
 With just a few lines of code, you can embed [Adobe Express editor](https://www.adobe.com/in/express/) tools and provide your users with seamless access to professional design capabilities.
+
+
 
 ## Embed SDK Developer Journey
 

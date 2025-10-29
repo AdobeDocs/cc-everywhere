@@ -16,9 +16,35 @@ contributors:
 
 Adobe reviews all applications that integrate Adobe Express Embed SDK before enabling it for public use.
 
+## Requesting access
+
+<InlineAlert variant="info" slots="text" />
+
+Access to the Adobe Express Embed SDK now requires a business approval process. Before you can submit your integration for review, you must first request and receive access to the SDK.
+
+### Access requirements
+
+Access is focused on use cases with clear business or user impact. We prioritize:
+
+- Enterprise or strategic partner integrations
+- Well-defined user base
+- Clear business impact and meaningful user engagement
+- Strong alignment with Adobe Express goals
+- Clear plans to implement the SDK effectively
+
+### How to request access
+
+Use [this form](https://www.adobe.com/go/embed-access) to submit your use case. Our team will review and follow up with you regarding your access request.
+
+### Existing integrations
+
+Approved integrations will remain active until December 2027. After that, they'll need to go through the new business approval process.
+
+If you have any questions about the access process, please contact [ccintrev@adobe.com](mailto:ccintrev@adobe.com). For more information, see the [Embed SDK access FAQ](../troubleshooting/faq/index.md#embed-sdk-access).
+
 ## Overview
 
-This guideline outlines the process for reviewing and submitting an integration using the Adobe Express Embed SDK. Whether you’re embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for users and maintain consistency across all implementations.
+This guideline outlines the process for reviewing and submitting an integration using the Adobe Express Embed SDK. Whether you're embedding the Full Editor, Quick Actions, or Modules, adhering to these guidelines will ensure a seamless experience for users and maintain consistency across all implementations.
 
 <InlineAlert variant="help" slots="text" />
 
