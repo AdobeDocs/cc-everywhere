@@ -73,8 +73,6 @@ Find quick answers to your questions about the Adobe Express Embed SDK — from 
 
 - [Who can I contact for help?](#who-can-i-contact-for-help)
 
----
-
 ## Getting Started
 
 ### Do you have a mobile SDK?
