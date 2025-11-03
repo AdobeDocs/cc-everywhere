@@ -32,6 +32,7 @@
       uses: AdobeDocs/adp-devsite-workflow/.github/workflows/gatsby-deploy.yml@main
       secrets: inherit
       with:
+        # actionlint: ignore [expression] - external workflow inputs are validated at runtime
         env: ${{ inputs.env }}
         clean: ${{ inputs.clean }}
         excludeSubfolder: ${{ inputs.excludeSubfolder }}
