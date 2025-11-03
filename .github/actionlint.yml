@@ -3,3 +3,8 @@ self-hosted-runner:
   # Labels of self-hosted runner in array of string
   labels:
     - developer-website-arc-prd-runners-adcce
+
+# Disable expression type checking for external reusable workflows
+# since actionlint cannot fetch workflows from external repositories
+checks:
+  expression: false
