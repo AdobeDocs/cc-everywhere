@@ -32,3 +32,5 @@ Enum representing feature flags for HZ based target apps
 | `USE_IMS_REDIRECT_VIA_STORAGE` | `"use-ims-redirect-via-storage"` |
 | `SHOW_REFERENCE_IMAGE_SECTION` | `"show-reference-image-section"` |
 | `MIGRATE_TUS_VIDEO_UPLOADING_TO_ACP` | `"migrate-tus-video-uploading-to-acp"` |
+| `CARD_MAKER_EDITOR_PARAMS` | `"card-maker-editor-params"` |
+| `CARD_MAKER_SKIP_REDIRECT_ON_DOWNLOAD` | `"card-maker-skip-redirect-on-download"` |

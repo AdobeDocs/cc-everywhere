@@ -1935,6 +1935,10 @@
                     "title": "enumerations",
                     "pages": [
                       {
+                        "title": "EditDesignAppVersion",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-design-app-version.md"
+                      },
+                      {
                         "title": "EditImageAppVersion",
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version.md"
                       },
@@ -1955,7 +1959,7 @@
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version.md"
+                    "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-design-app-version.md"
                   },
                   {
                     "title": "interfaces",
@@ -2021,6 +2025,10 @@
                     "title": "interfaces",
                     "pages": [
                       {
+                        "title": "EditDesignDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
+                      },
+                      {
                         "title": "EditImageDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
                       },
@@ -2037,7 +2045,7 @@
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/warmup-design-config.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
+                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/module/design-config-types/index.md"
@@ -2046,8 +2054,18 @@
                 "title": "DocConfig.types",
                 "pages": [
                   {
-                    "title": "EditImageDocConfig",
-                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
+                    "title": "interfaces",
+                    "pages": [
+                      {
+                        "title": "EditDesignDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
+                      },
+                      {
+                        "title": "EditImageDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
+                      }
+                    ],
+                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
                   },
                   {
                     "title": "EditImageIntent",

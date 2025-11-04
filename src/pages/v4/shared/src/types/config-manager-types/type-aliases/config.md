@@ -167,6 +167,8 @@ CLIENTS: object;
 | `CCD.CLIENT_ID_PREFIX` | `string` |
 | `CONTENT_CAL` | `object` |
 | `CONTENT_CAL.CLIENT_ID` | `string` |
+| `FIREFLY` | `object` |
+| `FIREFLY.CLIENT_ID` | `string` |
 | `GENSTUDIO` | `object` |
 | `GENSTUDIO.CLIENT_ID` | `string` |
 | `ILLUSTRATOR` | `object` |
