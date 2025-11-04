@@ -76,6 +76,9 @@ jobs:
       - name: Install Dependencies
         run: yarn install
 
+      - name: Fix permissions for Prettier cache
+        run: sudo chmod -R 777 node_modules/.cache
+
       - name: Build site
         if: ${{ success() }}
         run: yarn build
