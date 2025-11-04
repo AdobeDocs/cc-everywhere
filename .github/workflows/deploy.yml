@@ -39,3 +39,4 @@
         NODE_OPTIONS: "--max_old_space_size=5750"
         TEMPLATE_ID_DEV: "664e39607dcc7c0e5a4a035b"
         TEMPLATE_ID_PROD: "668d73f3f8897660ad74d577"
+        CPU_COUNT: "1"
