@@ -56,8 +56,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           VALIDATE_GITHUB_ACTIONS: true
           VALIDATE_GITLEAKS: true
-          # Ignore expression errors for external reusable workflows that cannot be fetched
-          GITHUB_ACTIONS_COMMAND_ARGS: "-ignore 'property .* is not defined in object type'"
+          # Disable actionlint expression type checking for external reusable workflows
+          ACTIONLINT_DISABLE_EXPRESSION_TYPE_CHECK: true
           #
           # The Markdown rules are defined at
           # .github/linters/.markdown-lint.yml
