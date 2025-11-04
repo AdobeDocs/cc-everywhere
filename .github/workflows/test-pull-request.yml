@@ -73,11 +73,11 @@ jobs:
       - name: Enable Corepack for Yarn v3
         run: corepack enable
 
-      - name: Install Dependencies
-        run: yarn install
-
       - name: Fix permissions for Prettier cache
         run: sudo chmod -R 777 node_modules/.cache
+
+      - name: Install Dependencies
+        run: yarn install
 
       - name: Build site
         if: ${{ success() }}
