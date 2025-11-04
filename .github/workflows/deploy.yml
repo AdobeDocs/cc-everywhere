@@ -36,6 +36,6 @@
         clean: ${{ inputs.clean }}
         excludeSubfolder: ${{ inputs.excludeSubfolder }}
         index-mode: ${{ inputs.index-mode }}
-        NODE_OPTIONS: "--max_old_space_size=8192"
+        NODE_OPTIONS: "--max_old_space_size=4096"
         TEMPLATE_ID_DEV: "664e39607dcc7c0e5a4a035b"
         TEMPLATE_ID_PROD: "668d73f3f8897660ad74d577"
