@@ -29,7 +29,7 @@
   jobs:
     deployment:
       name: Deployment
-      uses: AdobeDocs/adp-devsite-workflow/.github/gatsby-deploy.yml@gatsby-size
+      uses: AdobeDocs/adp-devsite-workflow/.github/workflows/gatsby-deploy.yml@gatsby-size
       secrets: inherit
       with:
         env: ${{ inputs.env }}
