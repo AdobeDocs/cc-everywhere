@@ -29,13 +29,13 @@
   jobs:
     deployment:
       name: Deployment
-      uses: AdobeDocs/adp-devsite-workflow/.github/workflows/gatsby-deploy.yml@main
+      uses: AdobeDocs/adp-devsite-workflow/.github/gatsby-deploy.yml@gatsby-size
       secrets: inherit
       with:
         env: ${{ inputs.env }}
         clean: ${{ inputs.clean }}
         excludeSubfolder: ${{ inputs.excludeSubfolder }}
         index-mode: ${{ inputs.index-mode }}
-        NODE_OPTIONS: "--max_old_space_size=24576"
+        NODE_OPTIONS: "--max_old_space_size=7000"
         TEMPLATE_ID_DEV: "664e39607dcc7c0e5a4a035b"
         TEMPLATE_ID_PROD: "668d73f3f8897660ad74d577"
