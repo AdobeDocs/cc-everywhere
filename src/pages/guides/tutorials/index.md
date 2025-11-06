@@ -22,7 +22,7 @@ Each tutorial provides step-by-step instructions on integrating the SDK into you
 4. [Editing Images with the Edit Image v2 Module](./edit-image.md): How to implement Adobe Express Edit Image v2.
 5. [Workflow Tethering](./workflow-tethering.md): How to implement workflow tethering between Generate Image, Edit Image, and Full Editor modules.
 
-<!-- This will be a landing page for Tutorials.
+&lt; !-- This will be a landing page for Tutorials.
 
 This page will contain the tutorials for Adobe Embed.
 
@@ -40,4 +40,4 @@ Sample:
 10. Integrating Third-Party APIs with Adobe Express Embed SDK: How to combine the SDK with other services and APIs for enhanced functionality.
 11.  Creating a Multilingual Application with Adobe Express Embed SDK: Implementing localization and supporting multiple languages using the SDK.
 12.  Ensuring Accessibility in Adobe Express Embed SDK: How to make your SDK integration accessible to users with disabilities.
-13.  Embedding Adobe Express Tools in a CMS: Tutorial on integrating Adobe Express Embed SDK with a content management system like WordPress. -->
+13.  Embedding Adobe Express Tools in a CMS: Tutorial on integrating Adobe Express Embed SDK with a content management system like WordPress. -- &gt;

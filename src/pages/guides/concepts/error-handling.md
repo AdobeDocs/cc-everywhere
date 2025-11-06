@@ -105,12 +105,12 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Trying to use the SDK on an unsupported platform.
   - **Solution**: Verify that your platform meets the SDK requirements.
 
-<!-- **Code Sample**:
+&lt; !-- **Code Sample**:
     ```javascript
     if (!isPlatformSupported()) {
         console.error("SDK_NOT_SUPPORTED: The current platform is not supported.");
     }
-    ```-->
+    ```-- &gt;
 
 ### SDK_ALREADY_INITIALIZED
 
@@ -121,7 +121,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Calling `initialize()` multiple times.
   - **Solution**: Check your code to ensure `initialize()` is called only once.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     if (!sdkInitialized) {
         initializeSDK();
@@ -129,7 +129,7 @@ The guide provides key components such as Error codes,their meaning,  action for
     } else {
         console.warn("SDK_ALREADY_INITIALIZED: The SDK has already been initialized.");
     }
-    ```-->
+    ```-- &gt;
 
 ### SDK_INITIALIZATION_IN_PROGRESS
 
@@ -140,7 +140,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Trying to initialize the SDK while it's already initializing.
   - **Solution**: Implement a check to prevent multiple initialization calls.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     if (initializationInProgress) {
         console.warn("SDK_INITIALIZATION_IN_PROGRESS: SDK initialization is already in progress.");
@@ -148,7 +148,7 @@ The guide provides key components such as Error codes,their meaning,  action for
         initializationInProgress = true;
         initializeSDK();
     }
-    ```-->
+    ```-- &gt;
 
 ### SDK_NOT_INITIALIZED
 
@@ -159,14 +159,14 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Trying to use SDK functions before initializing it.
   - **Solution**: Ensure `initialize()` is called at the start of your application.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     if (!sdkInitialized) {
         console.error("SDK_NOT_INITIALIZED: Please initialize the SDK before using its functions.");
     } else {
         // Proceed with SDK functions
     }
-    ```-->
+    ```-- &gt;
 
 ### WORKFLOW_ALREADY_IN_PROGRESS
 
@@ -177,7 +177,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Starting a new workflow while another is still active.
   - **Solution**: Implement logic to check for active workflows before starting a new one.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     if (workflowInProgress) {
         console.warn("WORKFLOW_ALREADY_IN_PROGRESS: Another workflow is currently active.");
@@ -185,7 +185,7 @@ The guide provides key components such as Error codes,their meaning,  action for
         startWorkflow();
         workflowInProgress = true;
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_IMAGE_DATA_URL
 
@@ -196,7 +196,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing an incorrectly formatted Base64 image data URL.
   - **Solution**: Validate and correct the Base64 data before passing it to the SDK.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     function isValidBase64(data) {
         try {
@@ -210,7 +210,7 @@ The guide provides key components such as Error codes,their meaning,  action for
     if (!isValidBase64(imageDataUrl)) {
         console.error("INVALID_IMAGE_DATA_URL: The provided image data URL is invalid.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_VIDEO_DATA_URL
 
@@ -221,7 +221,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Supplying a malformed video data URL.
   - **Solution**: Verify the video URL format and correct any issues.
   
-<!--- **Code Sample**:
+&lt; !--- **Code Sample**:
     ```javascript
     function isValidUrl(url) {
         try {
@@ -235,7 +235,7 @@ The guide provides key components such as Error codes,their meaning,  action for
     if (!isValidUrl(videoDataUrl)) {
         console.error("INVALID_VIDEO_DATA_URL: The provided video data URL is invalid.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_ASSET_TYPE_URL
 
@@ -246,12 +246,12 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Using an unsupported URL format for an asset.
   - **Solution**: Ensure the URL conforms to the expected format for assets.
 
-<!--- **Code Sample**:
+&lt; !--- **Code Sample**:
     ```javascript
     if (!isValidUrl(assetTypeUrl)) {
         console.error("INVALID_ASSET_TYPE_URL: The provided asset type URL is invalid.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_ASSET_TYPE
 
@@ -262,12 +262,12 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Attempting to merge a mix of images and videos.
   - **Solution**: Use only images or only videos for the merge operation.
 
-<!--- **Code Sample**:
+&lt; !--- **Code Sample**:
     ```javascript
     if (!assets.every(asset => asset.type === 'image' || asset.type === 'video')) {
         console.error("INVALID_ASSET_TYPE: Assets must be either all images or all videos.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_ASSET_DATA_TYPE
 
@@ -278,14 +278,14 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing an unsupported data type for an asset.
   - **Solution**: Verify and use a supported data type for the asset.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     const supportedDataTypes = ['image/jpeg', 'image/png', 'video/mp4'];
 
     if (!supportedDataTypes.includes(assetDataType)) {
         console.error("INVALID_ASSET_DATA_TYPE: The provided asset data type is invalid.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_PUBLISH_FILE_TYPE
 
@@ -296,14 +296,14 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Trying to export a file in an unsupported format.
   - **Solution**: Use one of the allowed file types for export.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     const allowedFileTypes = ['pdf', 'docx', 'xlsx'];
 
     if (!allowedFileTypes.includes(publishFileType)) {
         console.error("INVALID_PUBLISH_FILE_TYPE: The publish file type is not allowed.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_DOWNLOAD_ALL_EXPORT_OPTION
 
@@ -314,12 +314,12 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Missing "download all" target in export options.
   - **Solution**: Add the "download all" target to the export options.
 
-<!--- **Code Sample**:
+&lt; !--- **Code Sample**:
     ```javascript
     if (!exportOptions.includes('downloadAll')) {
         console.error("INVALID_DOWNLOAD_ALL_EXPORT_OPTION: The 'download all' target is missing in export options.");
     }
-    ```-->
+    ```-- &gt;
 
 ### TARGET_LOAD_TIMED_OUT
 
@@ -330,12 +330,12 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: The target app fails to load within the timeout period.
   - **Solution**: Increase the timeout period or optimize the target app loading process.
 
-<!-- **Code Sample**:
+&lt; !-- **Code Sample**:
     ```javascript
     setTimeout(() => {
         console.error("TARGET_LOAD_TIMED_OUT: The target app did not load in the specified time.");
     }, timeoutDuration);
-    ```-->
+    ```-- &gt;
 
 ### TARGET_LOAD_ERROR
 
@@ -355,7 +355,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: The target app fails to load due to an error.
   - **Solution**: Retry the operation or check for specific errors causing the failure.
 
-<!--- **Code Sample**:
+&lt; !--- **Code Sample**:
     ```javascript
     try {
         loadTargetApp();
@@ -363,7 +363,7 @@ The guide provides key components such as Error codes,their meaning,  action for
         console.error("TARGET_LOAD_FAILED: The target app failed to load.", error);
         // Retry logic or error handling
     }
-    ```-->
+    ```-- &gt;
 
 ### NO_ACTIVE_WORKFLOW
 
@@ -374,14 +374,14 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Attempting to close or terminate a workflow when none is active.
   - **Solution**: Check if a workflow is active before calling `close` or `terminate`.
 
-<!--- **Code Sample**:
+&lt; !--- **Code Sample**:
     ```javascript
     if (!workflowInProgress) {
         console.error("NO_ACTIVE_WORKFLOW: No active workflow to close or terminate.");
     } else {
         // Proceed with closing or terminating the workflow
     }
-    ```-->
+    ```-- &gt;
 
 ### ACTION_LAUNCH_ERROR
 
@@ -392,7 +392,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: An error occurs when trying to launch a workflow.
   - **Solution**: Implement error handling and retry logic to address the failure.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     try {
         launchWorkflow();
@@ -400,7 +400,7 @@ The guide provides key components such as Error codes,their meaning,  action for
         console.error("ACTION_LAUNCH_ERROR: Failed to launch workflow.", error);
         // Retry logic or error handling
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_ASPECT_RATIO_VALUE
 
@@ -411,7 +411,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing an invalid aspect ratio value.
   - **Solution**: Validate the aspect ratio value before using it.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     function isValidAspectRatio(value) {
         return /^(\d+):(\d+)$/.test(value);
@@ -420,7 +420,7 @@ The guide provides key components such as Error codes,their meaning,  action for
     if (!isValidAspectRatio(aspectRatio)) {
         console.error("INVALID_ASPECT_RATIO_VALUE: The provided aspect ratio value is invalid.");
     }
-    ```-->
+    ```-- &gt;
 
 ### INVALID_SIZE_VALUE
 
@@ -431,7 +431,7 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing dimensions that do not meet the aspect ratio, width, or height constraints.
   - **Solution**: Validate the aspect ratio, width, and height before using the asset.
 
-<!--**Code Sample**:
+&lt; !--**Code Sample**:
     ```javascript
     function isValidDimensions(aspectRatio, width, height) {
         const isValidAspectRatio = /^(\d+):(\d+)$/.test(aspectRatio);
@@ -443,4 +443,4 @@ The guide provides key components such as Error codes,their meaning,  action for
     if (!isValidDimensions(aspectRatio, width, height)) {
         console.error("INVALID_SIZE_VALUE: The provided dimensions (aspect ratio, width, height) are invalid.");
     }
-    ``` -->
+    ``` -- &gt;

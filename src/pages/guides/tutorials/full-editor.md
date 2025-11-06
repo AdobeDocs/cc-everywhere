@@ -16,7 +16,7 @@ contributors:
 
 Learn how to integrate the Adobe Express Embed SDK into your web applications.
 
-<!-- **TODO**: add a video, Davide-style. -->
+&lt; !-- **TODO**: add a video, Davide-style. -- &gt;
 
 ## Introduction
 
@@ -207,7 +207,7 @@ document.getElementById("createDesign").onclick = async () => {
 
 ![Launching the Full Editor](./images/full-editor_launch.png)
 
-<!-- Info Alert -->
+&lt; !-- Info Alert -- &gt;
 <InlineAlert variant="info" slots="text1" />
 
 Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](..\review\index.md) section to learn more.
@@ -226,7 +226,7 @@ We need to write a simple function in the `callbacks` to implement this feature,
 
 The `data` property sounds promising! The plan is to have an `<img>` element (in this example, it starts as a placeholder), which `src` attribute will be filled with the Base64 string coming from Adobe Express.
 
-<!-- CodeBlock -->
+&lt; !-- CodeBlock -- &gt;
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
 
 #### main.js
@@ -248,11 +248,11 @@ const callbacks = {
 #### index.html
 
 ```html
-<!-- ... rest of the page -->
+&lt; !-- ... rest of the page -- &gt;
 <img id="savedImage"
      src="https://placehold.co/300x300?text=Placeholder+Image&font=source-sans-pro"
      alt="Your design will appear here." />
-<!-- ... rest of the page -->
+&lt; !-- ... rest of the page -- &gt;
 ```
 
 Please note that `asset` is an array; we're getting just the first item here. If you open the Console, you'll see the Base64 string logged.
@@ -300,7 +300,7 @@ We have all the required bits in place, but some simple refactoring is needed to
 
 You can check the entire [`embed-sdk-full-editor-tutorial`](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) project code as part of the dedicated [`embed-sdk-samples`](https://github.com/AdobeDocs/embed-sdk-samples) repository. Find the most relevant files below for reference.
 
-<!-- CodeBlock -->
+&lt; !-- CodeBlock -- &gt;
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
 
 #### main.js

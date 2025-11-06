@@ -121,7 +121,7 @@ npm run start
 
 The web application will be served at `localhost:5555` on a secure HTTPS connection. Open your browser and navigate to this address to see the workflow tethering in action.
 
-<!-- ![Workflow Tethering UI](./images/tethering-workflows--ui.png) -->
+&lt; !-- ![Workflow Tethering UI](./images/tethering-workflows--ui.png) -- &gt;
 
 
 <InlineAlert variant="error" slots="header, text1" />

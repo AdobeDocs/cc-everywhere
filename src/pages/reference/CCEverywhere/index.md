@@ -18,8 +18,8 @@ As of today, it contains 3 properties:
 2. `quickAction`: Contains APIs for launching quick actions
 3. `module`: Contains APIs for launching modules (Generate Image, Edit Image)
 
-<!-- 4. `close()`: Closes the active editor modal
-1. `terminate()`: Un-initializes the active `CCEverywhere` instance -->
+&lt; !-- 4. `close()`: Closes the active editor modal
+1. `terminate()`: Un-initializes the active `CCEverywhere` instance -- &gt;
 
 ```js
 const { editor, module, quickAction } = await ccEverywhere.initialize();

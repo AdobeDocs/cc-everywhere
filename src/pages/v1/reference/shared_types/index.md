@@ -99,7 +99,7 @@ Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) t
 | fileType | 'jpeg', 'png', 'mp4' | Type of output asset
 | (optional) fileName | string | Name of output asset
 | (optional) size | [Size](#size) | Dimensions of output asset
-<!-- todo: check optional properties are outputted -->
+&lt; !-- todo: check optional properties are outputted -- &gt;
 
 ## Size
 

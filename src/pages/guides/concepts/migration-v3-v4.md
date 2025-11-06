@@ -135,14 +135,14 @@ First, update your script tag or import statement to use the V4 SDK.
 #### V4 HTML Script Tag
 
 ```html
-<!-- V4 - Updated version -->
+&lt; !-- V4 - Updated version -- &gt;
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
 ```
 
 #### V3 HTML Script Tag
 
 ```html
-<!-- V3 - Previous version -->
+&lt; !-- V3 - Previous version -- &gt;
 <script src="https://cc-embed.adobe.com/sdk/v3/CCEverywhere.js"></script>
 ```
 

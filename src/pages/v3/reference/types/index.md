@@ -227,8 +227,8 @@ Asset-related information received with `onPublish` callback in quick actions.
 | YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
 | Zoom background | "ZoomBackground" | 1,920 x 1,080px
 
-<!-- | Name tag | "NameTag" | 
-| Place card | "PlaceCard" | -->
+&lt; !-- | Name tag | "NameTag" | 
+| Place card | "PlaceCard" | -- &gt;
 
 ## CCXOutputParams
 
@@ -265,7 +265,7 @@ Export options to surface to your user in the iframe. If no export options are s
 
 `ExportOptions`:  [CustomExportButton](#customexportbutton) | [CustomExportLink](#customexportlink) | [ExportButtonGroup](#exportbuttongroup) | [NativeExportButton](#nativeexportbutton)
 
-<!-- ### ExportOptionType
+&lt; !-- ### ExportOptionType
 
 `optionType` property of `ExportOption`. Describes the type of `ExportOption`
 
@@ -273,7 +273,7 @@ Export options to surface to your user in the iframe. If no export options are s
 | :-- | :-- | :-
 | "group" | Quick action will render a drop-down button
 | "button" | Quick action will render a standalone single button
-| "link" | Quick action will render text with hyperlink to export asset -->
+| "link" | Quick action will render text with hyperlink to export asset -- &gt;
 
 ### CustomExportButton
 
