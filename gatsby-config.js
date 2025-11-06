@@ -357,5 +357,5 @@ module.exports = {
     FAST_DEV: true,
   },
   plugins: [`@adobe/gatsby-theme-aio`],
-  pathPrefix: process.env.PATH_PREFIX || "/express/embed-sdk/docs/index.md",
+  pathPrefix: process.env.PATH_PREFIX || "/express/embed-sdk/docs/",
 };
