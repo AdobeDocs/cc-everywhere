@@ -27,8 +27,8 @@ All the properties in this object are optional.
 | Property | Type| Description
 | :-- | :-- | :--
 | appConfig | [TextToImageAppConfig](#texttoimageappconfig) | Pass a text prompt to preload in the Generate Image editor
-| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
+| exportConfig | [ExportOptions](..\..\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](..\..\types\index.md#containerconfig) | Properties to configure the SDK container
 
 ### TextToImageAppConfig
 
@@ -37,7 +37,7 @@ All the properties in this object are optional.
 | Property | Type| Description
 | :-- | :--| :--
 | promptText| string | Optional string to launch the Generate Image module with a prompt
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions
+| callbacks | [Callbacks](..\..\types\index.md#callbacks) | Callback functions
 
 ## editImage
 
@@ -50,11 +50,11 @@ The only required property is `docConfig`.
 | Property | Type| Description
 | :-- | :-- | :--
 | docConfig | [EditImageDocConfig](#editimagedocconfig) | Pass an asset to preload into the Edit Image module
-| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
+| exportConfig | [ExportOptions](..\..\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](..\..\types\index.md#containerconfig) | Properties to configure the SDK container
 
 ### EditImageDocConfig
 
 | Property | Type| Description
 | :-- | :-- | :--
-| asset | [Asset](../../types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
+| asset | [Asset](..\..\types\index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.

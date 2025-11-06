@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [EditorContext](../editor-context/classes/editor-context.md) | Represents the base workflow context for the SDK workflows This should be extended by all the workflow contexts like EditorContext, GenStudioContext, etc. |
+| [EditorContext](classes\editor-context.md) | Represents the base workflow context for the SDK workflows This should be extended by all the workflow contexts like EditorContext, GenStudioContext, etc. |

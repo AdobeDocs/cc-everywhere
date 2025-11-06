@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,5 +8,5 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [DocConfig](../doc-config-types/interfaces/doc-config.md) | - |
-| [MergeVideoDocConfig](../doc-config-types/interfaces/merge-video-doc-config.md) | - |
+| [DocConfig](interfaces\doc-config.md) | - |
+| [MergeVideoDocConfig](interfaces\merge-video-doc-config.md) | - |

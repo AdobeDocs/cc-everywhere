@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -9,7 +9,7 @@ This should be extended by all the workflow contexts like EditorContext, GenStud
 
 ## Extended by
 
-- [`EditorContext`](../../3p/editor-context/classes/editor-context.md)
+- [`EditorContext`](..\..\3p\editor-context\classes\editor-context.md)
 
 ## Type Parameters
 

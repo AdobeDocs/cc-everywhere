@@ -172,7 +172,7 @@ The SDK should only be initialized **once on each page**.
 
 <InlineAlert variant="info" slots="text1" />
 
-The SDK can be launched with a **delayed login**: users won't be asked to sign in until they export a document. Read more about the initialize API [here](../../reference/initialize/index.md).
+The SDK can be launched with a **delayed login**: users won't be asked to sign in until they export a document. Read more about the initialize API [here](..\..\reference\initialize\index.md).
 
 Successful initialization returns a `CCEverywhere` Class object, with three properties:
 
@@ -182,22 +182,22 @@ Successful initialization returns a `CCEverywhere` Class object, with three prop
 
 ## Next Steps: Explore the SDK
 
-Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
+Our guides along with the [SDK references](..\..\reference\index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [Full editor](../../guides/full_editor/index.md)
+### [Full editor](..\full_editor\index.md)
 
 With the full editor component, your users are able to:
 
-- How to [create new projects](../../guides/full_editor/create_project/)
-- How to [edit existing projects](../../guides/full_editor/edit_project/)
+- How to [create new projects](..\full_editor\create_project\index.md)
+- How to [edit existing projects](..\full_editor\edit_project\index.md)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
-### [Quick actions](../../guides/quick_actions/index.md)
+### [Quick actions](..\quick_actions\index.md)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
-### [Modules](../../guides/modules/index.md)
+### [Modules](..\modules\index.md)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
@@ -209,8 +209,8 @@ Review the [technical requirements](./technical-requirements.md) for using Adobe
 
 ## Troubleshooting
 
-If you run into any issues, check out our [Troubleshooting](../troubleshooting/express-unavailable-error.md) section for common problems and solutions, or check the [FAQ](../troubleshooting/faq/index.md) for answers to common questions.
+If you run into any issues, check out our [Troubleshooting](..\troubleshooting\express-unavailable-error.md) section for common problems and solutions, or check the [FAQ](..\troubleshooting\faq\index.md) for answers to common questions.
 
 ## Next Steps
 
-Are you ready to start playing with some code? Check out our [Tutorials](../tutorials/index.md) to see the latest SDK version in action!
+Are you ready to start playing with some code? Check out our [Tutorials](..\tutorials\index.md) to see the latest SDK version in action!

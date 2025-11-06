@@ -49,12 +49,12 @@ You'll build a web application that demonstrates two key workflow tethering patt
 
 ## Prerequisites
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="warning" slots="text1, text2" />
 
 This is an **advanced tutorial** that builds upon foundational concepts. Before starting, ensure you have read:
 
-- **[Workflow Tethering guide](../concepts/tethering.md)**: Comprehensive guide to understanding workflow tethering.
+- **[Workflow Tethering guide](..\concepts\tethering.md)**: Comprehensive guide to understanding workflow tethering.
 - **[Edit Image tutorial](./edit-image.md)**: Understanding of Edit Image workflow. implementation.
 - **[Generate Image tutorial](./generate-image.md)**: Knowledge of Generate Image workflow.
 
@@ -105,10 +105,10 @@ Locate the `src/.env` file and replace the placeholder string in the `VITE_API_K
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](..\quickstart\index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](..\quickstart\index.md#edit-the-list-of-allowed-domains).
 
 ### 1.3 Install dependencies and run
 
@@ -123,10 +123,10 @@ The web application will be served at `localhost:5555` on a secure HTTPS connect
 
 <!-- ![Workflow Tethering UI](./images/tethering-workflows--ui.png) -->
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="error" slots="header, text1" />
 
-Error: "Adobe Express is not available"
+### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the **correct API Key** in the `src/.env` file as described [here](#12-set-up-the-api-key).
 
@@ -397,7 +397,7 @@ The `generateImageAppConfig` object creation follows a dependency chain across t
 
 - **`config/appConfigs.js`**: the `createGenerateImageAppConfig()` factory function orchestrates the configuration creation:
 
-  - `createIntentChangeHandler()` is executed to create the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) handler for workflow transitions. Internally, this function calls `createGenerateToEditTransition()` imported from `workflows/generateToEdit.js`, and returns the export configuration for the Edit Image workflow that is tethered to, i.e., follows after, Generate Image.
+  - `createIntentChangeHandler()` is executed to create the [`onIntentChange()`](..\..\v4\shared\src\types\callbacks-types\type-aliases\intent-change-callback.md) handler for workflow transitions. Internally, this function calls `createGenerateToEditTransition()` imported from `workflows/generateToEdit.js`, and returns the export configuration for the Edit Image workflow that is tethered to, i.e., follows after, Generate Image.
   - It passes both the `baseCallbacks` from `utils/shared.js` and the `intentChangeHandler` to `createGenerateImageWorkflowConfig()` from `workflows/generateToEdit.js`, which returns the complete configuration object for the Generate Image workflow.
 
 - **`utils/shared.js`**: Provides the foundational `baseCallbacks` object containing the `onCancel` and `onError` callbacks, shared across all workflows.
@@ -448,7 +448,7 @@ export function createGenerateToEditTransition() {
 
 <InlineAlert variant="info" slots="text1" />
 
-The `createIntentChangeHandler()` function is used to create the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) handler for workflow transitions; it returns an object of type [`IntentChangeConfig`](../../v4/shared/src/types/callbacks-types/interfaces/intent-change-config.md), which contains the appropriate `exportConfig` for the Edit Image workflow that follows after Generate Image.
+The `createIntentChangeHandler()` function is used to create the [`onIntentChange()`](..\..\v4\shared\src\types\callbacks-types\type-aliases\intent-change-callback.md) handler for workflow transitions; it returns an object of type [`IntentChangeConfig`](..\..\v4\shared\src\types\callbacks-types\interfaces\intent-change-config.md), which contains the appropriate `exportConfig` for the Edit Image workflow that follows after Generate Image.
 
 The user is now able to perform Image Editing routines, such as Removing Background, Adding Effects, and more.
 
@@ -729,9 +729,9 @@ Let's trace through the complete user journeys to understand how all the pieces 
 
 <InlineAlert variant="warning" slots="header, text1" />
 
-Tethering to Edit Image v1
+### Tethering to Edit Image v1
 
-Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon. More information about the current limitations can be found in the [Workflow Tethering guide](../concepts/tethering.md#known-limitations).
+Currently, Generate Image transitions only support Edit Image v1. Support for v2 is coming soon. More information about the current limitations can be found in the [Workflow Tethering guide](..\concepts\tethering.md#known-limitations).
 
 ### 5.2 Edit Image → Full Editor → Save
 
@@ -1318,11 +1318,11 @@ Need help or have questions? Join our [Community Forum](https://community.adobe.
 
 ## Related resources
 
-- **[Workflow Tethering guide](../concepts/tethering.md)**: Comprehensive guide to understanding workflow tethering.
+- **[Workflow Tethering guide](..\concepts\tethering.md)**: Comprehensive guide to understanding workflow tethering.
 - **[Edit Image tutorial](./edit-image.md)**: Foundation for understanding basic image editing workflows.
 - **[Generate Image tutorial](./generate-image.md)**: Essential knowledge for image generation workflows.
-- **[API Reference](../../v4/index.md)**: Complete SDK documentation
-- **[Adobe Express Embed SDK Overview](../index.md)**: High-level introduction
+- **[API Reference](..\..\v4\index.md)**: Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](..\index.md)**: High-level introduction
 - **[Demo Application](https://demo.expressembed.com/)**: Interactive demo showcasing SDK capabilities
 - **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)**: Working code examples and tutorials
-- **[Changelog](../changelog/index.md)**: Latest updates and improvements
+- **[Changelog](..\changelog\index.md)**: Latest updates and improvements

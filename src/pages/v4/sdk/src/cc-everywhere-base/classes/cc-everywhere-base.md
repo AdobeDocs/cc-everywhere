@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,7 +8,7 @@ Class to create CCEverywhere object.
 
 ## Extended by
 
-- [`CCEverywhere`](../../3p/cc-everywhere/classes/cc-everywhere.md)
+- [`CCEverywhere`](..\..\3p\cc-everywhere\classes\cc-everywhere.md)
 
 ## Implements
 
@@ -36,10 +36,10 @@ Constructor to initialize CCEverywhere object.
 | ------ | ------ | ------ |
 | `validator` | `BaseValidator` | - |
 | `authControllerConstructor` | `AuthControllerConstructor` | - |
-| `hostInfo` | [`HostInfo`](../../../../shared/src/types/host-info-types/type-aliases/host-info.md) | client application information - clientId, appName |
-| `configParams` | [`ConfigParams`](../../../../shared/src/types/host-info-types/type-aliases/config-params.md) | environment, locale, piipStatus, colorTheme, spectrumTheme, scale |
+| `hostInfo` | [`HostInfo`](..\..\..\..\shared\src\types\host-info-types\type-aliases\host-info.md) | client application information - clientId, appName |
+| `configParams` | [`ConfigParams`](..\..\..\..\shared\src\types\host-info-types\type-aliases\config-params.md) | environment, locale, piipStatus, colorTheme, spectrumTheme, scale |
 | `authProvider` | `AuthProvider` | - |
-| `clientAuthProvider` | [`ClientAuthProvider`](../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | - |
+| `clientAuthProvider` | [`ClientAuthProvider`](..\..\..\..\shared\src\types\client-authentication-types\interfaces\client-auth-provider.md) | - |
 
 #### Returns
 
@@ -87,7 +87,7 @@ get static state(): State;
 
 ##### Returns
 
-[`State`](../../types/cc-everywhere-types/enumerations/state.md)
+[`State`](..\..\types\cc-everywhere-types\enumerations\state.md)
 
 #### Set Signature
 
@@ -99,7 +99,7 @@ set static state(value): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `value` | [`State`](../../types/cc-everywhere-types/enumerations/state.md) |
+| `value` | [`State`](..\..\types\cc-everywhere-types\enumerations\state.md) |
 
 ##### Returns
 
@@ -154,7 +154,7 @@ Closes any active design in progress.
 #### Returns
 
   \| `boolean`
-  \| `Promise`<[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
+  \| `Promise`<[`CloseStatusMessage`](..\..\..\..\shared\src\messenger\message-types\interfaces\close-status-message.md)\>
 
 boolean value indicating whether the close operation was successful or not.
 

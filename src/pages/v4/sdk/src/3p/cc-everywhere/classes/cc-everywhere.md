@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,11 +8,11 @@ Class to create CCEverywhere object.
 
 ## Extends
 
-- [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md)
+- [`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md)
 
 ## Implements
 
-- [`CCEverywhereInterface`](../../cc-everywhere-types/interfaces/cc-everywhere-interface.md)
+- [`CCEverywhereInterface`](..\..\cc-everywhere-types\interfaces\cc-everywhere-interface.md)
 
 ## Constructors
 
@@ -32,10 +32,10 @@ new CCEverywhere(
 | Parameter | Type |
 | ------ | ------ |
 | `validator` | `Validator` |
-| `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |
-| `configParams` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |
+| `hostInfo` | [`HostInfoSpecifiedBase`](..\..\..\..\..\shared\src\types\host-info-types\interfaces\host-info-specified-base.md) |
+| `configParams` | [`ConfigParamsBase`](..\..\..\..\..\shared\src\types\host-info-types\interfaces\config-params-base.md) |
 | `authProvider` | `AuthProvider` |
-| `clientAuthProvider` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) |
+| `clientAuthProvider` | [`ClientAuthProvider`](..\..\..\..\..\shared\src\types\client-authentication-types\interfaces\client-auth-provider.md) |
 
 #### Returns
 
@@ -43,15 +43,15 @@ new CCEverywhere(
 
 #### Overrides
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`constructor`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#constructor)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`constructor`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#constructor)
 
 ## Properties
 
 | Property | Modifier | Type |
 | ------ | ------ | ------ |
-| `editor` | `readonly` | [`EditorWorkflow`](../../../workflows/3p/editor-workflow/classes/editor-workflow.md) |
-| `module` | `readonly` | [`ModuleWorkflow`](../../../workflows/3p/module-workflow/classes/module-workflow.md) |
-| `quickAction` | `readonly` | [`QuickActionWorkflow`](../../../workflows/3p/quick-action-workflow/classes/quick-action-workflow.md) |
+| `editor` | `readonly` | [`EditorWorkflow`](..\..\..\workflows\3p\editor-workflow\classes\editor-workflow.md) |
+| `module` | `readonly` | [`ModuleWorkflow`](..\..\..\workflows\3p\module-workflow\classes\module-workflow.md) |
+| `quickAction` | `readonly` | [`QuickActionWorkflow`](..\..\..\workflows\3p\quick-action-workflow\classes\quick-action-workflow.md) |
 
 ## Accessors
 
@@ -68,7 +68,7 @@ get static activeInstance():
 ##### Returns
 
   \| `undefined`
-  \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md)
+  \| [`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md)
 
 #### Set Signature
 
@@ -80,7 +80,7 @@ set static activeInstance(instance): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | \| `undefined` \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+| `instance` | \| `undefined` \| [`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md) |
 
 ##### Returns
 
@@ -88,7 +88,7 @@ set static activeInstance(instance): void;
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`activeInstance`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#activeinstance)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`activeInstance`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#activeinstance)
 
 ***
 
@@ -102,7 +102,7 @@ get static state(): State;
 
 ##### Returns
 
-[`State`](../../../types/cc-everywhere-types/enumerations/state.md)
+[`State`](..\..\..\types\cc-everywhere-types\enumerations\state.md)
 
 #### Set Signature
 
@@ -114,7 +114,7 @@ set static state(value): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `value` | [`State`](../../../types/cc-everywhere-types/enumerations/state.md) |
+| `value` | [`State`](..\..\..\types\cc-everywhere-types\enumerations\state.md) |
 
 ##### Returns
 
@@ -122,7 +122,7 @@ set static state(value): void;
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`state`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#state)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`state`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#state)
 
 ***
 
@@ -142,7 +142,7 @@ Get version of SDK
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`version`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#version)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`version`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#version)
 
 ## Methods
 
@@ -160,7 +160,7 @@ Method to un-initialize cceverywhere object
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`terminate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#terminate)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`terminate`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#terminate)
 
 ***
 
@@ -183,17 +183,17 @@ Closes any active design in progress.
 #### Returns
 
   \| `boolean`
-  \| `Promise`<[`CloseStatusMessage`](../../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\>
+  \| `Promise`<[`CloseStatusMessage`](..\..\..\..\..\shared\src\messenger\message-types\interfaces\close-status-message.md)\>
 
 boolean value indicating whether the close operation was successful or not.
 
 #### Implementation of
 
-[`CCEverywhereInterface`](../../cc-everywhere-types/interfaces/cc-everywhere-interface.md).[`close`](../../cc-everywhere-types/interfaces/cc-everywhere-interface.md#close)
+[`CCEverywhereInterface`](..\..\cc-everywhere-types\interfaces\cc-everywhere-interface.md).[`close`](..\..\cc-everywhere-types\interfaces\cc-everywhere-interface.md#close)
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`close`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#close)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`close`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#close)
 
 ***
 
@@ -215,4 +215,4 @@ onRequestIdUpdate(requestId): void;
 
 #### Inherited from
 
-[`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md).[`onRequestIdUpdate`](../../../cc-everywhere-base/classes/cc-everywhere-base.md#onrequestidupdate)
+[`CCEverywhereBase`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md).[`onRequestIdUpdate`](..\..\..\cc-everywhere-base\classes\cc-everywhere-base.md#onrequestidupdate)

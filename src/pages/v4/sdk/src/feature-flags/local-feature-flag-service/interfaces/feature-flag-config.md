@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -10,7 +10,7 @@ Configuration interface for feature flags
 
 | Property | Type |
 | ------ | ------ |
-| `baseFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
-| `firstPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
-| `thirdPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
-| `clientFeatureFlags` | `Partial`<[`IntentClientFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-client-feature-flags.md)\> |
+| `baseFeatureFlags` | `Partial`<[`IntentFeatureFlags`](..\type-aliases\intent-feature-flags.md)\> |
+| `firstPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](..\type-aliases\intent-feature-flags.md)\> |
+| `thirdPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](..\type-aliases\intent-feature-flags.md)\> |
+| `clientFeatureFlags` | `Partial`<[`IntentClientFeatureFlags`](..\type-aliases\intent-client-feature-flags.md)\> |

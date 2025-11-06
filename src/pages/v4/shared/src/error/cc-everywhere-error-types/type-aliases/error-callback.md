@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -18,7 +18,7 @@ type ErrorCallback<T> = (error) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](..\..\cc-everywhere-error\classes\cc-everywhere-error.md)<`T`\> |
 
 ## Returns
 

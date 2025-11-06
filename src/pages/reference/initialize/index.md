@@ -22,7 +22,7 @@ contributors:
 
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](../CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](..\CCEverywhere\index.md) object. The SDK should be initialized only once on each page. This method is async.
 
 ```ts
 initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEverywhere>
@@ -39,12 +39,12 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) => Promise<CCEvery
 
 ### ConfigParams
 
-The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified.  The full list of accepted locale strings is [here](../types/index.md#locale).
+The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified.  The full list of accepted locale strings is [here](..\types\index.md#locale).
 
 | Property | Required | Type | Description
 | :-- | :-- | :-- | :--
-| locale | No | [Locale](../types/index.md#locale) | Language settings for SDK components
-| skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](../../guides/quickstart/index.md#browser-support), calling `initialize()` will **not** result in an error.
+| locale | No | [Locale](..\types\index.md#locale) | Language settings for SDK components
+| skipBrowserSupportCheck | No | boolean | When set to true and [browser is not supported](..\..\guides\quickstart\index.md#browser-support), calling `initialize()` will **not** result in an error.
 | loginMode | No | string | When set to `delayed`, user won't be asked to sign in until they export
 
 ### Example

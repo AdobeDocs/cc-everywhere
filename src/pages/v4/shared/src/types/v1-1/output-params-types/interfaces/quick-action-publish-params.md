@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -8,12 +8,12 @@ Asset related information received with onPublish callback in Quick Actions.
 
 ## Extends
 
-- [`PublishParams`](../../../v1-1/output-params-types/interfaces/publish-params.md)
+- [`PublishParams`](publish-params.md)
 
 ## Properties
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `asset` | [`OutputAsset`](../../../asset-types/interfaces/output-asset.md) | Asset which is exported | [`PublishParams`](../../../v1-1/output-params-types/interfaces/publish-params.md).[`asset`](../../../v1-1/output-params-types/interfaces/publish-params.md#asset) |
+| `asset` | [`OutputAsset`](..\..\..\asset-types\interfaces\output-asset.md) | Asset which is exported | [`PublishParams`](publish-params.md).[`asset`](publish-params.md#asset) |
 | `exportButtonId` | `string` | `id` passed in the `CustomExportButton` at time of invoking `openQuickAction`. | - |
-| `targetInfo?` | [`TargetInfo`](../../../target-info-types/interfaces/target-info.md) | This field is returned if `NativeExportTargetContext.NEW` is passed in `NativeExportTargetContext`. | - |
+| `targetInfo?` | [`TargetInfo`](..\..\..\target-info-types\interfaces\target-info.md) | This field is returned if `NativeExportTargetContext.NEW` is passed in `NativeExportTargetContext`. | - |

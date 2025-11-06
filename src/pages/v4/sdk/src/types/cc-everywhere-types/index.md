@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [State](../cc-everywhere-types/enumerations/state.md) | - |
+| [State](enumerations\state.md) | - |

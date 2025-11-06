@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [EditorWorkflow](../editor-workflow/classes/editor-workflow.md) | - |
+| [EditorWorkflow](classes\editor-workflow.md) | - |

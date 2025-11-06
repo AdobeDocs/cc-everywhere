@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,10 +8,10 @@
 
 ### TextToImageAppConfig
 
-Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
+Re-exports [TextToImageAppConfig](app-config-types\interfaces\text-to-image-app-config.md)
 
 ***
 
 ### EditImageAppConfig
 
-Re-exports [EditImageAppConfig](app-config-types/interfaces/edit-image-app-config.md)
+Re-exports [EditImageAppConfig](app-config-types\interfaces\edit-image-app-config.md)

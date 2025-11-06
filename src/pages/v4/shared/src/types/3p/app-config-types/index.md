@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,10 +8,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AppConfig](../app-config-types/interfaces/app-config.md) | - |
+| [AppConfig](interfaces\app-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AnalyticsData](../app-config-types/type-aliases/analytics-data.md) | - |
+| [AnalyticsData](type-aliases\analytics-data.md) | - |

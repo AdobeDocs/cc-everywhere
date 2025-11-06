@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,10 +8,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDocConfig](../doc-config-types/interfaces/edit-image-doc-config.md) | - |
+| [EditImageDocConfig](interfaces\edit-image-doc-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditImageIntent](../doc-config-types/type-aliases/edit-image-intent.md) | - |
+| [EditImageIntent](type-aliases\edit-image-intent.md) | - |

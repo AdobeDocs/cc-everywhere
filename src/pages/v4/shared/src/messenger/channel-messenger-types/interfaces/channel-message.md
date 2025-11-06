@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,12 +8,12 @@
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `sourceChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `sourceChannel` | [`MessageChannel`](..\enumerations\message-channel.md) |
 | `requestId?` | `string` |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> |

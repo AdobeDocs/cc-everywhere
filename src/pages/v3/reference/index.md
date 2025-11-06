@@ -16,20 +16,20 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We're only accepting new integrations using the SDK version 4.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## Embed and initialize the SDK
 
-1. Follow the steps in the quickstart guide to [embed the SDK](../../guides/quickstart/index.md#step-2-embed-the-sdk) in your application.
-2. After you have imported the SDK to your application, you need to call the `initialize` API first. View the full reference for that [API](./initialize/index.md) here.
+1. Follow the steps in the quickstart guide to [embed the SDK](..\..\guides\quickstart\index.md#step-2-embed-the-sdk) in your application.
+2. After you have imported the SDK to your application, you need to call the `initialize` API first. View the full reference for that [API](./initialize\index.md) here.
 
 ## CCEverywhere
 
-Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
+Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere\index.md) object.
 
 As of today, it exposes 5 methods:
 
@@ -41,4 +41,4 @@ As of today, it exposes 5 methods:
 
 ## Types
 
-The [types](./types/index.md) reference page contains details about objects that are shared across the SDK.
+The [types](./types\index.md) reference page contains details about objects that are shared across the SDK.

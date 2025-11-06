@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [HostErrorHandler](../host-error-handler/classes/host-error-handler.md) | - |
+| [HostErrorHandler](classes\host-error-handler.md) | - |

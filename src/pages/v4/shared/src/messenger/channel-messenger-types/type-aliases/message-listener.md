@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -12,13 +12,13 @@ type MessageListener = <T>(event) => void;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
 
 ## Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `event` | `MessageEvent`<[`ChannelMessage`](../../channel-messenger-types/interfaces/channel-message.md)<`T`\>\> |
+| `event` | `MessageEvent`<[`ChannelMessage`](..\interfaces\channel-message.md)<`T`\>\> |
 
 ## Returns
 

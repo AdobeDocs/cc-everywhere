@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,10 +8,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseEditorAppConfig](../app-config-types/interfaces/base-editor-app-config.md) | - |
+| [BaseEditorAppConfig](interfaces\base-editor-app-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AppConfig](../app-config-types/type-aliases/app-config.md) | - |
+| [AppConfig](type-aliases\app-config.md) | - |

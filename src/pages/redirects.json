@@ -1,0 +1,2108 @@
+{
+    "total": 525,
+    "offset": 0,
+    "limit": 525,
+    "data": [
+        {
+            "Source": "/express/express-add-ons/docs/v4/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/workflow-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/workflow-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/workflow-types/enumerations/workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/workflow-types/enumerations/workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/version-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/version-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/version-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/version-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/version-types/interfaces/version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/version-types/interfaces/version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/interfaces/quick-action-publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/interfaces/quick-action-publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/interfaces/publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/interfaces/publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/interfaces/ccx-publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/v1-1/output-params-types/interfaces/ccx-publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/interfaces/target-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/interfaces/target-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/enumerations/target/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/target-info-types/enumerations/target"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/doc-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/doc-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/doc-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/doc-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/design-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/design-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/quick-action/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/type-aliases/editor-publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/type-aliases/editor-publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/quick-action-publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/quick-action-publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/publish-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/publish-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/asset-target-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/publish-params-types/interfaces/asset-target-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/performance-metrics-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/performance-metrics-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/performance-metrics-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/performance-metrics-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/performance-metrics-types/interfaces/performance-metrics/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/performance-metrics-types/interfaces/performance-metrics"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/type-aliases/image-style-id/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/type-aliases/image-style-id"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/style-setting/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/style-setting"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/panel-settings/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/panel-settings"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/content-type-setting/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/content-type-setting"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/base-panel-setting/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/interfaces/base-panel-setting"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-technique-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-technique-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-movement-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-movement-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-material-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-material-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/network-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/network-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/network-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/network-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/network-types/enumerations/network-state/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/network-types/enumerations/network-state"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/doc-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/doc-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/doc-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/doc-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/design-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/design-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-check-response/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-check-response"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-response/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-response"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/text-to-image-app-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/variables/canvas-type-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/variables/canvas-type-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/type-aliases/canvas-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/type-aliases/canvas-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/enumerations/canvas-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/layout-types/enumerations/canvas-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/variables/host-type-name/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/variables/host-type-name"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/host-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/host-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/host-info-specified/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/host-info-specified"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/host-info-extended/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/host-info-extended"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/config-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/type-aliases/config-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/host-info-specified-base/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/host-info-specified-base"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/host-info-session/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/host-info-session"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/host-info-computed/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/host-info-computed"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/device-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/device-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/config-params-base/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/interfaces/config-params-base"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/platform-category/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/platform-category"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/piip-status/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/piip-status"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/locale/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/locale"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/host-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/host-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/host-id/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/host-id"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/environment/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/host-info-types/enumerations/environment"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/feature-flags-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/feature-flags-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/feature-flags-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/feature-flags-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/feature-flags-types/type-aliases/feature-flags/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/feature-flags-types/type-aliases/feature-flags"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-target/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-target"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-options/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-options"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-option-or-group/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-option-or-group"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-context/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-context"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-button-variant/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-button-variant"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-button-treatment/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-button-treatment"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-action/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/export-action"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/enabled-button-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/enabled-button-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/dropdown-export-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/dropdown-export-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/continue-editing-action/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/continue-editing-action"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/content-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/content-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/button-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/type-aliases/button-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/publish-export-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/publish-export-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/publish-button-group/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/publish-button-group"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/publish-action/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/publish-action"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/link-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/link-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/export-option-group/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/export-option-group"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/export-group/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/export-group"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/edit-further-export-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/edit-further-export-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/edit-further-action/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/edit-further-action"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/dropdown-option-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/dropdown-option-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/dropdown-option-style-compat/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/dropdown-option-style-compat"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/download-export-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/download-export-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/download-action/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/download-action"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/continue-editing-group/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/continue-editing-group"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/continue-editing-dropdown-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/continue-editing-dropdown-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/base-export-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/base-export-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/base-button-style/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/base-button-style"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/base-action/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/interfaces/base-action"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/publish-target/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/publish-target"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/export-option-ui/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/export-option-ui"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/export-group-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/export-group-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-target/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-target"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/download-target/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/export-config-types/enumerations/download-target"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/doc-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/doc-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/doc-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/doc-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/design-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/design-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/editor/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/editor/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/design-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/design-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/container-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/container-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/container-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/container-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/container-config-types/enumerations/container-mode/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/container-config-types/enumerations/container-mode"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/config-manager-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/config-manager-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/config-manager-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/config-manager-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/config-manager-types/variables/sdk-cdn-base/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/config-manager-types/variables/sdk-cdn-base"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/type-aliases/request-meta-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/type-aliases/request-meta-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/interfaces/data-response/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/interfaces/data-response"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/interfaces/data-request/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/interfaces/data-request"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/interfaces/cw-asset-response/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/community-wall-types/interfaces/cw-asset-response"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/interfaces/client-auth-details/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/client-authentication-types/interfaces/client-auth-details"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/publish-start-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/publish-start-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/publish-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/publish-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/load-start-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/load-start-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/load-init-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/load-init-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/load-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/load-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/event-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/event-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/cancel-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/type-aliases/cancel-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/interfaces/publish-status/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/interfaces/publish-status"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/interfaces/callbacks/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/callbacks-types/interfaces/callbacks"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browser-event-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browser-event-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browser-event-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browser-event-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browser-event-types/enumerations/browser-event/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browser-event-types/enumerations/browser-event"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/interfaces/host-contextual-data-for-images/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/interfaces/host-contextual-data-for-images"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/enumerations/inspire-category/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/browse-search-config-types/enumerations/inspire-category"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/variables/ims-jump-error-key/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/variables/ims-jump-error-key"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/variables/ims-jump-error-description-key/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/variables/ims-jump-error-description-key"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/type-aliases/auth-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/type-aliases/auth-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/user-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/user-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/upfront-auth-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/upfront-auth-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/pre-signed-in-auth-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/pre-signed-in-auth-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/ims-jump-auth-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/ims-jump-auth-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/delayed-auth-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/delayed-auth-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/base-auth-option/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/interfaces/base-auth-option"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/enumerations/validate-token-error/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/enumerations/validate-token-error"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/enumerations/auth-mode/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/authentication-types/enumerations/auth-mode"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/variables/image-module-file-types/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/variables/image-module-file-types"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/variables/file-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/variables/file-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/url-asset/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/url-asset"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/processed-image-dimensions/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/processed-image-dimensions"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/image-module-file-types/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/image-module-file-types"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/image-dimensions/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/image-dimensions"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/file-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/file-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/blob-asset/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/blob-asset"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/base64-asset/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/base64-asset"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/asset/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/asset"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/aspect-ratio/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/type-aliases/aspect-ratio"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/size/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/size"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/pixel-size/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/pixel-size"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/output-asset/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/output-asset"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/data-type-map/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/data-type-map"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/blob/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/blob"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/asset-base/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/interfaces/asset-base"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/video-file-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/video-file-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/sub-file-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/sub-file-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/size-unit/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/size-unit"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/pdf-file-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/pdf-file-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/image-file-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/image-file-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/asset-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/asset-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/asset-data-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/asset-types/enumerations/asset-data-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/variables/search-category/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/variables/search-category"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/interfaces/base-analytics-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/interfaces/base-analytics-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/warmup-mode/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/warmup-mode"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/template-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/template-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/template-media-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/template-media-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/spectrum-theme/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/spectrum-theme"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/scale/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/scale"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/host-app-trigger/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/host-app-trigger"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/editor-panel-view/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/editor-panel-view"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/color-theme/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/app-config-types/enumerations/color-theme"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/type-aliases/quick-action-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/type-aliases/quick-action-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/type-aliases/action-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/type-aliases/action-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/warmup-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/warmup-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/video-quick-action-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/video-quick-action-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/quick-action-sub-categories/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/quick-action-sub-categories"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/pdf-quick-action-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/pdf-quick-action-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/module-sub-category/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/module-sub-category"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/module-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/module-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/image-quick-action-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/image-quick-action-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/gen-studio-quick-action-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/gen-studio-quick-action-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/editor-intent/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/action-intent-types/enumerations/editor-intent"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/module/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/type-aliases/host-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/type-aliases/host-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/type-aliases/config-params/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/host-info-types/type-aliases/config-params"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/design-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/design-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/design-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/editor/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/app-config-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/app-config-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/app-config-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/types/3p/app-config-types/type-aliases/analytics-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/types/3p/app-config-types/type-aliases/analytics-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/previous-protocol-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/previous-protocol-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/next-protocol-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/next-protocol-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/earliest-protocol-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/earliest-protocol-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/current-protocol-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/variables/current-protocol-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/interfaces/protocol-handlers-module/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/interfaces/protocol-handlers-module"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/enumerations/protocol-version/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/protocol-types/enumerations/protocol-version"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/simple-message-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/simple-message-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/message-compat/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/message-compat"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/did-target-load-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/did-target-load-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/data-message-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/type-aliases/data-message-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/workflow-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/workflow-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/token-response-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/token-response-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/publish-status-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/publish-status-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/params-response-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/params-response-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/message-data-map/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/message-data-map"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/close-status-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/close-status-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/client-auth-details-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/client-auth-details-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/cancel-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/interfaces/cancel-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/workflow-load-completed/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/workflow-load-completed"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/status/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/status"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/publish-callback-status/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/publish-callback-status"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/message-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/message-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/load-status/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/load-status"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/close-status/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/close-status"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/cancel-reason/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-types/enumerations/cancel-reason"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/url-info-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/url-info-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/update-close-button-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/update-close-button-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/message-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/message-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/intent-change-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/intent-change-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/host-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/host-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/export-info-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/export-info-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/download-complete-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/download-complete-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/enumerations/host-event-type/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/message-data-types/enumerations/host-event-type"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/target-added-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/target-added-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-target/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-target"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-sender/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-sender"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-payload/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-payload"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-listener/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-listener"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-filter/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/type-aliases/message-filter"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/interfaces/target-channel-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/interfaces/target-channel-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/interfaces/i-channel-messenger-delegate/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/interfaces/i-channel-messenger-delegate"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/interfaces/channel-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/interfaces/channel-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/enumerations/message-channel/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger-types/enumerations/message-channel"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger/classes/default/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-messenger/classes/default"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/type-aliases/listener/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/type-aliases/listener"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/classes/channel-message-listener/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/messenger/channel-message-listener/classes/channel-message-listener"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/Messages/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/Messages/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/Messages/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/Messages/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/Messages/variables/messages/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/Messages/variables/messages"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/i-error-message-handler/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/i-error-message-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/i-error-message-handler/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/i-error-message-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/i-error-message-handler/interfaces/i-error-message-handler/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/i-error-message-handler/interfaces/i-error-message-handler"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/host-error-handler/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/host-error-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/host-error-handler/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/host-error-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/host-error-handler/classes/host-error-handler/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/host-error-handler/classes/host-error-handler"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/console-handler/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/console-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/console-handler/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/console-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/console-handler/classes/console-handler/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/console-handler/classes/console-handler"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/base-handler/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/base-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/base-handler/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/base-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/handlers/base-handler/classes/base-handler/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/handlers/base-handler/classes/base-handler"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-handler-delegate/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-handler-delegate/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-handler-delegate/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-handler-delegate/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-handler-delegate/classes/error-handler-delegate/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-handler-delegate/classes/error-handler-delegate"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-data/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-data/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-data/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-data/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-data/interfaces/error-data/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-data/interfaces/error-data"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/variables/error-code-messages/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/variables/error-code-messages"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/enumerations/error-code/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/error-codes/enumerations/error-code"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/type-aliases/error-code-message/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/type-aliases/error-code-message"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/type-aliases/error-callback/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/type-aliases/error-callback"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-info/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-info"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/enumerations/log-level/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error-types/enumerations/log-level"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error/classes/cc-everywhere-error/",
+            "Destination": "/express/express-add-ons/docs/v4/shared/src/error/cc-everywhere-error/classes/cc-everywhere-error"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/base-workflow/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/base-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/base-workflow/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/base-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/base-workflow/classes/base-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/base-workflow/classes/base-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow-types/interfaces/quick-action-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow-types/interfaces/quick-action-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow-types/interfaces/module-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow-types/interfaces/module-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow-types/interfaces/editor-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow-types/interfaces/editor-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/types/cc-everywhere-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/types/cc-everywhere-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/types/cc-everywhere-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/types/cc-everywhere-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/types/cc-everywhere-types/enumerations/state/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/types/cc-everywhere-types/enumerations/state"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/test-utils/test-editor-context/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/test-utils/test-editor-context/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/test-utils/test-editor-context/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/test-utils/test-editor-context/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/test-utils/test-editor-context/classes/test-editor-context/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/test-utils/test-editor-context/classes/test-editor-context"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service-test/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service-test/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service-test/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service-test/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/type-aliases/intent-feature-flags/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/type-aliases/intent-feature-flags"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/type-aliases/intent-client-feature-flags/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/type-aliases/intent-client-feature-flags"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/type-aliases/client-feature-flags/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/type-aliases/client-feature-flags"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/enumerations/hz-feature-flag/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/enumerations/hz-feature-flag"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/classes/local-feature-flag-service/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/local-feature-flag-service/classes/local-feature-flag-service"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/feature-flag-service/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/feature-flag-service/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/feature-flag-service/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/feature-flag-service/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/feature-flag-service/classes/feature-flag-service/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/feature-flags/feature-flag-service/classes/feature-flag-service"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-handler/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-handler/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-handler/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-handler/classes/error-handler/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-handler/classes/error-handler"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/variables/error-code/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/variables/error-code"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/variables/error-code-messages/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/variables/error-code-messages"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/type-aliases/error-code/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/type-aliases/error-code"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/type-aliases/error-code-messages/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/type-aliases/error-code-messages"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/enumerations/sdk-error-code/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/error/error-codes/enumerations/sdk-error-code"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/context/workflow-context/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/context/workflow-context/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/context/workflow-context/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/context/workflow-context/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/context/workflow-context/classes/workflow-context/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/context/workflow-context/classes/workflow-context"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/context/3p/editor-context/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/context/3p/editor-context/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/context/3p/editor-context/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/context/3p/editor-context/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/context/3p/editor-context/classes/editor-context/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/context/3p/editor-context/classes/editor-context"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/cc-everywhere-base/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/cc-everywhere-base/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/cc-everywhere-base/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/cc-everywhere-base/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/cc-everywhere-base/classes/cc-everywhere-base/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/cc-everywhere-base/classes/cc-everywhere-base"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere-types/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere-types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere-types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere-types/interfaces/cc-everywhere-interface/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere-types/interfaces/cc-everywhere-interface"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/index.md",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/variables/default/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/variables/default"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere/",
+            "Destination": "/express/express-add-ons/docs/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/types/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/initialize/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/initialize/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/initialize/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/initialize/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/terminate/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/terminate/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/terminate/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/terminate/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/quick_actions/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/quick_actions/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/edit_design/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/edit_design/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/edit_design/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/edit_design/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/create_design/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/create_design/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/create_design/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/create_design/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/close/index.md",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/close/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v3/reference/CCEverywhere/close/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v3/reference/CCEverywhere/close/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/index.md",
+            "Destination": "/express/express-add-ons/docs/v2/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v2/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/shared_types/index.md",
+            "Destination": "/express/express-add-ons/docs/v2/reference/shared_types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/shared_types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v2/reference/shared_types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/quick_actions/index.md",
+            "Destination": "/express/express-add-ons/docs/v2/reference/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/quick_actions/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v2/reference/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/full_editor/index.md",
+            "Destination": "/express/express-add-ons/docs/v2/reference/full_editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v2/reference/full_editor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v2/reference/full_editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/index.md",
+            "Destination": "/express/express-add-ons/docs/v1/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v1/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/shared_types/index.md",
+            "Destination": "/express/express-add-ons/docs/v1/reference/shared_types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/shared_types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v1/reference/shared_types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/quick_actions/index.md",
+            "Destination": "/express/express-add-ons/docs/v1/reference/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/quick_actions/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v1/reference/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/full_editor/index.md",
+            "Destination": "/express/express-add-ons/docs/v1/reference/full_editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/v1/reference/full_editor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/v1/reference/full_editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/support/index.md",
+            "Destination": "/express/express-add-ons/docs/support/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/support/index.md/index",
+            "Destination": "/express/express-add-ons/docs/support/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/types/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/types/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/types/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/initialize/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/initialize/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/initialize/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/initialize/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/terminate/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/terminate/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/terminate/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/terminate/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/quickAction/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/quickAction/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/quickAction/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/quickAction/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/miniEditor/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/miniEditor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/miniEditor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/miniEditor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/editor/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/editor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/close/index.md",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/close/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/reference/CCEverywhere/close/index.md/index",
+            "Destination": "/express/express-add-ons/docs/reference/CCEverywhere/close/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/workflow-tethering/",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/workflow-tethering"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/tutorial-template/",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/tutorial-template"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/getting-started/",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/getting-started"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/generate-image/",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/generate-image"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/full-editor/",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/full-editor"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/tutorials/edit-image/",
+            "Destination": "/express/express-add-ons/docs/guides/tutorials/edit-image"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/troubleshooting/express-unavailable-error/",
+            "Destination": "/express/express-add-ons/docs/guides/troubleshooting/express-unavailable-error"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/troubleshooting/faq/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/troubleshooting/faq/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/troubleshooting/faq/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/troubleshooting/faq/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/review/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/review/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/review/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/review/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/quick_actions/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/quick_actions/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/quick_actions/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/quickstart/technical-requirements/",
+            "Destination": "/express/express-add-ons/docs/guides/quickstart/technical-requirements"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/quickstart/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/quickstart/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/quickstart/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/quickstart/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/modules/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/modules/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/modules/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/modules/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/full_editor/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/full_editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/full_editor/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/full_editor/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/full_editor/edit_project/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/full_editor/edit_project/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/full_editor/edit_project/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/full_editor/edit_project/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/full_editor/create_project/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/full_editor/create_project/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/full_editor/create_project/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/full_editor/create_project/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/tethering/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/tethering"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/mobile-web-support/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/mobile-web-support"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/migration-v3-v4/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/migration-v3-v4"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/generate-image-v2/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/generate-image-v2"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/error-handling/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/error-handling"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/edit-image-v2/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/edit-image-v2"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/concepts/customization/",
+            "Destination": "/express/express-add-ons/docs/guides/concepts/customization"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/changelog/index.md",
+            "Destination": "/express/express-add-ons/docs/guides/changelog/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/guides/changelog/index.md/index",
+            "Destination": "/express/express-add-ons/docs/guides/changelog/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/get-credential/index.md",
+            "Destination": "/express/express-add-ons/docs/get-credential/index.md/"
+        },
+        {
+            "Source": "/express/express-add-ons/docs/get-credential/index.md/index",
+            "Destination": "/express/express-add-ons/docs/get-credential/index.md/"
+        }
+    ],
+    ":type": "sheet"
+}

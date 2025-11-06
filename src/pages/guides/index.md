@@ -36,7 +36,7 @@ contributors:
 ---
 import "./landing-styles.css";
 
-<Hero slots="image, heading, text" background="rgb(193, 72, 273)"/>
+<HeroSimple slots="image, heading, text" background="rgb(193, 72, 273)"/>
 
 ![Hero image](./images/wide-SDK-Banner-570x400.png)
 
@@ -44,7 +44,7 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<AnnouncementBlock slots="heading, text, button"/>
+<Announcement slots="heading, text, button"/>
 
 ### Demo App
 
@@ -72,9 +72,9 @@ This journey map will give you guidance on which resources to use at different s
 
 To quickly integrate the Adobe Express Embed SDK, follow these initial steps:
 
-- **Quickstart Guide**: Begin with the [Quickstart guide](./quickstart/index.md) for a streamlined integration process.
+- **Quickstart Guide**: Begin with the [Quickstart guide](./quickstart\index.md) for a streamlined integration process.
 - **Demo App**: Explore the [Demo App](https://demo.expressembed.com/) to see example integrations in action.
-- **Sample Code**: Check out the [Sample Code](https://github.com/AdobeDocs/cc-everywhere/blob/main/v4-sample/sample.md) for integrating the V4 SDK into your project, or follow our [Tutorials](./tutorials/index.md).
+- **Sample Code**: Check out the [Sample Code](https://github.com/AdobeDocs/cc-everywhere/blob/main/v4-sample/sample.md) for integrating the V4 SDK into your project, or follow our [Tutorials](./tutorials\index.md).
 - **Community Support**: If you have any questions, post them in the [community](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all) for assistance.
 
 ## What Can Adobe Express Embed SDK Do?
@@ -97,7 +97,7 @@ Explore our tools:
 
 ### Modules: Focused Editing Experiences
 
-[Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
+[Modules](modules\index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
 
 **Available modules:**
 
@@ -117,13 +117,13 @@ Explore our tools:
 
 <DiscoverBlock slots="link, text"/>
 
-[Quickstart Guide](./quickstart/)
+[Quickstart Guide](./quickstart\index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](./tutorials/)
+[Tutorials](./tutorials\index.md)
 
 Explore the collection of tutorials.
 
@@ -141,6 +141,6 @@ If you need assistance or have questions about the Adobe Express Embed SDK, visi
 
 <DiscoverBlock slots="link, text"/>
 
-[Frequently Asked Questions](./troubleshooting/faq/)
+[Frequently Asked Questions](./troubleshooting\faq\index.md)
 
 Read our FAQ.

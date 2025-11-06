@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [Version](../version-types/interfaces/version.md) | Version details of any application. Reference : https://semver.org/ |
+| [Version](interfaces\version.md) | Version details of any application. Reference : https://semver.org/ |

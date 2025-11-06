@@ -18,7 +18,7 @@ contributors:
   - https://github.com/undavide
 ---
 
-<Hero slots="image, heading, text" background="rgb(64, 34, 138)" hideBreadcrumbNav={false}/>
+<HeroSimple slots="image, heading, text" background="rgb(64, 34, 138)" hideBreadcrumbNav={false}/>
 
 ![Hero image](../img/hero-image.png)
 
@@ -73,7 +73,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 ### How many domains can be added with a single API key for a service?
 
-You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](..\express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
 
 ### How do I enable SSO for my service?
 
@@ -89,7 +89,7 @@ Your users can use the integrations, but, we will display a red banner indicatin
 
 - The SDK follows a continous release model, with newer versions including bug fixes and feature enhancements. We are no longer approving integrations using using SDK V1, V2, or V3.
 - V1 and V2 are deprecated and V3 will be deprecated in 2024.
-- Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
+- Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration-v3-v4.md) to help you with the transition.
 
 ### Which web browsers are supported?
 
@@ -98,7 +98,7 @@ Your users can use the integrations, but, we will display a red banner indicatin
 - Safari: Version 17 or later
 - Firefox: Version 117 or later
 
-You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
+You can refer to the complete [technical requirements](..\..\quickstart\technical-requirements.md) here.
 
 ### What operating systems are supported?
 
@@ -106,12 +106,12 @@ You can refer to the complete [technical requirements](../../quickstart/technica
 - macOS: Version 11 or later
 - ChromeOS
 
-You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
+You can refer to the complete [technical requirements](..\..\quickstart\technical-requirements.md) here.
 
 ### I run into the "Adobe Express is not available" error
 
-Please refer to this [troubleshooting guide](../express-unavailable-error.md).
+Please refer to this [troubleshooting guide](..\express-unavailable-error.md).
 
 ### How can I debug and troubleshoot errors effectively?
 
-Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
+Refer to the [error handling guide](..\..\concepts\error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.

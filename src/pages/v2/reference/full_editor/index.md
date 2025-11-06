@@ -20,7 +20,7 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
 
@@ -34,7 +34,7 @@ The full editor component gives you access to three workflows:
 
 ## createDesign()
 
-This method launches the full editor component either with a blank canvas, or with an image. The editor is loaded in an iframe. To open the editor with an image, you need to ensure that `inputParams` has an [Asset](../shared_types/index.md#asset) object.
+This method launches the full editor component either with a blank canvas, or with an image. The editor is loaded in an iframe. To open the editor with an image, you need to ensure that `inputParams` has an [Asset](..\shared_types\index.md#asset) object.
 
 ```js
 createDesign(CreateDesignParams)
@@ -47,9 +47,9 @@ createDesign(CreateDesignParams)
 | Properties | Type | Description
 | :-- | :--| :--
 | inputParams | [CreateInputParams](#createinputparams) | Specify starting asset, canvas size, canvas template type, or a search text to pass in the target application
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify editor modal dimensions
-| outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
-| callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
+| modalParams | [ModalParams](..\shared_types\index.md#modalparams) | Specify editor modal dimensions
+| outputParams | [CCXOutputParams](..\shared_types\index.md#ccxoutputparams) | Specify output type and file type of created project
+| callbacks | [Callbacks](..\shared_types\index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
 #### CreateInputParams
 
@@ -57,10 +57,10 @@ createDesign(CreateDesignParams)
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasSize| [Size](../shared_types/index.md#size)/[CanvasAspectId](../../../guides/full_editor/customization/index.md#canvasaspectid) | Initializes the editor loaded with templates that fit that layout ratio
+| canvasSize| [Size](..\shared_types\index.md#size)/[CanvasAspectId](../../../guides/full_editor/customization/index.md#canvasaspectid) | Initializes the editor loaded with templates that fit that layout ratio
 | templateType | [TemplateType](../../../guides/full_editor/customization/index.md#templatetype) | Initializes the editor loaded with templates of this specified type
 | templateSearchText | string | Initializes the editor with this string value for template search
-| asset | [Asset](../shared_types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
+| asset | [Asset](..\shared_types\index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open
 
 ### Example
 
@@ -102,9 +102,9 @@ editDesign(EditDesignParams)
 | Property | Type | Description
 | :-- | :--| :--
 | inputParams | [EditInputParams](#editinputparams) | ID of Adobe Express project to open for editing
-| modalParams | [ModalParams](../shared_types/index.md#modalparams) | Specify editor modal dimensions
-| outputParams | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
-| callbacks | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
+| modalParams | [ModalParams](..\shared_types\index.md#modalparams) | Specify editor modal dimensions
+| outputParams | [CCXOutputParams](..\shared_types\index.md#ccxoutputparams) | Specify output type and file type of created project
+| callbacks | [Callbacks](..\shared_types\index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
 #### EditInputParams
 

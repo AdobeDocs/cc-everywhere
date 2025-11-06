@@ -21,15 +21,15 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving new integrations using SDK v3, which will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## initialize()
 
-This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](../CCEverywhere/index.md) object. The SDK should be initialized only once on each page. This method is async.
+This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](..\CCEverywhere\index.md) object. The SDK should be initialized only once on each page. This method is async.
 
 ```ts
 initialize: (hostInfo: HostInfo, configParams?: ConfigParams) =>
@@ -47,12 +47,12 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) =>
 
 ### ConfigParams
 
-The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified. The full list of accepted locale strings is [here](../types/index.md#locale).
+The Adobe Express Embed SDK can be initialized with a customized locale. This field defaults to **'en_US'** if nothing is specified. The full list of accepted locale strings is [here](..\types\index.md#locale).
 
 | Property                | Required | Type                               | Description                                                                                                                                                    |
 | :---------------------- | :------- | :--------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| locale                  | No       | [Locale](../types/index.md#locale) | Language settings for SDK components                                                                                                                           |
-| skipBrowserSupportCheck | No       | boolean                            | When set to true and [browser is not supported](../../../guides/quickstart/technical-requirements.md), calling `initialize()` will **not** result in an error. |
+| locale                  | No       | [Locale](..\types\index.md#locale) | Language settings for SDK components                                                                                                                           |
+| skipBrowserSupportCheck | No       | boolean                            | When set to true and [browser is not supported](..\..\..\guides\quickstart\technical-requirements.md), calling `initialize()` will **not** result in an error. |
 
 ### Example
 

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../index.md)
+[**cc-everywhere**](..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [CCEverywhereBase](../cc-everywhere-base/classes/cc-everywhere-base.md) | Class to create CCEverywhere object. |
+| [CCEverywhereBase](classes\cc-everywhere-base.md) | Class to create CCEverywhere object. |

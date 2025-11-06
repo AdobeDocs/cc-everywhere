@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,7 +8,7 @@ Service class for managing feature flags
 
 ## Extends
 
-- [`FeatureFlagService`](../../feature-flag-service/classes/feature-flag-service.md)
+- [`FeatureFlagService`](..\..\feature-flag-service\classes\feature-flag-service.md)
 
 ## Constructors
 
@@ -22,7 +22,7 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService;
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
-| `_config` | [`FeatureFlagConfig`](../../local-feature-flag-service/interfaces/feature-flag-config.md) | `DEFAULT_FEATURE_FLAG_CONFIG` |
+| `_config` | [`FeatureFlagConfig`](..\interfaces\feature-flag-config.md) | `DEFAULT_FEATURE_FLAG_CONFIG` |
 
 #### Returns
 
@@ -30,7 +30,7 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService;
 
 #### Overrides
 
-[`FeatureFlagService`](../../feature-flag-service/classes/feature-flag-service.md).[`constructor`](../../feature-flag-service/classes/feature-flag-service.md#constructor)
+[`FeatureFlagService`](..\..\feature-flag-service\classes\feature-flag-service.md).[`constructor`](..\..\feature-flag-service\classes\feature-flag-service.md#constructor)
 
 ## Methods
 
@@ -49,8 +49,8 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 
 | Parameter | Type |
 | ------ | ------ |
-| `intent` | [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md) |
-| `hostInfo` | [`HostInfoExtended`](../../../../../shared/src/types/host-info-types/type-aliases/host-info-extended.md) |
+| `intent` | [`ActionIntent`](..\..\..\..\..\shared\src\types\action-intent-types\type-aliases\action-intent.md) |
+| `hostInfo` | [`HostInfoExtended`](..\..\..\..\..\shared\src\types\host-info-types\type-aliases\host-info-extended.md) |
 | `appConfig?` | `AppConfig` |
 
 #### Returns
@@ -59,4 +59,4 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 
 #### Inherited from
 
-[`FeatureFlagService`](../../feature-flag-service/classes/feature-flag-service.md).[`getFeatureFlagsParams`](../../feature-flag-service/classes/feature-flag-service.md#getfeatureflagsparams)
+[`FeatureFlagService`](..\..\feature-flag-service\classes\feature-flag-service.md).[`getFeatureFlagsParams`](..\..\feature-flag-service\classes\feature-flag-service.md#getfeatureflagsparams)

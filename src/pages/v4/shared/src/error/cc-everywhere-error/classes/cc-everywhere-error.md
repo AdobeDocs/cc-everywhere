@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -84,7 +84,7 @@ customData?): CCEverywhereError<T>;
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md)<`T`\> |
+| `errorCodeMessage` | [`ErrorCodeMessage`](..\..\cc-everywhere-error-types\type-aliases\error-code-message.md)<`T`\> |
 | `subError?` | `string` \| `number` \| `Error` |
 | `customData?` | `unknown` |
 
@@ -110,7 +110,7 @@ static createErrorFromData<T>(data): CCEverywhereError<T>;
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ErrorData`](../../error-data/interfaces/error-data.md)<`T`\> |
+| `data` | [`ErrorData`](..\..\error-data\interfaces\error-data.md)<`T`\> |
 
 #### Returns
 
@@ -128,7 +128,7 @@ Get a plain-object representation of the error..
 
 #### Returns
 
-[`ErrorData`](../../error-data/interfaces/error-data.md)<`T`\>
+[`ErrorData`](..\..\error-data\interfaces\error-data.md)<`T`\>
 
 ***
 

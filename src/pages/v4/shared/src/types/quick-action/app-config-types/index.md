@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AppConfig](../app-config-types/interfaces/app-config.md) | - |
+| [AppConfig](interfaces\app-config.md) | - |

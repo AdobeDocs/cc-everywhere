@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,34 +8,34 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Environment](../host-info-types/enumerations/environment.md) | 1P only Default environment is prod. |
-| [PIIPStatus](../host-info-types/enumerations/piip-status.md) | Represents whether analytics are sent. By default analytics are sent. |
-| [Locale](../host-info-types/enumerations/locale.md) | List of supported locales. Default locale is ENGLISH (en_US). |
-| [PlatformCategory](../host-info-types/enumerations/platform-category.md) | - |
-| [HostId](../host-info-types/enumerations/host-id.md) | - |
-| [HostType](../host-info-types/enumerations/host-type.md) | - |
+| [Environment](enumerations\environment.md) | 1P only Default environment is prod. |
+| [PIIPStatus](enumerations\piip-status.md) | Represents whether analytics are sent. By default analytics are sent. |
+| [Locale](enumerations\locale.md) | List of supported locales. Default locale is ENGLISH (en_US). |
+| [PlatformCategory](enumerations\platform-category.md) | - |
+| [HostId](enumerations\host-id.md) | - |
+| [HostType](enumerations\host-type.md) | - |
 
 ## Interfaces
 
 | Interface | Description |
 | ------ | ------ |
-| [ConfigParamsBase](../host-info-types/interfaces/config-params-base.md) | Params to configure the application. |
-| [DeviceInfo](../host-info-types/interfaces/device-info.md) | - |
-| [HostInfoSession](../host-info-types/interfaces/host-info-session.md) | - |
-| [HostInfoComputed](../host-info-types/interfaces/host-info-computed.md) | This interface describes the properties computed from host session. |
-| [HostInfoSpecifiedBase](../host-info-types/interfaces/host-info-specified-base.md) | This interface describes the properties provided by client. |
+| [ConfigParamsBase](interfaces\config-params-base.md) | Params to configure the application. |
+| [DeviceInfo](interfaces\device-info.md) | - |
+| [HostInfoSession](interfaces\host-info-session.md) | - |
+| [HostInfoComputed](interfaces\host-info-computed.md) | This interface describes the properties computed from host session. |
+| [HostInfoSpecifiedBase](interfaces\host-info-specified-base.md) | This interface describes the properties provided by client. |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [ConfigParams](../host-info-types/type-aliases/config-params.md) | - |
-| [HostInfoSpecified](../host-info-types/type-aliases/host-info-specified.md) | - |
-| [HostInfo](../host-info-types/type-aliases/host-info.md) | - |
-| [HostInfoExtended](../host-info-types/type-aliases/host-info-extended.md) | - |
+| [ConfigParams](type-aliases\config-params.md) | - |
+| [HostInfoSpecified](type-aliases\host-info-specified.md) | - |
+| [HostInfo](type-aliases\host-info.md) | - |
+| [HostInfoExtended](type-aliases\host-info-extended.md) | - |
 
 ## Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [HostTypeName](../host-info-types/variables/host-type-name.md) | - |
+| [HostTypeName](variables\host-type-name.md) | - |

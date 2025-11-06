@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -6,4 +6,4 @@
 
 ## Extended by
 
-- [`HostEventData`](../../message-data-types/interfaces/host-event-data.md)
+- [`HostEventData`](host-event-data.md)

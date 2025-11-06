@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ConsoleHandler](../console-handler/classes/console-handler.md) | - |
+| [ConsoleHandler](classes\console-handler.md) | - |

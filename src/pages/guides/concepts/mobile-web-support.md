@@ -36,15 +36,15 @@ Mobile web support is ideal for applications that need to reach users across all
 
 Before implementing mobile web support, you should have a solid understanding of the basic Adobe Express Embed SDK integration. We recommend completing the following resources first:
 
-- **[Quickstart Guide](../quickstart/index.md)**: Learn the fundamentals of SDK integration, including setup, initialization, and basic configuration
-- **[Getting Started Tutorial](../tutorials/getting-started.md)**: Follow a hands-on tutorial to build your first integration
-- **[SDK Tutorials](../tutorials/index.md)**: Explore additional tutorials for specific workflows like Generate Image and Edit Image modules
+- **[Quickstart Guide](..\quickstart\index.md)**: Learn the fundamentals of SDK integration, including setup, initialization, and basic configuration
+- **[Getting Started Tutorial](..\tutorials\getting-started.md)**: Follow a hands-on tutorial to build your first integration
+- **[SDK Tutorials](..\tutorials\index.md)**: Explore additional tutorials for specific workflows like Generate Image and Edit Image modules
 
 Mobile web support builds upon these core concepts, so familiarity with standard SDK integration is essential before adding mobile-specific configurations.
 
 ## How to Implement Mobile Web Support
 
-The Adobe Express Embed SDK works on mobile web by default. The [`skipBrowserSupportCheck`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) parameter is specifically designed to bypass browser compatibility checks that might otherwise cause the SDK to fail initialization on mobile browsers.
+The Adobe Express Embed SDK works on mobile web by default. The [`skipBrowserSupportCheck`](..\..\v4\shared\src\types\host-info-types\interfaces\config-params-base.md) parameter is specifically designed to bypass browser compatibility checks that might otherwise cause the SDK to fail initialization on mobile browsers.
 
 ## Implementation Path
 
@@ -118,7 +118,7 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
-Use [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) to bypass browser compatibility checks and prevent SDK initialization failures on mobile browsers.
+Use [`skipBrowserSupportCheck: true`](..\..\v4\shared\src\types\host-info-types\interfaces\config-params-base.md) to bypass browser compatibility checks and prevent SDK initialization failures on mobile browsers.
 
 ### ⚙️ Advanced Configuration
 
@@ -149,7 +149,7 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 
 ### Standard Browser Requirements
 
-By default, the Adobe Express Embed SDK has specific technical requirements for optimal performance. For complete details on browser versions, hardware requirements, and system specifications, see the [Technical Requirements](../quickstart/technical-requirements.md) guide.
+By default, the Adobe Express Embed SDK has specific technical requirements for optimal performance. For complete details on browser versions, hardware requirements, and system specifications, see the [Technical Requirements](..\quickstart\technical-requirements.md) guide.
 
 ### Mobile Browser Considerations
 
@@ -401,7 +401,7 @@ Integrate with progressive web apps for enhanced mobile experiences:
 
 #### SDK fails to initialize on mobile
 
-- Ensure [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) is set
+- Ensure [`skipBrowserSupportCheck: true`](..\..\v4\shared\src\types\host-info-types\interfaces\config-params-base.md) is set
 - Check for JavaScript errors in mobile browser console
 - Verify network connectivity
 
@@ -501,8 +501,8 @@ const initializeWithFallback = async () => {
 
 ## Related Resources
 
-- [Getting Started with Adobe Express Embed SDK](../quickstart/index.md)
-- [Technical Requirements](../quickstart/technical-requirements.md)
-- [Initialize SDK Reference](../../reference/initialize/index.md)
+- [Getting Started with Adobe Express Embed SDK](..\quickstart\index.md)
+- [Technical Requirements](..\quickstart\technical-requirements.md)
+- [Initialize SDK Reference](..\..\reference\initialize\index.md)
 - [Editor Customization](./appconfig.md)
 - [Error Handling](./error-handling.md)

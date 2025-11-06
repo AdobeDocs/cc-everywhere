@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -11,4 +11,4 @@ Base class for user related information.
 | Property | Type |
 | ------ | ------ |
 | `userId?` | `string` |
-| `piipStatus?` | [`PIIPStatus`](../../host-info-types/enumerations/piip-status.md) |
+| `piipStatus?` | [`PIIPStatus`](..\..\host-info-types\enumerations\piip-status.md) |

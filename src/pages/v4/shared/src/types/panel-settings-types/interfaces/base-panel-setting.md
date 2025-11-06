@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -9,8 +9,8 @@ Provides common properties for value.
 
 ## Extended by
 
-- [`StyleSetting`](../../panel-settings-types/interfaces/style-setting.md)
-- [`ContentTypeSetting`](../../panel-settings-types/interfaces/content-type-setting.md)
+- [`StyleSetting`](style-setting.md)
+- [`ContentTypeSetting`](content-type-setting.md)
 
 ## Type Parameters
 

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `reason` | [`CancelReason`](../../message-types/enumerations/cancel-reason.md) |
+| `reason` | [`CancelReason`](..\enumerations\cancel-reason.md) |

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -6,5 +6,5 @@
 
 ## Extended by
 
-- [`ConsoleHandler`](../../console-handler/classes/console-handler.md)
-- [`HostErrorHandler`](../../host-error-handler/classes/host-error-handler.md)
+- [`ConsoleHandler`](..\..\console-handler\classes\console-handler.md)
+- [`HostErrorHandler`](..\..\host-error-handler\classes\host-error-handler.md)

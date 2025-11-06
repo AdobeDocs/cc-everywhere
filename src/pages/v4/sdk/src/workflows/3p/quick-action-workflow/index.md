@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [QuickActionWorkflow](../quick-action-workflow/classes/quick-action-workflow.md) | - |
+| [QuickActionWorkflow](classes\quick-action-workflow.md) | - |

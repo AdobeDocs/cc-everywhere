@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -9,7 +9,7 @@ This should be extended by all the workflow contexts like EditorContext, GenStud
 
 ## Extends
 
-- [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md)<`ActionContext`<[`DesignConfig`](../../../../../../shared/src/types/editor/design-config-types/type-aliases/design-config.md)\>\>
+- [`WorkflowContext`](..\..\..\workflow-context\classes\workflow-context.md)<`ActionContext`<[`DesignConfig`](..\..\..\..\..\..\shared\src\types\editor\design-config-types\type-aliases\design-config.md)\>\>
 
 ## Constructors
 
@@ -31,13 +31,13 @@ new EditorContext(context): EditorContext;
 
 #### Inherited from
 
-[`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`constructor`](../../../workflow-context/classes/workflow-context.md#constructor)
+[`WorkflowContext`](..\..\..\workflow-context\classes\workflow-context.md).[`constructor`](..\..\..\workflow-context\classes\workflow-context.md#constructor)
 
 ## Properties
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `context` | `public` | `ActionContext` | [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`context`](../../../workflow-context/classes/workflow-context.md#context) |
+| `context` | `public` | `ActionContext` | [`WorkflowContext`](..\..\..\workflow-context\classes\workflow-context.md).[`context`](..\..\..\workflow-context\classes\workflow-context.md#context) |
 
 ## Methods
 
@@ -61,4 +61,4 @@ Sends a message to the SDK Agent to update the state of current running  workflo
 
 #### Inherited from
 
-[`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`sendCustomMessage`](../../../workflow-context/classes/workflow-context.md#sendcustommessage)
+[`WorkflowContext`](..\..\..\workflow-context\classes\workflow-context.md).[`sendCustomMessage`](..\..\..\workflow-context\classes\workflow-context.md#sendcustommessage)

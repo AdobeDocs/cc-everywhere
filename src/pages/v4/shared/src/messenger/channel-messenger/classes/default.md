@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -21,11 +21,11 @@ new default(
 
 | Parameter | Type |
 | ------ | ------ |
-| `channelMessengerDelegate` | [`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md) |
-| `_sourceChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `_sourceProtocolVersion` | [`ProtocolVersion`](../../protocol-types/enumerations/protocol-version.md) |
-| `_targetProtocolVersion` | [`ProtocolVersion`](../../protocol-types/enumerations/protocol-version.md) |
-| `_protocolHandlersModule?` | [`ProtocolHandlersModule`](../../protocol-types/interfaces/protocol-handlers-module.md) |
+| `channelMessengerDelegate` | [`IChannelMessengerDelegate`](..\..\channel-messenger-types\interfaces\i-channel-messenger-delegate.md) |
+| `_sourceChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
+| `_sourceProtocolVersion` | [`ProtocolVersion`](..\..\protocol-types\enumerations\protocol-version.md) |
+| `_targetProtocolVersion` | [`ProtocolVersion`](..\..\protocol-types\enumerations\protocol-version.md) |
+| `_protocolHandlersModule?` | [`ProtocolHandlersModule`](..\..\protocol-types\interfaces\protocol-handlers-module.md) |
 
 #### Returns
 
@@ -43,8 +43,8 @@ addTarget(targetChannel, targetChannelInfo): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `targetChannelInfo` | [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md) |
+| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
+| `targetChannelInfo` | [`TargetChannelInfo`](..\..\channel-messenger-types\interfaces\target-channel-info.md) |
 
 #### Returns
 
@@ -62,7 +62,7 @@ removeTarget(targetChannel): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
 
 #### Returns
 
@@ -80,7 +80,7 @@ hasTarget(targetChannel): boolean;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
 
 #### Returns
 
@@ -100,12 +100,12 @@ getTarget(targetChannel):
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
 
 #### Returns
 
   \| `undefined`
-  \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
+  \| [`TargetChannelInfo`](..\..\channel-messenger-types\interfaces\target-channel-info.md)
 
 ***
 
@@ -122,14 +122,14 @@ sendMessage<T>(
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | \| [`Message`](../../message-types/type-aliases/message.md)<`T`\> \| [`MessageCompat`](../../message-types/type-aliases/message-compat.md)<`T`\> |
+| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
+| `message` | \| [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> \| [`MessageCompat`](..\..\message-types\type-aliases\message-compat.md)<`T`\> |
 | `requestId?` | `string` |
 
 #### Returns

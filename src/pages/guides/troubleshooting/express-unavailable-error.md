@@ -20,11 +20,11 @@ Troubleshooting the "Adobe Express is not available" error that might appear whe
 
 ## Wrong or missing API Key
 
-The most common reason for the "Adobe Express is not available" error is a wrong or missing [API Key](../quickstart/index.md#step-1-get-an-api-key) (Client ID). Make sure you have the correct API Key in your configuration files.
+The most common reason for the "Adobe Express is not available" error is a wrong or missing [API Key](..\quickstart\index.md#step-1-get-an-api-key) (Client ID). Make sure you have the correct API Key in your configuration files.
 
 ## Wrong Domain or Port
 
-In the [Allowed Domain](../quickstart/index.md#edit-the-list-of-allowed-domains) section of your Project in the Adobe Developer Console, make sure you have set the correct domain (and port!) where your application is running. Please note that wildcards are supported with the following restrictions:
+In the [Allowed Domain](..\quickstart\index.md#edit-the-list-of-allowed-domains) section of your Project in the Adobe Developer Console, make sure you have set the correct domain (and port!) where your application is running. Please note that wildcards are supported with the following restrictions:
 
 - Only one subdomain level is matched: `*.company.com` matches `editor.company.com` but not `private.editor.company.com`.
 - Only one wildcard is allowed: `*.company.com` is accepted, but `*.*.company.com` is not. Explicitly add the subdomain if needed.
@@ -55,4 +55,4 @@ Certain browser privacy settings or plugins can strip the Referrer header. If yo
 
 #### Confirm the Allowed Domain
 
-Double-check that the exact domain in the Referrer header appears in the [Allowed Domain](../quickstart/index.md#edit-the-list-of-allowed-domains) list of your Adobe Developer Console project.
+Double-check that the exact domain in the Referrer header appears in the [Allowed Domain](..\quickstart\index.md#edit-the-list-of-allowed-domains) list of your Adobe Developer Console project.

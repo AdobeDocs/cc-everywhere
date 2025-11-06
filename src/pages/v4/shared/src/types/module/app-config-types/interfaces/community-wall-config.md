@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `fetchCommunityAssets` | (`limit`, `cursor`) => `Promise`<[`CommunityWallAssetResponse`](../../app-config-types/interfaces/community-wall-asset-response.md)\> | The callback to fetch community wall assets. |
+| `fetchCommunityAssets` | (`limit`, `cursor`) => `Promise`<[`CommunityWallAssetResponse`](community-wall-asset-response.md)\> | The callback to fetch community wall assets. |

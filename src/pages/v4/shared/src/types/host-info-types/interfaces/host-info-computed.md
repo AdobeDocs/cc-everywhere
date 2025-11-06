@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -11,8 +11,8 @@ This interface describes the properties computed from host session.
 | Property | Type |
 | ------ | ------ |
 | `referrer` | `string` |
-| `id` | [`HostId`](../../host-info-types/enumerations/host-id.md) |
-| `type` | [`HostType`](../../host-info-types/enumerations/host-type.md) |
+| `id` | [`HostId`](..\enumerations\host-id.md) |
+| `type` | [`HostType`](..\enumerations\host-type.md) |
 | `isFirstPartyHost` | `boolean` |
-| `deviceInfo?` | [`DeviceInfo`](../../host-info-types/interfaces/device-info.md) |
+| `deviceInfo?` | [`DeviceInfo`](device-info.md) |
 | `sdkVersion?` | `string` |

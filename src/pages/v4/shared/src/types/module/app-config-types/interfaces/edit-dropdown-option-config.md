@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `option` | [`EditFurtherIntent`](../../../export-config-types/enumerations/edit-further-intent.md) |
+| `option` | [`EditFurtherIntent`](..\..\..\export-config-types\enumerations\edit-further-intent.md) |

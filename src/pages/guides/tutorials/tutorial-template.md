@@ -63,7 +63,7 @@ _Consider adding a screenshot or animation here to show the final result._
 Before you start, make sure you have:
 
 - An **Adobe account** (use your existing Adobe ID or [create one for free](https://account.adobe.com/))
-- **API credentials** from the Adobe Developer Console ([Get credentials](../quickstart/index.md#step-1-get-an-api-key))
+- **API credentials** from the Adobe Developer Console ([Get credentials](..\quickstart\index.md#step-1-get-an-api-key))
 - Basic knowledge of **HTML, CSS, and JavaScript**
 - **Node.js** installed on your development machine
 - A **text editor or IDE** of your choice
@@ -120,8 +120,8 @@ Have questions or running into issues? Join our [Community Forum](https://commun
 
 ## Related resources
 
-- **[API Reference](../../v4/index.md)** - Complete SDK documentation
-- **[Adobe Express Embed SDK Overview](../index.md)** - High-level introduction
+- **[API Reference](..\..\v4\index.md)** - Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](..\index.md)** - High-level introduction
 - **[Demo Application](https://demo.expressembed.com/)** - Interactive demo showcasing SDK capabilities
 - **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)** - Working code examples and tutorials
-- **[Changelog](../changelog/index.md)** - Latest updates and improvements
+- **[Changelog](..\changelog\index.md)** - Latest updates and improvements

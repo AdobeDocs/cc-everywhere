@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [CCEverywhereError](../cc-everywhere-error/classes/cc-everywhere-error.md) | - |
+| [CCEverywhereError](classes\cc-everywhere-error.md) | - |

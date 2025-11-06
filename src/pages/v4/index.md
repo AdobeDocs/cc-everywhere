@@ -27,7 +27,7 @@ Before you dive into the API references, make sure you have completed the follow
 - Set Up Your Environment: Ensure that your development environment meets the prerequisites for using the SDK, including any required libraries or frameworks.
 - Read the Documentation: Familiarize yourself with the SDK documentation to understand the available features and how to implement them.
 
-Learn more about in the [quick start guide](../guides/quickstart/).
+Learn more about in the [quick start guide](../guides/quickstart/index.md).
 
 <InlineAlert variant="error" slots="header, text" />
 
@@ -37,9 +37,9 @@ Embed SDK v1 and v2 have reached End of Life on **May 12th, 2025** and they're n
 
 <InlineAlert variant="info" slots="header, text1" />
 
-Migrating from V3
+### Migrating from V3
 
-We've created a [Migration Guide](../guides/concepts/migration_v3_v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 is officially deprecated.
+We've created a [Migration Guide](../guides/concepts/migration-v3-v4.md) to help you with the transition from V3 to V4 of the SDK. V3 integrations are no longer approved, and V3 is officially deprecated.
 
 ## API Reference
 
@@ -51,7 +51,7 @@ Once you have embedded the SDK into your application, the first step is to call 
 
 #### initialize()
 
-The asynchronous [`initialize()`](./sdk/src/3p/cc-everywhere/variables/default.md#initialize) method takes [hostInfo](./shared/src/types/host-info-types/interfaces/host-info-specified-base.md), an optional [configParams](./shared/src/types/host-info-types/interfaces/config-params-base.md), an optional [authOption](./shared/src/types/authentication-types/type-aliases/auth-option.md) and returns a Promise with a [CCEverywhere](./sdk/src/3p/cc-everywhere/classes/cc-everywhere.md) object.
+The asynchronous [`initialize()`](./sdk\src\3p\cc-everywhere\variables\default.md#initialize) method takes [hostInfo](./shared\src\types\host-info-types\interfaces\host-info-specified-base.md), an optional [configParams](./shared\src\types\host-info-types\interfaces\config-params-base.md), an optional [authOption](./shared\src\types\authentication-types\type-aliases\auth-option.md) and returns a Promise with a [CCEverywhere](./sdk\src\3p\cc-everywhere\classes\cc-everywhere.md) object.
 
 ```ts
 initialize: (
@@ -61,7 +61,6 @@ initialize: (
 ) => Promise<CCEverywhere>;
 ```
 
-<!-- Inline Alert -->
 <InlineAlert variant="info" slots="text1" />
 
 The SDK should be initialized only once on each page.
@@ -111,13 +110,13 @@ The shared reference page contains details about objects that are shared across 
 
 ## Additional Resources
 
-[Quickstart Guide](../guides/quickstart/)
+[Quickstart Guide](..\guides\quickstart\index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](../guides/tutorials/)
+[Tutorials](..\guides\tutorials\index.md)
 
 Explore the collection of tutorials.
 

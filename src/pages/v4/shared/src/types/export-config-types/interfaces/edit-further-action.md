@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -6,12 +6,12 @@
 
 ## Extends
 
-- [`BaseAction`](../../export-config-types/interfaces/base-action.md)
+- [`BaseAction`](base-action.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`EditFurtherTarget`](../../export-config-types/enumerations/edit-further-target.md) | [`BaseAction`](../../export-config-types/interfaces/base-action.md).[`target`](../../export-config-types/interfaces/base-action.md#target) |
-| `intent?` | [`EditFurtherIntent`](../../export-config-types/enumerations/edit-further-intent.md) | - |
-| `context?` | [`ExportContext`](../../export-config-types/type-aliases/export-context.md) | - |
+| `target` | [`EditFurtherTarget`](..\enumerations\edit-further-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
+| `intent?` | [`EditFurtherIntent`](..\enumerations\edit-further-intent.md) | - |
+| `context?` | [`ExportContext`](..\type-aliases\export-context.md) | - |

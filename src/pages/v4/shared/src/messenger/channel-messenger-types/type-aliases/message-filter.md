@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -12,13 +12,13 @@ type MessageFilter = <T>(message) => boolean;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
+| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
 
 ## Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> |
 
 ## Returns
 

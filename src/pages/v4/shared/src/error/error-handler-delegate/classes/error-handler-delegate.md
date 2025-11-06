@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -34,7 +34,7 @@ addHandler(handler): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../i-error-message-handler/interfaces/i-error-message-handler.md)<`T`\> |
+| `handler` | [`IErrorMessageHandler`](..\..\i-error-message-handler\interfaces\i-error-message-handler.md)<`T`\> |
 
 #### Returns
 
@@ -52,7 +52,7 @@ removeHandler(handler): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../i-error-message-handler/interfaces/i-error-message-handler.md)<`T`\> |
+| `handler` | [`IErrorMessageHandler`](..\..\i-error-message-handler\interfaces\i-error-message-handler.md)<`T`\> |
 
 #### Returns
 
@@ -82,7 +82,7 @@ error(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](..\..\cc-everywhere-error\classes\cc-everywhere-error.md)<`T`\> |
 
 #### Returns
 
@@ -100,7 +100,7 @@ warn(warning): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `warning` | [`CCEverywhereWarn`](../../cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) |
+| `warning` | [`CCEverywhereWarn`](..\..\cc-everywhere-error-types\interfaces\cc-everywhere-warn.md) |
 
 #### Returns
 
@@ -118,7 +118,7 @@ info(information): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `information` | [`CCEverywhereInfo`](../../cc-everywhere-error-types/interfaces/cc-everywhere-info.md) |
+| `information` | [`CCEverywhereInfo`](..\..\cc-everywhere-error-types\interfaces\cc-everywhere-info.md) |
 
 #### Returns
 

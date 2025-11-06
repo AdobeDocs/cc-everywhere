@@ -22,13 +22,13 @@ Learn how to implement the Edit Image module using the Adobe Express Embed SDK.
 
 ## Introduction
 
-Welcome to this hands-on tutorial! We'll walk you through implementing the new Edit Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new [V2 features](../concepts/edit-image-v2.md), from the tabbed interface to the significant performance improvements.
+Welcome to this hands-on tutorial! We'll walk you through implementing the new Edit Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new [V2 features](..\concepts\edit-image-v2.md), from the tabbed interface to the significant performance improvements.
 
 ### What you'll learn
 
 By completing this tutorial, you'll gain practical skills in:
 
-- Implementing the [**Edit Image module**](../modules/index.md#editimage) with the Adobe Express Embed SDK.
+- Implementing the [**Edit Image module**](..\modules\index.md#editimage) with the Adobe Express Embed SDK.
 - Applying the various **settings and best practices**.
 
 ### What you'll build
@@ -42,7 +42,7 @@ You'll build a simple, JavaScript-based web application that allows users to edi
 Before you start, make sure you have:
 
 - An **Adobe account** (use your existing Adobe ID or [create one for free](https://account.adobe.com/))
-- **API credentials** from the Adobe Developer Console ([Get credentials](../quickstart/index.md#step-1-get-an-api-key))
+- **API credentials** from the Adobe Developer Console ([Get credentials](..\quickstart\index.md#step-1-get-an-api-key))
 - Basic knowledge of **HTML, CSS, and JavaScript**
 - **Node.js** installed on your development machine (v20.19.0 or higher)
 - A **text editor or IDE** of your choice
@@ -81,10 +81,10 @@ Locate the `src/.env` file and replace the placeholder string in the `VITE_API_K
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](..\quickstart\index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](..\quickstart\index.md#edit-the-list-of-allowed-domains).
 
 ### 1.3 Install dependencies
 
@@ -107,10 +107,10 @@ When the users click the **Save image** button in the top-right corner—this on
 
 ![Embed SDK Edit Image edited image](./images/edit-image--edited-image.png)
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="error" slots="header, text1" />
 
-Error: "Adobe Express is not available"
+### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the **correct API Key** in the `src/.env` file as described [here](#12-set-up-the-api-key).
 
@@ -153,10 +153,10 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](..\quickstart\index.md).
 
 ### 2.2 Initialize the Embed SDK
 
@@ -187,16 +187,16 @@ const { module } = await window.CCEverywhere.initialize(
 );
 ```
 
-The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
+The [`hostInfo`](..\..\v4\index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="warning" slots="text1" />
 
- The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
+ The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](..\..\reference\initialize\index.md#configparams) are optional.
 
 ### 2.3 Load the `module`
 
-The asynchronous [`CCEverywhere.initialize()`](../../v4/sdk/src/3p/cc-everywhere/variables/default.md#initialize) method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`editImage()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#editimage) method. In the next section, we'll learn how to use it to launch the Edit Image experience.
+The asynchronous [`CCEverywhere.initialize()`](..\..\v4\sdk\src\3p\cc-everywhere\variables\default.md#initialize) method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`editImage()`](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md#editimage) method. In the next section, we'll learn how to use it to launch the Edit Image experience.
 
 ```javascript
 module.editImage({ /* ... */ });
@@ -255,7 +255,7 @@ Besides the `<sp-theme>` wrapper, which styles the entire page with the Adobe Ex
 
 ### 3.2 Learn the Edit Image method signature
 
-The [`editImage()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#editimage) method expects four parameters, three of which are optional:
+The [`editImage()`](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md#editimage) method expects four parameters, three of which are optional:
 
 ```javascript
 // module.editImage() function signature
@@ -268,11 +268,11 @@ const containerConfig = { /* ... */ }; // SDK container
 module.editImage(docConfig, appConfig, exportConfig, containerConfig);
 ```
 
-In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) and [`docConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) objects, as they are the most relevant for the Edit Image module; you can look at the [Full Editor tutorial](../tutorials/full-editor.md) for more details on the other two parameters.
+In this tutorial, we'll focus on the [`appConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\edit-image-app-config.md) and [`docConfig`](..\..\v4\shared\src\types\module\doc-config-types\interfaces\edit-image-doc-config.md) objects, as they are the most relevant for the Edit Image module; you can look at the [Full Editor tutorial](full-editor.md) for more details on the other two parameters.
 
 ### 3.3 Enable the v2 experience in `appConfig`
 
-First, let's enable the v2 experience by setting the `appVersion` property to `"2"` in the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) object. Use `"1"` for the legacy experience, which is the default now but will be deprecated in the future.
+First, let's enable the v2 experience by setting the `appVersion` property to `"2"` in the [`appConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\edit-image-app-config.md) object. Use `"1"` for the legacy experience, which is the default now but will be deprecated in the future.
 
 ```javascript
 // main.js
@@ -286,7 +286,7 @@ const appConfig = {
 
 ### 3.4 Familiarize with the `docConfig` object
 
-The [`docConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) object, that implements the [`EditImageDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) interface, is used to pass:
+The [`docConfig`](..\..\v4\shared\src\types\module\doc-config-types\interfaces\edit-image-doc-config.md) object, that implements the [`EditImageDocConfig`](..\..\v4\shared\src\types\module\doc-config-types\interfaces\edit-image-doc-config.md) interface, is used to pass:
 
 1. The image to edit.
 2. The intent to perform on the image; that is, the preselected action to perform on the image, among the available options.
@@ -300,13 +300,13 @@ interface EditImageDocConfig {
 
 ### 3.5 Build the Asset object
 
-The `docConfig.asset` property needs to be an object of type [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md)—this, as you'd expect, is the image to edit.
+The `docConfig.asset` property needs to be an object of type [`Asset`](..\..\v4\shared\src\types\asset-types\type-aliases\asset.md)—this, as you'd expect, is the image to edit.
 
 There are three kinds of assets:
 
-- [UrlAsset](../../v4/shared/src/types/asset-types/type-aliases/url-asset.md): Asset containing data from a _presigned URL_ (see below).
-- [Base64Asset](../../v4/shared/src/types/asset-types/type-aliases/base64-asset.md): Asset containing Base64 encoded data.
-- [BlobAsset](../../v4/shared/src/types/asset-types/type-aliases/blob-asset.md): Asset containing [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) data.
+- [UrlAsset](..\..\v4\shared\src\types\asset-types\type-aliases\url-asset.md): Asset containing data from a _presigned URL_ (see below).
+- [Base64Asset](..\..\v4\shared\src\types\asset-types\type-aliases\base64-asset.md): Asset containing Base64 encoded data.
+- [BlobAsset](..\..\v4\shared\src\types\asset-types\type-aliases\blob-asset.md): Asset containing [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob) data.
 
 Regardless of the kind of asset, they share the following interface:
 
@@ -321,7 +321,7 @@ interface Asset {
 
 #### 3.5.1 Build a URL type Asset
 
-To pass an image from a URL, you need to build a [`UrlAsset`](../../v4/shared/src/types/asset-types/type-aliases/url-asset.md) object, like this:
+To pass an image from a URL, you need to build a [`UrlAsset`](..\..\v4\shared\src\types\asset-types\type-aliases\url-asset.md) object, like this:
 
 ```javascript
 const docConfig = {
@@ -336,7 +336,7 @@ const docConfig = {
 
 <InlineAlert variant="info" slots="header,  text1, text2" />
 
-Presigned URLs
+### Presigned URLs
 
 A presigned URL for an image is a **secure, time-limited link** that grants temporary access to a private image stored on a cloud service like Amazon S3. It allows users to view or download the image without exposing authentication credentials or making the file public.
 
@@ -405,7 +405,7 @@ This workaround enables local URL functionality during development. In productio
 
 #### 3.5.2 Build a Blob type Asset
 
-The other common way to edit an image is by passing a [`BlobAsset`](../../v4/shared/src/types/asset-types/type-aliases/blob-asset.md) object. In our tutorial, we'll cache the default image as a blob fetching the local resource with the `cacheDefaultImageBlob()` helper function, and using it as the asset's `data` property.
+The other common way to edit an image is by passing a [`BlobAsset`](..\..\v4\shared\src\types\asset-types\type-aliases\blob-asset.md) object. In our tutorial, we'll cache the default image as a blob fetching the local resource with the `cacheDefaultImageBlob()` helper function, and using it as the asset's `data` property.
 
 ```javascript
 // main.js
@@ -465,7 +465,7 @@ const docConfig = {
 };
 ```
 
-The `intent` property is an object of type [`EditImageIntent`](../../v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent.md), which is a subset of the [`EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) enumeration, and includes only the following options—some of which are Premium features and will consume Generative Credits:
+The `intent` property is an object of type [`EditImageIntent`](..\..\v4\shared\src\types\module\doc-config-types\type-aliases\edit-image-intent.md), which is a subset of the [`EditFurtherIntent`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-intent.md) enumeration, and includes only the following options—some of which are Premium features and will consume Generative Credits:
 
 ```ts
 type EditImageIntent = "add-effects"       |
@@ -631,7 +631,7 @@ const appConfig = {
 
 <InlineAlert variant="info" slots="text1" />
 
-The `publishParams.asset` is an array of [Base64Asset](../../v4/shared/src/types/asset-types/type-aliases/base64-asset.md) objects. Hence, the `data` property contains the Base64 encoded string of the edited image, suitable for the `expressImage.src` property. We've used `fetch()` to get the Blob from the Base64 string, and update the `currentImageBlob` cache.
+The `publishParams.asset` is an array of [Base64Asset](..\..\v4\shared\src\types\asset-types\type-aliases\base64-asset.md) objects. Hence, the `data` property contains the Base64 encoded string of the edited image, suitable for the `expressImage.src` property. We've used `fetch()` to get the Blob from the Base64 string, and update the `currentImageBlob` cache.
 
 This completes the integration of the Edit Image module in the UI, check the [complete working example](#complete-working-example) below.
 
@@ -815,7 +815,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 ## Next steps
 
-Congratulations, you've completed the Edit Image tutorial! Edit Image can be tethered from other modules, such as the [Generate Image v2](../concepts/generate-image-v2.md), to create a more complex experience, feel free to explore that as well
+Congratulations, you've completed the Edit Image tutorial! Edit Image can be tethered from other modules, such as the [Generate Image v2](..\concepts\generate-image-v2.md), to create a more complex experience, feel free to explore that as well
 
 ## Need help?
 
@@ -823,8 +823,8 @@ Have questions or running into issues? Join our [Community Forum](https://commun
 
 ## Related resources
 
-- **[API Reference](../../v4/index.md)** - Complete SDK documentation
-- **[Adobe Express Embed SDK Overview](../index.md)** - High-level introduction
+- **[API Reference](..\..\v4\index.md)** - Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](..\index.md)** - High-level introduction
 - **[Demo Application](https://demo.expressembed.com/)** - Interactive demo showcasing SDK capabilities
 - **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)** - Working code examples and tutorials
-- **[Changelog](../changelog/index.md)** - Latest updates and improvements
+- **[Changelog](..\changelog\index.md)** - Latest updates and improvements

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -13,6 +13,6 @@ ClientAuthProvider(): Promise<ClientAuthDetails>;
 
 ## Returns
 
-`Promise`<[`ClientAuthDetails`](../../client-authentication-types/interfaces/client-auth-details.md)\>
+`Promise`<[`ClientAuthDetails`](client-auth-details.md)\>
 
 `Promise<ClientAuthDetails>` A promise that resolves to the client authentication details

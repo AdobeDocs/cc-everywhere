@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -12,9 +12,9 @@ type IntentChangeCallback = (oldIntent, newIntent) => IntentChangeConfig | undef
 
 | Parameter | Type |
 | ------ | ------ |
-| `oldIntent` | [`ActionIntent`](../../action-intent-types/type-aliases/action-intent.md) |
-| `newIntent` | [`ActionIntent`](../../action-intent-types/type-aliases/action-intent.md) |
+| `oldIntent` | [`ActionIntent`](..\..\action-intent-types\type-aliases\action-intent.md) |
+| `newIntent` | [`ActionIntent`](..\..\action-intent-types\type-aliases\action-intent.md) |
 
 ## Returns
 
-[`IntentChangeConfig`](../../callbacks-types/interfaces/intent-change-config.md) \| `undefined`
+[`IntentChangeConfig`](..\interfaces\intent-change-config.md) \| `undefined`

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -6,8 +6,8 @@
 
 ## Extended by
 
-- [`InlineOrModalContainerConfig`](../../container-config-types/interfaces/inline-or-modal-container-config.md)
-- [`FillContainerConfig`](../../container-config-types/interfaces/fill-container-config.md)
+- [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md)
+- [`FillContainerConfig`](fill-container-config.md)
 
 ## Properties
 

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `workflowType` | [`Workflow`](../../../types/workflow-types/enumerations/workflow.md) |
+| `workflowType` | [`Workflow`](..\..\..\types\workflow-types\enumerations\workflow.md) |

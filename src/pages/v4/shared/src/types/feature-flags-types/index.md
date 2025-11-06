@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [FeatureFlags](../feature-flags-types/type-aliases/feature-flags.md) | - |
+| [FeatureFlags](type-aliases\feature-flags.md) | - |

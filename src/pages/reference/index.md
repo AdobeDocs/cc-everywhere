@@ -15,12 +15,12 @@ contributors:
 
 ## Embed and initialize the SDK
 
-1. Follow the steps in the quickstart guide to [embed the SDK](../guides/quickstart/index.md#step-2-embed-the-sdk) in your application.
-2. After you have imported the SDK to your application, you need to call the `initialize` API first. View the full reference for that [API](./initialize/index.md) here.
+1. Follow the steps in the quickstart guide to [embed the SDK](..\guides\quickstart\index.md#step-2-embed-the-sdk) in your application.
+2. After you have imported the SDK to your application, you need to call the `initialize` API first. View the full reference for that [API](./initialize\index.md) here.
 
 ## CCEverywhere
 
-Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere/index.md) object.
+Once you have successfully initialized the SDK, a Promise will be returned containing the [CCEverywhere](./CCEverywhere\index.md) object.
 
 As of today, it exposes:
 
@@ -33,4 +33,4 @@ As of today, it exposes:
 
 ## Types
 
-The [types](./types/index.md) reference page contains details about objects that are shared across the SDK.
+The [types](./types\index.md) reference page contains details about objects that are shared across the SDK.

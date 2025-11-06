@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -6,11 +6,11 @@
 
 ## Extends
 
-- [`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md)
+- [`BaseWorkflow`](..\..\..\base-workflow\classes\base-workflow.md)
 
 ## Implements
 
-- [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md)
+- [`ModuleWorkflow`](..\..\module-workflow-types\interfaces\module-workflow.md)
 
 ## Constructors
 
@@ -33,7 +33,7 @@ new ModuleWorkflow(actionManager, context): ModuleWorkflow;
 
 #### Inherited from
 
-[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
+[`BaseWorkflow`](..\..\..\base-workflow\classes\base-workflow.md).[`constructor`](..\..\..\base-workflow\classes\base-workflow.md#constructor)
 
 ## Methods
 
@@ -53,10 +53,10 @@ Perform editing tasks on any image.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`EditImageDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md) | pass an asset to preload on to the Editor |
-| `appConfig?` | [`EditImageAppConfig`](../../../../../../shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) | - |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `docConfig` | [`EditImageDocConfig`](..\..\..\..\..\..\shared\src\types\module\doc-config-types\interfaces\edit-image-doc-config.md) | pass an asset to preload on to the Editor |
+| `appConfig?` | [`EditImageAppConfig`](..\..\..\..\..\..\shared\src\types\module\app-config-types\interfaces\edit-image-app-config.md) | - |
+| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -64,7 +64,7 @@ Perform editing tasks on any image.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`editImage`](../../module-workflow-types/interfaces/module-workflow.md#editimage)
+[`ModuleWorkflow`](..\..\module-workflow-types\interfaces\module-workflow.md).[`editImage`](..\..\module-workflow-types\interfaces\module-workflow.md#editimage)
 
 ***
 
@@ -83,9 +83,9 @@ Generate images by just passing a text prompt.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `appConfig?` | [`TextToImageAppConfig`](../../../../../../shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) | Pass a text prompt to generate images. |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `appConfig?` | [`TextToImageAppConfig`](..\..\..\..\..\..\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md) | Pass a text prompt to generate images. |
+| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -93,7 +93,7 @@ Generate images by just passing a text prompt.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`createImageFromText`](../../module-workflow-types/interfaces/module-workflow.md#createimagefromtext)
+[`ModuleWorkflow`](..\..\module-workflow-types\interfaces\module-workflow.md).[`createImageFromText`](..\..\module-workflow-types\interfaces\module-workflow.md#createimagefromtext)
 
 ***
 
@@ -112,9 +112,9 @@ Open the Start From Content module.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `appConfig?` | [`StartFromContentAppConfig`](../../../../../../shared/src/types/module/app-config-types/interfaces/start-from-content-app-config.md) | properties to configure the Start From Content module |
-| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+| `appConfig?` | [`StartFromContentAppConfig`](..\..\..\..\..\..\shared\src\types\module\app-config-types\interfaces\start-from-content-app-config.md) | properties to configure the Start From Content module |
+| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -122,4 +122,4 @@ Open the Start From Content module.
 
 #### Implementation of
 
-[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`startFromContent`](../../module-workflow-types/interfaces/module-workflow.md#startfromcontent)
+[`ModuleWorkflow`](..\..\module-workflow-types\interfaces\module-workflow.md).[`startFromContent`](..\..\module-workflow-types\interfaces\module-workflow.md#startfromcontent)

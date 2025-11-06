@@ -27,7 +27,7 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
 
@@ -44,10 +44,10 @@ Besides `id`, all other properties are optional.
 | Property | Type| Description
 | :-- | :-- | :--
 | id | [QuickActionId](#quickactionid) | Specify which quick action to open.
-| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback methods
-| modalParams | [ModalParams](../../types/index.md#modalparams) | Parameters to configure modal UI
+| callbacks | [Callbacks](..\..\types\index.md#callbacks) | Callback methods
+| modalParams | [ModalParams](..\..\types\index.md#modalparams) | Parameters to configure modal UI
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Input parameters when opening a quick action.
-| outputParams | [CCXOutputParams](../../types/index.md#ccxoutputparams) | Desired output options when exporting assets from a quick action.
+| outputParams | [CCXOutputParams](..\..\types\index.md#ccxoutputparams) | Desired output options when exporting assets from a quick action.
 
 #### QuickActionId
 
@@ -76,6 +76,6 @@ Input parameters for quick actions. All the properties are optional.
 
 | Property | Type | Description
 | :-- | :-- | :--
-| exportOptions | [ExportOptions](../../types/index.md#exportoptions)[] | Export options for the asset that is created. These options will be visible in the quick action editor.
-| asset | [Asset](../../types/index.md#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge video quick action.
+| exportOptions | [ExportOptions](..\..\types\index.md#exportoptions)[] | Export options for the asset that is created. These options will be visible in the quick action editor.
+| asset | [Asset](..\..\types\index.md#asset) or [Asset](..\..\types\index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge video quick action.
 | receiveTargetErrors | boolean | Boolean that tells client whether or not to receive target application errors.

@@ -31,7 +31,7 @@ We'll look at a few **configuration parameters**, as well as the way to **handle
 Before we begin, make sure you have the following:
 
 - An **Adobe account**: use your existing Adobe ID or create one for free.
-- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/) for more information.
+- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](..\quickstart\index.md) for more information.
 - Familiarity with **HTML, CSS, JavaScript**.
 - **Node.js** is installed on your development machine.
 
@@ -43,10 +43,10 @@ Let's have a look at what we're going to build. First off, clone the [embed-sdk-
 VITE_API_KEY="your-api-key-here!"
 ```
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](..\quickstart\index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](..\quickstart\index.md#edit-the-list-of-allowed-domains).
 
 Now, you can install the dependencies and run the sample with the following two simple commands:
 
@@ -67,10 +67,10 @@ The sample project will handle the file transfer between Adobe Express and the w
 
 The **Edit** button (previously disabled) will open the Editor with the same document size and content as the one just created: the Project ID has been stored as part of the `onPublish` callback, as we'll see in due course. Users can modify the design and download or save it again.
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="error" slots="header, text1" />
 
-Error: "Adobe Express is not available"
+### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the correct API Key in the `src/.env` file as described [here](#running-the-sample-project).
 
@@ -109,10 +109,10 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](..\quickstart\index.md).
 
 When the Embed SDK is imported, a `CCEverywhere` object is globally available and must be **initialized**. There are two sets of parameters that you can pass as option objects:
 
@@ -140,25 +140,25 @@ const { editor } = await window.CCEverywhere.initialize(
 );
 ```
 
-We're using the asynchronous [`initialize()`](../../v4/sdk/src/3p/cc-everywhere/variables/default.md#initialize) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md).
+We're using the asynchronous [`initialize()`](..\..\v4\sdk\src\3p\cc-everywhere\variables\default.md#initialize) method, that returns a promise resolving to an object with three properties. Here, we want to implement the full editor; hence, among them, we destructure just the [`editor`](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md).
 
-The [`hostInfo`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
+The [`hostInfo`](..\..\v4\shared\src\types\host-info-types\interfaces\host-info-specified-base.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
-<!-- Inline Alert -->
+
 <InlineAlert variant="warning" slots="text1" />
 
 The `appName` must match the Public App Name in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents.
 
-All [`configParams`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) are optional, instead: here, `loginMode` tells Adobe Express to delay the login until artworks are exported.
+All [`configParams`](..\..\v4\shared\src\types\host-info-types\interfaces\config-params-base.md) are optional, instead: here, `loginMode` tells Adobe Express to delay the login until artworks are exported.
 
 ### 2. Creating the Editor
 
-Excellent! We have this `editor`: now what? We'll use it to spawn a new Adobe Express instance via the [`editor.create()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#create) method—which, in turn, accepts four option objects able to configure:
+Excellent! We have this `editor`: now what? We'll use it to spawn a new Adobe Express instance via the [`editor.create()`](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md#create) method—which, in turn, accepts four option objects able to configure:
 
-- The [Document](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#) that will be created (e.g., its size).
-- The Adobe Express [Application](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md) itself (e.g., the callbacks).
-- The allowed [Export Options](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md).
-- The [Container](../../v4/shared/src/types/container-config-types/interfaces/base-container-config.md) (modal dialog) of the Adobe Express application.
+- The [Document](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md#) that will be created (e.g., its size).
+- The Adobe Express [Application](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md) itself (e.g., the callbacks).
+- The allowed [Export Options](..\..\v4\shared\src\types\export-config-types\type-aliases\export-option.md).
+- The [Container](..\..\v4\shared\src\types\container-config-types\interfaces\base-container-config.md) (modal dialog) of the Adobe Express application.
 
 The links above point to the respective SDK Reference pages. They are all optional—our sample makes use of the first three of them:
 
@@ -194,7 +194,7 @@ As you can see, we are:
 
 - Creating by default a document using the `"BusinessCard"` template.
 - Launching Adobe Express with the Media panel open on the left.
-- Setting a series of Callbacks that will fire when the user Cancels, Saves (that would be [`onPublish`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md)), or when something goes wrong.
+- Setting a series of Callbacks that will fire when the user Cancels, Saves (that would be [`onPublish`](..\..\v4\shared\src\types\callbacks-types\type-aliases\publish-callback.md)), or when something goes wrong.
 - Defining two ways for users to export content: download the file locally and save it in the user's Adobe Express folder and pass it back to the web application.
 
 On the **Create New** button click, Adobe Express is launched:
@@ -210,7 +210,7 @@ document.getElementById("createDesign").onclick = async () => {
 <!-- Info Alert -->
 <InlineAlert variant="info" slots="text1" />
 
-Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.
+Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](..\review\index.md) section to learn more.
 
 As you can see, integrating the full editor doesn't take much time! You can customize it to a great extent; even using all the default options, the result is brilliant.
 
@@ -218,11 +218,11 @@ As you can see, integrating the full editor doesn't take much time! You can cust
 
 The `exportConfig` array we've just written adds a **Save image** button to Adobe Express, allowing users to store their image; we'd like our web application to capture and display it on the HTML page.
 
-We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](../../v4/shared/src/types/publish-params-types/interfaces/publish-params.md) argument, with three crucial properties:
+We need to write a simple function in the `callbacks` to implement this feature, precisely the [`onPublish`](..\..\v4\shared\src\types\callbacks-types\type-aliases\publish-callback.md). It is triggered when the user clicks the **Save image** button, and it receives a [`PublishParams`](..\..\v4\shared\src\types\publish-params-types\interfaces\publish-params.md) argument, with three crucial properties:
 
 - `documentId`: a unique identifier for the asset that has been created or modified.
 - `exportButtonId`: the identifier of the export button that has been clicked.
-- `asset`: an [`OutputAsset`](../../v4/shared/src/types/asset-types/interfaces/output-asset.md) object, with several interesting properties like `data`—a Base64 string representation of the saved image.
+- `asset`: an [`OutputAsset`](..\..\v4\shared\src\types\asset-types\interfaces\output-asset.md) object, with several interesting properties like `data`—a Base64 string representation of the saved image.
 
 The `data` property sounds promising! The plan is to have an `<img>` element (in this example, it starts as a placeholder), which `src` attribute will be filled with the Base64 string coming from Adobe Express.
 
@@ -261,7 +261,7 @@ Please note that `asset` is an array; we're getting just the first item here. If
 
 ### 4. Editing projects
 
-The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before. As we've seen [earlier](#3-managing-images), when a document is saved, we receive a [`PublishParams`](../../v4/shared/src/types/publish-params-types/interfaces/publish-params.md) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
+The last step is implementing the **Edit** button feature, which should launch Adobe Express and open the project that was saved before. As we've seen [earlier](#3-managing-images), when a document is saved, we receive a [`PublishParams`](..\..\v4\shared\src\types\publish-params-types\interfaces\publish-params.md) that contains `documentId`. We can store it for reference and use in the `docConfig` option object to open it again:
 
 ```js
 // Will hold the project ID when a document is saved
@@ -435,7 +435,7 @@ document.getElementById("editBtn").onclick = async () => {
 
 Congratulations! You've implemented a **Full Editor integration** with the Adobe Express Embed SDK. You've learned how to create, edit, and let users export documents, as well as how to manage images between Adobe Express and your web application. What's next for you?
 
-- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](../../v4/index.md).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
-- If you're looking for **more tutorials**, check out [here](../tutorials/index.md).
+- The Embed SDK offers a **wide range of features and customization options**; you can explore them in the [API Reference](..\..\v4\index.md).
+- Visit the [changelog](..\changelog\index.md) page to keep up with the **latest updates** and improvements.
+- If you're looking for **more tutorials**, check out [here](index.md).
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).

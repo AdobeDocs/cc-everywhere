@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [Messages](../messages/variables/messages.md) | ********************************************************************** |
+| [Messages](variables\messages.md) | ********************************************************************** |

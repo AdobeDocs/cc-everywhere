@@ -30,7 +30,7 @@ Before you start, make sure you have the following:
 
 ## Getting the credentials
 
-The first crucial step is to acquire an **API Key** from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide, and we'll summarize it here.
+The first crucial step is to acquire an **API Key** from the Adobe Developer Console; these credentials are required to authenticate your application with the Adobe Express Embed SDK. The process is discussed in great detail in the [Quickstart](..\quickstart\index.md#step-1-get-an-api-key) guide, and we'll summarize it here.
 
 Visit the [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk/) page on the Adobe Developer website, and click the **Get credentials** button.
 
@@ -52,7 +52,7 @@ Please note that **all connections must be secure (HTTPS)** for both production 
 
 ![](../images/quickstart_credentials-complete.png)
 
-The list of domains can be edited anytime, as well as the project name, clicking the **Console** button in the top-right corner. Please refer to the [Quickstart](../quickstart/index.md#step-1-get-an-api-key) guide for more information.
+The list of domains can be edited anytime, as well as the project name, clicking the **Console** button in the top-right corner. Please refer to the [Quickstart](..\quickstart\index.md#step-1-get-an-api-key) guide for more information.
 
 <InlineAlert variant="info" slots="text1" />
 
@@ -88,7 +88,7 @@ The **full Adobe Express application** has been integrated! Your users can now c
 
 Please don't be scared by the red warning toast at the bottom of the screen saying _"The use of this experience powered by Adobe Express has not been approved yet by Adobe"_.
 
-It is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/) section to learn more.
+It is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](..\review\index.md) section to learn more.
 
 ### Inspecting the code
 
@@ -100,7 +100,7 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-Please note that the dynamic `import()` requires `await`, to ensure the code is fully loaded before proceeding. Now, the `CCEverywhere` object is available in the global scope: it is the [entry point](../../v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md) to the SDK and provides all the necessary methods to create the Adobe Express integration.
+Please note that the dynamic `import()` requires `await`, to ensure the code is fully loaded before proceeding. Now, the `CCEverywhere` object is available in the global scope: it is the [entry point](..\..\v4\sdk\src\3p\cc-everywhere\classes\cc-everywhere.md) to the SDK and provides all the necessary methods to create the Adobe Express integration.
 
 ```javascript
 // Host information for the Adobe SDK
@@ -119,7 +119,7 @@ You must link your integration with the API Key set up [earlier](#getting-the-cr
 const { editor } = await window.CCEverywhere.initialize(hostInfo, configParams);
 ```
 
-The [`editor`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md) class contains all the APIs we need. In the sample, we use it to spawn the full Adobe Express experience on the button click:
+The [`editor`](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md) class contains all the APIs we need. In the sample, we use it to spawn the full Adobe Express experience on the button click:
 
 ```javascript
 document.getElementById("launchExpress").onclick = async () => {
@@ -134,7 +134,7 @@ document.getElementById("launchExpress").onclick = async () => {
 };
 ```
 
-The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#create) now for more information.
+The `create()` method accepts three options objects, that are optionally used to deal with the document, application, and export settings. We'll cover these in more detail in a future tutorial, but you can check the [API reference](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md#create) now for more information.
 
 ## Next steps
 
@@ -147,7 +147,7 @@ Congratulations! You have successfully **set up the Adobe Express Embed SDK in y
 What's next for you? Here are a few suggestions:
 
 - Feel free to use this [sample project](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-getting-started) as a starting point for your experiments.
-- Check out more [tutorials](../tutorials/) to learn about the Embed SDK's many features.
-- The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](../../reference/).
-- Visit the [changelog](../changelog/) page to keep up with the **latest updates** and improvements.
+- Check out more [tutorials](index.md) to learn about the Embed SDK's many features.
+- The Embed SDK offers a **wide range of customization options**; you can explore them in the [API Reference](..\..\reference\index.md).
+- Visit the [changelog](..\changelog\index.md) page to keep up with the **latest updates** and improvements.
 - Finally, if you get stuck or you just want to **share your experience**, visit the [Adobe Express Embed SDK Community Forum](https://community.adobe.com/t5/adobe-express-embed-sdk/ct-p/ct-express-embed-sdk?page=1&sort=latest_replies&lang=all&tabid=all).

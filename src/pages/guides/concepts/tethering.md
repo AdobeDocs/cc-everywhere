@@ -37,7 +37,7 @@ You can tether more than two workflows together to create even more complex expe
 
 <InlineAlert variant="info" slots="header, text1" />
 
-Targets
+### Targets
 
 While you can initiate tethering from any workflow (for example, Quick Actions), the target workflow must be either **Edit Image** or **Full Editor**. At the moment, only the Generate Image experience can tether to Edit Image.
 
@@ -48,7 +48,7 @@ There are two crucial elements to any tethering workflow:
 - The **Export Configurations**: set the exporting options for a workflow.
 - The **Intent Change Handler**: sets additional configurations for the next workflows in the transition.
 
-Please read along to learn more about each of these elements, or try the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) to see them in action.
+Please read along to learn more about each of these elements, or try the [Workflow Tethering tutorial](..\tutorials\workflow-tethering.md) to see them in action.
 
 ## Export Configurations
 
@@ -87,7 +87,7 @@ module.createImageFromText(appConfig, exportConfig);
 
 <InlineAlert variant="warning" slots="header, text1, text2" />
 
-Default buttons
+### Default buttons
 
 The `exportConfig` is always an **optional parameter**. If no export configuration is provided, the workflow will fall back to the default layout options—which usually include tethering options to the Full Editor.
 
@@ -95,31 +95,31 @@ If you need _tighter control_ over what your users can create—for example, pre
 
 ### Export Options explained
 
-The `exportConfig` parameter is an array of [`exportOption`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md) objects, which can be of four types:
+The `exportConfig` parameter is an array of [`exportOption`](..\..\v4\shared\src\types\export-config-types\type-aliases\export-option.md) objects, which can be of four types:
 
-- [`PublishExportOption`](../../v4/shared/src/types/export-config-types/interfaces/publish-export-option.md): save back to the application that initiated the workflow.
-- [`DownloadExportOption`](../../v4/shared/src/types/export-config-types/interfaces/download-export-option.md): download the asset to the user's device.
-- [`EditFurtherExportOption`](../../v4/shared/src/types/export-config-types/interfaces/edit-further-export-option.md): tether to another workflow.
-- [`ContinueEditingDropdownOption`](../../v4/shared/src/types/export-config-types/interfaces/continue-editing-dropdown-option.md): tether to another workflow (dropdown-style buttons).
+- [`PublishExportOption`](..\..\v4\shared\src\types\export-config-types\interfaces\publish-export-option.md): save back to the application that initiated the workflow.
+- [`DownloadExportOption`](..\..\v4\shared\src\types\export-config-types\interfaces\download-export-option.md): download the asset to the user's device.
+- [`EditFurtherExportOption`](..\..\v4\shared\src\types\export-config-types\interfaces\edit-further-export-option.md): tether to another workflow.
+- [`ContinueEditingDropdownOption`](..\..\v4\shared\src\types\export-config-types\interfaces\continue-editing-dropdown-option.md): tether to another workflow (dropdown-style buttons).
 
-All `exportOption`s can be either of type [`ButtonStyle`](../../v4/shared/src/types/export-config-types/type-aliases/button-style.md) or [`LinkStyle`](../../v4/shared/src/types/export-config-types/interfaces/link-style.md) (additionally, [`EnabledButtonStyle`](../../v4/shared/src/types/export-config-types/type-aliases/enabled-button-style.md) for `EditFurtherExportOption`). They all have the following properties:
+All `exportOption`s can be either of type [`ButtonStyle`](..\..\v4\shared\src\types\export-config-types\type-aliases\button-style.md) or [`LinkStyle`](..\..\v4\shared\src\types\export-config-types\interfaces\link-style.md) (additionally, [`EnabledButtonStyle`](..\..\v4\shared\src\types\export-config-types\type-aliases\enabled-button-style.md) for `EditFurtherExportOption`). They all have the following properties:
 
 - `id`: string
 - `label`: string
-- `action`: [`ExportAction`](../../v4/shared/src/types/export-config-types/type-aliases/export-action.md), extended by:
-  - [`PublishAction`](../../v4/shared/src/types/export-config-types/interfaces/publish-action.md)
-  - [`DownloadAction`](../../v4/shared/src/types/export-config-types/interfaces/download-action.md)
-  - [`EditFurtherAction`](../../v4/shared/src/types/export-config-types/interfaces/edit-further-action.md)
-  - [`ContinueEditingAction`](../../v4/shared/src/types/export-config-types/type-aliases/continue-editing-action.md)
-- `style`: [`Style`](../../v4/shared/src/types/export-config-types/interfaces/style.md)
+- `action`: [`ExportAction`](..\..\v4\shared\src\types\export-config-types\type-aliases\export-action.md), extended by:
+  - [`PublishAction`](..\..\v4\shared\src\types\export-config-types\interfaces\publish-action.md)
+  - [`DownloadAction`](..\..\v4\shared\src\types\export-config-types\interfaces\download-action.md)
+  - [`EditFurtherAction`](..\..\v4\shared\src\types\export-config-types\interfaces\edit-further-action.md)
+  - [`ContinueEditingAction`](..\..\v4\shared\src\types\export-config-types\type-aliases\continue-editing-action.md)
+- `style`: [`Style`](..\..\v4\shared\src\types\export-config-types\interfaces\style.md)
 
-For the **workflow tethering**, we're interested in [`EditFurtherExportOption`](../../v4/shared/src/types/export-config-types/interfaces/edit-further-export-option.md) and [`ContinueEditingDropdownOption`](../../v4/shared/src/types/export-config-types/interfaces/continue-editing-dropdown-option.md), which differ as the latter represents export options specifically for dropdown UI components. Their `action` property is either:
+For the **workflow tethering**, we're interested in [`EditFurtherExportOption`](..\..\v4\shared\src\types\export-config-types\interfaces\edit-further-export-option.md) and [`ContinueEditingDropdownOption`](..\..\v4\shared\src\types\export-config-types\interfaces\continue-editing-dropdown-option.md), which differ as the latter represents export options specifically for dropdown UI components. Their `action` property is either:
 
-- [`EditFurtherExportOption.action`](../../v4/shared/src/types/export-config-types/interfaces/edit-further-action.md):
-  - `target`: [`EditFurtherTarget`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-target.md)—either `"express"` or `"image-module"`.
-  - `intent?`: [`EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md)—the kind of experience to preload in the left-hand panel, for example, `"add-text"`, `"add-icons-and-shapes"`, etc.
-  - `context?`: [`ExportContext`](../../v4/shared/src/types/export-config-types/type-aliases/export-context.md)—either `"default"` (tethering to the same iframe) or `"new"` (launching Adobe Express in a new browser tab).
-- [`ContinueEditingDropdownOption.action`](../../v4/shared/src/types/export-config-types/type-aliases/continue-editing-action.md): same as `EditFurtherExportOption.action`, but [`intent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) is required.
+- [`EditFurtherExportOption.action`](..\..\v4\shared\src\types\export-config-types\interfaces\edit-further-action.md):
+  - `target`: [`EditFurtherTarget`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-target.md)—either `"express"` or `"image-module"`.
+  - `intent?`: [`EditFurtherIntent`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-intent.md)—the kind of experience to preload in the left-hand panel, for example, `"add-text"`, `"add-icons-and-shapes"`, etc.
+  - `context?`: [`ExportContext`](..\..\v4\shared\src\types\export-config-types\type-aliases\export-context.md)—either `"default"` (tethering to the same iframe) or `"new"` (launching Adobe Express in a new browser tab).
+- [`ContinueEditingDropdownOption.action`](..\..\v4\shared\src\types\export-config-types\type-aliases\continue-editing-action.md): same as `EditFurtherExportOption.action`, but [`intent`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-intent.md) is required.
 
 As follows are a few examples:
 
@@ -217,7 +217,7 @@ No matter the use case, it would be great to **set new configurations tailored f
 
 ### The Intent Change Handler
 
-The [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) is one of the available handlers that belong to the `appConfig.callbacks` object; it automatically runs when the user passes from one workflow to another. It receives the old and new intent of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/type-aliases/action-intent.md) as parameters—so you can implement different logic for each transition—and returns an object containing the new [`appConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), [`exportConfig`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md), or [`containerConfig`](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md) objects.
+The [`onIntentChange()`](..\..\v4\shared\src\types\callbacks-types\type-aliases\intent-change-callback.md) is one of the available handlers that belong to the `appConfig.callbacks` object; it automatically runs when the user passes from one workflow to another. It receives the old and new intent of type [`ActionIntent`](..\..\v4\shared\src\types\action-intent-types\type-aliases\action-intent.md) as parameters—so you can implement different logic for each transition—and returns an object containing the new [`appConfig`](..\..\v4\shared\src\types\design-config-types\interfaces\base-app-config.md), [`exportConfig`](..\..\v4\shared\src\types\export-config-types\type-aliases\export-option.md), or [`containerConfig`](..\..\v4\shared\src\types\container-config-types\type-aliases\container-config.md) objects.
 
 ```typescript
 // The Intent Change Handler callback signature
@@ -236,9 +236,9 @@ interface IntentChangeConfig {
 
 <InlineAlert variant="info" slots="header, text1, text2" />
 
-A simpler `appConfig`
+### A simpler `appConfig`
 
-If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), which is the base configuration object for all workflows.
+If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](..\..\v4\shared\src\types\design-config-types\interfaces\base-app-config.md), which is the base configuration object for all workflows.
 
 It **only contains** the `callbacks` property, which you are free to set as needed for the next workflow in the transition. Any other properties (for instance, the `appVersion` when tethering to the Edit Image workflow) cannot be passed.
 
@@ -250,11 +250,11 @@ Thanks to the Intent Change Handler, you can **conditionally return the appropri
 
 <InlineAlert variant="warning" slots="header, text1, text2" />
 
-Beware the `z-index`
+### Beware the `z-index`
 
 In tethering workflows, any property that can be customized via `onIntentChange()` but is not handled in the callback will **reset to its default value**. This includes the iframe container's [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 
-If your integration needs to manipulate the z-index, you should do so in the `containerConfig` property of the `IntentChangeConfig` object, which accepts a new [`zIndex` property](../../v4/shared/src/types/container-config-types/interfaces/modal-container-config.md#properties).
+If your integration needs to manipulate the z-index, you should do so in the `containerConfig` property of the `IntentChangeConfig` object, which accepts a new [`zIndex` property](..\..\v4\shared\src\types\container-config-types\interfaces\modal-container-config.md#properties).
 
 ### `onIntentChange()` example
 
@@ -344,4 +344,4 @@ In the snippet above, we check the `newIntent` to decide which workflow to trans
 
 Congratulations! You've learned how to implement Workflow Tethering in your application.
 
-Please refer to the [Workflow Tethering tutorial](../../guides/tutorials/workflow-tethering.md) for a more comprehensive, real-world example with complete code that covers all the concepts discussed in this guide.
+Please refer to the [Workflow Tethering tutorial](..\tutorials\workflow-tethering.md) for a more comprehensive, real-world example with complete code that covers all the concepts discussed in this guide.

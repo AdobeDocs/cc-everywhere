@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [FeatureFlagService](../feature-flag-service/classes/feature-flag-service.md) | Abstract class for feature flag services |
+| [FeatureFlagService](classes\feature-flag-service.md) | Abstract class for feature flag services |

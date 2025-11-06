@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -6,10 +6,10 @@
 
 ## Extends
 
-- [`Style`](../../export-config-types/interfaces/style.md)
+- [`Style`](style.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `uiType` | [`LINK`](../../export-config-types/enumerations/export-option-ui.md#link) | [`Style`](../../export-config-types/interfaces/style.md).[`uiType`](../../export-config-types/interfaces/style.md#uitype) |
+| `uiType` | [`LINK`](..\enumerations\export-option-ui.md#link) | [`Style`](style.md).[`uiType`](style.md#uitype) |

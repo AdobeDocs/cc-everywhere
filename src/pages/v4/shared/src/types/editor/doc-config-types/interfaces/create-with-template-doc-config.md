@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -6,7 +6,7 @@
 
 ## Extends
 
-- [`BaseDocConfig`](../../../design-config-types/interfaces/base-doc-config.md)
+- [`BaseDocConfig`](..\..\..\design-config-types\interfaces\base-doc-config.md)
 
 ## Properties
 

@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `isPublishSuccessful` | [`PublishCallbackStatus`](../../message-types/enumerations/publish-callback-status.md) |
+| `isPublishSuccessful` | [`PublishCallbackStatus`](..\enumerations\publish-callback-status.md) |

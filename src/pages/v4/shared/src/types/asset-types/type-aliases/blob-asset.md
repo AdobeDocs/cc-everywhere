@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
 ***
 
@@ -12,5 +12,5 @@ Represents an Asset object containing blob/file data.
 
 ## See
 
- - [AssetBase](../../asset-types/interfaces/asset-base.md) for the base asset interface
- - [AssetDataType.BLOB](../../asset-types/enumerations/asset-data-type.md#blob) for the data type
+ - [AssetBase](..\interfaces\asset-base.md) for the base asset interface
+ - [AssetDataType.BLOB](..\enumerations\asset-data-type.md#blob) for the data type

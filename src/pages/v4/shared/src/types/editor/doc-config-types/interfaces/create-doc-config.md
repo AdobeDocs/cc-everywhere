@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\..\index.md)
 
 ***
 
@@ -6,14 +6,14 @@
 
 ## Extends
 
-- [`BaseDocConfig`](../../../design-config-types/interfaces/base-doc-config.md)
+- [`BaseDocConfig`](..\..\..\design-config-types\interfaces\base-doc-config.md)
 
 ## Extended by
 
-- [`CreateWithAssetDocConfig`](../../doc-config-types/interfaces/create-with-asset-doc-config.md)
+- [`CreateWithAssetDocConfig`](create-with-asset-doc-config.md)
 
 ## Properties
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `canvasSize?` | \| [`Size`](../../../asset-types/interfaces/size.md) \| [`CanvasType`](../../../layout-types/enumerations/canvas-type.md) | Canvas and template size or aspect ratio. **Default** `CanvasType.INSTAGRAM` |
+| `canvasSize?` | \| [`Size`](..\..\..\asset-types\interfaces\size.md) \| [`CanvasType`](..\..\..\layout-types\enumerations\canvas-type.md) | Canvas and template size or aspect ratio. **Default** `CanvasType.INSTAGRAM` |

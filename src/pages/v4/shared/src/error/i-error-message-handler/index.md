@@ -1,4 +1,4 @@
-[**cc-everywhere**](../../../../index.md)
+[**cc-everywhere**](..\..\..\..\index.md)
 
 ***
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [IErrorMessageHandler](../i-error-message-handler/interfaces/i-error-message-handler.md) | - |
+| [IErrorMessageHandler](interfaces\i-error-message-handler.md) | - |
