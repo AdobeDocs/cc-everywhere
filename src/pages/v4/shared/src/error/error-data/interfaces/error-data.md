@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: ErrorData<T\>
+# Interface: ErrorData&lt; T\ &gt;
 
 ## Type Parameters
 

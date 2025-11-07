@@ -129,7 +129,7 @@ sendMessage<T>(
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
-| `message` | \| [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> \| [`MessageCompat`](..\..\message-types\type-aliases\message-compat.md)<`T`\> |
+| `message` | \| [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; \| [`MessageCompat`](..\..\message-types\type-aliases\message-compat.md)&lt; `T`\ &gt; |
 | `requestId?` | `string` |
 
 #### Returns

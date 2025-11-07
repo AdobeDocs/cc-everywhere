@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: ChannelMessage<T\>
+# Interface: ChannelMessage&lt; T\ &gt;
 
 ## Type Parameters
 
@@ -16,4 +16,4 @@
 | ------ | ------ |
 | `sourceChannel` | [`MessageChannel`](..\enumerations\message-channel.md) |
 | `requestId?` | `string` |
-| `message` | [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> |
+| `message` | [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; |

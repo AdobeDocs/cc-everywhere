@@ -63,7 +63,7 @@ didGetMessage<T>(message, requestId?): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> |
+| `message` | [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; |
 | `requestId?` | `string` |
 
 #### Returns
@@ -188,7 +188,7 @@ sendMessage<T>(targetChannel, message): boolean;
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
-| `message` | \| [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> \| [`SimpleMessageType`](..\..\message-types\type-aliases\simple-message-type.md) |
+| `message` | \| [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; \| [`SimpleMessageType`](..\..\message-types\type-aliases\simple-message-type.md) |
 
 #### Returns
 
@@ -215,7 +215,7 @@ Sends a message using a message channel that is compatible with older version of
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |  |
-| `message` | [`MessageCompat`](..\..\message-types\type-aliases\message-compat.md)<`T`\> | The message to send. |
+| `message` | [`MessageCompat`](..\..\message-types\type-aliases\message-compat.md)&lt; `T`\ &gt; | The message to send. |
 
 #### Returns
 

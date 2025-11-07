@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `didGetMessage` | <`T`\>(`message`, `requestId?`) => `void` |
+| `didGetMessage` | &lt; `T`\ &gt;(`message`, `requestId?`) => `void` |

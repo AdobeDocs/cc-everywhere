@@ -59,7 +59,7 @@ text(): Promise<string>;
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`&lt; `string`\ &gt;
 
 ***
 
@@ -71,4 +71,4 @@ arrayBuffer(): Promise<ArrayBuffer>;
 
 #### Returns
 
-`Promise`<`ArrayBuffer`\>
+`Promise`&lt; `ArrayBuffer`\ &gt;

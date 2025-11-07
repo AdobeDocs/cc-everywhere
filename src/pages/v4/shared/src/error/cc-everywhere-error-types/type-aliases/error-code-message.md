@@ -2,7 +2,7 @@
 
 ***
 
-# Type Alias: ErrorCodeMessage<T\>
+# Type Alias: ErrorCodeMessage&lt; T\ &gt;
 
 ```ts
 type ErrorCodeMessage<T> = object;

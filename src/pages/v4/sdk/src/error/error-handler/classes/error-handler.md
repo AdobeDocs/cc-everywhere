@@ -28,7 +28,7 @@ static addHandler(handler): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](..\..\..\..\..\shared\src\error\i-error-message-handler\interfaces\i-error-message-handler.md)<[`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\> |
+| `handler` | [`IErrorMessageHandler`](..\..\..\..\..\shared\src\error\i-error-message-handler\interfaces\i-error-message-handler.md)&lt; [`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\ &gt; |
 
 #### Returns
 
@@ -46,7 +46,7 @@ static removeHandler(handler): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](..\..\..\..\..\shared\src\error\i-error-message-handler\interfaces\i-error-message-handler.md)<[`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\> |
+| `handler` | [`IErrorMessageHandler`](..\..\..\..\..\shared\src\error\i-error-message-handler\interfaces\i-error-message-handler.md)&lt; [`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\ &gt; |
 
 #### Returns
 
@@ -64,7 +64,7 @@ static error(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](..\..\..\..\..\shared\src\error\cc-everywhere-error\classes\cc-everywhere-error.md)<[`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\> |
+| `error` | [`CCEverywhereError`](..\..\..\..\..\shared\src\error\cc-everywhere-error\classes\cc-everywhere-error.md)&lt; [`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\ &gt; |
 
 #### Returns
 
@@ -82,7 +82,7 @@ static warn(warn): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `warn` | \| [`CCEverywhereWarn`](..\..\..\..\..\shared\src\error\cc-everywhere-error-types\interfaces\cc-everywhere-warn.md) \| [`CCEverywhereError`](..\..\..\..\..\shared\src\error\cc-everywhere-error\classes\cc-everywhere-error.md)<[`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\> |
+| `warn` | \| [`CCEverywhereWarn`](..\..\..\..\..\shared\src\error\cc-everywhere-error-types\interfaces\cc-everywhere-warn.md) \| [`CCEverywhereError`](..\..\..\..\..\shared\src\error\cc-everywhere-error\classes\cc-everywhere-error.md)&lt; [`ErrorCode`](..\..\error-codes\type-aliases\error-code.md)\ &gt; |
 
 #### Returns
 

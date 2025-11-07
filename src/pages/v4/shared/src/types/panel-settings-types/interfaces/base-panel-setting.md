@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: BasePanelSetting<T\>
+# Interface: BasePanelSetting&lt; T\ &gt;
 
 Base setting interface that all settings should extend.
 Provides common properties for value.

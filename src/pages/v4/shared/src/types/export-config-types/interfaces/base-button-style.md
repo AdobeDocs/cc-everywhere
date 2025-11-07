@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: BaseButtonStyle<T\>
+# Interface: BaseButtonStyle&lt; T\ &gt;
 
 Represents the style of a button, extending the base Style interface.
 

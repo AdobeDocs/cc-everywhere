@@ -2,7 +2,7 @@
 
 ***
 
-# Class: ConsoleHandler<T\>
+# Class: ConsoleHandler&lt; T\ &gt;
 
 ## Extends
 
@@ -16,7 +16,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md)<`T`\>
+- [`IErrorMessageHandler`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md)&lt; `T`\ &gt;
 
 ## Constructors
 
@@ -34,7 +34,7 @@ new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>;
 
 #### Returns
 
-`ConsoleHandler`<`T`\>
+`ConsoleHandler`&lt; `T`\ &gt;
 
 #### Overrides
 
@@ -78,7 +78,7 @@ static error<T>(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](..\..\..\cc-everywhere-error\classes\cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](..\..\..\cc-everywhere-error\classes\cc-everywhere-error.md)&lt; `T`\ &gt; |
 
 #### Returns
 
@@ -96,7 +96,7 @@ error(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](..\..\..\cc-everywhere-error\classes\cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](..\..\..\cc-everywhere-error\classes\cc-everywhere-error.md)&lt; `T`\ &gt; |
 
 #### Returns
 

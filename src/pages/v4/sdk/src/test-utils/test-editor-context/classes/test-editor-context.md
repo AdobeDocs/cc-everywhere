@@ -90,6 +90,6 @@ The agent will handle displaying the toast.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`&lt; `void`\ &gt;
 
 Promise that resolves when the toast is displayed

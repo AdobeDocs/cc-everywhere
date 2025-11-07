@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: IErrorMessageHandler<T\>
+# Interface: IErrorMessageHandler&lt; T\ &gt;
 
 ## Type Parameters
 

@@ -18,7 +18,7 @@ type Listener = <T>(message) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](..\..\message-types\type-aliases\message.md)<`T`\> |
+| `message` | [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; |
 
 ## Returns
 

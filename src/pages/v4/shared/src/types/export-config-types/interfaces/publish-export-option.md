@@ -13,7 +13,7 @@ Export option for publishing content to various targets.
 
 ## Extends
 
-- [`BaseExportOption`](base-export-option.md)<`U`\>
+- [`BaseExportOption`](base-export-option.md)&lt; `U`\ &gt;
 
 ## Type Parameters
 

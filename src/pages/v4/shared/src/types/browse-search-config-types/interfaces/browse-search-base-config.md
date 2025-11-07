@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: BrowseSearchBaseConfig<T\>
+# Interface: BrowseSearchBaseConfig&lt; T\ &gt;
 
 ## Type Parameters
 

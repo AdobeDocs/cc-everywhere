@@ -2,7 +2,7 @@
 
 ***
 
-# Type Alias: MessageCompat<T\>
+# Type Alias: MessageCompat&lt; T\ &gt;
 
 ```ts
 type MessageCompat<T> = object;

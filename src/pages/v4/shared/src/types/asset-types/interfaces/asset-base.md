@@ -2,7 +2,7 @@
 
 ***
 
-# Interface: AssetBase<T\>
+# Interface: AssetBase&lt; T\ &gt;
 
 Base interface for all asset types.
 

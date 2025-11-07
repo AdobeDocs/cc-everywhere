@@ -2,7 +2,7 @@
 
 ***
 
-# Class: WorkflowContext<T\>
+# Class: WorkflowContext&lt; T\ &gt;
 
 Represents the base workflow context for the SDK workflows
 This should be extended by all the workflow contexts like EditorContext, GenStudioContext, etc.
@@ -33,7 +33,7 @@ new WorkflowContext<T>(context): WorkflowContext<T>;
 
 #### Returns
 
-`WorkflowContext`<`T`\>
+`WorkflowContext`&lt; `T`\ &gt;
 
 ## Properties
 
