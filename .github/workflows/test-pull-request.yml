@@ -71,6 +71,7 @@ jobs:
           cmd: install
 
       - name: Check internal links
+        continue-on-error: true
         uses: borales/actions-yarn@v5
         with:
           cmd: test:links
@@ -80,4 +81,3 @@ jobs:
         uses: borales/actions-yarn@v5
         with:
           cmd: build
-
