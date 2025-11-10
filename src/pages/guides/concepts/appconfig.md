@@ -235,6 +235,27 @@ const appConfig = {
 - Designs with full-bleed images or backgrounds
 - Commercial printing workflows
 
+### canvasBackgroundColor
+
+Set the default background color of the canvas to match your application's design or brand guidelines.
+
+- **Type**: `string`
+- **Default**: `""` (empty string)
+- **Use case**: Customize the canvas background to align with your brand or provide better contrast for specific design types
+
+```javascript
+const appConfig = {
+  canvasBackgroundColor: "#f5f5f5", // Light gray background
+};
+```
+
+**Common use cases:**
+
+- **Brand consistency**: Match your application's color scheme
+- **Better contrast**: Use darker backgrounds for light-colored designs
+- **Professional environments**: Set neutral backgrounds for design work
+- **Accessibility**: Provide appropriate contrast for better visibility
+
 ## Complete Configuration Example
 
 This example demonstrates a comprehensive configuration for a marketing team's design workflow:
@@ -268,6 +289,7 @@ const appConfig = {
   // Canvas display (minimal for social media)
   showPageMargin: false,
   showBleedArea: false,
+  canvasBackgroundColor: "#ffffff", // White background for clean designs
 };
 ```
 
