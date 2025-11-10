@@ -22,10 +22,11 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
-## [4.38.17] 2025-11-10
+## [4.38.19] 2025-11-10
 
 ### API Enhancement
 
+- [`CCEverywhere.BaseAppConfig.useClientAuth`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md#properties): Added a new feature to enable no consumption of credits for Generative AI workflows. This configuration can only be used for Generate Image and Edit Image workflows for selected enabled partners.
 - **[`CCEverywhere.CallBackTarget.CALLBACK`](../../v4/shared/src/types/export-config-types/enumerations/call-back-target.md#callback)**: Added a new callback export target to trigger callback actions without publishing or downloading assets.
 - **Custom Message Workflow**:
   - Added [`WORKFLOW_CONTEXT`](../../v4/shared/src/messenger/message-types/enumerations/message-type.md#workflow_context) message type for module-specific communication.
