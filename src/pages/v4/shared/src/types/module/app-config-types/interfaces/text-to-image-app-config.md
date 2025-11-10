@@ -16,6 +16,7 @@
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
+| `useClientAuth?` | `boolean` | Flag to explicitly opt-in to use client authentication. When true, client access token will be fetched from the partner and used in the module. This is only relevant for Edit Image and Text to Image modules. Should not be passed for other workflows. **Default** `false` | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`useClientAuth`](../../../design-config-types/interfaces/base-app-config.md#useclientauth) |
 | `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
 | `headerBarColorTheme?` | [`ColorTheme`](../../../app-config-types/enumerations/color-theme.md) | Theming options for the TextToImage Editor header bar. **Default** `ColorTheme.LIGHT` | - |
 | `editorTitle?` | `string` | Property to configure the title | - |
@@ -32,6 +33,5 @@
 | `featureConfig?` | `Partial`<`Record`<`TextToImageFeature`, `boolean`\>\> | Configuration for enabling or disabling specific features in the Text to Image module. NOTE: This property is supported only in the new Generate Image experience. **Default** `{ * [TextToImageFeatureType.COMMUNITY_WALL]: false, * [TextToImageFeatureType.FAST_MODE]: false * }` | - |
 | `communityWallConfig?` | [`CommunityWallConfig`](../../app-config-types/interfaces/community-wall-config.md) | - | - |
 | `isPromptSafe?` | (`prompt`) => `Promise`<[`PromptSafetyCheckResponse`](../../app-config-types/interfaces/prompt-safety-check-response.md)\> | Callback to check if a prompt is safe for image generation. This allows partners to implement their own prompt moderation logic. | - |
-| `useClientAuth?` | `boolean` | Flag to explicitly opt-in to use client authentication. When true, client access token will be fetched from the partner and used in the module. **Default** `false` | - |
 | `hideFeedbackMenu?` | `boolean` | Flag to hide feedback menu in the header bar. **Default** `false` | - |
 | `panelSettings?` | [`PanelSettings`](../../../panel-settings-types/interfaces/panel-settings.md) | Configuration for panel settings. Allows users to customize various options that affect the image generation process. | - |

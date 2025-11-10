@@ -8,8 +8,8 @@ Export option for publishing content to various targets.
 
 ## See
 
- - [PublishAction](../../export-config-types/interfaces/publish-action.md) for available publish actions
- - [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
+- [PublishAction](../../export-config-types/interfaces/publish-action.md) for available publish actions
+- [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
 
 ## Extends
 

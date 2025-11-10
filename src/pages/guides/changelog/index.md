@@ -22,6 +22,22 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## [4.38.17] 2025-11-10
+
+### API Enhancement
+
+- **[`CCEverywhere.CallBackTarget.CALLBACK`](../../v4/shared/src/types/export-config-types/enumerations/call-back-target.md#callback)**: Added a new callback export target to trigger callback actions without publishing or downloading assets.
+- **Custom Message Workflow**:
+  - Added [`WORKFLOW_CONTEXT`](../../v4/shared/src/messenger/message-types/enumerations/message-type.md#workflow_context) message type for module-specific communication.
+  - New [`CustomMessage`](../../v4/shared/src/messenger/message-types/interfaces/custom-message.md) interface includes instance ID, request ID, action, intent, and optional data.
+  - Added [`CustomMessageAction`](../../v4/shared/src/messenger/message-types/enumerations/custom-message-action.md) enum with actions for notifying unsaved changes and requesting assets.
+- **[`CCEverywhere.ModalContainerConfig.showExpressIconWithText`](../../v4/shared/src/types/container-config-types/interfaces/modal-container-config.md#properties)**: the new default loading experience will include the Express logo plus text.
+
+### Tech Enhancement
+
+- **[CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)**: Added support to configure the canvas background color (String in the `RRGGBBAA` HEX format).
+-
+
 ## [4.36.26] 2025-10-08
 
 ### API Enhancement

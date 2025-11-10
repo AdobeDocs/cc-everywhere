@@ -87,18 +87,18 @@ The Adobe Express Embed SDK since v4.20 has added support for an all-new Generat
               id: "saveToHostApp",
               label: "Publish"
             },editDropdownOptions: [
-  		{"option": "add-effects"},
-  		{"option": "remove-background"},
-  		{"option": "insert-object"},
-  		{"option": "apply-adjustment"},
-  		{"option": "remove-object"}
-	      ],
-	     featureConfig: {
+    {"option": "add-effects"},
+    {"option": "remove-background"},
+    {"option": "insert-object"},
+    {"option": "apply-adjustment"},
+    {"option": "remove-object"}
+       ],
+      featureConfig: {
               "community-wall": true,
               "fast-mode": true,
               "custom-models" : true
             },
-	     fastModeConfig: { defaultFastModeState: "off" },
+      fastModeConfig: { defaultFastModeState: "off" },
            appVersion: '2',
             callbacks: {
               onCancel: () => {}, 
@@ -121,7 +121,7 @@ The Adobe Express Embed SDK since v4.20 has added support for an all-new Generat
                    uiType: 'button'
                  }
                }, 
-		  {
+    {
                  action: {
                    target: 'publish',
                    outputype: "URL",
