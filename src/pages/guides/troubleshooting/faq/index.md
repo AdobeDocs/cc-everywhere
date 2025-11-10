@@ -103,7 +103,7 @@ Use [this form](https://www.adobe.com/go/embed-access) to submit your use case. 
 
 ### What criteria are used to evaluate access requests?
 
-We prioritize use cases that demonstrate clear business impact, meaningful user engagement, and strong alignment with Adobe Express goals. Ideal candidates often include enterprise or strategic partner integrations, a well-defined user base, and clear plans to implement the SDK effectively.
+We prioritize use cases that demonstrate clear business impact. This includes supporting adoption of Adobe Express enterprise customers, paid usage of the Embed SDK in the context of a strategic partnership, or serving a well-defined user base (starting from 1 Million users).
 
 ### Would Adobe need to approve the integrations before my users can start using it?
 

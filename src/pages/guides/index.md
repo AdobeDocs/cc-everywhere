@@ -47,9 +47,9 @@ Seamlessly embed Adobe Express on your website with our SDK.
 
 <AnnouncementBlock slots="heading, text, button" className="closing-gates-announcement"/>
 
-### Adobe Express Embed SDK Access Update
+### Access to the Embed SDK Now Requires Business Approval
 
-Access to the Embed SDK is now available exclusively through a business approval process. This change is intended to ensure that integrations deliver high value to Adobe Express users and that we can provide the best possible support to our partners. Existing production integrations will continue uninterrupted until December 2027, after which time they will need to go through the business approval process. We’re deeply grateful to the developers who’ve helped shape the SDK. Your contributions have been invaluable. For more information, see the [FAQ](troubleshooting/faq/#sdk-access--approval-1).
+This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/#sdk-access--approval-1).
 
 [Apply now](https://www.adobe.com/go/embed-access)
 
