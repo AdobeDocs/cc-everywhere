@@ -36,7 +36,6 @@ Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no long
 ### Tech Enhancement
 
 - **[CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)**: Added support to configure the canvas background color (String in the `RRGGBBAA` HEX format).
--
 
 ## [4.36.26] 2025-10-08
 
