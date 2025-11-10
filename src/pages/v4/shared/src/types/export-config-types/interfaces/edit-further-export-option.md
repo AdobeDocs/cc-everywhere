@@ -8,8 +8,8 @@ Export option for continuing to edit content in other applications.
 
 ## See
 
-- [EditFurtherAction](../../export-config-types/interfaces/edit-further-action.md) for available edit actions
-- [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [EnabledButtonStyle](../../export-config-types/type-aliases/enabled-button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
+ - [EditFurtherAction](../../export-config-types/interfaces/edit-further-action.md) for available edit actions
+ - [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [EnabledButtonStyle](../../export-config-types/type-aliases/enabled-button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
 
 ## Extends
 

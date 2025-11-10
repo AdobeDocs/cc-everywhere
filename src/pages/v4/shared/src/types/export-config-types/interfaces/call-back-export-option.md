@@ -8,8 +8,8 @@ Export option for callback actions that trigger callbacks without publishing ass
 
 ## See
 
-- [CallBackAction](../../export-config-types/interfaces/call-back-action.md) for available callback actions
-- [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
+ - [CallBackAction](../../export-config-types/interfaces/call-back-action.md) for available callback actions
+ - [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
 
 ## Extends
 

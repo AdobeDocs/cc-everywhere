@@ -8,8 +8,8 @@ Export option for downloading content to the user's device.
 
 ## See
 
-- [DownloadAction](../../export-config-types/interfaces/download-action.md) for available download actions
-- [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
+ - [DownloadAction](../../export-config-types/interfaces/download-action.md) for available download actions
+ - [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
 
 ## Extends
 
