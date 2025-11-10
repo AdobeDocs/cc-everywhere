@@ -34,6 +34,7 @@ contributors:
   - https://github.com/undavide
   - https://github.com/amandahuarng
 ---
+
 import "./landing-styles.css";
 
 <Hero slots="image, heading, text" background="rgb(193, 72, 273)"/>
@@ -44,15 +45,21 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<AnnouncementBlock slots="heading, text, button"/>
+<AnnouncementBlock slots="heading, text, button" className="closing-gates-announcement"/>
 
-### Demo App
+### Access to the Embed SDK Now Requires Business Approval
+
+This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/#sdk-access--approval-1).
+
+[Apply now](https://www.adobe.com/go/embed-access)
+
+<br/>
+
+<!-- ### Demo App
 
 Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
 
-[Try our demo app](https://demo.expressembed.com/)
-
-<br/>
+[Try our demo app](https://demo.expressembed.com/) -->
 
 ## Overview
 

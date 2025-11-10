@@ -13,6 +13,11 @@
           required: true
           type: boolean
           default: false
+        cleanDiskSpace:
+          description: "Cleans up unncessary tools"
+          required: true
+          type: boolean
+          default: true
         excludeSubfolder:
           description: "Exclude a subfolder from deletion"
           required: false
@@ -34,8 +39,9 @@
       with:
         env: ${{ inputs.env }}
         clean: ${{ inputs.clean }}
+        clean-disk-space: ${{ inputs.cleanDiskSpace }}
         excludeSubfolder: ${{ inputs.excludeSubfolder }}
         index-mode: ${{ inputs.index-mode }}
-        NODE_OPTIONS: "--max_old_space_size=24576"
+        NODE_OPTIONS: "--max_old_space_size=7000"
         TEMPLATE_ID_DEV: "664e39607dcc7c0e5a4a035b"
         TEMPLATE_ID_PROD: "668d73f3f8897660ad74d577"
