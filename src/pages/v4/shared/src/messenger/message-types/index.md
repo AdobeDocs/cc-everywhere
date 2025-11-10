@@ -15,6 +15,7 @@
 | [WorkflowLoadCompleted](../message-types/enumerations/workflow-load-completed.md) | - |
 | [MessageType](../message-types/enumerations/message-type.md) | - |
 | [CloseStatus](../message-types/enumerations/close-status.md) | - |
+| [CustomMessageAction](../message-types/enumerations/custom-message-action.md) | - |
 
 ## Interfaces
 
@@ -24,6 +25,7 @@
 | [CancelMessage](../message-types/interfaces/cancel-message.md) | - |
 | [TokenResponseMessage](../message-types/interfaces/token-response-message.md) | - |
 | [PublishStatusMessage](../message-types/interfaces/publish-status-message.md) | - |
+| [CustomMessage](../message-types/interfaces/custom-message.md) | - |
 | [CloseStatusMessage](../message-types/interfaces/close-status-message.md) | - |
 | [ParamsResponseMessage](../message-types/interfaces/params-response-message.md) | - |
 | [WorkflowMessage](../message-types/interfaces/workflow-message.md) | - |

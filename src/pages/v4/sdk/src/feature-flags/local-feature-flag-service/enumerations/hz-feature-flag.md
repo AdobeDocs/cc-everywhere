@@ -32,3 +32,8 @@ Enum representing feature flags for HZ based target apps
 | `USE_IMS_REDIRECT_VIA_STORAGE` | `"use-ims-redirect-via-storage"` |
 | `SHOW_REFERENCE_IMAGE_SECTION` | `"show-reference-image-section"` |
 | `MIGRATE_TUS_VIDEO_UPLOADING_TO_ACP` | `"migrate-tus-video-uploading-to-acp"` |
+| `CARD_MAKER_EDITOR_PARAMS` | `"card-maker-editor-params"` |
+| `CARD_MAKER_SKIP_REDIRECT_ON_DOWNLOAD` | `"card-maker-skip-redirect-on-download"` |
+| `USE_CLIENT_AUTH_TOKEN_FOR_TEXT_TO_IMAGE` | `"use-client-auth-token-for-text-to-image"` |
+| `USE_V3_API_USING_FIREFLY_SDK` | `"use-v3-api-using-firefly-sdk"` |
+| `MOBILE_ERASE_FEATURE` | `"mobile-erase-feature"` |

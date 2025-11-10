@@ -145,7 +145,7 @@ CLIENTS: object;
 | `ACROBAT_EMBED_VIEWER` | `object` |
 | `ACROBAT_EMBED_VIEWER.CLIENT_ID` | `string` |
 | `ACROBAT_EXT` | `object` |
-| `ACROBAT_EXT.CLIENT_ID` | `string` |
+| `ACROBAT_EXT.CLIENT_ID_REGEX` | `RegExp` |
 | `ACROBAT_MOBILE` | `object` |
 | `ACROBAT_MOBILE.CLIENT_ID` | `string` |
 | `ACROBAT_READER` | `object` |
@@ -167,6 +167,8 @@ CLIENTS: object;
 | `CCD.CLIENT_ID_PREFIX` | `string` |
 | `CONTENT_CAL` | `object` |
 | `CONTENT_CAL.CLIENT_ID` | `string` |
+| `FIREFLY` | `object` |
+| `FIREFLY.CLIENT_ID` | `string` |
 | `GENSTUDIO` | `object` |
 | `GENSTUDIO.CLIENT_ID` | `string` |
 | `ILLUSTRATOR` | `object` |

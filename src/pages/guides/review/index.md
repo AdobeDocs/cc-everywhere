@@ -190,7 +190,7 @@ If it was rejected, we will include the reasons for rejection along with any nex
 
 ## Common rejection reasons
 
--  Your app or integration is **not accessible via free user sign-up** and **test credentials are not provided** to our review team for testing purposes.
+- Your app or integration is **not accessible via free user sign-up** and **test credentials are not provided** to our review team for testing purposes.
 - Your app is built on a **deprecated version of the SDK**. We currently do not accept versions V3 and below.
 - Your **website is not functioning**.
 - You have deployed your app in a **staging environment**. Our review team only reviews apps in a production environment.
@@ -201,6 +201,6 @@ If it was rejected, we will include the reasons for rejection along with any nex
 
 To learn more, see the [Adobe Creative Cloud Developer Brand Guide](https://partners.adobe.com/content/dam/tep_assets/public/public_1/documents/Adobe-Creative-Cloud-Developer-Brand-Guide.pdf). This guide includes best practices for brand assets in marketing, press releases and social media guidance. It's the best spot to get our most up to date assets. Here you'll also find information for how to publicize and promote your application once it's approved.
 
-During the submission process, we're available to answer any direct questions you may have at CCIntegrationsReview@adobe.com. Please note that this inbox may have delayed responses depending on the number of queries.
+During the submission process, we're available to answer any direct questions you may have at <CCIntegrationsReview@adobe.com>. Please note that this inbox may have delayed responses depending on the number of queries.
 
 We look forward to seeing your creative solutions!

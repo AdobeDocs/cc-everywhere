@@ -15,5 +15,5 @@ for each category defined in [InspireCategory](../../browse-search-config-types/
 
 ## See
 
- - [BrowseSearchBaseConfig](../../browse-search-config-types/interfaces/browse-search-base-config.md) for the base configuration interface
- - [InspireCategory](../../browse-search-config-types/enumerations/inspire-category.md) for available categories
+- [BrowseSearchBaseConfig](../../browse-search-config-types/interfaces/browse-search-base-config.md) for the base configuration interface
+- [InspireCategory](../../browse-search-config-types/enumerations/inspire-category.md) for available categories

@@ -2,14 +2,14 @@
 
 ***
 
-# Interface: EditFurtherExportOption<U\>
+# Interface: CallBackExportOption<U\>
 
-Export option for continuing to edit content in other applications.
+Export option for callback actions that trigger callbacks without publishing assets.
 
 ## See
 
-- [EditFurtherAction](../../export-config-types/interfaces/edit-further-action.md) for available edit actions
-- [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [EnabledButtonStyle](../../export-config-types/type-aliases/enabled-button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
+- [CallBackAction](../../export-config-types/interfaces/call-back-action.md) for available callback actions
+- [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
 
 ## Extends
 
@@ -27,5 +27,5 @@ Export option for continuing to edit content in other applications.
 | ------ | ------ | ------ | ------ |
 | `id` | `string` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`id`](../../export-config-types/interfaces/base-export-option.md#id) |
 | `style` | `U` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`style`](../../export-config-types/interfaces/base-export-option.md#style) |
-| `action` | [`EditFurtherAction`](../../export-config-types/interfaces/edit-further-action.md) | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`action`](../../export-config-types/interfaces/base-export-option.md#action) | - |
+| `action` | [`CallBackAction`](../../export-config-types/interfaces/call-back-action.md) | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`action`](../../export-config-types/interfaces/base-export-option.md#action) | - |
 | `label?` | `string` | - | - |

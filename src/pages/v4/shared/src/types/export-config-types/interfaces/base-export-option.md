@@ -10,6 +10,7 @@
 - [`DownloadExportOption`](../../export-config-types/interfaces/download-export-option.md)
 - [`EditFurtherExportOption`](../../export-config-types/interfaces/edit-further-export-option.md)
 - [`ContinueEditingDropdownOption`](../../export-config-types/interfaces/continue-editing-dropdown-option.md)
+- [`CallBackExportOption`](../../export-config-types/interfaces/call-back-export-option.md)
 
 ## Type Parameters
 
