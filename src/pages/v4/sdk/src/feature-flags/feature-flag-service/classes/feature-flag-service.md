@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: `abstract` FeatureFlagService
 
@@ -8,7 +8,7 @@ Abstract class for feature flag services
 
 ## Extended by
 
-- [`LocalFeatureFlagService`](..\..\local-feature-flag-service\classes\local-feature-flag-service.md)
+- [`LocalFeatureFlagService`](../../local-feature-flag-service/classes/local-feature-flag-service.md)
 
 ## Constructors
 
@@ -39,8 +39,8 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 
 | Parameter | Type |
 | ------ | ------ |
-| `intent` | [`ActionIntent`](..\..\..\..\..\shared\src\types\action-intent-types\type-aliases\action-intent.md) |
-| `hostInfo` | [`HostInfoExtended`](..\..\..\..\..\shared\src\types\host-info-types\type-aliases\host-info-extended.md) |
+| `intent` | [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md) |
+| `hostInfo` | [`HostInfoExtended`](../../../../../shared/src/types/host-info-types/type-aliases/host-info-extended.md) |
 | `appConfig?` | `AppConfig` |
 
 #### Returns

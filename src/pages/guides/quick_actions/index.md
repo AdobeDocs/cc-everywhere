@@ -67,10 +67,10 @@ All the properties are optional.
 
 | Property        | Type                                                                                               | Description                                                                                                        |
 | :-------------- | :------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| docConfig       | [DocConfig](..\..\v4\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md)        | Pass a starting asset to the quick action editor                                                                   |
-| appConfig       | [AppConfig](..\..\v4\shared\src\types\quick-action\app-config-types\interfaces\app-config.md)        | Properties to configure the editor                                                                                 |
-| exportConfig    | [ExportOptions](..\..\v4\shared\src\types\export-config-types\type-aliases\export-options.md)[]      | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
-| containerConfig | [ContainerConfig](..\..\v4\shared\src\types\container-config-types\type-aliases\container-config.md) | Properties to configure the SDK container                                                                          |
+| docConfig       | [DocConfig](../../v4/shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md)        | Pass a starting asset to the quick action editor                                                                   |
+| appConfig       | [AppConfig](../../v4/shared/src/types/quick-action/app-config-types/interfaces/app-config.md)        | Properties to configure the editor                                                                                 |
+| exportConfig    | [ExportOptions](../../v4/shared/src/types/export-config-types/type-aliases/export-options.md)[]      | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
+| containerConfig | [ContainerConfig](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md) | Properties to configure the SDK container                                                                          |
 
 ## Example: Default export options
 

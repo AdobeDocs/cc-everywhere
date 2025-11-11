@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/editor/AppConfig.types
 
@@ -8,10 +8,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseEditorAppConfig](interfaces\base-editor-app-config.md) | - |
+| [BaseEditorAppConfig](interfaces/base-editor-app-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AppConfig](type-aliases\app-config.md) | - |
+| [AppConfig](type-aliases/app-config.md) | - |

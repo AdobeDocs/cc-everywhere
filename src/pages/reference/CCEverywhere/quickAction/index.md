@@ -129,14 +129,14 @@ All the properties are optional.
 | :-- | :-- | :--
 | docConfig | [DocConfig](#docconfig)| Pass a starting asset to the quick action editor
 | appConfig | [AppConfig](#appconfig) | Properties to configure the editor
-| exportConfig | [ExportOptions](..\..\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](..\..\types\index.md#containerconfig) | Properties to configure the SDK container
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
 ### DocConfig
 
 | Property | Type | Description
 | :-- | :-- | :--
-| asset | [Asset](..\..\types\index.md#asset) or [Asset](..\..\types\index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge videos quick action.
+| asset | [Asset](../../types/index.md#asset) or [Asset](../../types/index.md#asset)[] | Asset from the host application to start editing with. Array of assets only accepted for merge videos quick action.
 
 ### AppConfig
 
@@ -144,4 +144,4 @@ All the properties are optional.
 | :-- | :-- | :--
 | colorTheme | string | Sets color theme of editor ("darkest", "dark", "lightest", "light")
 | scale | string | Set the text scale for the quick actions editor ("medium" or "large")
-| callbacks | [Callbacks](..\..\types\index.md#callbacks) | Callback functions
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions

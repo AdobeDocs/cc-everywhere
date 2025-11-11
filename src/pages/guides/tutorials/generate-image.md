@@ -30,7 +30,7 @@ Learn how to implement the Generate Image module using the Adobe Express Embed S
 
 ## Introduction
 
-Welcome to this hands-on tutorial! We'll walk you through implementing the powerful Generate Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new V2 features, from the [Community Wall](..\concepts\generate-image-v2.md#community-wall) to [Rich Preview](..\concepts\generate-image-v2.md#rich-preview) and [Thumbnail actions](..\concepts\generate-image-v2.md#thumbnail-actions). As a bonus, we'll implement a [Custom version](..\concepts\generate-image-v2.md#custom-community-wall) of the Community Wall, so that you can showcase your own images instead of Firefly's publicly available gallery.
+Welcome to this hands-on tutorial! We'll walk you through implementing the powerful Generate Image module of the Adobe Express Embed SDK. By the end, your integration will be able to use all its new V2 features, from the [Community Wall](../concepts/generate-image-v2.md#community-wall) to [Rich Preview](../concepts/generate-image-v2.md#rich-preview) and [Thumbnail actions](../concepts/generate-image-v2.md#thumbnail-actions). As a bonus, we'll implement a [Custom version](../concepts/generate-image-v2.md#custom-community-wall) of the Community Wall, so that you can showcase your own images instead of Firefly's publicly available gallery.
 
 ### What you'll learn
 
@@ -51,7 +51,7 @@ You'll build a simple, JavaScript-based web application that allows users to gen
 Before you start, make sure you have:
 
 - An **Adobe account** (use your existing Adobe ID or [create one for free](https://account.adobe.com/))
-- **API credentials** from the Adobe Developer Console ([Get credentials](..\quickstart\index.md#step-1-get-an-api-key))
+- **API credentials** from the Adobe Developer Console ([Get credentials](../quickstart/index.md#step-1-get-an-api-key))
 - Basic knowledge of **HTML, CSS, and JavaScript**
 - **Node.js** installed on your development machine (v20.19.0 or higher)
 - A **text editor or IDE** of your choice
@@ -94,7 +94,7 @@ VITE_API_KEY="your-api-key-here!"
 
 <InlineAlert variant="info" slots="text1" />
 
-📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](..\quickstart\index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](..\quickstart\index.md#edit-the-list-of-allowed-domains).
+📖 Instructions on how to obtain an API Key can be found on the [Quickstart Guide](../quickstart/index.md#step-1-get-an-api-key). Make sure your API Key is set to allow the `localhost:5555` [domain and port](../quickstart/index.md#edit-the-list-of-allowed-domains).
 
 ### 1.3 Install dependencies
 
@@ -109,7 +109,7 @@ The web application will be served at `localhost:5555` on a secure HTTPS connect
 
 ![Generate image integration UI](./images/generate-image--ui.png)
 
-When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](..\concepts\generate-image-v2.md#community-wall)—optionally, populated with your own pictures. Users can browse the gallery, select an image, and use its prompt as a starting point for their own generation.
+When clicking the **Generate Image** button, the Adobe Express Generate Image module will launch, showing the [Community Wall](../concepts/generate-image-v2.md#community-wall)—optionally, populated with your own pictures. Users can browse the gallery, select an image, and use its prompt as a starting point for their own generation.
 
 ![Generate image integration UI](./images/generate-image--community-wall.png)
 
@@ -164,7 +164,7 @@ console.log("CCEverywhere loaded", window.CCEverywhere);
 
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](..\quickstart\index.md).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
 
 ### 2.2 Initialize the Embed SDK
 
@@ -195,16 +195,16 @@ const { module } = await window.CCEverywhere.initialize(
 );
 ```
 
-The [`hostInfo`](..\..\v4\index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
+The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
 
 <InlineAlert variant="warning" slots="text1" />
 
-The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](..\..\reference\initialize\index.md#configparams) are optional.
+The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
 
 ### 2.3 Load the `module`
 
-The asynchronous [`CCEverywhere.initialize()`](..\..\v4\sdk\src\3p\cc-everywhere\variables\default.md#initialize) method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`createImageFromText()`](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md#createimagefromtext) method. In the next section, we'll learn how to use it to launch the Generate Image experience.
+The asynchronous [`CCEverywhere.initialize()`](../../v4/sdk/src/3p/cc-everywhere/variables/default.md#initialize) method returns an object with three properties. Here, we destructure the `module` only, because it is the entry point to the [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method. In the next section, we'll learn how to use it to launch the Generate Image experience.
 
 ```javascript
 module.createImageFromText({ /* ... */ });
@@ -212,7 +212,7 @@ module.createImageFromText({ /* ... */ });
 
 ## 3. Launch the Generate Image experience
 
-The [`createImageFromText()`](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md#createimagefromtext) method expects three optional parameters:
+The [`createImageFromText()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createimagefromtext) method expects three optional parameters:
 
 ```javascript
 // module.createImageFromText() function signature
@@ -224,7 +224,7 @@ const containerConfig = { /* ... */ }; // SDK container
 module.createImageFromText(appConfig, exportConfig, containerConfig);
 ```
 
-In this tutorial, we'll focus on the [`appConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md) object; you can look at the [Full Editor tutorial](full-editor.md) for more details on the other two parameters.
+In this tutorial, we'll focus on the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) object; you can look at the [Full Editor tutorial](full-editor.md) for more details on the other two parameters.
 
 ### 3.1 Enable the v2 experience
 
@@ -242,16 +242,16 @@ const appConfig = {
 
 <InlineAlert variant="info" slots="text1" />
 
-You can find a comprehensive list of all the new features of the Generate Image v2 experience in this [Concepts guide](..\concepts\generate-image-v2.md).
+You can find a comprehensive list of all the new features of the Generate Image v2 experience in this [Concepts guide](../concepts/generate-image-v2.md).
 
 ### 3.2 Toggle selected v2 features
 
 Among all the new features, you'll focus on these:
 
-- [Community Wall](..\concepts\generate-image-v2.md#community-wall), the endless gallery of images generated by other users that are displayed when the experience is launched.
-- [Rich Preview](..\concepts\generate-image-v2.md#rich-preview), a larger preview of the generated image in the thumbnail.
-- [Thumbnail actions](..\concepts\generate-image-v2.md#thumbnail-actions), a dropdown menu in the thumbnail to allow users to further edit the generated image.
-- [Prompt Placeholder](..\concepts\generate-image-v2.md#prompt-placeholder), a custom string that can be useful to guide your users with a specific instruction.
+- [Community Wall](../concepts/generate-image-v2.md#community-wall), the endless gallery of images generated by other users that are displayed when the experience is launched.
+- [Rich Preview](../concepts/generate-image-v2.md#rich-preview), a larger preview of the generated image in the thumbnail.
+- [Thumbnail actions](../concepts/generate-image-v2.md#thumbnail-actions), a dropdown menu in the thumbnail to allow users to further edit the generated image.
+- [Prompt Placeholder](../concepts/generate-image-v2.md#prompt-placeholder), a custom string that can be useful to guide your users with a specific instruction.
 
 ```javascript
 // main.js
@@ -287,7 +287,7 @@ In the `appConfig` object, you can pass a `promptText` string property to start 
 
 ### 3.3 Customize the Styles
 
-It's possible to guide users toward a specific look and feel, by preselecting the Content Type (Photo, Graphic, or Art) and Styles (Movements, Themes, Materials, and so on) in the lefthand panel—via the [`panelSettings`](..\..\v4\shared\src\types\panel-settings-types\interfaces\panel-settings.md) object, respectively the [`contentType`](..\..\v4\shared\src\types\panel-settings-types\interfaces\content-type-setting.md) and [`styles`](..\..\v4\shared\src\types\panel-settings-types\interfaces\style-setting.md) properties.
+It's possible to guide users toward a specific look and feel, by preselecting the Content Type (Photo, Graphic, or Art) and Styles (Movements, Themes, Materials, and so on) in the lefthand panel—via the [`panelSettings`](../../v4/shared/src/types/panel-settings-types/interfaces/panel-settings.md) object, respectively the [`contentType`](../../v4/shared/src/types/panel-settings-types/interfaces/content-type-setting.md) and [`styles`](../../v4/shared/src/types/panel-settings-types/interfaces/style-setting.md) properties.
 
 ```javascript
 // main.js
@@ -308,13 +308,13 @@ const appConfig = {
 
 ![Generate image styles](./images/generate-image--styles.png)
 
-You can even use images as Style and Composition references, respectively by passing a [`imageStyleReference`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#imagestylereference) or [`imageCompositionReference`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#imagecompositionreference) properties of type [`Asset`](..\..\v4\shared\src\types\asset-types\type-aliases\asset.md) directly to the `appConfig` object.
+You can even use images as Style and Composition references, respectively by passing a [`imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#imagestylereference) or [`imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#imagecompositionreference) properties of type [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md) directly to the `appConfig` object.
 
 ### 3.4 Prompt moderation
 
-Firefly models have built-in moderation to detect and filter out harmful content. However, you can further enhance the moderation process by passing a [`isPromptSafe`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#ispromptsafe) property to `appConfig`.
+Firefly models have built-in moderation to detect and filter out harmful content. However, you can further enhance the moderation process by passing a [`isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#ispromptsafe) property to `appConfig`.
 
-In there, you can implement your own moderation logic, or use a third-party service like [OpenAI's Moderation API](https://platform.openai.com/docs/api-reference/moderations). The asynchronous callback receives a `prompt` string and returns a promise that resolves to a [`PromptSafetyCheckResponse`](..\..\v4\shared\src\types\module\app-config-types\interfaces\prompt-safety-check-response.md) object.
+In there, you can implement your own moderation logic, or use a third-party service like [OpenAI's Moderation API](https://platform.openai.com/docs/api-reference/moderations). The asynchronous callback receives a `prompt` string and returns a promise that resolves to a [`PromptSafetyCheckResponse`](../../v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-check-response.md) object.
 
 ```javascript
 // main.js
@@ -349,9 +349,9 @@ In the UI:
 In `main.js`:
 
 - Call the `module.createImageFromText()` method when users click the `generateBtn` button.
-- Use a [`callbacks`](..\..\v4\shared\src\types\callbacks-types\interfaces\callbacks.md) object to handle the experience lifecycle.
-  - [`onPublish()`](..\..\v4\shared\src\types\callbacks-types\type-aliases\publish-callback.md) runs when users publish the generated image. The [`publishParams`](..\..\v4\shared\src\types\publish-params-types\interfaces\text-to-image-publish-params.md) object contains a `projectId` and an `asset` object with the generated image data, which you'll use to set the `src` attribute of the `<img>` element.
-- Use the [`exportConfig`](..\..\v4\shared\src\types\export-config-types\type-aliases\export-option.md) array to set the export options available to users. Here, you'll add two buttons:
+- Use a [`callbacks`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md) object to handle the experience lifecycle.
+  - [`onPublish()`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md) runs when users publish the generated image. The [`publishParams`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params.md) object contains a `projectId` and an `asset` object with the generated image data, which you'll use to set the `src` attribute of the `<img>` element.
+- Use the [`exportConfig`](../../v4/shared/src/types/export-config-types/type-aliases/export-option.md) array to set the export options available to users. Here, you'll add two buttons:
   - `download`: allows users to download the generated image.
   - `save-modified-asset`: saves the generated image and passes it to the `onPublish()` callback.
 
@@ -488,9 +488,9 @@ When you add the Edit dropdown menu to each generated image (via the `"edit-drop
 
 ![Generate image edit image](./images/generate-image--edit-image.png)
 
-Whenever your users move from one workflow to another, the Embed SDK calls the [`onIntentChange()`](..\..\v4\shared\src\types\callbacks-types\type-aliases\intent-change-callback.md) callback to let you know about the change. You can use this opportunity to configure the new intent by passing `appConfig`, `exportConfig`, or any other relevant settings. These configurations apply when launching the new intent. If you don't provide them, the SDK uses default settings.
+Whenever your users move from one workflow to another, the Embed SDK calls the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) callback to let you know about the change. You can use this opportunity to configure the new intent by passing `appConfig`, `exportConfig`, or any other relevant settings. These configurations apply when launching the new intent. If you don't provide them, the SDK uses default settings.
 
-The callback receives two parameters, the `oldIntent` and the `newIntent`, both of type [`ActionIntent`](..\..\v4\shared\src\types\action-intent-types\index.md). In our specific case, the `oldIntent` will be [`ModuleIntent.CREATE_IMAGE_FROM_TEXT`](..\..\v4\shared\src\types\action-intent-types\enumerations\module-intent.md) and the `newIntent` will be a [`ModuleIntent.EDIT_IMAGE`](..\..\v4\shared\src\types\action-intent-types\enumerations\module-intent.md).
+The callback receives two parameters, the `oldIntent` and the `newIntent`, both of type [`ActionIntent`](../../v4/shared/src/types/action-intent-types/index.md). In our specific case, the `oldIntent` will be [`ModuleIntent.CREATE_IMAGE_FROM_TEXT`](../../v4/shared/src/types/action-intent-types/enumerations/module-intent.md) and the `newIntent` will be a [`ModuleIntent.EDIT_IMAGE`](../../v4/shared/src/types/action-intent-types/enumerations/module-intent.md).
 
 ```javascript
 // main.js
@@ -593,7 +593,7 @@ interface CommunityWallAssetData {
 
 The `thumbnailSrc` is the smaller image, used to display in the Community Wall, while the `fullRenditionSrc` is the larger image, used to display in the OneUp view. Both must be **base64 encoded strings**.
 
-For more information about the aspect ratio of the assets, please refer to the [Generate Image v2 Concepts guide](..\concepts\generate-image-v2.md#asset-schema).
+For more information about the aspect ratio of the assets, please refer to the [Generate Image v2 Concepts guide](../concepts/generate-image-v2.md#asset-schema).
 
 ### 4.3 Implement the `fetchCommunityAssets` callback
 
@@ -1031,7 +1031,7 @@ export const fetchCommunityAssets = async () => {
 
 ## Next steps
 
-Congratulations, you've completed the Generate Image tutorial! You can now explore the [Generate Image v2 Concepts guide](..\concepts\generate-image-v2.md) and learn about all its features.
+Congratulations, you've completed the Generate Image tutorial! You can now explore the [Generate Image v2 Concepts guide](../concepts/generate-image-v2.md) and learn about all its features.
 
 ## Need help?
 
@@ -1039,8 +1039,8 @@ Have questions or running into issues? Join our [Community Forum](https://commun
 
 ## Related resources
 
-- **[API Reference](..\..\v4\index.md)** - Complete SDK documentation
-- **[Adobe Express Embed SDK Overview](..\index.md)** - High-level introduction
+- **[API Reference](../../v4/index.md)** - Complete SDK documentation
+- **[Adobe Express Embed SDK Overview](../index.md)** - High-level introduction
 - **[Demo Application](https://demo.expressembed.com/)** - Interactive demo showcasing SDK capabilities
 - **[Sample Applications](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials)** - Working code examples and tutorials
-- **[Changelog](..\changelog\index.md)** - Latest updates and improvements
+- **[Changelog](../changelog/index.md)** - Latest updates and improvements

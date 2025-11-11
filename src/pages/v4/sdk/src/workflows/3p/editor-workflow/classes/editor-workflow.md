@@ -1,16 +1,16 @@
-[**cc-everywhere**](..\..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: EditorWorkflow
 
 ## Extends
 
-- [`BaseWorkflow`](..\..\..\base-workflow\classes\base-workflow.md)
+- [`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md)
 
 ## Implements
 
-- [`EditorWorkflow`](..\..\editor-workflow-types\interfaces\editor-workflow.md)
+- [`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md)
 
 ## Constructors
 
@@ -33,7 +33,7 @@ new EditorWorkflow(actionManager, context): EditorWorkflow;
 
 #### Inherited from
 
-[`BaseWorkflow`](..\..\..\base-workflow\classes\base-workflow.md).[`constructor`](..\..\..\base-workflow\classes\base-workflow.md#constructor)
+[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
 
 ## Methods
 
@@ -53,10 +53,10 @@ Start the editor workflow with an empty canvas
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`CreateDocConfig`](..\..\..\..\..\..\shared\src\types\editor\doc-config-types\interfaces\create-doc-config.md) | pass a custom canvas size |
-| `appConfig?` | [`BaseEditorAppConfig`](..\..\..\..\..\..\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`CreateDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-doc-config.md) | pass a custom canvas size |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -64,9 +64,9 @@ Start the editor workflow with an empty canvas
 
 #### Implementation of
 
-[`EditorWorkflow`](..\..\editor-workflow-types\interfaces\editor-workflow.md).[`create`](..\..\editor-workflow-types\interfaces\editor-workflow.md#create)
+[`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md).[`create`](../../editor-workflow-types/interfaces/editor-workflow.md#create)
 
-***
+<HorizontalLine />
 
 ### createWithAsset()
 
@@ -84,10 +84,10 @@ Start the editor workflow by passing an image asset
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`CreateWithAssetDocConfig`](..\..\..\..\..\..\shared\src\types\editor\doc-config-types\interfaces\create-with-asset-doc-config.md) | pass an image asset as base64 |
-| `appConfig?` | [`BaseEditorAppConfig`](..\..\..\..\..\..\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig` | [`CreateWithAssetDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-with-asset-doc-config.md) | pass an image asset as base64 |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -95,9 +95,9 @@ Start the editor workflow by passing an image asset
 
 #### Implementation of
 
-[`EditorWorkflow`](..\..\editor-workflow-types\interfaces\editor-workflow.md).[`createWithAsset`](..\..\editor-workflow-types\interfaces\editor-workflow.md#createwithasset)
+[`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md).[`createWithAsset`](../../editor-workflow-types/interfaces/editor-workflow.md#createwithasset)
 
-***
+<HorizontalLine />
 
 ### createWithTemplate()
 
@@ -115,10 +115,10 @@ Start the editor workflow by passing an Express Template ID
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`CreateWithTemplateDocConfig`](..\..\..\..\..\..\shared\src\types\editor\doc-config-types\interfaces\create-with-template-doc-config.md) | pass a template ID |
-| `appConfig?` | [`BaseEditorAppConfig`](..\..\..\..\..\..\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig` | [`CreateWithTemplateDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/create-with-template-doc-config.md) | pass a template ID |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -126,9 +126,9 @@ Start the editor workflow by passing an Express Template ID
 
 #### Implementation of
 
-[`EditorWorkflow`](..\..\editor-workflow-types\interfaces\editor-workflow.md).[`createWithTemplate`](..\..\editor-workflow-types\interfaces\editor-workflow.md#createwithtemplate)
+[`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md).[`createWithTemplate`](../../editor-workflow-types/interfaces/editor-workflow.md#createwithtemplate)
 
-***
+<HorizontalLine />
 
 ### edit()
 
@@ -146,10 +146,10 @@ Start the editor workflow by passing an Express Document ID
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`EditDocConfig`](..\..\..\..\..\..\shared\src\types\editor\doc-config-types\interfaces\edit-doc-config.md) | pass an Express Document ID |
-| `appConfig?` | [`BaseEditorAppConfig`](..\..\..\..\..\..\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig` | [`EditDocConfig`](../../../../../../shared/src/types/editor/doc-config-types/interfaces/edit-doc-config.md) | pass an Express Document ID |
+| `appConfig?` | [`BaseEditorAppConfig`](../../../../../../shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -157,4 +157,4 @@ Start the editor workflow by passing an Express Document ID
 
 #### Implementation of
 
-[`EditorWorkflow`](..\..\editor-workflow-types\interfaces\editor-workflow.md).[`edit`](..\..\editor-workflow-types\interfaces\editor-workflow.md#edit)
+[`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md).[`edit`](../../editor-workflow-types/interfaces/editor-workflow.md#edit)

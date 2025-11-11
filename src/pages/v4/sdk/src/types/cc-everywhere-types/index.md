@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/types/CCEverywhere.types
 
@@ -8,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [State](enumerations\state.md) | - |
+| [State](enumerations/state.md) | - |

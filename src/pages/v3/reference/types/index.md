@@ -227,8 +227,7 @@ Asset-related information received with `onPublish` callback in quick actions.
 | YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
 | Zoom background | "ZoomBackground" | 1,920 x 1,080px
 
-&lt; !-- | Name tag | "NameTag" | 
-| Place card | "PlaceCard" | -- &gt;
+
 
 ## CCXOutputParams
 

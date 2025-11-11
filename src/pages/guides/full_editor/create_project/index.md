@@ -32,10 +32,10 @@ All the properties are optional.
 
 | Property | Type| Description
 | :-- | :-- | :--
-| docConfig | [CreateDocConfig](..\..\..\reference\CCEverywhere\editor\index.md#createdocconfig) | Pass a custom canvas size
-| appConfig | [BaseEditorAppConfig](..\..\..\reference\CCEverywhere\editor\index.md#baseeditorappconfig) | Parameters to configure editor/modal UI
-| exportConfig | [ExportOptions](..\..\..\reference\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](..\..\..\reference\types\index.md#containerconfig) | Properties to configure the SDK container
+| docConfig | [CreateDocConfig](../../../reference/CCEverywhere/editor/index.md#createdocconfig) | Pass a custom canvas size
+| appConfig | [BaseEditorAppConfig](../../../reference/CCEverywhere/editor/index.md#baseeditorappconfig) | Parameters to configure editor/modal UI
+| exportConfig | [ExportOptions](../../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
 
 ## createWithAsset()
 
@@ -49,10 +49,10 @@ editor.createWithAsset(docConfig, appConfig, exportConfig, containerConfig);
 
 | Property | Type| Description
 | :-- | :-- | :--
-| docConfig | [CreateWithAssetDocConfig](..\..\..\reference\CCEverywhere\editor\index.md#createwithassetdocconfig) | Pass an image and custom canvas size
-| appConfig | [BaseEditorAppConfig](..\..\..\reference\CCEverywhere\editor\index.md#baseeditorappconfig) | Parameters to configure editor/modal UI
-| exportConfig | [ExportOptions](..\..\..\reference\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](..\..\..\reference\types\index.md#containerconfig) | Properties to configure the SDK container
+| docConfig | [CreateWithAssetDocConfig](../../../reference/CCEverywhere/editor/index.md#createwithassetdocconfig) | Pass an image and custom canvas size
+| appConfig | [BaseEditorAppConfig](../../../reference/CCEverywhere/editor/index.md#baseeditorappconfig) | Parameters to configure editor/modal UI
+| exportConfig | [ExportOptions](../../../reference/types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../../reference/types/index.md#containerconfig) | Properties to configure the SDK container
 
 ## Example: Create new project
 

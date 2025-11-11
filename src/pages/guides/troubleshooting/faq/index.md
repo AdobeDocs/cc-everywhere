@@ -73,7 +73,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 ### How many domains can be added with a single API key for a service?
 
-You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](..\express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
+You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
 
 ### How do I enable SSO for my service?
 
@@ -98,7 +98,7 @@ Your users can use the integrations, but, we will display a red banner indicatin
 - Safari: Version 17 or later
 - Firefox: Version 117 or later
 
-You can refer to the complete [technical requirements](..\..\quickstart\technical-requirements.md) here.
+You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
 
 ### What operating systems are supported?
 
@@ -106,12 +106,12 @@ You can refer to the complete [technical requirements](..\..\quickstart\technica
 - macOS: Version 11 or later
 - ChromeOS
 
-You can refer to the complete [technical requirements](..\..\quickstart\technical-requirements.md) here.
+You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
 
 ### I run into the "Adobe Express is not available" error
 
-Please refer to this [troubleshooting guide](..\express-unavailable-error.md).
+Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 
 ### How can I debug and troubleshoot errors effectively?
 
-Refer to the [error handling guide](..\..\concepts\error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
+Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.

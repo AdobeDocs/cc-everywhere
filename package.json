@@ -11,36 +11,17 @@
     "name": "Stephan Ringel",
     "url": "https://github.com/icaraps"
   },
-  "dependencies": {
-    "@adobe/gatsby-theme-aio": "^4.15.1",
-    "gatsby": "4.22.0",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
-  },
-  "resolutions": {
-    "sharp": "0.33.0",
-    "gatsby-sharp": "1.12.0"
-  },
   "scripts": {
-    "start": "gatsby build && gatsby serve",
-    "start:prefix": "gatsby build --prefix-paths && gatsby serve --prefix-paths",
-    "dev": "gatsby develop",
-    "dev:https": "gatsby develop --https --host localhost.corp.adobe.com --port 9000",
-    "build": "gatsby build",
-    "build:incremental": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build --log-pages",
-    "serve": "gatsby serve",
-    "clean": "gatsby clean",
-    "test:links": "./node_modules/.bin/remark --use remark-validate-links src/pages --quiet --frail",
-    "test:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src",
-    "fix:lint": "./node_modules/.bin/markdownlint --config .github/linters/.markdown-lint.yml src --fix",
-    "create-tutorial": "node scripts/create-tutorial.js"
+    "dev": "node ./dev.mjs",
+    "buildNavigation": "npx --yes github:AdobeDocs/adp-devsite-utils buildNavigation -v",
+    "buildRedirections": "npx --yes github:AdobeDocs/adp-devsite-utils buildRedirections -v",
+    "renameFiles": "npx --yes github:AdobeDocs/adp-devsite-utils renameFiles -v",
+    "normalizeLinks": "npx --yes github:AdobeDocs/adp-devsite-utils normalizeLinks -v",
+    "buildSiteWideBanner": "npx --yes github:AdobeDocs/adp-devsite-utils buildSiteWideBanner -v",
+    "lint": "npx --yes github:AdobeDocs/adp-devsite-utils runLint -v"
   },
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.2.1",
   "devDependencies": {
-    "glob": "11.0.0",
-    "markdownlint": "^0.35.0",
-    "markdownlint-cli": "^0.41.0",
-    "remark-cli": "^12.0.1",
-    "remark-validate-links": "^13.0.1"
+    "express": "5.1.0"
   }
 }

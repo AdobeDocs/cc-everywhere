@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/3p/CCEverywhere.types
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CCEverywhereInterface](interfaces\cc-everywhere-interface.md) | - |
+| [CCEverywhereInterface](interfaces/cc-everywhere-interface.md) | - |

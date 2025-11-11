@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Class: ConsoleHandler&lt; T\ &gt;
 
@@ -60,7 +60,7 @@ static info(information): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### error()
 
@@ -84,7 +84,7 @@ static error<T>(error): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### error()
 
@@ -106,7 +106,7 @@ error(error): void;
 
 [`IErrorMessageHandler`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md).[`error`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md#error)
 
-***
+<HorizontalLine />
 
 ### warn()
 
@@ -128,7 +128,7 @@ warn(warning): void;
 
 [`IErrorMessageHandler`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md).[`warn`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md#warn)
 
-***
+<HorizontalLine />
 
 ### info()
 

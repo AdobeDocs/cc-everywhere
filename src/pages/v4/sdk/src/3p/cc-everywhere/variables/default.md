@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Variable: default
 
@@ -23,14 +23,14 @@ Please ensure to call this API only once.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `hostInfo` | [`HostInfo`](..\..\..\..\..\shared\src\types\host-info-types\type-aliases\host-info.md) |  |
-| `configParams?` | [`ConfigParamsBase`](..\..\..\..\..\shared\src\types\host-info-types\interfaces\config-params-base.md) |  |
-| `authOption?` | [`AuthOption`](..\..\..\..\..\shared\src\types\authentication-types\type-aliases\auth-option.md) | authentication configuration |
-| `clientAuthProvider?` | [`ClientAuthProvider`](..\..\..\..\..\shared\src\types\client-authentication-types\interfaces\client-auth-provider.md) | client authentication provider for fetching client authentication details. |
+| `hostInfo` | [`HostInfo`](../../../../../shared/src/types/host-info-types/type-aliases/host-info.md) |  |
+| `configParams?` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |  |
+| `authOption?` | [`AuthOption`](../../../../../shared/src/types/authentication-types/type-aliases/auth-option.md) | authentication configuration |
+| `clientAuthProvider?` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | client authentication provider for fetching client authentication details. |
 
 #### Returns
 
-`Promise`&lt; [`CCEverywhere`](..\classes\cc-everywhere.md)\ &gt;
+`Promise`&lt; [`CCEverywhere`](../classes/cc-everywhere.md)/ &gt;
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
 

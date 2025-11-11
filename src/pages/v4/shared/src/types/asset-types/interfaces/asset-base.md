@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Interface: AssetBase&lt; T\ &gt;
 

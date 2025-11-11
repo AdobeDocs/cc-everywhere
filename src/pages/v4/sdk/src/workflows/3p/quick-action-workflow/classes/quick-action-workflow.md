@@ -1,16 +1,16 @@
-[**cc-everywhere**](..\..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: QuickActionWorkflow
 
 ## Extends
 
-- [`BaseWorkflow`](..\..\..\base-workflow\classes\base-workflow.md)
+- [`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md)
 
 ## Implements
 
-- [`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md)
+- [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md)
 
 ## Constructors
 
@@ -33,7 +33,7 @@ new QuickActionWorkflow(actionManager, context): QuickActionWorkflow;
 
 #### Inherited from
 
-[`BaseWorkflow`](..\..\..\base-workflow\classes\base-workflow.md).[`constructor`](..\..\..\base-workflow\classes\base-workflow.md#constructor)
+[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
 
 ## Methods
 
@@ -53,10 +53,10 @@ Lower your file size by changing your PNG images into JPG files.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -64,9 +64,9 @@ Lower your file size by changing your PNG images into JPG files.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`convertToJPEG`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#converttojpeg)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToJPEG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttojpeg)
 
-***
+<HorizontalLine />
 
 ### convertToPNG()
 
@@ -84,10 +84,10 @@ Save your images as PNG files to improve file quality.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -95,9 +95,9 @@ Save your images as PNG files to improve file quality.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`convertToPNG`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#converttopng)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToPNG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttopng)
 
-***
+<HorizontalLine />
 
 ### convertToSVG()
 
@@ -115,10 +115,10 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -126,9 +126,9 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`convertToSVG`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#converttosvg)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToSVG`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttosvg)
 
-***
+<HorizontalLine />
 
 ### cropImage()
 
@@ -146,10 +146,10 @@ Transform your image into the perfect shape or size in seconds.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -157,9 +157,9 @@ Transform your image into the perfect shape or size in seconds.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`cropImage`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#cropimage)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`cropImage`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#cropimage)
 
-***
+<HorizontalLine />
 
 ### resizeImage()
 
@@ -177,10 +177,10 @@ Change the dimensions of any photo.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -188,9 +188,9 @@ Change the dimensions of any photo.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`resizeImage`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#resizeimage)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`resizeImage`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#resizeimage)
 
-***
+<HorizontalLine />
 
 ### removeBackground()
 
@@ -208,10 +208,10 @@ Easily remove the background of your photos.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -219,9 +219,9 @@ Easily remove the background of your photos.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`removeBackground`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#removebackground)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`removeBackground`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#removebackground)
 
-***
+<HorizontalLine />
 
 ### generateQRCode()
 
@@ -239,10 +239,10 @@ Generate a QR Code for a URL.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -250,9 +250,9 @@ Generate a QR Code for a URL.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`generateQRCode`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#generateqrcode)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`generateQRCode`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#generateqrcode)
 
-***
+<HorizontalLine />
 
 ### convertToGIF()
 
@@ -270,10 +270,10 @@ Convert a video asset to GIF format.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -281,9 +281,9 @@ Convert a video asset to GIF format.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`convertToGIF`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#converttogif)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToGIF`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttogif)
 
-***
+<HorizontalLine />
 
 ### convertToMP4()
 
@@ -301,10 +301,10 @@ Convert a video asset to MP4 format.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -312,9 +312,9 @@ Convert a video asset to MP4 format.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`convertToMP4`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#converttomp4)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`convertToMP4`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#converttomp4)
 
-***
+<HorizontalLine />
 
 ### cropVideo()
 
@@ -332,10 +332,10 @@ Transform your video into the perfect shape or size in seconds.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -343,9 +343,9 @@ Transform your video into the perfect shape or size in seconds.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`cropVideo`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#cropvideo)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`cropVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#cropvideo)
 
-***
+<HorizontalLine />
 
 ### mergeVideos()
 
@@ -363,10 +363,10 @@ Collate multiple video/photo into a single video.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`MergeVideoDocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\merge-video-doc-config.md) | pass an array of assets to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`MergeVideoDocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/merge-video-doc-config.md) | pass an array of assets to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -374,9 +374,9 @@ Collate multiple video/photo into a single video.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`mergeVideos`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#mergevideos)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`mergeVideos`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#mergevideos)
 
-***
+<HorizontalLine />
 
 ### resizeVideo()
 
@@ -394,10 +394,10 @@ Change the dimensions of any video.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -405,9 +405,9 @@ Change the dimensions of any video.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`resizeVideo`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#resizevideo)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`resizeVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#resizevideo)
 
-***
+<HorizontalLine />
 
 ### trimVideo()
 
@@ -425,10 +425,10 @@ Trim a video to a desired length.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -436,9 +436,9 @@ Trim a video to a desired length.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`trimVideo`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#trimvideo)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`trimVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#trimvideo)
 
-***
+<HorizontalLine />
 
 ### animateFromAudio()
 
@@ -456,10 +456,10 @@ Create an animated video from an audio.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -467,9 +467,9 @@ Create an animated video from an audio.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`animateFromAudio`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#animatefromaudio)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`animateFromAudio`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#animatefromaudio)
 
-***
+<HorizontalLine />
 
 ### captionVideo()
 
@@ -487,10 +487,10 @@ Add captions to any video.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`DocConfig`](..\..\..\..\..\..\shared\src\types\quick-action\doc-config-types\interfaces\doc-config.md) | pass an asset to preload on to the Quick Action Editor |
-| `appConfig?` | [`AppConfig`](..\..\..\..\..\..\shared\src\types\quick-action\app-config-types\interfaces\app-config.md) | properties to configure the Editor |
-| `exportConfig?` | [`ExportOptions`](..\..\..\..\..\..\shared\src\types\export-config-types\type-aliases\export-options.md) | properties to configure the export options |
-| `containerConfig?` | [`ContainerConfig`](..\..\..\..\..\..\shared\src\types\container-config-types\type-aliases\container-config.md) | properties to configure the SDK container |
+| `docConfig?` | [`DocConfig`](../../../../../../shared/src/types/quick-action/doc-config-types/interfaces/doc-config.md) | pass an asset to preload on to the Quick Action Editor |
+| `appConfig?` | [`AppConfig`](../../../../../../shared/src/types/quick-action/app-config-types/interfaces/app-config.md) | properties to configure the Editor |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 
 #### Returns
 
@@ -498,4 +498,4 @@ Add captions to any video.
 
 #### Implementation of
 
-[`QuickActionWorkflow`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md).[`captionVideo`](..\..\quick-action-workflow-types\interfaces\quick-action-workflow.md#captionvideo)
+[`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md).[`captionVideo`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md#captionvideo)

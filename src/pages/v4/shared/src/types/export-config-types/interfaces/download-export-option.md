@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: DownloadExportOption<U\>
 
@@ -9,7 +9,7 @@ Export option for downloading content to the user's device.
 ## See
 
  - [DownloadAction](download-action.md) for available download actions
- - [ButtonStyle](..\type-aliases\button-style.md), [LinkStyle](link-style.md) for common style options
+ - [ButtonStyle](../type-aliases/button-style.md), [LinkStyle](link-style.md) for common style options
 
 ## Extends
 

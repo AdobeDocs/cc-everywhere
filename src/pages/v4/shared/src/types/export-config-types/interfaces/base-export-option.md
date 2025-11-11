@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: BaseExportOption<U\>
 
@@ -23,4 +23,4 @@
 | ------ | ------ |
 | `id` | `string` |
 | `style` | `U` |
-| `action` | [`ExportAction`](..\type-aliases\export-action.md) |
+| `action` | [`ExportAction`](../type-aliases/export-action.md) |

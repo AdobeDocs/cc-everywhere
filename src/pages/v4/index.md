@@ -51,7 +51,7 @@ Once you have embedded the SDK into your application, the first step is to call 
 
 #### initialize()
 
-The asynchronous [`initialize()`](./sdk\src\3p\cc-everywhere\variables\default.md#initialize) method takes [hostInfo](./shared\src\types\host-info-types\interfaces\host-info-specified-base.md), an optional [configParams](./shared\src\types\host-info-types\interfaces\config-params-base.md), an optional [authOption](./shared\src\types\authentication-types\type-aliases\auth-option.md) and returns a Promise with a [CCEverywhere](./sdk\src\3p\cc-everywhere\classes\cc-everywhere.md) object.
+The asynchronous [`initialize()`](./sdk/src/3p/cc-everywhere/variables/default.md#initialize) method takes [hostInfo](./shared/src/types/host-info-types/interfaces/host-info-specified-base.md), an optional [configParams](./shared/src/types/host-info-types/interfaces/config-params-base.md), an optional [authOption](./shared/src/types/authentication-types/type-aliases/auth-option.md) and returns a Promise with a [CCEverywhere](./sdk/src/3p/cc-everywhere/classes/cc-everywhere.md) object.
 
 ```ts
 initialize: (
@@ -110,13 +110,13 @@ The shared reference page contains details about objects that are shared across 
 
 ## Additional Resources
 
-[Quickstart Guide](..\guides\quickstart\index.md)
+[Quickstart Guide](../guides/quickstart/index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](..\guides\tutorials\index.md)
+[Tutorials](../guides/tutorials/index.md)
 
 Explore the collection of tutorials.
 

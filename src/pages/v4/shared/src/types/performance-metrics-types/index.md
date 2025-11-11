@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/PerformanceMetrics.types
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [PerformanceMetrics](interfaces\performance-metrics.md) | - |
+| [PerformanceMetrics](interfaces/performance-metrics.md) | - |

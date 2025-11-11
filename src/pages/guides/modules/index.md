@@ -40,9 +40,9 @@ All the properties in this object are optional.
 
 | Property        | Type                                                                                                        | Description                                                                                                        |
 | :-------------- | :---------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| appConfig       | [TextToImageAppConfig](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md) | Pass a text prompt to preload in the Generate Image editor                                                         |
-| exportConfig    | [ExportOptions](..\..\v4\shared\src\types\export-config-types\type-aliases\export-options.md)                 | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
-| containerConfig | [ContainerConfig](..\..\v4\shared\src\types\container-config-types\type-aliases\container-config.md)          | Properties to configure the SDK container                                                                          |
+| appConfig       | [TextToImageAppConfig](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) | Pass a text prompt to preload in the Generate Image editor                                                         |
+| exportConfig    | [ExportOptions](../../v4/shared/src/types/export-config-types/type-aliases/export-options.md)                 | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
+| containerConfig | [ContainerConfig](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md)          | Properties to configure the SDK container                                                                          |
 
 ## editImage()
 
@@ -62,10 +62,10 @@ The only required property is `docConfig`.
 
 | Property        | Type                                                                                                     | Description                                                                                                        |
 | :-------------- | :------------------------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
-| docConfig       | [EditImageDocConfig](..\..\v4\shared\src\types\module\doc-config-types\interfaces\edit-image-doc-config.md)  | Pass an asset to preload into the Edit Image module                                                                |
-| appConfig       | [BaseEditorAppConfig](..\..\v4\shared\src\types\module\app-config-types\interfaces\edit-image-app-config.md) | Pass callback functions                                                                                            |
-| exportConfig    | [ExportOptions](..\..\v4\shared\src\types\export-config-types\type-aliases\export-options.md)[]            | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
-| containerConfig | [ContainerConfig](..\..\v4\shared\src\types\container-config-types\type-aliases\container-config.md)       | Properties to configure the SDK container                                                                          |
+| docConfig       | [EditImageDocConfig](../../v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md)  | Pass an asset to preload into the Edit Image module                                                                |
+| appConfig       | [BaseEditorAppConfig](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md) | Pass callback functions                                                                                            |
+| exportConfig    | [ExportOptions](../../v4/shared/src/types/export-config-types/type-aliases/export-options.md)[]            | Configure export options. If no export options are specified, the editor falls back to the default layout options. |
+| containerConfig | [ContainerConfig](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md)       | Properties to configure the SDK container                                                                          |
 
 ## Example: Generate from text
 

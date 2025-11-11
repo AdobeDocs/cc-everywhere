@@ -1,8 +1,8 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Variable: DEFAULT\_FEATURE\_FLAG\_CONFIG
+# Variable: DEFAULT/_FEATURE/_FLAG/_CONFIG
 
 ```ts
 const DEFAULT_FEATURE_FLAG_CONFIG: FeatureFlagConfig;

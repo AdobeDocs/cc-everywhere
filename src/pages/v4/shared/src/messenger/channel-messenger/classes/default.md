@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Class: default
 
@@ -50,7 +50,7 @@ addTarget(targetChannel, targetChannelInfo): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeTarget()
 
@@ -68,7 +68,7 @@ removeTarget(targetChannel): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### hasTarget()
 
@@ -86,7 +86,7 @@ hasTarget(targetChannel): boolean;
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### getTarget()
 
@@ -107,7 +107,7 @@ getTarget(targetChannel):
   \| `undefined`
   \| [`TargetChannelInfo`](..\..\channel-messenger-types\interfaces\target-channel-info.md)
 
-***
+<HorizontalLine />
 
 ### sendMessage()
 
@@ -136,7 +136,7 @@ sendMessage<T>(
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### removeListener()
 

@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\index.md)
+[**cc-everywhere**](../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/types
 
@@ -8,4 +8,4 @@
 
 ### State
 
-Re-exports [State](cc-everywhere-types\enumerations\state.md)
+Re-exports [State](cc-everywhere-types/enumerations/state.md)

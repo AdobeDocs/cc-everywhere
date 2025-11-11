@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: LinkStyle
 
@@ -12,4 +12,4 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `uiType` | [`LINK`](..\enumerations\export-option-ui.md#link) | [`Style`](style.md).[`uiType`](style.md#uitype) |
+| `uiType` | [`LINK`](../enumerations/export-option-ui.md#link) | [`Style`](style.md).[`uiType`](style.md#uitype) |

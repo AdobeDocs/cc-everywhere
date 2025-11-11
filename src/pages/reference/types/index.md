@@ -223,9 +223,6 @@ All the callbacks are optional and return void. Callbacks are defined in the `ap
 | YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
 | Zoom background | "ZoomBackground" | 1,920 x 1,080px
 
-&lt; !-- | Name tag | "NameTag" | 
-| Place card | "PlaceCard" | -- &gt;
-
 ## ContainerConfig
 
 Parameters to define editor modal dialog UI constraints.

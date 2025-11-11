@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: Style
 
@@ -14,4 +14,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `uiType` | [`ExportOptionUI`](..\enumerations\export-option-ui.md) |
+| `uiType` | [`ExportOptionUI`](../enumerations/export-option-ui.md) |

@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ContinueEditingDropdownOption
 
@@ -14,5 +14,5 @@
 | ------ | ------ | ------ | ------ |
 | `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#id) |
 | `style` | [`DropdownOptionStyle`](dropdown-option-style.md) | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#style) |
-| `action` | [`ContinueEditingAction`](..\type-aliases\continue-editing-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#action) | - |
+| `action` | [`ContinueEditingAction`](../type-aliases/continue-editing-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#action) | - |
 | `label?` | `string` | - | - |

@@ -38,7 +38,7 @@ Lastly, **Custom Firefly Models** allow enterprise users to tailor outputs to un
 
 ## How to enable the new experience
 
-Generate Image v2 is, at the moment, disabled by default, with the classic interface displayed. To activate the new experience, you need to set the new `appVersion` property to the string `"2"` in the [`appConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md) object.
+Generate Image v2 is, at the moment, disabled by default, with the classic interface displayed. To activate the new experience, you need to set the new `appVersion` property to the string `"2"` in the [`appConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md) object.
 
 ```js
 await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
@@ -58,13 +58,13 @@ module.createImageFromText(appConfig, {});
 
 ## Feature configurations
 
-The new experience introduces several new feature configurations to the [`TextToImageAppConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties) object. They can be independently enabled or disabled to customize the module according to your needs.
+The new experience introduces several new feature configurations to the [`TextToImageAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) object. They can be independently enabled or disabled to customize the module according to your needs.
 
 ### Community Wall
 
 ![Community Wall](./img/generate-image--community-wall.jpg)
 
-The infinite-scroll collection of user-generated images with prompts is controlled by the boolean `community-wall` property of the [`featureConfig`](..\..\v4\shared\src\types\module\app-config-types\enumerations\text-to-image-feature.md) object:
+The infinite-scroll collection of user-generated images with prompts is controlled by the boolean `community-wall` property of the [`featureConfig`](../../v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature.md) object:
 
 ```js
 const appConfig = {
@@ -85,7 +85,7 @@ Please note, when passing a prompt to the module (via `appConfig.promptText`), t
 
 ![Fast Mode](./img/generate-image--fast-mode.jpg)
 
-This new option allows for faster generation of smaller images (1K, or 1024x1024 for a 1:1 ratio, compared to the usual 2K, or 2048x2048) with fewer details. It's a great choice when timely generations are needed, and less precision doesn't matter, for example, in backgrounds, or simpler illustrations. The same [`featureConfig`](..\..\v4\shared\src\types\module\app-config-types\enumerations\text-to-image-feature.md) object allows you to toggle the `fast-mode` boolean:
+This new option allows for faster generation of smaller images (1K, or 1024x1024 for a 1:1 ratio, compared to the usual 2K, or 2048x2048) with fewer details. It's a great choice when timely generations are needed, and less precision doesn't matter, for example, in backgrounds, or simpler illustrations. The same [`featureConfig`](../../v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature.md) object allows you to toggle the `fast-mode` boolean:
 
 ```js
 const appConfig = {
@@ -97,7 +97,7 @@ const appConfig = {
 };
 ```
 
-When enabled, a Fast Mode switch will be visible a the bottom of the generation options. To control its default state there's an additional [`fastModeConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\fast-mode-config.md) object property, whose `defaultFastModeState` can be set to `"on"` or `"off"`:
+When enabled, a Fast Mode switch will be visible a the bottom of the generation options. To control its default state there's an additional [`fastModeConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/fast-mode-config.md) object property, whose `defaultFastModeState` can be set to `"on"` or `"off"`:
 
 ```js
 const appConfig = {
@@ -116,7 +116,7 @@ const appConfig = {
 
 ![Rich Preview](./img/generate-image--rich-preview.jpg)
 
-In addition to the Grid and Carousel view, the new experience introduces the possibility to isolate one of the four generated images, and display it in a larger, focused preview. This feature is controlled by the [`thumbnailOptions`](..\..\v4\shared\src\types\module\app-config-types\enumerations\thumbnail-option.md) property of the `appConfig` object, which array can now include `"rich-preview"`:
+In addition to the Grid and Carousel view, the new experience introduces the possibility to isolate one of the four generated images, and display it in a larger, focused preview. This feature is controlled by the [`thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md) property of the `appConfig` object, which array can now include `"rich-preview"`:
 
 ```js
 const appConfig = {
@@ -131,7 +131,7 @@ const appConfig = {
 
 ![Thumbnail Actions](./img/generate-image--further-intent.jpg)
 
-You now have a set of actions you can immediately perform on the generated image. You can allow your user to transfer the image directly to the editor. These actions are collected in a dropdown menu within the thumbnail. They include adding text, cropping, and applying filters. Similar to the Rich Preview, these actions are controlled by the [`thumbnailOptions`](..\..\v4\shared\src\types\module\app-config-types\enumerations\thumbnail-option.md) property of the `appConfig` object, which array can now include `"edit-dropdown"`. Additionally, the actual options are set in the [`editDropdownOptions`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-intent.md) array, as option objects:
+You now have a set of actions you can immediately perform on the generated image. You can allow your user to transfer the image directly to the editor. These actions are collected in a dropdown menu within the thumbnail. They include adding text, cropping, and applying filters. Similar to the Rich Preview, these actions are controlled by the [`thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md) property of the `appConfig` object, which array can now include `"edit-dropdown"`. Additionally, the actual options are set in the [`editDropdownOptions`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) array, as option objects:
 
 ```js
 const appConfig = {
@@ -148,13 +148,13 @@ const appConfig = {
 };
 ```
 
-For an updated list of all the available options, refer to the [`EditFurtherIntent`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-intent.md) enumeration.
+For an updated list of all the available options, refer to the [`EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) enumeration.
 
 ### Prompt Placeholder
 
 ![Prompt Placeholder](./img/generate-image--prompt-placeholder.jpg)
 
-The Prompt Placeholder is a custom string passed with the [`promptInputPlaceholder`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#promptinputplaceholder) property of the `appConfig` object. It can be useful to guide your users with a specific instruction.
+The Prompt Placeholder is a custom string passed with the [`promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#promptinputplaceholder) property of the `appConfig` object. It can be useful to guide your users with a specific instruction.
 
 ```js
 const appConfig = {
@@ -167,7 +167,7 @@ const appConfig = {
 
 ![Publish](./img/generate-image--publish.jpg)
 
-The SDK also introduces the possibility of running a publish callback for the generated image directly from the module. Label and ID of this feature are controlled by the [`publishConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\publish-config.md) property of the `appConfig` object, which can include the following options:
+The SDK also introduces the possibility of running a publish callback for the generated image directly from the module. Label and ID of this feature are controlled by the [`publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/publish-config.md) property of the `appConfig` object, which can include the following options:
 
 ```js
 const appConfig = {
@@ -217,7 +217,7 @@ The new experience let you select fine-tuned Firefly Models, in addition to the 
 
 ![Custom Firefly Models](./img/generate-image--custom-firefly-models.jpg)
 
-Provided that you have trained and uploaded your custom models, you can enable the Custom Firefly Models feature by setting the `custom-models` boolean property of the [`featureConfig`](..\..\v4\shared\src\types\module\app-config-types\enumerations\text-to-image-feature.md) object:
+Provided that you have trained and uploaded your custom models, you can enable the Custom Firefly Models feature by setting the `custom-models` boolean property of the [`featureConfig`](../../v4/shared/src/types/module/app-config-types/enumerations/text-to-image-feature.md) object:
 
 ```js
 const appConfig = {

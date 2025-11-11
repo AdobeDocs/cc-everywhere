@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: DownloadAction
 
@@ -12,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`DownloadTarget`](..\enumerations\download-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
+| `target` | [`DownloadTarget`](../enumerations/download-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
 | `closeTargetOnExport?` | `boolean` | - |

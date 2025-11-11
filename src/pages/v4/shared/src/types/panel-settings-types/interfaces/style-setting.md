@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: StyleSetting
 
@@ -10,10 +10,10 @@ Used to specify which styles (themes, techniques, etc.) are applied in the panel
 
 ## Extends
 
-- [`BasePanelSetting`](base-panel-setting.md)&lt; [`ImageStyleId`](..\type-aliases\image-style-id.md)[]\ &gt;
+- [`BasePanelSetting`](base-panel-setting.md)&lt; [`ImageStyleId`](../type-aliases/image-style-id.md)[]/ &gt;
 
 ## Properties
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `value` | [`ImageStyleId`](..\type-aliases\image-style-id.md)[] | The value of the setting. Generic type allows for different value types. | [`BasePanelSetting`](base-panel-setting.md).[`value`](base-panel-setting.md#value) |
+| `value` | [`ImageStyleId`](../type-aliases/image-style-id.md)[] | The value of the setting. Generic type allows for different value types. | [`BasePanelSetting`](base-panel-setting.md).[`value`](base-panel-setting.md#value) |

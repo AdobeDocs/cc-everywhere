@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: EditFurtherExportOption<U\>
 
@@ -9,7 +9,7 @@ Export option for continuing to edit content in other applications.
 ## See
 
  - [EditFurtherAction](edit-further-action.md) for available edit actions
- - [ButtonStyle](..\type-aliases\button-style.md), [EnabledButtonStyle](..\type-aliases\enabled-button-style.md), [LinkStyle](link-style.md) for common style options
+ - [ButtonStyle](../type-aliases/button-style.md), [EnabledButtonStyle](../type-aliases/enabled-button-style.md), [LinkStyle](link-style.md) for common style options
 
 ## Extends
 

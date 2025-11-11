@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: TestEditorContext
 
@@ -67,7 +67,7 @@ Sends a message to the SDK Agent to update the state of current running  workflo
 EditorContext.sendCustomMessage
 ```
 
-***
+<HorizontalLine />
 
 ### showToast()
 

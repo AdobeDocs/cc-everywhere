@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: EditFurtherAction
 
@@ -12,6 +12,6 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`EditFurtherTarget`](..\enumerations\edit-further-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
-| `intent?` | [`EditFurtherIntent`](..\enumerations\edit-further-intent.md) | - |
-| `context?` | [`ExportContext`](..\type-aliases\export-context.md) | - |
+| `target` | [`EditFurtherTarget`](../enumerations/edit-further-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
+| `intent?` | [`EditFurtherIntent`](../enumerations/edit-further-intent.md) | - |
+| `context?` | [`ExportContext`](../type-aliases/export-context.md) | - |

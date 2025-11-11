@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/module/DocConfig.types
 
@@ -8,10 +8,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDocConfig](interfaces\edit-image-doc-config.md) | - |
+| [EditImageDocConfig](interfaces/edit-image-doc-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditImageIntent](type-aliases\edit-image-intent.md) | - |
+| [EditImageIntent](type-aliases/edit-image-intent.md) | - |

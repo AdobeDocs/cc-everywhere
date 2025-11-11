@@ -321,9 +321,9 @@ await ccEverywhere.quickAction.resizeImage(docConfig, appConfig, exportConfig, c
 
 **For complete API reference and all available methods, see:**
 
-- [V4 Editor API Reference](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md)
-- [V4 Module API Reference](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md)
-- [V4 Quick Action API Reference](..\..\v4\sdk\src\workflows\3p\quick-action-workflow\classes\quick-action-workflow.md)
+- [V4 Editor API Reference](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)
+- [V4 Module API Reference](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)
+- [V4 Quick Action API Reference](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)
 
 ### 4: Update Parameter Structure
 
@@ -478,16 +478,16 @@ Take advantage of new features introduced in V4:
 
 #### New V4 Features:
 
-- **[Module Workflow](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md)**: New `editImage` and `createImageFromText` capabilities
-- **[Enhanced Editor APIs](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md)**: More granular control with separate create methods
-- **[Individual Quick Actions](..\..\v4\sdk\src\workflows\3p\quick-action-workflow\classes\quick-action-workflow.md)**: Specific methods for each quick action type
+- **[Module Workflow](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)**: New `editImage` and `createImageFromText` capabilities
+- **[Enhanced Editor APIs](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)**: More granular control with separate create methods
+- **[Individual Quick Actions](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)**: Specific methods for each quick action type
 - **Improved Parameter Structure**: Cleaner separation of concerns with four parameter types
 - **Class-level Callbacks**: Set callbacks once during initialization instead of per API call
 
 #### Additional Resources:
 
-- **[V4 Release Notes](..\changelog\index.md)**: Complete list of changes and improvements
-- **[V4 API Reference](..\..\v4\index.md)**: Full documentation of all V4 APIs
+- **[V4 Release Notes](../changelog/index.md)**: Complete list of changes and improvements
+- **[V4 API Reference](../../v4/index.md)**: Full documentation of all V4 APIs
 - **[Troubleshooting Guide](../troubleshooting/)**: Common issues and solutions during migration
 
 Some new features might include:
@@ -528,32 +528,32 @@ If you encounter any issues during migration, consult our [Troubleshooting Guide
 
 For ongoing development, bookmark these essential resources:
 
-- **[V4 API Reference](..\..\v4\index.md)** - Complete V4 documentation
-- **[V4 Release Notes](..\changelog\index.md)** - Latest updates and features
+- **[V4 API Reference](../../v4/index.md)** - Complete V4 documentation
+- **[V4 Release Notes](../changelog/index.md)** - Latest updates and features
 - **[Migration Checklist](#migration-summary)** - Review completed items
 
 <DiscoverBlock slots="heading, link, text"/>
 
 ## API References
 
-[CCEverywhere](..\..\v4\sdk\src\3p\cc-everywhere\classes\cc-everywhere.md)
+[CCEverywhere](../../v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere.md)
 
 Once you have successfully initialized the SDK, a Promise will be returned containing the `CCEverywhere` object.
 
 <DiscoverBlock slots="link, text"/>
 
-[Editor API](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md)
+[Editor API](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)
 
 Provides API References for /Editor API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Module API](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md)
+[Module API](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)
 
 Provides API References for /Module API.
 
 <DiscoverBlock slots="link, text"/>
 
-[Quick Action API](..\..\v4\sdk\src\workflows\3p\quick-action-workflow\classes\quick-action-workflow.md)
+[Quick Action API](../../v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md)
 
 Provides API References for /Quick Action API.

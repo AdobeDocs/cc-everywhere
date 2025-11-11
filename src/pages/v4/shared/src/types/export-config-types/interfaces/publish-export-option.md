@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: PublishExportOption<U\>
 
@@ -9,7 +9,7 @@ Export option for publishing content to various targets.
 ## See
 
  - [PublishAction](publish-action.md) for available publish actions
- - [ButtonStyle](..\type-aliases\button-style.md), [LinkStyle](link-style.md) for common style options
+ - [ButtonStyle](../type-aliases/button-style.md), [LinkStyle](link-style.md) for common style options
 
 ## Extends
 

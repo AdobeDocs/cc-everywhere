@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: PublishParams
 
@@ -15,4 +15,4 @@ Asset related information received with onPublish callback.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `asset` | [`OutputAsset`](..\..\..\asset-types\interfaces\output-asset.md) | Asset which is exported |
+| `asset` | [`OutputAsset`](../../../asset-types/interfaces/output-asset.md) | Asset which is exported |

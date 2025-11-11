@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: DidTargetLoadMessage&lt; T\ &gt;
 

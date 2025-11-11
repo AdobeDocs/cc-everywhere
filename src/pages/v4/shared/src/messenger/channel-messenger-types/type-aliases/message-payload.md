@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: MessagePayload
 
@@ -16,7 +16,7 @@ type MessagePayload = object;
 sourceChannel: MessageChannel;
 ```
 
-***
+<HorizontalLine />
 
 ### requestId?
 
@@ -24,7 +24,7 @@ sourceChannel: MessageChannel;
 optional requestId: string;
 ```
 
-***
+<HorizontalLine />
 
 ### message
 

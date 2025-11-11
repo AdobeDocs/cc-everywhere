@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Class: ErrorHandlerDelegate&lt; T\ &gt;
 
@@ -40,7 +40,7 @@ addHandler(handler): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeHandler()
 
@@ -58,7 +58,7 @@ removeHandler(handler): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeAllHandlers()
 
@@ -70,7 +70,7 @@ removeAllHandlers(): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### error()
 
@@ -88,7 +88,7 @@ error(error): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### warn()
 
@@ -106,7 +106,7 @@ warn(warning): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### info()
 

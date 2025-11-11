@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: DropdownExportOption
 
@@ -16,7 +16,7 @@ Represents export options specifically for dropdown UI components.
 
 This union type includes:
 
-- [PublishExportOption](..\interfaces\publish-export-option.md) with [DropdownOptionStyle](..\interfaces\dropdown-option-style.md)
-- [DownloadExportOption](..\interfaces\download-export-option.md) with [DropdownOptionStyle](..\interfaces\dropdown-option-style.md)
-- [EditFurtherExportOption](..\interfaces\edit-further-export-option.md) with [DropdownOptionStyle](..\interfaces\dropdown-option-style.md)
-- [ContinueEditingDropdownOption](..\interfaces\continue-editing-dropdown-option.md)
+- [PublishExportOption](../interfaces/publish-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [DownloadExportOption](../interfaces/download-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [EditFurtherExportOption](../interfaces/edit-further-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [ContinueEditingDropdownOption](../interfaces/continue-editing-dropdown-option.md)

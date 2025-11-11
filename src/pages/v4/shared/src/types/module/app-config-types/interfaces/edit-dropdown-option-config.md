@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: EditDropdownOptionConfig
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `option` | [`EditFurtherIntent`](..\..\..\export-config-types\enumerations\edit-further-intent.md) |
+| `option` | [`EditFurtherIntent`](../../../export-config-types/enumerations/edit-further-intent.md) |

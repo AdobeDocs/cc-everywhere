@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: MessageCompat&lt; T\ &gt;
 
@@ -22,7 +22,7 @@ type MessageCompat<T> = object;
 type: T;
 ```
 
-***
+<HorizontalLine />
 
 ### data?
 

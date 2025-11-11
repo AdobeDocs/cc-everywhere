@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: Config
 
@@ -16,7 +16,7 @@ type Config = object;
 ENVIRONMENT: Environment;
 ```
 
-***
+<HorizontalLine />
 
 ### CLIENTS
 

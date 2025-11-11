@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Class: HostErrorHandler&lt; T\ &gt;
 
@@ -65,7 +65,7 @@ error(error): void;
 
 [`IErrorMessageHandler`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md).[`error`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md#error)
 
-***
+<HorizontalLine />
 
 ### warn()
 
@@ -81,7 +81,7 @@ warn(): void;
 
 [`IErrorMessageHandler`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md).[`warn`](..\..\..\i-error-message-handler\interfaces\i-error-message-handler.md#warn)
 
-***
+<HorizontalLine />
 
 ### info()
 

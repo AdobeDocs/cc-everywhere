@@ -40,9 +40,9 @@ openQuickAction(QuickActionParams)
 | :-- | :--| :--
 | id | [QuickActionId](#quickactionid) | ID for associated quick action
 | inputParams | [QuickActionInputParams](#quickactioninputparams) | Asset to load (image only), and export button options
-| modalParams (optional) | [ModalParams](..\shared_types\index.md#modalparams) | Specify modal dimensions
-| outputParams (optional) | [CCXOutputParams](..\shared_types\index.md#ccxoutputparams) | Specify output type and file type of created project
-| callbacks (optional) | [Callbacks](..\shared_types\index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
+| modalParams (optional) | [ModalParams](../shared_types/index.md#modalparams) | Specify modal dimensions
+| outputParams (optional) | [CCXOutputParams](../shared_types/index.md#ccxoutputparams) | Specify output type and file type of created project
+| callbacks (optional) | [Callbacks](../shared_types/index.md#callbacks) | onCancel, onPublish, onError, onLoad, onLoadStart, onPublishStart
 
 **Note**: `inputParams.exportOptions` determines which export buttons are exposed to the user once the action is complete, and must be defined with at least an empty array. If given an empty array, the "Download" button will be surfaced as an export option.
 
@@ -72,7 +72,7 @@ Allows you to specify an input asset and export options for the quick actions mo
 
 | Property | Type | Description
 | :-- | :--| :--
-| asset | [Asset](..\shared_types\index.md#asset) | Image you want to load into QA modal.
+| asset | [Asset](../shared_types/index.md#asset) | Image you want to load into QA modal.
 | exportOptions | [ExportOption](#exportoption) | Define export buttons
 
 ### Example
@@ -133,9 +133,9 @@ This is used to render a custom button once the Quick Action has finished. Use t
 
 The target determines the type of export.
 
-* 'Editor': Opens asset in an [full editor component](..\full_editor\index.md)
+* 'Editor': Opens asset in an [full editor component](../full_editor/index.md)
 * 'Download':  Downloads the asset to user's machine
-* 'Host': Targets host app - id is passed in [`onPublish`](..\shared_types\index.md#quickactionpublishparams) callback along with asset data
+* 'Host': Targets host app - id is passed in [`onPublish`](../shared_types/index.md#quickactionpublishparams) callback along with asset data
 
 For `NativeExportButton` objects, `label` defaults to **Customize** when targeting the full editor and **Download** when the target is specified as 'Download;.
 

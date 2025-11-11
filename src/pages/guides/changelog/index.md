@@ -26,30 +26,30 @@ Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no long
 
 ### API Enhancement
 
-- **[`CCEverywhere.ModuleWorkflow.CancelCallback`](..\..\v4\shared\src\types\callbacks-types\type-aliases\cancel-callback.md)**: Added optional parameter `isEscapePressed` as part of `onCancel` callback which is `true` if the cancel was triggered by escape key press during loading.
-- **[`CCEverywhere.HostInfo.coiEnabled`](..\..\v4\shared\src\types\host-info-types\interfaces\host-info-specified-base.md#properties)**: Added property in `HostInfo` to indicate if COI (Cross-Origin Isolation) is enabled for client.
-- **[`CCEverywhere.BaseContainerConfig.iframeTitle`](..\..\v4\shared\src\types\container-config-types\interfaces\base-container-config.md#properties)**: Added support to configure iframe title for accessibility.
+- **[`CCEverywhere.ModuleWorkflow.CancelCallback`](../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback.md)**: Added optional parameter `isEscapePressed` as part of `onCancel` callback which is `true` if the cancel was triggered by escape key press during loading.
+- **[`CCEverywhere.HostInfo.coiEnabled`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base.md#properties)**: Added property in `HostInfo` to indicate if COI (Cross-Origin Isolation) is enabled for client.
+- **[`CCEverywhere.BaseContainerConfig.iframeTitle`](../../v4/shared/src/types/container-config-types/interfaces/base-container-config.md#properties)**: Added support to configure iframe title for accessibility.
 
 ### Tech Enhancement
 
-- **[`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`](..\..\v4\shared\src\types\browse-search-config-types\interfaces\browse-search-base-config.md#properties)**: Added support to surface collections other than Express collections.
+- **[`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`](../../v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config.md#properties)**: Added support to surface collections other than Express collections.
 
 ### Documentation
 
-- Added a new comprehensive [Mobile Web Support](..\concepts\mobile-web-support.md) concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility.
+- Added a new comprehensive [Mobile Web Support](../concepts/mobile-web-support.md) concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility.
 
 ## [4.35.15] 2025-09-18
 
 ### Documentation
 
-- Added a new [Concept guide](..\concepts\tethering.md) that covers the **Workflow Tethering** details—the possibility to chain multiple workflows together to create a more complex experience.
-- Added a new comprehensive [Workflow Tethering tutorial](..\tutorials\workflow-tethering.md) which builds on the Concept guide and provides a more practical example of how to implement two of the most common workflow tethering patterns: Generate Image → Edit Image and Edit Image → Full Editor.
+- Added a new [Concept guide](../concepts/tethering.md) that covers the **Workflow Tethering** details—the possibility to chain multiple workflows together to create a more complex experience.
+- Added a new comprehensive [Workflow Tethering tutorial](../tutorials/workflow-tethering.md) which builds on the Concept guide and provides a more practical example of how to implement two of the most common workflow tethering patterns: Generate Image → Edit Image and Edit Image → Full Editor.
 
 ## [4.34.27] 2025-09-01
 
 ### Added
 
-- **`AUTO` content type**: Added the `AUTO` option to [`ImageContentType`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-content-type.md) that allows the system to automatically determine the most appropriate content type based on the prompt and context.
+- **`AUTO` content type**: Added the `AUTO` option to [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md) that allows the system to automatically determine the most appropriate content type based on the prompt and context.
 
 ## [4.34.26] 2025-08-28
 
@@ -59,7 +59,7 @@ Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no long
 
 ### Documentation
 
-- Added a new [Edit Image tutorial](..\tutorials\edit-image.md) that covers the implementation details of the new Edit Image v2 features.
+- Added a new [Edit Image tutorial](../tutorials/edit-image.md) that covers the implementation details of the new Edit Image v2 features.
 
 ## [4.32.26] 2025-08-07
 
@@ -67,49 +67,49 @@ Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no long
 
 #### Enhanced Panel Settings for Generate Image
 
-- **[`CCEverywhere.TextToImageAppConfig.panelSettings`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#panelsettings)**: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:
-  - [`PanelSettings`](..\..\v4\shared\src\types\panel-settings-types\interfaces\panel-settings.md): Container interface for all panel settings.
-  - [`StyleSetting`](..\..\v4\shared\src\types\panel-settings-types\interfaces\style-setting.md): Configuration for artistic styles with support for multiple style categories.
-  - [`ContentTypeSetting`](..\..\v4\shared\src\types\panel-settings-types\interfaces\content-type-setting.md): Setting for content type selection (photo, graphic, art).
-- **[`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#hidefeedbackmenu)**: Added option to hide feedback menu in header bar.
-- **[`CCEverywhere.TextToImageAppConfig.isPromptSafe`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#ispromptsafe)**: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic.
-- **[`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#promptinputplaceholder)**: Added placeholder text configuration for prompt input field (Generate Image v2 only).
+- **[`CCEverywhere.TextToImageAppConfig.panelSettings`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#panelsettings)**: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:
+  - [`PanelSettings`](../../v4/shared/src/types/panel-settings-types/interfaces/panel-settings.md): Container interface for all panel settings.
+  - [`StyleSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/style-setting.md): Configuration for artistic styles with support for multiple style categories.
+  - [`ContentTypeSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/content-type-setting.md): Setting for content type selection (photo, graphic, art).
+- **[`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#hidefeedbackmenu)**: Added option to hide feedback menu in header bar.
+- **[`CCEverywhere.TextToImageAppConfig.isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#ispromptsafe)**: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic.
+- **[`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#promptinputplaceholder)**: Added placeholder text configuration for prompt input field (Generate Image v2 only).
 
-Both the [Generate Image tutorial](..\tutorials\generate-image.md) and the [Concept Guide](..\concepts\generate-image-v2.md) have been updated to reflect the new updates.
+Both the [Generate Image tutorial](../tutorials/generate-image.md) and the [Concept Guide](../concepts/generate-image-v2.md) have been updated to reflect the new updates.
 
 #### New Style Enumerations for Advanced Image Customization
 
 Added comprehensive style enumerations to provide granular control over image generation aesthetics:
 
-- [`ImageContentType`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-content-type.md): Primary content types (photo, graphic, art)
-- [`ImageThemeStyle`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-theme-style.md): 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more
-- [`ImageTechniqueStyle`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-technique-style.md): 12 artistic techniques from painting and sketching to watercolor and linocut
+- [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md): Primary content types (photo, graphic, art)
+- [`ImageThemeStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-theme-style.md): 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more
+- [`ImageTechniqueStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-technique-style.md): 12 artistic techniques from painting and sketching to watercolor and linocut
 - [`ImageLightingStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-lighting-style.md): five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting
 - [`ImageCompositionStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-composition-style.md): seven composition styles for camera angles and framing
-- [`ImageEffectStyle`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-effect-style.md): nine visual effects including bokeh, fisheye, neon, and bioluminescent
+- [`ImageEffectStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-effect-style.md): nine visual effects including bokeh, fisheye, neon, and bioluminescent
 - [`ImageColorStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-color-style.md): six color palette options from black & white to vibrant and pastel colors
-- [`ImageMovementStyle`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-movement-style.md): 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque
-- [`ImageMaterialStyle`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-material-style.md): nine material simulations from claymation to marble sculpture
-- [`ImageConceptStyle`](..\..\v4\shared\src\types\panel-settings-types\enumerations\image-concept-style.md): six conceptual moods for emotional tone
-- [`ImageStyleId`](..\..\v4\shared\src\types\panel-settings-types\type-aliases\image-style-id.md): Union type combining all available style options
+- [`ImageMovementStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-movement-style.md): 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque
+- [`ImageMaterialStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-material-style.md): nine material simulations from claymation to marble sculpture
+- [`ImageConceptStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md): six conceptual moods for emotional tone
+- [`ImageStyleId`](../../v4/shared/src/types/panel-settings-types/type-aliases/image-style-id.md): Union type combining all available style options
 
 #### Enhanced User Experience Features
 
-- **[`CCEverywhere.EditImageAppConfig.inlineTOUConsent`](..\..\v4\shared\src\types\module\app-config-types\interfaces\edit-image-app-config.md#inlinetouconsent)**: Added inline Terms of Use consent configuration.
+- **[`CCEverywhere.EditImageAppConfig.inlineTOUConsent`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#inlinetouconsent)**: Added inline Terms of Use consent configuration.
 
 #### Export Configuration Enhancements
 
-- **[`PublishButtonGroup`](..\..\v4\shared\src\types\export-config-types\interfaces\publish-button-group.md)**: New publish button group interface for better export organization.
+- **[`PublishButtonGroup`](../../v4/shared/src/types/export-config-types/interfaces/publish-button-group.md)**: New publish button group interface for better export organization.
 
 ## 2025-07-11
 
 ### Documentation
 
-- Added a new comprehensive [Generate Image tutorial](..\tutorials\generate-image.md) that covers the implementation details of the new Generate Image v2 features, including the Custom Community Wall.
+- Added a new comprehensive [Generate Image tutorial](../tutorials/generate-image.md) that covers the implementation details of the new Generate Image v2 features, including the Custom Community Wall.
 
 ### Enhancements
 
-- The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the [`Asset`](..\..\v4\shared\src\types\asset-types\type-aliases\asset.md))
+- The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md))
 
 ## [4.30.13] 2025-06-20
 
@@ -121,7 +121,7 @@ Added comprehensive style enumerations to provide granular control over image ge
 
 #### Unlocked new Edit Image v2 experience
 
-- [**`CCEverywhere.module.editImage()`**](..\..\v4\sdk\src\workflows\3p\module-workflow\classes\module-workflow.md): Introduced a [new Edit Image v2 experience](..\concepts\edit-image-v2.md), rearchitected to deliver significantly improved performance and a better user experience.
+- [**`CCEverywhere.module.editImage()`**](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md): Introduced a [new Edit Image v2 experience](../concepts/edit-image-v2.md), rearchitected to deliver significantly improved performance and a better user experience.
 
   **Key Features:**
 
@@ -129,38 +129,38 @@ Added comprehensive style enumerations to provide granular control over image ge
   - **Reduced memory consumption** by 35%.
   - **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.
 
-  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [Edit Image v2](..\concepts\edit-image-v2.md) page to learn more.
+  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [Edit Image v2](../concepts/edit-image-v2.md) page to learn more.
 
 #### Custom Community Wall
 
-- [**`CCEverywhere.TextToImageAppConfig.communityWallConfig`**](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Added a new `communityWallConfig` property to allow host applications to **populate the Community Wall with custom images** instead of Firefly's default assets.
+- [**`CCEverywhere.TextToImageAppConfig.communityWallConfig`**](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Added a new `communityWallConfig` property to allow host applications to **populate the Community Wall with custom images** instead of Firefly's default assets.
 
-  Please refer to the [this section](..\concepts\generate-image-v2.md#custom-community-wall) of the Generate Image v2 page for the implementation details.
+  Please refer to the [this section](../concepts/generate-image-v2.md#custom-community-wall) of the Generate Image v2 page for the implementation details.
 
 #### New APIs
 
 - Two new properties to the `AppConfig` object to control "Show margins" and "Show bleed" behavior have been added:
-  - [`CCEverywhere.EditorAppConfig.showPageMargin`](..\..\v4\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md#properties)
-  - [`CCEverywhere.EditorAppConfig.showBleedArea`](..\..\v4\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md#properties)
-- The PDF file type has been deprecated in the [`AppConfig.allowedFileTypes`](..\..\v4\shared\src\types\module\app-config-types\interfaces\edit-image-app-config.md#properties) property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.
+  - [`CCEverywhere.EditorAppConfig.showPageMargin`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)
+  - [`CCEverywhere.EditorAppConfig.showBleedArea`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties)
+- The PDF file type has been deprecated in the [`AppConfig.allowedFileTypes`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#properties) property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.
 
 ### Documentation
 
-- Enhanced [Editor Customization](..\concepts\appconfig.md) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
+- Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.
 
 ## [4.28.19] 2025-05-05
 
 ### Added
 
-- [`CCEverywhere.BaseEditorAppConfig.assetCollection`](..\..\v4\shared\src\types\editor\app-config-types\interfaces\base-editor-app-config.md#properties): A new optional `assetCollection` property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.
-- [`CCEverywhere.Callbacks.onIntentChange`](..\..\v4\shared\src\types\callbacks-types\interfaces\callbacks.md#properties): A new optional `onIntentChange` callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.
+- [`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties): A new optional `assetCollection` property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.
+- [`CCEverywhere.Callbacks.onIntentChange`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md#properties): A new optional `onIntentChange` callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.
 - Performance improvements and bug fixes.
 
 ## [4.26.5] 2025-04-11
 
 ### Added
 
-- [`CCEverywhere.BaseEditorAppConfig.analyticsData`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).
+- [`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).
 - Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK.
 - Various performance improvements and bug fixes.
 
@@ -168,7 +168,7 @@ Added comprehensive style enumerations to provide granular control over image ge
 
 ### Added
 
-- Added support for [Firefly Custom Models](..\concepts\generate-image-v2.md#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.
+- Added support for [Firefly Custom Models](../concepts/generate-image-v2.md#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.
 
 ## [4.21.17] 2025-02-27
 
@@ -176,7 +176,7 @@ Added comprehensive style enumerations to provide granular control over image ge
 
 #### Unlocked new Generate Image V2 experience
 
-- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
+- [**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.
   - When set to `"2"`, users can access the updated interface and features.
   - By default, this property is set to `"1"`, displaying the older experience.
 
@@ -191,15 +191,15 @@ Added comprehensive style enumerations to provide granular control over image ge
 
 **Configurations available in `CCEverywhere` after enabling the new UI:**
 
-- [`TextToImageAppConfig.thumbnailOptions`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Options to be displayed on the thumbnail.
-- [`TextToImageAppConfig.editDropdownOptions`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Options for the Edit dropdown.
-- [`TextToImageAppConfig.publishConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Configuration for the Publish action.
-- [`TextToImageAppConfig.fastModeConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Configuration for enabling or disabling fast mode default state.
-- [`TextToImageAppConfig.featureConfig`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): Configuration for enabling or disabling specific features.
+- [`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Options to be displayed on the thumbnail.
+- [`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Options for the Edit dropdown.
+- [`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Configuration for the Publish action.
+- [`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Configuration for enabling or disabling fast mode default state.
+- [`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): Configuration for enabling or disabling specific features.
 
 #### Concept guide for Generate Image V2
 
-Added a new [Concept Guide](..\concepts\generate-image-v2.md) for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.
+Added a new [Concept Guide](../concepts/generate-image-v2.md) for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.
 
 #### Demo app updates for Generate Image V2
 
@@ -224,45 +224,45 @@ Fixed loader CSS for frictionless experience.
 
 ### Bug Fixes
 
-- Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](..\..\v4\sdk\src\workflows\3p\editor-workflow\classes\editor-workflow.md#createwithasset) method.
-- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](..\..\v4\shared\src\types\asset-types\type-aliases\url-asset.md) as the [`datatype`](..\..\v4\shared\src\types\asset-types\enumerations\asset-data-type.md) for a video [`asset`](..\..\v4\shared\src\types\asset-types\interfaces\asset-base.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
+- Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#createwithasset) method.
+- **Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/asset-types/type-aliases/url-asset.md) as the [`datatype`](../../v4/shared/src/types/asset-types/enumerations/asset-data-type.md) for a video [`asset`](../../v4/shared/src/types/asset-types/interfaces/asset-base.md) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.
 
 ## [4.19.22] 2025-01-31
 
 ### Enhancements
 
-- Added a new [Embed SDK Developer Journey](..\index.md#embed-sdk-developer-journey) map to help developers navigate the resources available at different stages of their integration.
-- Added a new [Troubleshooting](..\troubleshooting\express-unavailable-error.md) guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing.
+- Added a new [Embed SDK Developer Journey](../index.md#embed-sdk-developer-journey) map to help developers navigate the resources available at different stages of their integration.
+- Added a new [Troubleshooting](../troubleshooting/express-unavailable-error.md) guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing.
 - Various small improvements and fixes across the documentation.
 
 ### Added
 
-- [`CCEverywhere.ExportConfig.EditFurtherIntent`](..\..\v4\shared\src\types\export-config-types\enumerations\edit-further-intent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
-- Added coverage for the [Asset](..\..\v4\shared\src\types\asset-types\index.md) type.
+- [`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.
+- Added coverage for the [Asset](../../v4/shared/src/types/asset-types/index.md) type.
 - Various performance improvements and bug fixes.
 
 ## [4.18.14] 2025-01-09
 
 ### Added
 
-- [`CCEverywhere.TextToImagePublishParams.prompt`](..\..\v4\shared\src\types\publish-params-types\interfaces\text-to-image-publish-params.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
+- [`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params.md): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.
 
 ## [4.17.33] 2024-12-16
 
 ### Enhancements
 
-- Added a comprehensive [error code guide](..\concepts\error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
+- Added a comprehensive [error code guide](../concepts/error-handling.md) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.
 
 ### Added
 
-- [`CCEverywhere.appConfig.imageDimensions`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
+- [`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.
 
 ## [4.16.11] - 2024-11-18
 
 ### Enhancements
 
-- [`CCEverywhere.appConfig.imageStyleReference`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
-- [`CCEverywhere.appConfig.imageCompositionReference`](..\..\v4\shared\src\types\module\app-config-types\interfaces\text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.
+- [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.
 
 ### Bug Fixes
 
@@ -272,7 +272,7 @@ Fixed loader CSS for frictionless experience.
 
 ### Enhancements
 
-- Redesigned the entire [SDK Reference](..\..\v4\index.md) section, providing full APIs coverage.
+- Redesigned the entire [SDK Reference](../../v4/index.md) section, providing full APIs coverage.
 - Added a V3 to V4 [Migration Guide](../concepts/migration-v3-v4.md).
 
 ### Added
@@ -286,8 +286,8 @@ Fixed loader CSS for frictionless experience.
 ### Enhancements
 
 - Redesigned the Information Architecture, to make it easier for developers to find the information they need.
-- Updated the [Submission and Review](..\review\index.md) and [Quickstart](..\quickstart\index.md) Guides.
-- Added a new [Tutorials](..\tutorials\index.md) section with two tutorials.
+- Updated the [Submission and Review](../review/index.md) and [Quickstart](../quickstart/index.md) Guides.
+- Added a new [Tutorials](../tutorials/index.md) section with two tutorials.
 
 ## [4.14.23] - 2024-09-05
 
@@ -300,7 +300,7 @@ Fixed loader CSS for frictionless experience.
 ### Added
 
 - `CCEverywhere.terminate`: We have added the terminate API to SDK v4. Once it is called, performing any action should fail with error SDK_NOT_INITIALIZED unless SDK is initialized again.
-- Added [z-index](..\..\reference\types\index.md#containerconfig) support for the root container.
+- Added [z-index](../../reference/types/index.md#containerconfig) support for the root container.
 
 ## [4.2.30] - 2024-03-14
 
@@ -330,7 +330,7 @@ Fixed loader CSS for frictionless experience.
 
 ### Enhancements
 
-1. [CreateInputParams.canvasSize](..\..\reference\types\index.md#canvasaspectid): Added support for new layouts.
+1. [CreateInputParams.canvasSize](../../reference/types/index.md#canvasaspectid): Added support for new layouts.
    - NoteHeaderImage
    - LineAdSmall
    - LineAdSquare
@@ -338,7 +338,7 @@ Fixed loader CSS for frictionless experience.
    - LineRichMenuLarge
    - LineRichMenuSmall
    - LineRichMessage
-2. [CreateInputParams.templateType](..\..\reference\types\index.md#templatetype): Added support for some template types.
+2. [CreateInputParams.templateType](../../reference/types/index.md#templatetype): Added support for some template types.
    - note-header-image
    - line-ad-small
    - line-ad-square

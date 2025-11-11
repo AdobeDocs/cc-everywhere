@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Class: ChannelMessageListener
 
@@ -45,7 +45,7 @@ reset(): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### didGetMessage()
 
@@ -74,7 +74,7 @@ didGetMessage<T>(message, requestId?): void;
 
 [`IChannelMessengerDelegate`](..\..\channel-messenger-types\interfaces\i-channel-messenger-delegate.md).[`didGetMessage`](..\..\channel-messenger-types\interfaces\i-channel-messenger-delegate.md#didgetmessage)
 
-***
+<HorizontalLine />
 
 ### setTarget()
 
@@ -93,7 +93,7 @@ setTarget(targetChannel, targetChannelInfo): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeTarget()
 
@@ -111,7 +111,7 @@ removeTarget(targetChannel): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### hasTarget()
 
@@ -129,7 +129,7 @@ hasTarget(targetChannel): boolean;
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### getTarget()
 
@@ -150,7 +150,7 @@ getTarget(targetChannel):
   \| `undefined`
   \| [`TargetChannelInfo`](..\..\channel-messenger-types\interfaces\target-channel-info.md)
 
-***
+<HorizontalLine />
 
 ### addListenerForTarget()
 
@@ -169,7 +169,7 @@ addListenerForTarget(targetChannel, callback): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### sendMessage()
 
@@ -194,7 +194,7 @@ sendMessage<T>(targetChannel, message): boolean;
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### sendMessageCompat()
 
@@ -223,7 +223,7 @@ Sends a message using a message channel that is compatible with older version of
 
 - True if the message was successfully sent, false otherwise.
 
-***
+<HorizontalLine />
 
 ### addListener()
 
@@ -246,7 +246,7 @@ addListener(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeListener()
 
@@ -265,7 +265,7 @@ removeListener(messageType, listener): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### setRequestId()
 

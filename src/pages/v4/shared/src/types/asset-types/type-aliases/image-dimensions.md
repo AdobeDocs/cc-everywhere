@@ -1,6 +1,6 @@
 [**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: ImageDimensions
 
@@ -28,7 +28,7 @@ Maximum width and height values are as follows:
 - landscape: 2304x1792
 - widescreen: 2688x1536
 
-***
+<HorizontalLine />
 
 ### aspectRatio
 

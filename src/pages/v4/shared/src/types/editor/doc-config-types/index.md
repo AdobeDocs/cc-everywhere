@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/editor/DocConfig.types
 
@@ -8,7 +8,7 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [CreateDocConfig](interfaces\create-doc-config.md) | - |
-| [CreateWithAssetDocConfig](interfaces\create-with-asset-doc-config.md) | - |
-| [CreateWithTemplateDocConfig](interfaces\create-with-template-doc-config.md) | - |
-| [EditDocConfig](interfaces\edit-doc-config.md) | - |
+| [CreateDocConfig](interfaces/create-doc-config.md) | - |
+| [CreateWithAssetDocConfig](interfaces/create-with-asset-doc-config.md) | - |
+| [CreateWithTemplateDocConfig](interfaces/create-with-template-doc-config.md) | - |
+| [EditDocConfig](interfaces/edit-doc-config.md) | - |

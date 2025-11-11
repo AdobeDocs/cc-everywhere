@@ -36,7 +36,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 ### `INVALID_PARAMETERS`
 
 - **What it means** : Arguments in API are not correct.
-- **What to do** : Consult [documentation here](..\..\reference\index.md) to see permissible values.
+- **What to do** : Consult [documentation here](../../reference/index.md) to see permissible values.
 - **User Experience/Recoverability** : NA
 - **Example** : If an API call requires a specific parameter format and the provided parameter does not meet this format, the application should display an error message like, "Invalid parameters."
 
@@ -92,14 +92,14 @@ The guide provides key components such as Error codes,their meaning,  action for
 ### `SDK_INITIALIZATION_ERROR`
 
 - **What it means** : An error occurred during SDK initialization.
-- **What to do** : Ensure the SDK is correctly configured and initialized. Checkout the [reference documentation here](..\..\reference\initialize\index.md) for Initialization.
+- **What to do** : Ensure the SDK is correctly configured and initialized. Checkout the [reference documentation here](../../reference/initialize/index.md) for Initialization.
 - **User Experience/Recoverability** : Recoverable
 - **Example** : NA
 
 ### SDK_NOT_SUPPORTED
 
 - **What it means**: The SDK you're trying to use isn't supported on this platform.
-- **What to do**: Make sure your platform meets the SDK's requirements. Checkout the [reference documentation here](..\..\reference\initialize\index.md).
+- **What to do**: Make sure your platform meets the SDK's requirements. Checkout the [reference documentation here](../../reference/initialize/index.md).
 - **User Experience**: This issue can be fixed.
 - **Example**:
   - **Scenario**: Trying to use the SDK on an unsupported platform.
@@ -115,7 +115,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 ### SDK_ALREADY_INITIALIZED
 
 - **What it means**: The SDK has already been initialized once.
-- **What to do**: Ensure the SDK is initialized only once. Checkout the [reference documentation here](..\..\reference\initialize\index.md) for Initialization.
+- **What to do**: Ensure the SDK is initialized only once. Checkout the [reference documentation here](../../reference/initialize/index.md) for Initialization.
 - **User Experience**: This issue can be fixed.
 - **Example**:
   - **Scenario**: Calling `initialize()` multiple times.
@@ -134,7 +134,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 ### SDK_INITIALIZATION_IN_PROGRESS
 
 - **What it means**: The SDK is currently being initialized.
-- **What to do**: Ensure the SDK is initialized only once. Checkout the [reference documentation here](..\..\reference\initialize\index.md) for Initialization.
+- **What to do**: Ensure the SDK is initialized only once. Checkout the [reference documentation here](../../reference/initialize/index.md) for Initialization.
 - **User Experience**: This issue can be fixed.
 - **Example**:
   - **Scenario**: Trying to initialize the SDK while it's already initializing.
@@ -153,7 +153,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 ### SDK_NOT_INITIALIZED
 
 - **What it means**: The SDK hasn't been initialized yet.
-- **What to do**: Make sure to initialize the SDK.  Checkout the [reference documentation here](..\..\reference\initialize\index.md) for Initialization.
+- **What to do**: Make sure to initialize the SDK.  Checkout the [reference documentation here](../../reference/initialize/index.md) for Initialization.
 - **User Experience**: This issue can be fixed.
 - **Example**:
   - **Scenario**: Trying to use SDK functions before initializing it.
@@ -171,7 +171,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 ### WORKFLOW_ALREADY_IN_PROGRESS
 
 - **What it means**: There's already an active workflow.
-- **What to do**: Ensure only one workflow is active at a time. Checkout the reference documentation for each workflow [here](..\..\reference\index.md).
+- **What to do**: Ensure only one workflow is active at a time. Checkout the reference documentation for each workflow [here](../../reference/index.md).
 - **User Experience**: This issue can be fixed.
 - **Example**:
   - **Scenario**: Starting a new workflow while another is still active.
@@ -189,7 +189,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_IMAGE_DATA_URL
 
-- **What it means**: While using [`createWithAsset()`](..\..\reference\CCEverywhere\editor\index.md#createwithasset), the provided `Base64` image data is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided `Base64` image data is invalid.
 - **What to do**: Ensure the image data is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -214,7 +214,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_VIDEO_DATA_URL
 
-- **What it means**: While using [QuickAction](..\..\reference\CCEverywhere\quickAction\index.md), the provided video data URL is invalid.
+- **What it means**: While using [QuickAction](../../reference/CCEverywhere/quickAction/index.md), the provided video data URL is invalid.
 - **What to do**: Ensure the video data URL is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -239,7 +239,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASSET_TYPE_URL
 
-- **What it means**: While using [`createWithAsset()`](..\..\reference\CCEverywhere\editor\index.md#createwithasset), the provided asset type URL is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided asset type URL is invalid.
 - **What to do**: Ensure the asset type URL is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -255,7 +255,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASSET_TYPE
 
-- **What it means**: When [merging videos](..\..\reference\CCEverywhere\quickAction\index.md#mergevideo), the assets should only be either images or videos.
+- **What it means**: When [merging videos](../../reference/CCEverywhere/quickAction/index.md#mergevideo), the assets should only be either images or videos.
 - **What to do**: Ensure the assets are either images or videos.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -271,7 +271,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASSET_DATA_TYPE
 
-- **What it means**: While using [`createWithAsset()`](..\..\reference\CCEverywhere\editor\index.md#createwithasset), the provided asset data type is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided asset data type is invalid.
 - **What to do**: Ensure the asset data type is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -367,7 +367,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### NO_ACTIVE_WORKFLOW
 
-- **What it means**: You're trying to call [`close`](..\..\reference\CCEverywhere\close\index.md) or [`terminate`](..\..\reference\CCEverywhere\terminate\index.md) when there's no active workflow.
+- **What it means**: You're trying to call [`close`](../../reference/CCEverywhere/close/index.md) or [`terminate`](../../reference/CCEverywhere/terminate/index.md) when there's no active workflow.
 - **What to do**: Ensure a workflow is active before calling `close` or `terminate`.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -404,7 +404,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_ASPECT_RATIO_VALUE
 
-- **What it means**: While using [`createWithAsset()`](..\..\reference\CCEverywhere\editor\index.md#createwithasset), the provided aspect ratio value is invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided aspect ratio value is invalid.
 - **What to do**: Ensure the aspect ratio value is valid.
 - **User Experience**: This issue can be fixed.
 - **Example**:
@@ -424,7 +424,7 @@ The guide provides key components such as Error codes,their meaning,  action for
 
 ### INVALID_SIZE_VALUE
 
-- **What it means**: While using [`createWithAsset()`](..\..\reference\CCEverywhere\editor\index.md#createwithasset), the dimensions (aspect ratio, width, and height) of the asset are invalid.
+- **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the dimensions (aspect ratio, width, and height) of the asset are invalid.
 - **What to do**: Validate the dimensions to ensure they meet the required constraints.
 - **User Experience**: This issue can be fixed.
 - **Example**:

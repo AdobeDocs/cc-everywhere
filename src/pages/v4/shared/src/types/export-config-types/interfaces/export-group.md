@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ExportGroup
 
@@ -14,5 +14,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| `type` | [`ExportGroupType`](..\enumerations\export-group-type.md) |
-| `style` | [`ButtonStyle`](..\type-aliases\button-style.md) |
+| `type` | [`ExportGroupType`](../enumerations/export-group-type.md) |
+| `style` | [`ButtonStyle`](../type-aliases/button-style.md) |

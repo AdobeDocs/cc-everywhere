@@ -43,8 +43,8 @@ All the properties in this object are optional.
 | :-- | :-- | :--
 | docConfig | [CreateDocConfig](#createdocconfig) | Pass a custom canvas size
 | appConfig | [BaseEditorAppConfig](#baseeditorappconfig) | Parameters to configure editor/modal UI
-| exportConfig | [ExportOptions](..\..\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](..\..\types\index.md#containerconfig) | Properties to configure the SDK container
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
 ### CreateDocConfig
 
@@ -52,7 +52,7 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasSize| [Size](..\..\types\index.md#size)/[CanvasAspectId](..\..\types\index.md#canvasaspectid) | Launch the editor with canvas set at this size.
+| canvasSize| [Size](../../types/index.md#size)/[CanvasAspectId](../../types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
 
 ### BaseEditorAppConfig
 
@@ -60,18 +60,18 @@ All the properties in this object are optional.
 
 | Property | Type| Description
 | :-- | :--| :--
-| selectedCategory | [EditorPanelView](..\..\types\index.md#editorpanelview) | Determines which panel view to open by default.
+| selectedCategory | [EditorPanelView](../../types/index.md#editorpanelview) | Determines which panel view to open by default.
 | categorySearchText | string | Search text to pass in the editor for selected panel.
-| templateType | [TemplateType](..\..\types\index.md#templatetype) | Specify template type for canvas.
+| templateType | [TemplateType](../../types/index.md#templatetype) | Specify template type for canvas.
 | multiPage | boolean | Defaults to `true`. Set to `false` if multi-page export is not supported.
-| allowedFileTypes | [FileType](..\..\types\index.md#filetype)[] | Specify the list of file types that the user can publish. By default, all formats (PNG, JPEG, MP4 and PDF) are supported.
-| callbacks | [Callbacks](..\..\types\index.md#callbacks) | Callback functions
+| allowedFileTypes | [FileType](../../types/index.md#filetype)[] | Specify the list of file types that the user can publish. By default, all formats (PNG, JPEG, MP4 and PDF) are supported.
+| callbacks | [Callbacks](../../types/index.md#callbacks) | Callback functions
 
 <InlineAlert variant="info" slots="text1" />
 
 Use `allowedFileTypes` to specify the list of filetypes that the user can download. This can be used to limit the download options as per file types for end users. This limitation is applied to both native download and custom download scenarios.
 
-View the full list of [canvas sizes](..\..\types\index.md#canvasaspectid) and [template types](..\..\types\index.md#templatetype).
+View the full list of [canvas sizes](../../types/index.md#canvasaspectid) and [template types](../../types/index.md#templatetype).
 
 ## createWithAsset
 
@@ -85,8 +85,8 @@ editor.createWithAsset: (docConfig: CreateWithAssetDocConfig, appConfig?: BaseEd
 | :-- | :-- | :--
 | docConfig | [CreateWithAssetDocConfig](#createdocconfig) | Pass an image and custom canvas size
 | appConfig | [BaseEditorAppConfig](#baseeditorappconfig) | Parameters to configure editor/modal UI
-| exportConfig | [ExportOptions](..\..\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](..\..\types\index.md#containerconfig) | Properties to configure the SDK container
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
 ### CreateWithAssetDocConfig
 
@@ -94,8 +94,8 @@ editor.createWithAsset: (docConfig: CreateWithAssetDocConfig, appConfig?: BaseEd
 
 | Property | Type| Description
 | :-- | :--| :--
-| canvasSize| [Size](..\..\types\index.md#size)/[CanvasAspectId](..\..\types\index.md#canvasaspectid) | Launch the editor with canvas set at this size.
-| asset | [Asset](..\..\types\index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
+| canvasSize| [Size](../../types/index.md#size)/[CanvasAspectId](../../types/index.md#canvasaspectid) | Launch the editor with canvas set at this size.
+| asset | [Asset](../../types/index.md#asset) | Asset object that contains the base64-encoded image data you want the editor to open.
 
 ## edit
 
@@ -109,8 +109,8 @@ editor.edit: (docConfig: EditDocConfig, appConfig?: BaseEditorAppConfig, exportC
 | :-- | :-- | :--
 | docConfig | [EditDocConfig](#editdocconfig) | Pass the document ID to open in the editor
 | appConfig | [BaseEditorAppConfig](#baseeditorappconfig) | Parameters to configure editor/modal UI
-| exportConfig | [ExportOptions](..\..\types\index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
-| containerConfig | [ContainerConfig](..\..\types\index.md#containerconfig) | Properties to configure the SDK container
+| exportConfig | [ExportOptions](../../types/index.md#exportoptions)[] | Configure export options. If no export options are specified, the editor falls back to the default layout options.
+| containerConfig | [ContainerConfig](../../types/index.md#containerconfig) | Properties to configure the SDK container
 
 ### EditDocConfig
 
@@ -118,4 +118,4 @@ editor.edit: (docConfig: EditDocConfig, appConfig?: BaseEditorAppConfig, exportC
 | :-- | :-- | :--
 | documentId | string | Unique identifier of the asset returned from `onPublish` callback
 
-When a user completes their workflow in the editor, the associated **documentId** is sent back in [publishParams](..\..\types\index.md#publishparams) from the `onPublish` callback.
+When a user completes their workflow in the editor, the associated **documentId** is sent back in [publishParams](../../types/index.md#publishparams) from the `onPublish` callback.

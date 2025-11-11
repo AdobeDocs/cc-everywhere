@@ -1,6 +1,6 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/workflows/3p/EditorWorkflow
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [EditorWorkflow](classes\editor-workflow.md) | - |
+| [EditorWorkflow](classes/editor-workflow.md) | - |
