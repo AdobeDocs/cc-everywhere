@@ -118,7 +118,7 @@ module.exports = {
           },
           {
             title: "Template Browser",
-            path: "/guides/concepts/template-browser.md",
+            path: "/guides/concepts/browse-template.md",
           },
           {
             title: "Workflow Tethering",
