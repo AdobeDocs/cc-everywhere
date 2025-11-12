@@ -82,7 +82,7 @@ static warn(warn): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `warn` | /| [`CCEverywhereWarn`](../../../../../shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) /| [`CCEverywhereError`](../../../../../shared/src/error/cc-everywhere-error/classes/cc-everywhere-error.md)&lt; [`ErrorCode`](../../error-codes/type-aliases/error-code.md)/ &gt; |
+| `warn` | [`CCEverywhereWarn`](../../../../../shared/src/error/cc-everywhere-error-types/interfaces/cc-everywhere-warn.md) \\| [`CCEverywhereError`](../../../../../shared/src/error/cc-everywhere-error/classes/cc-everywhere-error.md)&lt; [`ErrorCode`](../../error-codes/type-aliases/error-code.md) &gt; |
 
 #### Returns
 
