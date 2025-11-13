@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -26,7 +26,7 @@
 | `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`BaseContainerConfig`](base-container-config.md).[`showExpressIconWithText`](base-container-config.md#showexpressiconwithtext) |
 | `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`BaseContainerConfig`](base-container-config.md).[`showDarkerBackgroundForLoader`](base-container-config.md#showdarkerbackgroundforloader) |
 | `iframeTitle?` | `public` | `string` | Title of the iframe for accessibility | [`BaseContainerConfig`](base-container-config.md).[`iframeTitle`](base-container-config.md#iframetitle) |
-| `size?` | `public` | [`PixelSize`](..\..\asset-types\interfaces\pixel-size.md) | Maximum size boundary of the iframe. | - |
-| `minSize?` | `public` | [`PixelSize`](..\..\asset-types\interfaces\pixel-size.md) | Minimum size boundary of the iframe. | - |
+| `size?` | `public` | [`PixelSize`](../../asset-types/interfaces/pixel-size.md) | Maximum size boundary of the iframe. | - |
+| `minSize?` | `public` | [`PixelSize`](../../asset-types/interfaces/pixel-size.md) | Minimum size boundary of the iframe. | - |
 | `padding?` | `public` | `number` | Padding applied to the iframe in pixels. | - |
 | `borderRadius?` | `public` | `number` | Border Radius applied to the iframe in pixels. | - |

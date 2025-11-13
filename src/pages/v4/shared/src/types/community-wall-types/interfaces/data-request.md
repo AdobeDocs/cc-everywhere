@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,5 +8,5 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `type` | [`HostEventType`](..\..\..\messenger\message-data-types\enumerations\host-event-type.md) | - |
-| `metadata` | [`RequestMetaData`](..\type-aliases\request-meta-data.md) | Metadata for the assets request |
+| `type` | [`HostEventType`](../../../messenger/message-data-types/enumerations/host-event-type.md) | - |
+| `metadata` | [`RequestMetaData`](../type-aliases/request-meta-data.md) | Metadata for the assets request |

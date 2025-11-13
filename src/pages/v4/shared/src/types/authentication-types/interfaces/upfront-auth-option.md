@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`UPFRONT`](..\enumerations\auth-mode.md#upfront) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`UPFRONT`](../enumerations/auth-mode.md#upfront) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
 | `config?` | [`AuthConfig`](auth-config.md) | - |

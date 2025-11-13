@@ -9,7 +9,7 @@ This should be extended by all the workflow contexts like EditorContext, GenStud
 
 ## Extends
 
-- [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md)&lt; `ActionContext`&lt; [`DesignConfig`](../../../../../../shared/src/types/editor/design-config-types/type-aliases/design-config.md)\ &gt;\ &gt;
+- [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md)&lt; `ActionContext`&lt; [`DesignConfig`](../../../../../../shared/src/types/editor/design-config-types/type-aliases/design-config.md) &gt; &gt;
 
 ## Constructors
 

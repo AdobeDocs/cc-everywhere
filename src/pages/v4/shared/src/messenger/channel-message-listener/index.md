@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,10 +8,10 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ChannelMessageListener](classes\channel-message-listener.md) | - |
+| [ChannelMessageListener](classes/channel-message-listener.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [Listener](type-aliases\listener.md) | - |
+| [Listener](type-aliases/listener.md) | - |

@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,13 +12,13 @@ type Listener = <T>(message) => void;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
+| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
 
 ## Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; |
 
 ## Returns
 

@@ -153,8 +153,8 @@ Closes any active design in progress.
 
 #### Returns
 
-  /| `boolean`
-  /| `Promise`&lt; [`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)\ &gt;
+  | `boolean`
+  | `Promise`&lt; [`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md) &gt;
 
 boolean value indicating whether the close operation was successful or not.
 

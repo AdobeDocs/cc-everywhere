@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`DELAYED`](..\enumerations\auth-mode.md#delayed) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`DELAYED`](../enumerations/auth-mode.md#delayed) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
 | `config?` | [`AuthConfig`](auth-config.md) | - |

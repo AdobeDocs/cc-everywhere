@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditorAppConfig](type-aliases\editor-app-config.md) | - |
+| [EditorAppConfig](type-aliases/editor-app-config.md) | - |

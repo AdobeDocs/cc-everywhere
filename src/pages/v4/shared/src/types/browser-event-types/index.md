@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [BrowserEvent](enumerations\browser-event.md) | - |
+| [BrowserEvent](enumerations/browser-event.md) | - |

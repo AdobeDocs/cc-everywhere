@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: EditFurtherExportOption<U\>
+# Interface: EditFurtherExportOption&lt; U\ &gt;
 
 Export option for continuing to edit content in other applications.
 

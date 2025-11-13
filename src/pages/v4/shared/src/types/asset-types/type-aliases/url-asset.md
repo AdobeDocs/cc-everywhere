@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,5 +12,5 @@ Represents an Asset object containing video data within a presigned URL.
 
 ## See
 
- - [AssetBase](..\interfaces\asset-base.md) for the base asset interface
- - [AssetDataType.URL](..\enumerations\asset-data-type.md#url) for the data type
+ - [AssetBase](../interfaces/asset-base.md) for the base asset interface
+ - [AssetDataType.URL](../enumerations/asset-data-type.md#url) for the data type

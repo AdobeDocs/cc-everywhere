@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: PublishExportOption<U\>
+# Interface: PublishExportOption&lt; U\ &gt;
 
 Export option for publishing content to various targets.
 

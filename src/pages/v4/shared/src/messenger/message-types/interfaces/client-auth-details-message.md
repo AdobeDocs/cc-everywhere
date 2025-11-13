@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,5 +8,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| `clientAuthDetails?` | [`ClientAuthDetails`](..\..\..\types\client-authentication-types\interfaces\client-auth-details.md) |
-| `error?` | [`ErrorData`](..\..\..\error\error-data\interfaces\error-data.md)&lt; [`ErrorCode`](..\..\..\error\error-codes\enumerations\error-code.md)\ &gt; |
+| `clientAuthDetails?` | [`ClientAuthDetails`](../../../types/client-authentication-types/interfaces/client-auth-details.md) |
+| `error?` | [`ErrorData`](../../../error/error-data/interfaces/error-data.md)&lt; [`ErrorCode`](../../../error/error-codes/enumerations/error-code.md)&gt; |

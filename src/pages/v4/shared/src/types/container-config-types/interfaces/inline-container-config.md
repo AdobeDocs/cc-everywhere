@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -21,9 +21,9 @@
 | `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`showExpressIconWithText`](inline-or-modal-container-config.md#showexpressiconwithtext) |
 | `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`showDarkerBackgroundForLoader`](inline-or-modal-container-config.md#showdarkerbackgroundforloader) |
 | `iframeTitle?` | `public` | `string` | Title of the iframe for accessibility | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`iframeTitle`](inline-or-modal-container-config.md#iframetitle) |
-| `size?` | `public` | [`PixelSize`](..\..\asset-types\interfaces\pixel-size.md) | Maximum size boundary of the iframe. | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`size`](inline-or-modal-container-config.md#size) |
-| `minSize?` | `public` | [`PixelSize`](..\..\asset-types\interfaces\pixel-size.md) | Minimum size boundary of the iframe. | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`minSize`](inline-or-modal-container-config.md#minsize) |
+| `size?` | `public` | [`PixelSize`](../../asset-types/interfaces/pixel-size.md) | Maximum size boundary of the iframe. | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`size`](inline-or-modal-container-config.md#size) |
+| `minSize?` | `public` | [`PixelSize`](../../asset-types/interfaces/pixel-size.md) | Minimum size boundary of the iframe. | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`minSize`](inline-or-modal-container-config.md#minsize) |
 | `padding?` | `public` | `number` | Padding applied to the iframe in pixels. | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`padding`](inline-or-modal-container-config.md#padding) |
 | `borderRadius?` | `public` | `number` | Border Radius applied to the iframe in pixels. | [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md).[`borderRadius`](inline-or-modal-container-config.md#borderradius) |
-| `mode` | `public` | [`INLINE`](..\enumerations\container-mode.md#inline) | - | - |
+| `mode` | `public` | [`INLINE`](../enumerations/container-mode.md#inline) | - | - |
 | `parentElementId` | `public` | `string` | Id of element to which iframe must be appended. By default it is appended to body. | - |

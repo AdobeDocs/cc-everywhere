@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,7 +12,7 @@ type EventCallback = (message) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`HostEventData`](..\..\..\messenger\message-data-types\interfaces\host-event-data.md) |
+| `message` | [`HostEventData`](../../../messenger/message-data-types/interfaces/host-event-data.md) |
 
 ## Returns
 

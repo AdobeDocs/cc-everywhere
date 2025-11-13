@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,6 +12,6 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `assets?` | [`CommunityWallAssetData`](..\..\module\app-config-types\interfaces\community-wall-asset-data.md)[] | Array of assets returned by the fetchCommunityAssets callback |
+| `assets?` | [`CommunityWallAssetData`](../../module/app-config-types/interfaces/community-wall-asset-data.md)[] | Array of assets returned by the fetchCommunityAssets callback |
 | `error?` | `Error` | Error data returned by the fetchCommunityAssets callback |
 | `cursor?` | `string` | Cursor returned by the fetchCommunityAssets callback for pagination |

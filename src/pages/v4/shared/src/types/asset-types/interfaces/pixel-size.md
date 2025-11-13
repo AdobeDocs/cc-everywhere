@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -14,4 +14,4 @@
 | ------ | ------ | ------ | ------ | ------ |
 | `width` | `number` | **Minimum** 0 | - | [`Size`](size.md).[`width`](size.md#width) |
 | `height` | `number` | **Minimum** 0 | - | [`Size`](size.md).[`height`](size.md#height) |
-| `unit` | [`PIXELS`](..\enumerations\size-unit.md#pixels) | - | [`Size`](size.md).[`unit`](size.md#unit) | - |
+| `unit` | [`PIXELS`](../enumerations/size-unit.md#pixels) | - | [`Size`](size.md).[`unit`](size.md#unit) | - |

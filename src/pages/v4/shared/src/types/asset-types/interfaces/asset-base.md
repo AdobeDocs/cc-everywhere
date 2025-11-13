@@ -1,8 +1,8 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
-# Interface: AssetBase&lt; T\ &gt;
+# Interface: AssetBase&lt;T&gt;
 
 Base interface for all asset types.
 
@@ -14,13 +14,13 @@ Base interface for all asset types.
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`AssetDataType`](..\enumerations\asset-data-type.md) |
+| `T` *extends* [`AssetDataType`](../enumerations/asset-data-type.md) |
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `type` | [`AssetType`](..\enumerations\asset-type.md) |
+| `type` | [`AssetType`](../enumerations/asset-type.md) |
 | `name?` | `string` |
 | `dataType` | `T` |
 | `data` | [`DataTypeMap`](data-type-map.md)\[`T`\] |

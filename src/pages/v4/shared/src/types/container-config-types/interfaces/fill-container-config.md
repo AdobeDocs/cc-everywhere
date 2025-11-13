@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -21,5 +21,5 @@
 | `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text | [`BaseContainerConfig`](base-container-config.md).[`showExpressIconWithText`](base-container-config.md#showexpressiconwithtext) |
 | `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader | [`BaseContainerConfig`](base-container-config.md).[`showDarkerBackgroundForLoader`](base-container-config.md#showdarkerbackgroundforloader) |
 | `iframeTitle?` | `public` | `string` | Title of the iframe for accessibility | [`BaseContainerConfig`](base-container-config.md).[`iframeTitle`](base-container-config.md#iframetitle) |
-| `mode` | `public` | [`FILL`](..\enumerations\container-mode.md#fill) | - | - |
+| `mode` | `public` | [`FILL`](../enumerations/container-mode.md#fill) | - | - |
 | `parentElementId?` | `public` | `string` | Id of element to which iframe must be appended. By default it is appended to body. | - |

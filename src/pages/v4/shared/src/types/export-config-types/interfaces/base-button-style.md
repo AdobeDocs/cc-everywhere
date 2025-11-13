@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: BaseButtonStyle&lt; T\ &gt;
+# Interface: BaseButtonStyle&lt;T&gt;
 
 Represents the style of a button, extending the base Style interface.
 

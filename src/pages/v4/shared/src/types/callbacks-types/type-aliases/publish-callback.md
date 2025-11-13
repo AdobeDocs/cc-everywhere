@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -14,9 +14,9 @@ Keeping callback type as void | `Promise<PublishStatus>` for the publish operati
 
 | Parameter | Type |
 | ------ | ------ |
-| `intent` | [`ActionIntent`](..\..\action-intent-types\type-aliases\action-intent.md) |
-| `publishParams` | [`PublishParams`](..\..\publish-params-types\interfaces\publish-params.md) |
+| `intent` | [`ActionIntent`](../../action-intent-types/type-aliases/action-intent.md) |
+| `publishParams` | [`PublishParams`](../../publish-params-types/interfaces/publish-params.md) |
 
 ## Returns
 
-`void` \| `Promise`&lt; [`PublishStatus`](..\interfaces\publish-status.md)\ &gt;
+`void` \| `Promise`&lt; [`PublishStatus`](../interfaces/publish-status.md) &gt;

@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -20,8 +20,8 @@ handleMessage(
 | Parameter | Type |
 | ------ | ------ |
 | `message` | `unknown` |
-| `sourceVersion` | [`ProtocolVersion`](..\enumerations\protocol-version.md) |
-| `targetVersion` | [`ProtocolVersion`](..\enumerations\protocol-version.md) |
+| `sourceVersion` | [`ProtocolVersion`](../enumerations/protocol-version.md) |
+| `targetVersion` | [`ProtocolVersion`](../enumerations/protocol-version.md) |
 
 #### Returns
 

@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -6,7 +6,7 @@
 
 ## Implements
 
-- [`IChannelMessengerDelegate`](..\..\channel-messenger-types\interfaces\i-channel-messenger-delegate.md)
+- [`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md)
 
 ## Constructors
 
@@ -24,10 +24,10 @@ new ChannelMessageListener(
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
-| `sourceChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) | `undefined` |
-| `targetProtocolVersion` | [`ProtocolVersion`](..\..\protocol-types\enumerations\protocol-version.md) | `ProtocolVersion.V1_3` |
+| `sourceChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) | `undefined` |
+| `targetProtocolVersion` | [`ProtocolVersion`](../../protocol-types/enumerations/protocol-version.md) | `ProtocolVersion.V1_3` |
 | `_filterRequestIdMismatch` | `boolean` | `false` |
-| `protocolHandlersModule?` | [`ProtocolHandlersModule`](..\..\protocol-types\interfaces\protocol-handlers-module.md) | `undefined` |
+| `protocolHandlersModule?` | [`ProtocolHandlersModule`](../../protocol-types/interfaces/protocol-handlers-module.md) | `undefined` |
 
 #### Returns
 
@@ -57,13 +57,13 @@ didGetMessage<T>(message, requestId?): void;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
+| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; |
 | `requestId?` | `string` |
 
 #### Returns
@@ -72,7 +72,7 @@ didGetMessage<T>(message, requestId?): void;
 
 #### Implementation of
 
-[`IChannelMessengerDelegate`](..\..\channel-messenger-types\interfaces\i-channel-messenger-delegate.md).[`didGetMessage`](..\..\channel-messenger-types\interfaces\i-channel-messenger-delegate.md#didgetmessage)
+[`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).[`didGetMessage`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md#didgetmessage)
 
 <HorizontalLine />
 
@@ -86,8 +86,8 @@ setTarget(targetChannel, targetChannelInfo): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
-| `targetChannelInfo` | [`TargetChannelInfo`](..\..\channel-messenger-types\interfaces\target-channel-info.md) |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `targetChannelInfo` | [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md) |
 
 #### Returns
 
@@ -105,7 +105,7 @@ removeTarget(targetChannel): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
 
 #### Returns
 
@@ -123,7 +123,7 @@ hasTarget(targetChannel): boolean;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
 
 #### Returns
 
@@ -143,12 +143,12 @@ getTarget(targetChannel):
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
 
 #### Returns
 
-  \| `undefined`
-  \| [`TargetChannelInfo`](..\..\channel-messenger-types\interfaces\target-channel-info.md)
+  | `undefined`
+  | [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
 
 <HorizontalLine />
 
@@ -162,8 +162,8 @@ addListenerForTarget(targetChannel, callback): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
-| `callback` | [`TargetAddedCallback`](..\..\channel-messenger-types\type-aliases\target-added-callback.md) |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `callback` | [`TargetAddedCallback`](../../channel-messenger-types/type-aliases/target-added-callback.md) |
 
 #### Returns
 
@@ -181,14 +181,14 @@ sendMessage<T>(targetChannel, message): boolean;
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) |
+| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) |
 
 #### Parameters
 
 | Parameter | Type |
 | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |
-| `message` | \| [`Message`](..\..\message-types\type-aliases\message.md)&lt; `T`\ &gt; \| [`SimpleMessageType`](..\..\message-types\type-aliases\simple-message-type.md) |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
 
 #### Returns
 
@@ -208,14 +208,14 @@ Sends a message using a message channel that is compatible with older version of
 
 | Type Parameter | Description |
 | ------ | ------ |
-| `T` *extends* [`MessageType`](..\..\message-types\enumerations\message-type.md) | The type of the message being sent. |
+| `T` *extends* [`MessageType`](../../message-types/enumerations/message-type.md) | The type of the message being sent. |
 
 #### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](..\..\channel-messenger-types\enumerations\message-channel.md) |  |
-| `message` | [`MessageCompat`](..\..\message-types\type-aliases\message-compat.md)&lt; `T`\ &gt; | The message to send. |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |  |
+| `message` | [`MessageCompat`](../../message-types/type-aliases/message-compat.md)&lt;`T`&gt; | The message to send. |
 
 #### Returns
 
@@ -238,9 +238,9 @@ addListener(
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `messageType` | [`MessageType`](..\..\message-types\enumerations\message-type.md) | Listener is invoked for incoming message of this message type. |
-| `listener` | [`Listener`](..\type-aliases\listener.md) | Callback function that is invoked when there is an incoming message. |
-| `messageFilter?` | [`MessageFilter`](..\..\channel-messenger-types\type-aliases\message-filter.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
+| `messageType` | [`MessageType`](../../message-types/enumerations/message-type.md) | Listener is invoked for incoming message of this message type. |
+| `listener` | [`Listener`](../type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
+| `messageFilter?` | [`MessageFilter`](../../channel-messenger-types/type-aliases/message-filter.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
 
 #### Returns
 
@@ -258,8 +258,8 @@ removeListener(messageType, listener): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `messageType` | [`MessageType`](..\..\message-types\enumerations\message-type.md) |
-| `listener` | [`Listener`](..\type-aliases\listener.md) |
+| `messageType` | [`MessageType`](../../message-types/enumerations/message-type.md) |
+| `listener` | [`Listener`](../type-aliases/listener.md) |
 
 #### Returns
 

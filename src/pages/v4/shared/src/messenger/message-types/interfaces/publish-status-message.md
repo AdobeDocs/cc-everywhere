@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `isPublishSuccessful` | [`PublishCallbackStatus`](..\enumerations\publish-callback-status.md) |
+| `isPublishSuccessful` | [`PublishCallbackStatus`](../enumerations/publish-callback-status.md) |

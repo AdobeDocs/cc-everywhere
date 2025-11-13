@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,5 +8,5 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [TextToImageAppConfig](interfaces\text-to-image-app-config.md) | - |
-| [EditImageAppConfig](interfaces\edit-image-app-config.md) | - |
+| [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
+| [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |

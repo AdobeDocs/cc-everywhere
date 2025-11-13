@@ -1,8 +1,8 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
-# Type Alias: DidTargetLoadMessage&lt; T\ &gt;
+# Type Alias: DidTargetLoadMessage&lt; T &gt;
 
 ```ts
 type DidTargetLoadMessage<T> = T extends FAILURE ? object : object;

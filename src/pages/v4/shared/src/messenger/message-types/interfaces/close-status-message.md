@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `closeStatus` | [`CloseStatus`](..\enumerations\close-status.md) |
+| `closeStatus` | [`CloseStatus`](../enumerations/close-status.md) |

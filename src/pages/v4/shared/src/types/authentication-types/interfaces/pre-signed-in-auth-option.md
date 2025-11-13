@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -12,5 +12,5 @@
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`PRE_SIGNED_IN`](..\enumerations\auth-mode.md#pre_signed_in) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`PRE_SIGNED_IN`](../enumerations/auth-mode.md#pre_signed_in) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
 | `config?` | [`PreSignedInAuthConfig`](pre-signed-in-auth-config.md) | - |

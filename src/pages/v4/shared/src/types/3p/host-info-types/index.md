@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,5 +8,5 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [HostInfo](type-aliases\host-info.md) | - |
-| [ConfigParams](type-aliases\config-params.md) | - |
+| [HostInfo](type-aliases/host-info.md) | - |
+| [ConfigParams](type-aliases/config-params.md) | - |

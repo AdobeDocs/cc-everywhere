@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -15,4 +15,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `mode` | [`AuthMode`](..\enumerations\auth-mode.md) |
+| `mode` | [`AuthMode`](../enumerations/auth-mode.md) |

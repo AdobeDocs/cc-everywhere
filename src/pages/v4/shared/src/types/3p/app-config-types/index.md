@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,10 +8,10 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AppConfig](interfaces\app-config.md) | - |
+| [AppConfig](interfaces/app-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AnalyticsData](type-aliases\analytics-data.md) | - |
+| [AnalyticsData](type-aliases/analytics-data.md) | - |

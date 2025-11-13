@@ -1,8 +1,8 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
-# Interface: ErrorData&lt; T\ &gt;
+# Interface: ErrorData&lt; T &gt;
 
 ## Type Parameters
 

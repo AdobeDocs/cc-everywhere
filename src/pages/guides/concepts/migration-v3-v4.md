@@ -135,14 +135,14 @@ First, update your script tag or import statement to use the V4 SDK.
 #### V4 HTML Script Tag
 
 ```html
-&lt; !-- V4 - Updated version -- &gt;
+<!-- V4 - Updated version -->
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
 ```
 
 #### V3 HTML Script Tag
 
 ```html
-&lt; !-- V3 - Previous version -- &gt;
+<!-- V3 - Previous version -->
 <script src="https://cc-embed.adobe.com/sdk/v3/CCEverywhere.js"></script>
 ```
 
@@ -488,7 +488,7 @@ Take advantage of new features introduced in V4:
 
 - **[V4 Release Notes](../changelog/index.md)**: Complete list of changes and improvements
 - **[V4 API Reference](../../v4/index.md)**: Full documentation of all V4 APIs
-- **[Troubleshooting Guide](../troubleshooting/)**: Common issues and solutions during migration
+- **[Troubleshooting Guide](../troubleshooting/express-unavailable-error.md)**: Common issues and solutions during migration
 
 Some new features might include:
 
@@ -524,7 +524,7 @@ Congratulations! You've successfully migrated from Adobe Express Embed SDK V3 to
 
 ### 📚 Next Steps
 
-If you encounter any issues during migration, consult our [Troubleshooting Guide](../troubleshooting/) for common solutions.
+If you encounter any issues during migration, consult our [Troubleshooting Guide](../troubleshooting/express-unavailable-error.md) for common solutions.
 
 For ongoing development, bookmark these essential resources:
 

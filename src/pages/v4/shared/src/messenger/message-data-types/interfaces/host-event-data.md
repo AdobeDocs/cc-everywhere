@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -21,5 +21,5 @@
 
 | Property | Type |
 | ------ | ------ |
-| `type` | [`HostEventType`](..\enumerations\host-event-type.md) |
+| `type` | [`HostEventType`](../enumerations/host-event-type.md) |
 | `data?` | `unknown` |

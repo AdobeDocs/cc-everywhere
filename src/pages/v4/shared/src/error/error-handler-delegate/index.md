@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ErrorHandlerDelegate](classes\error-handler-delegate.md) | - |
+| [ErrorHandlerDelegate](classes/error-handler-delegate.md) | - |

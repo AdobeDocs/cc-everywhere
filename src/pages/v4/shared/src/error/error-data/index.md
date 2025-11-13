@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [ErrorData](interfaces\error-data.md) | ********************************************************************** |
+| [ErrorData](interfaces/error-data.md) | ** |

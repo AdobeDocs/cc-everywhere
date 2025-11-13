@@ -28,8 +28,8 @@ Get answers to common questions about the Adobe Express Embed SDK, including set
 
 ## Questions
 
-&lt; !-- The comment below is needed, otherwise the Markdown-all-in-one extensions will automatically create a TOC and mess with the layout -- &gt;
-&lt; !-- no toc -- &gt;
+&lt;!-- The comment below is needed, otherwise the Markdown-all-in-one extensions will automatically create a TOC and mess with the layout --&gt;
+&lt;!-- no toc --&gt;
 - [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
 - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
 - [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)

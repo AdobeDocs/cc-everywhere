@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [BaseHandler](classes\base-handler.md) | - |
+| [BaseHandler](classes/base-handler.md) | - |

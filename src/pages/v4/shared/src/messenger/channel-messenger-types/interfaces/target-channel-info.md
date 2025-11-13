@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -10,4 +10,4 @@
 | ------ | ------ |
 | `origin` | `string` |
 | `target` | `Window` |
-| `senderFn` | [`MessageSender`](..\type-aliases\message-sender.md) |
+| `senderFn` | [`MessageSender`](../type-aliases/message-sender.md) |

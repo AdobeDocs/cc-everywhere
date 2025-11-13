@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -13,6 +13,6 @@ ClientAuthProvider(): Promise<ClientAuthDetails>;
 
 ## Returns
 
-`Promise`&lt; [`ClientAuthDetails`](client-auth-details.md)\ &gt;
+`Promise`&lt; [`ClientAuthDetails`](client-auth-details.md) &gt;
 
 `Promise<ClientAuthDetails>` A promise that resolves to the client authentication details

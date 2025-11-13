@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,4 +8,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [Messages](variables\messages.md) | ********************************************************************** |
+| [Messages](variables/messages.md) | ** |

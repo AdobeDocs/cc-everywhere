@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: DownloadExportOption<U\>
+# Interface: DownloadExportOption&lt; U\ &gt;
 
 Export option for downloading content to the user's device.
 

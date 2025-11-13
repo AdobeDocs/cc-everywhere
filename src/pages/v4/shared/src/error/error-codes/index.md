@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\index.md)
+[**cc-everywhere**](../../../../index.md)
 
 <HorizontalLine />
 
@@ -8,10 +8,10 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [ErrorCode](enumerations\error-code.md) | - |
+| [ErrorCode](enumerations/error-code.md) | - |
 
 ## Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [ErrorCodeMessages](variables\error-code-messages.md) | - |
+| [ErrorCodeMessages](variables/error-code-messages.md) | - |

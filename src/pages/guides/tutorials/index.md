@@ -22,7 +22,7 @@ Each tutorial provides step-by-step instructions on integrating the SDK into you
 4. [Editing Images with the Edit Image v2 Module](./edit-image.md): How to implement Adobe Express Edit Image v2.
 5. [Workflow Tethering](./workflow-tethering.md): How to implement workflow tethering between Generate Image, Edit Image, and Full Editor modules.
 
-&lt; !-- This will be a landing page for Tutorials.
+&lt;!-- This will be a landing page for Tutorials.
 
 This page will contain the tutorials for Adobe Embed.
 

@@ -1,4 +1,4 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
@@ -59,7 +59,7 @@ text(): Promise<string>;
 
 #### Returns
 
-`Promise`&lt; `string`\ &gt;
+`Promise`&lt; `string` &gt;
 
 <HorizontalLine />
 
@@ -71,4 +71,4 @@ arrayBuffer(): Promise<ArrayBuffer>;
 
 #### Returns
 
-`Promise`&lt; `ArrayBuffer`\ &gt;
+`Promise`&lt; `ArrayBuffer` &gt;

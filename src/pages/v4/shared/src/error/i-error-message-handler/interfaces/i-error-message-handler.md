@@ -1,8 +1,8 @@
-[**cc-everywhere**](..\..\..\..\..\index.md)
+[**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
 
-# Interface: IErrorMessageHandler&lt; T\ &gt;
+# Interface: IErrorMessageHandler&lt; T &gt;
 
 ## Type Parameters
 
