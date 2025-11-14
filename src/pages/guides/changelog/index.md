@@ -22,6 +22,12 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration_v3_v4.md) for detailed instructions.
 
+## 2025-11-14
+
+### Documentation
+
+- Added a new [Template Browser concept guide](../concepts/browse-template.md) that covers the implementation details of the new Template Browser experience.
+
 ## [4.38.19] 2025-11-10
 
 ### API Enhancement

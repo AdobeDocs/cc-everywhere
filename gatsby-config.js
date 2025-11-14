@@ -117,6 +117,10 @@ module.exports = {
             path: "/guides/concepts/edit-image-v2.md",
           },
           {
+            title: "Template Browser",
+            path: "/guides/concepts/browse-template.md",
+          },
+          {
             title: "Workflow Tethering",
             path: "/guides/concepts/tethering.md",
           },
