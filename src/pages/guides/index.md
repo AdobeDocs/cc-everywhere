@@ -45,7 +45,7 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<Announcement slots="heading, text, button" className="closing-gates-announcement" variant="secondary" backgroundColor ="background-color-gray"/>
+<Announcement slots="heading, text, button" className="closing-gates-announcement" variant="secondary" hasborder="true" />
 
 ### Demo App
 
