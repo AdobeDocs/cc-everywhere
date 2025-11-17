@@ -28,8 +28,11 @@ Get answers to common questions about the Adobe Express Embed SDK, including set
 
 ## Table of Contents
 
-<!-- The comment below is needed, otherwise the Markdown-all-in-one extensions will automatically create a TOC and mess with the layout -->
-<!-- no toc -->
+&lt;!-- The comment below is needed, otherwise the Markdown-all-in-one extensions will automatically create a TOC and mess with the layout --&gt;
+&lt;!-- no toc --&gt;
+
+### [Getting Started](#getting-started-1)
+
 - [Do you have a mobile SDK?](#do-you-have-a-mobile-sdk)
 - [Is there a cost to use the SDK?](#is-there-a-cost-to-use-the-sdk)
 - [What is the versioning strategy for the SDK?](#what-is-the-versioning-strategy-for-the-sdk)
@@ -86,7 +89,7 @@ Access to the Adobe Express Embed SDK now requires a business approval process. 
 - V1 and V2 are deprecated and V3 will be deprecated in 2024.
 - Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
 
----
+<HorizontalLine />
 
 ## SDK Access & Approval
 
@@ -110,7 +113,7 @@ Your users can use the integrations, but, we will display a red banner indicatin
 
 Approved integrations will remain active until December 2027. After that, they'll need to go through the new business approval process.
 
----
+<HorizontalLine />
 
 ## User Requirements & Authentication
 
@@ -126,7 +129,7 @@ To enable Single Sign-On (SSO) for your service, when using Adobe express Embed 
 
 Learn to use the Adobe Admin Console to set up [Single Sign-On (SSO)](https://helpx.adobe.com/in/enterprise/using/sso-overview.html) with your Identity provider and troubleshoot setup-related problems.
 
----
+<HorizontalLine />
 
 ## Features & Functionality
 
@@ -141,7 +144,7 @@ There are two functional differences in the embedded Adobe Express full editor c
 
 The embedded Adobe Express full editor can be setup to launch student safe content even before a student is signed into the embedded experience. More information about [Adobe & Student Privacy](https://www.adobe.com/privacy/student-policy.html).
 
----
+<HorizontalLine />
 
 ## Configuration & Setup
 
@@ -149,7 +152,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
 
----
+<HorizontalLine />
 
 ## Technical Requirements
 
@@ -170,7 +173,7 @@ You can refer to the complete [technical requirements](../../quickstart/technica
 
 You can refer to the complete [technical requirements](../../quickstart/technical-requirements.md) here.
 
----
+<HorizontalLine />
 
 ## Troubleshooting
 
@@ -182,7 +185,7 @@ Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 
 Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
 
----
+<HorizontalLine />
 
 ## Support
 
