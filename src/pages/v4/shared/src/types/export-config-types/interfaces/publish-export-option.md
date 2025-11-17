@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: PublishExportOption&lt; U\ &gt;
+# Interface: PublishExportOption&lt; U &gt;
 
 Export option for publishing content to various targets.
 
@@ -13,7 +13,7 @@ Export option for publishing content to various targets.
 
 ## Extends
 
-- [`BaseExportOption`](base-export-option.md)&lt; `U`\ &gt;
+- [`BaseExportOption`](base-export-option.md)&lt; `U` &gt;
 
 ## Type Parameters
 

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-<HorizontalLine />rizontalLine />
+<HorizontalLine />
 
 # shared/src/types/module/DesignConfig.types
 

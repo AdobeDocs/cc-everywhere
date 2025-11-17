@@ -52,7 +52,7 @@ Experience the power of Adobe Express Embed SDK. Try our demo app and see seamle
 
 - [Try our demo app](https://demo.expressembed.com/)
 
-&lt;br/ &gt;
+&lt;br&gt;
 
 ## Overview
 

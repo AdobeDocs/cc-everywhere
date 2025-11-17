@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: DownloadExportOption&lt; U\ &gt;
+# Interface: DownloadExportOption&lt; U &gt;
 
 Export option for downloading content to the user's device.
 
@@ -13,7 +13,7 @@ Export option for downloading content to the user's device.
 
 ## Extends
 
-- [`BaseExportOption`](base-export-option.md)&lt; `U`\ &gt;
+- [`BaseExportOption`](base-export-option.md)&lt; `U` &gt;
 
 ## Type Parameters
 

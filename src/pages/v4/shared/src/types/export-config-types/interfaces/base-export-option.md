@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: BaseExportOption&lt; U\ &gt;
+# Interface: BaseExportOption&lt; U &gt;
 
 ## Extended by
 

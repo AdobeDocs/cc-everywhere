@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: EditFurtherExportOption&lt; U\ &gt;
+# Interface: EditFurtherExportOption&lt; U &gt;
 
 Export option for continuing to edit content in other applications.
 
@@ -13,7 +13,7 @@ Export option for continuing to edit content in other applications.
 
 ## Extends
 
-- [`BaseExportOption`](base-export-option.md)&lt; `U`\ &gt;
+- [`BaseExportOption`](base-export-option.md)&lt; `U` &gt;
 
 ## Type Parameters
 
