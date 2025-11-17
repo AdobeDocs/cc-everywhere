@@ -51,9 +51,9 @@ Seamlessly embed Adobe Express on your website with our SDK.
 
 This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/#sdk-access--approval-1).
 
-[Apply now](https://www.adobe.com/go/embed-access)
+- [Apply now](https://www.adobe.com/go/embed-access)
 
-&lt; br/ &gt;
+&lt;br/ &gt;
 
 ## Overview
 

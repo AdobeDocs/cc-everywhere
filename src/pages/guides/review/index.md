@@ -201,6 +201,6 @@ If it was rejected, we will include the reasons for rejection along with any nex
 
 To learn more, see the [Adobe Creative Cloud Developer Brand Guide](https://partners.adobe.com/content/dam/tep_assets/public/public_1/documents/Adobe-Creative-Cloud-Developer-Brand-Guide.pdf). This guide includes best practices for brand assets in marketing, press releases and social media guidance. It's the best spot to get our most up to date assets. Here you'll also find information for how to publicize and promote your application once it's approved.
 
-During the submission process, we're available to answer any direct questions you may have at <CCIntegrationsReview@adobe.com>. Please note that this inbox may have delayed responses depending on the number of queries.
+During the submission process, we're available to answer any direct questions you may have at [CCIntegrationsReview@adobe.com](mailto:CCIntegrationsReview@adobe.com). Please note that this inbox may have delayed responses depending on the number of queries.
 
 We look forward to seeing your creative solutions!
