@@ -8,7 +8,8 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDocConfig](interfaces/edit-image-doc-config.md) | - |
+| [EditImageDocConfig](../doc-config-types/interfaces/edit-image-doc-config.md) | - |
+| [EditDesignDocConfig](../doc-config-types/interfaces/edit-design-doc-config.md) | - |
 
 ## Type Aliases
 

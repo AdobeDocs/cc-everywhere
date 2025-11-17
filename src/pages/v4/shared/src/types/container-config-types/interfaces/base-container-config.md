@@ -19,6 +19,6 @@
 | `hideCloseButton?` | `public` | `boolean` | Don't show close button for container and header bars |
 | `zIndex?` | `public` | `number` | Set the z-index of of the root container |
 | `showReaderView?` | `readonly` | `boolean` | Show Reader Loading View |
-| `showExpressIconWithText?` | `readonly` | `boolean` | Show new express icon with text |
+| `showExpressIconWithoutText?` | `readonly` | `boolean` | Show new express icon without text |
 | `showDarkerBackgroundForLoader?` | `readonly` | `boolean` | Show darker background for loader |
 | `iframeTitle?` | `public` | `string` | Title of the iframe for accessibility |

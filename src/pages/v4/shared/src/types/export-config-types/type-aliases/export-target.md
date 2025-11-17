@@ -8,5 +8,6 @@
 type ExportTarget = 
   | PublishTarget
   | DownloadTarget
-  | EditFurtherTarget;
+  | EditFurtherTarget
+  | CallBackTarget;
 ```

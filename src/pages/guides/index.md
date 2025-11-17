@@ -34,6 +34,7 @@ contributors:
   - https://github.com/undavide
   - https://github.com/amandahuarng
 ---
+
 import "./landing-styles.css";
 
 <HeroSimple slots="image, heading, text" background="linear-gradient(180deg, #c946eb, #6372f5)" variant="halfWidth" textColor="white"/>
@@ -44,15 +45,15 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<Announcement slots="heading, text, button" variant="secondary" backgroundColor ="background-color-gray"/>
+<Announcement slots="heading, text, button" className="closing-gates-announcement" variant="secondary" backgroundColor ="background-color-gray"/>
 
 ### Demo App
 
-Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
+This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/#sdk-access--approval-1).
 
-- [Try our demo app](https://demo.expressembed.com/)
+[Apply now](https://www.adobe.com/go/embed-access)
 
-&lt;br&gt;
+&lt; br/ &gt;
 
 ## Overview
 

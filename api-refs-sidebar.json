@@ -540,6 +540,10 @@
                     "path": "/v4/shared/src/messenger/message-types/enumerations/close-status.md"
                   },
                   {
+                    "title": "CustomMessageAction",
+                    "path": "/v4/shared/src/messenger/message-types/enumerations/custom-message-action.md"
+                  },
+                  {
                     "title": "LoadStatus",
                     "path": "/v4/shared/src/messenger/message-types/enumerations/load-status.md"
                   },
@@ -576,6 +580,10 @@
                   {
                     "title": "CloseStatusMessage",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/close-status-message.md"
+                  },
+                  {
+                    "title": "CustomMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/custom-message.md"
                   },
                   {
                     "title": "MessageDataMap",
@@ -1396,6 +1404,10 @@
                 "title": "enumerations",
                 "pages": [
                   {
+                    "title": "CallBackTarget",
+                    "path": "/v4/shared/src/types/export-config-types/enumerations/call-back-target.md"
+                  },
+                  {
                     "title": "DownloadTarget",
                     "path": "/v4/shared/src/types/export-config-types/enumerations/download-target.md"
                   },
@@ -1420,7 +1432,7 @@
                     "path": "/v4/shared/src/types/export-config-types/enumerations/publish-target.md"
                   }
                 ],
-                "path": "/v4/shared/src/types/export-config-types/enumerations/download-target.md"
+                "path": "/v4/shared/src/types/export-config-types/enumerations/call-back-target.md"
               },
               {
                 "title": "interfaces",
@@ -1436,6 +1448,14 @@
                   {
                     "title": "BaseExportOption",
                     "path": "/v4/shared/src/types/export-config-types/interfaces/base-export-option.md"
+                  },
+                  {
+                    "title": "CallBackAction",
+                    "path": "/v4/shared/src/types/export-config-types/interfaces/call-back-action.md"
+                  },
+                  {
+                    "title": "CallBackExportOption",
+                    "path": "/v4/shared/src/types/export-config-types/interfaces/call-back-export-option.md"
                   },
                   {
                     "title": "ContinueEditingDropdownOption",
@@ -1935,6 +1955,10 @@
                     "title": "enumerations",
                     "pages": [
                       {
+                        "title": "EditDesignAppVersion",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-design-app-version.md"
+                      },
+                      {
                         "title": "EditImageAppVersion",
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version.md"
                       },
@@ -1955,7 +1979,7 @@
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version.md"
+                    "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-design-app-version.md"
                   },
                   {
                     "title": "interfaces",
@@ -2021,6 +2045,10 @@
                     "title": "interfaces",
                     "pages": [
                       {
+                        "title": "EditDesignDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
+                      },
+                      {
                         "title": "EditImageDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
                       },
@@ -2037,7 +2065,7 @@
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/warmup-design-config.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
+                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/module/design-config-types/index.md"
@@ -2046,8 +2074,18 @@
                 "title": "DocConfig.types",
                 "pages": [
                   {
-                    "title": "EditImageDocConfig",
-                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
+                    "title": "interfaces",
+                    "pages": [
+                      {
+                        "title": "EditDesignDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
+                      },
+                      {
+                        "title": "EditImageDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
+                      }
+                    ],
+                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
                   },
                   {
                     "title": "EditImageIntent",

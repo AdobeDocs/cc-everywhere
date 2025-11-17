@@ -16,6 +16,7 @@
 
 ## Properties
 
-| Property | Type |
-| ------ | ------ |
-| `callbacks?` | [`Callbacks`](../../callbacks-types/interfaces/callbacks.md) |
+| Property | Type | Description |
+| ------ | ------ | ------ |
+| `useClientAuth?` | `boolean` | Flag to explicitly opt-in to use client authentication. When true, client access token will be fetched from the partner and used in the module. This is only relevant for Edit Image and Text to Image modules. Should not be passed for other workflows. **Default** `false` |
+| `callbacks?` | [`Callbacks`](../../callbacks-types/interfaces/callbacks.md) | - |

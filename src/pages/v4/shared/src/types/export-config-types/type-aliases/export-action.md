@@ -9,5 +9,6 @@ type ExportAction =
   | PublishAction
   | DownloadAction
   | EditFurtherAction
-  | ContinueEditingAction;
+  | ContinueEditingAction
+  | CallBackAction;
 ```

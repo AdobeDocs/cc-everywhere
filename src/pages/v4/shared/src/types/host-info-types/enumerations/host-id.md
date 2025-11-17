@@ -22,6 +22,7 @@
 | `BRIDGE` | `"BRIDGE"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
+| `FIREFLY` | `"FIREFLY"` |
 | `GENSTUDIO` | `"GENSTUDIO"` |
 | `ILLUSTRATOR` | `"ILLUSTRATOR"` |
 | `INDESIGN` | `"INDESIGN"` |

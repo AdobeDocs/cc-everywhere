@@ -329,7 +329,7 @@ await ccEverywhere.quickAction.resizeImage(docConfig, appConfig, exportConfig, c
 
 V4 uses a consistent four-parameter structure across all APIs. Here's how to restructure your existing parameters:
 
-#### Parameter restructuring:
+#### Parameter restructuring
 
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
 
@@ -412,7 +412,7 @@ const result = await ccEverywhere.module.createImageFromText(
 
 **Note:** Setting `appVersion: "2"` is separate from the V3→V4 SDK migration but is required to access the full range of new module capabilities. This step is only relevant if you're using module workflows.
 
-#### V2 Module Enhancements:
+#### V2 Module Enhancements
 
 **Generate Image V2 features:**
 
@@ -476,7 +476,7 @@ Here are some specific tests you can perform:
 
 Take advantage of new features introduced in V4:
 
-#### New V4 Features:
+#### New V4 Features
 
 - **[Module Workflow](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md)**: New `editImage` and `createImageFromText` capabilities
 - **[Enhanced Editor APIs](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md)**: More granular control with separate create methods
@@ -484,7 +484,7 @@ Take advantage of new features introduced in V4:
 - **Improved Parameter Structure**: Cleaner separation of concerns with four parameter types
 - **Class-level Callbacks**: Set callbacks once during initialization instead of per API call
 
-#### Additional Resources:
+#### Additional Resources
 
 - **[V4 Release Notes](../changelog/index.md)**: Complete list of changes and improvements
 - **[V4 API Reference](../../v4/index.md)**: Full documentation of all V4 APIs
