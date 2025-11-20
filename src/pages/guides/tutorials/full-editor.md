@@ -16,7 +16,7 @@ contributors:
 
 Learn how to integrate the Adobe Express Embed SDK into your web applications.
 
-&lt; !-- **TODO**: add a video, Davide-style. -- &gt;
+&lt;!-- **TODO**: add a video, Davide-style. --&gt;
 
 ## Introduction
 
@@ -207,7 +207,7 @@ document.getElementById("createDesign").onclick = async () => {
 
 ![Launching the Full Editor](./images/full-editor_launch.png)
 
-&lt; !-- Info Alert -- &gt;
+&lt;!-- Info Alert --&gt;
 <InlineAlert variant="info" slots="text1" />
 
 Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.
@@ -300,7 +300,7 @@ We have all the required bits in place, but some simple refactoring is needed to
 
 You can check the entire [`embed-sdk-full-editor-tutorial`](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) project code as part of the dedicated [`embed-sdk-samples`](https://github.com/AdobeDocs/embed-sdk-samples) repository. Find the most relevant files below for reference.
 
-&lt; !-- CodeBlock -- &gt;
+&lt;!-- CodeBlock --&gt;
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
 
 #### main.js

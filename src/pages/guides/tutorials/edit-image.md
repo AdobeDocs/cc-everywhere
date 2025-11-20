@@ -251,7 +251,7 @@ Besides the `<sp-theme>` wrapper, which styles the entire page with the Adobe Ex
 - The `<img>` element, prepopulated with the (local) image to edit.
 - The `<sp-button-group>`, which contains the **Choose Image** and **Edit Image** buttons.
 - The `<input>` element, which is _hidden_ and used to upload an alternative image.
-- The `<script>` tag, which loads the Embed SDK logic.
+- The `<script></script>` tag, which loads the Embed SDK logic.
 
 ### 3.2 Learn the Edit Image method signature
 

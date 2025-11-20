@@ -22,7 +22,7 @@ Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-ve
 
 Re-exports [EditDesignAppVersion](app-config-types/enumerations/edit-design-app-version.md)
 
-***
+<HorizontalLine />
 
 ### ThumbnailOption
 
@@ -136,7 +136,7 @@ Re-exports [WarmupDesignConfig](design-config-types/interfaces/warmup-design-con
 
 Re-exports [EditDesignDesignConfig](design-config-types/interfaces/edit-design-design-config.md)
 
-***
+<HorizontalLine />
 
 ### EditImageIntent
 
@@ -148,7 +148,7 @@ Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
 
 Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-config.md)
 
-***
+<HorizontalLine />
 
 ### EditDesignDocConfig
 

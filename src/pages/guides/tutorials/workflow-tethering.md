@@ -49,7 +49,6 @@ You'll build a web application that demonstrates two key workflow tethering patt
 
 ## Prerequisites
 
-
 <InlineAlert variant="warning" slots="text1, text2" />
 
 This is an **advanced tutorial** that builds upon foundational concepts. Before starting, ensure you have read:
@@ -121,8 +120,7 @@ npm run start
 
 The web application will be served at `localhost:5555` on a secure HTTPS connection. Open your browser and navigate to this address to see the workflow tethering in action.
 
-&lt; !-- ![Workflow Tethering UI](./images/tethering-workflows--ui.png) -- &gt;
-
+&lt;!-- ![Workflow Tethering UI](./images/tethering-workflows--ui.png) --&gt;
 
 <InlineAlert variant="error" slots="header, text1" />
 
