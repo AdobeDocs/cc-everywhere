@@ -18,7 +18,7 @@ contributors:
   - https://github.com/undavide
 ---
 
-<HeroSimple slots="image, heading, text" variant="fullWidth" textColor="white"/>
+<SuperHero slots="image, heading, text" variant="fullWidth" textColor="white"/>
 
 ![Hero image](../img/FAQ.png)
 

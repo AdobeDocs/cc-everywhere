@@ -226,7 +226,7 @@ We need to write a simple function in the `callbacks` to implement this feature,
 
 The `data` property sounds promising! The plan is to have an `<img>` element (in this example, it starts as a placeholder), which `src` attribute will be filled with the Base64 string coming from Adobe Express.
 
-&lt; !-- CodeBlock -- &gt;
+&lt;!-- CodeBlock -- &gt;
 <CodeBlock slots="heading, code" repeat="2" languages="JavaScript, HTML" />
 
 #### main.js
