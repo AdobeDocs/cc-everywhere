@@ -154,7 +154,7 @@ For an updated list of all the available options, refer to the [`EditFurtherInte
 
 ![Prompt Placeholder](./img/generate-image--prompt-placeholder.jpg)
 
-The Prompt Placeholder is a custom string passed with the [`promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#promptinputplaceholder) property of the `appConfig` object. It can be useful to guide your users with a specific instruction.
+The Prompt Placeholder is a custom string passed with the [`promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) property of the `appConfig` object. It can be useful to guide your users with a specific instruction.
 
 ```js
 const appConfig = {
