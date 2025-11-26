@@ -49,7 +49,7 @@ Seamlessly embed Adobe Express on your website with our SDK.
 
 ### Access to the Embed SDK Now Requires Business Approval
 
-This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/#sdk-access--approval-1).
+This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/index.md#sdk-access--approval-1).
 
 [Apply now](https://www.adobe.com/go/embed-access)
 
@@ -73,7 +73,7 @@ With just a few lines of code, you can embed [Adobe Express editor](https://www.
 
 This journey map will give you guidance on which resources to use at different stages of your integration with the Adobe Express Embed SDK. Click on the image below to download the PDF version of the developer journey with active links.
 
-[![Developer Journey](./images/developer-journey.png)](./images/developer-journey.pdf)
+[![Developer Journey](./images/developer-journey-v2.png)](./images/developer-journey-v2.pdf)
 
 ## First Steps
 
