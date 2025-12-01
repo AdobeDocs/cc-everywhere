@@ -308,11 +308,11 @@ const appConfig = {
 
 ![Generate image styles](./images/generate-image--styles.png)
 
-You can even use images as Style and Composition references, respectively by passing a [`imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#imagestylereference) or [`imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#imagecompositionreference) properties of type [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md) directly to the `appConfig` object.
+You can even use images as Style and Composition references, respectively by passing a [`imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) or [`imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) properties of type [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md) directly to the `appConfig` object.
 
 ### 3.4 Prompt moderation
 
-Firefly models have built-in moderation to detect and filter out harmful content. However, you can further enhance the moderation process by passing a [`isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#ispromptsafe) property to `appConfig`.
+Firefly models have built-in moderation to detect and filter out harmful content. However, you can further enhance the moderation process by passing a [`isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) property to `appConfig`.
 
 In there, you can implement your own moderation logic, or use a third-party service like [OpenAI's Moderation API](https://platform.openai.com/docs/api-reference/moderations). The asynchronous callback receives a `prompt` string and returns a promise that resolves to a [`PromptSafetyCheckResponse`](../../v4/shared/src/types/module/app-config-types/interfaces/prompt-safety-check-response.md) object.
 

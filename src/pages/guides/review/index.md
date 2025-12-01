@@ -40,7 +40,7 @@ Use [this form](https://www.adobe.com/go/embed-access) to submit your use case. 
 
 Approved integrations will remain active until December 2027. After that, they'll need to go through the new business approval process.
 
-If you have any questions about the access process, please contact [ccintrev@adobe.com](mailto:ccintrev@adobe.com). For more information, see the [Embed SDK access FAQ](../troubleshooting/faq/index.md#embed-sdk-access).
+If you have any questions about the access process, please contact [ccintrev@adobe.com](mailto:ccintrev@adobe.com). For more information, see the [Embed SDK access FAQ](../troubleshooting/faq/index.md#sdk-access--approval-1).
 
 ## Overview
 
@@ -83,11 +83,11 @@ Read our brand guidelines. Before you submit your integration for review, please
 Any application embedding an Adobe product is a reflection on Adobe and our developer community and is accessible by all users. We encourage you to use your best judgment when submitting content for review and to ensure that your submitted content is reflective of your brand.
 
 - **No adult content.**
-No integrations may contain intense violence, blood, gore, sexual content, nudity or strong language.
+  No integrations may contain intense violence, blood, gore, sexual content, nudity or strong language.
 - **No malicious content of any kind.**
-Integrations may not contain or promote (for example) phishing, spamming, hacking, password trafficking, spyware, or contain malware, trojans, or viruses.
+  Integrations may not contain or promote (for example) phishing, spamming, hacking, password trafficking, spyware, or contain malware, trojans, or viruses.
 - **No illegal or questionable content.**
-Integrations may not contain or promote illegal or highly-regulated activities. For example, pharmaceutical sales, promotions or sweepstakes, alcohol or tobacco sales. Integrations may not violate intellectual property rights. For example, applications may not promote DRM circumvention, or contain copyrighted or trademarked content belonging to someone else. Integrations may not promote hatred, violence, or bullying. For example, applications may not contain hate speech, or promote or enable cruel behavior towards others.
+  Integrations may not contain or promote illegal or highly-regulated activities. For example, pharmaceutical sales, promotions or sweepstakes, alcohol or tobacco sales. Integrations may not violate intellectual property rights. For example, applications may not promote DRM circumvention, or contain copyrighted or trademarked content belonging to someone else. Integrations may not promote hatred, violence, or bullying. For example, applications may not contain hate speech, or promote or enable cruel behavior towards others.
 
 ### Legal
 
@@ -112,11 +112,11 @@ Follow the steps below, in the Developer console.
 
 <InlineAlert variant="help" slots="text1, text2, text3" />
 
-  Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name.
+Confirm that the `appName` used to initialize the SDK in your application code reflects your app's name.
 
-  Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
+Note any projects created through your integration will be saved in the user's Express account, inside an Express folder with this name.
 
-  Confirm that the SDK is never initialized more than once per page load.
+Confirm that the SDK is never initialized more than once per page load.
 
 To make sure your review process goes smoothly, check off the tasks in this list before submitting.
 
