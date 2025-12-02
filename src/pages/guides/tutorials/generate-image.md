@@ -355,7 +355,7 @@ In `main.js`:
   - `download`: allows users to download the generated image.
   - `save-modified-asset`: saves the generated image and passes it to the `onPublish()` callback.
 
-<CodeBlock slots="heading, code" repeat="2" languages="main.js, index.html"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### main.js
 
@@ -648,7 +648,7 @@ We've created a separate `community-wall.js` module to handle everything.
   - It advances `_cursor`, then returns `{ assets, cursor }` where `cursor` is `"Interim_Page"` until we exhaust the list, after which it switches to `"Last_Page"` to tell the SDK there’s nothing more to fetch.
 - Generous `console.log` statements are sprinkled throughout to make it easy to trace the pagination flow and verify that assets are loaded and served as expected.
 
-<CodeBlock slots="heading, code" repeat="1" languages="community-wall.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### community-wall.js
 
@@ -771,7 +771,7 @@ const appConfig = {
 
 ## Complete working example
 
-<CodeBlock slots="heading, code" repeat="3" languages="index.html, main.js, community-wall.js"/>
+<CodeBlock slots="heading, code" repeat="3"/>
 
 #### index.html
 

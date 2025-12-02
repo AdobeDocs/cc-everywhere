@@ -130,7 +130,7 @@ First, update your script tag or import statement to use the V4 SDK.
 
 ![version](./img/version.png)
 
-<CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="3" />
 
 #### V4 HTML Script Tag
 
@@ -180,7 +180,7 @@ We have moved callbacks from an API-level to a class-level parameter. This enabl
 - **Merged auth parameters**: `userInfo` and `authInfo` combined into `authOption`
 - **Callbacks moved to class-level**: Set once during initialization instead of per API call
 
-<CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, TypeScript" />
+<CodeBlock slots="heading, code" repeat="3"/>
 
 #### V3 HTML Script Tag
 
@@ -229,7 +229,7 @@ The most significant change in V4 is the move from single APIs to workflow-speci
 
 #### Editor workflow API migration
 
-<CodeBlock slots="heading, code" repeat="3" languages="JavaScript, JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="3"  />
 
 #### V3 createDesign - Single API
 
@@ -284,7 +284,7 @@ await ccEverywhere.editor.createWithAsset(
 
 #### Quick Action workflow API migration
 
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### V3 openQuickAction - Single API with ID
 
@@ -331,7 +331,7 @@ V4 uses a consistent four-parameter structure across all APIs. Here's how to res
 
 #### Parameter restructuring
 
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### V3 Mixed Parameters Structure
 
@@ -367,7 +367,7 @@ await ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerCo
 
 If you want to access the latest module features with enhanced capabilities, you need to enable V2 modules by setting `appVersion` to `"2"` in your app configuration:
 
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### V1 Module Configuration (Default)
 

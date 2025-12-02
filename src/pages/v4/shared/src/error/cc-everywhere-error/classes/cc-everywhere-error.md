@@ -84,7 +84,7 @@ customData?): CCEverywhereError<T>;
 
 | Parameter | Type |
 | ------ | ------ |
-| `errorCodeMessage` | [`ErrorCodeMessage`](..\../cc-everywhere-error-types/type-aliases\error-code-message.md)&lt;`T`&gt; |
+| `errorCodeMessage` | [`ErrorCodeMessage`](../../cc-everywhere-error-types/type-aliases/error-code-message.md)&lt;`T`&gt; |
 | `subError?` | `string` \| `number` \| `Error` |
 | `customData?` | `unknown` |
 
@@ -110,7 +110,7 @@ static createErrorFromData<T>(data): CCEverywhereError<T>;
 
 | Parameter | Type |
 | ------ | ------ |
-| `data` | [`ErrorData`](..\..\error-data\interfaces\error-data.md)&lt;`T`&gt; |
+| `data` | [`ErrorData`](../../error-data/interfaces/error-data.md)&lt;`T`&gt; |
 
 #### Returns
 
@@ -128,7 +128,7 @@ Get a plain-object representation of the error..
 
 #### Returns
 
-[`ErrorData`](..\..\error-data\interfaces\error-data.md)&lt;`T`&gt;
+[`ErrorData`](../../error-data/interfaces/error-data.md)&lt;`T`&gt;
 
 <HorizontalLine />
 

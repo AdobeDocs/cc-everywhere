@@ -76,7 +76,7 @@ Verify that you're using the appropriate namespace (Full Editor, Quick Actions, 
 
 ### Appropriate brand usage
 
-Read our brand guidelines. Before you submit your integration for review, please read our [brand guidelines](../../assets/Adobe_Express_Partner_Program_brand_guide.pdf). To adhere to our brand requirements, you can [download the assets here](https://developer.adobe.com/distribute/cc-brand-assets).
+Read our brand guidelines. Before you submit your integration for review, please read our [brand guidelines](https://drive.google.com/file/d/11ZK8FR4vLGoeQJRCEa_g7rW6rs8s-5l7/view?usp=sharing). To adhere to our brand requirements, you can [download the assets here](https://developer.adobe.com/distribute/cc-brand-assets).
 
 ### Inappropriate content
 

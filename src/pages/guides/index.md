@@ -47,7 +47,7 @@ Seamlessly embed Adobe Express on your website with our SDK.
 
 <Announcement slots="heading, text, button" className="closing-gates-announcement" variant="secondary" borderColor="#c148ed" hasborder="true" />
 
-### Demo App
+### Access to the Embed SDK Now Requires Business Approval
 
 This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/index.md#sdk-access--approval-1).
 
