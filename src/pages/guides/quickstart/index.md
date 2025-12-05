@@ -96,7 +96,7 @@ Remember to **Save** your changes each time you edit the project's settings.
 
 You can embed the SDK in your projects using one of the following methods:
 
-- [Load via `<script></script>` tag](#load-via-script-tag)
+- [Load via `<script>` tag](#load-via-script-tag)
 - [Using `import()`](#using-import)
 - [Dynamic script](#dynamic-script)
 
