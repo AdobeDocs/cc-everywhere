@@ -70,7 +70,7 @@ The **Edit** button (previously disabled) will open the Editor with the same doc
 &lt;!-- Inline Alert --&gt;
 <InlineAlert variant="error" slots="header, text1" />
 
-Error: "Adobe Express is not available"
+### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the correct API Key in the `src/.env` file as described [here](#running-the-sample-project).
 

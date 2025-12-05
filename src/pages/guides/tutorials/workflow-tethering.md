@@ -143,7 +143,7 @@ We have organized the code into focused modules:
 
 The `main.js` module is the orchestrator of the application.
 
-<CodeBlock slots="heading, code" repeat="1" languages="main.js"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### main.js
 
@@ -162,7 +162,7 @@ It initializes the Adobe Express SDK, sets up UI event listeners (button clicks,
 
 The `utils/shared.js` module serves as the **single source of truth** for application state:
 
-<CodeBlock slots="heading, code" repeat="1" languages="utils/shared.js"/>
+<CodeBlock slots="heading, code" repeat="1"/>
 
 #### utils/shared.js
 

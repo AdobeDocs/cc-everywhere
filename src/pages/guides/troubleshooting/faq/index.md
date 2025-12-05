@@ -24,7 +24,7 @@ contributors:
 
 # FAQ
 
-Get answers to common questions about the Adobe Express Embed SDK, including setup, error handling, and user requirements. Start integrating the SDK seamlessly today!
+Find quick answers to your questions about the Adobe Express Embed SDK — from setup and configuration to troubleshooting and user authentication.
 
 ## Table of Contents
 
@@ -87,7 +87,7 @@ Access to the Adobe Express Embed SDK now requires a business approval process. 
 
 - The SDK follows a continous release model, with newer versions including bug fixes and feature enhancements. We are no longer approving integrations using using SDK V1, V2, or V3.
 - V1 and V2 are deprecated and V3 will be deprecated in 2024.
-- Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration_v3_v4.md) to help you with the transition.
+- Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../concepts/migration-v3-v4.md) to help you with the transition.
 
 <HorizontalLine />
 

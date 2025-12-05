@@ -251,7 +251,7 @@ Besides the `<sp-theme>` wrapper, which styles the entire page with the Adobe Ex
 - The `<img>` element, prepopulated with the (local) image to edit.
 - The `<sp-button-group>`, which contains the **Choose Image** and **Edit Image** buttons.
 - The `<input>` element, which is _hidden_ and used to upload an alternative image.
-- The `<script></script>` tag, which loads the Embed SDK logic.
+- The `<script>` tag, which loads the Embed SDK logic.
 
 ### 3.2 Learn the Edit Image method signature
 
@@ -373,7 +373,7 @@ This is because when passing an image by URL, the Edit Image module (served from
 
 During local development you can loosen the restriction by adding CORS headers in `vite.config.js`, either by setting the `cors.origin` property to that specific Adobe Express URL, or to `*` to allow all origins.
 
-<CodeBlock slots="heading, code" repeat="1" languages="vite.config.js"/>
+<CodeBlock slots="heading, code" repeat="1" />
 
 #### vite.config.js
 
@@ -646,7 +646,7 @@ This completes the integration of the Edit Image module in the UI, check the [co
 
 ## Complete working example
 
-<CodeBlock slots="heading, code" repeat="2" languages="index.html, main.js"/>
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### index.html
 
