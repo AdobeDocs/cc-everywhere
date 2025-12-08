@@ -78,63 +78,63 @@ The following code will invoke the generate module. In this example, we pass a s
 The Adobe Express Embed SDK since v4.20 has added support for an all-new Generate Image (Text-to-Image) experience. This feature is disabled by default, displaying the classic interface. Toggle the `enableNewUI` boolean flag to `true` in the `appConfig` object to enable it.
 
 ```js
-  // Initialize SDK and save CCEverywhere object as ccEverywhere 
-    ccEverywhere.module.createImageFromText(
-            promptText: "Flying cows",
-            appConfig : { 
-            thumbnailOptions : ["edit-dropdown","rich-preview","publish"],
-            publishConfig: {
-              id: "saveToHostApp",
-              label: "Publish"
-            },editDropdownOptions: [
-    {"option": "add-effects"},
-    {"option": "remove-background"},
-    {"option": "insert-object"},
-    {"option": "apply-adjustment"},
-    {"option": "remove-object"}
-       ],
-      featureConfig: {
-              "community-wall": true,
-              "fast-mode": true,
-              "custom-models" : true
-            },
-      fastModeConfig: { defaultFastModeState: "off" },
-           appVersion: '2',
-            callbacks: {
-              onCancel: () => {}, 
-              onError: (err) => {},
-              onLoadStart: () => {}, 
-              onLoad: () => {},
-             onPublishStart: () => {},
-             onPublish: (publishParams) => {},
-            }
-           },
-            exportConfig : [
-               {
-                 action: {
-                   context: 'new',
-                   target: 'express'
-                 },
-                 id: 'editor',
-                 label: 'Create a design',
-                 style: {
-                   uiType: 'button'
-                 }
-               }, 
+// Initialize SDK and save CCEverywhere object as ccEverywhere 
+ccEverywhere.module.createImageFromText(
+    promptText: "Flying cows",
+    appConfig : {
+    thumbnailOptions: ["edit-dropdown", "rich-preview", "publish"],
+    publishConfig: {
+        id: "saveToHostApp",
+        label: "Publish"
+    }, editDropdownOptions: [
+        { "option": "add-effects" },
+        { "option": "remove-background" },
+        { "option": "insert-object" },
+        { "option": "apply-adjustment" },
+        { "option": "remove-object" }
+    ],
+    featureConfig: {
+        "community-wall": true,
+        "fast-mode": true,
+        "custom-models": true
+    },
+    fastModeConfig: { defaultFastModeState: "off" },
+    appVersion: '2',
+    callbacks: {
+        onCancel: () => { },
+        onError: (err) => { },
+        onLoadStart: () => { },
+        onLoad: () => { },
+        onPublishStart: () => { },
+        onPublish: (publishParams) => { },
+    }
+},
+    exportConfig : [
     {
-                 action: {
-                   target: 'publish',
-                   outputype: "URL",
-                   closeTargetOnExport: true
-                 },
-                 id: 'saveToHostApp',
-                 label: "Publish",
-                 style: {
-                    uiType: 'button'
-                 }
-               },
-            ] 
-  );
+        action: {
+            context: 'new',
+            target: 'express'
+        },
+        id: 'editor',
+        label: 'Create a design',
+        style: {
+            uiType: 'button'
+        }
+    },
+    {
+        action: {
+            target: 'publish',
+            outputype: "URL",
+            closeTargetOnExport: true
+        },
+        id: 'saveToHostApp',
+        label: "Publish",
+        style: {
+            uiType: 'button'
+        }
+    },
+]
+);
 ```
 
 ## Example: Edit Image

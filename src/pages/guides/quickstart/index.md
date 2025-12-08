@@ -203,7 +203,7 @@ Once the selected quick action loads in the iframe, users can browse their files
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
-## Techncial requirements
+## Technical requirements
 
 Review the [technical requirements](./technical-requirements.md) for using Adobe Express Embed SDK in your web application and the app’s supported languages.
 

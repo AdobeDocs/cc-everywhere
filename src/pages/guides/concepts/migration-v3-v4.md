@@ -197,7 +197,7 @@ We have moved callbacks from an API-level to a class-level parameter. This enabl
 
 #### V4 HTML Script Tag
 
-```javascript
+```html
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
 <script>
   // V4 Initialization with enhanced parameters

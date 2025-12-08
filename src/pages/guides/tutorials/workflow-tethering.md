@@ -124,7 +124,7 @@ The web application will be served at `localhost:5555` on a secure HTTPS connect
 
 <InlineAlert variant="error" slots="header, text1" />
 
-### Error: "Adobe Express is not available"
+#### Error: "Adobe Express is not available"
 
 In case you get a popup when trying to launch the Adobe Express integration with the following message: _"You do not have access to this service. Contact your IT administrator to gain access"_, please check to have entered the **correct API Key** in the `src/.env` file as described [here](#12-set-up-the-api-key).
 
