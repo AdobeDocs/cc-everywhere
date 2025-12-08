@@ -5,10 +5,10 @@
     - [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk)
     - [Guides](guides/index.md)
     - SDK References
-        - [v4 Reference](v4/index.md)
-        - [v3 Reference](v3/reference/index.md)
-        - [v2 Reference](v2/reference/index.md)
-        - [v1 Reference](v1/reference/index.md)
+        - [v4 Reference](v4/index.md) description 🟢 Current version
+        - [v3 Reference](v3/reference/index.md) description 🔴 Deprecated
+        - [v2 Reference](v2/reference/index.md) description 🪦 End of Life May 2025
+        - [v1 Reference](v1/reference/index.md) description 🪦 End of Life May 2025
     - [Community](https://developer.adobe.com/express/community)
 
 - subPages:
