@@ -38,12 +38,12 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) =>
 
 ### HostInfo
 
-| Property         | Required | Type                                             | Description                                                                                                                  |
-| :--------------- | :------- | :----------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| clientId         | Yes      | String                                           | API key from Developer Console                                                                                               |
-| appName          | Yes      | String                                           | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application. |
-| appVersion       | No       | { major: number, minor: number, patch?: number } | Version of your integration                                                                                                  |
-| platformCategory | No       | 'web'                                            | Specify host app platform                                                                                                    |
+| Property         | Required | Type                                               | Description                                                                                                                  |
+| :--------------- | :------- |:---------------------------------------------------| :--------------------------------------------------------------------------------------------------------------------------- |
+| clientId         | Yes      | String                                             | API key from Developer Console                                                                                               |
+| appName          | Yes      | String                                             | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application. |
+| appVersion       | No       | \{ major: number, minor: number, patch?: number \} | Version of your integration                                                                                                  |
+| platformCategory | No       | 'web'                                              | Specify host app platform                                                                                                    |
 
 ### ConfigParams
 
