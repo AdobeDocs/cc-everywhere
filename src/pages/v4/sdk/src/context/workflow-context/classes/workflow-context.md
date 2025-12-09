@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: WorkflowContext&lt; T &gt;
+# Class: WorkflowContext &lt; T &gt;
 
 Represents the base workflow context for the SDK workflows
 This should be extended by all the workflow contexts like EditorContext, GenStudioContext, etc.
