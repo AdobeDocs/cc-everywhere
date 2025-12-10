@@ -31,7 +31,7 @@ We'll look at a few **configuration parameters**, as well as the way to **handle
 Before we begin, make sure you have the following:
 
 - An **Adobe account**: use your existing Adobe ID or create one for free.
-- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/) for more information.
+- **Embed SDK Credentials** from the Adobe Developer Console; see the [Quickstart Guide](../quickstart/index.md) for more information.
 - Familiarity with **HTML, CSS, JavaScript**.
 - **Node.js** is installed on your development machine.
 
@@ -112,7 +112,7 @@ console.log("CCEverywhere loaded", window.CCEverywhere);
 &lt;!-- Inline Alert --&gt;
 <InlineAlert variant="info" slots="text1" />
 
-There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/).
+There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
 
 When the Embed SDK is imported, a `CCEverywhere` object is globally available and must be **initialized**. There are two sets of parameters that you can pass as option objects:
 

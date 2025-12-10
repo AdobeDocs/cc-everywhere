@@ -74,7 +74,7 @@
         - [Editor](v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md) 
         - [Module](v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md) 
         - [Quick Action](v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow.md) 
-    - [APIs Reference](v4/index.md) header
+    - [API References](v4/index.md) header
         - [sdk](v4/sdk/src/3p/cc-everywhere/index.md) 
             - [3p](v4/sdk/src/3p/cc-everywhere/index.md) 
                 - [CCEverywhere](v4/sdk/src/3p/cc-everywhere/index.md) 
