@@ -37,7 +37,7 @@ contributors:
 
 import "./landing-styles.css";
 
-<Hero slots="image, heading, text" background="rgb(193, 72, 273)"/>
+<Superhero slots="image, heading, text" background="linear-gradient(180deg, #c946eb, #6372f5)" variant="default" textColor="white"/>
 
 ![Hero image](./images/wide-SDK-Banner-570x400.png)
 
@@ -45,21 +45,15 @@ import "./landing-styles.css";
 
 Seamlessly embed Adobe Express on your website with our SDK.
 
-<AnnouncementBlock slots="heading, text, button" className="closing-gates-announcement"/>
+<Announcement slots="heading, text, button" className="closing-gates-announcement" variant="secondary" borderColor="#c148ed" hasborder="true" />
 
 ### Access to the Embed SDK Now Requires Business Approval
 
 This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/index.md#sdk-access--approval-1).
 
-[Apply now](https://www.adobe.com/go/embed-access)
+- [Apply now](https://www.adobe.com/go/embed-access)
 
-<br/>
-
-<!-- ### Demo App
-
-Experience the power of Adobe Express Embed SDK. Try our demo app and see seamless integration in action!
-
-[Try our demo app](https://demo.expressembed.com/) -->
+&lt;br/ &gt;
 
 ## Overview
 
@@ -104,7 +98,7 @@ Explore our tools:
 
 ### Modules: Focused Editing Experiences
 
-[Modules](../guides/modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
+[Modules](modules/index.md) are mini-editing experiences that you can offer to your users. They are perfect for focused creative tasks without loading the full editor.
 
 **Available modules:**
 
@@ -124,13 +118,13 @@ Explore our tools:
 
 <DiscoverBlock slots="link, text"/>
 
-[Quickstart Guide](./quickstart/)
+[Quickstart Guide](./quickstart/index.md)
 
 Learn how to get started with the Adobe Express Embed SDK.
 
 <DiscoverBlock slots="link, text"/>
 
-[Tutorials](./tutorials/)
+[Tutorials](./tutorials/index.md)
 
 Explore the collection of tutorials.
 
@@ -148,6 +142,6 @@ If you need assistance or have questions about the Adobe Express Embed SDK, visi
 
 <DiscoverBlock slots="link, text"/>
 
-[Frequently Asked Questions](./troubleshooting/faq/)
+[Frequently Asked Questions](./troubleshooting/faq/index.md)
 
 Read our FAQ.

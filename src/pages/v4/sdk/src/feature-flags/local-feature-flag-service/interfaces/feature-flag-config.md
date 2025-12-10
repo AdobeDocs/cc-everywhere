@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: FeatureFlagConfig
 
@@ -10,7 +10,7 @@ Configuration interface for feature flags
 
 | Property | Type |
 | ------ | ------ |
-| `baseFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
-| `firstPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
-| `thirdPartyFeatureFlags` | `Partial`<[`IntentFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-feature-flags.md)\> |
-| `clientFeatureFlags` | `Partial`<[`IntentClientFeatureFlags`](../../local-feature-flag-service/type-aliases/intent-client-feature-flags.md)\> |
+| `baseFeatureFlags` | `Partial`&lt; [`IntentFeatureFlags`](../type-aliases/intent-feature-flags.md) &gt; |
+| `firstPartyFeatureFlags` | `Partial`&lt; [`IntentFeatureFlags`](../type-aliases/intent-feature-flags.md) &gt; |
+| `thirdPartyFeatureFlags` | `Partial`&lt; [`IntentFeatureFlags`](../type-aliases/intent-feature-flags.md) &gt; |
+| `clientFeatureFlags` | `Partial`&lt; [`IntentClientFeatureFlags`](../type-aliases/intent-client-feature-flags.md) &gt; |

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/error/handlers/BaseHandler
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [BaseHandler](../base-handler/classes/base-handler.md) | - |
+| [BaseHandler](classes/base-handler.md) | - |

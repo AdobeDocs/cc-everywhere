@@ -1,14 +1,14 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: BrowseSearchBaseConfig<T\>
+# Interface: BrowseSearchBaseConfig&lt; T&gt;
 
 ## Type Parameters
 
 | Type Parameter |
 | ------ |
-| `T` *extends* [`InspireCategory`](../../browse-search-config-types/enumerations/inspire-category.md) |
+| `T` *extends* [`InspireCategory`](../enumerations/inspire-category.md) |
 
 ## Properties
 

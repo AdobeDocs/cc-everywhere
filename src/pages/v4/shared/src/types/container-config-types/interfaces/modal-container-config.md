@@ -1,12 +1,12 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ModalContainerConfig
 
 ## Extends
 
-- [`InlineOrModalContainerConfig`](../../container-config-types/interfaces/inline-or-modal-container-config.md)
+- [`InlineOrModalContainerConfig`](inline-or-modal-container-config.md)
 
 ## Properties
 

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/error/handlers/HostErrorHandler
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [HostErrorHandler](../host-error-handler/classes/host-error-handler.md) | - |
+| [HostErrorHandler](classes/host-error-handler.md) | - |

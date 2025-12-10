@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Class: ErrorHandlerDelegate<T\>
+# Class: ErrorHandlerDelegate&lt; T &gt;
 
 ## Type Parameters
 
@@ -20,7 +20,7 @@ new ErrorHandlerDelegate<T>(): ErrorHandlerDelegate<T>;
 
 #### Returns
 
-`ErrorHandlerDelegate`<`T`\>
+`ErrorHandlerDelegate`&lt;`T`&gt;
 
 ## Methods
 
@@ -34,13 +34,13 @@ addHandler(handler): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../i-error-message-handler/interfaces/i-error-message-handler.md)<`T`\> |
+| `handler` | [`IErrorMessageHandler`](../../i-error-message-handler/interfaces/i-error-message-handler.md)&lt;`T`&gt; |
 
 #### Returns
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeHandler()
 
@@ -52,13 +52,13 @@ removeHandler(handler): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `handler` | [`IErrorMessageHandler`](../../i-error-message-handler/interfaces/i-error-message-handler.md)<`T`\> |
+| `handler` | [`IErrorMessageHandler`](../../i-error-message-handler/interfaces/i-error-message-handler.md)&lt;`T`&gt; |
 
 #### Returns
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeAllHandlers()
 
@@ -70,7 +70,7 @@ removeAllHandlers(): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### error()
 
@@ -82,13 +82,13 @@ error(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](../../cc-everywhere-error/classes/cc-everywhere-error.md)&lt;`T`&gt; |
 
 #### Returns
 
 `void`
 
-***
+<HorizontalLine />
 
 ### warn()
 
@@ -106,7 +106,7 @@ warn(warning): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### info()
 

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: BaseAction
 
@@ -15,4 +15,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `target` | [`ExportTarget`](../../export-config-types/type-aliases/export-target.md) |
+| `target` | [`ExportTarget`](../type-aliases/export-target.md) |

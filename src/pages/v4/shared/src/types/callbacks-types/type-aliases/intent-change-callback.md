@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: IntentChangeCallback()
 
@@ -17,4 +17,4 @@ type IntentChangeCallback = (oldIntent, newIntent) => IntentChangeConfig | undef
 
 ## Returns
 
-[`IntentChangeConfig`](../../callbacks-types/interfaces/intent-change-config.md) \| `undefined`
+[`IntentChangeConfig`](../interfaces/intent-change-config.md) \| `undefined`

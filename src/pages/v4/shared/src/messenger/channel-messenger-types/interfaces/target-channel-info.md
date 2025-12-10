@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: TargetChannelInfo
 
@@ -10,4 +10,4 @@
 | ------ | ------ |
 | `origin` | `string` |
 | `target` | `Window` |
-| `senderFn` | [`MessageSender`](../../channel-messenger-types/type-aliases/message-sender.md) |
+| `senderFn` | [`MessageSender`](../type-aliases/message-sender.md) |

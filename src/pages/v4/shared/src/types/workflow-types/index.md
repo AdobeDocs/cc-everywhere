@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/Workflow.types
 
@@ -8,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [Workflow](../workflow-types/enumerations/workflow.md) | - |
+| [Workflow](enumerations/workflow.md) | - |

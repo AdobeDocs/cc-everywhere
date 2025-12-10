@@ -130,7 +130,7 @@ First, update your script tag or import statement to use the V4 SDK.
 
 ![version](./img/version.png)
 
-<CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="3" />
 
 #### V4 HTML Script Tag
 
@@ -180,7 +180,7 @@ We have moved callbacks from an API-level to a class-level parameter. This enabl
 - **Merged auth parameters**: `userInfo` and `authInfo` combined into `authOption`
 - **Callbacks moved to class-level**: Set once during initialization instead of per API call
 
-<CodeBlock slots="heading, code" repeat="3" languages="HTML, JavaScript, TypeScript" />
+<CodeBlock slots="heading, code" repeat="3"/>
 
 #### V3 HTML Script Tag
 
@@ -197,7 +197,7 @@ We have moved callbacks from an API-level to a class-level parameter. This enabl
 
 #### V4 HTML Script Tag
 
-```javascript
+```html
 <script src="https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js"></script>
 <script>
   // V4 Initialization with enhanced parameters
@@ -229,7 +229,7 @@ The most significant change in V4 is the move from single APIs to workflow-speci
 
 #### Editor workflow API migration
 
-<CodeBlock slots="heading, code" repeat="3" languages="JavaScript, JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="3"  />
 
 #### V3 createDesign - Single API
 
@@ -284,7 +284,7 @@ await ccEverywhere.editor.createWithAsset(
 
 #### Quick Action workflow API migration
 
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### V3 openQuickAction - Single API with ID
 
@@ -331,7 +331,7 @@ V4 uses a consistent four-parameter structure across all APIs. Here's how to res
 
 #### Parameter restructuring
 
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### V3 Mixed Parameters Structure
 
@@ -367,7 +367,7 @@ await ccEverywhere.editor.create(docConfig, appConfig, exportConfig, containerCo
 
 If you want to access the latest module features with enhanced capabilities, you need to enable V2 modules by setting `appVersion` to `"2"` in your app configuration:
 
-<CodeBlock slots="heading, code" repeat="2" languages="JavaScript, JavaScript" />
+<CodeBlock slots="heading, code" repeat="2" />
 
 #### V1 Module Configuration (Default)
 
@@ -486,9 +486,9 @@ Take advantage of new features introduced in V4:
 
 #### Additional Resources
 
-- **[V4 Release Notes](../changelog/)**: Complete list of changes and improvements
-- **[V4 API Reference](../../v4/)**: Full documentation of all V4 APIs
-- **[Troubleshooting Guide](../troubleshooting/)**: Common issues and solutions during migration
+- **[V4 Release Notes](../changelog/index.md)**: Complete list of changes and improvements
+- **[V4 API Reference](../../v4/index.md)**: Full documentation of all V4 APIs
+- **[Troubleshooting Guide](../troubleshooting/express-unavailable-error.md)**: Common issues and solutions during migration
 
 Some new features might include:
 
@@ -524,12 +524,12 @@ Congratulations! You've successfully migrated from Adobe Express Embed SDK V3 to
 
 ### 📚 Next Steps
 
-If you encounter any issues during migration, consult our [Troubleshooting Guide](../troubleshooting/) for common solutions.
+If you encounter any issues during migration, consult our [Troubleshooting Guide](../troubleshooting/express-unavailable-error.md) for common solutions.
 
 For ongoing development, bookmark these essential resources:
 
-- **[V4 API Reference](../../v4/)** - Complete V4 documentation
-- **[V4 Release Notes](../changelog/)** - Latest updates and features
+- **[V4 API Reference](../../v4/index.md)** - Complete V4 documentation
+- **[V4 Release Notes](../changelog/index.md)** - Latest updates and features
 - **[Migration Checklist](#migration-summary)** - Review completed items
 
 <DiscoverBlock slots="heading, link, text"/>

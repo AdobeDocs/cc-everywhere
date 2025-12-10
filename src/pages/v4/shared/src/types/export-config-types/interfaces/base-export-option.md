@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: BaseExportOption<U\>
+# Interface: BaseExportOption&lt; U &gt;
 
 ## Extended by
 
@@ -16,7 +16,7 @@
 
 | Type Parameter |
 | ------ |
-| `U` *extends* [`Style`](../../export-config-types/interfaces/style.md) |
+| `U` *extends* [`Style`](style.md) |
 
 ## Properties
 
@@ -24,4 +24,4 @@
 | ------ | ------ |
 | `id` | `string` |
 | `style` | `U` |
-| `action` | [`ExportAction`](../../export-config-types/type-aliases/export-action.md) |
+| `action` | [`ExportAction`](../type-aliases/export-action.md) |

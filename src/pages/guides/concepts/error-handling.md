@@ -105,13 +105,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Trying to use the SDK on an unsupported platform.
   - **Solution**: Verify that your platform meets the SDK requirements.
 
-<!-- **Code Sample**:
-    ```javascript
-    if (!isPlatformSupported()) {
-        console.error("SDK_NOT_SUPPORTED: The current platform is not supported.");
-    }
-    ```-->
-
 ### SDK_ALREADY_INITIALIZED
 
 - **What it means**: The SDK has already been initialized once.
@@ -120,16 +113,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: Calling `initialize()` multiple times.
   - **Solution**: Check your code to ensure `initialize()` is called only once.
-
-<!--**Code Sample**:
-    ```javascript
-    if (!sdkInitialized) {
-        initializeSDK();
-        sdkInitialized = true;
-    } else {
-        console.warn("SDK_ALREADY_INITIALIZED: The SDK has already been initialized.");
-    }
-    ```-->
 
 ### SDK_INITIALIZATION_IN_PROGRESS
 
@@ -140,16 +123,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Trying to initialize the SDK while it's already initializing.
   - **Solution**: Implement a check to prevent multiple initialization calls.
 
-<!--**Code Sample**:
-    ```javascript
-    if (initializationInProgress) {
-        console.warn("SDK_INITIALIZATION_IN_PROGRESS: SDK initialization is already in progress.");
-    } else {
-        initializationInProgress = true;
-        initializeSDK();
-    }
-    ```-->
-
 ### SDK_NOT_INITIALIZED
 
 - **What it means**: The SDK hasn't been initialized yet.
@@ -158,15 +131,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: Trying to use SDK functions before initializing it.
   - **Solution**: Ensure `initialize()` is called at the start of your application.
-
-<!--**Code Sample**:
-    ```javascript
-    if (!sdkInitialized) {
-        console.error("SDK_NOT_INITIALIZED: Please initialize the SDK before using its functions.");
-    } else {
-        // Proceed with SDK functions
-    }
-    ```-->
 
 ### WORKFLOW_ALREADY_IN_PROGRESS
 
@@ -177,16 +141,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Starting a new workflow while another is still active.
   - **Solution**: Implement logic to check for active workflows before starting a new one.
 
-<!--**Code Sample**:
-    ```javascript
-    if (workflowInProgress) {
-        console.warn("WORKFLOW_ALREADY_IN_PROGRESS: Another workflow is currently active.");
-    } else {
-        startWorkflow();
-        workflowInProgress = true;
-    }
-    ```-->
-
 ### INVALID_IMAGE_DATA_URL
 
 - **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided `Base64` image data is invalid.
@@ -196,22 +150,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing an incorrectly formatted Base64 image data URL.
   - **Solution**: Validate and correct the Base64 data before passing it to the SDK.
 
-<!--**Code Sample**:
-    ```javascript
-    function isValidBase64(data) {
-        try {
-            atob(data);
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
-    if (!isValidBase64(imageDataUrl)) {
-        console.error("INVALID_IMAGE_DATA_URL: The provided image data URL is invalid.");
-    }
-    ```-->
-
 ### INVALID_VIDEO_DATA_URL
 
 - **What it means**: While using [QuickAction](../../reference/CCEverywhere/quickAction/index.md), the provided video data URL is invalid.
@@ -220,22 +158,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: Supplying a malformed video data URL.
   - **Solution**: Verify the video URL format and correct any issues.
-  
-<!--- **Code Sample**:
-    ```javascript
-    function isValidUrl(url) {
-        try {
-            new URL(url);
-            return true;
-        } catch (e) {
-            return false;
-        }
-    }
-
-    if (!isValidUrl(videoDataUrl)) {
-        console.error("INVALID_VIDEO_DATA_URL: The provided video data URL is invalid.");
-    }
-    ```-->
 
 ### INVALID_ASSET_TYPE_URL
 
@@ -246,13 +168,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Using an unsupported URL format for an asset.
   - **Solution**: Ensure the URL conforms to the expected format for assets.
 
-<!--- **Code Sample**:
-    ```javascript
-    if (!isValidUrl(assetTypeUrl)) {
-        console.error("INVALID_ASSET_TYPE_URL: The provided asset type URL is invalid.");
-    }
-    ```-->
-
 ### INVALID_ASSET_TYPE
 
 - **What it means**: When [merging videos](../../reference/CCEverywhere/quickAction/index.md#mergevideo), the assets should only be either images or videos.
@@ -261,13 +176,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: Attempting to merge a mix of images and videos.
   - **Solution**: Use only images or only videos for the merge operation.
-
-<!--- **Code Sample**:
-    ```javascript
-    if (!assets.every(asset => asset.type === 'image' || asset.type === 'video')) {
-        console.error("INVALID_ASSET_TYPE: Assets must be either all images or all videos.");
-    }
-    ```-->
 
 ### INVALID_ASSET_DATA_TYPE
 
@@ -278,15 +186,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing an unsupported data type for an asset.
   - **Solution**: Verify and use a supported data type for the asset.
 
-<!--**Code Sample**:
-    ```javascript
-    const supportedDataTypes = ['image/jpeg', 'image/png', 'video/mp4'];
-
-    if (!supportedDataTypes.includes(assetDataType)) {
-        console.error("INVALID_ASSET_DATA_TYPE: The provided asset data type is invalid.");
-    }
-    ```-->
-
 ### INVALID_PUBLISH_FILE_TYPE
 
 - **What it means**: The publish file type for an export option is not allowed.
@@ -295,15 +194,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: Trying to export a file in an unsupported format.
   - **Solution**: Use one of the allowed file types for export.
-
-<!--**Code Sample**:
-    ```javascript
-    const allowedFileTypes = ['pdf', 'docx', 'xlsx'];
-
-    if (!allowedFileTypes.includes(publishFileType)) {
-        console.error("INVALID_PUBLISH_FILE_TYPE: The publish file type is not allowed.");
-    }
-    ```-->
 
 ### INVALID_DOWNLOAD_ALL_EXPORT_OPTION
 
@@ -314,13 +204,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Missing "download all" target in export options.
   - **Solution**: Add the "download all" target to the export options.
 
-<!--- **Code Sample**:
-    ```javascript
-    if (!exportOptions.includes('downloadAll')) {
-        console.error("INVALID_DOWNLOAD_ALL_EXPORT_OPTION: The 'download all' target is missing in export options.");
-    }
-    ```-->
-
 ### TARGET_LOAD_TIMED_OUT
 
 - **What it means**: The target app didn't open within the specified time. In the case of Embed, users may encounter a `TARGET_LOAD_TIMED_OUT` error, while in standalone express, they may see the Adobe express loader icon. If the target app doesn't open within the time(in ms) specified in `loadTimeout` the error callback is invoked with the error code TARGET_LOAD_TIMED_OUT. The default is 90ms. However, you have the flexibility to configure your own timeout settings to override this default limit.
@@ -329,13 +212,6 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: The target app fails to load within the timeout period.
   - **Solution**: Increase the timeout period or optimize the target app loading process.
-
-<!-- **Code Sample**:
-    ```javascript
-    setTimeout(() => {
-        console.error("TARGET_LOAD_TIMED_OUT: The target app did not load in the specified time.");
-    }, timeoutDuration);
-    ```-->
 
 ### TARGET_LOAD_ERROR
 
@@ -355,33 +231,14 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: The target app fails to load due to an error.
   - **Solution**: Retry the operation or check for specific errors causing the failure.
 
-<!--- **Code Sample**:
-    ```javascript
-    try {
-        loadTargetApp();
-    } catch (error) {
-        console.error("TARGET_LOAD_FAILED: The target app failed to load.", error);
-        // Retry logic or error handling
-    }
-    ```-->
-
 ### NO_ACTIVE_WORKFLOW
 
-- **What it means**: You're trying to call [`close`](../../reference/CCEverywhere/close/) or [`terminate`](../../reference/CCEverywhere/terminate/) when there's no active workflow.
+- **What it means**: You're trying to call [`close`](../../reference/CCEverywhere/close/index.md) or [`terminate`](../../reference/CCEverywhere/terminate/index.md) when there's no active workflow.
 - **What to do**: Ensure a workflow is active before calling `close` or `terminate`.
 - **User Experience**: This issue can be fixed.
 - **Example**:
   - **Scenario**: Attempting to close or terminate a workflow when none is active.
   - **Solution**: Check if a workflow is active before calling `close` or `terminate`.
-
-<!--- **Code Sample**:
-    ```javascript
-    if (!workflowInProgress) {
-        console.error("NO_ACTIVE_WORKFLOW: No active workflow to close or terminate.");
-    } else {
-        // Proceed with closing or terminating the workflow
-    }
-    ```-->
 
 ### ACTION_LAUNCH_ERROR
 
@@ -392,16 +249,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: An error occurs when trying to launch a workflow.
   - **Solution**: Implement error handling and retry logic to address the failure.
 
-<!--**Code Sample**:
-    ```javascript
-    try {
-        launchWorkflow();
-    } catch (error) {
-        console.error("ACTION_LAUNCH_ERROR: Failed to launch workflow.", error);
-        // Retry logic or error handling
-    }
-    ```-->
-
 ### INVALID_ASPECT_RATIO_VALUE
 
 - **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the provided aspect ratio value is invalid.
@@ -411,17 +258,6 @@ The guide provides key components such as Error codes,their meaning,  action for
   - **Scenario**: Providing an invalid aspect ratio value.
   - **Solution**: Validate the aspect ratio value before using it.
 
-<!--**Code Sample**:
-    ```javascript
-    function isValidAspectRatio(value) {
-        return /^(\d+):(\d+)$/.test(value);
-    }
-
-    if (!isValidAspectRatio(aspectRatio)) {
-        console.error("INVALID_ASPECT_RATIO_VALUE: The provided aspect ratio value is invalid.");
-    }
-    ```-->
-
 ### INVALID_SIZE_VALUE
 
 - **What it means**: While using [`createWithAsset()`](../../reference/CCEverywhere/editor/index.md#createwithasset), the dimensions (aspect ratio, width, and height) of the asset are invalid.
@@ -430,17 +266,3 @@ The guide provides key components such as Error codes,their meaning,  action for
 - **Example**:
   - **Scenario**: Providing dimensions that do not meet the aspect ratio, width, or height constraints.
   - **Solution**: Validate the aspect ratio, width, and height before using the asset.
-
-<!--**Code Sample**:
-    ```javascript
-    function isValidDimensions(aspectRatio, width, height) {
-        const isValidAspectRatio = /^(\d+):(\d+)$/.test(aspectRatio);
-        const isValidWidth = width > 0;
-        const isValidHeight = height > 0;
-        return isValidAspectRatio && isValidWidth && isValidHeight;
-    }
-
-    if (!isValidDimensions(aspectRatio, width, height)) {
-        console.error("INVALID_SIZE_VALUE: The provided dimensions (aspect ratio, width, height) are invalid.");
-    }
-    ``` -->

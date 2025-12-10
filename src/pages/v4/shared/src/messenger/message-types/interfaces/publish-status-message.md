@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: PublishStatusMessage
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `isPublishSuccessful` | [`PublishCallbackStatus`](../../message-types/enumerations/publish-callback-status.md) |
+| `isPublishSuccessful` | [`PublishCallbackStatus`](../enumerations/publish-callback-status.md) |

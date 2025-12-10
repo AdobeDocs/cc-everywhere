@@ -106,7 +106,7 @@ The latest [version](https://cc-embed.adobe.com/sdk/v4/version.json) of the SDK 
 var CDN_URL = "https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js";
 ```
 
-You can check the [changelog](/src/pages/guides/changelog/index.md) to read about known issues as well as what changes have been made.
+You can check the [changelog](../changelog/index.md) to read about known issues as well as what changes have been made.
 
 ### Load via script tag
 
@@ -184,26 +184,26 @@ Successful initialization returns a `CCEverywhere` Class object, with three prop
 
 Our guides along with the [SDK references](../../reference/index.md) can help you start working with the SDK in a way that best suits your needs.
 
-### [Full editor](../../guides/full_editor/index.md)
+### [Full editor](../full_editor/index.md)
 
 With the full editor component, your users are able to:
 
-- How to [create new projects](../../guides/full_editor/create_project/)
-- How to [edit existing projects](../../guides/full_editor/edit_project/)
+- How to [create new projects](../full_editor/create_project/index.md)
+- How to [edit existing projects](../full_editor/edit_project/index.md)
 
 Users can access Adobe Express's huge template and asset library when starting with a blank new project in the editor. Pre-selected images can also be loaded into the editor for further designing. The editor can also load previous projects (created using your integration) by taking an existing project ID as input.
 
-### [Quick actions](../../guides/quick_actions/index.md)
+### [Quick actions](../quick_actions/index.md)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
-### [Modules](../../guides/modules/index.md)
+### [Modules](../modules/index.md)
 
 Once the selected quick action loads in the iframe, users can browse their filesystem for an asset. At this time, only image quick actions can pass a pre-selected asset as input. After the quick action is completed, a download button will appear. You can configure other export options such as taking the user into a full editor component to further customize the modified asset, or saving it back onto your application.
 
 <DiscoverBlock width="100%" slots="heading, link, text"/>
 
-## Techncial requirements
+## Technical requirements
 
 Review the [technical requirements](./technical-requirements.md) for using Adobe Express Embed SDK in your web application and the app’s supported languages.
 

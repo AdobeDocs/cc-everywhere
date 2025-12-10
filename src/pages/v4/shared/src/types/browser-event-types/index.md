@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/BrowserEvent.types
 
@@ -8,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [BrowserEvent](../browser-event-types/enumerations/browser-event.md) | - |
+| [BrowserEvent](enumerations/browser-event.md) | - |

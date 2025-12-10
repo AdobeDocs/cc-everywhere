@@ -21,7 +21,7 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving integrations using v1 or v2 of the SDK - both versions will be deprecated in 2024.
 
@@ -99,7 +99,7 @@ Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) t
 | fileType | 'jpeg', 'png', 'mp4' | Type of output asset
 | (optional) fileName | string | Name of output asset
 | (optional) size | [Size](#size) | Dimensions of output asset
-<!-- todo: check optional properties are outputted -->
+&lt; !-- todo: check optional properties are outputted -- &gt;
 
 ## Size
 

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: MessageListener()
 
@@ -18,7 +18,7 @@ type MessageListener = <T>(event) => void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `event` | `MessageEvent`<[`ChannelMessage`](../../channel-messenger-types/interfaces/channel-message.md)<`T`\>\> |
+| `event` | `MessageEvent`&lt;[`ChannelMessage`](../interfaces/channel-message.md)&lt;`T`&gt;&gt; |
 
 ## Returns
 

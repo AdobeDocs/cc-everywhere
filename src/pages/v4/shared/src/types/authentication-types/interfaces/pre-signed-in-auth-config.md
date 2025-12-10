@@ -1,12 +1,12 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: PreSignedInAuthConfig
 
 ## Extended by
 
-- [`IMSAuthConfig`](../../authentication-types/interfaces/ims-auth-config.md)
+- [`IMSAuthConfig`](ims-auth-config.md)
 
 ## Properties
 

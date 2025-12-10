@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/workflows/3p/EditorWorkflow.types
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditorWorkflow](../editor-workflow-types/interfaces/editor-workflow.md) | - |
+| [EditorWorkflow](interfaces/editor-workflow.md) | - |

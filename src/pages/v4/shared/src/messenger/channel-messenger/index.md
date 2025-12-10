@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/messenger/ChannelMessenger
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [default](../channel-messenger/classes/default.md) | - |
+| [default](classes/default.md) | - |

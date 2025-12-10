@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/quick-action/AppConfig.types
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [AppConfig](../app-config-types/interfaces/app-config.md) | - |
+| [AppConfig](interfaces/app-config.md) | - |

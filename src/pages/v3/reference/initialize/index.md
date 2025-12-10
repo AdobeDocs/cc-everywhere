@@ -21,11 +21,11 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving new integrations using SDK v3, which will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## initialize()
 
@@ -38,12 +38,12 @@ initialize: (hostInfo: HostInfo, configParams?: ConfigParams) =>
 
 ### HostInfo
 
-| Property         | Required | Type                                             | Description                                                                                                                  |
-| :--------------- | :------- | :----------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
-| clientId         | Yes      | String                                           | API key from Developer Console                                                                                               |
-| appName          | Yes      | String                                           | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application. |
-| appVersion       | No       | { major: number, minor: number, patch?: number } | Version of your integration                                                                                                  |
-| platformCategory | No       | 'web'                                            | Specify host app platform                                                                                                    |
+| Property         | Required | Type                                               | Description                                                                                                                  |
+| :--------------- | :------- |:---------------------------------------------------| :--------------------------------------------------------------------------------------------------------------------------- |
+| clientId         | Yes      | String                                             | API key from Developer Console                                                                                               |
+| appName          | Yes      | String                                             | Name of project folder created in your user's Adobe Express account. This should correspond to the name of your application. |
+| appVersion       | No       | \{ major: number, minor: number, patch?: number \} | Version of your integration                                                                                                  |
+| platformCategory | No       | 'web'                                              | Specify host app platform                                                                                                    |
 
 ### ConfigParams
 

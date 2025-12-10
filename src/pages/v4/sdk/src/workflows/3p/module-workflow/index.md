@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/workflows/3p/ModuleWorkflow
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ModuleWorkflow](../module-workflow/classes/module-workflow.md) | - |
+| [ModuleWorkflow](classes/module-workflow.md) | - |

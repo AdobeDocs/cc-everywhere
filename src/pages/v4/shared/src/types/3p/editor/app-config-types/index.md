@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/3p/editor/AppConfig.types
 
@@ -8,4 +8,4 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditorAppConfig](../app-config-types/type-aliases/editor-app-config.md) | - |
+| [EditorAppConfig](type-aliases/editor-app-config.md) | - |

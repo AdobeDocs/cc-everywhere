@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/messenger/Message.types
 
@@ -35,8 +35,8 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [DataMessageType](../message-types/type-aliases/data-message-type.md) | - |
-| [SimpleMessageType](../message-types/type-aliases/simple-message-type.md) | - |
-| [Message](../message-types/type-aliases/message.md) | - |
-| [MessageCompat](../message-types/type-aliases/message-compat.md) | - |
-| [DidTargetLoadMessage](../message-types/type-aliases/did-target-load-message.md) | - |
+| [DataMessageType](type-aliases/data-message-type.md) | - |
+| [SimpleMessageType](type-aliases/simple-message-type.md) | - |
+| [Message](type-aliases/message.md) | - |
+| [MessageCompat](type-aliases/message-compat.md) | - |
+| [DidTargetLoadMessage](type-aliases/did-target-load-message.md) | - |

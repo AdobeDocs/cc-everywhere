@@ -16,11 +16,11 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We're only accepting new integrations using the SDK version 4.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## Embed and initialize the SDK
 

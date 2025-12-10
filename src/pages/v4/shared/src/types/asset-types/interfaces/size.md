@@ -1,12 +1,12 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: Size
 
 ## Extended by
 
-- [`PixelSize`](../../asset-types/interfaces/pixel-size.md)
+- [`PixelSize`](pixel-size.md)
 
 ## Properties
 
@@ -14,4 +14,4 @@
 | ------ | ------ | ------ |
 | `width` | `number` | **Minimum** 0 |
 | `height` | `number` | **Minimum** 0 |
-| `unit` | [`SizeUnit`](../../asset-types/enumerations/size-unit.md) | - |
+| `unit` | [`SizeUnit`](../enumerations/size-unit.md) | - |

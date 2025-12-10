@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/FeatureFlags.types
 
@@ -8,4 +8,4 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [FeatureFlags](../feature-flags-types/type-aliases/feature-flags.md) | - |
+| [FeatureFlags](type-aliases/feature-flags.md) | - |

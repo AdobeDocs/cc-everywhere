@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/v1\_1
 
@@ -8,16 +8,16 @@
 
 ### PublishParams
 
-Re-exports [PublishParams](../v1-1/output-params-types/interfaces/publish-params.md)
+Re-exports [PublishParams](output-params-types/interfaces/publish-params.md)
 
-***
+<HorizontalLine />
 
 ### QuickActionPublishParams
 
-Re-exports [QuickActionPublishParams](../v1-1/output-params-types/interfaces/quick-action-publish-params.md)
+Re-exports [QuickActionPublishParams](output-params-types/interfaces/quick-action-publish-params.md)
 
-***
+<HorizontalLine />
 
 ### CCXPublishParams
 
-Re-exports [CCXPublishParams](../v1-1/output-params-types/interfaces/ccx-publish-params.md)
+Re-exports [CCXPublishParams](output-params-types/interfaces/ccx-publish-params.md)

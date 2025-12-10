@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: CancelMessage
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `reason` | [`CancelReason`](../../message-types/enumerations/cancel-reason.md) |
+| `reason` | [`CancelReason`](../enumerations/cancel-reason.md) |

@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: DesignConfig
 
@@ -17,7 +17,7 @@
 
 | Property | Type |
 | ------ | ------ |
-| `docConfig?` | [`BaseDocConfig`](../../design-config-types/interfaces/base-doc-config.md) |
+| `docConfig?` | [`BaseDocConfig`](base-doc-config.md) |
 | `appConfig?` | \| `AppConfig` \| [`AppConfig`](../../3p/app-config-types/interfaces/app-config.md) |
 | `exportConfig?` | [`ExportOptions`](../../export-config-types/type-aliases/export-options.md) |
 | `containerConfig?` | [`ContainerConfig`](../../container-config-types/type-aliases/container-config.md) |

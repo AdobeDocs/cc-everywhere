@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/3p/CCEverywhere
 
@@ -8,10 +8,10 @@
 
 | Class | Description |
 | ------ | ------ |
-| [CCEverywhere](../cc-everywhere/classes/cc-everywhere.md) | Class to create CCEverywhere object. |
+| [CCEverywhere](classes/cc-everywhere.md) | Class to create CCEverywhere object. |
 
 ## Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [default](../cc-everywhere/variables/default.md) | - |
+| [default](variables/default.md) | - |

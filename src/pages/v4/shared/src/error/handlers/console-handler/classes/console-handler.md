@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Class: ConsoleHandler<T\>
+# Class: ConsoleHandler&lt; T &gt;
 
 ## Extends
 
@@ -16,7 +16,7 @@
 
 ## Implements
 
-- [`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md)<`T`\>
+- [`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md)&lt;`T`&gt;
 
 ## Constructors
 
@@ -34,7 +34,7 @@ new ConsoleHandler<T>(logLevel?): ConsoleHandler<T>;
 
 #### Returns
 
-`ConsoleHandler`<`T`\>
+`ConsoleHandler`&lt;`T`&gt;
 
 #### Overrides
 
@@ -60,7 +60,7 @@ static info(information): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### error()
 
@@ -78,13 +78,13 @@ static error<T>(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](../../../cc-everywhere-error/classes/cc-everywhere-error.md)&lt;`T`&gt; |
 
 #### Returns
 
 `void`
 
-***
+<HorizontalLine />
 
 ### error()
 
@@ -96,7 +96,7 @@ error(error): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `error` | [`CCEverywhereError`](../../../cc-everywhere-error/classes/cc-everywhere-error.md)<`T`\> |
+| `error` | [`CCEverywhereError`](../../../cc-everywhere-error/classes/cc-everywhere-error.md)&lt;`T`&gt; |
 
 #### Returns
 
@@ -106,7 +106,7 @@ error(error): void;
 
 [`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`error`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#error)
 
-***
+<HorizontalLine />
 
 ### warn()
 
@@ -128,7 +128,7 @@ warn(warning): void;
 
 [`IErrorMessageHandler`](../../../i-error-message-handler/interfaces/i-error-message-handler.md).[`warn`](../../../i-error-message-handler/interfaces/i-error-message-handler.md#warn)
 
-***
+<HorizontalLine />
 
 ### info()
 

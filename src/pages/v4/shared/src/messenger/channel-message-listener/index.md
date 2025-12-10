@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/messenger/ChannelMessageListener
 
@@ -8,10 +8,10 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ChannelMessageListener](../channel-message-listener/classes/channel-message-listener.md) | - |
+| [ChannelMessageListener](classes/channel-message-listener.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [Listener](../channel-message-listener/type-aliases/listener.md) | - |
+| [Listener](type-aliases/listener.md) | - |

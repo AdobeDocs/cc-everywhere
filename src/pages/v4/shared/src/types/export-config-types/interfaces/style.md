@@ -1,17 +1,17 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: Style
 
 ## Extended by
 
-- [`BaseButtonStyle`](../../export-config-types/interfaces/base-button-style.md)
-- [`DropdownOptionStyle`](../../export-config-types/interfaces/dropdown-option-style.md)
-- [`LinkStyle`](../../export-config-types/interfaces/link-style.md)
+- [`BaseButtonStyle`](base-button-style.md)
+- [`DropdownOptionStyle`](dropdown-option-style.md)
+- [`LinkStyle`](link-style.md)
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `uiType` | [`ExportOptionUI`](../../export-config-types/enumerations/export-option-ui.md) |
+| `uiType` | [`ExportOptionUI`](../enumerations/export-option-ui.md) |

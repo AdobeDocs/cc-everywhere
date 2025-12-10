@@ -27,11 +27,11 @@ contributors:
 
 <InlineAlert variant="error" slots="header, text1, text2" />
 
-IMPORTANT: Deprecation Warning
+### IMPORTANT: Deprecation Warning
 
 We are no longer approving new integrations using SDK v3, which will be deprecated in 2024.
 
-Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration_v3_v4.md) to help you with the transition.
+Please migrate to V4 as soon as possible: we've created a [Migration Guide](../../../guides/concepts/migration-v3-v4.md) to help you with the transition.
 
 ## Asset
 
@@ -227,8 +227,7 @@ Asset-related information received with `onPublish` callback in quick actions.
 | YouTube video ad | "YoutubeVideoAd" | 1,920 x 1,080px
 | Zoom background | "ZoomBackground" | 1,920 x 1,080px
 
-<!-- | Name tag | "NameTag" | 
-| Place card | "PlaceCard" | -->
+
 
 ## CCXOutputParams
 
@@ -265,7 +264,7 @@ Export options to surface to your user in the iframe. If no export options are s
 
 `ExportOptions`:  [CustomExportButton](#customexportbutton) | [CustomExportLink](#customexportlink) | [ExportButtonGroup](#exportbuttongroup) | [NativeExportButton](#nativeexportbutton)
 
-<!-- ### ExportOptionType
+&lt; !-- ### ExportOptionType
 
 `optionType` property of `ExportOption`. Describes the type of `ExportOption`
 
@@ -273,7 +272,7 @@ Export options to surface to your user in the iframe. If no export options are s
 | :-- | :-- | :-
 | "group" | Quick action will render a drop-down button
 | "button" | Quick action will render a standalone single button
-| "link" | Quick action will render text with hyperlink to export asset -->
+| "link" | Quick action will render text with hyperlink to export asset -- &gt;
 
 ### CustomExportButton
 

@@ -26,7 +26,7 @@ contributors:
 
 Review the technical requirements for uisng Adobe Express Embed SDK in your web application and the app’s supported languages.
 
-## Techncial requirements
+## Technical requirements
 
 | Requirement Type       | Requirement                                      |
 |------------------------|--------------------------------------------------|

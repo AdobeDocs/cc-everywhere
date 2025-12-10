@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: CallBackExportOption<U\>
+# Interface: CallBackExportOption&lt; U &gt;
 
 Export option for callback actions that trigger callbacks without publishing assets.
 
@@ -13,7 +13,7 @@ Export option for callback actions that trigger callbacks without publishing ass
 
 ## Extends
 
-- [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md)<`U`\>
+- [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md)&lt;`U` &gt;
 
 ## Type Parameters
 

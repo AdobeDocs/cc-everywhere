@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/3p/HostInfo.types
 
@@ -8,5 +8,5 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [HostInfo](../host-info-types/type-aliases/host-info.md) | - |
-| [ConfigParams](../host-info-types/type-aliases/config-params.md) | - |
+| [HostInfo](type-aliases/host-info.md) | - |
+| [ConfigParams](type-aliases/config-params.md) | - |

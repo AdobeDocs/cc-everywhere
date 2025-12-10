@@ -1,31 +1,31 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: DownloadExportOption<U\>
+# Interface: DownloadExportOption&lt; U &gt;
 
 Export option for downloading content to the user's device.
 
 ## See
 
- - [DownloadAction](../../export-config-types/interfaces/download-action.md) for available download actions
- - [ButtonStyle](../../export-config-types/type-aliases/button-style.md), [LinkStyle](../../export-config-types/interfaces/link-style.md) for common style options
+ - [DownloadAction](download-action.md) for available download actions
+ - [ButtonStyle](../type-aliases/button-style.md), [LinkStyle](link-style.md) for common style options
 
 ## Extends
 
-- [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md)<`U`\>
+- [`BaseExportOption`](base-export-option.md)&lt; `U` &gt;
 
 ## Type Parameters
 
 | Type Parameter | Description |
 | ------ | ------ |
-| `U` *extends* [`Style`](../../export-config-types/interfaces/style.md) | The style type extending [Style](../../export-config-types/interfaces/style.md) |
+| `U` *extends* [`Style`](style.md) | The style type extending [Style](style.md) |
 
 ## Properties
 
 | Property | Type | Overrides | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `id` | `string` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`id`](../../export-config-types/interfaces/base-export-option.md#id) |
-| `style` | `U` | - | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`style`](../../export-config-types/interfaces/base-export-option.md#style) |
-| `action` | [`DownloadAction`](../../export-config-types/interfaces/download-action.md) | [`BaseExportOption`](../../export-config-types/interfaces/base-export-option.md).[`action`](../../export-config-types/interfaces/base-export-option.md#action) | - |
+| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#id) |
+| `style` | `U` | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#style) |
+| `action` | [`DownloadAction`](download-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#action) | - |
 | `label?` | `string` | - | - |

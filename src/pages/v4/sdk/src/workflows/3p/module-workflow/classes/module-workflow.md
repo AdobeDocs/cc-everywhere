@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: ModuleWorkflow
 
@@ -66,7 +66,7 @@ Perform editing tasks on any image.
 
 [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`editImage`](../../module-workflow-types/interfaces/module-workflow.md#editimage)
 
-***
+<HorizontalLine />
 
 ### createImageFromText()
 
@@ -95,7 +95,7 @@ Generate images by just passing a text prompt.
 
 [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`createImageFromText`](../../module-workflow-types/interfaces/module-workflow.md#createimagefromtext)
 
-***
+<HorizontalLine />
 
 ### startFromContent()
 

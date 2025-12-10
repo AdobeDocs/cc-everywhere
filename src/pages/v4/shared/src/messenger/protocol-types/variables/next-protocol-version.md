@@ -1,6 +1,6 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..\..\..\..\..\index.md)
 
-***
+<HorizontalLine />
 
 # Variable: NEXT\_PROTOCOL\_VERSION
 

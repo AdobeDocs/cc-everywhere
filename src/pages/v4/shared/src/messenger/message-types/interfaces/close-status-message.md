@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: CloseStatusMessage
 
@@ -8,4 +8,4 @@
 
 | Property | Type |
 | ------ | ------ |
-| `closeStatus` | [`CloseStatus`](../../message-types/enumerations/close-status.md) |
+| `closeStatus` | [`CloseStatus`](../enumerations/close-status.md) |

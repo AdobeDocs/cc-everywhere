@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/error/Messages
 
@@ -8,4 +8,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [Messages](../messages/variables/messages.md) | ********************************************************************** |
+| [Messages](variables/messages.md) | ** |

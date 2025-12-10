@@ -1,8 +1,8 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: ChannelMessage<T\>
+# Interface: ChannelMessage &lt; T &gt;
 
 ## Type Parameters
 
@@ -14,6 +14,6 @@
 
 | Property | Type |
 | ------ | ------ |
-| `sourceChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
+| `sourceChannel` | [`MessageChannel`](../enumerations/message-channel.md) |
 | `requestId?` | `string` |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; |

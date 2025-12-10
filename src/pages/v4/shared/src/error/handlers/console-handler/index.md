@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/error/handlers/ConsoleHandler
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ConsoleHandler](../console-handler/classes/console-handler.md) | - |
+| [ConsoleHandler](classes/console-handler.md) | - |

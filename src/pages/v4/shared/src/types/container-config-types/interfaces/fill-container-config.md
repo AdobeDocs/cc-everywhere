@@ -1,12 +1,12 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: FillContainerConfig
 
 ## Extends
 
-- [`BaseContainerConfig`](../../container-config-types/interfaces/base-container-config.md)
+- [`BaseContainerConfig`](base-container-config.md)
 
 ## Properties
 

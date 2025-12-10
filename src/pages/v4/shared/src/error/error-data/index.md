@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/error/ErrorData
 
@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [ErrorData](../error-data/interfaces/error-data.md) | ********************************************************************** |
+| [ErrorData](interfaces/error-data.md) | ** |

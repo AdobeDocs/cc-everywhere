@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: DataRequest
 
@@ -9,4 +9,4 @@
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `type` | [`HostEventType`](../../../messenger/message-data-types/enumerations/host-event-type.md) | - |
-| `metadata` | [`RequestMetaData`](../../community-wall-types/type-aliases/request-meta-data.md) | Metadata for the assets request |
+| `metadata` | [`RequestMetaData`](../type-aliases/request-meta-data.md) | Metadata for the assets request |

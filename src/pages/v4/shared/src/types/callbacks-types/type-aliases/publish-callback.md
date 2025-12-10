@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Type Alias: PublishCallback()
 
@@ -19,4 +19,4 @@ Keeping callback type as void | `Promise<PublishStatus>` for the publish operati
 
 ## Returns
 
-`void` \| `Promise`<[`PublishStatus`](../../callbacks-types/interfaces/publish-status.md)\>
+`void` \| `Promise`&lt; [`PublishStatus`](../interfaces/publish-status.md) &gt;

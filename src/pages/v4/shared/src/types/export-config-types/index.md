@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/ExportConfig.types
 
@@ -46,18 +46,18 @@
 
 | Type Alias | Description |
 | ------ | ------ |
-| [ExportTarget](../export-config-types/type-aliases/export-target.md) | - |
-| [ExportButtonTreatment](../export-config-types/type-aliases/export-button-treatment.md) | - |
-| [ExportButtonVariant](../export-config-types/type-aliases/export-button-variant.md) | - |
-| [ExportContext](../export-config-types/type-aliases/export-context.md) | - |
-| [ButtonStyle](../export-config-types/type-aliases/button-style.md) | - |
-| [EnabledButtonStyle](../export-config-types/type-aliases/enabled-button-style.md) | Represents the style of a button always enabled. |
-| [ContentType](../export-config-types/type-aliases/content-type.md) | Represents the type of content, currently supporting markdown. |
-| [ExportStyle](../export-config-types/type-aliases/export-style.md) | - |
-| [ContinueEditingAction](../export-config-types/type-aliases/continue-editing-action.md) | - |
-| [ExportAction](../export-config-types/type-aliases/export-action.md) | - |
-| [ExportOption](../export-config-types/type-aliases/export-option.md) | Represents the available export options for the CC Everywhere SDK. |
-| [DropdownExportOption](../export-config-types/type-aliases/dropdown-export-option.md) | Represents export options specifically for dropdown UI components. |
-| [ExportOptionOrGroup](../export-config-types/type-aliases/export-option-or-group.md) | - |
-| [ExportOptions](../export-config-types/type-aliases/export-options.md) | - |
-| [ExportConfig](../export-config-types/type-aliases/export-config.md) | - |
+| [ExportTarget](type-aliases/export-target.md) | - |
+| [ExportButtonTreatment](type-aliases/export-button-treatment.md) | - |
+| [ExportButtonVariant](type-aliases/export-button-variant.md) | - |
+| [ExportContext](type-aliases/export-context.md) | - |
+| [ButtonStyle](type-aliases/button-style.md) | - |
+| [EnabledButtonStyle](type-aliases/enabled-button-style.md) | Represents the style of a button always enabled. |
+| [ContentType](type-aliases/content-type.md) | Represents the type of content, currently supporting markdown. |
+| [ExportStyle](type-aliases/export-style.md) | - |
+| [ContinueEditingAction](type-aliases/continue-editing-action.md) | - |
+| [ExportAction](type-aliases/export-action.md) | - |
+| [ExportOption](type-aliases/export-option.md) | Represents the available export options for the CC Everywhere SDK. |
+| [DropdownExportOption](type-aliases/dropdown-export-option.md) | Represents export options specifically for dropdown UI components. |
+| [ExportOptionOrGroup](type-aliases/export-option-or-group.md) | - |
+| [ExportOptions](type-aliases/export-options.md) | - |
+| [ExportConfig](type-aliases/export-config.md) | - |

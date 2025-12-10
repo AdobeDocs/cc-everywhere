@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: TestEditorContext
 
@@ -67,7 +67,7 @@ Sends a message to the SDK Agent to update the state of current running  workflo
 EditorContext.sendCustomMessage
 ```
 
-***
+<HorizontalLine />
 
 ### showToast()
 
@@ -90,6 +90,6 @@ The agent will handle displaying the toast.
 
 #### Returns
 
-`Promise`<`void`\>
+`Promise`&lt; `void` &gt;
 
 Promise that resolves when the toast is displayed

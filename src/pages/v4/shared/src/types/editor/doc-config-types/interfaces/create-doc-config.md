@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: CreateDocConfig
 
@@ -10,7 +10,7 @@
 
 ## Extended by
 
-- [`CreateWithAssetDocConfig`](../../doc-config-types/interfaces/create-with-asset-doc-config.md)
+- [`CreateWithAssetDocConfig`](create-with-asset-doc-config.md)
 
 ## Properties
 

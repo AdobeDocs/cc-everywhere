@@ -1,16 +1,16 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: UpfrontAuthOption
 
 ## Extends
 
-- [`BaseAuthOption`](../../authentication-types/interfaces/base-auth-option.md)
+- [`BaseAuthOption`](base-auth-option.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`UPFRONT`](../../authentication-types/enumerations/auth-mode.md#upfront) | [`BaseAuthOption`](../../authentication-types/interfaces/base-auth-option.md).[`mode`](../../authentication-types/interfaces/base-auth-option.md#mode) |
-| `config?` | [`AuthConfig`](../../authentication-types/interfaces/auth-config.md) | - |
+| `mode` | [`UPFRONT`](../enumerations/auth-mode.md#upfront) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `config?` | [`AuthConfig`](auth-config.md) | - |

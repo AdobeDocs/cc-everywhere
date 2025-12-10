@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/workflows/BaseWorkflow
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [BaseWorkflow](../base-workflow/classes/base-workflow.md) | - |
+| [BaseWorkflow](classes/base-workflow.md) | - |

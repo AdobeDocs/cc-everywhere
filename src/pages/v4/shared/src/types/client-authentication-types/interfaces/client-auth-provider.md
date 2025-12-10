@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ClientAuthProvider()
 
@@ -13,6 +13,6 @@ ClientAuthProvider(): Promise<ClientAuthDetails>;
 
 ## Returns
 
-`Promise`<[`ClientAuthDetails`](../../client-authentication-types/interfaces/client-auth-details.md)\>
+`Promise`&lt; [`ClientAuthDetails`](client-auth-details.md) &gt;
 
 `Promise<ClientAuthDetails>` A promise that resolves to the client authentication details

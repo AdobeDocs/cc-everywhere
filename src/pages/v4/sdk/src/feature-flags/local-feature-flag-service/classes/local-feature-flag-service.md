@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: LocalFeatureFlagService
 
@@ -22,7 +22,7 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService;
 
 | Parameter | Type | Default value |
 | ------ | ------ | ------ |
-| `_config` | [`FeatureFlagConfig`](../../local-feature-flag-service/interfaces/feature-flag-config.md) | `DEFAULT_FEATURE_FLAG_CONFIG` |
+| `_config` | [`FeatureFlagConfig`](../interfaces/feature-flag-config.md) | `DEFAULT_FEATURE_FLAG_CONFIG` |
 
 #### Returns
 

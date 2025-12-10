@@ -1,17 +1,17 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: CustomHostEventData
 
 ## Extends
 
-- [`HostEventData`](../../message-data-types/interfaces/host-event-data.md)
+- [`HostEventData`](host-event-data.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `type` | [`CUSTOM_EVENT`](../../message-data-types/enumerations/host-event-type.md#custom_event) | [`HostEventData`](../../message-data-types/interfaces/host-event-data.md).[`type`](../../message-data-types/interfaces/host-event-data.md#type) |
+| `type` | [`CUSTOM_EVENT`](../enumerations/host-event-type.md#custom_event) | [`HostEventData`](host-event-data.md).[`type`](host-event-data.md#type) |
 | `customType` | `string` | - |
-| `data?` | `unknown` | [`HostEventData`](../../message-data-types/interfaces/host-event-data.md).[`data`](../../message-data-types/interfaces/host-event-data.md#data) |
+| `data?` | `unknown` | [`HostEventData`](host-event-data.md).[`data`](host-event-data.md#data) |

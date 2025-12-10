@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ModuleWorkflow
 
@@ -29,7 +29,7 @@ editImage(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### createImageFromText()
 
@@ -52,7 +52,7 @@ createImageFromText(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### startFromContent()
 

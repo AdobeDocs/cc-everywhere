@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: PanelSettings
 
@@ -12,5 +12,5 @@ Each setting should extend BasePanelSetting for consistency.
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `contentType?` | [`ContentTypeSetting`](../../panel-settings-types/interfaces/content-type-setting.md) | Configuration for the content type setting in the panel. Determines the type of content to be generated (e.g., photo, graphic , art). |
-| `styles?` | [`StyleSetting`](../../panel-settings-types/interfaces/style-setting.md) | Configuration for panel styles. Controls which styles (e.g., artistic styles, filters) are applied during image generation. |
+| `contentType?` | [`ContentTypeSetting`](content-type-setting.md) | Configuration for the content type setting in the panel. Determines the type of content to be generated (e.g., photo, graphic , art). |
+| `styles?` | [`StyleSetting`](style-setting.md) | Configuration for panel styles. Controls which styles (e.g., artistic styles, filters) are applied during image generation. |

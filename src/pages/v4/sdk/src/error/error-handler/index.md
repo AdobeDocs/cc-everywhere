@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/error/ErrorHandler
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [ErrorHandler](../error-handler/classes/error-handler.md) | - |
+| [ErrorHandler](classes/error-handler.md) | - |

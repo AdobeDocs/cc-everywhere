@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # sdk/src/workflows/3p/QuickActionWorkflow
 
@@ -8,4 +8,4 @@
 
 | Class | Description |
 | ------ | ------ |
-| [QuickActionWorkflow](../quick-action-workflow/classes/quick-action-workflow.md) | - |
+| [QuickActionWorkflow](classes/quick-action-workflow.md) | - |

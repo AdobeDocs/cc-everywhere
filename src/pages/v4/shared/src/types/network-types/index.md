@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/Network.types
 
@@ -8,4 +8,4 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [NetworkState](../network-types/enumerations/network-state.md) | - |
+| [NetworkState](enumerations/network-state.md) | - |

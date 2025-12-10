@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: Blob
 
@@ -37,7 +37,7 @@ slice(
 
 `Blob`
 
-***
+<HorizontalLine />
 
 ### stream()
 
@@ -49,7 +49,7 @@ stream(): ReadableStream;
 
 `ReadableStream`
 
-***
+<HorizontalLine />
 
 ### text()
 
@@ -59,9 +59,9 @@ text(): Promise<string>;
 
 #### Returns
 
-`Promise`<`string`\>
+`Promise`&lt; `string` &gt;
 
-***
+<HorizontalLine />
 
 ### arrayBuffer()
 
@@ -71,4 +71,4 @@ arrayBuffer(): Promise<ArrayBuffer>;
 
 #### Returns
 
-`Promise`<`ArrayBuffer`\>
+`Promise`&lt; `ArrayBuffer` &gt;

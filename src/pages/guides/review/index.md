@@ -76,7 +76,7 @@ Verify that you're using the appropriate namespace (Full Editor, Quick Actions, 
 
 ### Appropriate brand usage
 
-Read our brand guidelines. Before you submit your integration for review, please read our [brand guidelines](../../assets/Adobe_Express_Partner_Program_brand_guide.pdf). To adhere to our brand requirements, you can [download the assets here](https://developer.adobe.com/distribute/cc-brand-assets).
+Read our brand guidelines. Before you submit your integration for review, please read our [brand guidelines](https://drive.google.com/file/d/11ZK8FR4vLGoeQJRCEa_g7rW6rs8s-5l7/view?usp=sharing). To adhere to our brand requirements, you can [download the assets here](https://developer.adobe.com/distribute/cc-brand-assets).
 
 ### Inappropriate content
 
@@ -176,7 +176,7 @@ If it was rejected, we will include the reasons for rejection along with any nex
 - The app description is not ill-formatted, garbled, or improperly exposing character encoding.
 - The app description is clear in conveying the integration's functionality.
 - The integration is able to perform all advertised features.
-- Any website links that are provided successfully open and are safe (check with <https://urlvoid.com>).
+- Any website links that are provided successfully open and are safe (check with [https://urlvoid.com](https://urlvoid.com)).
 - Proper contact details or a contact form is provided on the GitHub/website link.
 - The privacy policy and terms of use URLs (if any) link to the right content.
 - Only developers should create projects in the Adobe Developer Console. Users should not be asked to create projects in the Console just to use an integration.
@@ -201,6 +201,6 @@ If it was rejected, we will include the reasons for rejection along with any nex
 
 To learn more, see the [Adobe Creative Cloud Developer Brand Guide](https://partners.adobe.com/content/dam/tep_assets/public/public_1/documents/Adobe-Creative-Cloud-Developer-Brand-Guide.pdf). This guide includes best practices for brand assets in marketing, press releases and social media guidance. It's the best spot to get our most up to date assets. Here you'll also find information for how to publicize and promote your application once it's approved.
 
-During the submission process, we're available to answer any direct questions you may have at <CCIntegrationsReview@adobe.com>. Please note that this inbox may have delayed responses depending on the number of queries.
+During the submission process, we're available to answer any direct questions you may have at [CCIntegrationsReview@adobe.com](mailto:CCIntegrationsReview@adobe.com). Please note that this inbox may have delayed responses depending on the number of queries.
 
 We look forward to seeing your creative solutions!

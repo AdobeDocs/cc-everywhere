@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: ProtocolHandlersModule
 
@@ -20,8 +20,8 @@ handleMessage(
 | Parameter | Type |
 | ------ | ------ |
 | `message` | `unknown` |
-| `sourceVersion` | [`ProtocolVersion`](../../protocol-types/enumerations/protocol-version.md) |
-| `targetVersion` | [`ProtocolVersion`](../../protocol-types/enumerations/protocol-version.md) |
+| `sourceVersion` | [`ProtocolVersion`](../enumerations/protocol-version.md) |
+| `targetVersion` | [`ProtocolVersion`](../enumerations/protocol-version.md) |
 
 #### Returns
 

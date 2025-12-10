@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Variable: default
 
@@ -30,7 +30,7 @@ Please ensure to call this API only once.
 
 #### Returns
 
-`Promise`<[`CCEverywhere`](../../cc-everywhere/classes/cc-everywhere.md)\>
+`Promise`&lt; [`CCEverywhere`](../classes/cc-everywhere.md) &gt;
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
 

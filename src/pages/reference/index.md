@@ -28,8 +28,8 @@ As of today, it exposes:
 2. `quickAction`: Contains APIs for launching quick actions
 3. `module`: Contains APIs for launching modules (Generate Image, edit image)
 
-<!-- 4. `close()`: Closes the active editor modal
-1. `terminate()`: Un-initializes the active `CCEverywhere` instance -->
+&lt; !-- 4. `close()`: Closes the active editor modal
+1. `terminate()`: Un-initializes the active `CCEverywhere` instance -- &gt;
 
 ## Types
 

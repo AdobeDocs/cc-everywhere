@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: EditorWorkflow
 
@@ -29,7 +29,7 @@ create(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### createWithAsset()
 
@@ -54,7 +54,7 @@ createWithAsset(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### createWithTemplate()
 
@@ -79,7 +79,7 @@ createWithTemplate(
 
 `void`
 
-***
+<HorizontalLine />
 
 ### edit()
 

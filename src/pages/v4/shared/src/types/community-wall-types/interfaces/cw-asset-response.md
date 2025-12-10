@@ -1,12 +1,12 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: CWAssetResponse
 
 ## Extends
 
-- [`DataResponse`](../../community-wall-types/interfaces/data-response.md)
+- [`DataResponse`](data-response.md)
 
 ## Properties
 

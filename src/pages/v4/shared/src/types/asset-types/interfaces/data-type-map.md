@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: DataTypeMap
 
@@ -19,6 +19,6 @@ It includes the following properties:
 
 | Property | Type |
 | ------ | ------ |
-| `blob` | [`Blob`](../../asset-types/interfaces/blob.md) |
+| `blob` | [`Blob`](blob.md) |
 | `url` | `string` |
 | `base64` | `string` |

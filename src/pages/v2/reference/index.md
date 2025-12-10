@@ -19,7 +19,7 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 12th, 2025** and they're no longer supported. Please upgrade to the latest SDK version to avoid disruption.
 
-We're only accepting new integrations using the SDK version 4. Refer to our [migration guide](../../guides/concepts/migration_v3_v4.md) for detailed instructions.
+We're only accepting new integrations using the SDK version 4. Refer to our [migration guide](../../guides/concepts/migration-v3-v4.md) for detailed instructions.
 
 This is the main API for accessing all Adobe Express Embed SDK components. The `initialize()` method takes [HostInfo](#hostinfo) and an optional [ConfigParams](#configparams), and returns a Promise with a [CCEverywhere](#cceverywhere) object. The v2 release introduces a new method: `terminate()`.
 
@@ -50,12 +50,12 @@ await window.CCEverywhere.initialize(
 
 ### HostInfo
 
-| Property         | Type                                            | Description                                                    |
-| :--------------- | :---------------------------------------------- | :------------------------------------------------------------- |
-| clientId         | string                                          | Your API Key                                                   |
-| appName          | string                                          | Name of project folder created in user's Adobe Express account |
-| appVersion       | { major: number, minor: number, patch?: number} | Your app version                                               |
-| platformCategory | 'web'                                           | Specify host app platform                                      |
+| Property         | Type                                              | Description                                                    |
+| :--------------- |:--------------------------------------------------| :------------------------------------------------------------- |
+| clientId         | string                                            | Your API Key                                                   |
+| appName          | string                                            | Name of project folder created in user's Adobe Express account |
+| appVersion       | \{ major: number, minor: number, patch?: number\} | Your app version                                               |
+| platformCategory | 'web'                                             | Specify host app platform                                      |
 
 ### ConfigParams
 

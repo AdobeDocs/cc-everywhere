@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Class: ChannelMessageListener
 
@@ -45,7 +45,7 @@ reset(): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### didGetMessage()
 
@@ -63,7 +63,7 @@ didGetMessage<T>(message, requestId?): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)<`T`\> |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; |
 | `requestId?` | `string` |
 
 #### Returns
@@ -74,7 +74,7 @@ didGetMessage<T>(message, requestId?): void;
 
 [`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).[`didGetMessage`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md#didgetmessage)
 
-***
+<HorizontalLine />
 
 ### setTarget()
 
@@ -93,7 +93,7 @@ setTarget(targetChannel, targetChannelInfo): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeTarget()
 
@@ -111,7 +111,7 @@ removeTarget(targetChannel): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### hasTarget()
 
@@ -129,7 +129,7 @@ hasTarget(targetChannel): boolean;
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### getTarget()
 
@@ -147,10 +147,10 @@ getTarget(targetChannel):
 
 #### Returns
 
-  \| `undefined`
-  \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
+  | `undefined`
+  | [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
 
-***
+<HorizontalLine />
 
 ### addListenerForTarget()
 
@@ -169,7 +169,7 @@ addListenerForTarget(targetChannel, callback): void;
 
 `void`
 
-***
+<HorizontalLine />
 
 ### sendMessage()
 
@@ -188,13 +188,13 @@ sendMessage<T>(targetChannel, message): boolean;
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | \| [`Message`](../../message-types/type-aliases/message.md)<`T`\> \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
+| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
 
 #### Returns
 
 `boolean`
 
-***
+<HorizontalLine />
 
 ### sendMessageCompat()
 
@@ -215,7 +215,7 @@ Sends a message using a message channel that is compatible with older version of
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |  |
-| `message` | [`MessageCompat`](../../message-types/type-aliases/message-compat.md)<`T`\> | The message to send. |
+| `message` | [`MessageCompat`](../../message-types/type-aliases/message-compat.md)&lt;`T`&gt; | The message to send. |
 
 #### Returns
 
@@ -223,7 +223,7 @@ Sends a message using a message channel that is compatible with older version of
 
 - True if the message was successfully sent, false otherwise.
 
-***
+<HorizontalLine />
 
 ### addListener()
 
@@ -239,14 +239,14 @@ addListener(
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `messageType` | [`MessageType`](../../message-types/enumerations/message-type.md) | Listener is invoked for incoming message of this message type. |
-| `listener` | [`Listener`](../../channel-message-listener/type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
+| `listener` | [`Listener`](../type-aliases/listener.md) | Callback function that is invoked when there is an incoming message. |
 | `messageFilter?` | [`MessageFilter`](../../channel-messenger-types/type-aliases/message-filter.md) | Filter the incoming message. If this function returns true the element is passed downstream, if it returns false the element is discarded. |
 
 #### Returns
 
 `void`
 
-***
+<HorizontalLine />
 
 ### removeListener()
 
@@ -259,13 +259,13 @@ removeListener(messageType, listener): void;
 | Parameter | Type |
 | ------ | ------ |
 | `messageType` | [`MessageType`](../../message-types/enumerations/message-type.md) |
-| `listener` | [`Listener`](../../channel-message-listener/type-aliases/listener.md) |
+| `listener` | [`Listener`](../type-aliases/listener.md) |
 
 #### Returns
 
 `void`
 
-***
+<HorizontalLine />
 
 ### setRequestId()
 

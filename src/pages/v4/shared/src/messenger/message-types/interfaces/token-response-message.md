@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: TokenResponseMessage
 
@@ -8,7 +8,7 @@
 
 | Property | Type |
 | ------ | ------ |
-| `status` | [`Status`](../../message-types/enumerations/status.md) |
+| `status` | [`Status`](../enumerations/status.md) |
 | `token` | `null` \| `string` |
 | `userId` | `null` \| `string` |
 | `type` | `string` |

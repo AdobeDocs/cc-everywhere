@@ -1,11 +1,11 @@
-[**cc-everywhere**](../../../../../index.md)
+[**cc-everywhere**](..../..../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: Version
 
 Version details of any application.
-Reference : https://semver.org/
+Reference : [https://semver.org/](https://semver.org/)
 
 ## Properties
 

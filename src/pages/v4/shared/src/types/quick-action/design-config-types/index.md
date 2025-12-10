@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # shared/src/types/quick-action/DesignConfig.types
 
@@ -8,6 +8,6 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [BaseDesignConfig](../design-config-types/interfaces/base-design-config.md) | - |
-| [QuickActionDesignConfig](../design-config-types/interfaces/quick-action-design-config.md) | - |
-| [MergeVideosDesignConfig](../design-config-types/interfaces/merge-videos-design-config.md) | - |
+| [BaseDesignConfig](interfaces/base-design-config.md) | - |
+| [QuickActionDesignConfig](interfaces/quick-action-design-config.md) | - |
+| [MergeVideosDesignConfig](interfaces/merge-videos-design-config.md) | - |

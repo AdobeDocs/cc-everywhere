@@ -1,6 +1,6 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
 # Interface: PublishParams
 
@@ -8,8 +8,8 @@ Asset related information received with onPublish callback.
 
 ## Extended by
 
-- [`QuickActionPublishParams`](../../publish-params-types/interfaces/quick-action-publish-params.md)
-- [`TextToImagePublishParams`](../../publish-params-types/interfaces/text-to-image-publish-params.md)
+- [`QuickActionPublishParams`](quick-action-publish-params.md)
+- [`TextToImagePublishParams`](text-to-image-publish-params.md)
 
 ## Properties
 

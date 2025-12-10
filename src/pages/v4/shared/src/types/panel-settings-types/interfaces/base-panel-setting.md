@@ -1,16 +1,16 @@
 [**cc-everywhere**](../../../../../index.md)
 
-***
+<HorizontalLine />
 
-# Interface: BasePanelSetting<T\>
+# Interface: BasePanelSetting&lt; T&gt;
 
 Base setting interface that all settings should extend.
 Provides common properties for value.
 
 ## Extended by
 
-- [`StyleSetting`](../../panel-settings-types/interfaces/style-setting.md)
-- [`ContentTypeSetting`](../../panel-settings-types/interfaces/content-type-setting.md)
+- [`StyleSetting`](style-setting.md)
+- [`ContentTypeSetting`](content-type-setting.md)
 
 ## Type Parameters
 
