@@ -47,7 +47,7 @@ A **template** is an individual design file within a collection. Each template r
 
 <InlineAlert slots="header, text" variant="info" />
 
-### Template editing vs. Collection browsing
+#### Template editing vs. Collection browsing
 
 If you need to **directly open a specific, known template** and not let users browse a collection, use the [`editor.createWithTemplate()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#createwithtemplate) API instead of the Template Browser experience.
 

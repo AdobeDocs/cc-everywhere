@@ -37,7 +37,7 @@ You can tether more than two workflows together to create even more complex expe
 
 <InlineAlert variant="info" slots="header, text1" />
 
-### Targets
+#### Targets
 
 While you can initiate tethering from any workflow (for example, Quick Actions), the target workflow must be either **Edit Image** or **Full Editor**. At the moment, only the Generate Image experience can tether to Edit Image.
 
@@ -87,7 +87,7 @@ module.createImageFromText(appConfig, exportConfig);
 
 <InlineAlert variant="warning" slots="header, text1, text2" />
 
-### Default buttons
+#### Default buttons
 
 The `exportConfig` is always an **optional parameter**. If no export configuration is provided, the workflow will fall back to the default layout options—which usually include tethering options to the Full Editor.
 
@@ -236,7 +236,7 @@ interface IntentChangeConfig {
 
 <InlineAlert variant="info" slots="header, text1, text2" />
 
-### A simpler `appConfig`
+#### A simpler `appConfig`
 
 If you look closely at the `IntentChangeConfig` interface in the code block above, you'll notice that the `appConfig` is of type [`BaseAppConfig`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md), which is the base configuration object for all workflows.
 
@@ -250,7 +250,7 @@ Thanks to the Intent Change Handler, you can **conditionally return the appropri
 
 <InlineAlert variant="warning" slots="header, text1, text2" />
 
-### Beware the `z-index`
+#### Beware the `z-index`
 
 In tethering workflows, any property that can be customized via `onIntentChange()` but is not handled in the callback will **reset to its default value**. This includes the iframe container's [z-index](https://developer.mozilla.org/en-US/docs/Web/CSS/z-index).
 

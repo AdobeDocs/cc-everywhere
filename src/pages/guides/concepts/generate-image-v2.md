@@ -207,7 +207,7 @@ Ensure that you have the right plan! Firefly custom models are available to orga
 
 <InlineAlert variant="warning" slots="header, text1" />
 
-### Available only for enterprise users
+#### Available only for enterprise users
 
 This feature requires users of your organization to have access to the Custom Firefly Models. To train custom models in Adobe Firefly, you must be entitled as a [trainer for Firefly custom models](https://helpx.adobe.com/in/enterprise/using/assign-users-to-firefly-custom-models.html). If you're using Firefly through a company-owned account, [contact your Adobe administrator](https://helpx.adobe.com/in/enterprise/kb/contact-administrator.html) to request access.
 
