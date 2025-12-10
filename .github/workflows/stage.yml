@@ -20,3 +20,4 @@ jobs:
       env: stage
       baseSha: ${{ inputs.baseSha }}
       deployAll: ${{ inputs.deployAll }}
+
