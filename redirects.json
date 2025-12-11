@@ -1913,7 +1913,7 @@
     },
     {
       "Source": "/express/embed-sdk/docs/reference/types/index",
-      "Destination": "/express/embed-sdk/docs/v4/shared/src/"
+      "Destination": "/express/embed-sdk/docs/v4/shared/src/types/"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/initialize",
