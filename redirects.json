@@ -1901,75 +1901,75 @@
     },
     {
       "Source": "/express/embed-sdk/docs/reference",
-      "Destination": "/express/embed-sdk/docs/reference/"
+      "Destination": "/express/embed-sdk/docs/v4/"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/index",
-      "Destination": "/express/embed-sdk/docs/reference/"
+      "Destination": "/express/embed-sdk/docs/v4/"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/types",
-      "Destination": "/express/embed-sdk/docs/reference/types/"
+      "Destination": "/express/embed-sdk/docs/v4/shared/src/types/"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/types/index",
-      "Destination": "/express/embed-sdk/docs/reference/types/"
+      "Destination": "/express/embed-sdk/docs/v4/shared/src/"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/initialize",
-      "Destination": "/express/embed-sdk/docs/reference/initialize/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/cc-everywhere/variables/default#initialize"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/initialize/index",
-      "Destination": "/express/embed-sdk/docs/reference/initialize/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/cc-everywhere/variables/default#initialize"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/index",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/cc-everywhere/classes/cc-everywhere"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/terminate",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/terminate/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/cc-everywhere/variables/default#terminate"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/terminate/index",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/terminate/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/3p/cc-everywhere/variables/default#terminate"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/quickAction",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/quickAction/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/quickAction/index",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/quickAction/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/quick-action-workflow/classes/quick-action-workflow"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/miniEditor",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/miniEditor/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/miniEditor/index",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/miniEditor/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/editor",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/editor/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/editor/index",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/editor/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/close",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/close/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/cc-everywhere-base/classes/cc-everywhere-base#close"
     },
     {
       "Source": "/express/embed-sdk/docs/reference/CCEverywhere/close/index",
-      "Destination": "/express/embed-sdk/docs/reference/CCEverywhere/close/"
+      "Destination": "/express/embed-sdk/docs/v4/sdk/src/cc-everywhere-base/classes/cc-everywhere-base#close"
     },
     {
       "Source": "/express/embed-sdk/docs/guides",
