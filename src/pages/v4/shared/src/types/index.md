@@ -336,13 +336,13 @@ Re-exports [UserInfo](authentication-types/interfaces/user-info.md)
 
 <HorizontalLine />
 
-### IMS\_JUMP\_ERROR\_KEY
+### IMS_JUMP_ERROR_KEY
 
 Re-exports [IMS_JUMP_ERROR_KEY](authentication-types/variables/ims-jump-error-key.md)
 
 <HorizontalLine />
 
-### IMS/_JUMP/_ERROR/_DESCRIPTION/_KEY
+### IMS_JUMP_ERROR_DESCRIPTION_KEY
 
 Re-exports [IMS_JUMP_ERROR_DESCRIPTION_KEY](authentication-types/variables/ims-jump-error-description-key.md)
 
@@ -492,7 +492,7 @@ Re-exports [Config](config-manager-types/type-aliases/config.md)
 
 <HorizontalLine />
 
-### SDK\_CDN\_BASE
+### SDK_CDN_BASE
 
 Re-exports [SDK_CDN_BASE](config-manager-types/variables/sdk-cdn-base.md)
 
@@ -1092,7 +1092,7 @@ Renames and re-exports [shared/src/types/3p](3p/index.md)
 
 <HorizontalLine />
 
-### V1/_1
+### V1_1
 
 Renames and re-exports [shared/src/types/v1_1](v1-1/index.md)
 
