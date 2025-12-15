@@ -198,25 +198,25 @@ Re-exports [ProtocolVersion](protocol-types/enumerations/protocol-version.md)
 
 <HorizontalLine />
 
-### CURRENT/_PROTOCOL/_VERSION
+### CURRENT_PROTOCOL_VERSION
 
 Re-exports [CURRENT_PROTOCOL_VERSION](protocol-types/variables/current-protocol-version.md)
 
 <HorizontalLine />
 
-### EARLIEST/_PROTOCOL/_VERSION
+### EARLIEST_PROTOCOL_VERSION
 
 Re-exports [EARLIEST_PROTOCOL_VERSION](protocol-types/variables/earliest-protocol-version.md)
 
 <HorizontalLine />
 
-### NEXT/_PROTOCOL/_VERSION
+### NEXT_PROTOCOL_VERSION
 
 Re-exports [NEXT_PROTOCOL_VERSION](protocol-types/variables/next-protocol-version.md)
 
 <HorizontalLine />
 
-### PREVIOUS/_PROTOCOL/_VERSION
+### PREVIOUS_PROTOCOL_VERSION
 
 Re-exports [PREVIOUS_PROTOCOL_VERSION](protocol-types/variables/previous-protocol-version.md)
 
