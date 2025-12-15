@@ -503,6 +503,6 @@ const initializeWithFallback = async () => {
 
 - [Getting Started with Adobe Express Embed SDK](../quickstart/index.md)
 - [Technical Requirements](../quickstart/technical-requirements.md)
-- [Initialize SDK Reference](../../reference/initialize/index.md)
+- [Initialize SDK Reference](../../reference/initialize)
 - [Editor Customization](./appconfig.md)
 - [Error Handling](./error-handling.md)
