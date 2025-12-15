@@ -34,4 +34,4 @@
 
 | Variable | Description |
 | ------ | ------ |
-| [DEFAULT/_FEATURE/_FLAG/_CONFIG](variables/default-feature-flag-config.md) | Default feature flag configuration |
+| [DEFAULT_FEATURE_FLAG_CONFIG](variables/default-feature-flag-config.md) | Default feature flag configuration |
