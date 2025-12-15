@@ -67,7 +67,7 @@ With just a few lines of code, you can embed [Adobe Express editor](https://www.
 
 This journey map will give you guidance on which resources to use at different stages of your integration with the Adobe Express Embed SDK. Click on the image below to download the PDF version of the developer journey with active links.
 
-[![Developer Journey](./images/developer-journey-v2.png)](./images/developer-journey-v2.pdf)
+[![Developer Journey](./images/developer-journey-v2.png)](https://developer.adobe.com/express/embed-sdk/developer-journey-v2.pdf)
 
 ## First Steps
 

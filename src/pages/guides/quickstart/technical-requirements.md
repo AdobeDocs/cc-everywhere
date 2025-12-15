@@ -39,10 +39,10 @@ Review the technical requirements for uisng Adobe Express Embed SDK in your web 
 |                        | Firefox: Version 117 or later                    |
 | **JavaScript**         | Must be enabled                                  |
 | **Hardware Acceleration** | Must be enabled                              |
-|                        | (Learn how to [enable hardware acceleration](https://help.scoot.app/how-do-i-enable-my-browsers-hardware-acceleration).)                        |
+|                        | (Learn how to [enable hardware acceleration](https://helpx.adobe.com/express/web/get-started/enable-hardware-acceleration.html).)                        |
 | **Memory**             | Minimum 4GB memory                               |
 | **WebGL2**             | Supported                                        |
-|                        | (Verify your browser’s [WebGL2 settings](https://webglreport.com/?v=2)). **Note**: [Hardware acceleration must be enabled](https://help.scoot.app/how-do-i-enable-my-browsers-hardware-acceleration) to access WebGL content.         |
+|                        | (Verify your browser’s [WebGL2 settings](https://webglreport.com/?v=2)). **Note**: [Hardware acceleration must be enabled](https://helpx.adobe.com/express/web/get-started/enable-hardware-acceleration.html) to access WebGL content.         |
 | **WebAssembly**        | Supported(Verify your browser’s [WebAssembly settings](https://wasm.joway.io/))     |
 | **Incognito Mode**     | The SDK will not work in incognito windows     |
 | **HTTPS**              | HTTPS connections are required for all environments |
