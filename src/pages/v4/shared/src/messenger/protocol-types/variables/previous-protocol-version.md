@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Variable: PREVIOUS\_PROTOCOL\_VERSION
+# Variable: PREVIOUS_PROTOCOL_VERSION
 
 ```ts
 const PREVIOUS_PROTOCOL_VERSION: Record<ProtocolVersion, ProtocolVersion>;
