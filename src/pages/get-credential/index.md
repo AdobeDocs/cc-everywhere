@@ -1,3 +1,1 @@
-import { GetCredentialApiKey } from "../../components/CreateCredential"
-
-<GetCredentialApiKey />
+<GetCredential templateId="1236547890" productName="Express Embed SDK" jsonDefinition="../credential/getcredential.json" />
