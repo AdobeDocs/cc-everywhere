@@ -41,12 +41,12 @@ All the callbacks are optional and return void.
 
 | Property | Callback Function | Description
 | :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes the modal
-| onError | () => {} | Triggered upon error with associated error code
-| onLoadStart | () => {} | Triggered once modal begins to load
-| onLoad | () => {} | Triggered once modal is loaded
-| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
+| onCancel | () => \{\}| Triggered when user closes the modal
+| onError | () => \{\} | Triggered upon error with associated error code
+| onLoadStart | () => \{\} | Triggered once modal begins to load
+| onLoad | () => \{\} | Triggered once modal is loaded
+| onPublishStart | () => \{\} | Triggered when "Publish"/"Download" is clicked
+| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => \{\} | Triggered when publish/download is complete
 
 ### PublishParams
 
@@ -99,7 +99,6 @@ Passed to the onPublish callback in PublishParams. Extends the [Asset](#asset) t
 | fileType | 'jpeg', 'png', 'mp4' | Type of output asset
 | (optional) fileName | string | Name of output asset
 | (optional) size | [Size](#size) | Dimensions of output asset
-&lt; !-- todo: check optional properties are outputted -- &gt;
 
 ## Size
 

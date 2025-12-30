@@ -8,7 +8,7 @@
 
 | Property | Type |
 | ------ | ------ |
-| `DID_TARGET_LOAD` | \| \{ `status`: [`SUCCESS`](../enumerations/load-status.md#success); `loadTime`: `number`; `url`: `string`; \} \| \{ `status`: [`FAILURE`](../enumerations/load-status.md#failure); `loadTime`: `number`; `url`: `string`; `error?`: [`ErrorCode`](../../../error/error-codes/enumerations/error-code.md); `errorDesc?`: `string`; \} |
+| `DID_TARGET_LOAD` | \| \{ `status`\: [`SUCCESS`](../enumerations/load-status.md#success); `loadTime`\: `number`; `url`\: `string`; \} \| \{ `status`\: [`FAILURE`](../enumerations/load-status.md#failure); `loadTime`\: `number`; `url`\: `string`; `error?`\: [`ErrorCode`](../../../error/error-codes/enumerations/error-code.md); `errorDesc?`\: `string`; \} |
 | `DID_PUBLISH` | [`PublishParams`](../../../types/publish-params-types/interfaces/publish-params.md) |
 | `CANCEL` | [`CancelMessage`](cancel-message.md) |
 | `TOKEN_RESPONSE` | [`TokenResponseMessage`](token-response-message.md) |
