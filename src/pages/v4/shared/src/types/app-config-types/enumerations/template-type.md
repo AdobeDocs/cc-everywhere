@@ -20,7 +20,6 @@
 | `INSTAGRAM_CAROUSEL` | `"instagram-carousel"` |
 | `INSTAGRAM_REEL` | `"instagram-reel"` |
 | `INSTAGRAM_SQUARE_POST` | `"instagram-square-post"` |
-| `INSTAGRAM_STORY` | `"instagram-story"` |
 | `INVITATION` | `"invitation"` |
 | `INVOICE` | `"invoice"` |
 | `LINE_AD_SMALL` | `"line-ad-small"` |
@@ -42,7 +41,6 @@
 | `POSTER` | `"poster"` |
 | `PRESENTATION` | `"presentation"` |
 | `RESUME` | `"resume"` |
-| `TIKTOK_VIDEO` | `"tiktok-video"` |
 | `VIDEO` | `"video"` |
 | `WALLPAPER_DESKTOP` | `"wallpaper-desktop"` |
 | `WORKSHEET` | `"worksheet"` |
