@@ -1,0 +1,38 @@
+{
+    "name": "FocusFlow - ADHD-Friendly Work Capture",
+    "short_name": "FocusFlow",
+    "description": "Non-intrusive focus tracking app for ADHD minds. Capture what you're working on without breaking flow.",
+    "start_url": "/focus-tracker-app/index.html",
+    "display": "standalone",
+    "background_color": "#0f172a",
+    "theme_color": "#6366f1",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎯</text></svg>",
+            "sizes": "any",
+            "type": "image/svg+xml",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["productivity", "utilities"],
+    "lang": "en-US",
+    "dir": "ltr",
+    "scope": "/focus-tracker-app/",
+    "shortcuts": [
+        {
+            "name": "Start Timer",
+            "short_name": "Start",
+            "description": "Start a new focus session",
+            "url": "/focus-tracker-app/index.html?action=start"
+        },
+        {
+            "name": "Quick Capture",
+            "short_name": "Capture",
+            "description": "Quickly capture what you're working on",
+            "url": "/focus-tracker-app/index.html?action=capture"
+        }
+    ],
+    "related_applications": [],
+    "prefer_related_applications": false
+}

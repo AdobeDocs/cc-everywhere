@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusFlow - ADHD-Friendly Work Capture</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="description" content="Non-intrusive focus tracking for ADHD minds. Capture what you're working on without breaking flow.">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="logo-icon">🎯</span>
+                <h1>FocusFlow</h1>
+            </div>
+            <nav class="nav-tabs">
+                <button class="tab-btn active" data-tab="timer">Timer</button>
+                <button class="tab-btn" data-tab="entries">Entries</button>
+                <button class="tab-btn" data-tab="insights">Insights</button>
+                <button class="tab-btn" data-tab="settings">Settings</button>
+            </nav>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Timer Tab -->
+            <section id="timer-tab" class="tab-content active">
+                <!-- Timer Display -->
+                <div class="timer-container">
+                    <div class="timer-ring">
+                        <svg class="timer-svg" viewBox="0 0 200 200">
+                            <circle class="timer-bg" cx="100" cy="100" r="90"/>
+                            <circle class="timer-progress" cx="100" cy="100" r="90"/>
+                        </svg>
+                        <div class="timer-display">
+                            <span id="timer-minutes">30</span>
+                            <span class="timer-separator">:</span>
+                            <span id="timer-seconds">00</span>
+                        </div>
+                    </div>
+                    <div class="timer-label" id="timer-label">Until next check-in</div>
+                </div>
+
+                <!-- Mode Selection -->
+                <div class="mode-selector">
+                    <button class="mode-btn active" data-mode="flow" data-interval="30">
+                        <span class="mode-icon">🌊</span>
+                        <span class="mode-name">Flow</span>
+                        <span class="mode-desc">30 min</span>
+                    </button>
+                    <button class="mode-btn" data-mode="pomodoro" data-interval="25">
+                        <span class="mode-icon">🍅</span>
+                        <span class="mode-name">Pomodoro</span>
+                        <span class="mode-desc">25/5</span>
+                    </button>
+                    <button class="mode-btn" data-mode="deep" data-interval="50">
+                        <span class="mode-icon">🧠</span>
+                        <span class="mode-name">Deep Work</span>
+                        <span class="mode-desc">50/10</span>
+                    </button>
+                    <button class="mode-btn" data-mode="custom">
+                        <span class="mode-icon">⚙️</span>
+                        <span class="mode-name">Custom</span>
+                        <span class="mode-desc" id="custom-interval-display">--</span>
+                    </button>
+                </div>
+
+                <!-- Timer Controls -->
+                <div class="timer-controls">
+                    <button id="start-btn" class="control-btn primary">
+                        <span class="btn-icon">▶</span>
+                        Start Session
+                    </button>
+                    <button id="pause-btn" class="control-btn secondary hidden">
+                        <span class="btn-icon">⏸</span>
+                        Pause
+                    </button>
+                    <button id="reset-btn" class="control-btn secondary hidden">
+                        <span class="btn-icon">↺</span>
+                        Reset
+                    </button>
+                </div>
+
+                <!-- Session Stats -->
+                <div class="session-stats">
+                    <div class="stat">
+                        <span class="stat-value" id="session-count">0</span>
+                        <span class="stat-label">Sessions Today</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="entry-count">0</span>
+                        <span class="stat-label">Entries Today</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value" id="streak-count">0</span>
+                        <span class="stat-label">Day Streak</span>
+                    </div>
+                </div>
+
+                <!-- Body Doubling Section -->
+                <div class="body-doubling">
+                    <div class="bd-header">
+                        <span class="bd-icon">👥</span>
+                        <span>Body Doubling Mode</span>
+                        <label class="toggle">
+                            <input type="checkbox" id="body-doubling-toggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <div class="bd-options hidden" id="bd-options">
+                        <select id="ambient-sound">
+                            <option value="none">No ambient sound</option>
+                            <option value="coffee">Coffee Shop</option>
+                            <option value="rain">Rain</option>
+                            <option value="library">Library</option>
+                            <option value="nature">Nature</option>
+                        </select>
+                        <input type="text" id="session-goal" placeholder="What's your goal this session?">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Entries Tab -->
+            <section id="entries-tab" class="tab-content">
+                <div class="entries-header">
+                    <h2>Today's Entries</h2>
+                    <div class="entries-actions">
+                        <button id="add-entry-btn" class="action-btn">+ Add Entry</button>
+                        <div class="export-dropdown">
+                            <button id="export-btn" class="action-btn">Export ↓</button>
+                            <div class="dropdown-menu hidden" id="export-menu">
+                                <button data-export="tana">Export to Tana</button>
+                                <button data-export="obsidian">Export to Obsidian</button>
+                                <button data-export="json">Export as JSON</button>
+                                <button data-export="csv">Export as CSV</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="date-navigator">
+                    <button id="prev-day" class="nav-btn">←</button>
+                    <span id="current-date">Today</span>
+                    <button id="next-day" class="nav-btn">→</button>
+                </div>
+
+                <div class="entries-list" id="entries-list">
+                    <!-- Entries will be populated here -->
+                    <div class="empty-state">
+                        <span class="empty-icon">📝</span>
+                        <p>No entries yet today</p>
+                        <p class="empty-hint">Start a session and capture your work!</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Insights Tab -->
+            <section id="insights-tab" class="tab-content">
+                <div class="insights-header">
+                    <h2>Your Patterns</h2>
+                    <select id="insights-range">
+                        <option value="7">Last 7 days</option>
+                        <option value="14">Last 14 days</option>
+                        <option value="30">Last 30 days</option>
+                    </select>
+                </div>
+
+                <div class="insights-grid">
+                    <div class="insight-card">
+                        <h3>Most Productive Hours</h3>
+                        <div class="hour-chart" id="hour-chart"></div>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Top Projects</h3>
+                        <div class="project-list" id="project-list"></div>
+                    </div>
+                    <div class="insight-card">
+                        <h3>Weekly Overview</h3>
+                        <div class="week-chart" id="week-chart"></div>
+                    </div>
+                    <div class="insight-card full-width">
+                        <h3>AI Summary</h3>
+                        <div id="ai-summary" class="ai-summary">
+                            <p class="placeholder">Click "Generate Summary" to get AI insights about your work patterns</p>
+                        </div>
+                        <button id="generate-summary-btn" class="action-btn">Generate Summary</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Settings Tab -->
+            <section id="settings-tab" class="tab-content">
+                <div class="settings-group">
+                    <h3>Timer Settings</h3>
+                    <div class="setting-item">
+                        <label for="custom-interval">Custom Interval (minutes)</label>
+                        <input type="number" id="custom-interval" min="5" max="120" value="30">
+                    </div>
+                    <div class="setting-item">
+                        <label for="break-duration">Break Duration (minutes)</label>
+                        <input type="number" id="break-duration" min="1" max="30" value="5">
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="auto-start-breaks" checked>
+                            Auto-start breaks
+                        </label>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Notifications</h3>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enable-notifications" checked>
+                            Enable notifications
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label>
+                            <input type="checkbox" id="enable-sound" checked>
+                            Enable sound
+                        </label>
+                    </div>
+                    <div class="setting-item">
+                        <label for="notification-style">Notification Style</label>
+                        <select id="notification-style">
+                            <option value="gentle">Gentle (soft chime)</option>
+                            <option value="persistent">Persistent (repeats)</option>
+                            <option value="urgent">Urgent (louder)</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Quick Tags</h3>
+                    <div class="tags-editor" id="tags-editor">
+                        <div class="tags-list" id="quick-tags-list"></div>
+                        <div class="add-tag">
+                            <input type="text" id="new-tag-input" placeholder="Add a tag...">
+                            <button id="add-tag-btn">+</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Integrations</h3>
+                    <div class="setting-item">
+                        <label for="tana-token">Tana API Token</label>
+                        <input type="password" id="tana-token" placeholder="Enter your Tana API token">
+                    </div>
+                    <div class="setting-item">
+                        <label for="obsidian-folder">Obsidian Vault Folder Name</label>
+                        <input type="text" id="obsidian-folder" placeholder="e.g., Daily Notes">
+                    </div>
+                    <div class="setting-item">
+                        <label for="ai-provider">AI Provider</label>
+                        <select id="ai-provider">
+                            <option value="none">None</option>
+                            <option value="claude">Claude</option>
+                            <option value="openai">ChatGPT</option>
+                        </select>
+                    </div>
+                    <div class="setting-item hidden" id="ai-key-setting">
+                        <label for="ai-api-key">API Key</label>
+                        <input type="password" id="ai-api-key" placeholder="Enter your API key">
+                    </div>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Data</h3>
+                    <div class="setting-item">
+                        <button id="export-all-btn" class="action-btn">Export All Data</button>
+                        <button id="import-btn" class="action-btn">Import Data</button>
+                        <input type="file" id="import-file" accept=".json" class="hidden">
+                    </div>
+                    <div class="setting-item danger">
+                        <button id="clear-data-btn" class="action-btn danger">Clear All Data</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Capture Modal -->
+        <div id="capture-modal" class="modal hidden">
+            <div class="modal-content capture-modal">
+                <div class="modal-header">
+                    <h2>What are you working on?</h2>
+                    <span class="capture-time" id="capture-time"></span>
+                </div>
+
+                <div class="capture-input-toggle">
+                    <button class="input-type-btn active" data-type="text">
+                        <span>⌨️</span> Text
+                    </button>
+                    <button class="input-type-btn" data-type="voice">
+                        <span>🎤</span> Voice
+                    </button>
+                </div>
+
+                <div class="capture-text-input" id="text-input-area">
+                    <textarea id="capture-text" placeholder="Quick note about your current task..." autofocus></textarea>
+                </div>
+
+                <div class="capture-voice-input hidden" id="voice-input-area">
+                    <div class="voice-visualizer" id="voice-visualizer">
+                        <div class="voice-wave"></div>
+                    </div>
+                    <button id="voice-record-btn" class="voice-btn">
+                        <span class="voice-icon">🎤</span>
+                        <span class="voice-label">Click to Record</span>
+                    </button>
+                    <div id="voice-transcript" class="voice-transcript"></div>
+                </div>
+
+                <div class="quick-tags" id="modal-quick-tags">
+                    <!-- Quick tags will be populated here -->
+                </div>
+
+                <div class="capture-actions">
+                    <button id="skip-capture-btn" class="capture-btn secondary">Skip</button>
+                    <button id="save-capture-btn" class="capture-btn primary">
+                        Save Entry
+                        <span class="shortcut">⌘ Enter</span>
+                    </button>
+                </div>
+
+                <div class="snooze-option">
+                    <button id="snooze-btn">Snooze 5 min (in deep focus)</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Chat Widget -->
+        <div id="ai-widget" class="ai-widget hidden">
+            <div class="ai-widget-header">
+                <span>AI Assistant</span>
+                <button id="close-ai-widget" class="close-btn">×</button>
+            </div>
+            <div class="ai-chat" id="ai-chat">
+                <div class="ai-message assistant">
+                    Hi! I can help you understand your work patterns, summarize your day, or suggest focus strategies. What would you like to know?
+                </div>
+            </div>
+            <div class="ai-input">
+                <input type="text" id="ai-input-field" placeholder="Ask about your work patterns...">
+                <button id="ai-send-btn">Send</button>
+            </div>
+            <div class="ai-suggestions">
+                <button class="suggestion-btn">Summarize today</button>
+                <button class="suggestion-btn">What did I work on most?</button>
+                <button class="suggestion-btn">Focus tips</button>
+            </div>
+        </div>
+
+        <button id="ai-toggle-btn" class="ai-toggle-btn">
+            <span>🤖</span>
+        </button>
+
+        <!-- Toast Notifications -->
+        <div id="toast-container" class="toast-container"></div>
+    </div>
+
+    <!-- Audio elements for notifications -->
+    <audio id="notification-sound" preload="auto">
+        <source src="data:audio/wav;base64,UklGRnoGAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQoGAACBhYqFbF1fdJivrJBhNjVgodDbq2EcBj+a2teleRQAHIjeli4ALHPJwZpiJACMu9/AeisAMIrZ0JB4EgA2j9XNkXYQADiP1c2RdhAAOI/VzZF2EAA4j9XNkXYQAA==" type="audio/wav">
+    </audio>
+
+    <script src="storage.js"></script>
+    <script src="timer.js"></script>
+    <script src="voice.js"></script>
+    <script src="exports/tana.js"></script>
+    <script src="exports/obsidian.js"></script>
+    <script src="exports/csv.js"></script>
+    <script src="ai-widget.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
