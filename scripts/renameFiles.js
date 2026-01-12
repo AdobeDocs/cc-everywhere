@@ -1,5 +1,6 @@
 const path = require("path");
 const fs = require("node:fs");
+const pathPrefixFromGatsbyConfig = "/express/embed-sdk/docs/";
 const {
   readRedirectionsFile,
   writeRedirectionsFile,
@@ -11,6 +12,8 @@ const {
   removeFileExtension,
   replaceLinksInFile,
 } = require("./scriptUtils.js");
+
+const ROOT_DIR = path.resolve(__dirname, "..");
 
 function toKebabCase(str) {
   const isScreamingSnakeCase = new RegExp(/^[A-Z0-9_]*$/).test(str);
@@ -47,7 +50,7 @@ function removeTrailingSlash(str) {
 }
 
 function getPathPrefixFromConfig() {
-  const CONFIG_PATH = path.join("src", "pages", "config.md");
+  const CONFIG_PATH = path.join(ROOT_DIR, "src", "pages", "config.md");
   if (!fs.existsSync(CONFIG_PATH)) {
     return null;
   }
@@ -129,6 +132,7 @@ function renameLinksInGatsbyConfigFile(fileMap, file) {
 }
 
 function renameLinksInMarkdownFile(fileMap, file) {
+  // Use original file path to calculate dir, preserving old logic
   const dir = path.dirname(file);
   replaceLinksInFile({
     file,
@@ -141,7 +145,10 @@ function renameLinksInMarkdownFile(fileMap, file) {
 function renameLinksInRedirectsFile(fileMap, pathPrefix) {
   const file = getRedirectionsFilePath();
   const dir = path.dirname(file);
-  const linkMap = getLinkMap(fileMap, dir);
+  // Ensure we pass a path relative to root if dir is absolute
+  const relativeDir = path.relative(ROOT_DIR, dir) || '.';
+  
+  const linkMap = getLinkMap(fileMap, relativeDir);
 
   // rename redirects for correct paths
   replaceLinksInFile({
@@ -155,7 +162,6 @@ function renameLinksInRedirectsFile(fileMap, pathPrefix) {
   });
 
   // rename redirects for paths that don't end in a trailing slash but should
-  // (handle non-existent paths added by 'buildRedirections.js')
   replaceLinksInFile({
     file,
     linkMap,
@@ -178,7 +184,6 @@ function renameLinksInRedirectsFile(fileMap, pathPrefix) {
   });
 
   // rename redirects for paths that end in a trailing slash but shouldn't
-  // (handle non-existent paths added by 'buildRedirections.js')
   replaceLinksInFile({
     file,
     linkMap,
@@ -193,7 +198,8 @@ function renameLinksInRedirectsFile(fileMap, pathPrefix) {
 function appendRedirects(fileMap, pathPrefix) {
   const file = getRedirectionsFilePath();
   const dir = path.dirname(file);
-  const linkMap = getLinkMap(fileMap, dir);
+  const relativeDir = path.relative(ROOT_DIR, dir) || '.';
+  const linkMap = getLinkMap(fileMap, relativeDir);
   const newData = [];
   linkMap.forEach((to, from) => {
     newData.push({
@@ -207,10 +213,17 @@ function appendRedirects(fileMap, pathPrefix) {
 }
 
 function deleteEmptyDirectoryUpwards(startDir, stopDir) {
-  const isEmpty = fs.readdirSync(startDir).length === 0;
-  if (isEmpty && startDir !== stopDir) {
-    fs.rmdirSync(startDir);
-    deleteEmptyDirectoryUpwards(path.dirname(startDir), stopDir);
+  // Ensure startDir is absolute or relative to cwd correctly
+  // getFileMap uses relative paths, so path.dirname(from) is relative
+  const absStart = path.isAbsolute(startDir) ? startDir : path.resolve(ROOT_DIR, startDir);
+  const absStop = path.isAbsolute(stopDir) ? stopDir : path.resolve(ROOT_DIR, stopDir);
+  
+  if (!fs.existsSync(absStart)) return;
+
+  const isEmpty = fs.readdirSync(absStart).length === 0;
+  if (isEmpty && absStart !== absStop) {
+    fs.rmdirSync(absStart);
+    deleteEmptyDirectoryUpwards(path.dirname(absStart), absStop);
   }
 }
 
@@ -218,29 +231,31 @@ function renameFiles(map) {
   // create new dirs
   map.forEach((to, _) => {
     const toDir = path.dirname(to);
-    if (!fs.existsSync(toDir)) {
-      fs.mkdirSync(toDir, { recursive: true });
+    const absToDir = path.resolve(ROOT_DIR, toDir);
+    if (!fs.existsSync(absToDir)) {
+      fs.mkdirSync(absToDir, { recursive: true });
     }
   });
 
   // rename
   map.forEach((to, from) => {
-    fs.renameSync(from, to);
+    const absFrom = path.resolve(ROOT_DIR, from);
+    const absTo = path.resolve(ROOT_DIR, to);
+    if (fs.existsSync(absFrom)) {
+        fs.renameSync(absFrom, absTo);
+    }
   });
 
   // delete old dirs
   map.forEach((_, from) => {
     const fromDir = path.dirname(from);
-    if (fs.existsSync(fromDir)) {
-      deleteEmptyDirectoryUpwards(fromDir, __dirname);
-    }
+    deleteEmptyDirectoryUpwards(fromDir, ROOT_DIR);
   });
 }
 
 try {
   const files = getDeployableFiles("src/pages/v4");
   const fileMap = getFileMap(files);
-  console.log(`[DEBUG] Files to rename: ${fileMap.size}`);
 
   const mdFiles = getMarkdownFiles();
   mdFiles.forEach((mdFile) => {
@@ -248,15 +263,18 @@ try {
   });
 
   const redirectsFile = getRedirectionsFilePath();
-  const pathPrefix = getPathPrefixFromConfig();
+  const pathPrefix = getPathPrefixFromConfig() ?? pathPrefixFromGatsbyConfig;
   if (fs.existsSync(redirectsFile)) {
     renameLinksInRedirectsFile(fileMap, pathPrefix);
     appendRedirects(fileMap, pathPrefix);
   }
 
+  // Adjusted to point to scripts/api-refs-sidebar.json
   const gatsbyConfigFiles = ["scripts/api-refs-sidebar.json"];
   gatsbyConfigFiles.forEach((file) => {
-    if (fs.existsSync(file)) {
+    // Resolve relative to ROOT_DIR
+    const absFile = path.resolve(ROOT_DIR, file);
+    if (fs.existsSync(absFile)) {
       renameLinksInGatsbyConfigFile(fileMap, file);
     }
   });

@@ -551,4 +551,4 @@
                         - [interfaces](v4/shared/src/types/v1-1/output-params-types/interfaces/ccx-publish-params.md) 
                             - [CCXPublishParams](v4/shared/src/types/v1-1/output-params-types/interfaces/ccx-publish-params.md) 
                             - [PublishParams](v4/shared/src/types/v1-1/output-params-types/interfaces/publish-params.md) 
-                            - [QuickActionPublishParams](v4/shared/src/types/v1-1/output-params-types/interfaces/quick-action-publish-params.md) 
+                            - [QuickActionPublishParams](v4/shared/src/types/v1-1/output-params-types/interfaces/quick-action-publish-params.md)

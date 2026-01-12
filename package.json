@@ -31,6 +31,8 @@
   },
   "packageManager": "yarn@3.2.1",
   "devDependencies": {
-    "express": "5.1.0"
+    "express": "5.1.0",
+    "glob": "^13.0.0",
+    "string.prototype.matchall": "^4.0.12"
   }
 }
