@@ -23,7 +23,11 @@
     "lint:deadlinksonly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --dead-links-only -v",
     "lint:skipdeadlinks": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --skip-dead-links -v",
     "redirectCheck:stage": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
-    "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
+    "redirectCheck:prod": "npx --yes github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose",
+    "devex:sync-docs": "node scripts/import-docs.js",
+    "devex:eds-sanitize": "node scripts/renameFiles.js && node scripts/normalizeLinks.js",
+    "devex:generate-sidebar": "node scripts/update-config.js",
+    "devex:build-api-reference": "npm run devex:sync-docs && npm run devex:eds-sanitize && npm run devex:generate-sidebar"
   },
   "packageManager": "yarn@3.2.1",
   "devDependencies": {
