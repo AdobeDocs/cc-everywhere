@@ -24,7 +24,7 @@ contributors:
 
 # FAQ
 
-Find quick answers to your questions about the Adobe Express Embed SDK — from setup and configuration to troubleshooting and user authentication.
+Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SDK — from setup and &lt;br &gt;configuration to troubleshooting and &lt;br &gt;user authentication.
 
 ## Table of Contents
 
