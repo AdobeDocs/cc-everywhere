@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: AssetBase&lt; T &gt;
+# Interface: AssetBase&lt;T&gt;
 
 Base interface for all asset types.
 

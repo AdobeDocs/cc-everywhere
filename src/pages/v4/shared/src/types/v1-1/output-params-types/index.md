@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# shared/src/types/v1/_1/OutputParams.types
+# shared/src/types/v1\_1/OutputParams.types
 
 ## Interfaces
 

@@ -12,10 +12,10 @@ const SOURCE_REPO = process.argv[2]
   ? path.resolve(process.argv[2])
   : DEFAULT_SOURCE_REPO;
 
-const DOCS_SOURCE_DIR = path.join(SOURCE_REPO, "devex/typedoc-devex");
+const DOCS_SOURCE_DIR = path.join(SOURCE_REPO, "devex/build/api-references");
 const SIDEBAR_SOURCE_FILE = path.join(
   SOURCE_REPO,
-  "devex/api-refs-sidebar.json"
+  "devex/build/api-refs-sidebar.json"
 );
 
 const DEST_PAGES_DIR = path.join(__dirname, "../src/pages/v4");
@@ -49,13 +49,21 @@ try {
   if (!fs.existsSync(SOURCE_REPO)) {
     console.error(`Error: Source repository not found at ${SOURCE_REPO}`);
     console.error(
-      "Please provide the correct path as an argument or check your directory structure."
+      "Please provide the correct path as an argument or check your directory structure.\n\nExample:\nnpm run devex:sync-docs -- /path/to/project-marvel_cc-everywhere"
     );
     process.exit(1);
   }
 
   // 1. Copy Documentation (sdk and shared folders)
   const foldersToCopy = ["sdk", "shared"];
+
+  // Pre-flight check for source directories
+  if (!fs.existsSync(DOCS_SOURCE_DIR)) {
+    console.error(`\nError: Documentation source directory not found.`);
+    console.error(`Missing: ${DOCS_SOURCE_DIR}`);
+    console.error(`\nTroubleshooting:\n1. Have you run the generation script in the source repository?\n   (e.g., 'npm run typedoc:devex' inside 'project-marvel_cc-everywhere')\n`);
+    process.exit(1);
+  }
 
   console.log("Copying documentation files...");
   foldersToCopy.forEach((folder) => {

@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: `abstract` CCEverywhereBase
+# Abstract Class: CCEverywhereBase
 
 Class to create CCEverywhere object.
 
@@ -52,12 +52,12 @@ Constructor to initialize CCEverywhere object.
 #### Get Signature
 
 ```ts
-get static activeInstance(): undefined | CCEverywhereBase;
+get static activeInstance(): CCEverywhereBase | undefined;
 ```
 
 ##### Returns
 
-`undefined` \| `CCEverywhereBase`
+`CCEverywhereBase` \| `undefined`
 
 #### Set Signature
 
@@ -69,7 +69,7 @@ set static activeInstance(instance): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | `undefined` \| `CCEverywhereBase` |
+| `instance` | `CCEverywhereBase` \| `undefined` |
 
 ##### Returns
 
@@ -153,8 +153,8 @@ Closes any active design in progress.
 
 #### Returns
 
-  | `boolean`
-  | `Promise`&lt; [`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md) &gt;
+  \| `boolean`
+  \| `Promise`&lt;[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)&gt;
 
 boolean value indicating whether the close operation was successful or not.
 

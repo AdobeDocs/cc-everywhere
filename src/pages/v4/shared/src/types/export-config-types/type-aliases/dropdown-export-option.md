@@ -16,9 +16,8 @@ type DropdownExportOption =
 Represents export options specifically for dropdown UI components.
 
 This union type includes:
-
-- [PublishExportOption](../../export-config-types/interfaces/publish-export-option.md) with [DropdownOptionStyle](../../export-config-types/interfaces/dropdown-option-style.md)
-- [DownloadExportOption](../../export-config-types/interfaces/download-export-option.md) with [DropdownOptionStyle](../../export-config-types/interfaces/dropdown-option-style.md)
-- [EditFurtherExportOption](../../export-config-types/interfaces/edit-further-export-option.md) with [DropdownOptionStyle](../../export-config-types/interfaces/dropdown-option-style.md)
-- [CallBackExportOption](../../export-config-types/interfaces/call-back-export-option.md) with [DropdownOptionStyle](../../export-config-types/interfaces/dropdown-option-style.md)
-- [ContinueEditingDropdownOption](../../export-config-types/interfaces/continue-editing-dropdown-option.md)
+- [PublishExportOption](../interfaces/publish-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [DownloadExportOption](../interfaces/download-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [EditFurtherExportOption](../interfaces/edit-further-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [CallBackExportOption](../interfaces/call-back-export-option.md) with [DropdownOptionStyle](../interfaces/dropdown-option-style.md)
+- [ContinueEditingDropdownOption](../interfaces/continue-editing-dropdown-option.md)

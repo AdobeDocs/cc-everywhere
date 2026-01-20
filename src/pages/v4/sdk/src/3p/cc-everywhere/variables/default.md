@@ -8,7 +8,7 @@
 default: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### initialize()
 
@@ -30,7 +30,7 @@ Please ensure to call this API only once.
 
 #### Returns
 
-`Promise`&lt; [`CCEverywhere`](../classes/cc-everywhere.md) &gt;
+`Promise`&lt;[`CCEverywhere`](../classes/cc-everywhere.md)&gt;
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
 

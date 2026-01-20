@@ -13,6 +13,6 @@ ClientAuthProvider(): Promise<ClientAuthDetails>;
 
 ## Returns
 
-`Promise`&lt; [`ClientAuthDetails`](client-auth-details.md) &gt;
+`Promise`&lt;[`ClientAuthDetails`](client-auth-details.md)&gt;
 
-`Promise<ClientAuthDetails>` A promise that resolves to the client authentication details
+`Promise&lt;ClientAuthDetails&gt;` A promise that resolves to the client authentication details

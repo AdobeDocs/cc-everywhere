@@ -135,8 +135,8 @@ hasTarget(targetChannel): boolean;
 
 ```ts
 getTarget(targetChannel): 
-  | undefined
-  | TargetChannelInfo;
+  | TargetChannelInfo
+  | undefined;
 ```
 
 #### Parameters
@@ -147,8 +147,8 @@ getTarget(targetChannel):
 
 #### Returns
 
-  | `undefined`
-  | [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
+  \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
+  \| `undefined`
 
 <HorizontalLine />
 
@@ -188,7 +188,7 @@ sendMessage<T>(targetChannel, message): boolean;
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
+| `message` | \| [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
 
 #### Returns
 

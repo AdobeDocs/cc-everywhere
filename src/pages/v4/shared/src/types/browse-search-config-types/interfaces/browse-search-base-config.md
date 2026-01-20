@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: BrowseSearchBaseConfig&lt; T&gt;
+# Interface: BrowseSearchBaseConfig&lt;T&gt;
 
 ## Type Parameters
 

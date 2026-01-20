@@ -8,7 +8,7 @@
 type PublishCallback = (intent, publishParams) => void | Promise<PublishStatus>;
 ```
 
-Keeping callback type as void | `Promise<PublishStatus>` for the publish operation, to handle promises as well
+Keeping callback type as void | `Promise&lt;PublishStatus&gt;` for the publish operation, to handle promises as well
 
 ## Parameters
 
@@ -19,4 +19,4 @@ Keeping callback type as void | `Promise<PublishStatus>` for the publish operati
 
 ## Returns
 
-`void` \| `Promise`&lt; [`PublishStatus`](../interfaces/publish-status.md) &gt;
+`void` \| `Promise`&lt;[`PublishStatus`](../interfaces/publish-status.md)&gt;

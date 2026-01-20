@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: HostErrorHandler&lt; T &gt;
+# Class: HostErrorHandler&lt;T&gt;
 
 ## Extends
 

@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: CCEverywhereError&lt; T &gt;
+# Class: CCEverywhereError&lt;T&gt;
 
 ## Extends
 

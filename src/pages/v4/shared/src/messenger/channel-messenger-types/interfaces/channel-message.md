@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: ChannelMessage &lt; T &gt;
+# Interface: ChannelMessage&lt;T&gt;
 
 ## Type Parameters
 

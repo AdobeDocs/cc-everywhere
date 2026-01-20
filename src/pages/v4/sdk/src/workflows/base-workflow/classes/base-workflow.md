@@ -28,3 +28,4 @@ new BaseWorkflow(actionManager, context): BaseWorkflow;
 #### Returns
 
 `BaseWorkflow`
+

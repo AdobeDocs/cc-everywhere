@@ -7,3 +7,4 @@
 ```ts
 type FeatureFlags = Record<string, string | number | boolean>;
 ```
+

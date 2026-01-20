@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: IErrorMessageHandler&lt; T &gt;
+# Interface: IErrorMessageHandler&lt;T&gt;
 
 ## Type Parameters
 
@@ -14,6 +14,6 @@
 
 | Property | Type |
 | ------ | ------ |
-| `error` | (`error`) => `void` |
-| `warn` | (`message`) => `void` |
-| `info` | (`info`) => `void` |
+| `error` | (`error`) =&gt; `void` |
+| `warn` | (`message`) =&gt; `void` |
+| `info` | (`info`) =&gt; `void` |

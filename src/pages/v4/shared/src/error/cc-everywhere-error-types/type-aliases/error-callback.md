@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Type Alias: ErrorCallback()&lt; T &gt;
+# Type Alias: ErrorCallback()&lt;T&gt;
 
 ```ts
 type ErrorCallback<T> = (error) => void;

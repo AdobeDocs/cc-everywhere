@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Type Alias: ErrorCodeMessage&lt; T &gt;
+# Type Alias: ErrorCodeMessage&lt;T&gt;
 
 ```ts
 type ErrorCodeMessage<T> = object;

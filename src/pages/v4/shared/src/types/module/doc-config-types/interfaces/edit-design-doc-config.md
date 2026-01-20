@@ -13,3 +13,4 @@
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `templateId?` | `string` | The ID of the template to be edited. |
+| `docId?` | `string` | The ID of the document to be edited. |

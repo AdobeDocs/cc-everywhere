@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: ConsoleHandler&lt; T &gt;
+# Class: ConsoleHandler&lt;T&gt;
 
 ## Extends
 
