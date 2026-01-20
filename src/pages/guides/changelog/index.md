@@ -22,6 +22,12 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration-v3-v4.md) for detailed instructions.
 
+## [4.40.30] 2026-01-09
+
+### API Enhancement
+
+- **[`CCEverywhere.BaseAppConfig.metaData`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md#properties)**: Enabled metadata support, allowing custom key-value pairs to be passed across all workflows.
+
 ## [4.39.13] 2025-11-24
 
 ### Maintenance release
