@@ -68,12 +68,12 @@ All the callbacks are optional and return void.
 
 | Property | Callback Function | Description
 | :-- | :-- | :--
-| onCancel | () => {}| Triggered when user closes the modal
-| onError | () => {} | Triggered upon error with associated error code
-| onLoadStart | () => {} | Triggered once modal begins to load
-| onLoad | () => {} | Triggered once modal is loaded
-| onPublishStart | () => {} | Triggered when "Publish"/"Download" is clicked
-| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => {} | Triggered when publish/download is complete
+| onCancel | () => \{\}| Triggered when user closes the modal
+| onError | () => \{\} | Triggered upon error with associated error code
+| onLoadStart | () => \{\} | Triggered once modal begins to load
+| onLoad | () => \{\} | Triggered once modal is loaded
+| onPublishStart | () => \{\} | Triggered when "Publish"/"Download" is clicked
+| onPublish | ([PublishParams](#publishparams) or [QuickActionPublishParams](#quickactionpublishparams)) => \{\} | Triggered when publish/download is complete
 
 ### PublishParams
 
@@ -417,6 +417,8 @@ Developers can pass the `createDesign()` method a `TemplateType`, for the user t
 | Line rich menu (small) | "line-rich-menu-small"
 | Line rich message (vertical) | "line-rich-message"
 | LinkedIn profile cover | "linkedin-profile-cover"
+| Line ad square image | "line-ad-square-image"
+| Line ad square video | "line-ad-square-video"
 | Logo | "logo"
 | Meme | "meme"
 | Menu | "menu"
@@ -427,7 +429,6 @@ Developers can pass the `createDesign()` method a `TemplateType`, for the user t
 | Poster | "poster"
 | Presentation | "presentation"
 | Resume | "resume"
-| Tiktok video | "tiktok-video"
 | Video | "video"
 | Wallpaper (desktop) | "wallpaper-desktop"
 | Worksheet | "worksheet"
