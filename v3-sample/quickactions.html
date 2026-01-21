@@ -38,6 +38,8 @@
         <button id="reset">Reset</button><p></p>
         <p class="spectrum-Body spectrum-Body--sizeL">If a file is selected, it will continue to be used as an input until you click <b>Reset</b>.</p>
         <hr class="solid">
+
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Image quick actions </h2>
         <div id="image-buttons">
             <button id="crop-image" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
                 <span class="spectrum-Button-label">Crop Image</span>
@@ -54,17 +56,46 @@
             <button id="remove-background" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
                 <span class="spectrum-Button-label">Remove Background</span>
             </button>
+            <button id="convert-to-gif" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to GIF</span>
+            </button>
             <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
                 <span class="spectrum-Button-label">Hide</span>
             </button>
         </div>
+
+        <h2 class="spectrum-Heading spectrum-Heading--sizeXL"> Video quick actions </h2>
+        <div id="video-qa">
+            <button id="resize-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Resize video</span>
+            </button>
+            <button id="animate-from-audio" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Animate from audio</span>
+            </button>
+            <button id="merge-videos" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Merge videos</span>
+            </button>
+            <button id="crop-video" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Crop video</span>
+            </button>
+            <!-- <button id="remove-background" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Remove Background</span>
+            </button>
+            <button id="convert-to-gif" class="spectrum-Button spectrum-Button--fill spectrum-Button--accent spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Convert to GIF</span>
+            </button>
+            <button id="clear" class="spectrum-Button spectrum-Button--outline spectrum-Button--secondary spectrum-Button--sizeL" >
+                <span class="spectrum-Button-label">Hide</span>
+            </button> -->
+        </div>
+
         <img id="image-container" style="visibility:hidden;"/>
     </div>
     <script src="https://sdk.cc-embed.adobe.com/v3/CCEverywhere.js"></script>
     <script type="text/javascript" >
     (async () => {
         const ccEverywhere = await window.CCEverywhere.initialize({
-            clientId: 'your-client-id',
+            clientId: '4288d0d499f64c4fa6626fd91d9f1779',
             appName: 'Partner Days Embed SDK Demo'
         });
 
@@ -95,7 +126,7 @@
             /* If label is not specified, this native button renders label "Open in Adobe Express" */
             {
                 target: 'Editor',
-                id: 'edit-in-express',
+                id: 'editor',
                 buttonType: 'native',
                 variant: 'primary',
                 optionType: 'button',
@@ -115,6 +146,34 @@
                 label: 'Save image',
                 optionType: 'button',
                 buttonType: 'custom'
+            }
+        ];
+
+        const videoExportOptions = [
+            /* If label is not specified, this native button renders label "Open in Adobe Express" */
+            {
+                target: 'Editor',
+                id: 'editor',
+                buttonType: 'native',
+                variant: 'primary',
+                optionType: 'button',
+                label: 'Customize'
+            },
+           /* If label is not specified, this native button renders label "Download" */
+            {
+                target: 'Download',
+                id: 'download-button',
+                variant: 'cta',
+                optionType: 'button',
+                buttonType: 'native'
+            },
+            {
+                target: 'Host',
+                id: 'open_in_new_tab',
+                label: "Open in new tab",
+                variant: 'accent',
+                optionType: 'button',
+                buttonType: 'custom'
             },
         ];
 
@@ -122,10 +181,30 @@
             onCancel: () => {},
             onPublish: (publishParams) => {
                 const localData = { asset: publishParams.asset[0].data}
-                console.log("Published asset", publishParams)
+
                 if(publishParams.exportButtonId=="save-modified-asset"){
                     appImage.src = localData.asset;
                     appImage.style.visibility="visible";
+                }
+            },
+            onError: (err) => {
+                console.error('Error received is', err.toString())
+            }
+        }
+
+        const videoCallbacks = {
+            onCancel: () => {},
+            onPublish: (publishParams) => {
+
+                const { exportButtonId, asset } = publishParams;
+
+                if (exportButtonId === 'editor') {
+                    console.log("amanda", publishParams)
+                    window.open(publishParams.targetInfo.url, '_blank');
+                }
+
+                if (exportButtonId === 'open_in_new_tab') {
+                    window.open(asset[0].data, '_blank');
                 }
             },
             onError: (err) => {
@@ -160,12 +239,28 @@
             }
         };
 
+        function videoQuickAction(qa_id) {            
+            ccEverywhere.openQuickAction({
+                id: qa_id, 
+                inputParams: { exportOptions: videoExportOptions },
+                callbacks: videoCallbacks
+            });
+        };
+
+
         // Button event listeners 
 
         let imageButtons = document.querySelectorAll('#image-buttons button');
         imageButtons.forEach((button) => {
             button.addEventListener('click', () => {
                 imageQuickAction(button.id)
+            })
+        })
+
+        let videoQAs = document.querySelectorAll('#video-qa button');
+        videoQAs.forEach((button) => {
+            button.addEventListener('click', () => {
+                videoQuickAction(button.id)
             })
         })
         
