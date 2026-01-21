@@ -8,7 +8,7 @@
 const ErrorCode: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### SDK\_NOT\_SUPPORTED
 

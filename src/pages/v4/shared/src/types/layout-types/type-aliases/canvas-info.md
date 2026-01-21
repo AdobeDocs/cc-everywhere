@@ -8,7 +8,7 @@
 type CanvasInfo = object & Size;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### taskId
 

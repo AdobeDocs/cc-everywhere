@@ -14,6 +14,7 @@
 | ------ | ------ | ------ | ------ |
 | `useClientAuth?` | `boolean` | Flag to explicitly opt-in to use client authentication. When true, client access token will be fetched from the partner and used in the module. This is only relevant for Edit Image and Text to Image modules. Should not be passed for other workflows. **Default** `false` | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`useClientAuth`](../../../design-config-types/interfaces/base-app-config.md#useclientauth) |
 | `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
+| `metaData?` | `Record`&lt;`string`, `string`&gt; | Property to pass metadata to target application | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`metaData`](../../../design-config-types/interfaces/base-app-config.md#metadata) |
 | `selectedCategory?` | [`EditorPanelView`](../../../app-config-types/enumerations/editor-panel-view.md) | Category to show by default **Default** `EditorPanelView.TEMPLATES` | - |
 | `categorySearchText?` | `string` | Search text to pass in the editor for selected panel. | - |
 | `assetCollection?` | `string` | Asset collection to filter templates | - |

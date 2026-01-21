@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Type Alias: MessageCompat&lt; T &gt;
+# Type Alias: MessageCompat&lt;T&gt;
 
 ```ts
 type MessageCompat<T> = object;

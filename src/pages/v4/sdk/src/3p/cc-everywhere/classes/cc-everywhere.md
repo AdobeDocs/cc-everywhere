@@ -61,14 +61,14 @@ new CCEverywhere(
 
 ```ts
 get static activeInstance(): 
-  | undefined
-  | CCEverywhereBase;
+  | CCEverywhereBase
+  | undefined;
 ```
 
 ##### Returns
 
-  \| `undefined`
   \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md)
+  \| `undefined`
 
 #### Set Signature
 
@@ -80,7 +80,7 @@ set static activeInstance(instance): void;
 
 | Parameter | Type |
 | ------ | ------ |
-| `instance` | \| `undefined` \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) |
+| `instance` | \| [`CCEverywhereBase`](../../../cc-everywhere-base/classes/cc-everywhere-base.md) \| `undefined` |
 
 ##### Returns
 
@@ -183,7 +183,7 @@ Closes any active design in progress.
 #### Returns
 
   \| `boolean`
-  \| `Promise`&lt; [`CloseStatusMessage`](../../../../../shared/src/messenger/message-types/interfaces/close-status-message.md) &gt;
+  \| `Promise`&lt;[`CloseStatusMessage`](../../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)&gt;
 
 boolean value indicating whether the close operation was successful or not.
 

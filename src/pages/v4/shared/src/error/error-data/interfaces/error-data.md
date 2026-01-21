@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Interface: ErrorData&lt; T &gt;
+# Interface: ErrorData&lt;T&gt;
 
 ## Type Parameters
 

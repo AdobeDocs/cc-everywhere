@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Type Alias: Message&lt; T &gt;
+# Type Alias: Message&lt;T&gt;
 
 ```ts
 type Message<T> = T extends DataMessageType ? object : object;

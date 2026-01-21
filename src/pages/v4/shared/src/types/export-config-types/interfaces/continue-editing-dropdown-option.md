@@ -6,7 +6,7 @@
 
 ## Extends
 
-- [`BaseExportOption`](base-export-option.md)&lt; [`DropdownOptionStyle`](dropdown-option-style.md)&gt;
+- [`BaseExportOption`](base-export-option.md)&lt;[`DropdownOptionStyle`](dropdown-option-style.md)&gt;
 
 ## Properties
 

@@ -8,8 +8,8 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [EditImageDesignConfig](../design-config-types/interfaces/edit-image-design-config.md) | - |
-| [TextToImageDesignConfig](../design-config-types/interfaces/text-to-image-design-config.md) | - |
-| [StartFromContentDesignConfig](../design-config-types/interfaces/start-from-content-design-config.md) | StartFromContentDesignConfig is the design config for the Start From Content module. |
-| [WarmupDesignConfig](../design-config-types/interfaces/warmup-design-config.md) | - |
-| [EditDesignDesignConfig](../design-config-types/interfaces/edit-design-design-config.md) | - |
+| [EditImageDesignConfig](interfaces/edit-image-design-config.md) | - |
+| [TextToImageDesignConfig](interfaces/text-to-image-design-config.md) | - |
+| [StartFromContentDesignConfig](interfaces/start-from-content-design-config.md) | StartFromContentDesignConfig is the design config for the Start From Content module. |
+| [WarmupDesignConfig](interfaces/warmup-design-config.md) | - |
+| [EditDesignDesignConfig](interfaces/edit-design-design-config.md) | - |

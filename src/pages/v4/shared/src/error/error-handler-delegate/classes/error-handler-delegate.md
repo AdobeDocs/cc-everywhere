@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: ErrorHandlerDelegate&lt; T &gt;
+# Class: ErrorHandlerDelegate&lt;T&gt;
 
 ## Type Parameters
 

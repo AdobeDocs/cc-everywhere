@@ -8,12 +8,12 @@
 
 | Enumeration | Description |
 | ------ | ------ |
-| [TextToImageAppVersion](../app-config-types/enumerations/text-to-image-app-version.md) | - |
-| [EditImageAppVersion](../app-config-types/enumerations/edit-image-app-version.md) | - |
-| [EditDesignAppVersion](../app-config-types/enumerations/edit-design-app-version.md) | - |
-| [ThumbnailOption](../app-config-types/enumerations/thumbnail-option.md) | - |
-| [TextToImageFeature](../app-config-types/enumerations/text-to-image-feature.md) | - |
-| [PromptSafetyCategory](../app-config-types/enumerations/prompt-safety-category.md) | Categories for prompt safety assessment. This enum can be extended as new safety categories are identified. |
+| [TextToImageAppVersion](enumerations/text-to-image-app-version.md) | - |
+| [EditImageAppVersion](enumerations/edit-image-app-version.md) | - |
+| [EditDesignAppVersion](enumerations/edit-design-app-version.md) | - |
+| [ThumbnailOption](enumerations/thumbnail-option.md) | - |
+| [TextToImageFeature](enumerations/text-to-image-feature.md) | - |
+| [PromptSafetyCategory](enumerations/prompt-safety-category.md) | Categories for prompt safety assessment. This enum can be extended as new safety categories are identified. |
 
 ## Interfaces
 

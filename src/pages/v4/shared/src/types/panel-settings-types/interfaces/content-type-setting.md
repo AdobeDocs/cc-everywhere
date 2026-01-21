@@ -10,7 +10,7 @@ Used to specify the type of content to be generated (e.g., photo, graphic, art).
 
 ## Extends
 
-- [`BasePanelSetting`](base-panel-setting.md)&lt; [`ImageContentType`](../enumerations/image-content-type.md)&gt;
+- [`BasePanelSetting`](base-panel-setting.md)&lt;[`ImageContentType`](../enumerations/image-content-type.md)&gt;
 
 ## Properties
 

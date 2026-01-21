@@ -6,10 +6,10 @@
 
 ## Extended by
 
-- [`PublishAction`](../../export-config-types/interfaces/publish-action.md)
-- [`DownloadAction`](../../export-config-types/interfaces/download-action.md)
-- [`EditFurtherAction`](../../export-config-types/interfaces/edit-further-action.md)
-- [`CallBackAction`](../../export-config-types/interfaces/call-back-action.md)
+- [`PublishAction`](publish-action.md)
+- [`DownloadAction`](download-action.md)
+- [`EditFurtherAction`](edit-further-action.md)
+- [`CallBackAction`](call-back-action.md)
 
 ## Properties
 

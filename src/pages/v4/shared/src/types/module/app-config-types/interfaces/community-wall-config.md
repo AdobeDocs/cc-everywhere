@@ -8,4 +8,4 @@
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `fetchCommunityAssets` | (`limit`, `cursor`) => `Promise`&lt; [`CommunityWallAssetResponse`](community-wall-asset-response.md)&gt; | The callback to fetch community wall assets. |
+| `fetchCommunityAssets` | (`limit`, `cursor`) =&gt; `Promise`&lt;[`CommunityWallAssetResponse`](community-wall-asset-response.md)&gt; | The callback to fetch community wall assets. |

@@ -9,6 +9,6 @@
 | Property | Type |
 | ------ | ------ |
 | `status` | [`Status`](../enumerations/status.md) |
-| `token` | `null` \| `string` |
-| `userId` | `null` \| `string` |
+| `token` | `string` \| `null` |
+| `userId` | `string` \| `null` |
 | `type` | `string` |

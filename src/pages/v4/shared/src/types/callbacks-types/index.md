@@ -21,6 +21,6 @@
 | [LoadInitCallback](type-aliases/load-init-callback.md) | - |
 | [CancelCallback](type-aliases/cancel-callback.md) | - |
 | [PublishStartCallback](type-aliases/publish-start-callback.md) | - |
-| [PublishCallback](type-aliases/publish-callback.md) | Keeping callback type as void |
+| [PublishCallback](type-aliases/publish-callback.md) | Keeping callback type as void | `Promise&lt;PublishStatus&gt;` for the publish operation, to handle promises as well |
 | [EventCallback](type-aliases/event-callback.md) | - |
 | [IntentChangeCallback](type-aliases/intent-change-callback.md) | - |

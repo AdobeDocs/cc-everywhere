@@ -8,7 +8,7 @@
 type ContinueEditingAction = EditFurtherAction & object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### intent
 

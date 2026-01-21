@@ -18,6 +18,14 @@ ENVIRONMENT: Environment;
 
 <HorizontalLine />
 
+### enableDebugAnalytics
+
+```ts
+enableDebugAnalytics: boolean;
+```
+
+<HorizontalLine />
+
 ### CLIENTS
 
 ```ts

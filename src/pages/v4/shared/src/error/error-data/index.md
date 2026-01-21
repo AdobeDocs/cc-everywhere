@@ -8,4 +8,4 @@
 
 | Interface | Description |
 | ------ | ------ |
-| [ErrorData](interfaces/error-data.md) | ** |
+| [ErrorData](interfaces/error-data.md) | - |

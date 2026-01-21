@@ -8,7 +8,7 @@
 const Messages: object;
 ```
 
-## Type declaration
+## Type Declaration
 
 ### STACK\_NOT\_FOUND
 

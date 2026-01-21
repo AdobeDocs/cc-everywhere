@@ -2,7 +2,7 @@
 
 <HorizontalLine />
 
-# Class: `abstract` FeatureFlagService
+# Abstract Class: FeatureFlagService
 
 Abstract class for feature flag services
 

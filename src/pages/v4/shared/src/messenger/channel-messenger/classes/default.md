@@ -92,8 +92,8 @@ hasTarget(targetChannel): boolean;
 
 ```ts
 getTarget(targetChannel): 
-  | undefined
-  | TargetChannelInfo;
+  | TargetChannelInfo
+  | undefined;
 ```
 
 #### Parameters
@@ -104,8 +104,8 @@ getTarget(targetChannel):
 
 #### Returns
 
-  \| `undefined`
   \| [`TargetChannelInfo`](../../channel-messenger-types/interfaces/target-channel-info.md)
+  \| `undefined`
 
 <HorizontalLine />
 

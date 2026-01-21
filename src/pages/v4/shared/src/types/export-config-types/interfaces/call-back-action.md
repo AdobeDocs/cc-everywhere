@@ -6,11 +6,11 @@
 
 ## Extends
 
-- [`BaseAction`](../../export-config-types/interfaces/base-action.md)
+- [`BaseAction`](base-action.md)
 
 ## Properties
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`CALLBACK`](../../export-config-types/enumerations/call-back-target.md#callback) | [`BaseAction`](../../export-config-types/interfaces/base-action.md).[`target`](../../export-config-types/interfaces/base-action.md#target) |
+| `target` | [`CALLBACK`](../enumerations/call-back-target.md#callback) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
 | `enableByDefault?` | `boolean` | - |
