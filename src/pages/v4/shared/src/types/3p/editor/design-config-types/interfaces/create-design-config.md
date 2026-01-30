@@ -1,5 +1,5 @@
 ---
-hideEditInGithub: true
+hideEditInGitHub: true
 ---
 
 [**cc-everywhere**](../../../../../../../index.md)
