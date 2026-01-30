@@ -1,3 +1,7 @@
+---
+hideEditInGithub: true
+---
+
 [**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
@@ -31,4 +35,5 @@
 | `CUSTOM_EVENT` | `"CUSTOM_EVENT"` |
 | `CALLBACK_REQUEST` | `"CALLBACK_REQUEST"` |
 | `CUSTOM_OPTION_SELECTED` | `"CUSTOM_OPTION_SELECTED"` |
+| `MOBILE_TOOLBAR_OPTION_SELECTED` | `"MOBILE_TOOLBAR_OPTION_SELECTED"` |
 | `CONTEXTUAL_RECOMMENDATIONS` | `"CONTEXTUAL_RECOMMENDATIONS"` |

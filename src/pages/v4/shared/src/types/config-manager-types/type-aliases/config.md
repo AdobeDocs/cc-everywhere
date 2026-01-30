@@ -1,3 +1,7 @@
+---
+hideEditInGithub: true
+---
+
 [**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
@@ -156,6 +160,8 @@ CLIENTS: object;
 | `ACROBAT_EXT.CLIENT_ID_REGEX` | `RegExp` |
 | `ACROBAT_MOBILE` | `object` |
 | `ACROBAT_MOBILE.CLIENT_ID` | `string` |
+| `ACROBAT_MOBILE_IOS` | `object` |
+| `ACROBAT_MOBILE_IOS.CLIENT_ID` | `string` |
 | `ACROBAT_READER` | `object` |
 | `ACROBAT_READER.DESKTOP` | `object` |
 | `ACROBAT_READER.DESKTOP.CLIENT_ID` | `string` |

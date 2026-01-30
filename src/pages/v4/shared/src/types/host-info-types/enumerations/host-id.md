@@ -1,3 +1,7 @@
+---
+hideEditInGithub: true
+---
+
 [**cc-everywhere**](../../../../../index.md)
 
 <HorizontalLine />
@@ -12,6 +16,7 @@
 | `ACROBAT_EMBED_VIEWER` | `"ACROBAT_EMBED_VIEWER"` |
 | `ACROBAT_EXT` | `"ACROBAT_EXT"` |
 | `ACROBAT_MOBILE` | `"ACROBAT_MOBILE"` |
+| `ACROBAT_MOBILE_IOS` | `"ACROBAT_MOBILE_IOS"` |
 | `ACROBAT_READER` | `"ACROBAT_READER"` |
 | `ACROBAT_WEB_BENCH` | `"ACROBAT_WEB_BENCH"` |
 | `ADOBE_HOME` | `"ADOBE_HOME"` |

@@ -22,6 +22,13 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration-v3-v4.md) for detailed instructions.
 
+## [4.41.14] 2026-01-30
+
+### API Enhancement
+
+- **[`CCEverywhere.PublishAction.outputType`](../../v4/shared/src/types/export-config-types/interfaces/publish-action.md)**: Added an option to change the output file type as Blob for Quick Actions and Module Workflows.
+- **[`CCEverywhere.PublishConfig.outputType`](../../v4/shared/src/types/module/app-config-types/interfaces/publish-config.md#properties)**: Added a new asset data type to account for the Blob output type.
+
 ## [4.40.30] 2026-01-09
 
 ### API Enhancement

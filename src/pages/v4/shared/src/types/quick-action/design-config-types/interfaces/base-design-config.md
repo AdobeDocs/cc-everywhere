@@ -1,3 +1,7 @@
+---
+hideEditInGithub: true
+---
+
 [**cc-everywhere**](../../../../../../index.md)
 
 <HorizontalLine />
