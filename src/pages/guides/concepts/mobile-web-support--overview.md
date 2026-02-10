@@ -3,11 +3,12 @@ keywords:
   - Embed SDK
   - Mobile Web
   - Browser Support
-  - skipBrowserSupportCheck
   - Mobile Devices
   - Cross-Platform
   - Responsive Design
-description: Enable mobile web support using the Adobe Express Embed SDK and the skipBrowserSupportCheck configuration parameter.
+  - Mobile SDK
+  - WebView
+description: Learn how to use the Adobe Express Embed SDK on mobile devices to integrate creative workflows into your applications.
 contributors:
   - https://github.com/nimithajalal
   - https://github.com/undavide
@@ -17,11 +18,11 @@ contributors:
 
 Learn how developers can use the Adobe Express Embed SDK on mobile devices to integrate creative workflows into their apps.
 
-![Mobile web support comparison](./img/mobile-web.png)
+![Mobile web support comparison](./img/mweb-overview--devices.jpg)
 
 ## Devices and Runtimes
 
-The Embed SDK can run on both Desktop and Mobile devices. Developers can choose to implement the SDK in different ways:
+The Embed SDK can run on both Desktop and Mobile devices alike. Developers can choose to implement the SDK in different ways:
 
 |     | Device         | Integration type | Runtime | Description                                                |
 | --- | -------------- | ---------------- | ------- | ---------------------------------------------------------- |
@@ -30,7 +31,7 @@ The Embed SDK can run on both Desktop and Mobile devices. Developers can choose 
 | 3   | 📱 **Mobile**  | Mobile Web       | WebView | Web experience through iOS/Android Apps (in-app WebViews). |
 | 4   | 📱 **Mobile**  | Native           | App     | iOS/Android Apps using Swift/Kotlin Mobile SDKs.           |
 
-A Web experience can be accessed on both Desktop and Mobile devices through a browser (1, 2). The same exact Web experience can also be consumed by iOS/Android Mobile apps (3) when loaded into a WebView. Native iOS/Android Mobile apps (4) can alternatively use the dedicated Mobile SDKs, available for [Swift](https://github.com/AdobeDocs/express-embed-mobile-sdk-ios-release/tree/main/) and [Kotlin](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release).
+A Web experience can be accessed on both Desktop and Mobile devices through a browser (1, 2). The same exact Web experience can also be consumed by iOS/Android Mobile apps (3) when loaded into a WebView. Native iOS/Android Mobile apps can alternatively use the dedicated Mobile SDKs (4), available for [Swift](https://github.com/AdobeDocs/express-embed-mobile-sdk-ios-release/tree/main/) and [Kotlin](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release).
 
 This set of guides will focus on the **Web experience** (1-3), so that your integration can work seamlessly on smartphones, tablets, and other mobile devices.
 
