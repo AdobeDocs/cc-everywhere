@@ -7,12 +7,18 @@ keywords:
   - Mobile Devices
   - Cross-Platform
   - Responsive Design
-description: Enable mobile web support using the Adobe Express Embed SDK and the skipBrowserSupportCheck configuration parameter.
+  - Android
+  - iOS
+  - WebView
+  - Kotlin
+  - Swift
+  - SUSI
+description: Enable mobile web support in the WebView using the Adobe Express Embed SDK and the skipBrowserSupportCheck configuration parameter.
 contributors:
   - https://github.com/nimithajalal
 ---
 
-# Mobile Web Support
+# Mobile Web in a WebView
 
 The Adobe Express Embed SDK supports mobile web out of the box, allowing developers to implement creative workflows on mobile devices.
 
@@ -107,7 +113,7 @@ const hostInfo = {
 };
 
 // Skip browser compatibility checks for mobile web
-const configParams = { 
+const configParams = {
   skipBrowserSupportCheck: true // 👈 Skip browser checks to prevent failures
 };
 
@@ -132,7 +138,7 @@ const hostInfo = {
   platformCategory: "web" // Required for applications
 };
 
-const configParams = { 
+const configParams = {
   skipBrowserSupportCheck: true, // Skip browser checks for mobile web
   locale: "en_US", // Optional: Set locale
   loginMode: "delayed" // Optional: Delay login until export
@@ -165,18 +171,18 @@ Mobile browsers may have limitations that affect SDK functionality:
 
 Choose the approach that best fits your application:
 
-| Strategy | Purpose | Complexity | Mobile Impact | When to Use |
-|----------|---------|------------|---------------|-------------|
-| [Mobile Detection](#mobile-detection-and-ui-configuration--essential) | Apply mobile configs automatically | Low | High | Every mobile implementation |
-| [Container Sizing](#mobile-ui-container-sizing--essential) | Optimize UI for mobile screens | Low | High | Essential for good UX |
-| [Dynamic Loading](#dynamic-sdk-loading) | Handle loading failures gracefully | Medium | Medium | Production applications |
-| [UI Patterns](#mobile-ui-implementation-pattern) | Custom touch interfaces | High | High | Advanced customization |
+| Strategy                                                              | Purpose                            | Complexity | Mobile Impact | When to Use                 |
+| --------------------------------------------------------------------- | ---------------------------------- | ---------- | ------------- | --------------------------- |
+| [Mobile Detection](#mobile-detection-and-ui-configuration--essential) | Apply mobile configs automatically | Low        | High          | Every mobile implementation |
+| [Container Sizing](#mobile-ui-container-sizing--essential)            | Optimize UI for mobile screens     | Low        | High          | Essential for good UX       |
+| [Dynamic Loading](#dynamic-sdk-loading)                               | Handle loading failures gracefully | Medium     | Medium        | Production applications     |
+| [UI Patterns](#mobile-ui-implementation-pattern)                      | Custom touch interfaces            | High       | High          | Advanced customization      |
 
 ### Essential Strategies (Start Here)
 
 #### Mobile Detection and UI Configuration ⭐ **Essential**
 
-*Necessary to apply mobile-specific configurations only when needed, preventing desktop users from getting suboptimal mobile UI.*
+_Necessary to apply mobile-specific configurations only when needed, preventing desktop users from getting suboptimal mobile UI._
 
 Implement sophisticated mobile detection:
 
@@ -187,7 +193,7 @@ function isMobileOrTablet() {
   const userAgent = navigator.userAgent;
   const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
   const MIN_DESKTOP_WIDTH = 768;
-  
+
   return isMobileDevice && viewportWidth < MIN_DESKTOP_WIDTH;
 }
 
@@ -206,7 +212,7 @@ try {
     hostInfo,
     configParams
   );
-  
+
   // Mobile-specific optimizations
   if (enableMobileUi) {
     configureMobileExperience(editor, module, quickAction);
@@ -219,7 +225,7 @@ try {
 
 #### Mobile UI Container Sizing ⭐ **Essential**
 
-*Necessary to ensure the SDK interface fits properly on smaller mobile screens and provides optimal user experience across devices.*
+_Necessary to ensure the SDK interface fits properly on smaller mobile screens and provides optimal user experience across devices._
 
 > **Quick Start**: Use `{ width: 390, height: 850, unit: 'px' }` for mobile container sizing
 
@@ -232,7 +238,7 @@ const MIN_DESKTOP_WIDTH = 768;
 
 const getMobileConfig = () => {
   const isMobile = window.innerWidth < MIN_DESKTOP_WIDTH;
-  
+
   return {
     skipBrowserSupportCheck: true,
     // Mobile-specific optimizations
@@ -264,7 +270,7 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 
 #### Dynamic SDK Loading
 
-*Necessary to handle SDK loading failures gracefully and provide feature detection before attempting to use SDK functionality.*
+_Necessary to handle SDK loading failures gracefully and provide feature detection before attempting to use SDK functionality._
 
 > **Quick Start**: Add try-catch around SDK initialization and check feature availability before use
 
@@ -276,7 +282,7 @@ async function loadSDK() {
   try {
     // Load SDK dynamically for applications
     let CCEverywhere = await import(`cc-everywhere-test-app/3p/CCEverywhere`);
-    
+
     const configParams = {
       skipBrowserSupportCheck: true
     };
@@ -298,7 +304,7 @@ async function loadSDK() {
       document.getElementById('feature-message').textContent = 'Some features are not available on your device';
       console.log('Limited feature set available on this device');
     }
-    
+
     return { editor, module, quickAction };
   } catch (error) {
     console.error("SDK loading failed:", error);
@@ -310,7 +316,7 @@ async function loadSDK() {
 
 #### Mobile UI Implementation Pattern
 
-*Necessary to provide different UI layouts and interactions optimized for touch interfaces and smaller screens.*
+_Necessary to provide different UI layouts and interactions optimized for touch interfaces and smaller screens._
 
 Implement conditional rendering for mobile UI:
 
@@ -424,23 +430,23 @@ const debugMobileSupport = async () => {
   console.log('User Agent:', navigator.userAgent);
   console.log('Screen Size:', window.innerWidth, 'x', window.innerHeight);
   console.log('WebGL Support:', !!window.WebGL2RenderingContext);
-  
+
   try {
     const { editor, module, quickAction } = await window.CCEverywhere.initialize(
       hostInfo,
       { skipBrowserSupportCheck: true }
     );
-    
+
     console.log('SDK initialized successfully');
     console.log('Available features:', {
       editor: !!editor,
       module: !!module,
       quickAction: !!quickAction
     });
-    
+
     // Log app config for debugging
     console.log('App Config:', appConfig);
-    
+
     // Log export config for debugging
     console.log('Export Config:', exportConfig);
   } catch (error) {
