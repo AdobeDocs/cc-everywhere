@@ -15,106 +15,43 @@ keywords:
   - SUSI
 description: Enable mobile web support in the WebView using the Adobe Express Embed SDK and the skipBrowserSupportCheck configuration parameter.
 contributors:
-  - https://github.com/nimithajalal
+  - https://github.com/undavide
 ---
 
 # Mobile Web in a WebView
 
-The Adobe Express Embed SDK supports mobile web out of the box, allowing developers to implement creative workflows on mobile devices.
+Mobile Web experiences can be delivered through a WebView in native iOS/Android mobile apps.
 
-## What is Mobile Web Support?
+## When to Use Mobile Web in a WebView
 
-The Adobe Express Embed SDK natively supports mobile web browsers, enabling developers to implement creative workflows across desktop and mobile devices. Mobile web support allows your applications to work seamlessly on smartphones, tablets, and other mobile devices through web browsers.
-
-![Mobile web support comparison](./img/mobile-web.png)
-
-## When to Use Mobile Web Support
-
-Mobile web support is ideal for applications that need to reach users across all devices. Consider implementing mobile web support when:
-
-- **Building responsive applications**: Your application needs to work seamlessly on both desktop and mobile devices
-- **Targeting mobile-first audiences**: Your users primarily access your application through mobile devices
-- **Creating cross-platform experiences**: You want consistent creative workflows across different screen sizes and input methods
-- **Supporting diverse browser environments**: Your users may be on various mobile browsers with different capabilities
-- **Expanding user reach**: You want to make creative tools accessible to users regardless of their device
+As discussed in the [Overview](./mobile-web-support--overview.md), there are trade-offs between Mobile Web and Mobile SDKs. While we suggest evaluating the Mobile SDKs when possible, it makes sense to rely on the Mobile Web approach when **the Embed experience is just one element of a larger app that is already served through a WebView**.
 
 ## Prerequisites
 
-Before implementing mobile web support, you should have a solid understanding of the basic Adobe Express Embed SDK integration. We recommend completing the following resources first:
+Before implementing iOS/Android WebView support, we recommend reviewing the following resources first:
 
-- **[Quickstart Guide](../quickstart/index.md)**: Learn the fundamentals of SDK integration, including setup, initialization, and basic configuration
-- **[Getting Started Tutorial](../tutorials/getting-started.md)**: Follow a hands-on tutorial to build your first integration
-- **[SDK Tutorials](../tutorials/index.md)**: Explore additional tutorials for specific workflows like Generate Image and Edit Image modules
+- **[Mobile Web Overview](./mobile-web-support--overview.md)**: Learn about the different ways to implement mobile web support.
+- **[Mobile Web in the Browser](./mobile-web-support--browser.md)**: Familiarize yourself with the Mobile Web approach in the Browser.
 
-Mobile web support builds upon these core concepts, so familiarity with standard SDK integration is essential before adding mobile-specific configurations.
+## How to Implement Mobile Web in a WebView
 
-## How to Implement Mobile Web Support
+The WebView implementation **relies on Mobile-friendly Web content**. This means that the Embed integration and the experience that it is delivered into should be designed to work well on small screens and touch interfaces.
 
-The Adobe Express Embed SDK works on mobile web by default. The [`skipBrowserSupportCheck`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) parameter is specifically designed to bypass browser compatibility checks that might otherwise cause the SDK to fail initialization on mobile browsers.
+On the native, mobile app side, you need to ensure that the WebView is properly configured to allow the end-to-end Embed experience to work seamlessly.
 
-## Implementation Path
+### Embed SDK Configuration
 
-### 🎯 Quick Start
+Make sure that you pass the `skipBrowserSupportCheck` parameter to the `initialize` function as described in this [Configuration](./mobile-web-support--browser.md#configuration) section.
 
-Perfect for getting mobile web support working immediately:
-
-1. Set `skipBrowserSupportCheck: true`
-2. Add basic mobile detection
-3. Configure container sizing
-
-### 🔧 Standard Implementation
-
-For production-ready mobile experiences:
-
-1. Add dynamic loading with error handling
-2. Implement performance optimizations
-3. Configure mobile-specific UI elements
-
-### 🚀 Advanced Features
-
-For optimized, custom mobile experiences:
-
-1. Custom UI patterns for mobile
-2. PWA integration
-
-## Module Compatibility
-
-While the Adobe Express Embed SDK works well across all workflows on mobile web, this section focuses on the Generate Image and Edit Image modules as they represent the most common use cases for mobile implementations.
-
-### Generate Image Module
-
-The **[Generate Image module](./generate-image-v2.md#features-overview)** works well on mobile web with full functionality:
-
-- Generate image from text
-- Export options
-- All standard such as styles, content types, etc.
-- **[Rich Preview](./generate-image-v2.md#rich-preview)**: Not available on mobile phones, but available on tablets
-- Prompt Bar suggestions: Not available
-
-### Edit Image Module
-
-The **[Edit Image module](./edit-image-v2.md)** is possible on mobile web but may have some limitations:
-
-- Basic editing features such as crop, remove background, etc. work
-- Some advanced features such as export options may have issues
-- Performance may vary based on device capabilities
-- Touch interface optimizations may be limited on mobile phones
-
-## Configuration
-
-### 🚀 Quick Setup (Recommended)
-
-Get mobile web support working in minutes
-
-```javascript
+```javascript-data-line="8"
 const hostInfo = {
   clientId: "your-client-id", // Your application client ID
-  appName: "your-app-name", // Your application name
+  appName: "your-app-name",   // Your application name
 };
 
-// Skip browser compatibility checks for mobile web
+// Enable the experience in Mobile devices by skipping browser compatibility checks
 const configParams = {
-  skipBrowserSupportCheck: true // 👈 Skip browser checks to prevent failures
+  skipBrowserSupportCheck: true // 👈
 };
 
 // Initialize the Adobe Express Embed SDK
@@ -124,391 +61,399 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
-Use [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) to bypass browser compatibility checks and prevent SDK initialization failures on mobile browsers.
+Follow the same best practices for mobile UI design and implementation as described in the [Mobile Web in the Browser](./mobile-web-support--browser.md#advanced-configuration) guide.
 
-### ⚙️ Advanced Configuration
+### Multi-platform WebView Configuration
 
-For developers who need custom mobile optimizations
+Implementing the Adobe Express Embed SDK in a WebView requires careful configuration, particularly **the authentication flow that relies on popup windows**. The WebView must be configured to handle JavaScript execution, enable persistent storage, and most importantly, support multiple windows for OAuth-based sign-in dialogs.
 
-```javascript
-const hostInfo = {
-  clientId: "your-client-id",
-  appName: "your-app-name",
-  appVersion: { major: 1, minor: 0 },
-  platformCategory: "web" // Required for applications
-};
+#### Understanding WebView Requirements
 
-const configParams = {
-  skipBrowserSupportCheck: true, // Skip browser checks for mobile web
-  locale: "en_US", // Optional: Set locale
-  loginMode: "delayed" // Optional: Delay login until export
-};
+The Adobe sign-in experience opens in a separate popup window. This behavior requires the WebView to create and manage additional windows dynamically. **Without proper configuration, these authentication popups will fail silently**, leaving users unable to complete the sign-in process. The configuration also needs to address other technical requirements like cookie management and user agent handling to ensure compatibility with modern web authentication systems.
 
-// Initialize with browser check bypass
-const { editor, module, quickAction } = await window.CCEverywhere.initialize(
-  hostInfo,
-  configParams
-);
+### Android Settings
+
+All the settings discussed in this and the following sections belong to a single `configureWebView()` method that is called during Activity creation.
+
+```kotlin
+val webSettings = webView?.settings
+
+// Enable cookies before loading any content
+webView?.let { enableCookies(it) }
+
+// Enable hardware acceleration for better performance
+webView?.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+
+// Enable JavaScript execution
+webSettings?.javaScriptEnabled = true
+webSettings?.domStorageEnabled = true
+webSettings?.databaseEnabled = true
+
+// Configure caching behavior
+webSettings?.cacheMode = WebSettings.LOAD_DEFAULT
+
+// Maintain consistent text sizing
+webSettings?.textZoom = 100
 ```
 
-## Understanding Browser Support
+The very first operation is **enabling cookies**, which is covered in detail in a [later section](#cookie-configuration-for-authentication-persistence). It is important to configure cookie acceptance before any content is loaded so that session data can be stored from the outset.
 
-### Standard Browser Requirements
+**JavaScript execution** is the next critical requirement since the Embed SDK is implemented entirely in JavaScript. Enabling `domStorageEnabled` provides **access to localStorage and sessionStorage**, which the SDK uses to persist user preferences and maintain session state. The `databaseEnabled` setting allows the WebView to use IndexedDB for more sophisticated client-side storage needs. Together, these settings create an environment where the Embed SDK can function as it would in a standard mobile browser.
 
-By default, the Adobe Express Embed SDK has specific technical requirements for optimal performance. For complete details on browser versions, hardware requirements, and system specifications, see the [Technical Requirements](../quickstart/technical-requirements.md) guide.
+**Hardware acceleration** significantly improves rendering performance, particularly important when users are working with image editing and generation features that require smooth, responsive interfaces. The `textZoom` setting prevents the WebView from applying automatic text scaling, which could break the carefully designed responsive layouts of the Embed SDK interface.
 
-### Mobile Browser Considerations
+#### Enabling Multiple Windows for Authentication
 
-Mobile browsers may have limitations that affect SDK functionality:
+The most critical configuration for supporting Adobe Express authentication is **enabling multiple windows**. This allows the WebView to spawn popup dialogs when users initiate the sign-in flow.
 
-- **Performance**: Limited processing power and memory
-- **WebGL support**: May be limited or unavailable
-- **Touch interfaces**: Different interaction patterns
-- **Screen size**: Smaller display areas
-- **Network conditions**: Variable connectivity
+```kotlin
+// Enable multiple windows for sign-in dialogs
+webSettings?.javaScriptCanOpenWindowsAutomatically = true
+webSettings?.setSupportMultipleWindows(true)
+```
 
-## Implementation Strategies
+These two settings work in tandem. The `javaScriptCanOpenWindowsAutomatically` setting allows JavaScript code to programmatically open new windows using `window.open()`, which is how the Adobe authentication system initiates the sign-in dialog. The `setSupportMultipleWindows` setting tells the WebView to support the underlying multi-window architecture, enabling the `WebChromeClient` to intercept and handle window creation requests.
 
-Choose the approach that best fits your application:
+#### Handling OAuth Compatibility
 
-| Strategy                                                              | Purpose                            | Complexity | Mobile Impact | When to Use                 |
-| --------------------------------------------------------------------- | ---------------------------------- | ---------- | ------------- | --------------------------- |
-| [Mobile Detection](#mobile-detection-and-ui-configuration--essential) | Apply mobile configs automatically | Low        | High          | Every mobile implementation |
-| [Container Sizing](#mobile-ui-container-sizing--essential)            | Optimize UI for mobile screens     | Low        | High          | Essential for good UX       |
-| [Dynamic Loading](#dynamic-sdk-loading)                               | Handle loading failures gracefully | Medium     | Medium        | Production applications     |
-| [UI Patterns](#mobile-ui-implementation-pattern)                      | Custom touch interfaces            | High       | High          | Advanced customization      |
+Google and other OAuth providers implement security measures that block authentication in WebViews by detecting the WebView-specific user agent string. Android WebViews include a `"; wv"` marker in their user agent that OAuth systems use to identify and reject authentication attempts. To work around this limitation, the user agent string must be modified to remove these WebView markers.
 
-### Essential Strategies (Start Here)
-
-#### Mobile Detection and UI Configuration ⭐ **Essential**
-
-_Necessary to apply mobile-specific configurations only when needed, preventing desktop users from getting suboptimal mobile UI._
-
-Implement sophisticated mobile detection:
-
-```javascript
-// Advanced mobile detection function
-function isMobileOrTablet() {
-  const viewportWidth = window.innerWidth;
-  const userAgent = navigator.userAgent;
-  const isMobileDevice = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(userAgent);
-  const MIN_DESKTOP_WIDTH = 768;
-
-  return isMobileDevice && viewportWidth < MIN_DESKTOP_WIDTH;
-}
-
-// Mobile UI toggle support
-const urlParams = new URLSearchParams(window.location.search);
-const forceMobileUI = urlParams.get('forceMobileUIOnDesktop') === 'true';
-const enableMobileUi = isMobileOrTablet() || forceMobileUI;
-
-const configParams = {
-  skipBrowserSupportCheck: enableMobileUi, // Skip browser checks for mobile UI
-  locale: "en_US"
-};
-
-try {
-  const { editor, module, quickAction } = await window.CCEverywhere.initialize(
-    hostInfo,
-    configParams
-  );
-
-  // Mobile-specific optimizations
-  if (enableMobileUi) {
-    configureMobileExperience(editor, module, quickAction);
-  }
-} catch (error) {
-  console.error("SDK initialization failed:", error);
-  // Handle initialization failure gracefully
+```kotlin
+// Remove WebView identifier for OAuth compatibility
+val originalUA = webSettings?.userAgentString ?: ""
+if (originalUA.contains("; wv")) {
+    webSettings?.userAgentString = originalUA.replace("; wv)", ")")
+                                              .replace("; wv ", " ")
 }
 ```
 
-#### Mobile UI Container Sizing ⭐ **Essential**
+This modification transforms the WebView's user agent to appear more like a standard mobile browser, allowing OAuth authentication flows to proceed. Without this change, users would encounter authentication failures when trying to sign in to Adobe Express, rendering the integration unusable for workflows that require user accounts.
 
-_Necessary to ensure the SDK interface fits properly on smaller mobile screens and provides optimal user experience across devices._
+#### Implementing Window Creation with `WebChromeClient`
 
-> **Quick Start**: Use `{ width: 390, height: 850, unit: 'px' }` for mobile container sizing
+When JavaScript calls `window.open()` to display the sign-in dialog, the WebView needs instructions on how to handle this request. The `WebChromeClient`'s `onCreateWindow` method provides the mechanism to intercept window creation requests and present them to users in a way that makes sense within the mobile app context.
 
-**Complete implementation example:**
+```kotlin
+webView?.webChromeClient = object : WebChromeClient() {
+    override fun onCreateWindow(
+        view: WebView?,
+        isDialog: Boolean,
+        isUserGesture: Boolean,
+        resultMsg: Message?
+    ): Boolean {
+        // Create a new WebView for the popup
+        val newWebView = WebView(this@MainActivity)
+        setupPopupWebView(newWebView)
 
-```javascript
-// Mobile container constants
-const DEFAULT_MOBILE_SIZE = { width: 390, height: 850, unit: 'px' };
-const MIN_DESKTOP_WIDTH = 768;
+        // Create a fullscreen dialog to display the popup
+        val dialog = Dialog(this@MainActivity,
+                          android.R.style.Theme_Black_NoTitleBar_Fullscreen)
+        dialog.setContentView(newWebView)
+        dialog.show()
 
-const getMobileConfig = () => {
-  const isMobile = window.innerWidth < MIN_DESKTOP_WIDTH;
+        // Set up close handler
+        newWebView.webChromeClient = object : WebChromeClient() {
+            override fun onCloseWindow(window: WebView?) {
+                dialog.dismiss()
+            }
+        }
 
-  return {
-    skipBrowserSupportCheck: true,
-    // Mobile-specific optimizations
-    ...(isMobile && {
-      // Use mobile container sizing
-      containerSize: DEFAULT_MOBILE_SIZE,
-      // Limit features for mobile
-      allowedFileTypes: ['image/png', 'image/jpeg'], // Skip video/PDF on mobile
-    })
-  };
-};
+        // Send the new WebView to the requesting WebView
+        val transport = resultMsg?.obj as? WebView.WebViewTransport
+        transport?.webView = newWebView
+        resultMsg?.sendToTarget()
 
-// Platform category detection for applications
-const ccEverywhereConfig = {
-  hostInfo: {
-    ...hostInfo,
-    platformCategory: 'web' // applications always use 'web' platform
-  },
-  configParams: getMobileConfig()
-};
-
-const { editor, module, quickAction } = await window.CCEverywhere.initialize(
-  ccEverywhereConfig.hostInfo,
-  ccEverywhereConfig.configParams
-);
+        return true
+    }
+}
 ```
 
-### Advanced Strategies
+This implementation creates a completely new WebView instance for the popup window and displays it in a fullscreen dialog. The `onCloseWindow` handler ensures that when the authentication process completes, the popup dialog is properly dismissed and resources are cleaned up.
 
-#### Dynamic SDK Loading
+The critical final step is **linking the new WebView back to the original through the WebViewTransport mechanism**. The transport delivers the newly created WebView to the system so that the URL requested by `window.open()` is loaded in it, and it establishes the JavaScript `window.opener` relationship between the popup and the main page. Once the user completes authentication, the session persists through two complementary channels: cookies set during the OAuth flow are stored by Android's CookieManager, which is a singleton shared across all WebView instances in the process, and the popup can communicate the result back to the opener via `window.opener.postMessage()` or by simply closing itself. **Without this transport wiring, the popup would never receive the authentication URL and the sign-in flow could not even begin.**
 
-_Necessary to handle SDK loading failures gracefully and provide feature detection before attempting to use SDK functionality._
+#### Configuring Popup WebViews
 
-> **Quick Start**: Add try-catch around SDK initialization and check feature availability before use
+**The popup WebView that handles authentication must be configured with the same essential settings as the main WebView.** This ensures consistent behavior and prevents authentication failures due to missing capabilities in the popup window.
 
-**Complete implementation example:**
+```kotlin
+@SuppressLint("SetJavaScriptEnabled")
+private fun setupPopupWebView(popupWebView: WebView) {
+    val webSettings = popupWebView.settings
+    enableCookies(popupWebView)
 
-```javascript
-// Dynamic SDK import
-async function loadSDK() {
-  try {
-    // Load SDK dynamically for applications
-    let CCEverywhere = await import(`cc-everywhere-test-app/3p/CCEverywhere`);
+    // Enable essential web features
+    webSettings.javaScriptEnabled = true
+    webSettings.domStorageEnabled = true
+    webSettings.databaseEnabled = true
 
-    const configParams = {
-      skipBrowserSupportCheck: true
-    };
+    // Configure caching and display
+    webSettings.cacheMode = WebSettings.LOAD_DEFAULT
+    webSettings.textZoom = 100
 
-    const { editor, module, quickAction } = await CCEverywhere.initialize(
-      hostInfo,
-      configParams
-    );
+    // Enable multiple windows for nested popups if needed
+    webSettings.javaScriptCanOpenWindowsAutomatically = true
+    webSettings.setSupportMultipleWindows(true)
 
-    // Check if features are available
-    if (module && typeof module.createImageFromText === 'function') {
-      // Enable text-to-image features in your UI
-      // Add your own code here to enable text-to-image functionality
-      document.getElementById('generate-image-btn').style.display = 'block';
-      console.log('Text-to-image generation available');
-    } else {
-      // Provide fallback for limited mobile support
-      document.getElementById('generate-image-btn').style.display = 'none';
-      document.getElementById('feature-message').textContent = 'Some features are not available on your device';
-      console.log('Limited feature set available on this device');
+    // Remove WebView identifier for OAuth compatibility
+    val originalUA = webSettings.userAgentString ?: ""
+    if (originalUA.contains("; wv")) {
+        webSettings.userAgentString = originalUA.replace("; wv)", ")")
+                                                .replace("; wv ", " ")
     }
 
-    return { editor, module, quickAction };
-  } catch (error) {
-    console.error("SDK loading failed:", error);
-    // Handle SDK loading failure
-    return null;
-  }
+    // Set WebViewClient for navigation handling
+    popupWebView.webViewClient = WebViewClient()
 }
 ```
 
-#### Mobile UI Implementation Pattern
+#### Cookie Configuration for Authentication Persistence
 
-_Necessary to provide different UI layouts and interactions optimized for touch interfaces and smaller screens._
+OAuth authentication relies on cookies to maintain session state and communicate tokens between the authentication popup and the main application. **Android WebViews require explicit configuration to accept and persist cookies**, particularly third-party cookies that OAuth systems often use.
 
-Implement conditional rendering for mobile UI:
-
-```javascript
-// Mobile UI conditional rendering
-function renderMobileUI(enableMobileUi) {
-  if (enableMobileUi) {
-    // Mobile-specific layout
-    return {
-      containerSize: DEFAULT_MOBILE_SIZE,
-      navigation: 'mobile', // Use mobile navigation
-      sidebar: 'overlay', // Overlay sidebar on mobile
-      layout: 'responsive'
-    };
-  } else {
-    // Desktop layout
-    return {
-      containerSize: { width: '100%', height: '600px' },
-      navigation: 'desktop',
-      sidebar: 'persistent',
-      layout: 'fixed'
-    };
-  }
+```kotlin
+private fun enableCookies(wv: WebView) {
+    val cm = CookieManager.getInstance()
+    cm.setAcceptCookie(true)
+    if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        cm.setAcceptThirdPartyCookies(wv, true)
+    }
+    cm.flush()
 }
+```
 
-// Apply mobile UI configuration
-const mobileConfig = renderMobileUI(enableMobileUi);
-const appConfig = {
-  ...mobileConfig,
-  callbacks: {
-    onPublish: (intent, publishParams) => {
-      // Handle mobile-specific publishing
-      handleMobilePublish(publishParams);
+The `CookieManager` must be configured to accept both first-party and third-party cookies. First-party cookies store session information for the Adobe Express domain, while third-party cookies may be used by authentication providers during the OAuth flow. The `flush()` call ensures that cookie settings are immediately persisted to disk, preventing issues where cookies might be lost if the app is terminated during or shortly after authentication.
+
+**This cookie configuration should be applied to both the main WebView and any popup WebViews created for authentication**. Failing to enable cookies in popup windows will cause authentication to fail even if all other settings are correct, as the authentication system will be unable to set the necessary session cookies.
+
+#### Complete Configuration Flow
+
+The Activity only needs to locate the WebView and call `configureWebView()`. All the settings discussed in the previous sections—cookie management, JavaScript and storage capabilities, multi-window support, user agent modification, the WebChromeClient, and the WebViewClient—live inside that single method.
+
+```kotlin
+override fun onCreate(savedInstanceState: Bundle?) {
+    super.onCreate(savedInstanceState)
+    setContentView(R.layout.activity_main)
+
+    webView = findViewById(R.id.webview)
+    configureWebView()
+}
+```
+
+The full `configureWebView()` method ties all the pieces together in the order they were introduced above. The WebViewClient assigned at the end provides basic navigation handling and ensures that page loads stay within the WebView rather than launching an external browser application.
+
+```kotlin
+@SuppressLint("SetJavaScriptEnabled")
+private fun configureWebView() {
+    val webSettings = webView?.settings
+    webView?.let { enableCookies(it) }
+
+    webView?.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+
+    webSettings?.javaScriptEnabled = true
+    webSettings?.domStorageEnabled = true
+    webSettings?.databaseEnabled = true
+    webSettings?.cacheMode = WebSettings.LOAD_DEFAULT
+    webSettings?.textZoom = 100
+
+    webSettings?.javaScriptCanOpenWindowsAutomatically = true
+    webSettings?.setSupportMultipleWindows(true)
+
+    val originalUA = webSettings?.userAgentString ?: ""
+    if (originalUA.contains("; wv")) {
+        webSettings?.userAgentString = originalUA.replace("; wv)", ")")
+                                                  .replace("; wv ", " ")
     }
-  }
-};
-```
 
-## Best Practices
+    webView?.webChromeClient = object : WebChromeClient() {
+        override fun onCreateWindow(
+            view: WebView?, isDialog: Boolean,
+            isUserGesture: Boolean, resultMsg: Message?
+        ): Boolean {
+            val newWebView = WebView(this@MainActivity)
+            setupPopupWebView(newWebView)
 
-### 1. Graceful Degradation
+            val dialog = Dialog(this@MainActivity,
+                               android.R.style.Theme_Black_NoTitleBar_Fullscreen)
+            dialog.setContentView(newWebView)
+            dialog.show()
 
-Always provide fallback experiences for when mobile web support is limited. Implement proper error handling and alternative experiences when the SDK fails to initialize on mobile devices.
+            newWebView.webChromeClient = object : WebChromeClient() {
+                override fun onCloseWindow(window: WebView?) {
+                    dialog.dismiss()
+                }
+            }
 
-### 2. User Experience Considerations
-
-Design your mobile experience with these considerations:
-
-- **Touch-friendly interfaces**: Ensure buttons and controls are appropriately sized for finger interaction
-- **Loading states**: Show clear feedback during SDK initialization and processing
-- **Error handling**: Provide helpful, mobile-specific error messages for users
-- **Offline considerations**: Handle network connectivity issues gracefully with appropriate messaging
-- **Responsive design**: Ensure your interface adapts well to different mobile screen sizes
-- **Performance feedback**: Indicate when operations may take longer on mobile devices
-
-## Common Use Cases
-
-### 1. Social Media Content Creation
-
-The Generate Image module works well on mobile web, making it perfect for social media content creation. Key considerations for this use case:
-
-- **Mobile-optimized container sizing**: Use responsive dimensions that work well on mobile screens
-- **Touch-friendly export options**: Implement easy-to-tap sharing buttons
-- **Prompt handling**: Allow users to easily input text prompts on mobile keyboards
-
-### 2. Mobile Photo Editing
-
-The Edit Image module is possible on mobile web but may have some limitations. Important considerations:
-
-- **Performance expectations**: Basic editing features work well, but advanced features may be slower
-- **Touch interface**: Ensure editing controls are optimized for finger interaction
-- **File size limits**: Consider limiting input image sizes for better mobile performance
-- **Simplified workflows**: Focus on essential editing features rather than complex operations
-
-### 3. Progressive Web App Integration
-
-Integrate with progressive web apps for enhanced mobile experiences:
-
-- **Service worker integration**: Register service workers for offline capabilities
-- **App-like experience**: Use standalone display mode detection for PWA-specific optimizations
-- **Delayed login**: Implement delayed authentication for better offline scenarios
-- **Mobile UI patterns**: Apply mobile-specific layouts when running as a PWA
-- **Installation prompts**: Guide users to install your PWA for better mobile access
-
-## Troubleshooting
-
-### Common Issues
-
-#### SDK fails to initialize on mobile
-
-- Ensure [`skipBrowserSupportCheck: true`](../../v4/shared/src/types/host-info-types/interfaces/config-params-base.md) is set
-- Check for JavaScript errors in mobile browser console
-- Verify network connectivity
-
-#### Poor performance on mobile devices
-
-- Limit file types to lighter formats (PNG/JPEG instead of PDF/MP4)
-- Use `loginMode: "delayed"` to reduce initial load
-- Implement proper loading states
-
-#### Features not working as expected
-
-- Test feature availability before using
-- Implement graceful fallbacks
-- Provide user feedback for unsupported features
-
-### Debugging Tips
-
-```javascript
-const debugMobileSupport = async () => {
-  console.log('User Agent:', navigator.userAgent);
-  console.log('Screen Size:', window.innerWidth, 'x', window.innerHeight);
-  console.log('WebGL Support:', !!window.WebGL2RenderingContext);
-
-  try {
-    const { editor, module, quickAction } = await window.CCEverywhere.initialize(
-      hostInfo,
-      { skipBrowserSupportCheck: true }
-    );
-
-    console.log('SDK initialized successfully');
-    console.log('Available features:', {
-      editor: !!editor,
-      module: !!module,
-      quickAction: !!quickAction
-    });
-
-    // Log app config for debugging
-    console.log('App Config:', appConfig);
-
-    // Log export config for debugging
-    console.log('Export Config:', exportConfig);
-  } catch (error) {
-    console.error('SDK initialization failed:', error);
-  }
-};
-```
-
-## Migration from Desktop-Only
-
-If you're adding mobile web support to an existing desktop application:
-
-### 1. Update Configuration
-
-```javascript
-// Before: Desktop-only
-const configParams = {
-  locale: "en_US"
-};
-
-// After: Mobile web support
-const configParams = {
-  skipBrowserSupportCheck: true, // Add this line
-  locale: "en_US"
-};
-```
-
-### 2. Add Mobile Detection
-
-```javascript
-const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-
-const configParams = {
-  skipBrowserSupportCheck: isMobile, // Conditional mobile support
-  locale: "en_US"
-};
-```
-
-### 3. Implement Fallbacks
-
-```javascript
-const initializeWithFallback = async () => {
-  try {
-    const sdk = await window.CCEverywhere.initialize(hostInfo, configParams);
-    return sdk;
-  } catch (error) {
-    if (isMobile) {
-      // Show mobile-specific error message
-      showMobileErrorMessage();
-    } else {
-      // Show desktop error message
-      showDesktopErrorMessage();
+            val transport = resultMsg?.obj as? WebView.WebViewTransport
+            transport?.webView = newWebView
+            resultMsg?.sendToTarget()
+            return true
+        }
     }
-    throw error;
-  }
-};
+
+    webView?.webViewClient = WebViewClient()
+}
 ```
 
-## Related Resources
+With this configuration in place, the Android WebView provides a fully capable runtime environment for the Adobe Express Embed SDK, supporting not only the core creative workflows but also the authentication flows that enable users to access their Adobe accounts and preferences.
 
-- [Getting Started with Adobe Express Embed SDK](../quickstart/index.md)
-- [Technical Requirements](../quickstart/technical-requirements.md)
-- [Initialize SDK Reference](../../reference/initialize/index.md)
-- [Editor Customization](./appconfig.md)
-- [Error Handling](./error-handling.md)
+#### Full Android Example
+
+<CodeBlock slots="heading, code" repeat="1"/>
+
+#### MainActivity.kt
+
+```kotlin
+package com.example.embedsdk
+
+import android.annotation.SuppressLint
+import android.app.Dialog
+import android.os.Bundle
+import android.view.View
+import android.webkit.WebChromeClient
+import android.webkit.WebSettings
+import android.webkit.WebView
+import android.webkit.WebViewClient
+import android.widget.Button
+import androidx.activity.enableEdgeToEdge
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
+import android.os.Build
+import android.os.Message
+import android.webkit.CookieManager
+
+
+class MainActivity : AppCompatActivity() {
+    private var webView: WebView? = null
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        enableEdgeToEdge()
+        setContentView(R.layout.activity_main)
+        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
+            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            insets
+        }
+        webView = findViewById(R.id.webview)
+        configureWebView()
+        setUpHandlers()
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun configureWebView() {
+        val webSettings = webView?.settings
+        webView?.let { enableCookies(it) }
+        // Enable hardware acceleration
+        webView?.setLayerType(View.LAYER_TYPE_HARDWARE, null)
+
+        // Enable JavaScript optimizations
+        webSettings?.javaScriptEnabled = true
+        webSettings?.domStorageEnabled = true
+        webSettings?.databaseEnabled = true
+
+        // Enable caching
+        webSettings?.cacheMode = WebSettings.LOAD_DEFAULT
+
+        // Set default text size (no zoom)
+        webSettings?.textZoom = 100
+
+        // Enable multiple windows
+        webSettings?.javaScriptCanOpenWindowsAutomatically = true
+        webSettings?.setSupportMultipleWindows(true)
+
+        // Remove WebView identifier for OAuth compatibility
+        // Google blocks WebViews by detecting "; wv" in user agent
+        val originalUA = webSettings?.userAgentString ?: ""
+        if (originalUA.contains("; wv")) {
+            webSettings?.userAgentString = originalUA.replace("; wv)", ")").replace("; wv ", " ")
+        }
+
+        // Set up WebChromeClient to handle new windows
+        webView?.webChromeClient = object : WebChromeClient() {
+            override fun onCreateWindow(
+                view: WebView?,
+                isDialog: Boolean,
+                isUserGesture: Boolean,
+                resultMsg: Message?
+            ): Boolean {
+                // Create a new WebView for the popup
+                val newWebView = WebView(this@MainActivity)
+                setupPopupWebView(newWebView)
+
+                // Create a dialog to display the new WebView
+                val dialog = Dialog(this@MainActivity, android.R.style.Theme_Black_NoTitleBar_Fullscreen)
+
+                dialog.setContentView(newWebView)
+                dialog.show()
+
+                // Set up close handler when the popup window closes
+                newWebView.webChromeClient = object : WebChromeClient() {
+                    override fun onCloseWindow(window: WebView?) {
+                        dialog.dismiss()
+                    }
+                }
+
+                // Send the new WebView to the requesting WebView
+                val transport = resultMsg?.obj as? WebView.WebViewTransport
+                transport?.webView = newWebView
+                resultMsg?.sendToTarget()
+
+                return true
+            }
+        }
+
+        // Set a basic WebViewClient
+        webView?.webViewClient = WebViewClient()
+    }
+
+    @SuppressLint("SetJavaScriptEnabled")
+    private fun setupPopupWebView(popupWebView: WebView) {
+        val webSettings = popupWebView.settings
+        enableCookies(popupWebView)
+        // Enable JavaScript optimizations
+        webSettings.javaScriptEnabled = true
+        webSettings.domStorageEnabled = true
+        webSettings.databaseEnabled = true
+
+        // Enable caching
+        webSettings.cacheMode = WebSettings.LOAD_DEFAULT
+
+        // Set default text size (no zoom)
+        webSettings.textZoom = 100
+
+        // Enable multiple windows
+        webSettings.javaScriptCanOpenWindowsAutomatically = true
+        webSettings.setSupportMultipleWindows(true)
+
+        // Remove WebView identifier for OAuth compatibility
+        // Google blocks WebViews by detecting "; wv" in user agent
+        val originalUA = webSettings.userAgentString ?: ""
+        if (originalUA.contains("; wv")) {
+            webSettings.userAgentString = originalUA.replace("; wv)", ")").replace("; wv ", " ")
+        }
+
+        // Set WebViewClient for the popup
+        popupWebView.webViewClient = WebViewClient()
+    }
+
+    private fun setUpHandlers() {
+        findViewById<Button>(R.id.btnLoad)
+            .setOnClickListener {
+                webView?.loadUrl("your-embed-experience-url")
+            }
+    }
+
+    private fun enableCookies(wv: WebView) {
+        val cm = CookieManager.getInstance()
+        cm.setAcceptCookie(true)
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            cm.setAcceptThirdPartyCookies(wv, true)
+        }
+        cm.flush()
+    }
+}
+```
+
+And something here
