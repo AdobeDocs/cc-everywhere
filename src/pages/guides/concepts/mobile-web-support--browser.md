@@ -15,13 +15,9 @@ contributors:
 
 # Mobile Web in the Browser
 
-The Adobe Express Embed SDK supports mobile web served through a browser, allowing developers to implement creative workflows on mobile devices.
+The Adobe Express Embed SDK supports Mobile Web served through a Browser, allowing developers to implement creative workflows on mobile devices.
 
-## What is Mobile Web Support?
-
-The Adobe Express Embed SDK natively supports mobile web browsers, enabling developers to implement creative workflows across desktop and mobile devices. Mobile web support allows your applications to work seamlessly on smartphones, tablets, and other mobile devices through web browsers.
-
-## When to Use Mobile Web Support
+## When to Use Mobile Web in the Browser
 
 Mobile web support is ideal for applications that need to reach users across all devices. Consider implementing mobile web support when:
 
