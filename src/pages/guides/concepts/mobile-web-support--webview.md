@@ -33,6 +33,8 @@ Before implementing iOS/Android WebView support, we recommend reviewing the foll
 - **[Mobile Web Overview](./mobile-web-support--overview.md)**: Learn about the different ways to implement mobile web support.
 - **[Mobile Web in the Browser](./mobile-web-support--browser.md)**: Familiarize yourself with the Mobile Web approach in the Browser.
 
+Knowledge of native Android/iOS development is also required.
+
 ## How to Implement Mobile Web in a WebView
 
 The WebView implementation **relies on Mobile-friendly Web content**. This means that the Embed integration and the experience that it is delivered into should be designed to work well on small screens and touch interfaces.
@@ -441,7 +443,7 @@ class MainActivity : AppCompatActivity() {
     private fun setUpHandlers() {
         findViewById<Button>(R.id.btnLoad)
             .setOnClickListener {
-                webView?.loadUrl("your-embed-experience-url")
+                webView?.loadUrl("your-embed-experience-url") // 👈 Replace with your URL
             }
     }
 
@@ -456,4 +458,311 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-And something here
+### iOS Settings
+
+All the settings discussed in this and the following sections are contained in a `ViewController` that conforms to both `WKNavigationDelegate` and `WKUIDelegate`. A key difference from Android is that a `WKWebView` must receive its `WKWebViewConfiguration` at initialization time—it cannot be changed afterward. This means the configuration must be fully prepared before the WebView is created.
+
+#### `WKWebView` Configuration
+
+The `WKWebViewConfiguration` object defines the WebView's capabilities and must be ready before the `WKWebView` is instantiated.
+
+```swift
+private func getWebviewConfig() -> WKWebViewConfiguration {
+    let webViewConfig = WKWebViewConfiguration()
+    let webpagePreferences = WKWebpagePreferences()
+    webpagePreferences.allowsContentJavaScript = true
+    webViewConfig.websiteDataStore = .default()
+    webViewConfig.preferences.javaScriptCanOpenWindowsAutomatically = true
+    webViewConfig.defaultWebpagePreferences = webpagePreferences
+    webViewConfig.userContentController.addUserScript(getZoomDisableScript())
+
+    return webViewConfig
+}
+```
+
+The `allowsContentJavaScript` property on `WKWebpagePreferences` enables JavaScript execution—the fundamental requirement for the Embed SDK. Setting `websiteDataStore` to `.default()` ensures that cookies and session data are persisted to disk and shared across all `WKWebView` instances that use the same default store. This is the iOS equivalent of the explicit `CookieManager` configuration required on Android, but here it works automatically with no additional code.
+
+The `javaScriptCanOpenWindowsAutomatically` property allows JavaScript to call `window.open()` without requiring a user gesture, which is how the Adobe sign-in dialog is initiated. Finally, a user script is injected to manage viewport behavior, discussed in the [next section](#viewport-and-zoom-control).
+
+#### Viewport and Zoom Control
+
+The Embed SDK interface is designed with specific viewport dimensions in mind. To prevent pinch-to-zoom from disrupting the layout, a `WKUserScript` injects a viewport meta tag at document start.
+
+```swift
+private func getZoomDisableScript() -> WKUserScript {
+    let source = """
+    var meta = document.createElement('meta');
+    meta.name = 'viewport';
+    meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover';
+    var head = document.getElementsByTagName('head')[0];
+    head.appendChild(meta);
+    """
+    return WKUserScript(source: source, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+}
+```
+
+The script runs at `.atDocumentStart`, before any page content is rendered, ensuring that the viewport constraints are in place from the very beginning. The `viewport-fit=cover` value extends the web content to fill the entire display, including the area behind notches and rounded corners, which pairs with the safe area inset handling configured on the native side. This serves the same purpose as Android's `textZoom = 100` setting, but operates at the web content level rather than through a native WebView property.
+
+#### Handling OAuth Compatibility
+
+Like Android, iOS WebViews need a custom user agent to pass OAuth provider checks. However, the approach differs: instead of patching an existing user agent string to remove WebView markers, iOS requires setting a completely custom user agent that mimics Mobile Safari.
+
+```swift
+private func setCustomUserAgent(for webView: WKWebView) {
+    let version = UIDevice.current.systemVersion.replacingOccurrences(of: ".", with: "_")
+    let iosVersion = UIDevice.current.systemVersion
+    let customUA = "Mozilla/5.0 (iPhone; CPU iPhone OS \(version) like Mac OS X) " +
+        "AppleWebKit/605.1.15 (KHTML, like Gecko) " +
+        "Version/\(iosVersion) Mobile/15E148 Safari/604.1"
+    webView.customUserAgent = customUA
+}
+```
+
+This constructs a user agent string that closely matches what Mobile Safari would report for the current iOS version. The dynamic `version` and `iosVersion` values ensure the user agent stays current as the operating system updates. The `customUserAgent` property on `WKWebView` overrides both the JavaScript `navigator.userAgent` and the HTTP `User-Agent` header, ensuring consistent identity across all interactions with OAuth providers.
+
+**This custom user agent must be set on both the main WebView and any popup WebViews created for authentication**, just as with the Android user agent modification.
+
+#### WebView Initialization
+
+With the configuration and helper methods in place, the `WKWebView` can be initialized. The following lazy property creates the WebView on first access with all the necessary settings applied.
+
+```swift
+lazy var webView: WKWebView = {
+    let webViewConfig = getWebviewConfig()
+
+    let webView = WKWebView(
+        frame: .zero,
+        configuration: webViewConfig
+    )
+    webView.navigationDelegate = self
+    webView.uiDelegate = self
+    self.setCustomUserAgent(for: webView)
+
+    return webView
+}()
+```
+
+The `navigationDelegate` handles page load events and navigation decisions, while the `uiDelegate` is responsible for intercepting JavaScript UI actions—most critically, `window.open()` calls that trigger the authentication popup. Both delegates are essential for a complete Embed SDK integration.
+
+The WebView is created with `frame: .zero` because its final layout will be determined later in `viewDidLayoutSubviews`. The configuration object is passed at initialization and cannot be changed afterward, which is why all preferences must be set in `getWebviewConfig()` before this point.
+
+#### Implementing Popup Windows with `WKUIDelegate`
+
+When JavaScript calls `window.open()` to display the sign-in dialog, the `WKUIDelegate` method `webView(_:createWebViewWith:for:windowFeatures:)` is invoked. This is the iOS counterpart of Android's `WebChromeClient.onCreateWindow`.
+
+```swift
+var newWebviewPopupWindow: WKWebView?
+
+func webView(
+    _: WKWebView,
+    createWebViewWith configuration: WKWebViewConfiguration,
+    for navigationAction: WKNavigationAction,
+    windowFeatures _: WKWindowFeatures
+) -> WKWebView? {
+    newWebviewPopupWindow = WKWebView(frame: view.bounds, configuration: configuration)
+    newWebviewPopupWindow!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+    newWebviewPopupWindow!.navigationDelegate = self
+    newWebviewPopupWindow!.uiDelegate = self
+    self.setCustomUserAgent(for: newWebviewPopupWindow!)
+
+    // Set content insets for safe areas
+    let topInset = view.safeAreaInsets.top
+    newWebviewPopupWindow!.scrollView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+    newWebviewPopupWindow!.scrollView.scrollIndicatorInsets = newWebviewPopupWindow!.scrollView.contentInset
+
+    view.addSubview(newWebviewPopupWindow!)
+    return newWebviewPopupWindow!
+}
+```
+
+A crucial difference from Android is that **the `configuration` parameter provided by WebKit must be used as-is** to create the popup. This system-provided configuration maintains the internal link between the opener and the popup, preserving the `window.opener` JavaScript relationship and sharing the same `WKWebsiteDataStore`. Creating a separate configuration would break the communication channel between the two WebViews and prevent authentication credentials from being passed back to the main session.
+
+The popup is created at the full size of the parent view and uses `autoresizingMask` to adapt automatically to orientation changes. Setting the same delegates ensures consistent navigation and popup handling, and applying the custom user agent prevents OAuth failures—just as on the main WebView. The safe area content insets ensure that the authentication form is not hidden behind the status bar or notch.
+
+The popup is added directly as a subview, overlaying the main content. This is simpler than Android's `Dialog`-based approach and achieves the same fullscreen presentation for the authentication UI.
+
+#### Popup Cleanup
+
+When the authentication flow completes and the popup calls `window.close()`, the `webViewDidClose` delegate method handles cleanup.
+
+```swift
+func webViewDidClose(_ webView: WKWebView) {
+    webView.removeFromSuperview()
+    newWebviewPopupWindow = nil
+}
+```
+
+Removing the popup from the superview makes the main WebView visible again, and setting the reference to `nil` allows the popup to be deallocated. This is the iOS counterpart of Android's `onCloseWindow` handler that calls `dialog.dismiss()`.
+
+#### Cookie and Session Persistence
+
+Unlike Android, where explicit `CookieManager` configuration is required for both the main WebView and every popup, iOS handles cookie persistence automatically through the `WKWebsiteDataStore`. The `.default()` data store configured earlier persists cookies, localStorage, IndexedDB, and other website data to disk.
+
+Because the popup WebView is created with the system-provided `configuration`—which references the same data store as the main WebView—**authentication cookies set during the OAuth flow in the popup are immediately available to the main WebView**. No additional cookie management code is needed.
+
+<InlineAlert slots="heading, text" variant="info"/>
+
+##### Login issues
+
+In case you are facing issues with the login process, contact your Adobe representative and ask them to switch the SUSI-Light sign-in experience to SUSI.
+
+#### Complete Configuration Flow
+
+The ViewController sets up the WebView in `viewDidLoad` by adding it as a subview. All the configuration happens before this point: the `WKWebViewConfiguration` is created in `getWebviewConfig()`, and the WebView is initialized with it in the lazy property.
+
+```swift
+override func viewDidLoad() {
+    super.viewDidLoad()
+    view.addSubview(webView)
+}
+```
+
+The complete configuration flow for iOS is more compact than Android's because `WKWebView` bundles many capabilities by default. The essential steps are:
+
+- Create a `WKWebViewConfiguration` with JavaScript and popup support enabled.
+- Initialize the `WKWebView` with that configuration.
+- Set a custom user agent for OAuth compatibility.
+- Implement `WKUIDelegate` to handle popup creation using the system-provided configuration.
+- Implement `webViewDidClose` for cleanup.
+
+#### Full iOS Example
+
+<CodeBlock slots="heading, code" repeat="1"/>
+
+#### ViewController.swift
+
+```swift
+import UIKit
+import WebKit
+
+class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
+    var newWebviewPopupWindow: WKWebView?
+
+    @IBOutlet weak var loadButton: UIButton!
+    @IBOutlet weak var footerView: UIView!
+
+    lazy var webView: WKWebView = {
+        let webViewConfig = getWebviewConfig()
+
+        let webView = WKWebView(
+            frame: .zero,
+            configuration: webViewConfig
+        )
+        webView.navigationDelegate = self
+        webView.uiDelegate = self
+        self.setCustomUserAgent(for: webView)
+
+        return webView
+    }()
+
+    private func getWebviewConfig() -> WKWebViewConfiguration {
+        let webViewConfig = WKWebViewConfiguration()
+        let webpagePreferences = WKWebpagePreferences()
+        webpagePreferences.allowsContentJavaScript = true
+        webViewConfig.websiteDataStore = .default()
+        webViewConfig.preferences.javaScriptCanOpenWindowsAutomatically = true
+        webViewConfig.defaultWebpagePreferences = webpagePreferences
+        webViewConfig.userContentController.addUserScript(getZoomDisableScript())
+
+        return webViewConfig
+    }
+
+    private func setCustomUserAgent(for webView: WKWebView) {
+        let version = UIDevice.current.systemVersion.replacingOccurrences(of: ".", with: "_")
+        let iosVersion = UIDevice.current.systemVersion
+        let customUA = "Mozilla/5.0 (iPhone; CPU iPhone OS \(version) like Mac OS X) " +
+            "AppleWebKit/605.1.15 (KHTML, like Gecko) " +
+            "Version/\(iosVersion) Mobile/15E148 Safari/604.1"
+        webView.customUserAgent = customUA
+    }
+
+    private func getZoomDisableScript() -> WKUserScript {
+        let source = """
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover';
+        var head = document.getElementsByTagName('head')[0];
+        head.appendChild(meta);
+        """
+        return WKUserScript(source: source, injectionTime: .atDocumentStart, forMainFrameOnly: true)
+    }
+
+    func webView(
+        _: WKWebView,
+        createWebViewWith configuration: WKWebViewConfiguration,
+        for navigationAction: WKNavigationAction,
+        windowFeatures _: WKWindowFeatures
+    ) -> WKWebView? {
+        newWebviewPopupWindow = WKWebView(frame: view.bounds, configuration: configuration)
+        newWebviewPopupWindow!.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        newWebviewPopupWindow!.navigationDelegate = self
+        newWebviewPopupWindow!.uiDelegate = self
+        self.setCustomUserAgent(for: newWebviewPopupWindow!)
+
+        // Set content insets for safe areas
+        let topInset = view.safeAreaInsets.top
+        newWebviewPopupWindow!.scrollView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+        newWebviewPopupWindow!.scrollView.scrollIndicatorInsets = newWebviewPopupWindow!.scrollView.contentInset
+
+        view.addSubview(newWebviewPopupWindow!)
+        return newWebviewPopupWindow!
+    }
+
+    func webViewDidClose(_ webView: WKWebView) {
+        webView.removeFromSuperview()
+        newWebviewPopupWindow = nil
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        view.addSubview(webView)
+
+        if let footer = footerView {
+            view.bringSubviewToFront(footer)
+        }
+    }
+
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+
+        let buttonHeight: CGFloat = 50
+        let buttonPadding: CGFloat = 16
+        let topPadding: CGFloat = 12
+        let footerContentHeight = topPadding + buttonHeight + buttonPadding
+
+        webView.frame.origin.x = 0
+        webView.frame.origin.y = 0
+        webView.frame.size.width = view.bounds.width
+        webView.frame.size.height = view.safeAreaLayoutGuide.layoutFrame.maxY - footerContentHeight
+
+        let topInset = view.safeAreaInsets.top
+        webView.scrollView.contentInset = UIEdgeInsets(top: topInset, left: 0, bottom: 0, right: 0)
+        webView.scrollView.scrollIndicatorInsets = webView.scrollView.contentInset
+
+        if webView.scrollView.contentOffset.y == 0 {
+            webView.scrollView.contentOffset = CGPoint(x: 0, y: -topInset)
+        }
+
+        if let footer = footerView {
+            footer.frame.origin.x = 0
+            footer.frame.origin.y = webView.frame.maxY
+            footer.frame.size.width = view.bounds.width
+            footer.frame.size.height = view.bounds.height - webView.frame.maxY
+            view.bringSubviewToFront(footer)
+
+            if let button = loadButton {
+                button.frame.origin.x = buttonPadding
+                button.frame.origin.y = topPadding
+                button.frame.size.width = footer.frame.width - (buttonPadding * 2)
+                button.frame.size.height = buttonHeight
+            }
+        }
+    }
+
+    @IBAction func loadButtonPressed(_ sender: UIButton) {
+        guard let url = URL(string: "your-embed-experience-url") else { return } // 👈 Replace with your URL
+        let urlRequest = URLRequest(url: url)
+        webView.load(urlRequest)
+    }
+}
+```
