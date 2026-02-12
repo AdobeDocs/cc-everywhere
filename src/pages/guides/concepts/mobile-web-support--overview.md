@@ -58,6 +58,10 @@ Both approaches bring Embed SDK workflows to iOS/Android, but they have differen
 
 For native Mobile apps, we suggest using the [Swift](https://github.com/AdobeDocs/express-embed-mobile-sdk-ios-release/tree/main/) and [Kotlin](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release) Mobile SDKs when possible. We still support mWeb because many apps are primarily WebView shells around Web experiences, and going end-to-end Web is often the simplest, cheapest, and most pragmatic integration path.
 
+## Known Limitations
+
+- Mobile Web on iOS devices only supports [Generate Image](./generate-image-v2.md) and [Edit Image](./edit-image.md) modules.
+
 <DiscoverBlock slots="heading, link, text" width="50%" />
 
 ## Read Next
