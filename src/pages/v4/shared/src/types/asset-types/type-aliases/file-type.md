@@ -11,3 +11,5 @@ hideEditInGitHub: true
 ```ts
 type FileType = typeof FileType[number];
 ```
+
+Union type of all values in [FileType](../variables/file-type.md)

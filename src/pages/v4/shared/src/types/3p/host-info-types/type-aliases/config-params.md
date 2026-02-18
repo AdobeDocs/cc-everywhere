@@ -11,3 +11,9 @@ hideEditInGitHub: true
 ```ts
 type ConfigParams = ConfigParamsBase;
 ```
+
+The type of config params for 3P.
+
+## See
+
+[ConfigParamsBase](../../../host-info-types/interfaces/config-params-base.md)

@@ -15,6 +15,7 @@ hideEditInGitHub: true
 | [PublishTarget](enumerations/publish-target.md) | - |
 | [DownloadTarget](enumerations/download-target.md) | - |
 | [EditFurtherTarget](enumerations/edit-further-target.md) | - |
+| [CallBackTarget](enumerations/call-back-target.md) | - |
 | [ExportOptionUI](enumerations/export-option-ui.md) | - |
 | [EditFurtherIntent](enumerations/edit-further-intent.md) | - |
 | [ExportGroupType](enumerations/export-group-type.md) | - |
@@ -33,11 +34,13 @@ hideEditInGitHub: true
 | [PublishAction](interfaces/publish-action.md) | - |
 | [DownloadAction](interfaces/download-action.md) | - |
 | [EditFurtherAction](interfaces/edit-further-action.md) | - |
+| [CallBackAction](interfaces/call-back-action.md) | - |
 | [BaseExportOption](interfaces/base-export-option.md) | - |
 | [PublishExportOption](interfaces/publish-export-option.md) | Export option for publishing content to various targets. |
 | [DownloadExportOption](interfaces/download-export-option.md) | Export option for downloading content to the user's device. |
 | [EditFurtherExportOption](interfaces/edit-further-export-option.md) | Export option for continuing to edit content in other applications. |
 | [ContinueEditingDropdownOption](interfaces/continue-editing-dropdown-option.md) | - |
+| [CallBackExportOption](interfaces/call-back-export-option.md) | Export option for callback actions that trigger callbacks without publishing assets. |
 | [ExportGroup](interfaces/export-group.md) | - |
 | [ExportOptionGroup](interfaces/export-option-group.md) | - |
 | [ContinueEditingGroup](interfaces/continue-editing-group.md) | - |
@@ -47,18 +50,18 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [ExportTarget](type-aliases/export-target.md) | - |
+| [ExportTarget](type-aliases/export-target.md) | Represents the available export targets for content. This union type includes: |
 | [ExportButtonTreatment](type-aliases/export-button-treatment.md) | - |
 | [ExportButtonVariant](type-aliases/export-button-variant.md) | - |
 | [ExportContext](type-aliases/export-context.md) | - |
-| [ButtonStyle](type-aliases/button-style.md) | - |
-| [EnabledButtonStyle](type-aliases/enabled-button-style.md) | Represents the style of a button always enabled. |
+| [ButtonStyle](type-aliases/button-style.md) | Represents the style of a button. The uiType is [BaseButtonStyle](interfaces/base-button-style.md) |
+| [EnabledButtonStyle](type-aliases/enabled-button-style.md) | Represents the style of a button always enabled.The uiType is [BaseButtonStyle](interfaces/base-button-style.md) |
 | [ContentType](type-aliases/content-type.md) | Represents the type of content, currently supporting markdown. |
-| [ExportStyle](type-aliases/export-style.md) | - |
-| [ContinueEditingAction](type-aliases/continue-editing-action.md) | - |
-| [ExportAction](type-aliases/export-action.md) | - |
+| [ExportStyle](type-aliases/export-style.md) | Union of all available export styles, including [ButtonStyle](type-aliases/button-style.md), [EnabledButtonStyle](type-aliases/enabled-button-style.md), [LinkStyle](interfaces/link-style.md), and [DropdownOptionStyle](interfaces/dropdown-option-style.md). |
+| [ContinueEditingAction](type-aliases/continue-editing-action.md) | Action used when continuing editing in another experience. It extends [EditFurtherAction](interfaces/edit-further-action.md) and always includes an [EditFurtherIntent](enumerations/edit-further-intent.md). |
+| [ExportAction](type-aliases/export-action.md) | Union of all export action payloads, covering [PublishAction](interfaces/publish-action.md), [DownloadAction](interfaces/download-action.md), [EditFurtherAction](interfaces/edit-further-action.md), [ContinueEditingAction](type-aliases/continue-editing-action.md), and [CallBackAction](interfaces/call-back-action.md). |
 | [ExportOption](type-aliases/export-option.md) | Represents the available export options for the CC Everywhere SDK. |
 | [DropdownExportOption](type-aliases/dropdown-export-option.md) | Represents export options specifically for dropdown UI components. |
-| [ExportOptionOrGroup](type-aliases/export-option-or-group.md) | - |
-| [ExportOptions](type-aliases/export-options.md) | - |
-| [ExportConfig](type-aliases/export-config.md) | - |
+| [ExportOptionOrGroup](type-aliases/export-option-or-group.md) | Either a single [ExportOption](type-aliases/export-option.md) or a grouped configuration such as [ExportOptionGroup](interfaces/export-option-group.md), [ContinueEditingGroup](interfaces/continue-editing-group.md), or [PublishButtonGroup](interfaces/publish-button-group.md). |
+| [ExportOptions](type-aliases/export-options.md) | Array of [ExportOptionOrGroup](type-aliases/export-option-or-group.md) entries that make up an export configuration. |
+| [ExportConfig](type-aliases/export-config.md) | Top-level export configuration consumed by SDK hosts; it mirrors [ExportOptions](type-aliases/export-options.md). |

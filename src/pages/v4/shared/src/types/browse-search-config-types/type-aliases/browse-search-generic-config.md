@@ -11,3 +11,10 @@ hideEditInGitHub: true
 ```ts
 type BrowseSearchGenericConfig = BrowseSearchBaseConfig<InspireCategory>;
 ```
+
+Generic configuration for browse search.
+
+## See
+
+ - [BrowseSearchBaseConfig](../interfaces/browse-search-base-config.md)
+ - [InspireCategory](../enumerations/inspire-category.md)

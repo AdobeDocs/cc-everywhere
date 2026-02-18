@@ -12,4 +12,4 @@ hideEditInGitHub: true
 type EnabledButtonStyle = BaseButtonStyle<ENABLED_BUTTON>;
 ```
 
-Represents the style of a button always enabled.
+Represents the style of a button always enabled.The uiType is [BaseButtonStyle](../interfaces/base-button-style.md)

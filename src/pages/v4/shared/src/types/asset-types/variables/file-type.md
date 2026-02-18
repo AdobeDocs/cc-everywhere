@@ -15,3 +15,11 @@ const FileType: (
   | PDF
   | MP4)[];
 ```
+
+All supported export mime types.
+
+## See
+
+ - [ImageFileType](../enumerations/image-file-type.md)
+ - [VideoFileType](../enumerations/video-file-type.md)
+ - [PdfFileType](../enumerations/pdf-file-type.md)

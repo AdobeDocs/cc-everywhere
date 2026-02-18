@@ -106,6 +106,18 @@ Re-exports [CloseStatus](message-types/enumerations/close-status.md)
 
 <HorizontalLine />
 
+### CustomMessage
+
+Re-exports [CustomMessage](message-types/interfaces/custom-message.md)
+
+<HorizontalLine />
+
+### CustomMessageAction
+
+Re-exports [CustomMessageAction](message-types/enumerations/custom-message-action.md)
+
+<HorizontalLine />
+
 ### CloseStatusMessage
 
 Re-exports [CloseStatusMessage](message-types/interfaces/close-status-message.md)
@@ -127,6 +139,18 @@ Re-exports [WorkflowMessage](message-types/interfaces/workflow-message.md)
 ### ClientAuthDetailsMessage
 
 Re-exports [ClientAuthDetailsMessage](message-types/interfaces/client-auth-details-message.md)
+
+<HorizontalLine />
+
+### SwitchEmbedActionMessage
+
+Re-exports [SwitchEmbedActionMessage](message-types/interfaces/switch-embed-action-message.md)
+
+<HorizontalLine />
+
+### TargetLoadMessage
+
+Re-exports [TargetLoadMessage](message-types/interfaces/target-load-message.md)
 
 <HorizontalLine />
 
