@@ -22,7 +22,7 @@ contributors:
 
 Mobile Web experiences can be delivered through a WebView in native iOS/Android mobile apps.
 
-## When to Use Mobile Web in a WebView
+## When to use Mobile Web in a WebView
 
 As discussed in the [Overview](./mobile-web-support--overview.md), there are trade-offs between Mobile Web and Mobile SDKs. While we suggest evaluating the Mobile SDKs when possible, it makes sense to rely on the Mobile Web approach when **the Embed experience is just one element of a larger app that is already served through a WebView**.
 
@@ -33,9 +33,9 @@ Before implementing iOS/Android WebView support, we recommend reviewing the foll
 - **[Mobile Web Overview](./mobile-web-support--overview.md)**: Learn about the different ways to implement mobile web support.
 - **[Mobile Web in the Browser](./mobile-web-support--browser.md)**: Familiarize yourself with the Mobile Web approach in the Browser.
 
-Knowledge of native Android/iOS development is also required.
+Knowledge of **native Android/iOS development** is also required.
 
-## How to Implement Mobile Web in a WebView
+## How to implement Mobile Web in a WebView
 
 The WebView implementation **relies on Mobile-friendly Web content**. This means that the Embed integration and the experience that it is delivered into should be designed to work well on small screens and touch interfaces.
 
@@ -73,7 +73,7 @@ Implementing the Adobe Express Embed SDK in a WebView requires careful configura
 
 The Adobe sign-in experience opens in a separate popup window. This behavior requires the WebView to create and manage additional windows dynamically. **Without proper configuration, these authentication popups will fail silently**, leaving users unable to complete the sign-in process. The configuration also needs to address other technical requirements like cookie management and user agent handling to ensure compatibility with modern web authentication systems.
 
-### Android Settings
+## Android Implementation
 
 All the settings discussed in this and the following sections belong to a single `configureWebView()` method that is called during Activity creation.
 
@@ -104,7 +104,7 @@ The very first operation is **enabling cookies**, which is covered in detail in 
 
 **Hardware acceleration** significantly improves rendering performance, particularly important when users are working with image editing and generation features that require smooth, responsive interfaces. The `textZoom` setting prevents the WebView from applying automatic text scaling, which could break the carefully designed responsive layouts of the Embed SDK interface.
 
-#### Enabling Multiple Windows for Authentication
+### Enabling Multiple Windows for Authentication
 
 The most critical configuration for supporting Adobe Express authentication is **enabling multiple windows**. This allows the WebView to spawn popup dialogs when users initiate the sign-in flow.
 
@@ -116,7 +116,7 @@ webSettings?.setSupportMultipleWindows(true)
 
 These two settings work in tandem. The `javaScriptCanOpenWindowsAutomatically` setting allows JavaScript code to programmatically open new windows using `window.open()`, which is how the Adobe authentication system initiates the sign-in dialog. The `setSupportMultipleWindows` setting tells the WebView to support the underlying multi-window architecture, enabling the `WebChromeClient` to intercept and handle window creation requests.
 
-#### Handling OAuth Compatibility
+### Handling OAuth Compatibility
 
 Google and other OAuth providers implement security measures that block authentication in WebViews by detecting the WebView-specific user agent string. Android WebViews include a `"; wv"` marker in their user agent that OAuth systems use to identify and reject authentication attempts. To work around this limitation, the user agent string must be modified to remove these WebView markers.
 
@@ -131,7 +131,7 @@ if (originalUA.contains("; wv")) {
 
 This modification transforms the WebView's user agent to appear more like a standard mobile browser, allowing OAuth authentication flows to proceed. Without this change, users would encounter authentication failures when trying to sign in to Adobe Express, rendering the integration unusable for workflows that require user accounts.
 
-#### Implementing Window Creation with `WebChromeClient`
+### Implementing Window Creation with `WebChromeClient`
 
 When JavaScript calls `window.open()` to display the sign-in dialog, the WebView needs instructions on how to handle this request. The `WebChromeClient`'s `onCreateWindow` method provides the mechanism to intercept window creation requests and present them to users in a way that makes sense within the mobile app context.
 
@@ -174,7 +174,7 @@ This implementation creates a completely new WebView instance for the popup wind
 
 The critical final step is **linking the new WebView back to the original through the WebViewTransport mechanism**. The transport delivers the newly created WebView to the system so that the URL requested by `window.open()` is loaded in it, and it establishes the JavaScript `window.opener` relationship between the popup and the main page. Once the user completes authentication, the session persists through two complementary channels: cookies set during the OAuth flow are stored by Android's CookieManager, which is a singleton shared across all WebView instances in the process, and the popup can communicate the result back to the opener via `window.opener.postMessage()` or by simply closing itself. **Without this transport wiring, the popup would never receive the authentication URL and the sign-in flow could not even begin.**
 
-#### Configuring Popup WebViews
+### Configuring Popup WebViews
 
 **The popup WebView that handles authentication must be configured with the same essential settings as the main WebView.** This ensures consistent behavior and prevents authentication failures due to missing capabilities in the popup window.
 
@@ -209,7 +209,7 @@ private fun setupPopupWebView(popupWebView: WebView) {
 }
 ```
 
-#### Cookie Configuration for Authentication Persistence
+### Cookie Configuration for Authentication Persistence
 
 OAuth authentication relies on cookies to maintain session state and communicate tokens between the authentication popup and the main application. **Android WebViews require explicit configuration to accept and persist cookies**, particularly third-party cookies that OAuth systems often use.
 
@@ -228,7 +228,7 @@ The `CookieManager` must be configured to accept both first-party and third-part
 
 **This cookie configuration should be applied to both the main WebView and any popup WebViews created for authentication**. Failing to enable cookies in popup windows will cause authentication to fail even if all other settings are correct, as the authentication system will be unable to set the necessary session cookies.
 
-#### Complete Configuration Flow
+### Complete Configuration Flow
 
 The Activity only needs to locate the WebView and call `configureWebView()`. All the settings discussed in the previous sections—cookie management, JavaScript and storage capabilities, multi-window support, user agent modification, the WebChromeClient, and the WebViewClient—live inside that single method.
 
@@ -299,7 +299,7 @@ private fun configureWebView() {
 
 With this configuration in place, the Android WebView provides a fully capable runtime environment for the Adobe Express Embed SDK, supporting not only the core creative workflows but also the authentication flows that enable users to access their Adobe accounts and preferences.
 
-#### Full Android Example
+### Full Android Example
 
 <CodeBlock slots="heading, code" repeat="1"/>
 
@@ -458,11 +458,11 @@ class MainActivity : AppCompatActivity() {
 }
 ```
 
-### iOS Settings
+## iOS Implementation
 
 All the settings discussed in this and the following sections are contained in a `ViewController` that conforms to both `WKNavigationDelegate` and `WKUIDelegate`. A key difference from Android is that a `WKWebView` must receive its `WKWebViewConfiguration` at initialization time—it cannot be changed afterward. This means the configuration must be fully prepared before the WebView is created.
 
-#### `WKWebView` Configuration
+### `WKWebView` Configuration
 
 The `WKWebViewConfiguration` object defines the WebView's capabilities and must be ready before the `WKWebView` is instantiated.
 
@@ -484,7 +484,7 @@ The `allowsContentJavaScript` property on `WKWebpagePreferences` enables JavaScr
 
 The `javaScriptCanOpenWindowsAutomatically` property allows JavaScript to call `window.open()` without requiring a user gesture, which is how the Adobe sign-in dialog is initiated. Finally, a user script is injected to manage viewport behavior, discussed in the [next section](#viewport-and-zoom-control).
 
-#### Viewport and Zoom Control
+### Viewport and Zoom Control
 
 The Embed SDK interface is designed with specific viewport dimensions in mind. To prevent pinch-to-zoom from disrupting the layout, a `WKUserScript` injects a viewport meta tag at document start.
 
@@ -503,7 +503,7 @@ private func getZoomDisableScript() -> WKUserScript {
 
 The script runs at `.atDocumentStart`, before any page content is rendered, ensuring that the viewport constraints are in place from the very beginning. The `viewport-fit=cover` value extends the web content to fill the entire display, including the area behind notches and rounded corners, which pairs with the safe area inset handling configured on the native side. This serves the same purpose as Android's `textZoom = 100` setting, but operates at the web content level rather than through a native WebView property.
 
-#### Handling OAuth Compatibility
+### Handling OAuth Compatibility
 
 Like Android, iOS WebViews need a custom user agent to pass OAuth provider checks. However, the approach differs: instead of patching an existing user agent string to remove WebView markers, iOS requires setting a completely custom user agent that mimics Mobile Safari.
 
@@ -522,7 +522,7 @@ This constructs a user agent string that closely matches what Mobile Safari woul
 
 **This custom user agent must be set on both the main WebView and any popup WebViews created for authentication**, just as with the Android user agent modification.
 
-#### WebView Initialization
+### WebView Initialization
 
 With the configuration and helper methods in place, the `WKWebView` can be initialized. The following lazy property creates the WebView on first access with all the necessary settings applied.
 
@@ -546,7 +546,7 @@ The `navigationDelegate` handles page load events and navigation decisions, whil
 
 The WebView is created with `frame: .zero` because its final layout will be determined later in `viewDidLayoutSubviews`. The configuration object is passed at initialization and cannot be changed afterward, which is why all preferences must be set in `getWebviewConfig()` before this point.
 
-#### Implementing Popup Windows with `WKUIDelegate`
+### Implementing Popup Windows with `WKUIDelegate`
 
 When JavaScript calls `window.open()` to display the sign-in dialog, the `WKUIDelegate` method `webView(_:createWebViewWith:for:windowFeatures:)` is invoked. This is the iOS counterpart of Android's `WebChromeClient.onCreateWindow`.
 
@@ -581,7 +581,7 @@ The popup is created at the full size of the parent view and uses `autoresizingM
 
 The popup is added directly as a subview, overlaying the main content. This is simpler than Android's `Dialog`-based approach and achieves the same fullscreen presentation for the authentication UI.
 
-#### Popup Cleanup
+### Popup Cleanup
 
 When the authentication flow completes and the popup calls `window.close()`, the `webViewDidClose` delegate method handles cleanup.
 
@@ -594,7 +594,7 @@ func webViewDidClose(_ webView: WKWebView) {
 
 Removing the popup from the superview makes the main WebView visible again, and setting the reference to `nil` allows the popup to be deallocated. This is the iOS counterpart of Android's `onCloseWindow` handler that calls `dialog.dismiss()`.
 
-#### Cookie and Session Persistence
+### Cookie and Session Persistence
 
 Unlike Android, where explicit `CookieManager` configuration is required for both the main WebView and every popup, iOS handles cookie persistence automatically through the `WKWebsiteDataStore`. The `.default()` data store configured earlier persists cookies, localStorage, IndexedDB, and other website data to disk.
 
@@ -606,7 +606,7 @@ Because the popup WebView is created with the system-provided `configuration`—
 
 In case you are facing issues with the login process, contact your Adobe representative and ask them to switch the SUSI-Light sign-in experience to SUSI.
 
-#### Complete Configuration Flow
+### Complete Configuration Flow
 
 The ViewController sets up the WebView in `viewDidLoad` by adding it as a subview. All the configuration happens before this point: the `WKWebViewConfiguration` is created in `getWebviewConfig()`, and the WebView is initialized with it in the lazy property.
 
@@ -625,7 +625,7 @@ The complete configuration flow for iOS is more compact than Android's because `
 - Implement `WKUIDelegate` to handle popup creation using the system-provided configuration.
 - Implement `webViewDidClose` for cleanup.
 
-#### Full iOS Example
+### Full iOS Example
 
 <CodeBlock slots="heading, code" repeat="1"/>
 
@@ -766,3 +766,7 @@ class ViewController: UIViewController, WKNavigationDelegate, WKUIDelegate {
     }
 }
 ```
+
+## Next Steps
+
+To learn more about Mobile Web in a real-world application, check out the [Mobile Web tutorial](../tutorials/mobile-web.md).
