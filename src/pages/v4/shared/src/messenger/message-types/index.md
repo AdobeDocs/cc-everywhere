@@ -19,7 +19,6 @@ hideEditInGitHub: true
 | [WorkflowLoadCompleted](enumerations/workflow-load-completed.md) | - |
 | [MessageType](enumerations/message-type.md) | - |
 | [CloseStatus](enumerations/close-status.md) | - |
-| [CustomMessageAction](enumerations/custom-message-action.md) | - |
 
 ## Interfaces
 
@@ -29,7 +28,6 @@ hideEditInGitHub: true
 | [CancelMessage](interfaces/cancel-message.md) | - |
 | [TokenResponseMessage](interfaces/token-response-message.md) | - |
 | [PublishStatusMessage](interfaces/publish-status-message.md) | - |
-| [CustomMessage](interfaces/custom-message.md) | - |
 | [CloseStatusMessage](interfaces/close-status-message.md) | - |
 | [ParamsResponseMessage](interfaces/params-response-message.md) | - |
 | [WorkflowMessage](interfaces/workflow-message.md) | - |

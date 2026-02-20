@@ -34,12 +34,3 @@ Enum representing feature flags for HZ based target apps
 | `SHOW_CUSTOM_CLIENT_NAV` | `"show-custom-client-nav"` |
 | `SHOW_FIREFLY_PAYWALL_FOR_UNENTITLED_USERS` | `"show-firefly-paywall-for-unentitled-users"` |
 | `USE_IMS_REDIRECT_VIA_STORAGE` | `"use-ims-redirect-via-storage"` |
-| `SHOW_REFERENCE_IMAGE_SECTION` | `"show-reference-image-section"` |
-| `MIGRATE_TUS_VIDEO_UPLOADING_TO_ACP` | `"migrate-tus-video-uploading-to-acp"` |
-| `CARD_MAKER_EDITOR_PARAMS` | `"card-maker-editor-params"` |
-| `CARD_MAKER_SKIP_REDIRECT_ON_DOWNLOAD` | `"card-maker-skip-redirect-on-download"` |
-| `USE_CLIENT_AUTH_TOKEN_FOR_TEXT_TO_IMAGE` | `"use-client-auth-token-for-text-to-image"` |
-| `USE_V3_API_USING_FIREFLY_SDK` | `"use-v3-api-using-firefly-sdk"` |
-| `MTZN_MESSAGING_FOR_INSERT_OBJECT` | `"mtzn-messaging-for-insert-object"` |
-| `MTZN_MESSAGING_FOR_REMOVE_OBJECT` | `"mtzn-messaging-for-remove-object"` |
-| `MOBILE_ERASE_FEATURE` | `"mobile-erase-feature"` |

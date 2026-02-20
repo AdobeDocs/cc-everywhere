@@ -19,3 +19,4 @@ hideEditInGitHub: true
 | `RESIZE_IMAGE` | `"resize-image"` |
 | `REMOVE_BACKGROUND` | `"remove-background"` |
 | `GENERATE_QR_CODE` | `"generate-qr-code"` |
+| `CARD_MAKER` | `"card-maker"` |

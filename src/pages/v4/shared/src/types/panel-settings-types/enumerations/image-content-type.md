@@ -15,7 +15,6 @@ Choose from photo, graphic, or art to set the overall approach for your generate
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `AUTO` | `"auto"` |
 | `PHOTO` | `"photo"` |
 | `GRAPHIC` | `"graphic"` |
 | `ART` | `"art"` |

@@ -106,18 +106,6 @@ Re-exports [CloseStatus](message-types/enumerations/close-status.md)
 
 <HorizontalLine />
 
-### CustomMessage
-
-Re-exports [CustomMessage](message-types/interfaces/custom-message.md)
-
-<HorizontalLine />
-
-### CustomMessageAction
-
-Re-exports [CustomMessageAction](message-types/enumerations/custom-message-action.md)
-
-<HorizontalLine />
-
 ### CloseStatusMessage
 
 Re-exports [CloseStatusMessage](message-types/interfaces/close-status-message.md)

@@ -15,7 +15,6 @@ hideEditInGitHub: true
 | [PublishTarget](enumerations/publish-target.md) | - |
 | [DownloadTarget](enumerations/download-target.md) | - |
 | [EditFurtherTarget](enumerations/edit-further-target.md) | - |
-| [CallBackTarget](enumerations/call-back-target.md) | - |
 | [ExportOptionUI](enumerations/export-option-ui.md) | - |
 | [EditFurtherIntent](enumerations/edit-further-intent.md) | - |
 | [ExportGroupType](enumerations/export-group-type.md) | - |
@@ -34,13 +33,11 @@ hideEditInGitHub: true
 | [PublishAction](interfaces/publish-action.md) | - |
 | [DownloadAction](interfaces/download-action.md) | - |
 | [EditFurtherAction](interfaces/edit-further-action.md) | - |
-| [CallBackAction](interfaces/call-back-action.md) | - |
 | [BaseExportOption](interfaces/base-export-option.md) | - |
 | [PublishExportOption](interfaces/publish-export-option.md) | Export option for publishing content to various targets. |
 | [DownloadExportOption](interfaces/download-export-option.md) | Export option for downloading content to the user's device. |
 | [EditFurtherExportOption](interfaces/edit-further-export-option.md) | Export option for continuing to edit content in other applications. |
 | [ContinueEditingDropdownOption](interfaces/continue-editing-dropdown-option.md) | - |
-| [CallBackExportOption](interfaces/call-back-export-option.md) | Export option for callback actions that trigger callbacks without publishing assets. |
 | [ExportGroup](interfaces/export-group.md) | - |
 | [ExportOptionGroup](interfaces/export-option-group.md) | - |
 | [ContinueEditingGroup](interfaces/continue-editing-group.md) | - |

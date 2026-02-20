@@ -14,5 +14,4 @@ hideEditInGitHub: true
 | ------ | ------ |
 | `SUCCESS` | `"SUCCESS"` |
 | `DENIED` | `"DENIED"` |
-| `ERROR` | `"ERROR"` |
 | `NOOP` | `"NOOP"` |

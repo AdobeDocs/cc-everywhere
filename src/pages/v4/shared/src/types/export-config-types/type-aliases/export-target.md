@@ -12,6 +12,5 @@ hideEditInGitHub: true
 type ExportTarget = 
   | PublishTarget
   | DownloadTarget
-  | EditFurtherTarget
-  | CallBackTarget;
+  | EditFurtherTarget;
 ```

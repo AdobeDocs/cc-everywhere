@@ -586,12 +586,6 @@ Re-exports [EditFurtherTarget](export-config-types/enumerations/edit-further-tar
 
 <HorizontalLine />
 
-### CallBackTarget
-
-Re-exports [CallBackTarget](export-config-types/enumerations/call-back-target.md)
-
-<HorizontalLine />
-
 ### ExportTarget
 
 Re-exports [ExportTarget](export-config-types/type-aliases/export-target.md)
@@ -718,12 +712,6 @@ Re-exports [ContinueEditingAction](export-config-types/type-aliases/continue-edi
 
 <HorizontalLine />
 
-### CallBackAction
-
-Re-exports [CallBackAction](export-config-types/interfaces/call-back-action.md)
-
-<HorizontalLine />
-
 ### ExportAction
 
 Re-exports [ExportAction](export-config-types/type-aliases/export-action.md)
@@ -757,12 +745,6 @@ Re-exports [EditFurtherExportOption](export-config-types/interfaces/edit-further
 ### ContinueEditingDropdownOption
 
 Re-exports [ContinueEditingDropdownOption](export-config-types/interfaces/continue-editing-dropdown-option.md)
-
-<HorizontalLine />
-
-### CallBackExportOption
-
-Re-exports [CallBackExportOption](export-config-types/interfaces/call-back-export-option.md)
 
 <HorizontalLine />
 

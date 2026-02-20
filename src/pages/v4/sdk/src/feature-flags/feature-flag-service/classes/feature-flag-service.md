@@ -33,7 +33,9 @@ new FeatureFlagService(): FeatureFlagService;
 ```ts
 getFeatureFlagsParams(
    intent, 
-   hostInfo, 
+   isFirstParty, 
+   clientId, 
+   analyticsClientId?, 
    appConfig?): URLSearchParams;
 ```
 
@@ -44,7 +46,9 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 | Parameter | Type |
 | ------ | ------ |
 | `intent` | [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md) |
-| `hostInfo` | [`HostInfoExtended`](../../../../../shared/src/types/host-info-types/type-aliases/host-info-extended.md) |
+| `isFirstParty` | `boolean` |
+| `clientId` | `string` |
+| `analyticsClientId?` | `string` |
 | `appConfig?` | `AppConfig` |
 
 #### Returns

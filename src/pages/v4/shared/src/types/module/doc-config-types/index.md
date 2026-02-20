@@ -13,7 +13,6 @@ hideEditInGitHub: true
 | Interface | Description |
 | ------ | ------ |
 | [EditImageDocConfig](interfaces/edit-image-doc-config.md) | - |
-| [EditDesignDocConfig](interfaces/edit-design-doc-config.md) | - |
 
 ## Type Aliases
 

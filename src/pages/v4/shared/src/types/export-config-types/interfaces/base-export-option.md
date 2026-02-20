@@ -14,7 +14,6 @@ hideEditInGitHub: true
 - [`DownloadExportOption`](download-export-option.md)
 - [`EditFurtherExportOption`](edit-further-export-option.md)
 - [`ContinueEditingDropdownOption`](continue-editing-dropdown-option.md)
-- [`CallBackExportOption`](call-back-export-option.md)
 
 ## Type Parameters
 

@@ -13,6 +13,5 @@ type ExportAction =
   | PublishAction
   | DownloadAction
   | EditFurtherAction
-  | ContinueEditingAction
-  | CallBackAction;
+  | ContinueEditingAction;
 ```
