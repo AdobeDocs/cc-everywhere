@@ -42,6 +42,7 @@
         - [Generate Image](/guides/tutorials/generate-image.md)
         - [Edit Image](/guides/tutorials/edit-image.md)
         - [Workflow Tethering](/guides/tutorials/workflow-tethering.md)
+        - [Mobile Web](/guides/tutorials/mobile-web.md)
     - [Submission and review](/guides/review/index.md)
     - [Changelog](/guides/changelog/index.md)
     - [Troubleshooting](/guides/troubleshooting/faq/index.md)
