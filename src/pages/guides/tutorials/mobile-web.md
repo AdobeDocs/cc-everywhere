@@ -38,18 +38,16 @@ We'll build a mock **Fantasy Chess Game**, where users can **generate their own 
 
 - A **Web-based Embed SDK experience** that can be consumed by Desktop and Mobile Browsers. We'll use [Express.js](https://expressjs.com/) (a minimalist web framework for Node.js) to create and serve the content.
 - An **iOS native application** developed in [Swift](https://developer.apple.com/swift/) that loads the Web-based Embed SDK experience into a WebView.
-- An **Android native application** developed in [Kotlin](https://kotlinlang.org/) that does the same thing.
+- A similar **Android native application** developed in [Kotlin](https://kotlinlang.org/).
 
-You will develop locally on your machine, and run the mobile applications through simulators in Apple Xcode and Android Studio.
+You will **develop locally** on your machine, and run the mobile applications through **simulators in Apple Xcode and Android Studio**. The table below (reproduced for convenience from the [Mobile Web Overview](./mobile-web-support--overview.md)) shows the available ways to integrate the Embed SDK into multiple surfaces; this tutorial covers **the first three use cases**.
 
-The table below (reproduced for convenience from the [Mobile Web Overview](./mobile-web-support--overview.md)) shows the available ways to integrate the Embed SDK into multiple surfaces. This tutorial covers **the first three use cases**.
-
-|     | Device         | Integration type | Runtime | Description                                                                           |
-| --- | -------------- | ---------------- | ------- | ------------------------------------------------------------------------------------- |
-| 1   | 🖥️ **Desktop** | Web              | Browser | ✅ Embed SDK runs in Desktop Browsers.                                                |
-| 2   | 📱 **Mobile**  | Mobile Web       | Browser | ✅ Embed SDK runs in Mobile Browsers.                                                 |
-| 3   | 📱 **Mobile**  | Mobile Web       | WebView | ✅ Web experience through iOS/Android Apps, via in-app WebViews.                      |
-| 4   | 📱 **Mobile**  | Native           | App     | ❌ **not covered in this tutorial** - iOS/Android Apps using Swift/Kotlin Mobile SDKs |
+|     | Device         | Integration type | Runtime | Description                                                                          |
+| --- | -------------- | ---------------- | ------- | ------------------------------------------------------------------------------------ |
+| 1   | 🖥️ **Desktop** | Web              | Browser | ✅ Embed SDK runs in Desktop Browsers.                                               |
+| 2   | 📱 **Mobile**  | Mobile Web       | Browser | ✅ Embed SDK runs in Mobile Browsers.                                                |
+| 3   | 📱 **Mobile**  | Mobile Web       | WebView | ✅ Web experience through iOS/Android Apps, via in-app WebViews.                     |
+| 4   | 📱 **Mobile**  | Native           | App     | ❌ **not covered in this tutorial**: iOS/Android Apps using Swift/Kotlin Mobile SDKs |
 
 ### Prerequisites
 
@@ -100,7 +98,7 @@ These are the three main directories of the project:
 
 ### 1.2 Set up the API key
 
-Locate the `Mobile-web/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+Locate the `Mobile-web/.env.example` file, rename it to `.env`, and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
