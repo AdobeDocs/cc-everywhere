@@ -29,21 +29,23 @@ new CCEverywhereBase(
    hostInfo, 
    configParams, 
    authProvider, 
-   clientAuthProvider): CCEverywhereBase;
+   clientAuthProvider, 
+   piipStatus): CCEverywhereBase;
 ```
 
 Constructor to initialize CCEverywhere object.
 
 #### Parameters
 
-| Parameter | Type | Description |
-| ------ | ------ | ------ |
-| `validator` | `BaseValidator` | - |
-| `authControllerConstructor` | `AuthControllerConstructor` | - |
-| `hostInfo` | [`HostInfo`](../../../../shared/src/types/host-info-types/type-aliases/host-info.md) | client application information - clientId, appName |
-| `configParams` | [`ConfigParams`](../../../../shared/src/types/host-info-types/type-aliases/config-params.md) | environment, locale, piipStatus, colorTheme, spectrumTheme, scale |
-| `authProvider` | `AuthProvider` | - |
-| `clientAuthProvider` | [`ClientAuthProvider`](../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | - |
+| Parameter | Type | Default value | Description |
+| ------ | ------ | ------ | ------ |
+| `validator` | `BaseValidator` | `undefined` | - |
+| `authControllerConstructor` | `AuthControllerConstructor` | `undefined` | - |
+| `hostInfo` | [`HostInfo`](../../../../shared/src/types/host-info-types/type-aliases/host-info.md) | `undefined` | client application information - clientId, appName |
+| `configParams` | [`ConfigParams`](../../../../shared/src/types/host-info-types/type-aliases/config-params.md) | `undefined` | environment, locale, piipStatus, colorTheme, spectrumTheme, scale |
+| `authProvider` | `AuthProvider` | `undefined` | - |
+| `clientAuthProvider` | [`ClientAuthProvider`](../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | `undefined` | - |
+| `piipStatus` | [`PIIPStatus`](../../../../shared/src/types/host-info-types/enumerations/piip-status.md) | `PIIPStatus.OPTED_IN` | - |
 
 #### Returns
 

@@ -24,4 +24,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [TargetsConfig](type-aliases/targets-config.md) | - |
+| [TargetsConfig](type-aliases/targets-config.md) | Configuration for target URLs. Contains a base property that maps [Target](enumerations/target.md) types to their base URLs. |

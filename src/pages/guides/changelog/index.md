@@ -22,6 +22,10 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration-v3-v4.md) for detailed instructions.
 
+## [4.43.13] 2026-02-27
+
+### Maintenance release
+
 ## [4.41.14] 2026-01-30
 
 ### API Enhancement

@@ -11,3 +11,5 @@ hideEditInGitHub: true
 ```ts
 type EditorPublishParams = PublishParams;
 ```
+
+Publish parameters for editor workflows. Alias of [PublishParams](../interfaces/publish-params.md).

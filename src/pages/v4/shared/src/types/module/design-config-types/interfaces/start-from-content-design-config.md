@@ -10,8 +10,6 @@ hideEditInGitHub: true
 
 StartFromContentDesignConfig is the design config for the Start From Content module.
 
-## Ignore
-
 ## Extends
 
 - [`DesignConfig`](../../../design-config-types/interfaces/design-config.md)

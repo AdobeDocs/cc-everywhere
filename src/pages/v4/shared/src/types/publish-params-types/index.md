@@ -21,4 +21,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditorPublishParams](type-aliases/editor-publish-params.md) | - |
+| [EditorPublishParams](type-aliases/editor-publish-params.md) | Publish parameters for editor workflows. Alias of [PublishParams](interfaces/publish-params.md). |

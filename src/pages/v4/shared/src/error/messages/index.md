@@ -12,4 +12,4 @@ hideEditInGitHub: true
 
 | Variable | Description |
 | ------ | ------ |
-| [Messages](variables/messages.md) | - |
+| [Messages](../messages/variables/messages.md) | - |

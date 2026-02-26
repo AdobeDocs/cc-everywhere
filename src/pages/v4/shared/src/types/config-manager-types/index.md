@@ -12,7 +12,7 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [Config](type-aliases/config.md) | - |
+| [Config](type-aliases/config.md) | Config type for the SDK. It contains the environment, enable debug analytics, and the clients. |
 
 ## Variables
 

@@ -12,5 +12,5 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [HostInfo](type-aliases/host-info.md) | - |
-| [ConfigParams](type-aliases/config-params.md) | - |
+| [HostInfo](type-aliases/host-info.md) | The type of host info for 3P. |
+| [ConfigParams](type-aliases/config-params.md) | The type of config params for 3P. |

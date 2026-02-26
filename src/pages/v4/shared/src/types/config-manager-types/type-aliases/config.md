@@ -12,12 +12,27 @@ hideEditInGitHub: true
 type Config = object;
 ```
 
+Config type for the SDK. It contains the environment, enable debug analytics, and the clients.
+
+## See
+
+ - [Environment](../../host-info-types/enumerations/environment.md)
+ - [HostType](../../host-info-types/enumerations/host-type.md)
+
 ## Properties
 
 ### ENVIRONMENT
 
 ```ts
 ENVIRONMENT: Environment;
+```
+
+<HorizontalLine />
+
+### enableDebugAnalytics
+
+```ts
+enableDebugAnalytics: boolean;
 ```
 
 <HorizontalLine />
@@ -149,9 +164,11 @@ CLIENTS: object;
 | `ACROBAT_EMBED_VIEWER` | `object` |
 | `ACROBAT_EMBED_VIEWER.CLIENT_ID` | `string` |
 | `ACROBAT_EXT` | `object` |
-| `ACROBAT_EXT.CLIENT_ID` | `string` |
+| `ACROBAT_EXT.CLIENT_ID_REGEX` | `RegExp` |
 | `ACROBAT_MOBILE` | `object` |
 | `ACROBAT_MOBILE.CLIENT_ID` | `string` |
+| `ACROBAT_MOBILE_IOS` | `object` |
+| `ACROBAT_MOBILE_IOS.CLIENT_ID` | `string` |
 | `ACROBAT_READER` | `object` |
 | `ACROBAT_READER.DESKTOP` | `object` |
 | `ACROBAT_READER.DESKTOP.CLIENT_ID` | `string` |
@@ -171,6 +188,8 @@ CLIENTS: object;
 | `CCD.CLIENT_ID_PREFIX` | `string` |
 | `CONTENT_CAL` | `object` |
 | `CONTENT_CAL.CLIENT_ID` | `string` |
+| `FIREFLY` | `object` |
+| `FIREFLY.CLIENT_ID` | `string` |
 | `GENSTUDIO` | `object` |
 | `GENSTUDIO.CLIENT_ID` | `string` |
 | `ILLUSTRATOR` | `object` |

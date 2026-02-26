@@ -14,6 +14,7 @@ hideEditInGitHub: true
 | ------ | ------ |
 | [TextToImageAppVersion](enumerations/text-to-image-app-version.md) | - |
 | [EditImageAppVersion](enumerations/edit-image-app-version.md) | - |
+| [EditDesignAppVersion](enumerations/edit-design-app-version.md) | - |
 | [ThumbnailOption](enumerations/thumbnail-option.md) | - |
 | [TextToImageFeature](enumerations/text-to-image-feature.md) | - |
 | [PromptSafetyCategory](enumerations/prompt-safety-category.md) | Categories for prompt safety assessment. This enum can be extended as new safety categories are identified. |
@@ -31,6 +32,14 @@ hideEditInGitHub: true
 | [PromptSafetyCheckResponse](interfaces/prompt-safety-check-response.md) | Represents the safety status of a prompt |
 | [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
 | [StartFromContentAppConfig](interfaces/start-from-content-app-config.md) | StartFromContentAppConfig is the app config for the Start From Content module. |
-| [ContentBrowseConfig](interfaces/content-browse-config.md) | - |
+| [ContentBrowseBaseConfig](interfaces/content-browse-base-config.md) | Base configuration properties shared across all launch modes. Contains common properties available in both browse and preview modes. |
+| [BrowseModeConfig](interfaces/browse-mode-config.md) | Configuration for browse mode - the default workflow where users see template gallery first. This is the standard flow where users browse templates and then select one to preview. Extends base config with browse-specific properties like search and filters. |
+| [PreviewModeConfig](interfaces/preview-mode-config.md) | Configuration for preview mode - directly launches into template preview. This workflow bypasses the template gallery and goes straight to the preview section for a specific template. Only works with TEMPLATES category. Extends base config with preview-specific properties (templateId). |
 | [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |
 | [WarmupAppConfig](interfaces/warmup-app-config.md) | - |
+
+## Type Aliases
+
+| Type Alias | Description |
+| ------ | ------ |
+| [ContentBrowseConfig](type-aliases/content-browse-config.md) | Content browse configuration using discriminated union for type-safe launch modes. |

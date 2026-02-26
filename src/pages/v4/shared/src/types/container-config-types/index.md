@@ -28,4 +28,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [ContainerConfig](type-aliases/container-config.md) | Parameters to define target editor modal dialog UI constraints. Default mode is ModalParams. The iframe would open in dialog. |
+| [ContainerConfig](type-aliases/container-config.md) | Parameters to define target editor modal dialog UI constraints. Default mode is ModalParams. The iframe would open in dialog. Union of all container configurations, [InlineContainerConfig](interfaces/inline-container-config.md), [ModalContainerConfig](interfaces/modal-container-config.md), and [FillContainerConfig](interfaces/fill-container-config.md). |

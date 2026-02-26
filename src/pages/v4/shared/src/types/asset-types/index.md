@@ -35,8 +35,8 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [ImageModuleFileTypes](type-aliases/image-module-file-types.md) | - |
-| [FileType](type-aliases/file-type.md) | - |
+| [ImageModuleFileTypes](type-aliases/image-module-file-types.md) | Union type of all values in [ImageModuleFileTypes](variables/image-module-file-types.md). |
+| [FileType](type-aliases/file-type.md) | Union type of all values in [FileType](variables/file-type.md) |
 | [Base64Asset](type-aliases/base64-asset.md) | Represents an Asset object containing Base64 encoded data. |
 | [UrlAsset](type-aliases/url-asset.md) | Represents an Asset object containing video data within a presigned URL. |
 | [BlobAsset](type-aliases/blob-asset.md) | Represents an Asset object containing blob/file data. |
@@ -49,5 +49,5 @@ hideEditInGitHub: true
 
 | Variable | Description |
 | ------ | ------ |
-| [ImageModuleFileTypes](variables/image-module-file-types.md) | - |
-| [FileType](variables/file-type.md) | - |
+| [ImageModuleFileTypes](variables/image-module-file-types.md) | All file types supported by the image module. |
+| [FileType](variables/file-type.md) | All supported export mime types. |
