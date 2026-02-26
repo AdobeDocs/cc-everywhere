@@ -85,12 +85,11 @@ The project will have a structure like this:
 
 ### 1.2 Set up the API key
 
-Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+Locate the `src/.env.example` file, rename it to `.env`, and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
 ```
-
 
 <InlineAlert variant="info" slots="text1" />
 
@@ -116,7 +115,6 @@ When clicking the **Generate Image** button, the Adobe Express Generate Image mo
 When the users click the Save button, the sample project will handle the file transfer between Adobe Express and the web page hosting it, and the generated image will be displayed in lieu of the placeholder.
 
 ![Generate image thumbnail](./images/generate-image--thumb.png)
-
 
 <InlineAlert variant="error" slots="header, text1" />
 
@@ -161,7 +159,6 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-
 <InlineAlert variant="info" slots="text1" />
 
 There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
@@ -196,7 +193,6 @@ const { module } = await window.CCEverywhere.initialize(
 ```
 
 The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
-
 
 <InlineAlert variant="warning" slots="text1" />
 

@@ -75,12 +75,11 @@ The project will have a structure like this:
 
 ### 1.2 Set up the API key
 
-Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+Locate the `src/.env.example` file, rename it to `.env`, and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
 ```
-
 
 <InlineAlert variant="info" slots="text1" />
 
@@ -106,7 +105,6 @@ Click the **Edit Image** button to launch the Adobe Express Edit Image module wi
 When the users click the **Save image** button in the top-right corner—this only becomes enabled after the image is edited—the sample project will handle the file transfer between Adobe Express and the web page hosting it, and the edited image will be displayed in lieu of the original.
 
 ![Embed SDK Edit Image edited image](./images/edit-image--edited-image.png)
-
 
 <InlineAlert variant="error" slots="header, text1" />
 
@@ -153,7 +151,6 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 console.log("CCEverywhere loaded", window.CCEverywhere);
 ```
 
-
 <InlineAlert variant="info" slots="text1" />
 
 There are several ways to import `CCEverywhere.js`: for more information, please refer to the [Quickstart Guide](../quickstart/index.md).
@@ -189,10 +186,9 @@ const { module } = await window.CCEverywhere.initialize(
 
 The [`hostInfo`](../../v4/index.md) object is required: the `clientId` contains your API Key (here, retrieved by Vite from the `.env` file) and the `appName`.
 
-
 <InlineAlert variant="warning" slots="text1" />
 
- The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
+The `appName` must match the `Public App Name` in the Developer Console, and it will be displayed in the Adobe Express UI as a folder where users can store their documents. All [`configParams`](../../reference/initialize/index.md#configparams) are optional.
 
 ### 2.3 Load the `module`
 

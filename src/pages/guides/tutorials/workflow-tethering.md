@@ -98,12 +98,11 @@ The project features a **modular architecture** with this structure:
 
 ### 1.2 Set up the API key
 
-Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+Locate the `src/.env.example` file, rename it to `.env`, and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
 ```
-
 
 <InlineAlert variant="info" slots="text1" />
 
@@ -394,7 +393,6 @@ export const baseCallbacks = {
 The `generateImageAppConfig` object creation follows a dependency chain across these multiple files:
 
 - **`config/appConfigs.js`**: the `createGenerateImageAppConfig()` factory function orchestrates the configuration creation:
-
   - `createIntentChangeHandler()` is executed to create the [`onIntentChange()`](../../v4/shared/src/types/callbacks-types/type-aliases/intent-change-callback.md) handler for workflow transitions. Internally, this function calls `createGenerateToEditTransition()` imported from `workflows/generateToEdit.js`, and returns the export configuration for the Edit Image workflow that is tethered to, i.e., follows after, Generate Image.
   - It passes both the `baseCallbacks` from `utils/shared.js` and the `intentChangeHandler` to `createGenerateImageWorkflowConfig()` from `workflows/generateToEdit.js`, which returns the complete configuration object for the Generate Image workflow.
 
@@ -596,7 +594,6 @@ export const baseCallbacks = {
 The `editImageAppConfig` object creation follows a dependency chain across these multiple files:
 
 - **`config/appConfigs.js`**: the `createEditImageAppConfig()` factory function orchestrates the configuration creation:
-
   - `createIntentChangeHandler()` is executed to create the `onIntentChange()` handler for workflow transitions. Internally, this function calls `createEditToFullEditorTransition()` imported from `workflows/editToFullEditor.js`, and returns the export configuration for the Full Editor workflow that is tethered to, i.e., follows after, Edit Image.
   - It passes both the `baseCallbacks` from `utils/shared.js` and the `intentChangeHandler` to `createEditImageWorkflowConfig()` from `workflows/editToFullEditor.js`, which returns the complete configuration object for the Edit Image workflow.
 
@@ -705,23 +702,19 @@ Let's trace through the complete user journeys to understand how all the pieces 
 ### 5.1 Generate Image → Edit Image → Save
 
 - The user selects **Generate Image**:
-
   - `main.js` sets `currentWorkflow = "generate"`
   - SDK launches with `generateImageAppConfig` + `startGenImageExportConfig`
 
 - The user generates an image
-
   - `handleGenerateImagePublish()` updates `generateImage.src`
   - Workflow state resets
 
 - The user selects **Edit image** in the Generate Image experience:
-
   - `onIntentChange()` detects `"create-image-from-text"` as the old intent
   - `createGenerateToEditTransition()` returns `endEditImageExportConfig`
   - SDK transitions to Edit Image with different export buttons
 
 - The user edits and clicks **Save final image**
-
   - `handleEditImagePublish()` would be called
   - Image updates and workflow completes
 
@@ -734,18 +727,15 @@ Currently, Generate Image transitions only support Edit Image v1. Support for v2
 ### 5.2 Edit Image → Full Editor → Save
 
 - The user selects **Edit Image** (direct entry):
-
   - `main.js` sets `currentWorkflow = "edit"`
   - SDK launches with `editImageAppConfig` + `startEditImageExportConfig`
 
 - The user selects **Do More** → **Add text** (or other advanced option):
-
   - `onIntentChange()` detects `"edit-image-v2"` as the old intent
   - `createEditToFullEditorTransition()` returns `endFullEditorExportConfig`
   - SDK launches the Full Editor with different export buttons
 
 - The user performs advanced editing and clicks **Save design**
-
   - `handleFullEditorPublish()` updates `expressImage.src`
   - `currentImageBlob` cache updates for future edits
   - Workflow completes with advanced editing applied
