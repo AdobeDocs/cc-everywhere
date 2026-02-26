@@ -600,11 +600,11 @@ Unlike Android, where explicit `CookieManager` configuration is required for bot
 
 Because the popup WebView is created with the system-provided `configuration`—which references the same data store as the main WebView—**authentication cookies set during the OAuth flow in the popup are immediately available to the main WebView**. No additional cookie management code is needed.
 
-<InlineAlert slots="heading, text" variant="info"/>
+<InlineAlert slots="heading, text" variant="warning"/>
 
 ##### Login issues
 
-In case you are facing issues with the login process, contact your Adobe representative and ask them to switch the SUSI-Light sign-in experience to SUSI.
+In case you are facing issues with the login process on iOS, contact your Adobe representative and ask them to switch the SUSI-Light sign-in experience to SUSI.
 
 ### Complete Configuration Flow
 
