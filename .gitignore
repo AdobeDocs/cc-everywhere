@@ -46,3 +46,4 @@ local-test.yml
 yalc.lock
 
 temp
+linter-report.txt
