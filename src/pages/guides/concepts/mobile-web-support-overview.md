@@ -60,24 +60,10 @@ For native Mobile apps, we suggest using the [Swift](https://github.com/AdobeDoc
 
 ## Known Limitations
 
-- Mobile Web on iOS devices only supports [Generate Image](./generate-image-v2.md) and [Edit Image](./edit-image.md) modules.
-
-<DiscoverBlock slots="heading, link, text" width="33%" />
+Mobile Web on iOS devices **only supports** [Generate Image](./generate-image-v2.md) and [Edit Image](./edit-image.md) modules.
 
 ## Read Next
 
-[mWeb in the Browser](./mobile-web-support-browser.md)
-
-Learn how to implement mWeb for Mobile Browser use cases.
-
-<DiscoverBlock slots="heading, link, text" width="33%"/>
-
-[mWeb in a WebView](./mobile-web-support-webview.md)
-
-Learn how to implement mWeb in iOS/Android Apps.
-
-<DiscoverBlock slots="heading, link, text" width="33%"/>
-
-[Mobile Web Tutorial](../tutorials/mobile-web.md)
-
-Full Web, Android, and iOS sample project tutorial.
+- [Mobile Web in the Browser](./mobile-web-support-browser.md)
+- [Mobile Web in a WebView](./mobile-web-support-webview.md)
+- [Mobile Web Tutorial](../tutorials/mobile-web.md), an end-to-end tutorial featuring Web, Android, and iOS sample projects.
