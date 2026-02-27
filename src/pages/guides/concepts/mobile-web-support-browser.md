@@ -31,7 +31,7 @@ Mobile web support is ideal for applications that need to reach users across all
 
 Before implementing mobile web support, you should have a solid understanding of the basic Adobe Express Embed SDK integration. We recommend completing the following resources first:
 
-- **[Mobile Web Overview](./mobile-web-support--overview.md)**: Learn about the different ways to implement mobile web support.
+- **[Mobile Web Overview](./mobile-web-support-overview.md)**: Learn about the different ways to implement mobile web support.
 - **[Quickstart Guide](../quickstart/index.md)**: Learn the fundamentals of SDK integration, including setup, initialization, and basic configuration
 - **[Getting Started Tutorial](../tutorials/getting-started.md)**: Follow a hands-on tutorial to build your first integration
 - **[SDK Tutorials](../tutorials/index.md)**: Explore additional tutorials for specific workflows like Generate Image and Edit Image modules
@@ -497,6 +497,7 @@ const initializeWithFallback = async () => {
 
 ## Related Resources
 
+- [Mobile Web Tutorial](../tutorials/mobile-web.md)
 - [Getting Started with Adobe Express Embed SDK](../quickstart/index.md)
 - [Technical Requirements](../quickstart/technical-requirements.md)
 - [Initialize SDK Reference](../../reference/initialize/index.md)

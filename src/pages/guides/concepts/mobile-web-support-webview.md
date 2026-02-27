@@ -24,14 +24,14 @@ Mobile Web experiences can be delivered through a WebView in native iOS/Android 
 
 ## When to use Mobile Web in a WebView
 
-As discussed in the [Overview](./mobile-web-support--overview.md), there are trade-offs between Mobile Web and Mobile SDKs. While we suggest evaluating the Mobile SDKs when possible, it makes sense to rely on the Mobile Web approach when **the Embed experience is just one element of a larger app that is already served through a WebView**.
+As discussed in the [Overview](./mobile-web-support-overview.md), there are trade-offs between Mobile Web and Mobile SDKs. While we suggest evaluating the Mobile SDKs when possible, it makes sense to rely on the Mobile Web approach when **the Embed experience is just one element of a larger app that is already served through a WebView**.
 
 ## Prerequisites
 
 Before implementing iOS/Android WebView support, we recommend reviewing the following resources first:
 
-- **[Mobile Web Overview](./mobile-web-support--overview.md)**: Learn about the different ways to implement mobile web support.
-- **[Mobile Web in the Browser](./mobile-web-support--browser.md)**: Familiarize yourself with the Mobile Web approach in the Browser.
+- **[Mobile Web Overview](./mobile-web-support-overview.md)**: Learn about the different ways to implement mobile web support.
+- **[Mobile Web in the Browser](./mobile-web-support-browser.md)**: Familiarize yourself with the Mobile Web approach in the Browser.
 
 Knowledge of **native Android/iOS development** is also required.
 
@@ -43,7 +43,7 @@ On the native, mobile app side, you need to ensure that the WebView is properly 
 
 ### Embed SDK Configuration
 
-Make sure that you pass the `skipBrowserSupportCheck` parameter to the `initialize` function as described in this [Configuration](./mobile-web-support--browser.md#configuration) section.
+Make sure that you pass the `skipBrowserSupportCheck` parameter to the `initialize` function as described in this [Configuration](./mobile-web-support-browser.md#configuration) section.
 
 ```javascript-data-line="8"
 const hostInfo = {
@@ -63,7 +63,7 @@ const { editor, module, quickAction } = await window.CCEverywhere.initialize(
 );
 ```
 
-Follow the same best practices for mobile UI design and implementation as described in the [Mobile Web in the Browser](./mobile-web-support--browser.md#advanced-configuration) guide.
+Follow the same best practices for mobile UI design and implementation as described in the [Mobile Web in the Browser](./mobile-web-support-browser.md#advanced-configuration) guide.
 
 ### Multi-platform WebView Configuration
 

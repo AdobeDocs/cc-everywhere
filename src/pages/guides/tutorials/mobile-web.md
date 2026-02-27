@@ -40,7 +40,7 @@ We'll build a mock **Fantasy Chess Game**, where users can **generate their own 
 - An **iOS native application** developed in [Swift](https://developer.apple.com/swift/) that loads the Web-based Embed SDK experience into a WebView.
 - A similar **Android native application** developed in [Kotlin](https://kotlinlang.org/).
 
-You will **develop locally** on your machine, and run the mobile applications through **simulators in Apple Xcode and Android Studio**. The table below (reproduced for convenience from the [Mobile Web Overview](./mobile-web-support--overview.md)) shows the available ways to integrate the Embed SDK into multiple surfaces; this tutorial covers **the first three use cases**.
+You will **develop locally** on your machine, and run the mobile applications through **simulators in Apple Xcode and Android Studio**. The table below (reproduced for convenience from the [Mobile Web Overview](./mobile-web-support-overview.md)) shows the available ways to integrate the Embed SDK into multiple surfaces; this tutorial covers **the first three use cases**.
 
 |     | Device         | Integration type | Runtime | Description                                                                          |
 | --- | -------------- | ---------------- | ------- | ------------------------------------------------------------------------------------ |
@@ -60,9 +60,9 @@ Before we begin, make sure you have the following:
 
 We also recommend reviewing the following resources first:
 
-- **[Mobile Web Overview](./mobile-web-support--overview.md)**: The different ways to implement mobile web support.
-- **[Mobile Web in the Browser](./mobile-web-support--browser.md)**: The Mobile Web approach in the Browser.
-- **[Mobile Web in a WebView](./mobile-web-support--webview.md)**: The Mobile Web approach in iOS and Android WebViews.
+- **[Mobile Web Overview](./mobile-web-support-overview.md)**: The different ways to implement mobile web support.
+- **[Mobile Web in the Browser](./mobile-web-support-browser.md)**: The Mobile Web approach in the Browser.
+- **[Mobile Web in a WebView](./mobile-web-support-webview.md)**: The Mobile Web approach in iOS and Android WebViews.
 
 Given the complexity of the project, for the sake of brevity and clarity, we will focus on the parts that are most relevant to the main goal of the tutorial. The complete code is available in the [embed-sdk-mobile-web-tutorial](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-mobile-web) repository on GitHub, if you want to check the entire implementation.
 
@@ -228,7 +228,7 @@ It's used first to display the platform information in the UI via the green `<sp
 
 ![Platform display in the UI](./images/mobile-web--platform-badge.png)
 
-At initialization time, you need to set the [`skipBrowserSupportCheck`](../concepts/mobile-web-support--browser.md#2-add-mobile-detection) parameter to allow Mobile Web browsers to be used.
+At initialization time, you need to set the [`skipBrowserSupportCheck`](../concepts/mobile-web-support-browser.md#2-add-mobile-detection) parameter to allow Mobile Web browsers to be used.
 
 ```js-data-line="13-15"
 // main.js
@@ -317,16 +317,16 @@ private fun setUpStartGameHandlers() {
 
 ### 3.3 Configure the WebView
 
-The Embed SDK runs in JavaScript and the Adobe sign-in experience relies on popup windows that must be managed by the WebView itself. Follow these best practices from the [Mobile Web Concept Guide](../concepts/mobile-web-support--webview.md) to configure it.
+The Embed SDK runs in JavaScript and the Adobe sign-in experience relies on popup windows that must be managed by the WebView itself. Follow these best practices from the [Mobile Web Concept Guide](../concepts/mobile-web-support-webview.md) to configure it.
 
-- [**JavaScript execution, storage APIs, and consistent text sizing**](../concepts/mobile-web-support--webview.md#android-implementation).
-- [**Multiple windows for the sign-in dialog**](../concepts/mobile-web-support--webview.md#enabling-multiple-windows-for-authentication).
-- [**OAuth compatibility**](../concepts/mobile-web-support--webview.md#handling-oauth-compatibility).
-- [**Popup window handling via `WebChromeClient.onCreateWindow()` and `WebViewTransport` wiring**](../concepts/mobile-web-support--webview.md#implementing-window-creation-with-webchromeclient).
-- [**Popup WebViews configuration**](../concepts/mobile-web-support--webview.md#configuring-popup-webviews).
-- [**Cookie acceptance for auth persistence**](../concepts/mobile-web-support--webview.md#cookie-configuration-for-authentication-persistence).
+- [**JavaScript execution, storage APIs, and consistent text sizing**](../concepts/mobile-web-support-webview.md#android-implementation).
+- [**Multiple windows for the sign-in dialog**](../concepts/mobile-web-support-webview.md#enabling-multiple-windows-for-authentication).
+- [**OAuth compatibility**](../concepts/mobile-web-support-webview.md#handling-oauth-compatibility).
+- [**Popup window handling via `WebChromeClient.onCreateWindow()` and `WebViewTransport` wiring**](../concepts/mobile-web-support-webview.md#implementing-window-creation-with-webchromeclient).
+- [**Popup WebViews configuration**](../concepts/mobile-web-support-webview.md#configuring-popup-webviews).
+- [**Cookie acceptance for auth persistence**](../concepts/mobile-web-support-webview.md#cookie-configuration-for-authentication-persistence).
 
-In the sample app, all of these settings are applied in `configureWebView()`, which is called during `onCreate()` before any content is loaded. For the entire view of the setup, refer to the [Complete Android Configuration Flow](../concepts/mobile-web-support--webview.md#complete-configuration-flow).
+In the sample app, all of these settings are applied in `configureWebView()`, which is called during `onCreate()` before any content is loaded. For the entire view of the setup, refer to the [Complete Android Configuration Flow](../concepts/mobile-web-support-webview.md#complete-configuration-flow).
 
 ### 3.4 Run the app
 
@@ -362,16 +362,16 @@ In the sample app, the URL is loaded from the button handler:
 
 ### 4.3 Configure the WebView
 
-Unlike Android, iOS requires that most WebView settings are provided up front through a `WKWebViewConfiguration`—they cannot be changed after the `WKWebView` is created. Follow these best practices from the iOS section of the [Mobile Web in a WebView Concept Guide](../concepts/mobile-web-support--webview.md#ios-implementation):
+Unlike Android, iOS requires that most WebView settings are provided up front through a `WKWebViewConfiguration`—they cannot be changed after the `WKWebView` is created. Follow these best practices from the iOS section of the [Mobile Web in a WebView Concept Guide](../concepts/mobile-web-support-webview.md#ios-implementation):
 
-- [**`WKWebView` Configuration**](../concepts/mobile-web-support--webview.md#wkwebview-configuration) (JavaScript, data store, popup capability)
-- [**Viewport and Zoom Control**](../concepts/mobile-web-support--webview.md#viewport-and-zoom-control) (prevent layout-breaking zoom behavior)
-- [**OAuth compatibility (custom user agent)**](../concepts/mobile-web-support--webview.md#handling-oauth-compatibility)
-- [**Popup windows (`WKUIDelegate`)**](../concepts/mobile-web-support--webview.md#implementing-popup-windows-with-wkuidelegate)
-- [**Popup cleanup**](../concepts/mobile-web-support--webview.md#popup-cleanup)
-- [**Cookie and session persistence**](../concepts/mobile-web-support--webview.md#cookie-and-session-persistence)
+- [**`WKWebView` Configuration**](../concepts/mobile-web-support-webview.md#wkwebview-configuration) (JavaScript, data store, popup capability)
+- [**Viewport and Zoom Control**](../concepts/mobile-web-support-webview.md#viewport-and-zoom-control) (prevent layout-breaking zoom behavior)
+- [**OAuth compatibility (custom user agent)**](../concepts/mobile-web-support-webview.md#handling-oauth-compatibility)
+- [**Popup windows (`WKUIDelegate`)**](../concepts/mobile-web-support-webview.md#implementing-popup-windows-with-wkuidelegate)
+- [**Popup cleanup**](../concepts/mobile-web-support-webview.md#popup-cleanup)
+- [**Cookie and session persistence**](../concepts/mobile-web-support-webview.md#cookie-and-session-persistence)
 
-For the entire view of the setup, refer to the [Complete iOS Configuration Flow](../concepts/mobile-web-support--webview.md#complete-configuration-flow).
+For the entire view of the setup, refer to the [Complete iOS Configuration Flow](../concepts/mobile-web-support-webview.md#complete-configuration-flow).
 
 <InlineAlert slots="heading, text" variant="warning"/>
 
@@ -395,9 +395,9 @@ The code samples for this tutorial (Web Server and Client, Android and iOS appli
 
 Go deeper on Mobile Web support:
 
-- **[Mobile Web Overview](../concepts/mobile-web-support--overview.md)**: Understand the available integration surfaces (Desktop Web, Mobile Web in Browser, Mobile Web in WebView) and when to pick each.
-- **[Mobile Web in the Browser](../concepts/mobile-web-support--browser.md)**: Best practices for running the Embed SDK directly in mobile browsers (including the `skipBrowserSupportCheck` approach).
-- **[Mobile Web in a WebView](../concepts/mobile-web-support--webview.md)**: The platform-specific WebView configuration required for iOS/Android apps (multi-window auth popups, cookie persistence, user agent, etc.).
+- **[Mobile Web Overview](../concepts/mobile-web-support-overview.md)**: Understand the available integration surfaces (Desktop Web, Mobile Web in Browser, Mobile Web in WebView) and when to pick each.
+- **[Mobile Web in the Browser](../concepts/mobile-web-support-browser.md)**: Best practices for running the Embed SDK directly in mobile browsers (including the `skipBrowserSupportCheck` approach).
+- **[Mobile Web in a WebView](../concepts/mobile-web-support-webview.md)**: The platform-specific WebView configuration required for iOS/Android apps (multi-window auth popups, cookie persistence, user agent, etc.).
 
 **Reference docs**:
 
