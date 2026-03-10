@@ -15,3 +15,6 @@ type ExportOptionOrGroup =
   | ContinueEditingGroup
   | PublishButtonGroup;
 ```
+
+Either a single [ExportOption](export-option.md) or a grouped configuration such as [ExportOptionGroup](../interfaces/export-option-group.md),
+[ContinueEditingGroup](../interfaces/continue-editing-group.md), or [PublishButtonGroup](../interfaces/publish-button-group.md).

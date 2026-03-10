@@ -12,4 +12,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditorAppConfig](type-aliases/editor-app-config.md) | - |
+| [EditorAppConfig](type-aliases/editor-app-config.md) | Editor app config for 3P. |

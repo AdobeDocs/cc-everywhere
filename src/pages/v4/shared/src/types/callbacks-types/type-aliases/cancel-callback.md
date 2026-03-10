@@ -9,8 +9,14 @@ hideEditInGitHub: true
 # Type Alias: CancelCallback()
 
 ```ts
-type CancelCallback = () => void;
+type CancelCallback = (isEscapePressed) => void;
 ```
+
+## Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `isEscapePressed` | `boolean` |
 
 ## Returns
 

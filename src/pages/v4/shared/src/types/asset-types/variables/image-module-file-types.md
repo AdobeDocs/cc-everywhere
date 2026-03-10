@@ -14,3 +14,10 @@ const ImageModuleFileTypes: (
   | PNG
   | PDF)[];
 ```
+
+All file types supported by the image module.
+
+## See
+
+ - [ImageFileType](../enumerations/image-file-type.md)
+ - [PdfFileType](../enumerations/pdf-file-type.md)

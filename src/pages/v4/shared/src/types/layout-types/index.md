@@ -18,10 +18,10 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [CanvasInfo](type-aliases/canvas-info.md) | - |
+| [CanvasInfo](type-aliases/canvas-info.md) | Canvas info for the canvas type. |
 
 ## Variables
 
 | Variable | Description |
 | ------ | ------ |
-| [CanvasTypeInfo](variables/canvas-type-info.md) | - |
+| [CanvasTypeInfo](variables/canvas-type-info.md) | Canvas type info for the canvas type. |

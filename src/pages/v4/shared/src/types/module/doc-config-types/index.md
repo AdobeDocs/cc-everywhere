@@ -13,9 +13,10 @@ hideEditInGitHub: true
 | Interface | Description |
 | ------ | ------ |
 | [EditImageDocConfig](interfaces/edit-image-doc-config.md) | - |
+| [EditDesignDocConfig](interfaces/edit-design-doc-config.md) | - |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [EditImageIntent](type-aliases/edit-image-intent.md) | - |
+| [EditImageIntent](type-aliases/edit-image-intent.md) | Intent type for editing image. |

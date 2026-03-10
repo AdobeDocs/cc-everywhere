@@ -11,3 +11,10 @@ hideEditInGitHub: true
 ```ts
 type AppConfig = EditorAppConfig1P & EditorAppConfig;
 ```
+
+The type of app configuration.
+
+## See
+
+ - EditorAppConfig1P
+ - [EditorAppConfig3P](../../../3p/editor/app-config-types/type-aliases/editor-app-config.md)

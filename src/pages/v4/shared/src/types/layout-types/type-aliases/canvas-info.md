@@ -12,6 +12,8 @@ hideEditInGitHub: true
 type CanvasInfo = object & Size;
 ```
 
+Canvas info for the canvas type.
+
 ## Type Declaration
 
 ### taskId
@@ -19,3 +21,7 @@ type CanvasInfo = object & Size;
 ```ts
 taskId: string;
 ```
+
+## See
+
+[Size](../../asset-types/interfaces/size.md)

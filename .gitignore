@@ -45,6 +45,5 @@ local-test.yml
 .yalc
 yalc.lock
 
-1.n-sample
-cdn-test
-frameworks
+temp
+linter-report.txt

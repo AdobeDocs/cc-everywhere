@@ -13,5 +13,9 @@ type ExportAction =
   | PublishAction
   | DownloadAction
   | EditFurtherAction
-  | ContinueEditingAction;
+  | ContinueEditingAction
+  | CallBackAction;
 ```
+
+Union of all export action payloads, covering [PublishAction](../interfaces/publish-action.md), [DownloadAction](../interfaces/download-action.md),
+[EditFurtherAction](../interfaces/edit-further-action.md), [ContinueEditingAction](continue-editing-action.md), and [CallBackAction](../interfaces/call-back-action.md).

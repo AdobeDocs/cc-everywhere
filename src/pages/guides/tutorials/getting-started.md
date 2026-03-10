@@ -14,8 +14,6 @@ contributors:
 
 A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
 
-&lt;!-- **TODO**: add a video, Hamza-style. --&gt;
-
 ## Introduction
 
 Hi developers, and welcome to this tutorial! The Embed SDK is an amazing opportunity for any project, allowing you to **launch Adobe Express directly from your web applications.** This guide will walk you through setting up the credentials and starting to implement the SDK.
@@ -61,7 +59,7 @@ The **API key cannot be modified.** Please keep it safe and away from prying eye
 
 ## Running the sample project
 
-Now that you have the API key let's set up the sample project to test the Embed SDK locally. Clone the [embed-sdk-getting-started](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-getting-started) sample from GitHub and navigate to the project directory. Locate the `.env` file and replace your API Key there:
+Now that you have the API key let's set up the sample project to test the Embed SDK locally. Clone the [embed-sdk-getting-started](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-getting-started) sample from GitHub and navigate to the project directory. Locate the `src/.env.example` file, rename it to `.env`, and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"

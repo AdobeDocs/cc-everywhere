@@ -12,7 +12,7 @@ hideEditInGitHub: true
 
 | Interface | Description |
 | ------ | ------ |
-| [AppConfig](interfaces/app-config.md) | - |
+| [AppConfig](interfaces/app-config.md) | App config for 3P. |
 
 ## Type Aliases
 

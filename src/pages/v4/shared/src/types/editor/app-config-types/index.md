@@ -18,4 +18,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AppConfig](type-aliases/app-config.md) | - |
+| [AppConfig](type-aliases/app-config.md) | The type of app configuration. |

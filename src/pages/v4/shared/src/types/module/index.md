@@ -22,6 +22,12 @@ Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-ve
 
 <HorizontalLine />
 
+### EditDesignAppVersion
+
+Re-exports [EditDesignAppVersion](app-config-types/enumerations/edit-design-app-version.md)
+
+<HorizontalLine />
+
 ### ThumbnailOption
 
 Re-exports [ThumbnailOption](app-config-types/enumerations/thumbnail-option.md)
@@ -88,9 +94,27 @@ Re-exports [StartFromContentAppConfig](app-config-types/interfaces/start-from-co
 
 <HorizontalLine />
 
+### ContentBrowseBaseConfig
+
+Re-exports [ContentBrowseBaseConfig](app-config-types/interfaces/content-browse-base-config.md)
+
+<HorizontalLine />
+
+### BrowseModeConfig
+
+Re-exports [BrowseModeConfig](app-config-types/interfaces/browse-mode-config.md)
+
+<HorizontalLine />
+
+### PreviewModeConfig
+
+Re-exports [PreviewModeConfig](app-config-types/interfaces/preview-mode-config.md)
+
+<HorizontalLine />
+
 ### ContentBrowseConfig
 
-Re-exports [ContentBrowseConfig](app-config-types/interfaces/content-browse-config.md)
+Re-exports [ContentBrowseConfig](app-config-types/type-aliases/content-browse-config.md)
 
 <HorizontalLine />
 
@@ -130,6 +154,12 @@ Re-exports [WarmupDesignConfig](design-config-types/interfaces/warmup-design-con
 
 <HorizontalLine />
 
+### EditDesignDesignConfig
+
+Re-exports [EditDesignDesignConfig](design-config-types/interfaces/edit-design-design-config.md)
+
+<HorizontalLine />
+
 ### EditImageIntent
 
 Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
@@ -139,3 +169,9 @@ Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
 ### EditImageDocConfig
 
 Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-config.md)
+
+<HorizontalLine />
+
+### EditDesignDocConfig
+
+Re-exports [EditDesignDocConfig](doc-config-types/interfaces/edit-design-doc-config.md)

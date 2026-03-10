@@ -37,7 +37,7 @@ Before we begin, make sure you have the following:
 
 ## Running the sample project
 
-Let's have a look at what we're going to build. First off, clone the [embed-sdk-full-editor-tutorial](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) sample from GitHub and navigate to the project directory. Locate the `src/.env` file and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
+Let's have a look at what we're going to build. First off, clone the [embed-sdk-full-editor-tutorial](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-full-editor) sample from GitHub and navigate to the project directory. Locate the `src/.env.example` file, rename it to `.env`, and replace the placeholder string in the `VITE_API_KEY` with your Embed SDK API Key:
 
 ```bash
 VITE_API_KEY="your-api-key-here!"
@@ -207,7 +207,7 @@ document.getElementById("createDesign").onclick = async () => {
 
 ![Launching the Full Editor](./images/full-editor_launch.png)
 
-&lt;!-- Info Alert  --&gt;
+&lt;!-- Info Alert --&gt;
 <InlineAlert variant="info" slots="text1" />
 
 Please don't be scared by the red warning toast at the bottom of the screen: it is just a reminder that the Embed SDK is providing access via your credentials, but you must **submit the integration and request approval** from Adobe before you can go live. Please check the [Submission and Review](../review/index.md) section to learn more.

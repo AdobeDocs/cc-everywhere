@@ -21,4 +21,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [DesignConfig](type-aliases/design-config.md) | - |
+| [DesignConfig](type-aliases/design-config.md) | The type of design configuration. |

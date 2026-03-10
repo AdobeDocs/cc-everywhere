@@ -25,5 +25,5 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [BrowseSearchConfigUnion](type-aliases/browse-search-config-union.md) | - |
-| [BrowseSearchGenericConfig](type-aliases/browse-search-generic-config.md) | - |
+| [BrowseSearchConfigUnion](type-aliases/browse-search-config-union.md) | Union type representing all possible browse search configurations. |
+| [BrowseSearchGenericConfig](type-aliases/browse-search-generic-config.md) | Generic configuration for browse search. |

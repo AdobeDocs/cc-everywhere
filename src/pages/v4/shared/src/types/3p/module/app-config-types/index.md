@@ -12,5 +12,5 @@ hideEditInGitHub: true
 
 | Interface | Description |
 | ------ | ------ |
-| [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
-| [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |
+| [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | App config for 3P. |
+| [EditImageAppConfig](interfaces/edit-image-app-config.md) | App config for 3P. |

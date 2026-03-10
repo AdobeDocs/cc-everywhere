@@ -11,3 +11,5 @@ hideEditInGitHub: true
 ```ts
 type ExportOptions = ExportOptionOrGroup[];
 ```
+
+Array of [ExportOptionOrGroup](export-option-or-group.md) entries that make up an export configuration.
