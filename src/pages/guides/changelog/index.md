@@ -22,9 +22,15 @@ contributors:
 
 Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration-v3-v4.md) for detailed instructions.
 
-## [4.43.13] 2026-02-27
+## [4.43.13] 2026-03-10
 
-### Maintenance release
+### Documentation
+
+- Expanded the **Mobile Web Concept Guide** to cover all the implementation details:
+  - New [Overview](../concepts/mobile-web-support-overview.md) with a clear comparison between Mobile Web and Mobile SDKs.
+  - New [Mobile Web in a WebView](../concepts/mobile-web-support-webview.md) concept guide that covers the implementation details of the experience for iOS and Android apps.
+  - Improved information architecture for the Mobile Web section.
+- New [Mobile Web tutorial](../tutorials/mobile-web.md) with a Fantasy Sports themed, badge creation end-to-end example with working sample projects for Web (client and server), Android and iOS.
 
 ## [4.41.14] 2026-01-30
 
