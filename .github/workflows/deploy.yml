@@ -30,4 +30,4 @@ jobs:
     with:
       env: ${{ inputs.env || 'prod' }}
       baseSha: ${{ inputs.baseSha || '' }}
-      deployAll: ${{ inputs.deployAll || true }}
+      deployAll: ${{ inputs.deployAll || false }}
