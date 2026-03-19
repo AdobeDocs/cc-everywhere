@@ -9,6 +9,5 @@ hideEditInGitHub: true
 # Type Alias: FeatureFlags
 
 ```ts
-type FeatureFlags = Record<string, string | number | boolean>;
+type FeatureFlags = Record\<string, string | number | boolean\>;
 ```
-

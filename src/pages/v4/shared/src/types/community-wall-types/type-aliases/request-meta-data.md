@@ -9,7 +9,7 @@ hideEditInGitHub: true
 # Type Alias: RequestMetaData
 
 ```ts
-type RequestMetaData = Record<string, string | number | boolean>;
+type RequestMetaData = Record\<string, string | number | boolean\>;
 ```
 
 Metadata for the data request from hz
