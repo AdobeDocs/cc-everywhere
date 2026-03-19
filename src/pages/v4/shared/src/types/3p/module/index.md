@@ -19,3 +19,9 @@ Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-
 ### EditImageAppConfig
 
 Re-exports [EditImageAppConfig](app-config-types/interfaces/edit-image-app-config.md)
+
+<HorizontalLine />
+
+### DesignViewerAppConfig
+
+Re-exports [DesignViewerAppConfig](app-config-types/interfaces/design-viewer-app-config.md)

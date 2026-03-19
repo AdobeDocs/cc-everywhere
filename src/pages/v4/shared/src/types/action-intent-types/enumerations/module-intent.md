@@ -18,3 +18,4 @@ hideEditInGitHub: true
 | `CREATE_TEMPLATE_FROM_TEXT` | `"create-template-from-text"` |
 | `START_FROM_CONTENT` | `"start-from-content"` |
 | `EDIT_DESIGN` | `"edit-design-from-template"` |
+| `VIEW_DESIGN` | `"view-design"` |

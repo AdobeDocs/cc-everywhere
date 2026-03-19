@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: LinkStyle
 
+Style for a link-style export option (no button chrome).
+
+## See
+
+ - [Style](style.md) for the base interface
+ - [ExportStyle](../type-aliases/export-style.md) for the union of all export styles
+
 ## Extends
 
 - [`Style`](style.md)

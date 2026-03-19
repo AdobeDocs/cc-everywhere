@@ -42,4 +42,4 @@ hideEditInGitHub: true
 
 | Variable | Description |
 | ------ | ------ |
-| [HostTypeName](variables/host-type-name.md) | - |
+| [HostTypeName](variables/host-type-name.md) | Display names for [HostType](enumerations/host-type.md) values (e.g. "1st party", "3rd party"). |

@@ -25,6 +25,9 @@ type ExportOption =
 | LinkStyle>;
 ```
 
+## See
+
+[ExportOptions](export-options.md) for the array type used in export configuration
 Represents the available export options for the CC Everywhere SDK.
 
 This union type includes:

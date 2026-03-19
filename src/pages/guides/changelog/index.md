@@ -16,11 +16,11 @@ contributors:
 
 # Changelog
 
-<InlineAlert variant="error" slots="header, text" />
+## [4.44.14] 2026-03-19
 
-### SDK v1 and v2 End of Life
+### Added
 
-Embed SDK v1 and v2 have reached End of Life on **May 2025** and they're no longer supported. Please upgrade to the latest SDK (version 4) to avoid disruption. Refer to our [Migration Guide](../concepts/migration-v3-v4.md) for detailed instructions.
+- **[`CCEverywhere.viewDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#viewdesign)**: Added a new Design Viewer module to the SDK, alongside with a dedicated [`DesignViewerAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config.md) interface to configure the module and a [`DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md) interface to pass the document configuration.
 
 ## [4.43.13] 2026-03-10
 

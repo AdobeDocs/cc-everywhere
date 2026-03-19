@@ -12,4 +12,9 @@ hideEditInGitHub: true
 type EnabledButtonStyle = BaseButtonStyle<ENABLED_BUTTON>;
 ```
 
-Represents the style of a button always enabled.The uiType is [BaseButtonStyle](../interfaces/base-button-style.md)
+Style for an always-enabled export button (no disabled state).
+
+## See
+
+ - [BaseButtonStyle](../interfaces/base-button-style.md) for the base interface
+ - [ExportStyle](export-style.md) for the union of all export styles

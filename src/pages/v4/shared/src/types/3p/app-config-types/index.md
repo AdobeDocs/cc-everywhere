@@ -18,4 +18,4 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AnalyticsData](type-aliases/analytics-data.md) | - |
+| [AnalyticsData](type-aliases/analytics-data.md) | Analytics data type for 3P; aliases the base analytics data from shared AppConfig. |

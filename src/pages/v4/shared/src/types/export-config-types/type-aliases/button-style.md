@@ -12,4 +12,9 @@ hideEditInGitHub: true
 type ButtonStyle = BaseButtonStyle<BUTTON>;
 ```
 
-Represents the style of a button. The uiType is [BaseButtonStyle](../interfaces/base-button-style.md)
+Style for a standard export button.
+
+## See
+
+ - [BaseButtonStyle](../interfaces/base-button-style.md) for the base interface
+ - [ExportStyle](export-style.md) for the union of all export styles

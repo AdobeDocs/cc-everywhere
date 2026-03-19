@@ -8,7 +8,13 @@ hideEditInGitHub: true
 
 # Interface: DropdownOptionStyle
 
-Represents the style of a dropdown option, extending the base Style interface.
+Style for a dropdown export option, with optional icon and custom content.
+
+## See
+
+ - [Style](style.md) for the base interface
+ - [ExportStyle](../type-aliases/export-style.md) for the union of all export styles
+ - [DropdownExportOption](../type-aliases/dropdown-export-option.md) for options using this style
 
 ## Extends
 

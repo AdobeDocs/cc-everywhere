@@ -15,6 +15,7 @@ hideEditInGitHub: true
 - [`TextToImageAppConfig`](../../module/app-config-types/interfaces/text-to-image-app-config.md)
 - [`StartFromContentAppConfig`](../../module/app-config-types/interfaces/start-from-content-app-config.md)
 - [`EditImageAppConfig`](../../module/app-config-types/interfaces/edit-image-app-config.md)
+- [`DesignViewerAppConfig`](../../module/app-config-types/interfaces/design-viewer-app-config.md)
 - [`WarmupAppConfig`](../../module/app-config-types/interfaces/warmup-app-config.md)
 - [`AppConfig`](../../quick-action/app-config-types/interfaces/app-config.md)
 

@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: DownloadAction
 
+Action for downloading content to the user's device.
+
+## See
+
+ - [BaseAction](base-action.md) for the base interface
+ - [DownloadExportOption](download-export-option.md) for options that use this action
+
 ## Extends
 
 - [`BaseAction`](base-action.md)

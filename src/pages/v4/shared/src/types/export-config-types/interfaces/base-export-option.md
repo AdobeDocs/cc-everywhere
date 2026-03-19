@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: BaseExportOption&lt;U&gt;
 
+Base for a single export option: id, style, and action.
+
+## See
+
+ - [ExportAction](../type-aliases/export-action.md) for the action union
+ - [PublishExportOption](publish-export-option.md), [DownloadExportOption](download-export-option.md), etc. for concrete option types
+
 ## Extended by
 
 - [`PublishExportOption`](publish-export-option.md)
@@ -18,9 +25,9 @@ hideEditInGitHub: true
 
 ## Type Parameters
 
-| Type Parameter |
-| ------ |
-| `U` *extends* [`Style`](style.md) |
+| Type Parameter | Description |
+| ------ | ------ |
+| `U` *extends* [`Style`](style.md) | The style type extending [Style](style.md) |
 
 ## Properties
 

@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: PublishAction
 
+Action for publishing content to the host application.
+
+## See
+
+ - [BaseAction](base-action.md) for the base interface
+ - [PublishExportOption](publish-export-option.md) for options that use this action
+
 ## Extends
 
 - [`BaseAction`](base-action.md)

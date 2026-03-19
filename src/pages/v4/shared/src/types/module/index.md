@@ -124,6 +124,24 @@ Re-exports [EditImageAppConfig](app-config-types/interfaces/edit-image-app-confi
 
 <HorizontalLine />
 
+### CollectionConfig
+
+Re-exports [CollectionConfig](app-config-types/interfaces/collection-config.md)
+
+<HorizontalLine />
+
+### PreviewThumbnailsConfig
+
+Re-exports [PreviewThumbnailsConfig](app-config-types/interfaces/preview-thumbnails-config.md)
+
+<HorizontalLine />
+
+### DesignViewerAppConfig
+
+Re-exports [DesignViewerAppConfig](app-config-types/interfaces/design-viewer-app-config.md)
+
+<HorizontalLine />
+
 ### WarmupAppConfig
 
 Re-exports [WarmupAppConfig](app-config-types/interfaces/warmup-app-config.md)
@@ -160,6 +178,12 @@ Re-exports [EditDesignDesignConfig](design-config-types/interfaces/edit-design-d
 
 <HorizontalLine />
 
+### DesignViewerDesignConfig
+
+Re-exports [DesignViewerDesignConfig](design-config-types/interfaces/design-viewer-design-config.md)
+
+<HorizontalLine />
+
 ### EditImageIntent
 
 Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
@@ -175,3 +199,9 @@ Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-confi
 ### EditDesignDocConfig
 
 Re-exports [EditDesignDocConfig](doc-config-types/interfaces/edit-design-doc-config.md)
+
+<HorizontalLine />
+
+### DesignViewerDocConfig
+
+Re-exports [DesignViewerDocConfig](doc-config-types/interfaces/design-viewer-doc-config.md)

@@ -58,6 +58,7 @@ CLIENTS: object;
 | `CCX.QUERY_PARAMS.KEYS.ORIGINAL_PATHNAME` | `string` |
 | `CCX.QUERY_PARAMS.KEYS.PLATFORM` | `string` |
 | `CCX.QUERY_PARAMS.KEYS.BUILD_TAGS` | `string` |
+| `CCX.QUERY_PARAMS.KEYS.ROLLOUT_CONFIG` | `string` |
 | `CCX.EDITOR` | `object` |
 | `CCX.EDITOR.CLIENT_ID` | `string` |
 | `CCX.EDITOR.BASE` | `string` |
@@ -103,6 +104,11 @@ CLIENTS: object;
 | `CCX.START_FROM_CONTENT_MODULE.PATHS` | `object` |
 | `CCX.START_FROM_CONTENT_MODULE.PATHS.EDITOR` | `string` |
 | `CCX.START_FROM_CONTENT_MODULE.CLIENT_ID` | `string` |
+| `CCX.DESIGN_VIEWER_MODULE` | `object` |
+| `CCX.DESIGN_VIEWER_MODULE.BASE` | `string` |
+| `CCX.DESIGN_VIEWER_MODULE.PATHS` | `object` |
+| `CCX.DESIGN_VIEWER_MODULE.PATHS.EDITOR` | `string` |
+| `CCX.DESIGN_VIEWER_MODULE.CLIENT_ID` | `string` |
 | `IMS` | `object` |
 | `IMS.BASE` | `string` |
 | `IMS.PATHS` | `object` |

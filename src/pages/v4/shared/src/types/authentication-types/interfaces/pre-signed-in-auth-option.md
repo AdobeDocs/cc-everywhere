@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: PreSignedInAuthOption
 
+Auth option when the user is already signed in (no token required; optional PII/userId).
+
+## See
+
+ - [BaseAuthOption](base-auth-option.md) for the base interface
+ - [PreSignedInAuthConfig](pre-signed-in-auth-config.md) for the optional config
+
 ## Extends
 
 - [`BaseAuthOption`](base-auth-option.md)

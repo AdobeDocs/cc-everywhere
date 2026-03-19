@@ -826,6 +826,10 @@
                         "title": "interfaces",
                         "pages": [
                           {
+                            "title": "DesignViewerAppConfig",
+                            "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config.md"
+                          },
+                          {
                             "title": "EditImageAppConfig",
                             "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/edit-image-app-config.md"
                           },
@@ -834,7 +838,7 @@
                             "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/text-to-image-app-config.md"
                           }
                         ],
-                        "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/edit-image-app-config.md"
+                        "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config.md"
                       }
                     ],
                     "path": "/v4/shared/src/types/3p/module/app-config-types/index.md"
@@ -1997,6 +2001,10 @@
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config.md"
                       },
                       {
+                        "title": "CollectionConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/collection-config.md"
+                      },
+                      {
                         "title": "CommunityWallAssetData",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/community-wall-asset-data.md"
                       },
@@ -2013,6 +2021,10 @@
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/content-browse-base-config.md"
                       },
                       {
+                        "title": "DesignViewerAppConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config.md"
+                      },
+                      {
                         "title": "EditDropdownOptionConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/edit-dropdown-option-config.md"
                       },
@@ -2027,6 +2039,10 @@
                       {
                         "title": "PreviewModeConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/preview-mode-config.md"
+                      },
+                      {
+                        "title": "PreviewThumbnailsConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/preview-thumbnails-config.md"
                       },
                       {
                         "title": "PromptSafetyCheckResponse",
@@ -2065,6 +2081,10 @@
                     "title": "interfaces",
                     "pages": [
                       {
+                        "title": "DesignViewerDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config.md"
+                      },
+                      {
                         "title": "EditDesignDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
                       },
@@ -2085,7 +2105,7 @@
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/warmup-design-config.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
+                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/module/design-config-types/index.md"
@@ -2097,6 +2117,10 @@
                     "title": "interfaces",
                     "pages": [
                       {
+                        "title": "DesignViewerDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md"
+                      },
+                      {
                         "title": "EditDesignDocConfig",
                         "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
                       },
@@ -2105,7 +2129,7 @@
                         "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
+                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md"
                   },
                   {
                     "title": "EditImageIntent",

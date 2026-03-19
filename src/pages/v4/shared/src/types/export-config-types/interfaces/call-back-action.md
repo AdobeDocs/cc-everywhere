@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: CallBackAction
 
+Action for invoking a host callback without publishing assets.
+
+## See
+
+ - [BaseAction](base-action.md) for the base interface
+ - [CallBackExportOption](call-back-export-option.md) for options that use this action
+
 ## Extends
 
 - [`BaseAction`](base-action.md)
