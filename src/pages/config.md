@@ -7,8 +7,6 @@
     - SDK References
         - [v4 Reference](/v4/index.md) 🟢 Current version
         - [v3 Reference](/v3/reference/index.md) 🔴 Deprecated
-        - [v2 Reference](/v2/reference/index.md) 🪦 End of Life May 2025
-        - [v1 Reference](/v1/reference/index.md) 🪦 End of Life May 2025
     - [Community](https://developer.adobe.com/express/community?aio_external)
     - [Get Credentials](/guides/credential/index.md)
 
@@ -48,16 +46,6 @@
     - [Troubleshooting](/guides/troubleshooting/faq/index.md)
         - [Adobe Express is not available](/guides/troubleshooting/express-unavailable-error.md)
         - [FAQ](/guides/troubleshooting/faq/index.md)
-    - v1 Reference header
-    - [Initialize SDK](/v1/reference/index.md)
-    - [Full editor](/v1/reference/full_editor/index.md)
-    - [Quick actions](/v1/reference/quick_actions/index.md)
-    - [Shared types](/v1/reference/shared_types/index.md)
-    - v2 Reference header
-    - [Initialize SDK](/v2/reference/index.md)
-    - [Full editor](/v2/reference/full_editor/index.md)
-    - [Quick actions](/v2/reference/quick_actions/index.md)
-    - [Shared types](/v2/reference/shared_types/index.md)
     - [Overview](/v3/reference/index.md)
     - [Initialize SDK](/v3/reference/initialize/index.md)
     - [v3 Reference](/v3/reference/CCEverywhere/index.md)
