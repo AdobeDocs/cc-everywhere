@@ -17,6 +17,7 @@ type ExportTarget =
 ```
 
 Represents the available export targets for content.
+
 This union type includes:
 
 [PublishTarget](../enumerations/publish-target.md)

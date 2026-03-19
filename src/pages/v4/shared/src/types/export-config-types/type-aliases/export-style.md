@@ -16,5 +16,14 @@ type ExportStyle =
   | DropdownOptionStyle;
 ```
 
-Union of all available export styles, including [ButtonStyle](button-style.md), [EnabledButtonStyle](enabled-button-style.md),
-[LinkStyle](../interfaces/link-style.md), and [DropdownOptionStyle](../interfaces/dropdown-option-style.md).
+Union of all available export option styles.
+
+This union type includes:
+- [ButtonStyle](button-style.md) - Standard button
+- [EnabledButtonStyle](enabled-button-style.md) - Always-enabled button
+- [LinkStyle](../interfaces/link-style.md) - Link presentation
+- [DropdownOptionStyle](../interfaces/dropdown-option-style.md) - Dropdown with optional custom content
+
+## See
+
+[BaseExportOption](../interfaces/base-export-option.md) for options that use these styles

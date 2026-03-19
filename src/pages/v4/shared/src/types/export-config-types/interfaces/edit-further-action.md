@@ -8,6 +8,14 @@ hideEditInGitHub: true
 
 # Interface: EditFurtherAction
 
+Action for continuing to edit content in another application (Express or Image module).
+
+## See
+
+ - [BaseAction](base-action.md) for the base interface
+ - [EditFurtherIntent](../enumerations/edit-further-intent.md) for supported intents
+ - [ContinueEditingAction](../type-aliases/continue-editing-action.md) for the variant that requires an intent
+
 ## Extends
 
 - [`BaseAction`](base-action.md)

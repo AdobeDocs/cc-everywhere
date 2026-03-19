@@ -23,17 +23,17 @@ hideEditInGitHub: true
 | [PreSignedInAuthConfig](interfaces/pre-signed-in-auth-config.md) | - |
 | [IMSAuthConfig](interfaces/ims-auth-config.md) | - |
 | [BaseAuthOption](interfaces/base-auth-option.md) | - |
-| [UpfrontAuthOption](interfaces/upfront-auth-option.md) | - |
-| [DelayedAuthOption](interfaces/delayed-auth-option.md) | - |
-| [PreSignedInAuthOption](interfaces/pre-signed-in-auth-option.md) | - |
-| [ImsJumpAuthOption](interfaces/ims-jump-auth-option.md) | - |
-| [UserInfo](interfaces/user-info.md) | Base class for user related information. |
+| [UpfrontAuthOption](interfaces/upfront-auth-option.md) | Auth option for upfront sign-in; optional prefilled auth identifier. |
+| [DelayedAuthOption](interfaces/delayed-auth-option.md) | Auth option for delayed sign-in; optional prefilled auth identifier. |
+| [PreSignedInAuthOption](interfaces/pre-signed-in-auth-option.md) | Auth option when the user is already signed in (no token required; optional PII/userId). |
+| [ImsJumpAuthOption](interfaces/ims-jump-auth-option.md) | Auth option for IMS jump (e.g. SSO); requires access token and userId in config. |
+| [UserInfo](interfaces/user-info.md) | User-related information (optional userId and PII/analytics status). |
 
 ## Type Aliases
 
 | Type Alias | Description |
 | ------ | ------ |
-| [AuthOption](type-aliases/auth-option.md) | Authentication option for SDK initialization. Includes [UpfrontAuthOption](interfaces/upfront-auth-option.md), [DelayedAuthOption](interfaces/delayed-auth-option.md), [ImsJumpAuthOption](interfaces/ims-jump-auth-option.md), and [PreSignedInAuthOption](interfaces/pre-signed-in-auth-option.md). |
+| [AuthOption](type-aliases/auth-option.md) | Authentication option for SDK initialization. |
 
 ## Variables
 

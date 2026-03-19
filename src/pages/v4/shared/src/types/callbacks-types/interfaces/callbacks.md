@@ -8,6 +8,18 @@ hideEditInGitHub: true
 
 # Interface: Callbacks
 
+Map of optional lifecycle and event callbacks for the CC Everywhere SDK.
+Hosts implement the callbacks they need; all are optional.
+
+## See
+
+ - [LoadInitCallback](../type-aliases/load-init-callback.md), [LoadStartCallback](../type-aliases/load-start-callback.md), [LoadCallback](../type-aliases/load-callback.md) for load lifecycle
+ - [CancelCallback](../type-aliases/cancel-callback.md) for cancellation
+ - [PublishStartCallback](../type-aliases/publish-start-callback.md), [PublishCallback](../type-aliases/publish-callback.md) for publish lifecycle
+ - [ErrorCallback](../../../error/cc-everywhere-error-types/type-aliases/error-callback.md) for errors
+ - [EventCallback](../type-aliases/event-callback.md) for events
+ - [IntentChangeCallback](../type-aliases/intent-change-callback.md) for intent changes
+
 ## Properties
 
 | Property | Type | Description |

@@ -24,3 +24,4 @@ hideEditInGitHub: true
 | `REMOVE_OBJECT` | `"remove-object"` |
 | `INSERT_OBJECT` | `"insert-object"` |
 | `NO_INTENT` | `"no-intent"` |
+| `AUTO_ENHANCE` | `"auto-enhance"` |

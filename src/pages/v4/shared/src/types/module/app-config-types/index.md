@@ -36,6 +36,9 @@ hideEditInGitHub: true
 | [BrowseModeConfig](interfaces/browse-mode-config.md) | Configuration for browse mode - the default workflow where users see template gallery first. This is the standard flow where users browse templates and then select one to preview. Extends base config with browse-specific properties like search and filters. |
 | [PreviewModeConfig](interfaces/preview-mode-config.md) | Configuration for preview mode - directly launches into template preview. This workflow bypasses the template gallery and goes straight to the preview section for a specific template. Only works with TEMPLATES category. Extends base config with preview-specific properties (templateId). |
 | [EditImageAppConfig](interfaces/edit-image-app-config.md) | - |
+| [CollectionConfig](interfaces/collection-config.md) | - |
+| [PreviewThumbnailsConfig](interfaces/preview-thumbnails-config.md) | - |
+| [DesignViewerAppConfig](interfaces/design-viewer-app-config.md) | - |
 | [WarmupAppConfig](interfaces/warmup-app-config.md) | - |
 
 ## Type Aliases

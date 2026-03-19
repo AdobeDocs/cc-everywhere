@@ -8,7 +8,11 @@ hideEditInGitHub: true
 
 # Interface: DropdownOptionStyleCompat
 
-Represents the style of a dropdown option, extending the base Style interface.
+Dropdown option style with optional button variant/treatment (compatibility).
+
+## See
+
+[DropdownOptionStyle](dropdown-option-style.md) for the base interface
 
 ## Extends
 

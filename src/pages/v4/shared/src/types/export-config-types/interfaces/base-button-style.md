@@ -8,7 +8,12 @@ hideEditInGitHub: true
 
 # Interface: BaseButtonStyle&lt;T&gt;
 
-Represents the style of a button, extending the base Style interface.
+Style for a button-style export option (button or enabled-button).
+
+## See
+
+ - [ButtonStyle](../type-aliases/button-style.md) for standard button
+ - [EnabledButtonStyle](../type-aliases/enabled-button-style.md) for always-enabled button
 
 ## Extends
 
@@ -16,9 +21,9 @@ Represents the style of a button, extending the base Style interface.
 
 ## Type Parameters
 
-| Type Parameter |
-| ------ |
-| `T` *extends* [`ExportOptionUI`](../enumerations/export-option-ui.md) |
+| Type Parameter | Description |
+| ------ | ------ |
+| `T` *extends* [`ExportOptionUI`](../enumerations/export-option-ui.md) | The specific [ExportOptionUI](../enumerations/export-option-ui.md) value (BUTTON or ENABLED_BUTTON) |
 
 ## Properties
 

@@ -8,7 +8,11 @@ hideEditInGitHub: true
 
 # Interface: UserInfo
 
-Base class for user related information.
+User-related information (optional userId and PII/analytics status).
+
+## See
+
+[PIIPStatus](../../host-info-types/enumerations/piip-status.md) for the analytics status enum
 
 ## Properties
 

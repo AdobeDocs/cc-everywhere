@@ -6,13 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Interface: AppConfig
-
-App config for 3P.
-
-## See
-
-[BaseAppConfig](../../../design-config-types/interfaces/base-app-config.md)
+# Interface: DesignViewerAppConfig
 
 ## Extends
 
@@ -20,15 +14,14 @@ App config for 3P.
 
 ## Extended by
 
-- [`TextToImageAppConfig`](../../module/app-config-types/interfaces/text-to-image-app-config.md)
-- [`EditImageAppConfig`](../../module/app-config-types/interfaces/edit-image-app-config.md)
-- [`DesignViewerAppConfig`](../../module/app-config-types/interfaces/design-viewer-app-config.md)
+- [`DesignViewerAppConfig`](../../../3p/module/app-config-types/interfaces/design-viewer-app-config.md)
 
 ## Properties
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `analyticsData?` | [`BaseAnalyticsData`](../../../app-config-types/interfaces/base-analytics-data.md) | Property to pass analytics data to the host app | - |
 | `useClientAuth?` | `boolean` | Flag to explicitly opt-in to use client authentication. When true, client access token will be fetched from the partner and used in the module. This is only relevant for Edit Image and Text to Image modules. Should not be passed for other workflows. **Default** `false` | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`useClientAuth`](../../../design-config-types/interfaces/base-app-config.md#useclientauth) |
 | `callbacks?` | [`Callbacks`](../../../callbacks-types/interfaces/callbacks.md) | - | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`callbacks`](../../../design-config-types/interfaces/base-app-config.md#callbacks) |
 | `metaData?` | `Record`&lt;`string`, `string`&gt; | Property to pass metadata to target application | [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`metaData`](../../../design-config-types/interfaces/base-app-config.md#metadata) |
+| `previewThumbnails?` | [`PreviewThumbnailsConfig`](preview-thumbnails-config.md) | Configuration for the preview thumbnails component that displays design previews from a collection or an explicit list of design IDs. | - |
+| `designTitle?` | `string` | The text to be displayed as the title of the design. **Default** `empty string` | - |

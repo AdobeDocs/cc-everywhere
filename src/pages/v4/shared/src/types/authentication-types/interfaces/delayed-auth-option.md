@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: DelayedAuthOption
 
+Auth option for delayed sign-in; optional prefilled auth identifier.
+
+## See
+
+ - [BaseAuthOption](base-auth-option.md) for the base interface
+ - [AuthConfig](auth-config.md) for the optional config
+
 ## Extends
 
 - [`BaseAuthOption`](base-auth-option.md)

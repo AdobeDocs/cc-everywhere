@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: ContinueEditingDropdownOption
 
+Base for a single export option: id, style, and action.
+
+## See
+
+ - [ExportAction](../type-aliases/export-action.md) for the action union
+ - [PublishExportOption](publish-export-option.md), [DownloadExportOption](download-export-option.md), etc. for concrete option types
+
 ## Extends
 
 - [`BaseExportOption`](base-export-option.md)&lt;[`DropdownOptionStyle`](dropdown-option-style.md)&gt;

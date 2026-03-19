@@ -8,6 +8,13 @@ hideEditInGitHub: true
 
 # Interface: ImsJumpAuthOption
 
+Auth option for IMS jump (e.g. SSO); requires access token and userId in config.
+
+## See
+
+ - [BaseAuthOption](base-auth-option.md) for the base interface
+ - [IMSAuthConfig](ims-auth-config.md) for the required config
+
 ## Extends
 
 - [`BaseAuthOption`](base-auth-option.md)
