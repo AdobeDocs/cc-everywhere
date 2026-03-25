@@ -1,0 +1,28 @@
+:root {
+  --brand-primary: #6E38B1;
+  --brand-accent: #E03ADC;
+  --brand-bg: #FFFFFF;
+  --brand-text: #2c2c2c;
+}
+
+/* Dark theme overrides — applied when body has .spectrum--dark */
+body.spectrum--dark {
+  --brand-bg: #1a1a1a;
+  --brand-text: #e1e1e1;
+}
+body.spectrum--dark .demo-nav {
+  border-bottom-color: #444;
+  background: #1a1a1a;
+}
+body.spectrum--dark .demo-nav__tab {
+  color: #aaa;
+}
+body.spectrum--dark .demo-footer {
+  border-top-color: #444;
+  color: #666;
+}
+body.spectrum--dark .demo-field input[type="text"] {
+  background: #2a2a2a;
+  border-color: #555;
+  color: #e1e1e1;
+}

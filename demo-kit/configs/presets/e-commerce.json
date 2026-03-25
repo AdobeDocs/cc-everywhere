@@ -1,0 +1,75 @@
+{
+  "meta": {
+    "customerName": "E-Commerce Partner",
+    "vertical": "e-commerce",
+    "preparedBy": "",
+    "date": ""
+  },
+  "branding": {
+    "title": "Product Studio",
+    "tagline": "Create stunning product visuals without a design team",
+    "logoUrl": "",
+    "primaryColor": "#0D66D0",
+    "accentColor": "#00B4D8",
+    "backgroundColor": "#FFFFFF",
+    "theme": "light"
+  },
+  "sdk": {
+    "clientId": "your-client-id",
+    "appName": "Product Studio Demo",
+    "loginMode": "delayed"
+  },
+  "layout": {
+    "navigation": "tabs",
+    "showHero": true
+  },
+  "features": {
+    "editor": {
+      "enabled": true,
+      "label": "Design Studio",
+      "description": "Create product banners, promotional graphics, and marketing materials with the full Adobe Express editor.",
+      "selectedCategory": "media"
+    },
+    "quickActions": {
+      "enabled": true,
+      "label": "Product Image Tools",
+      "description": "One-click tools to prepare product images for your storefront.",
+      "imageActions": [
+        "removeBackground",
+        "resizeImage",
+        "cropImage",
+        "convertToJPEG",
+        "convertToPNG"
+      ],
+      "videoActions": []
+    },
+    "modules": {
+      "generateImage": {
+        "enabled": true,
+        "label": "AI Product Visuals",
+        "description": "Generate lifestyle shots, product mockups, and promotional imagery from text descriptions.",
+        "defaultPrompt": "Professional product photo on a clean white background with soft lighting"
+      },
+      "editImage": {
+        "enabled": true,
+        "label": "Photo Editor",
+        "description": "Retouch product photos, adjust lighting, and enhance colors."
+      },
+      "templateBrowser": {
+        "enabled": true,
+        "label": "Marketing Templates",
+        "description": "Browse thousands of templates optimized for e-commerce and product marketing.",
+        "headerText": "Ready-to-use product marketing templates",
+        "searchQuery": "product sale",
+        "hideSearchBar": false,
+        "hideFilters": false,
+        "shortcutPillTerms": ["Sale", "Product", "Banner", "Social", "Ad"]
+      }
+    }
+  },
+  "exportConfig": {
+    "download": true,
+    "saveToApp": true,
+    "editInExpress": false
+  }
+}

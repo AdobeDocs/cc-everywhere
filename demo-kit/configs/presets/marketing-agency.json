@@ -1,0 +1,83 @@
+{
+  "meta": {
+    "customerName": "Marketing Agency Partner",
+    "vertical": "marketing",
+    "preparedBy": "",
+    "date": ""
+  },
+  "branding": {
+    "title": "Campaign Creator",
+    "tagline": "Empower your team to produce on-brand content at scale",
+    "logoUrl": "",
+    "primaryColor": "#7C3AED",
+    "accentColor": "#F59E0B",
+    "backgroundColor": "#FFFFFF",
+    "theme": "light"
+  },
+  "sdk": {
+    "clientId": "your-client-id",
+    "appName": "Campaign Creator Demo",
+    "loginMode": "delayed"
+  },
+  "layout": {
+    "navigation": "tabs",
+    "showHero": true
+  },
+  "features": {
+    "editor": {
+      "enabled": true,
+      "label": "Creative Studio",
+      "description": "Build campaign assets from scratch or customize brand templates with the full Adobe Express editor."
+    },
+    "quickActions": {
+      "enabled": true,
+      "label": "Asset Tools",
+      "description": "Batch-ready tools for resizing, format conversion, and background removal.",
+      "imageActions": [
+        "resizeImage",
+        "cropImage",
+        "removeBackground",
+        "convertToJPEG",
+        "convertToPNG",
+        "convertToSVG",
+        "generateQRCode"
+      ],
+      "videoActions": [
+        "resizeVideo",
+        "trimVideo",
+        "convertToGIF",
+        "convertToMP4",
+        "captionVideo",
+        "animateFromAudio"
+      ]
+    },
+    "modules": {
+      "generateImage": {
+        "enabled": true,
+        "label": "AI Creative Generator",
+        "description": "Generate campaign imagery, hero visuals, and background art from text prompts.",
+        "defaultPrompt": "Professional marketing hero image with bold typography and modern design"
+      },
+      "editImage": {
+        "enabled": true,
+        "label": "Image Editor",
+        "description": "Fine-tune campaign visuals with professional editing tools."
+      },
+      "templateBrowser": {
+        "enabled": true,
+        "label": "Campaign Templates",
+        "description": "Access thousands of templates for ads, flyers, presentations, and social content.",
+        "headerText": "Campaign-ready templates",
+        "searchQuery": "marketing campaign",
+        "hideSearchBar": false,
+        "hideFilters": false,
+        "shortcutPillTerms": ["Flyer", "Poster", "Ad", "Presentation", "Newsletter"]
+      }
+    }
+  },
+  "exportConfig": {
+    "download": true,
+    "saveToApp": true,
+    "editInExpress": true
+  }
+}

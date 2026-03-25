@@ -1,0 +1,78 @@
+{
+  "meta": {
+    "customerName": "Education Partner",
+    "vertical": "education",
+    "preparedBy": "",
+    "date": ""
+  },
+  "branding": {
+    "title": "Course Material Designer",
+    "tagline": "Help educators create engaging visual content effortlessly",
+    "logoUrl": "",
+    "primaryColor": "#059669",
+    "accentColor": "#2563EB",
+    "backgroundColor": "#FFFFFF",
+    "theme": "light"
+  },
+  "sdk": {
+    "clientId": "your-client-id",
+    "appName": "Course Designer Demo",
+    "loginMode": "delayed"
+  },
+  "layout": {
+    "navigation": "tabs",
+    "showHero": true
+  },
+  "features": {
+    "editor": {
+      "enabled": true,
+      "label": "Design Editor",
+      "description": "Create presentations, worksheets, infographics, and certificates with the full Adobe Express editor."
+    },
+    "quickActions": {
+      "enabled": true,
+      "label": "Image Tools",
+      "description": "Resize images for presentations, remove backgrounds from diagrams, and convert formats.",
+      "imageActions": [
+        "resizeImage",
+        "cropImage",
+        "removeBackground",
+        "convertToJPEG",
+        "convertToPNG"
+      ],
+      "videoActions": [
+        "trimVideo",
+        "resizeVideo",
+        "captionVideo"
+      ]
+    },
+    "modules": {
+      "generateImage": {
+        "enabled": true,
+        "label": "AI Illustration Generator",
+        "description": "Generate custom illustrations, diagrams, and visual aids from text descriptions.",
+        "defaultPrompt": "Educational illustration in a friendly, colorful style showing"
+      },
+      "editImage": {
+        "enabled": true,
+        "label": "Image Editor",
+        "description": "Edit and annotate images for use in course materials and presentations."
+      },
+      "templateBrowser": {
+        "enabled": true,
+        "label": "Education Templates",
+        "description": "Start from templates designed for classrooms, presentations, and learning materials.",
+        "headerText": "Templates for educators and students",
+        "searchQuery": "education presentation",
+        "hideSearchBar": false,
+        "hideFilters": false,
+        "shortcutPillTerms": ["Presentation", "Poster", "Infographic", "Certificate", "Worksheet"]
+      }
+    }
+  },
+  "exportConfig": {
+    "download": true,
+    "saveToApp": true,
+    "editInExpress": false
+  }
+}

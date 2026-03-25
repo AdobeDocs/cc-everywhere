@@ -1,0 +1,169 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Embed SDK Demo Config",
+  "type": "object",
+  "required": ["sdk", "features"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "properties": {
+        "customerName": { "type": "string" },
+        "vertical": { "type": "string" },
+        "preparedBy": { "type": "string" },
+        "date": { "type": "string" }
+      }
+    },
+    "branding": {
+      "type": "object",
+      "properties": {
+        "title": { "type": "string", "default": "Adobe Express Embed SDK" },
+        "tagline": { "type": "string", "default": "Powerful creative tools, embedded in your platform" },
+        "logoUrl": { "type": "string" },
+        "primaryColor": { "type": "string", "default": "#6E38B1" },
+        "accentColor": { "type": "string", "default": "#E03ADC" },
+        "backgroundColor": { "type": "string", "default": "#FFFFFF" },
+        "theme": { "type": "string", "enum": ["light", "dark"], "default": "light" }
+      }
+    },
+    "sdk": {
+      "type": "object",
+      "required": ["clientId"],
+      "properties": {
+        "clientId": { "type": "string" },
+        "appName": { "type": "string", "default": "Embed SDK Demo" },
+        "loginMode": { "type": "string", "enum": ["delayed", "auto"], "default": "delayed" },
+        "locale": { "type": "string" }
+      }
+    },
+    "layout": {
+      "type": "object",
+      "properties": {
+        "navigation": { "type": "string", "enum": ["tabs", "sections"], "default": "tabs" },
+        "showHero": { "type": "boolean", "default": true }
+      }
+    },
+    "features": {
+      "type": "object",
+      "properties": {
+        "editor": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean", "default": true },
+            "label": { "type": "string", "default": "Full Editor" },
+            "description": { "type": "string", "default": "Launch the complete Adobe Express editor with templates, stock assets, and AI tools." },
+            "canvasSize": {
+              "type": "object",
+              "properties": {
+                "width": { "type": "number" },
+                "height": { "type": "number" }
+              }
+            },
+            "selectedCategory": { "type": "string" },
+            "templateType": { "type": "string" }
+          }
+        },
+        "quickActions": {
+          "type": "object",
+          "properties": {
+            "enabled": { "type": "boolean", "default": true },
+            "label": { "type": "string", "default": "Quick Actions" },
+            "description": { "type": "string", "default": "One-click tools for image and video editing." },
+            "imageActions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "cropImage",
+                  "resizeImage",
+                  "removeBackground",
+                  "convertToJPEG",
+                  "convertToPNG",
+                  "convertToSVG",
+                  "generateQRCode"
+                ]
+              },
+              "default": ["cropImage", "resizeImage", "removeBackground"]
+            },
+            "videoActions": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "enum": [
+                  "cropVideo",
+                  "resizeVideo",
+                  "trimVideo",
+                  "mergeVideos",
+                  "convertToGIF",
+                  "convertToMP4",
+                  "animateFromAudio",
+                  "captionVideo"
+                ]
+              },
+              "default": []
+            }
+          }
+        },
+        "modules": {
+          "type": "object",
+          "properties": {
+            "generateImage": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean", "default": true },
+                "label": { "type": "string", "default": "Generate Image" },
+                "description": { "type": "string", "default": "Create unique visuals from text prompts using AI." },
+                "defaultPrompt": { "type": "string", "default": "" }
+              }
+            },
+            "editImage": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean", "default": true },
+                "label": { "type": "string", "default": "Edit Image" },
+                "description": { "type": "string", "default": "Retouch photos, apply filters, and adjust backgrounds." }
+              }
+            },
+            "templateBrowser": {
+              "type": "object",
+              "properties": {
+                "enabled": { "type": "boolean", "default": false },
+                "label": { "type": "string", "default": "Template Browser" },
+                "description": { "type": "string", "default": "Browse and customize thousands of professional templates." },
+                "headerText": { "type": "string", "default": "Start from a template" },
+                "searchQuery": { "type": "string", "default": "" },
+                "hideSearchBar": { "type": "boolean", "default": false },
+                "hideFilters": { "type": "boolean", "default": false },
+                "shortcutPillTerms": {
+                  "type": "array",
+                  "items": { "type": "string" },
+                  "maxItems": 5
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "exportConfig": {
+      "type": "object",
+      "properties": {
+        "download": { "type": "boolean", "default": true },
+        "saveToApp": { "type": "boolean", "default": true },
+        "editInExpress": { "type": "boolean", "default": false },
+        "customButtons": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "label"],
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "target": { "type": "string", "enum": ["download", "publish", "express"] },
+              "uiType": { "type": "string", "enum": ["button", "dropdown"], "default": "button" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

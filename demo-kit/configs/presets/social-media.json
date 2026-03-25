@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "customerName": "Social Media Partner",
+    "vertical": "social-media",
+    "preparedBy": "",
+    "date": ""
+  },
+  "branding": {
+    "title": "Content Hub",
+    "tagline": "Create scroll-stopping social content in minutes",
+    "logoUrl": "",
+    "primaryColor": "#E1306C",
+    "accentColor": "#F77737",
+    "backgroundColor": "#FFFFFF",
+    "theme": "light"
+  },
+  "sdk": {
+    "clientId": "your-client-id",
+    "appName": "Content Hub Demo",
+    "loginMode": "delayed"
+  },
+  "layout": {
+    "navigation": "tabs",
+    "showHero": true
+  },
+  "features": {
+    "editor": {
+      "enabled": true,
+      "label": "Post Designer",
+      "description": "Design posts, stories, reels covers, and carousels with the full Adobe Express editor."
+    },
+    "quickActions": {
+      "enabled": true,
+      "label": "Quick Edits",
+      "description": "Resize for any platform, crop, and convert formats instantly.",
+      "imageActions": [
+        "resizeImage",
+        "cropImage",
+        "removeBackground",
+        "convertToJPEG",
+        "convertToPNG"
+      ],
+      "videoActions": [
+        "cropVideo",
+        "resizeVideo",
+        "trimVideo",
+        "convertToGIF",
+        "captionVideo"
+      ]
+    },
+    "modules": {
+      "generateImage": {
+        "enabled": true,
+        "label": "AI Image Generator",
+        "description": "Create unique visuals for your posts with AI-powered image generation.",
+        "defaultPrompt": "Colorful flat illustration for a social media post about"
+      },
+      "editImage": {
+        "enabled": true,
+        "label": "Photo Editor",
+        "description": "Apply filters, adjust colors, and retouch photos for your feed."
+      },
+      "templateBrowser": {
+        "enabled": true,
+        "label": "Social Templates",
+        "description": "Start from professionally designed templates sized for every platform.",
+        "headerText": "Templates for every social platform",
+        "searchQuery": "Instagram story",
+        "hideSearchBar": false,
+        "hideFilters": false,
+        "shortcutPillTerms": ["Instagram", "Facebook", "TikTok", "LinkedIn", "YouTube"]
+      }
+    }
+  },
+  "exportConfig": {
+    "download": true,
+    "saveToApp": true,
+    "editInExpress": false
+  }
+}

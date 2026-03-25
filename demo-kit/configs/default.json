@@ -1,0 +1,81 @@
+{
+  "meta": {
+    "customerName": "Default Demo",
+    "vertical": "general",
+    "preparedBy": "",
+    "date": ""
+  },
+  "branding": {
+    "title": "Adobe Express Embed SDK",
+    "tagline": "Powerful creative tools, embedded in your platform",
+    "logoUrl": "",
+    "primaryColor": "#6E38B1",
+    "accentColor": "#E03ADC",
+    "backgroundColor": "#FFFFFF",
+    "theme": "light"
+  },
+  "sdk": {
+    "clientId": "your-client-id",
+    "appName": "Embed SDK Demo",
+    "loginMode": "delayed"
+  },
+  "layout": {
+    "navigation": "tabs",
+    "showHero": true
+  },
+  "features": {
+    "editor": {
+      "enabled": true,
+      "label": "Full Editor",
+      "description": "Launch the complete Adobe Express editor with templates, stock assets, and AI tools."
+    },
+    "quickActions": {
+      "enabled": true,
+      "label": "Quick Actions",
+      "description": "One-click tools for image and video editing.",
+      "imageActions": [
+        "cropImage",
+        "resizeImage",
+        "removeBackground",
+        "convertToJPEG",
+        "convertToPNG",
+        "generateQRCode"
+      ],
+      "videoActions": [
+        "cropVideo",
+        "resizeVideo",
+        "trimVideo",
+        "convertToGIF",
+        "convertToMP4"
+      ]
+    },
+    "modules": {
+      "generateImage": {
+        "enabled": true,
+        "label": "Generate Image",
+        "description": "Create unique visuals from text prompts using AI.",
+        "defaultPrompt": ""
+      },
+      "editImage": {
+        "enabled": true,
+        "label": "Edit Image",
+        "description": "Retouch photos, apply filters, and adjust backgrounds."
+      },
+      "templateBrowser": {
+        "enabled": true,
+        "label": "Template Browser",
+        "description": "Browse and customize thousands of professional templates.",
+        "headerText": "Start from a template",
+        "searchQuery": "social media",
+        "hideSearchBar": false,
+        "hideFilters": false,
+        "shortcutPillTerms": ["Social", "Business", "Events", "Personal", "Creative"]
+      }
+    }
+  },
+  "exportConfig": {
+    "download": true,
+    "saveToApp": true,
+    "editInExpress": false
+  }
+}
