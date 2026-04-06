@@ -10,6 +10,14 @@ keywords:
   - Cost of Embed SDK
   - Allowed-domains
   - Error handling
+  - loginMode
+  - Delayed login
+  - Terms of Use consent
+  - Session duration
+  - Entitlements
+  - Template filtering
+  - Generative AI
+  - Integration responsibilities
 title: Frequently Asked Questions
 description: This page answers common questions about the Adobe Express Embed SDK.
 contributors:
@@ -49,15 +57,36 @@ Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SD
 
 - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
 - [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
+- [When are users required to sign in when using the Embed SDK?](#when-are-users-required-to-sign-in-when-using-the-embed-sdk)
+- [Is there a Terms of Use or consent flow during login?](#is-there-a-terms-of-use-or-consent-flow-during-login)
+- [How long do user sessions last?](#how-long-do-user-sessions-last)
+- [Who manages user accounts and authentication?](#who-manages-user-accounts-and-authentication)
 
 ### [Features & Functionality](#features--functionality-1)
 
 - [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
 - [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
+- [How are user entitlements (free vs premium) handled?](#how-are-user-entitlements-free-vs-premium-handled)
+- [Can I control which templates are shown to users?](#can-i-control-which-templates-are-shown-to-users)
+- [Can the SDK be launched from different entry points in my application?](#can-the-sdk-be-launched-from-different-entry-points-in-my-application)
+- [How are assets handled when users download or save their work?](#how-are-assets-handled-when-users-download-or-save-their-work)
+- [Can generative AI features be disabled?](#can-generative-ai-features-be-disabled)
 
 ### [Configuration & Setup](#configuration--setup-1)
 
 - [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
+- [How can authentication behavior be configured?](#how-can-authentication-behavior-be-configured)
+- [Can Terms of Use consent be customized?](#can-terms-of-use-consent-be-customized)
+- [Can I control how premium features are presented to users without entitlements?](#can-i-control-how-premium-features-are-presented-to-users-without-entitlements)
+
+### [Integration Responsibilities](#integration-responsibilities-1)
+
+- [Which parts of the experience are managed by Adobe versus my application?](#which-parts-of-the-experience-are-managed-by-adobe-versus-my-application)
+
+### [User Experience and Interaction Flow](#user-experience-and-interaction-flow-1)
+
+- [Can users start editing before signing in?](#can-users-start-editing-before-signing-in)
+- [When are users prompted to sign in during the editing flow?](#when-are-users-prompted-to-sign-in-during-the-editing-flow)
 
 ### [Technical Requirements](#technical-requirements-1)
 
@@ -129,6 +158,37 @@ To enable Single Sign-On (SSO) for your service, when using Adobe express Embed 
 
 Learn to use the Adobe Admin Console to set up [Single Sign-On (SSO)](https://helpx.adobe.com/in/enterprise/using/sso-overview.html) with your Identity provider and troubleshoot setup-related problems.
 
+### When are users required to sign in when using the Embed SDK?
+
+The Embed SDK supports configurable authentication behavior through the `loginMode` parameter.
+
+When using `loginMode: "delayed"`, users can begin editing without signing in. Users are prompted to authenticate only when performing actions that require authentication, such as saving, exporting, or accessing premium features.
+
+This approach helps reduce friction and is commonly used in partner integrations.
+
+### Is there a Terms of Use or consent flow during login?
+
+Yes. The first time users authenticate, they must accept Adobe’s Terms of Use and Privacy Policy before proceeding.
+
+This applies regardless of the configured login mode.
+
+For certain workflows, such as Edit Image, you can configure the `inlineTOUConsent` option to control whether consent is displayed inline within the experience.
+
+### How long do user sessions last?
+
+The Embed SDK relies on Adobe Identity Management System (IMS) for session management.
+
+- IMS sessions typically persist for up to 14 days
+- The SDK uses short-lived client tokens (approximately 5 minutes)
+
+Users are not required to sign in again while their IMS session remains active.
+
+### Who manages user accounts and authentication?
+
+User accounts and authentication are managed by Adobe through Adobe Identity Management System (IMS).
+
+Your application does not need to manage user credentials for Adobe Express functionality. Users can sign in using any valid Adobe account, including accounts created outside of your application.
+
 <HorizontalLine />
 
 ## Features & Functionality
@@ -144,6 +204,44 @@ There are two functional differences in the embedded Adobe Express full editor c
 
 The embedded Adobe Express full editor can be setup to launch student safe content even before a student is signed into the embedded experience. More information about [Adobe & Student Privacy](https://www.adobe.com/privacy/student-policy.html).
 
+### How are user entitlements (free vs premium) handled?
+
+User entitlements are determined by the user’s Adobe account subscription state through Adobe Identity Management System (IMS).
+
+- Free users have limited access to templates, assets, and generative features
+- Premium users have expanded access and higher usage limits
+
+Your application can choose to provide premium access to users or allow users to authenticate with their existing Adobe accounts.
+
+### Can I control which templates are shown to users?
+
+Yes. You can configure template discovery using `appConfig` parameters during SDK initialization.
+
+For example:
+
+- `selectedCategory: "templates"`
+- `categorySearchText: "<search query>"`
+
+These configurations allow you to display curated templates and filter results by industry, asset type, or keywords.
+
+### Can the SDK be launched from different entry points in my application?
+
+Yes. You can launch the Embed SDK from any UI element in your application, such as buttons, template selections, or custom workflows.
+
+This enables you to design flexible user journeys based on your application’s requirements.
+
+### How are assets handled when users download or save their work?
+
+When users download assets, files are saved locally to the user’s device.
+
+When users save assets through the SDK, the SDK returns asset data (for example, base64). Your application is responsible for storing and managing these assets.
+
+### Can generative AI features be disabled?
+
+Generative AI features (such as Firefly-powered capabilities) are deeply integrated into the Adobe Express experience and cannot be easily removed.
+
+Configuration options exist to manage access (for example, displaying paywalls for unentitled users), but full removal of these features is not typically supported.
+
 <HorizontalLine />
 
 ## Configuration & Setup
@@ -151,6 +249,60 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 ### How many domains can be added with a single API key for a service?
 
 You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
+
+### How can authentication behavior be configured?
+
+You can configure authentication behavior using the `loginMode` parameter during SDK initialization.
+
+For example, `loginMode: "delayed"` allows users to begin editing without signing in and defers authentication until required.
+
+For more details, see the [initialization documentation](../../../reference/initialize/index.md).
+
+### Can Terms of Use consent be customized?
+
+For supported workflows, you can use the `inlineTOUConsent` option to control how Terms of Use consent is displayed within the embedded experience.
+
+### Can I control how premium features are presented to users without entitlements?
+
+Yes. The SDK provides configuration options such as:
+
+`SHOW_FIREFLY_PAYWALL_FOR_UNENTITLED_USERS`
+
+This controls whether users without premium entitlements see a paywall when attempting to use premium generative AI features.
+
+<HorizontalLine />
+
+## Integration Responsibilities
+
+### Which parts of the experience are managed by Adobe versus my application?
+
+Your application is responsible for building and managing its own user interface, including:
+
+- Marketing or landing pages
+- Template galleries
+- Asset libraries
+
+The Embed SDK provides the Adobe Express editing experience within an embedded environment.
+
+When assets are saved, the SDK returns asset data, and your application is responsible for storing and managing those assets.
+
+<HorizontalLine />
+
+## User Experience and Interaction Flow
+
+### Can users start editing before signing in?
+
+Yes. When using `loginMode: "delayed"`, users can start editing immediately without signing in.
+
+Users are prompted to authenticate only when performing actions that require authentication, such as saving, exporting, or accessing premium features.
+
+### When are users prompted to sign in during the editing flow?
+
+Users are prompted to sign in when they attempt to perform actions that require authentication, including:
+
+- Saving a project
+- Exporting or downloading content
+- Accessing premium features
 
 <HorizontalLine />
 
