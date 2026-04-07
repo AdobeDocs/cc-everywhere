@@ -185,8 +185,6 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 Entitlements follow the user’s Adobe account subscription: free accounts have limited templates, assets, and generative features; premium accounts have broader access and higher limits. Your app can supply premium access or let users sign in with their own Adobe account.
 
-To control how premium generative features appear for users without entitlements, you can use configuration such as `SHOW_FIREFLY_PAYWALL_FOR_UNENTITLED_USERS` (whether they see a paywall when using those features).
-
 ### Can I control which templates are shown to users?
 
 Yes. You can configure template discovery using `appConfig` parameters such as `selectedCategory` and `categorySearchText`.
