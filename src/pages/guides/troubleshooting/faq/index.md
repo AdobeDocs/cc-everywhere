@@ -162,9 +162,11 @@ Yes. The first time users authenticate, they must accept Adobe’s Terms of Use 
 
 Session length follows the user’s Adobe account: sign-in typically stays valid for up to 14 days, while the SDK uses short-lived client tokens (about 5 minutes). Users are not asked to sign in again until that Adobe account session ends.
 
+For more background, see [Set up user identity and Single Sign-on for your organization](https://helpx.adobe.com/enterprise/using/set-up-identity.html) on Adobe Help, and the [Adobe IMS user authentication guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims).
+
 ### Who manages user accounts and authentication?
 
-Adobe manages sign-in for Express through the user’s Adobe account. Your application does not store Adobe credentials; users can use any valid Adobe account, including one they created outside your app.
+Adobe manages sign-in for Express through the user’s Adobe account. The host application does not store Adobe credentials; users can use any valid Adobe account, including one they created outside your app.
 
 <HorizontalLine />
 
@@ -183,7 +185,7 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 
 ### How are user entitlements (free vs premium) handled?
 
-Entitlements follow the user’s Adobe account subscription: free accounts have limited templates, assets, and generative features; premium accounts have broader access and higher limits. Your app can supply premium access or let users sign in with their own Adobe account.
+Entitlements follow the user’s Adobe account subscription: free accounts have limited templates, assets, and generative features; premium accounts have broader access and higher limits. Your app can supply premium access or let users sign in with their own Adobe account. If you need a different entitlements model for your users, work with your Adobe partner.
 
 ### Can I control which templates are shown to users?
 
@@ -201,7 +203,7 @@ This enables you to design flexible user journeys based on your application’s 
 
 When users download assets, files are saved locally to the user’s device.
 
-When users save assets through the SDK, the SDK returns asset data (for example, base64). Your application is responsible for storing and managing these assets.
+When users save assets through the SDK, the SDK returns asset data (for example, base64). The host application is responsible for storing and managing these assets.
 
 <HorizontalLine />
 
@@ -217,7 +219,7 @@ You can add upto five domains with a single API key. Additionally, there is no l
 
 ### Which parts of the experience are managed by Adobe versus my application?
 
-Your application is responsible for building and managing its own user interface, including:
+The host application is responsible for building and managing its own user interface, including:
 
 - Marketing or landing pages
 - Template galleries
@@ -225,7 +227,7 @@ Your application is responsible for building and managing its own user interface
 
 The Embed SDK provides the Adobe Express editing experience within an embedded environment.
 
-When assets are saved, the SDK returns asset data, and your application is responsible for storing and managing those assets.
+When assets are saved, the SDK returns asset data, and the host application is responsible for storing and managing those assets.
 
 <HorizontalLine />
 
