@@ -256,7 +256,9 @@ You can configure authentication behavior using the `loginMode` parameter during
 
 For example, `loginMode: "delayed"` allows users to begin editing without signing in and defers authentication until required.
 
-For more details, see the [initialization documentation](../../../reference/initialize/index.md).
+For more details, see `loginMode`.
+
+Reference: [Initialize SDK Reference](https://developer.adobe.com/express/embed-sdk/docs/reference/initialize/#:~:text=loginMode,until%20they%20export)
 
 ### Can Terms of Use consent be customized?
 
