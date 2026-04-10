@@ -16,6 +16,12 @@ contributors:
 
 # Changelog
 
+## [4.45.20] 2026-04-14
+
+### Documentation
+
+- Added a new [Design Viewer concept guide](../concepts/design-viewer.md) that covers the implementation details of the Design Viewer module.
+
 ## [4.44.14] 2026-03-19
 
 ### Added
