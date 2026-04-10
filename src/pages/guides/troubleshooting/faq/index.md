@@ -10,6 +10,13 @@ keywords:
   - Cost of Embed SDK
   - Allowed-domains
   - Error handling
+  - loginMode
+  - Delayed login
+  - Terms of Use consent
+  - Session duration
+  - Entitlements
+  - Template filtering
+  - Integration responsibilities
 title: Frequently Asked Questions
 description: This page answers common questions about the Adobe Express Embed SDK.
 contributors:
@@ -49,15 +56,27 @@ Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SD
 
 - [Do my users need to have an Adobe ID?](#do-my-users-need-to-have-an-adobe-id)
 - [How do I enable SSO for my service?](#how-do-i-enable-sso-for-my-service)
+- [When are users required to sign in when using the Embed SDK?](#when-are-users-required-to-sign-in-when-using-the-embed-sdk)
+- [Is there a Terms of Use or consent flow during login?](#is-there-a-terms-of-use-or-consent-flow-during-login)
+- [How long do user sessions last?](#how-long-do-user-sessions-last)
+- [Who manages user accounts and authentication?](#who-manages-user-accounts-and-authentication)
 
 ### [Features & Functionality](#features--functionality-1)
 
 - [How does the full editor provided by the SDK differ from the free/paid versions of Adobe Express on the web?](#how-does-the-full-editor-provided-by-the-sdk-differ-from-the-freepaid-versions-of-adobe-express-on-the-web)
 - [My user base consists of students/minors. How can I be assured they get appropriate content?](#my-user-base-consists-of-studentsminors-how-can-i-be-assured-they-get-appropriate-content)
+- [How are user entitlements (free vs premium) handled?](#how-are-user-entitlements-free-vs-premium-handled)
+- [Can I control which templates are shown to users?](#can-i-control-which-templates-are-shown-to-users)
+- [Can the SDK be launched from different entry points in my application?](#can-the-sdk-be-launched-from-different-entry-points-in-my-application)
+- [How are assets handled when users download or save their work?](#how-are-assets-handled-when-users-download-or-save-their-work)
 
 ### [Configuration & Setup](#configuration--setup-1)
 
 - [How many domains can be added with a single API key for a service?](#how-many-domains-can-be-added-with-a-single-api-key-for-a-service)
+
+### [Integration Responsibilities](#integration-responsibilities-1)
+
+- [Which parts of the experience are managed by Adobe versus my application?](#which-parts-of-the-experience-are-managed-by-adobe-versus-my-application)
 
 ### [Technical Requirements](#technical-requirements-1)
 
@@ -129,6 +148,26 @@ To enable Single Sign-On (SSO) for your service, when using Adobe express Embed 
 
 Learn to use the Adobe Admin Console to set up [Single Sign-On (SSO)](https://helpx.adobe.com/in/enterprise/using/sso-overview.html) with your Identity provider and troubleshoot setup-related problems.
 
+### When are users required to sign in when using the Embed SDK?
+
+Authentication timing is controlled with the `loginMode` parameter during SDK initialization. With `loginMode: "delayed"`, users can start editing without signing in and are prompted to authenticate only when an action requires it (for example, saving, exporting, or accessing premium features). That pattern reduces friction and is common in partner integrations.
+
+For more details, see `loginMode` in the [Initialize SDK Reference](../../../reference/initialize/index.md#configparams).
+
+### Is there a Terms of Use or consent flow during login?
+
+Yes. The first time users authenticate, they must accept Adobe’s Terms of Use and Privacy Policy before proceeding, regardless of `loginMode`. For supported workflows (such as Edit Image), you can use the `inlineTOUConsent` option to show that consent inline in the embedded experience instead of only at login.
+
+### How long do user sessions last?
+
+Session length follows the user’s Adobe account: sign-in typically stays valid for up to 14 days, while the SDK uses short-lived client tokens (about 5 minutes). Users are not asked to sign in again until that Adobe account session ends.
+
+For more background, see [Set up user identity and Single Sign-on for your organization](https://helpx.adobe.com/enterprise/using/set-up-identity.html) on Adobe Help, and the [Adobe IMS user authentication guide](https://developer.adobe.com/developer-console/docs/guides/authentication/UserAuthentication/ims).
+
+### Who manages user accounts and authentication?
+
+Adobe manages sign-in for Express through the user’s Adobe account. The host application does not store Adobe credentials; users can use any valid Adobe account, including one they created outside your app.
+
 <HorizontalLine />
 
 ## Features & Functionality
@@ -144,6 +183,28 @@ There are two functional differences in the embedded Adobe Express full editor c
 
 The embedded Adobe Express full editor can be setup to launch student safe content even before a student is signed into the embedded experience. More information about [Adobe & Student Privacy](https://www.adobe.com/privacy/student-policy.html).
 
+### How are user entitlements (free vs premium) handled?
+
+Entitlements follow the user’s Adobe account subscription: free accounts have limited templates, assets, and generative features; premium accounts have broader access and higher limits. Your app can supply premium access or let users sign in with their own Adobe account. If you need a different entitlements model for your users, work with your Adobe partner.
+
+### Can I control which templates are shown to users?
+
+Yes. You can configure template discovery using `appConfig` parameters such as `selectedCategory` and `categorySearchText`.
+
+For more details, see [BaseEditorAppConfig](https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config).
+
+### Can the SDK be launched from different entry points in my application?
+
+Yes. You can launch the Embed SDK from any UI element in your application, such as buttons, template selections, or custom workflows.
+
+This enables you to design flexible user journeys based on your application’s requirements.
+
+### How are assets handled when users download or save their work?
+
+When users download assets, files are saved locally to the user’s device.
+
+When users save assets through the SDK, the SDK returns asset data (for example, base64). The host application is responsible for storing and managing these assets.
+
 <HorizontalLine />
 
 ## Configuration & Setup
@@ -151,6 +212,22 @@ The embedded Adobe Express full editor can be setup to launch student safe conte
 ### How many domains can be added with a single API key for a service?
 
 You can add upto five domains with a single API key. Additionally, there is no limit on the number of subdomains that you can employ for these services. Use wildcards to enter [multiple subdomains](../express-unavailable-error.md#wrong-domain-or-port) (`*.my-domain.com`) or commas to separate multiple domains (`www.domain-1.com`, `www.domain-2.com`). During local development, you can include ports greater than `1023` with localhost (example, `localhost:3000`). Standard ports (`80`, `443`) will be used for non-localhost domains.
+
+<HorizontalLine />
+
+## Integration Responsibilities
+
+### Which parts of the experience are managed by Adobe versus my application?
+
+The host application is responsible for building and managing its own user interface, including:
+
+- Marketing or landing pages
+- Template galleries
+- Asset libraries
+
+The Embed SDK provides the Adobe Express editing experience within an embedded environment.
+
+When assets are saved, the SDK returns asset data, and the host application is responsible for storing and managing those assets.
 
 <HorizontalLine />
 
