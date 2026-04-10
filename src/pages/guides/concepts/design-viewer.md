@@ -16,7 +16,7 @@ contributors:
 
 The Design Viewer module lets users view an image-based design inside an Adobe Express-powered experience embedded in your application.
 
-From the viewer, users can **Download** the design (Desktop) or **Share** it (Mobile) via iOS/Android native widgets. Additionally, users can **select or browse templates** of similar designs from a collection or a list of explicit design IDs.
+From the viewer, users can **Download** the design (Desktop) or **Share** it (Mobile) via iOS/Android native widgets. Additionally, users can **select or browse templates** of similar designs from a collection or a list of explicit design IDs. It's a powerful way to engage users with your brand's designs while encouraging them to discover and remix more of your templates.
 
 ![Design Viewer Hero Image](./img/design-viewer--hero.png)
 
@@ -94,9 +94,12 @@ const docConfig = {
 };
 ```
 
-If you have a local image URL (e.g. resolved by a bundler like Vite), you can use the `FileReader` API to **convert it to a Base64** data URL before passing it to the SDK.
+If you have a local image URL—for example, resolved by a bundler like Vite—you can use the `FileReader` API to **convert it to a Base64** data URL before passing it to the SDK.
+
+<Details slots="list" repeat="1" summary="Expand to see the code"/>
 
 ```javascript
+// Convert a local image URL to a Base64 data URL
 function readFileAsDataUrl(file) {
   return new Promise((resolve, reject) => {
     const reader = new FileReader();
@@ -139,7 +142,7 @@ Configures a sidebar panel showing related design templates. Users can click a t
 
 There are two ways to populate the thumbnails:
 
-**From a collection**: provide a [`CollectionConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/collection-config.md) with a collection URN and an optional count:
+**1. From a collection**: provide a [`CollectionConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/collection-config.md) with a collection URN and an optional count:
 
 ```javascript
 const appConfig = {
@@ -154,7 +157,9 @@ const appConfig = {
 
 The Collection URN is what the **Explore more designs** link on the Design Viewer sidebar will point to, opening Adobe Express in a new Browser tab, with the collection pre-loaded.
 
-**From explicit design URNs**: provide an array of known design URNs. When `previewIds` is set, it takes precedence over `collectionConfig`.
+![Preview Thumbnails from a Collection](./img/design-viewer--explore-templates.png)
+
+**2. From explicit design URNs**: provide an array of known design URNs. When `previewIds` is set, it takes precedence over `collectionConfig`.
 
 ```javascript-data-line="4-6"
 const appConfig = {
@@ -174,7 +179,7 @@ For instructions on how to obtain a Collection URN, refer to the [Template Brows
 
 #### `callbacks`
 
-These are the usual callback functions to respond to viewer events. In particular, `onPublish` is going to be useful to handle the asset's sharing on Mobile devices.
+These are the usual callback functions to respond to viewer events. In particular, `onPublish` is going to be useful to handle the asset's sharing on Mobile devices, as explained in the [Mobile sharing with the Web Share API](#mobile-sharing-with-the-web-share-api) section.
 
 - **Type**: [`Callbacks`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md)
 - **Default**: `undefined`
@@ -214,8 +219,6 @@ On mobile, the Design Viewer **Share** control does not open the system share sh
 Wire this up in the **`onPublish`** callback from [`callbacks`](#callbacks). The SDK passes publish parameters that include the exported asset; when the asset is image data as a Base64 **data URL** (see `dataType: "base64"` in your document config), convert it to a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) and pass it to `navigator.share({ files: [file] })`.
 
 Restrict sharing to the **Share** CTA by checking `publishParams.exportButtonId === "shareToHostApp"` before calling `navigator.share`. In theory this guard is optional: on **desktop**, **Download** does not invoke `onPublish`—the image is saved directly and the Design Viewer **stays open**—so that path never hits your share logic. Keeping the `exportButtonId` check still makes the intent obvious and protects you if other publish flows ever call `onPublish` with a different button id.
-
-`navigator.share` must run in a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (HTTPS) and is intended to run in response to a user gesture. The viewer’s share/publish flow typically invokes `onPublish` from that kind of interaction, but behavior can vary by browser—if sharing fails, confirm the callback runs directly from the user’s action and consult the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) documentation for `canShare`, file-type support, and error handling.
 
 ```javascript-data-line="19,39"
 // Convert a base64 data URL to a File object for the Web Share API
