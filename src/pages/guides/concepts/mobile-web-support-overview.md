@@ -60,7 +60,7 @@ For native Mobile apps, we suggest using the [Swift](https://github.com/AdobeDoc
 
 ## Known Limitations
 
-Mobile Web on iOS devices **only supports** [Generate Image](./generate-image-v2.md) and [Edit Image](./edit-image.md) modules.
+Mobile Web on iOS devices **only supports** [Generate Image](./generate-image-v2.md) and [Edit Image](./edit-image-v2.md) modules.
 
 ## Read Next
 

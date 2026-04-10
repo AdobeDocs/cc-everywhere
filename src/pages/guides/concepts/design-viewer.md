@@ -267,9 +267,9 @@ const callbacks = {
 };
 ```
 
-## Complete Example
+## Example
 
-The following example mirrors the pattern from the [Embed SDK View Design sample application](https://github.com/AdobeDocs/embed-sdk-samples). It accepts either a pre-loaded image or a user-uploaded file, converts it to Base64, and launches the Design Viewer. It also includes the [Web Share API](#mobile-sharing-with-the-web-share-api) helpers and an `onPublish` handler that shares only when `publishParams.exportButtonId` is `"shareToHostApp"` (the **Share** control on mobile).
+The following example mirrors the pattern from the [Embed SDK View Design sample application](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials). It accepts either a pre-loaded image or a user-uploaded file, converts it to Base64, and launches the Design Viewer. It also includes the [Web Share API](#mobile-sharing-with-the-web-share-api) helpers and an `onPublish` handler that shares only when `publishParams.exportButtonId` is `"shareToHostApp"` (the **Share** control on mobile).
 
 <CodeBlock slots="heading, code" repeat="2" languages="main.js, index.html"/>
 

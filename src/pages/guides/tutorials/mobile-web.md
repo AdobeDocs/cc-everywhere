@@ -40,7 +40,7 @@ We'll build a mock **Fantasy Chess Game**, where users can **generate their own 
 - An **iOS native application** developed in [Swift](https://developer.apple.com/swift/) that loads the Web-based Embed SDK experience into a WebView.
 - A similar **Android native application** developed in [Kotlin](https://kotlinlang.org/).
 
-You will **develop locally** on your machine, and run the mobile applications through **simulators in Apple Xcode and Android Studio**. The table below (reproduced for convenience from the [Mobile Web Overview](./mobile-web-support-overview.md)) shows the available ways to integrate the Embed SDK into multiple surfaces; this tutorial covers **the first three use cases**.
+You will **develop locally** on your machine, and run the mobile applications through **simulators in Apple Xcode and Android Studio**. The table below (reproduced for convenience from the [Mobile Web Overview](../concepts/mobile-web-support-overview.md)) shows the available ways to integrate the Embed SDK into multiple surfaces; this tutorial covers **the first three use cases**.
 
 |     | Device         | Integration type | Runtime | Description                                                                          |
 | --- | -------------- | ---------------- | ------- | ------------------------------------------------------------------------------------ |
@@ -60,9 +60,9 @@ Before we begin, make sure you have the following:
 
 We also recommend reviewing the following resources first:
 
-- **[Mobile Web Overview](./mobile-web-support-overview.md)**: The different ways to implement mobile web support.
-- **[Mobile Web in the Browser](./mobile-web-support-browser.md)**: The Mobile Web approach in the Browser.
-- **[Mobile Web in a WebView](./mobile-web-support-webview.md)**: The Mobile Web approach in iOS and Android WebViews.
+- **[Mobile Web Overview](../concepts/mobile-web-support-overview.md)**: The different ways to implement mobile web support.
+- **[Mobile Web in the Browser](../concepts/mobile-web-support-browser.md)**: The Mobile Web approach in the Browser.
+- **[Mobile Web in a WebView](../concepts/mobile-web-support-webview.md)**: The Mobile Web approach in iOS and Android WebViews.
 
 Given the complexity of the project, for the sake of brevity and clarity, we will focus on the parts that are most relevant to the main goal of the tutorial. The complete code is available in the [embed-sdk-mobile-web-tutorial](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials/embed-sdk-mobile-web) repository on GitHub, if you want to check the entire implementation.
 

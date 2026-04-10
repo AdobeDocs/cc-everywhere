@@ -85,7 +85,7 @@ contributors:
 
 ### Documentation
 
-- Added a new comprehensive [Mobile Web Support](../concepts/mobile-web-support.md) concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility.
+- Added a new comprehensive [Mobile Web Support Overview](../concepts/mobile-web-support-overview.md) concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility.
 
 ## [4.35.15] 2025-09-18
 
@@ -133,10 +133,10 @@ Added comprehensive style enumerations to provide granular control over image ge
 - [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md): Primary content types (photo, graphic, art)
 - [`ImageThemeStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-theme-style.md): 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more
 - [`ImageTechniqueStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-technique-style.md): 12 artistic techniques from painting and sketching to watercolor and linocut
-- [`ImageLightingStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-lighting-style.md): five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting
-- [`ImageCompositionStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-composition-style.md): seven composition styles for camera angles and framing
+- `ImageLightingStyle`: five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting
+- `ImageCompositionStyle`: seven composition styles for camera angles and framing
 - [`ImageEffectStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-effect-style.md): nine visual effects including bokeh, fisheye, neon, and bioluminescent
-- [`ImageColorStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-color-style.md): six color palette options from black & white to vibrant and pastel colors
+- `ImageColorStyle`: six color palette options from black & white to vibrant and pastel colors
 - [`ImageMovementStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-movement-style.md): 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque
 - [`ImageMaterialStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-material-style.md): nine material simulations from claymation to marble sculpture
 - [`ImageConceptStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md): six conceptual moods for emotional tone
