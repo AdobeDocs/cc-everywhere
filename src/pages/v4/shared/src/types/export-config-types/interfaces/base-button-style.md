@@ -33,3 +33,4 @@ Style for a button-style export option (button or enabled-button).
 | `icon?` | `string` | The optional icon URL for the button. | - |
 | `variant?` | [`ExportButtonVariant`](../type-aliases/export-button-variant.md) | The optional variant for the button. | - |
 | `treatment?` | [`ExportButtonTreatment`](../type-aliases/export-button-treatment.md) | The optional treatment for the button. | - |
+| `display?` | [`ExportButtonDisplayMode`](../type-aliases/export-button-display-mode.md) | How to display icon and label. See [ExportButtonDisplayMode](../type-aliases/export-button-display-mode.md) for fallbacks when icon or label is missing. `'icon-and-label'` uses icon-before-label layout. **Default** `'icon' when icon is provided, otherwise 'label'` | - |

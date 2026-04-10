@@ -16,29 +16,6 @@ hideEditInGitHub: true
 
 - [`QuickActionWorkflow`](../../quick-action-workflow-types/interfaces/quick-action-workflow.md)
 
-## Constructors
-
-### Constructor
-
-```ts
-new QuickActionWorkflow(actionManager, context): QuickActionWorkflow;
-```
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `actionManager` | `ActionManager` |
-| `context` | `SDKContext` |
-
-#### Returns
-
-`QuickActionWorkflow`
-
-#### Inherited from
-
-[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
-
 ## Methods
 
 ### convertToJPEG()

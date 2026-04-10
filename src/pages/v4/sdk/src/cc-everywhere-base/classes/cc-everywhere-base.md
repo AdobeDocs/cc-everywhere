@@ -55,16 +55,6 @@ Constructor to initialize CCEverywhere object.
 
 ### activeInstance
 
-#### Get Signature
-
-```ts
-get static activeInstance(): CCEverywhereBase | undefined;
-```
-
-##### Returns
-
-`CCEverywhereBase` \| `undefined`
-
 #### Set Signature
 
 ```ts
@@ -81,65 +71,7 @@ set static activeInstance(instance): void;
 
 `void`
 
-<HorizontalLine />
-
-### state
-
-#### Get Signature
-
-```ts
-get static state(): State;
-```
-
-##### Returns
-
-[`State`](../../types/cc-everywhere-types/enumerations/state.md)
-
-#### Set Signature
-
-```ts
-set static state(value): void;
-```
-
-##### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `value` | [`State`](../../types/cc-everywhere-types/enumerations/state.md) |
-
-##### Returns
-
-`void`
-
-<HorizontalLine />
-
-### version
-
-#### Get Signature
-
-```ts
-get version(): string;
-```
-
-Get version of SDK
-
-##### Returns
-
-`string`
-
 ## Methods
-
-### terminate()
-
-```ts
-terminate(): void;
-```
-
-Method to un-initialize cceverywhere object
-
-#### Returns
-
-`void`
 
 ### close()
 
@@ -163,27 +95,3 @@ Closes any active design in progress.
   \| `Promise`&lt;[`CloseStatusMessage`](../../../../shared/src/messenger/message-types/interfaces/close-status-message.md)&gt;
 
 boolean value indicating whether the close operation was successful or not.
-
-<HorizontalLine />
-
-### onRequestIdUpdate()
-
-```ts
-onRequestIdUpdate(requestId): void;
-```
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `requestId` | `string` |
-
-#### Returns
-
-`void`
-
-#### Implementation of
-
-```ts
-RequestIdUpdateListener.onRequestIdUpdate
-```

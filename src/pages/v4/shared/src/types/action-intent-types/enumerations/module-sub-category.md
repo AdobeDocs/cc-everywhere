@@ -18,3 +18,4 @@ hideEditInGitHub: true
 | `START_FROM_CONTENT` | `"start-from-content"` |
 | `EDIT_DESIGN` | `"edit-design"` |
 | `DESIGN_VIEWER` | `"design-viewer"` |
+| `ANNOTATE_IMAGE` | `"annotate-image"` |

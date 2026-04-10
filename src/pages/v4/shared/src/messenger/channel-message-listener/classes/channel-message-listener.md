@@ -192,7 +192,7 @@ sendMessage<T>(targetChannel, message): boolean;
 | Parameter | Type |
 | ------ | ------ |
 | `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |
-| `message` | \| [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) |
+| `message` | \| [`SimpleMessageType`](../../message-types/type-aliases/simple-message-type.md) \| [`Message`](../../message-types/type-aliases/message.md)&lt;`T`&gt; |
 
 #### Returns
 

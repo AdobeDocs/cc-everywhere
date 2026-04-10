@@ -178,6 +178,12 @@ Re-exports [EditDesignDesignConfig](design-config-types/interfaces/edit-design-d
 
 <HorizontalLine />
 
+### AnnotateImageDesignConfig
+
+Re-exports [AnnotateImageDesignConfig](design-config-types/interfaces/annotate-image-design-config.md)
+
+<HorizontalLine />
+
 ### DesignViewerDesignConfig
 
 Re-exports [DesignViewerDesignConfig](design-config-types/interfaces/design-viewer-design-config.md)
@@ -199,6 +205,12 @@ Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-confi
 ### EditDesignDocConfig
 
 Re-exports [EditDesignDocConfig](doc-config-types/interfaces/edit-design-doc-config.md)
+
+<HorizontalLine />
+
+### AnnotateImageDocConfig
+
+Re-exports [AnnotateImageDocConfig](doc-config-types/interfaces/annotate-image-doc-config.md)
 
 <HorizontalLine />
 
