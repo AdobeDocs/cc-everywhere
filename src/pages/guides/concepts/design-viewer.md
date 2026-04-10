@@ -35,7 +35,7 @@ const { module } = await window.CCEverywhere.initialize(
 module.viewDesign(docConfig, appConfig, exportConfig, containerConfig);
 ```
 
-## Configuring the Design Viewer
+## Configuration options
 
 ### The asset to view
 
@@ -51,7 +51,7 @@ The `type` property identifies the kind of media—for the Design Viewer—alway
 
 <CodeBlock slots="heading, code" repeat="3" languages="base64, url, blob"/>
 
-#### base64
+#### Base64
 
 ```javascript
 // Base64 asset (most common for locally-sourced images)
@@ -66,7 +66,7 @@ const docConfig = {
 module.viewDesign(docConfig);
 ```
 
-#### url
+#### URL
 
 ```javascript
 // URL asset (image hosted on a server)
@@ -81,7 +81,7 @@ const docConfig = {
 module.viewDesign(docConfig);
 ```
 
-#### blob
+#### Blob
 
 ```javascript
 // Blob asset (file from an `<input type="file">`)
@@ -94,11 +94,7 @@ const docConfig = {
 };
 ```
 
-<InlineAlert slots="header, text" variant="info" />
-
-#### Converting a local image to Base64
-
-If you have a local image URL (e.g. resolved by a bundler like Vite), you can use the `FileReader` API to convert it to a Base64 data URL before passing it to the SDK.
+If you have a local image URL (e.g. resolved by a bundler like Vite), you can use the `FileReader` API to **convert it to a Base64** data URL before passing it to the SDK.
 
 ```javascript
 function readFileAsDataUrl(file) {
@@ -150,34 +146,35 @@ const appConfig = {
   previewThumbnails: {
     collectionConfig: {
       collectionId: "urn:aaid:sc:VA6C2:e0f161bf-3d73-4ad8-ba20-20722638c625", // 👈
-      count: 7, // 👈 defaults to 5; must be greater than 0
+      count: 7, // 👈 defaults to 5; must be greater than 0 or throws an INVALID_SIZE_VALUE error
     },
   },
 };
 ```
 
+The Collection URN is what the **Explore more designs** link on the Design Viewer sidebar will point to, opening Adobe Express in a new Browser tab, with the collection pre-loaded.
+
 **From explicit design URNs**: provide an array of known design URNs. When `previewIds` is set, it takes precedence over `collectionConfig`.
 
-```javascript
+```javascript-data-line="4-6"
 const appConfig = {
   previewThumbnails: {
     previewIds: [
-      "urn:aaid:sc:VA6C2:83b28917-ef22-5771-be35-d4622d72ff4d", "urn:aaid:sc:VA6C2:83b28917-ef22-5771-be35-d4622d72ff4d", "urn:aaid:sc:VA6C2:ec55e16c-501b-5ee3-953b-68ffef230801"], // 👈
+      "urn:aaid:sc:VA6C2:83b28917-ef22-5771-be35-d4622d72ff4d",
+      "urn:aaid:sc:VA6C2:83b28917-ef22-5771-be35-d4622d72ff4d",
+      "urn:aaid:sc:VA6C2:ec55e16c-501b-5ee3-953b-68ffef230801"
+    ],
   },
 };
 ```
 
-<InlineAlert slots="header, text" variant="warning" />
-
-#### `count` must be greater than zero
-
-Passing `previewThumbnails.collectionConfig.count` with a value of `0` or less throws an `INVALID_SIZE_VALUE` error. Omit `count` to use the default of 5.
+<InlineAlert slots="text" variant="info" />
 
 For instructions on how to obtain a Collection URN, refer to the [Template Browser](./template-browser.md#collection-identifiers-urns) guide.
 
 #### `callbacks`
 
-Define callback functions to respond to viewer events.
+These are the usual callback functions to respond to viewer events. In particular, `onPublish` is going to be useful to handle the asset's sharing on Mobile devices.
 
 - **Type**: [`Callbacks`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md)
 - **Default**: `undefined`
@@ -199,9 +196,77 @@ const appConfig = {
 };
 ```
 
+## Desktop and Mobile CTAs
+
+The Design Viewer provides two CTAs for desktop and mobile devices:
+
+- **Download**: allows users to download the design as an image file.
+- **Share**: allows users to share the design via iOS/Android native widgets.
+
+While on Desktop the download action is immediate, on Mobile devices you would need to handle the asset's sharing via iOS/Android native widgets.
+
+### Mobile sharing with the Web Share API
+
+On mobile, the Design Viewer **Share** control does not open the system share sheet by itself. Your app should use the browser **[Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API)** (`navigator.share` / `navigator.canShare`) so the user gets the native iOS or Android share UI (Messages, Mail, installed apps, and so on).
+
+![Mobile sharing with the Web Share API](./img/design-viewer--share.png)
+
+Wire this up in the **`onPublish`** callback from [`callbacks`](#callbacks). The SDK passes publish parameters that include the exported asset; when the asset is image data as a Base64 **data URL** (see `dataType: "base64"` in your document config), convert it to a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) and pass it to `navigator.share({ files: [file] })`.
+
+Restrict sharing to the **Share** CTA by checking `publishParams.exportButtonId === "shareToHostApp"` before calling `navigator.share`. In theory this guard is optional: on **desktop**, **Download** does not invoke `onPublish`—the image is saved directly and the Design Viewer **stays open**—so that path never hits your share logic. Keeping the `exportButtonId` check still makes the intent obvious and protects you if other publish flows ever call `onPublish` with a different button id.
+
+`navigator.share` must run in a [secure context](https://developer.mozilla.org/en-US/docs/Web/Security/Secure_Contexts) (HTTPS) and is intended to run in response to a user gesture. The viewer’s share/publish flow typically invokes `onPublish` from that kind of interaction, but behavior can vary by browser—if sharing fails, confirm the callback runs directly from the user’s action and consult the [Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) documentation for `canShare`, file-type support, and error handling.
+
+```javascript-data-line="19,39"
+// Convert a base64 data URL to a File object for the Web Share API
+function dataUrlToFile(dataUrl, filename = "gameweek-summary.png") {
+  const [header, base64] = dataUrl.split(",");
+  const mime = header.match(/:(.*?);/)[1];
+  const bytes = atob(base64);
+  const buffer = new Uint8Array(bytes.length);
+  for (let i = 0; i < bytes.length; i++) {
+    buffer[i] = bytes.charCodeAt(i);
+  }
+  return new File([buffer], filename, { type: mime });
+}
+
+// Share the published image using the native Share sheet (Web Share API)
+async function shareImage(asset) {
+  const file = dataUrlToFile(asset.data);
+
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try {
+      await navigator.share({ files: [file] });
+      console.log("Shared successfully");
+    } catch (err) {
+      if (err.name !== "AbortError") {
+        console.error("Share failed:", err);
+      }
+    }
+  } else {
+    console.warn("Web Share API file sharing not supported");
+  }
+}
+
+// Callbacks to be used when creating or editing a document
+const callbacks = {
+  onCancel: () => {},
+  onPublish: (intent, publishParams) => {
+    console.log("publishParams", publishParams);
+    if (publishParams.exportButtonId !== "shareToHostApp") {
+      return;
+    }
+    shareImage(publishParams.asset[0]);
+  },
+  onError: (err) => {
+    console.error("Error!", err.toString());
+  },
+};
+```
+
 ## Complete Example
 
-The following example mirrors the pattern from the [Embed SDK View Design sample application](https://github.com/AdobeDocs/embed-sdk-samples). It accepts either a pre-loaded image or a user-uploaded file, converts it to Base64, and launches the Design Viewer.
+The following example mirrors the pattern from the [Embed SDK View Design sample application](https://github.com/AdobeDocs/embed-sdk-samples). It accepts either a pre-loaded image or a user-uploaded file, converts it to Base64, and launches the Design Viewer. It also includes the [Web Share API](#mobile-sharing-with-the-web-share-api) helpers and an `onPublish` handler that shares only when `publishParams.exportButtonId` is `"shareToHostApp"` (the **Share** control on mobile).
 
 <CodeBlock slots="heading, code" repeat="2" languages="main.js, index.html"/>
 
@@ -215,6 +280,34 @@ const { module } = await window.CCEverywhere.initialize(
   { loginMode: "delayed" }
 );
 
+function dataUrlToFile(dataUrl, filename = "design.png") {
+  const [header, base64] = dataUrl.split(",");
+  const mime = header.match(/:(.*?);/)[1];
+  const bytes = atob(base64);
+  const buffer = new Uint8Array(bytes.length);
+  for (let i = 0; i < bytes.length; i++) {
+    buffer[i] = bytes.charCodeAt(i);
+  }
+  return new File([buffer], filename, { type: mime });
+}
+
+async function shareImage(asset) {
+  const file = dataUrlToFile(asset.data);
+
+  if (navigator.canShare && navigator.canShare({ files: [file] })) {
+    try {
+      await navigator.share({ files: [file] });
+      console.log("Shared successfully");
+    } catch (err) {
+      if (err.name !== "AbortError") {
+        console.error("Share failed:", err);
+      }
+    }
+  } else {
+    console.warn("Web Share API file sharing not supported");
+  }
+}
+
 const appConfig = {
   designTitle: "Your Gameweek Summary",
   previewThumbnails: {
@@ -226,6 +319,10 @@ const appConfig = {
   callbacks: {
     onPublish: (intent, publishParams) => {
       console.log("Published:", publishParams);
+      if (publishParams.exportButtonId !== "shareToHostApp") {
+        return;
+      }
+      shareImage(publishParams.asset[0]);
     },
     onError: (err) => {
       console.error("Error:", err.toString());
@@ -320,6 +417,5 @@ document.getElementById("fileInput").onchange = async (event) => {
 - [`PreviewThumbnailsConfig` API Reference](../../v4/shared/src/types/module/app-config-types/interfaces/preview-thumbnails-config.md)
 - [`CollectionConfig` API Reference](../../v4/shared/src/types/module/app-config-types/interfaces/collection-config.md)
 - [`Asset` Type Reference](../../v4/shared/src/types/asset-types/type-aliases/asset.md)
-- [Template Browser](./template-browser.md) — for instructions on obtaining Collection URNs
-- [Workflow Tethering](./tethering.md) — to chain the Design Viewer into a multi-step workflow
+- [Web Share API (MDN)](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API) — `navigator.share` / `navigator.canShare` for native mobile share sheets
 - [Error Handling](./error-handling.md)
