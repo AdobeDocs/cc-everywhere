@@ -126,7 +126,7 @@ We prioritize use cases that demonstrate clear business impact. This includes su
 
 ### Would Adobe need to approve the integrations before my users can start using it?
 
-Your users can use the integrations, but, we will display a red banner indicating, `The experience powered by Adobe Express has not been approved yet`. Once we review and approve your app, we will remove this banner.
+Your users can use the integrations, but, we will display a red banner indicating, `The experience powered by Adobe Express has not been approved yet`. The banner is removed only after your integration is approved; it can take up to approximately 24 hours for the banner to disappear after approval.
 
 ### What happens to existing integrations?
 
