@@ -23,5 +23,7 @@ Information related to output asset.
 | `dataType` | [`AssetDataType`](../enumerations/asset-data-type.md) | [`AssetBase`](asset-base.md).[`dataType`](asset-base.md#datatype) |
 | `data` | `string` \| [`Blob`](blob.md) | [`AssetBase`](asset-base.md).[`data`](asset-base.md#data) |
 | `fileType` | \| [`JPEG`](../enumerations/image-file-type.md#jpeg) \| [`PNG`](../enumerations/image-file-type.md#png) \| [`PDF`](../enumerations/pdf-file-type.md#pdf) \| [`MP4`](../enumerations/video-file-type.md#mp4) | - |
-| `fileName?` | `string` | - |
+| `fileName` | `string` | - |
 | `size?` | [`PixelSize`](pixel-size.md) | - |
+
+`size` is only present for image exports (PNG / JPG) from the Editor. For all other cases, `size` is `undefined`
