@@ -86,6 +86,7 @@ Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SD
 ### [Troubleshooting](#troubleshooting-1)
 
 - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
+- [Why do I see CORS errors in Safari due to caching?](#why-do-i-see-cors-errors-in-safari-due-to-caching)
 - [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
 
 ### [Support](#support-1)
@@ -258,19 +259,19 @@ You can refer to the complete [technical requirements](../../quickstart/technica
 
 Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 
-### How can I debug and troubleshoot errors effectively?
+### Why do I see CORS errors in Safari due to caching?
 
-Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
-
-**Why do I see CORS errors only in Safari?**
-
-This may not be a true CORS issue. Safari has a known caching limitation where it does not create separate cache entries for GET requests across different domains. This can cause cached responses to be reused incorrectly, resulting in CORS errors.
+This is often not a true CORS issue. In some cases, Safari incorrectly caches GET requests across different domains by reusing (or overwriting) cache entries instead of creating separate ones per domain. When a cached response from one domain is reused for a request made from another domain, it can surface as an apparent CORS failure in Safari—even though the same flow works correctly in other browsers.
 
 **Recommendation**
 
-- Test your flows on Safari.
-- Ensure proper cache headers are set.
-- When working with third-party integrations, share the relevant domains for whitelisting.
+- Test your flows on Safari (especially for cross-domain asset downloads).
+- Ensure appropriate cache headers are set so responses aren’t reused incorrectly.
+- If you are working with third-party integrations, share any new domains that need to be allowlisted to avoid genuine CORS issues.
+
+### How can I debug and troubleshoot errors effectively?
+
+Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
 
 <HorizontalLine />
 
