@@ -53,6 +53,7 @@ hideEditInGitHub: true
 | [ExportTarget](type-aliases/export-target.md) | Represents the available export targets for content. |
 | [ExportButtonTreatment](type-aliases/export-button-treatment.md) | - |
 | [ExportButtonVariant](type-aliases/export-button-variant.md) | - |
+| [ExportButtonDisplayMode](type-aliases/export-button-display-mode.md) | Display mode for button-style export options (icon and/or label). |
 | [ExportContext](type-aliases/export-context.md) | - |
 | [ButtonStyle](type-aliases/button-style.md) | Style for a standard export button. |
 | [EnabledButtonStyle](type-aliases/enabled-button-style.md) | Style for an always-enabled export button (no disabled state). |

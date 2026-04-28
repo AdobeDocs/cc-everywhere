@@ -16,29 +16,6 @@ hideEditInGitHub: true
 
 - [`EditorWorkflow`](../../editor-workflow-types/interfaces/editor-workflow.md)
 
-## Constructors
-
-### Constructor
-
-```ts
-new EditorWorkflow(actionManager, context): EditorWorkflow;
-```
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `actionManager` | `ActionManager` |
-| `context` | `SDKContext` |
-
-#### Returns
-
-`EditorWorkflow`
-
-#### Inherited from
-
-[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
-
 ## Methods
 
 ### create()

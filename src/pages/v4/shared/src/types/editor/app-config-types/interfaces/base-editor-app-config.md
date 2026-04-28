@@ -29,3 +29,4 @@ hideEditInGitHub: true
 | `showPageMargin?` | `boolean` | Show page margin **Default** `false` | - |
 | `showBleedArea?` | `boolean` | Show bleed area **Default** `false` | - |
 | `canvasBackgroundColor?` | `string` | Set the default background color of the canvas **Default** `empty string` | - |
+| `editorMode?` | [`ASSISTANT`](../../../app-config-types/enumerations/editor-mode.md#assistant) | Set the mode in which editor should open | - |

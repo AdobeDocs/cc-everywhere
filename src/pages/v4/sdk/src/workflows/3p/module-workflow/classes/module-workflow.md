@@ -16,29 +16,6 @@ hideEditInGitHub: true
 
 - [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md)
 
-## Constructors
-
-### Constructor
-
-```ts
-new ModuleWorkflow(actionManager, context): ModuleWorkflow;
-```
-
-#### Parameters
-
-| Parameter | Type |
-| ------ | ------ |
-| `actionManager` | `ActionManager` |
-| `context` | `SDKContext` |
-
-#### Returns
-
-`ModuleWorkflow`
-
-#### Inherited from
-
-[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
-
 ## Methods
 
 ### editImage()
@@ -48,7 +25,7 @@ editImage(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+containerConfig?): Promise<EditImageContext>;
 ```
 
 Perform editing tasks on any image.
@@ -64,7 +41,9 @@ Perform editing tasks on any image.
 
 #### Returns
 
-`void`
+`Promise`&lt;`EditImageContext`&gt;
+
+Promise that resolves with EditImageContext when the workflow is loaded
 
 #### Implementation of
 
@@ -154,3 +133,7 @@ Launches the design viewer for a personalized design.
 #### Returns
 
 `void`
+
+#### Implementation of
+
+[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`viewDesign`](../../module-workflow-types/interfaces/module-workflow.md#viewdesign)
