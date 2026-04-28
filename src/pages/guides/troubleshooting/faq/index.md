@@ -262,6 +262,16 @@ Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 
 Refer to the [error handling guide](../../concepts/error-handling.md) provided with the SDK documentation. It includes detailed information on understanding exceptions, accessing error metadata, and best practices for handling different types of errors.
 
+**Why do I see CORS errors only in Safari?**
+
+This may not be a true CORS issue. Safari has a known caching limitation where it does not create separate cache entries for GET requests across different domains. This can cause cached responses to be reused incorrectly, resulting in CORS errors.
+
+**Recommendation**
+
+- Test your flows on Safari.
+- Ensure proper cache headers are set.
+- When working with third-party integrations, share the relevant domains for whitelisting.
+
 <HorizontalLine />
 
 ## Support
