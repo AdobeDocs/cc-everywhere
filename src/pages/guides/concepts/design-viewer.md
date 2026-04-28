@@ -14,9 +14,9 @@ contributors:
 
 # Design Viewer
 
-The Design Viewer module lets users view an image-based design inside an Adobe Express-powered experience embedded in your application.
+The Design Viewer module lets you display image-based designs inside an Adobe Express-powered experience embedded in your application.
 
-From the viewer, users can **Download** the design (Desktop) or **Share** it (Mobile) via iOS/Android native widgets. Additionally, users can **select or browse templates** of similar designs from a collection or a list of explicit design IDs. It's a powerful way to engage users with your brand's designs while encouraging them to discover and remix more of your templates.
+In the viewer, you can let users **Download** the design on Desktop or **Share** it on Mobile using iOS or Android native widgets. Additionally, users can **select or browse templates** of similar designs from a collection or a list of explicit design IDs. It's a powerful way to engage users with your brand's templates while encouraging them to discover and remix more of your templates.
 
 ![Design Viewer Hero Image](./img/design-viewer--hero.png)
 
@@ -32,6 +32,8 @@ const { module } = await window.CCEverywhere.initialize(
   {}
 );
 
+// Please note:
+// the only required argument is docConfig, all other arguments are optional (exportConfig is ignored)
 module.viewDesign(docConfig, appConfig, exportConfig, containerConfig);
 ```
 
@@ -111,6 +113,8 @@ function readFileAsDataUrl(file) {
 
 const dataUrl = await readFileAsDataUrl(file);
 ```
+
+Once you've defined the asset, you can customize the Viewer experience.
 
 ### Viewer customization
 
@@ -216,9 +220,19 @@ On mobile, the Design Viewer **Share** control does not open the system share sh
 
 ![Mobile sharing with the Web Share API](./img/design-viewer--share.png)
 
-Wire this up in the **`onPublish`** callback from [`callbacks`](#callbacks). The SDK passes publish parameters that include the exported asset; when the asset is image data as a Base64 **data URL** (see `dataType: "base64"` in your document config), convert it to a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File) and pass it to `navigator.share({ files: [file] })`.
+Implement sharing inside the **`onPublish`** callback from [`callbacks`](#callbacks). The SDK passes publish parameters that include the exported asset. In practice you do three things: detect the **Share** CTA, turn the published image into a [`File`](https://developer.mozilla.org/en-US/docs/Web/API/File), then call `navigator.share`.
 
-Restrict sharing to the **Share** CTA by checking `publishParams.exportButtonId === "shareToHostApp"` before calling `navigator.share`. In theory this guard is optional: on **desktop**, **Download** does not invoke `onPublish`—the image is saved directly and the Design Viewer **stays open**—so that path never hits your share logic. Keeping the `exportButtonId` check still makes the intent obvious and protects you if other publish flows ever call `onPublish` with a different button id.
+#### 1. Detect Share CTA
+
+Restrict your share logic to the **Share** button by checking `publishParams.exportButtonId === "shareToHostApp"` before calling `navigator.share`. In theory this guard is optional: on **desktop**, **Download** does not invoke `onPublish`—the image is saved directly and the Design Viewer **stays open**—so that path never hits your share logic. Keeping the `exportButtonId` check still makes the intent obvious and protects you if other publish flows ever call `onPublish` with a different button id.
+
+#### 2. Convert Base64 → File
+
+The SDK includes the exported image in `publishParams.asset`. When you opened the viewer with a Base64 **data URL** (`dataType: "base64"` in [`docConfig`](#the-asset-to-view)), that payload is still a data URL string suitable for parsing. Decode the header to read the MIME type, decode the payload with `atob`, wrap bytes in a `Uint8Array`, and construct a `File` so the Web Share API can attach it as `files: [file]`.
+
+#### 3. Call `navigator.share`
+
+After you have a `File`, use **`navigator.canShare({ files: [file] })`** when available to confirm file sharing is supported, then **`await navigator.share({ files: [file] })`** to open the system sheet. Treat **`AbortError`** as the user dismissing the sheet; log or surface other errors. If `canShare` is missing or returns false, fall back to your own UX (for example, a message that sharing is not available in this browser).
 
 ```javascript-data-line="19,39"
 // Convert a base64 data URL to a File object for the Web Share API
