@@ -174,10 +174,6 @@
               }
             ],
             "path": "/v4/sdk/src/feature-flags/local-feature-flag-service/index.md"
-          },
-          {
-            "title": "LocalFeatureFlagService.test",
-            "path": "/v4/sdk/src/feature-flags/local-feature-flag-service-test/index.md"
           }
         ],
         "path": "/v4/sdk/src/feature-flags/feature-flag-service/index.md"
@@ -922,6 +918,10 @@
                     "path": "/v4/shared/src/types/app-config-types/enumerations/color-theme.md"
                   },
                   {
+                    "title": "EditorMode",
+                    "path": "/v4/shared/src/types/app-config-types/enumerations/editor-mode.md"
+                  },
+                  {
                     "title": "EditorPanelView",
                     "path": "/v4/shared/src/types/app-config-types/enumerations/editor-panel-view.md"
                   },
@@ -1564,6 +1564,10 @@
                     "path": "/v4/shared/src/types/export-config-types/type-aliases/export-action.md"
                   },
                   {
+                    "title": "ExportButtonDisplayMode",
+                    "path": "/v4/shared/src/types/export-config-types/type-aliases/export-button-display-mode.md"
+                  },
+                  {
                     "title": "ExportButtonTreatment",
                     "path": "/v4/shared/src/types/export-config-types/type-aliases/export-button-treatment.md"
                   },
@@ -2081,6 +2085,10 @@
                     "title": "interfaces",
                     "pages": [
                       {
+                        "title": "AnnotateImageDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/annotate-image-design-config.md"
+                      },
+                      {
                         "title": "DesignViewerDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config.md"
                       },
@@ -2105,7 +2113,7 @@
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/warmup-design-config.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config.md"
+                    "path": "/v4/shared/src/types/module/design-config-types/interfaces/annotate-image-design-config.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/module/design-config-types/index.md"
@@ -2116,6 +2124,10 @@
                   {
                     "title": "interfaces",
                     "pages": [
+                      {
+                        "title": "AnnotateImageDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/annotate-image-doc-config.md"
+                      },
                       {
                         "title": "DesignViewerDocConfig",
                         "path": "/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md"
@@ -2129,7 +2141,7 @@
                         "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md"
+                    "path": "/v4/shared/src/types/module/doc-config-types/interfaces/annotate-image-doc-config.md"
                   },
                   {
                     "title": "EditImageIntent",

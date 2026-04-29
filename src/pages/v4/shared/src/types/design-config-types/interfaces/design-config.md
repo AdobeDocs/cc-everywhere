@@ -15,6 +15,7 @@ hideEditInGitHub: true
 - [`StartFromContentDesignConfig`](../../module/design-config-types/interfaces/start-from-content-design-config.md)
 - [`WarmupDesignConfig`](../../module/design-config-types/interfaces/warmup-design-config.md)
 - [`EditDesignDesignConfig`](../../module/design-config-types/interfaces/edit-design-design-config.md)
+- [`AnnotateImageDesignConfig`](../../module/design-config-types/interfaces/annotate-image-design-config.md)
 - [`DesignViewerDesignConfig`](../../module/design-config-types/interfaces/design-viewer-design-config.md)
 - [`BaseDesignConfig`](../../quick-action/design-config-types/interfaces/base-design-config.md)
 

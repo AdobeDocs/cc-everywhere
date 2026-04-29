@@ -136,6 +136,12 @@ Re-exports [WarmupMode](app-config-types/enumerations/warmup-mode.md)
 
 <HorizontalLine />
 
+### EditorMode
+
+Re-exports [EditorMode](app-config-types/enumerations/editor-mode.md)
+
+<HorizontalLine />
+
 ### Blob
 
 Re-exports [Blob](asset-types/interfaces/blob.md)
@@ -613,6 +619,12 @@ Re-exports [ExportButtonTreatment](export-config-types/type-aliases/export-butto
 ### ExportButtonVariant
 
 Re-exports [ExportButtonVariant](export-config-types/type-aliases/export-button-variant.md)
+
+<HorizontalLine />
+
+### ExportButtonDisplayMode
+
+Re-exports [ExportButtonDisplayMode](export-config-types/type-aliases/export-button-display-mode.md)
 
 <HorizontalLine />
 
