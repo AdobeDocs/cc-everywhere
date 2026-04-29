@@ -9,7 +9,7 @@ hideEditInGitHub: true
 # Class: EditorContext
 
 Represents the base workflow context for the SDK workflows
-This should be extended by all the workflow contexts like EditorContext, GenStudioContext, etc.
+This should be extended by all the workflow contexts like EditorContext, GenStudioContext, EditImageContext, etc.
 
 ## Extends
 

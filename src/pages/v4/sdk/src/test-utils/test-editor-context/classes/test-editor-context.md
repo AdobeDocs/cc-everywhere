@@ -88,9 +88,9 @@ The agent will handle displaying the toast.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `message` | `string` | The message to display in the toast |
-| `options?` | \{ `duration?`: `number`; `type?`: `"error"` \| `"success"` \| `"info"` \| `"warning"`; \} | Optional toast configuration |
+| `options?` | \{ `duration?`: `number`; `type?`: `"error"` \| `"success"` \| `"warning"` \| `"info"`; \} | Optional toast configuration |
 | `options.duration?` | `number` | - |
-| `options.type?` | `"error"` \| `"success"` \| `"info"` \| `"warning"` | - |
+| `options.type?` | `"error"` \| `"success"` \| `"warning"` \| `"info"` | - |
 
 #### Returns
 

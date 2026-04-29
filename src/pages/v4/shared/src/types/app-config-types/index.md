@@ -20,6 +20,7 @@ hideEditInGitHub: true
 | [Scale](enumerations/scale.md) | - |
 | [HostAppTrigger](enumerations/host-app-trigger.md) | - |
 | [WarmupMode](enumerations/warmup-mode.md) | Enum for defining the different warmup modes for the background warmup process. |
+| [EditorMode](enumerations/editor-mode.md) | - |
 
 ## Interfaces
 

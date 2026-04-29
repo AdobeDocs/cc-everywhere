@@ -28,3 +28,4 @@ Action for publishing content to the host application.
 | `closeTargetOnExport?` | `boolean` | - | - |
 | `outputType?` | [`AssetDataType`](../../asset-types/enumerations/asset-data-type.md) | Desired asset data type for images. For image output types, host can set this property to either base64, url or blob. Default type for images is base64. For videos, we will always send output as url irrespective of this property. **Default** `base64` | - |
 | `enableByDefault?` | `boolean` | Whether to enable the export option by default. **Default** `false` | - |
+| `publishModalTitle?` | `string` | Property to configure the Publish Modal title. This allows to change the Publish Modal title from the default title to a custom title based on the publish action. This takes precedence over the EditImageAppConfig.publishModalTitle if the current workflow is Edit Image. | - |
