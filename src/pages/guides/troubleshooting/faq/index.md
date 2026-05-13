@@ -86,7 +86,7 @@ Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SD
 ### [Troubleshooting](#troubleshooting-1)
 
 - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
-- [Why do I see CORS errors in Safari due to caching?](#why-do-i-see-cors-errors-in-safari-due-to-caching)
+- [Why might cross-domain requests behave differently in Safari?](#why-might-cross-domain-requests-behave-differently-in-safari)
 - [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
 
 ### [Support](#support-1)
@@ -259,15 +259,19 @@ You can refer to the complete [technical requirements](../../quickstart/technica
 
 Please refer to this [troubleshooting guide](../express-unavailable-error.md).
 
-### Why do I see CORS errors in Safari due to caching?
+### Why might cross-domain requests behave differently in Safari?
 
-This is often not a true CORS issue. In some cases, Safari incorrectly caches GET requests across different domains by reusing (or overwriting) cache entries instead of creating separate ones per domain. When a cached response from one domain is reused for a request made from another domain, it can surface as an apparent CORS failure in Safari—even though the same flow works correctly in other browsers.
+In some cross-domain workflows, Safari may exhibit unexpected behavior because of how it caches GET request responses across different origins. Unlike other browsers, Safari may reuse or overwrite cached responses between domains, which can surface as CORS-related errors even when the integration is correctly configured.
 
-**Recommendation**
+This issue is commonly observed in flows where an additional asset request is triggered from another domain (for example, share or download actions implemented by the host application).
 
-- Test your flows on Safari (especially for cross-domain asset downloads).
-- Ensure appropriate cache headers are set so responses aren’t reused incorrectly.
-- If you are working with third-party integrations, share any new domains that need to be allowlisted to avoid genuine CORS issues.
+To mitigate this behavior:
+
+- Validate the flow across multiple browsers to isolate browser-specific issues
+- Ensure all required domains are properly allowlisted for the integration
+- Configure the asset or image domain to return the `Vary: Origin` response header so responses are cached separately per origin
+
+If the issue persists, review any additional cross-domain asset requests in the implementation flow and coordinate with your Adobe partner for further guidance.
 
 ### How can I debug and troubleshoot errors effectively?
 
