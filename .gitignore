@@ -1,3 +1,5 @@
+# .gitignore
+
 
 # OS and IDE generated files #
 ##############################
@@ -9,7 +11,7 @@
 
 # npm yarn
 node_modules
-package.lock
+package-lock.json
 yarn-error.log
 .pnp.*
 .yarn/*
@@ -47,3 +49,6 @@ yalc.lock
 
 temp
 linter-report.txt
+
+# Added by update-bot
+linter-output.txt
