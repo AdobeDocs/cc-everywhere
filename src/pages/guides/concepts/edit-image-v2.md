@@ -22,7 +22,7 @@ The UI has been redesigned to provide a more user-friendly experience, with a cl
 
 ![Edit Image V2 new experience](./img/edit-image-v2_new-ui.png)
 
-A tabbed interface separates the editing tools (**Crop**, **Remove Background**, **Erase**, **Remove Object**, **Insert Object**) and the other features (**Adjust**, **Corners**, **Flip**, **Opacity**) from the Effects section.
+A tabbed interface separates the editing tools (**Crop**, **Remove Background**, **Erase**, **Remove Object**, **Insert Object**) and the other features (**Auto Enhance**, **Adjust**, **Corners**, **Flip**, **Opacity**) from the Effects section (**Photoshop Filters** and **Tones**).
 
 ![Edit Image V2 new experience](./img/edit-image-v2_tabs.png)
 
