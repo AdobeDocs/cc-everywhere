@@ -1,15 +1,17 @@
 {
-  "private": true,
-  "name": "cc-everywhere",
+  "name": "dev-docs-template",
   "version": "1.0.0",
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/AdobeDocs/cc-everywhere"
+    "url": "https://github.com/AdobeDocs/dev-docs-template"
   },
   "author": {
     "name": "Tim Kim",
     "url": "https://github.com/timkim"
+  },
+  "engines": {
+    "node": "^24.11.0"
   },
   "scripts": {
     "dev": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils dev",
@@ -18,22 +20,13 @@
     "renameFiles": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils renameFiles -v",
     "normalizeLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils normalizeLinks -v",
     "buildSiteWideBanner": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildSiteWideBanner -v",
-    "lint": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint -v",
-    "lint:errorOnly": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint",
-    "lint:deadlinksonly": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --dead-links-only -v",
-    "lint:skipdeadlinks": "npx --yes github:AdobeDocs/adp-devsite-utils runLint --skip-dead-links -v",
-    "redirectCheck:stage": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
-    "redirectCheck:prod": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose",
-    "devex:sync-docs": "node scripts/import-docs.js",
-    "devex:eds-sanitize": "node scripts/renameFiles.js && node scripts/normalizeLinks.js",
-    "devex:generate-sidebar": "node scripts/update-config.js",
-    "devex:build-api-reference": "npm run devex:sync-docs && npm run devex:eds-sanitize && npm run devex:generate-sidebar",
     "buildSiteMetadata": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildSiteMetadata -v",
     "buildContributors": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildContributorsV2 -v",
+    "lint": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint -v",
+    "lint:errorOnly": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint",
     "link:externalLinkOnly": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --external-links-only -v",
-    "link:checkAllLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v"
-  },
-  "engines": {
-    "node": "^24.11.0"
+    "link:checkAllLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v",
+    "redirectCheck:stage": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker stage --verbose",
+    "redirectCheck:prod": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils redirectChecker prod --verbose"
   }
 }
