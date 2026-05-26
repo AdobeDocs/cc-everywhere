@@ -1989,10 +1989,11 @@
     {
       "page": "/v4/shared/src/types/asset-types/interfaces/output-asset",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/264327686?v=4",
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "2/26/2026"
+      "lastUpdated": "4/27/2026"
     },
     {
       "page": "/v4/shared/src/types/asset-types/interfaces/pixel-size",
