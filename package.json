@@ -11,6 +11,9 @@
     "name": "Tim Kim",
     "url": "https://github.com/timkim"
   },
+  "engines": {
+    "node": "^24.11.0"
+  },
   "scripts": {
     "dev": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils dev",
     "buildNavigation": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildNavigation -v",
@@ -32,8 +35,5 @@
     "buildContributors": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildContributorsV2 -v",
     "link:externalLinkOnly": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --external-links-only -v",
     "link:checkAllLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v"
-  },
-  "engines": {
-    "node": "^24.11.0"
   }
 }
