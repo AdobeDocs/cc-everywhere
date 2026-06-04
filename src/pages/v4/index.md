@@ -122,7 +122,7 @@ Explore the collection of tutorials.
 
 <DiscoverBlock slots="link, text"/>
 
-[Sample Code](https://github.com/AdobeDocs/cc-everywhere/tree/main/v4-sample)
+[Sample Code](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/demo-app/)
 
 Adobe Express Embed SDK Sample using V4 SDK.
 
