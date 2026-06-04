@@ -15,11 +15,11 @@
     {
       "page": "/guides/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4",
+        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "4/16/2026"
+      "lastUpdated": "6/4/2026"
     },
     {
       "page": "/guides/changelog/",
@@ -490,7 +490,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "11/11/2025"
+      "lastUpdated": "6/4/2026"
     },
     {
       "page": "/v4/sdk/src/3p/cc-everywhere-types/",
