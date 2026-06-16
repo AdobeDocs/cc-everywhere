@@ -94,6 +94,7 @@ CLIENTS: object;
 | `CCX.QUICK_ACTION.QUERY_PARAMS.KEYS.SHARED` | `string` |
 | `CCX.QUICK_ACTION.QUERY_PARAMS.KEYS.COLOR_SCHEME` | `string` |
 | `CCX.QUICK_ACTION.QUERY_PARAMS.KEYS.SPECTRUM_THEME` | `string` |
+| `CCX.QUICK_ACTION.QUERY_PARAMS.KEYS.PRELOAD` | `string` |
 | `CCX.TEXT_TO_IMAGE_ME` | `object` |
 | `CCX.TEXT_TO_IMAGE_ME.BASE` | `string` |
 | `CCX.TEXT_TO_IMAGE_ME.PATHS` | `object` |
@@ -110,6 +111,16 @@ CLIENTS: object;
 | `CCX.DESIGN_VIEWER_MODULE.PATHS` | `object` |
 | `CCX.DESIGN_VIEWER_MODULE.PATHS.EDITOR` | `string` |
 | `CCX.DESIGN_VIEWER_MODULE.CLIENT_ID` | `string` |
+| `CCX.GENERATE_IMAGE_MXP` | `object` |
+| `CCX.GENERATE_IMAGE_MXP.BASE` | `string` |
+| `CCX.GENERATE_IMAGE_MXP.CLIENT_ID` | `string` |
+| `CCX.GENERATE_IMAGE_MXP.PATHS` | `object` |
+| `CCX.GENERATE_IMAGE_MXP.PATHS.GENERATE_IMAGE` | `string` |
+| `CCX.FOCUSED_DESIGN_EDITOR` | `object` |
+| `CCX.FOCUSED_DESIGN_EDITOR.BASE` | `string` |
+| `CCX.FOCUSED_DESIGN_EDITOR.PATHS` | `object` |
+| `CCX.FOCUSED_DESIGN_EDITOR.PATHS.EDITOR` | `string` |
+| `CCX.FOCUSED_DESIGN_EDITOR.CLIENT_ID` | `string` |
 | `IMS` | `object` |
 | `IMS.BASE` | `string` |
 | `IMS.PATHS` | `object` |
@@ -199,6 +210,10 @@ CLIENTS: object;
 | `FIREFLY.CLIENT_ID` | `string` |
 | `GENSTUDIO` | `object` |
 | `GENSTUDIO.CLIENT_ID` | `string` |
+| `HALO` | `object` |
+| `HALO.CLIENT_ID` | `string` |
+| `HOMESCREEN` | `object` |
+| `HOMESCREEN.CLIENT_ID` | `string` |
 | `ILLUSTRATOR` | `object` |
 | `ILLUSTRATOR.CLIENT_ID` | `string` |
 | `INDESIGN` | `object` |
@@ -207,6 +222,8 @@ CLIENTS: object;
 | `PHOTOSHOP.CLIENT_ID` | `string` |
 | `PREMIERE_PRO` | `object` |
 | `PREMIERE_PRO.CLIENT_ID` | `string` |
+| `PROJECT_X` | `object` |
+| `PROJECT_X.CLIENT_ID` | `string` |
 | `STOCK` | `object` |
 | `STOCK.CLIENT_ID` | `string` |
 | `TEST_APP` | `object` |

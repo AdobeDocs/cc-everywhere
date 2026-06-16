@@ -20,3 +20,4 @@ hideEditInGitHub: true
 | `TRIM_VIDEO` | `"trim-video"` |
 | `ANIMATE_FROM_AUDIO` | `"animate-from-audio"` |
 | `CAPTION_VIDEO` | `"caption-video"` |
+| `VIDEO_ENCODE` | `"video-encode"` |

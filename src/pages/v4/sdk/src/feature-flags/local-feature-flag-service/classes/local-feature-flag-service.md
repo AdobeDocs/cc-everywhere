@@ -44,7 +44,8 @@ new LocalFeatureFlagService(_config): LocalFeatureFlagService;
 getFeatureFlagsParams(
    intent, 
    hostInfo, 
-   appConfig?): URLSearchParams;
+   appConfig?, 
+   featureFlagOverridesProvider?): URLSearchParams;
 ```
 
 Generates URL-encoded feature flag parameters for a specific client and intent
@@ -56,6 +57,7 @@ Generates URL-encoded feature flag parameters for a specific client and intent
 | `intent` | [`ActionIntent`](../../../../../shared/src/types/action-intent-types/type-aliases/action-intent.md) |
 | `hostInfo` | [`HostInfoExtended`](../../../../../shared/src/types/host-info-types/type-aliases/host-info-extended.md) |
 | `appConfig?` | `AppConfig` |
+| `featureFlagOverridesProvider?` | [`FeatureFlagOverridesProvider`](../../feature-flag-service/type-aliases/feature-flag-overrides-provider.md) |
 
 #### Returns
 

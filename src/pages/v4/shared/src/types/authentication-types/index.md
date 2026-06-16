@@ -41,3 +41,4 @@ hideEditInGitHub: true
 | ------ | ------ |
 | [IMS\_JUMP\_ERROR\_KEY](variables/ims-jump-error-key.md) | - |
 | [IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY](variables/ims-jump-error-description-key.md) | - |
+| [IMS\_DEBUG\_ID\_HEADER](variables/ims-debug-id-header.md) | - |
