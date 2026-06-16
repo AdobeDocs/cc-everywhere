@@ -26,7 +26,6 @@
         - [Generate Image V2](/guides/concepts/generate-image-v2.md)
         - [Edit Image V2](/guides/concepts/edit-image-v2.md)
         - [Template Browser](/guides/concepts/template-browser.md)
-        <!-- - [Template Browser V2](/guides/concepts/template-browser-v2.md) -->
         - [Design Viewer](/guides/concepts/design-viewer.md)
         - [Workflow Tethering](/guides/concepts/tethering.md)
         - [Mobile Web](/guides/concepts/mobile-web-support-overview.md)
