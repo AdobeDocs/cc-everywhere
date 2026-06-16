@@ -13,10 +13,12 @@ hideEditInGitHub: true
 - [`EditImageDesignConfig`](../../module/design-config-types/interfaces/edit-image-design-config.md)
 - [`TextToImageDesignConfig`](../../module/design-config-types/interfaces/text-to-image-design-config.md)
 - [`StartFromContentDesignConfig`](../../module/design-config-types/interfaces/start-from-content-design-config.md)
+- [`FDEDesignConfig`](../../module/design-config-types/interfaces/fde-design-config.md)
 - [`WarmupDesignConfig`](../../module/design-config-types/interfaces/warmup-design-config.md)
 - [`EditDesignDesignConfig`](../../module/design-config-types/interfaces/edit-design-design-config.md)
 - [`AnnotateImageDesignConfig`](../../module/design-config-types/interfaces/annotate-image-design-config.md)
 - [`DesignViewerDesignConfig`](../../module/design-config-types/interfaces/design-viewer-design-config.md)
+- [`GenerateImageDesignConfig`](../../module/design-config-types/interfaces/generate-image-design-config.md)
 - [`BaseDesignConfig`](../../quick-action/design-config-types/interfaces/base-design-config.md)
 
 ## Properties

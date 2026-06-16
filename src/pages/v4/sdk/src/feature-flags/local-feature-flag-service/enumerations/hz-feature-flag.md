@@ -17,6 +17,7 @@ Enum representing feature flags for HZ based target apps
 | `CROP_MEDIA_DECORATIONS` | `"crop-media-decorations"` |
 | `CREATE_DOCUMENT_ON_DEMAND` | `"create-document-on-demand"` |
 | `DISABLE_CANVAS_DRAG_IN_CROP` | `"disable-canvas-drag-in-crop"` |
+| `DISABLE_GEN_AI_AUTO_CROP` | `"disable-gen-ai-auto-crop"` |
 | `DISABLE_SELECTION_TOOL` | `"disable-selection-tool"` |
 | `EDIT_IMAGE_HIDE_DECORATIONS` | `"edit-image-hide-decorations"` |
 | `ENABLE_DEFAULT_RESOURCE_BADGING` | `"enable-default-resource-badging"` |
@@ -40,6 +41,8 @@ Enum representing feature flags for HZ based target apps
 | `CARD_MAKER_SKIP_REDIRECT_ON_DOWNLOAD` | `"card-maker-skip-redirect-on-download"` |
 | `USE_CLIENT_AUTH_TOKEN_FOR_TEXT_TO_IMAGE` | `"use-client-auth-token-for-text-to-image"` |
 | `USE_V3_API_USING_FIREFLY_SDK` | `"use-v3-api-using-firefly-sdk"` |
+| `IMAGE_VIEW_ORIGINAL_ENABLED` | `"image-view-original-enabled"` |
+| `EDIT_IMAGE_DESKTOP_FOCUSED_MODE` | `"edit-image-desktop-focused-mode"` |
 | `MTZN_MESSAGING_FOR_INSERT_OBJECT` | `"mtzn-messaging-for-insert-object"` |
 | `MTZN_MESSAGING_FOR_REMOVE_OBJECT` | `"mtzn-messaging-for-remove-object"` |
 | `MOBILE_ERASE_FEATURE` | `"mobile-erase-feature"` |
