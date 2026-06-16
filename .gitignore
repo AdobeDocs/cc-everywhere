@@ -17,3 +17,10 @@ linter-report.txt
 
 # Preserved from external contributors
 yalc.lock
+
+temp/
+.cache/
+.yarn/
+.cursor/
+.claude/
+public/

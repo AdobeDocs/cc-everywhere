@@ -124,6 +124,12 @@ Re-exports [HostAppTrigger](app-config-types/enumerations/host-app-trigger.md)
 
 <HorizontalLine />
 
+### EntryPoint
+
+Re-exports [EntryPoint](app-config-types/enumerations/entry-point.md)
+
+<HorizontalLine />
+
 ### BaseAnalyticsData
 
 Re-exports [BaseAnalyticsData](app-config-types/interfaces/base-analytics-data.md)
@@ -355,6 +361,12 @@ Re-exports [IMS_JUMP_ERROR_KEY](authentication-types/variables/ims-jump-error-ke
 ### IMS\_JUMP\_ERROR\_DESCRIPTION\_KEY
 
 Re-exports [IMS_JUMP_ERROR_DESCRIPTION_KEY](authentication-types/variables/ims-jump-error-description-key.md)
+
+<HorizontalLine />
+
+### IMS\_DEBUG\_ID\_HEADER
+
+Re-exports [IMS_DEBUG_ID_HEADER](authentication-types/variables/ims-debug-id-header.md)
 
 <HorizontalLine />
 
@@ -1033,6 +1045,54 @@ Re-exports [ImageConceptStyle](panel-settings-types/enumerations/image-concept-s
 ### ImageStyleId
 
 Re-exports [ImageStyleId](panel-settings-types/type-aliases/image-style-id.md)
+
+<HorizontalLine />
+
+### EMBED\_PERCEIVED\_PERF\_SHELL\_EXPORT\_CONFIG\_QUERY\_PARAM
+
+Re-exports [EMBED_PERCEIVED_PERF_SHELL_EXPORT_CONFIG_QUERY_PARAM](perceived-perf-types/variables/embed-perceived-perf-shell-export-config-query-param.md)
+
+<HorizontalLine />
+
+### EMBED\_PERCEIVED\_PERF\_SHELL\_EXPORT\_PARAM\_MAX\_BYTES
+
+Re-exports [EMBED_PERCEIVED_PERF_SHELL_EXPORT_PARAM_MAX_BYTES](perceived-perf-types/variables/embed-perceived-perf-shell-export-param-max-bytes.md)
+
+<HorizontalLine />
+
+### RouteShellButtonVariant
+
+Re-exports [RouteShellButtonVariant](perceived-perf-types/type-aliases/route-shell-button-variant.md)
+
+<HorizontalLine />
+
+### RouteShellButtonTreatment
+
+Re-exports [RouteShellButtonTreatment](perceived-perf-types/type-aliases/route-shell-button-treatment.md)
+
+<HorizontalLine />
+
+### ROUTE\_SHELL\_BUTTON\_VARIANTS
+
+Re-exports [ROUTE_SHELL_BUTTON_VARIANTS](perceived-perf-types/variables/route-shell-button-variants.md)
+
+<HorizontalLine />
+
+### ROUTE\_SHELL\_BUTTON\_TREATMENTS
+
+Re-exports [ROUTE_SHELL_BUTTON_TREATMENTS](perceived-perf-types/variables/route-shell-button-treatments.md)
+
+<HorizontalLine />
+
+### RouteShellExportQueryStyle
+
+Re-exports [RouteShellExportQueryStyle](perceived-perf-types/type-aliases/route-shell-export-query-style.md)
+
+<HorizontalLine />
+
+### RouteShellExportQueryEntry
+
+Re-exports [RouteShellExportQueryEntry](perceived-perf-types/type-aliases/route-shell-export-query-entry.md)
 
 <HorizontalLine />
 

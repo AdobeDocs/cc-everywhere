@@ -27,3 +27,4 @@ hideEditInGitHub: true
 | `allowedSubFileTypes?` | [`SubFileType`](../../../asset-types/enumerations/sub-file-type.md)[] | Specify the list of sub-file types that the user can publish. This can be used to limit the publish options as per file types for end users. Currently, only PDF sub-file types are available. **Default** `Enable all types (pdf and pdfPrint)` | - |
 | `appVersion?` | [`EditImageAppVersion`](../enumerations/edit-image-app-version.md) | Specifies the version of the Edit Image experience to be enabled. **Default** `V1` | - |
 | `inlineTOUConsent?` | `boolean` | Property to configure whether inline Terms Of User consent will be displayed | - |
+| `desktopFocusedMode?` | `boolean` | Enables the desktop focused-mode experience for Edit Image. **Default** `false` | - |
