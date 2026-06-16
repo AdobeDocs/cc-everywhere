@@ -1,7 +1,7 @@
 {
-  "total": 521,
+  "total": 520,
   "offset": 0,
-  "limit": 521,
+  "limit": 520,
   "data": [
     {
       "page": "/config",
@@ -107,13 +107,6 @@
     },
     {
       "page": "/guides/concepts/template-browser",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
-      "lastUpdated": "6/16/2026"
-    },
-    {
-      "page": "/guides/concepts/template-browser-v2",
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
