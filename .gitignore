@@ -20,3 +20,4 @@ yalc.lock
 
 temp/
 .cache/
+.yarn/
