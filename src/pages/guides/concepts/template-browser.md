@@ -14,6 +14,12 @@ contributors:
 
 # Template Browser
 
+<InlineAlert slots="header, text" variant="info" />
+
+#### Template Browser v2 is available
+
+A new tabbed Template Browser is available for authenticated end-users, exposing their **Custom Templates** and **Your Stuff** (Recents, Projects, Favorites). See [Template Browser v2](./template-browser-v2.md) for the new experience. The v1 surface documented on this page is unchanged.
+
 The Template Browser is a feature in the Adobe Express Embed SDK designed for template discovery and editing.
 
 It allows users to browse through a wide array of templates, find one that suits their needs, and then open it in the full editor for customization. This workflow is ideal for integrations where users may not have a specific template in mind and need inspiration or guidance.
