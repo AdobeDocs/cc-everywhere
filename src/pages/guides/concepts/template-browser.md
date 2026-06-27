@@ -1,24 +1,18 @@
 ---
 keywords:
-- Adobe Express
-- Embed SDK
-- Template Browser
-- Template Editor
-- Collection ID
-- Collection URN
+  - Adobe Express
+  - Embed SDK
+  - Template Browser
+  - Template Editor
+  - Collection ID
+  - Collection URN
 title: Template Browser
 description: Template Browser
 contributors:
-- https://github.com/undavide
+  - https://github.com/undavide
 ---
 
 # Template Browser
-
-<InlineAlert slots="header, text" variant="info" />
-
-#### Template Browser v2 is available
-
-A new tabbed Template Browser is available for authenticated end-users, exposing their **Custom Templates** and **Your Stuff** (Recents, Projects, Favorites). See [Template Browser v2](./template-browser-v2.md) for the new experience. The v1 surface documented on this page is unchanged.
 
 The Template Browser is a feature in the Adobe Express Embed SDK designed for template discovery and editing.
 
@@ -35,10 +29,12 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 
 const { module } = await window.CCEverywhere.initialize(
   { clientId: "your-client-id", appName: "your-app-name" },
-  {}
+  {},
 );
 
-module.startFromContent({ /* ... */ });
+module.startFromContent({
+  /* ... */
+});
 ```
 
 ## Understanding Collections
@@ -81,7 +77,9 @@ Collections fed to the Template Browser are those that are publicly available in
 6. This is the URI-encoded URN; in order to use it, **you need to decode it**. Either **manually replace** all the `%3A` instances with a `:` in the string, or **use the JavaScript function** `decodeURIComponent()`; for example, in the Browser's console.
 
 ```js
-decodeURIComponent("urn%3Aaaid%3Asc%3AVA6C2%3A34756608-9fa0-4fdc-80b0-65e17ffb29c8");
+decodeURIComponent(
+  "urn%3Aaaid%3Asc%3AVA6C2%3A34756608-9fa0-4fdc-80b0-65e17ffb29c8",
+);
 // "urn:aaid:sc:VA6C2:34756608-9fa0-4fdc-80b0-65e17ffb29c8"
 ```
 
@@ -105,7 +103,8 @@ The Template Browser introduces several new feature configurations to the [`appC
 // ...
 
 const appConfig = {
-  contentBrowseConfig: { // 👈 Configure the Template Browser here
+  contentBrowseConfig: {
+    // 👈 Configure the Template Browser here
     /* ... */
   },
 };
@@ -121,10 +120,11 @@ The collection to pre-populate the Template Browser with is configured in the [`
 
 ```js
 const appConfig = {
-  contentBrowseConfig: { // 👈 Configure the Template Browser experience
+  contentBrowseConfig: {
+    // 👈 Configure the Template Browser experience
     categoriesConfig: [
       {
-        category: "templates",           // 👈 Always "templates"
+        category: "templates", // 👈 Always "templates"
         collectionId: "urn:aaid:sc:...", // 👈 The URN of the collection
       },
     ],
@@ -147,8 +147,8 @@ const appConfig = {
   contentBrowseConfig: {
     searchQuery: "Instagram story",
     shortcutPillTerms: ["Social", "Business", "Events", "Personal"],
-    hideSearchBar: false,  // false by default
-    hideFilters:   false,  // false by default
+    hideSearchBar: false, // false by default
+    hideFilters: false, // false by default
   },
 };
 ```
