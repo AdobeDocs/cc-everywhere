@@ -15,11 +15,11 @@
     {
       "page": "/guides/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/5939127?v=4",
+        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "6/5/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/changelog/",
@@ -188,7 +188,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "2/2/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/troubleshooting/express-unavailable-error",
@@ -200,12 +200,12 @@
     {
       "page": "/guides/troubleshooting/faq/",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/273075299?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4",
-        "https://avatars.githubusercontent.com/u/77717258?v=4",
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
+        "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "4/13/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/tutorials/",
@@ -2367,7 +2367,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "6/27/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/callbacks",
@@ -3206,7 +3206,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "6/27/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/interfaces/device-info",
