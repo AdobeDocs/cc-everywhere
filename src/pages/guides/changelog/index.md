@@ -16,6 +16,12 @@ contributors:
 
 # Changelog
 
+## 2026-07-15
+
+### Documentation
+
+- Added a new [Template Browser v2 concept guide](../concepts/template-browser-v2.md) that covers the implementation details of the new tabbed Template Browser experience for authenticated users. This version coexists with the existing Template Browser v1, which remains unchanged and available.
+
 ## [4.48.12] 2026-06-16
 
 General improvements and bug fixes.
