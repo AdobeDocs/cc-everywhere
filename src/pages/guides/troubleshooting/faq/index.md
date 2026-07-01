@@ -10,6 +10,14 @@ keywords:
   - Cost of Embed SDK
   - Allowed-domains
   - Error handling
+  - Troubleshooting
+  - Cross-domain requests
+  - Safari caching
+  - CORS errors
+  - Vary Origin
+  - Content Security Policy
+  - Sign out
+  - frame-src
   - loginMode
   - Delayed login
   - Terms of Use consent
@@ -23,6 +31,7 @@ contributors:
   - https://github.com/amandahuarng
   - https://github.com/nimithajalal
   - https://github.com/undavide
+  - https://github.com/sravyap017
 ---
 
 <SuperHero slots="image, heading, text" variant="fullWidth" textColor="white"/>
@@ -86,6 +95,8 @@ Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SD
 ### [Troubleshooting](#troubleshooting-1)
 
 - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
+- [Why might cross-domain requests behave differently in Safari?](#why-might-cross-domain-requests-behave-differently-in-safari)
+- [Users are unable to sign out of Adobe Express due to a Content Security Policy restriction. How do I fix this?](#users-are-unable-to-sign-out-of-adobe-express-due-to-a-content-security-policy-restriction-how-do-i-fix-this)
 - [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
 
 ### [Support](#support-1)
@@ -257,6 +268,28 @@ You can refer to the complete [technical requirements](../../quickstart/technica
 ### I run into the "Adobe Express is not available" error
 
 Please refer to this [troubleshooting guide](../express-unavailable-error.md).
+
+### Why might cross-domain requests behave differently in Safari?
+
+In some cross-domain workflows, Safari may exhibit unexpected behavior because of how it caches GET request responses across different origins. Unlike other browsers, Safari may reuse or overwrite cached responses between domains, which can surface as CORS-related errors even when the integration is correctly configured.
+
+This issue is commonly observed in flows where an additional asset request is triggered from another domain (for example, share or download actions implemented by the host application).
+
+To mitigate this behavior:
+
+- Configure the asset or image domain to return the `Vary: Origin` response header so responses are cached separately per origin
+- Ensure all required domains are properly allowlisted for the integration. See [Edit the list of allowed domains](https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/#edit-the-list-of-allowed-domains) in the quickstart guide.
+- Validate the flow across multiple browsers to isolate browser-specific issues
+
+![Safari Web Inspector showing the Vary: Origin response header on a cross-domain asset request.](../img/safari-vary-origin-response-headers.png)
+
+If the issue persists, review any additional cross-domain asset requests in the implementation flow and coordinate with your Adobe partner for further guidance.
+
+### Users are unable to sign out of Adobe Express due to a Content Security Policy restriction. How do I fix this?
+
+The sign-out flow redirects through `https://ims-na1.adobelogin.com/`, which is blocked if it is not listed in your `frame-src` directive. Add `*.adobelogin.com` to the `frame-src` directive in your `Content-Security-Policy` response header.
+
+![Where to add *.adobelogin.com in the frame-src directive.](../img/csp-frame-src.png)
 
 ### How can I debug and troubleshoot errors effectively?
 
