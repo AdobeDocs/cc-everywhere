@@ -1,7 +1,7 @@
 {
-  "total": 520,
+  "total": 521,
   "offset": 0,
-  "limit": 520,
+  "limit": 521,
   "data": [
     {
       "page": "/config",
@@ -10,7 +10,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/",
@@ -28,7 +28,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -110,7 +110,14 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "6/27/2026"
+      "lastUpdated": "7/1/2026"
+    },
+    {
+      "page": "/guides/concepts/template-browser-v2",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/concepts/tethering",
@@ -2327,7 +2334,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "3/19/2026"
+      "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union",
