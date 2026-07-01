@@ -100,7 +100,7 @@ Our efforts are currently focused on desktop apps and web.
 
 ### Is there a cost to use the SDK?
 
-Access to the Adobe Express Embed SDK now requires a business approval process. [Request access](https://www.adobe.com/go/embed-access) to submit your use case for evaluation. For more details, see [SDK Access & Approval](#sdk-access--approval-1).
+Access to the Adobe Express Embed SDK now requires a business approval process. [Contact sales](https://www.adobe.com/go/embed-access) to submit your use case for evaluation. For more details, see [SDK Access & Approval](#sdk-access--approval-1).
 
 ### What is the versioning strategy for the SDK?
 
@@ -114,11 +114,11 @@ Access to the Adobe Express Embed SDK now requires a business approval process. 
 
 ### Can I still use the SDK for personal or experimental projects?
 
-Access is currently focused on use cases with clear business or user impact. We strongly recommend validating your use case through the [request process](https://www.adobe.com/go/embed-access) before starting any integration.
+Access is currently focused on use cases with clear business or user impact. We strongly recommend validating your use case by [contacting Sales](https://www.adobe.com/go/embed-access) before starting any integration.
 
 ### How do I request access?
 
-Use [this form](https://www.adobe.com/go/embed-access) to submit your use case. Our team will review and follow up.
+Use [this form](https://www.adobe.com/go/embed-access) to contact Sales and submit your use case. Our team will review and follow up.
 
 ### What criteria are used to evaluate access requests?
 

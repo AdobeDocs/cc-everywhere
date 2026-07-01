@@ -34,7 +34,7 @@ Access is focused on use cases with clear business or user impact. We prioritize
 
 ### How to request access
 
-Use [this form](https://www.adobe.com/go/embed-access) to submit your use case. Our team will review and follow up with you regarding your access request.
+Use [this form](https://www.adobe.com/go/embed-access) to contact Sales and submit your use case. Our team will review and follow up with you regarding your access request.
 
 ### Existing integrations
 
