@@ -1,33 +1,33 @@
 ---
 keywords:
-- Adobe Express Embed SDK
-- online design tools
-- photo editing features
-- video editing options
-- AI-powered content generation
-- embed Adobe Express
-- professional design capabilities
-- customizable templates
-- stock photos
-- AI-powered image generation
-- project management
-- quick actions
-- media edits
-- background removal
-- file compression
-- export options
-- focused editing experiences
-- generate image
-- edit image
-- Template Browser
-- Design Viewer
-- startFromContent
-- viewDesign
-- developer journey
-- API key
-- code sample
-- demo app
-- integration review
+  - Adobe Express Embed SDK
+  - online design tools
+  - photo editing features
+  - video editing options
+  - AI-powered content generation
+  - embed Adobe Express
+  - professional design capabilities
+  - customizable templates
+  - stock photos
+  - AI-powered image generation
+  - project management
+  - quick actions
+  - media edits
+  - background removal
+  - file compression
+  - export options
+  - focused editing experiences
+  - generate image
+  - edit image
+  - Template Browser
+  - Design Viewer
+  - startFromContent
+  - viewDesign
+  - developer journey
+  - API key
+  - code sample
+  - demo app
+  - integration review
 title: Overview
 description: This is the documentation for Adobe Express Embed SDK
 contributors:
@@ -54,7 +54,7 @@ Embed Adobe Express on your website with our SDK.
 
 This change ensures high-value integrations for users and strong partner support. Existing integrations stay active until Dec 2027, then must be approved. Thank you to developers for shaping the SDK, your contributions are invaluable. For details, see the [FAQ](troubleshooting/faq/index.md#sdk-access--approval-1).
 
-- [Apply now](https://www.adobe.com/go/embed-access)
+- [Contact Sales](https://www.adobe.com/go/embed-access)
 
 ## Overview
 
