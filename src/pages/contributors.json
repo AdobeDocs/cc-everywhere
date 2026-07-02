@@ -48,16 +48,12 @@
     },
     {
       "page": "/guides/concepts/design-viewer",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/28/2026"
     },
     {
       "page": "/guides/concepts/edit-image-v2",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "5/15/2026"
     },
     {
@@ -79,44 +75,32 @@
     },
     {
       "page": "/guides/concepts/migration-v3-v4",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "12/8/2025"
     },
     {
       "page": "/guides/concepts/mobile-web-support-browser",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "2/27/2026"
     },
     {
       "page": "/guides/concepts/mobile-web-support-overview",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/10/2026"
     },
     {
       "page": "/guides/concepts/mobile-web-support-webview",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/10/2026"
     },
     {
       "page": "/guides/concepts/template-browser",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/concepts/template-browser-v2",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "7/1/2026"
     },
     {
@@ -129,23 +113,17 @@
     },
     {
       "page": "/guides/credential/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "2/11/2026"
     },
     {
       "page": "/guides/full_editor/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "9/2/2024"
     },
     {
       "page": "/guides/full_editor/create_project/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "10/11/2024"
     },
     {
@@ -166,9 +144,7 @@
     },
     {
       "page": "/guides/quick_actions/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "5/28/2025"
     },
     {
@@ -199,9 +175,7 @@
     },
     {
       "page": "/guides/troubleshooting/express-unavailable-error",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "1/27/2025"
     },
     {
@@ -212,7 +186,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "7/1/2026"
+      "lastUpdated": "6/27/2026"
     },
     {
       "page": "/guides/tutorials/",
@@ -260,9 +234,7 @@
     },
     {
       "page": "/guides/tutorials/mobile-web",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/10/2026"
     },
     {
@@ -311,16 +283,12 @@
     },
     {
       "page": "/reference/CCEverywhere/miniEditor/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/77717258?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/77717258?v=4"],
       "lastUpdated": "9/16/2024"
     },
     {
       "page": "/reference/CCEverywhere/quickAction/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "10/11/2024"
     },
     {
@@ -374,9 +342,7 @@
     },
     {
       "page": "/v1/reference/quick_actions/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "11/11/2025"
     },
     {
@@ -407,9 +373,7 @@
     },
     {
       "page": "/v2/reference/quick_actions/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "11/11/2025"
     },
     {
@@ -439,23 +403,17 @@
     },
     {
       "page": "/v3/reference/CCEverywhere/close/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "11/6/2025"
     },
     {
       "page": "/v3/reference/CCEverywhere/create_design/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "11/11/2025"
     },
     {
       "page": "/v3/reference/CCEverywhere/edit_design/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "11/11/2025"
     },
     {
@@ -468,9 +426,7 @@
     },
     {
       "page": "/v3/reference/CCEverywhere/terminate/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/113968869?v=4"],
       "lastUpdated": "11/6/2025"
     },
     {
@@ -653,16 +609,12 @@
     },
     {
       "page": "/v4/sdk/src/feature-flags/edit-image-feature-flag-overrides/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/sdk/src/feature-flags/edit-image-feature-flag-overrides/functions/create-edit-image-feature-flag-overrides-provider",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -683,9 +635,7 @@
     },
     {
       "page": "/v4/sdk/src/feature-flags/feature-flag-service/type-aliases/feature-flag-overrides-provider",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -1420,16 +1370,12 @@
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/custom-event-response-message",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/custom-event-response-payload",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -1458,9 +1404,7 @@
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/privacy-iframe-storage-message-response",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -1473,16 +1417,12 @@
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/switch-embed-action-message",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "2/26/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/target-load-message",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "2/26/2026"
     },
     {
@@ -1495,9 +1435,7 @@
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/will-publish-message",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -1550,9 +1488,7 @@
     },
     {
       "page": "/v4/shared/src/messenger/message-types/variables/privacy-iframe-storage-message-type",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -1757,9 +1693,7 @@
     },
     {
       "page": "/v4/shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/19/2026"
     },
     {
@@ -1892,9 +1826,7 @@
     },
     {
       "page": "/v4/shared/src/types/app-config-types/enumerations/editor-mode",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/10/2026"
     },
     {
@@ -1907,9 +1839,7 @@
     },
     {
       "page": "/v4/shared/src/types/app-config-types/enumerations/entry-point",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -2283,9 +2213,7 @@
     },
     {
       "page": "/v4/shared/src/types/authentication-types/variables/ims-debug-id-header",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3058,9 +2986,7 @@
     },
     {
       "page": "/v4/shared/src/types/export-config-types/type-aliases/export-button-display-mode",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/10/2026"
     },
     {
@@ -3353,9 +3279,7 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/generate-image-initial-view",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3368,9 +3292,7 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/start-from-content-app-version",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3399,16 +3321,12 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "2/26/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/collection-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/19/2026"
     },
     {
@@ -3437,23 +3355,17 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/content-browse-base-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "2/26/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/create-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/19/2026"
     },
     {
@@ -3482,23 +3394,17 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/model-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/preview-mode-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "2/26/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/preview-thumbnails-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/19/2026"
     },
     {
@@ -3527,9 +3433,7 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/templates-home-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3550,16 +3454,12 @@
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/type-aliases/content-browse-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/type-aliases/templates-home-tab",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3572,16 +3472,12 @@
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/annotate-image-design-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/10/2026"
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/19/2026"
     },
     {
@@ -3602,16 +3498,12 @@
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/fde-design-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/generate-image-design-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3648,16 +3540,12 @@
     },
     {
       "page": "/v4/shared/src/types/module/doc-config-types/interfaces/annotate-image-doc-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "4/10/2026"
     },
     {
       "page": "/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "3/19/2026"
     },
     {
@@ -3678,9 +3566,7 @@
     },
     {
       "page": "/v4/shared/src/types/module/doc-config-types/interfaces/fde-doc-config",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
@@ -3814,65 +3700,47 @@
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/type-aliases/route-shell-button-treatment",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/type-aliases/route-shell-button-variant",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/type-aliases/route-shell-export-query-entry",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/type-aliases/route-shell-export-query-style",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/variables/embed-perceived-perf-shell-export-config-query-param",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/variables/embed-perceived-perf-shell-export-param-max-bytes",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/variables/route-shell-button-treatments",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
       "page": "/v4/shared/src/types/perceived-perf-types/variables/route-shell-button-variants",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
+      "avatars": ["https://avatars.githubusercontent.com/u/5939127?v=4"],
       "lastUpdated": "6/16/2026"
     },
     {
