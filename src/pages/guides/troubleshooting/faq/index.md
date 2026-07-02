@@ -86,6 +86,7 @@ Find quick answers to your questions about the &lt;br &gt;Adobe Express Embed SD
 ### [Troubleshooting](#troubleshooting-1)
 
 - [I run into the "Adobe Express is not available" error](#i-run-into-the-adobe-express-is-not-available-error)
+- [Why might cross-domain requests behave differently in Safari?](#why-might-cross-domain-requests-behave-differently-in-safari)
 - [How can I debug and troubleshoot errors effectively?](#how-can-i-debug-and-troubleshoot-errors-effectively)
 
 ### [Support](#support-1)
@@ -257,6 +258,22 @@ You can refer to the complete [technical requirements](../../quickstart/technica
 ### I run into the "Adobe Express is not available" error
 
 Please refer to this [troubleshooting guide](../express-unavailable-error.md).
+
+### Why might cross-domain requests behave differently in Safari?
+
+In some cross-domain workflows, Safari may exhibit unexpected behavior because of how it caches GET request responses across different origins. Unlike other browsers, Safari may reuse or overwrite cached responses between domains, which can surface as CORS-related errors even when the integration is correctly configured.
+
+This issue is commonly observed in flows where an additional asset request is triggered from another domain (for example, share or download actions implemented by the host application).
+
+To mitigate this behavior:
+
+- Validate the flow across multiple browsers to isolate browser-specific issues
+- Ensure all required domains are properly allowlisted for the integration
+- Configure the asset or image domain to return the `Vary: Origin` response header so responses are cached separately per origin
+
+![Safari Web Inspector showing the Vary: Origin response header on a cross-domain asset request.](../img/safari-vary-origin-response-headers.png)
+
+If the issue persists, review any additional cross-domain asset requests in the implementation flow and coordinate with your Adobe partner for further guidance.
 
 ### How can I debug and troubleshoot errors effectively?
 
