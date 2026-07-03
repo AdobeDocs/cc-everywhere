@@ -9,8 +9,14 @@ hideEditInGitHub: true
 # Type Alias: PublishStartCallback()
 
 ```ts
-type PublishStartCallback = () => void;
+type PublishStartCallback = (exportButtonId?) => void;
 ```
+
+## Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `exportButtonId?` | `string` |
 
 ## Returns
 

@@ -76,6 +76,12 @@ Re-exports [MessageCompat](message-types/type-aliases/message-compat.md)
 
 <HorizontalLine />
 
+### WillPublishMessage
+
+Re-exports [WillPublishMessage](message-types/interfaces/will-publish-message.md)
+
+<HorizontalLine />
+
 ### DidTargetLoadMessage
 
 Re-exports [DidTargetLoadMessage](message-types/type-aliases/did-target-load-message.md)
@@ -118,6 +124,18 @@ Re-exports [CustomMessageAction](message-types/enumerations/custom-message-actio
 
 <HorizontalLine />
 
+### CustomEventResponsePayload
+
+Re-exports [CustomEventResponsePayload](message-types/interfaces/custom-event-response-payload.md)
+
+<HorizontalLine />
+
+### CustomEventResponseMessage
+
+Re-exports [CustomEventResponseMessage](message-types/interfaces/custom-event-response-message.md)
+
+<HorizontalLine />
+
 ### CloseStatusMessage
 
 Re-exports [CloseStatusMessage](message-types/interfaces/close-status-message.md)
@@ -151,6 +169,18 @@ Re-exports [SwitchEmbedActionMessage](message-types/interfaces/switch-embed-acti
 ### TargetLoadMessage
 
 Re-exports [TargetLoadMessage](message-types/interfaces/target-load-message.md)
+
+<HorizontalLine />
+
+### PrivacyIframeStorageMessageResponse
+
+Re-exports [PrivacyIframeStorageMessageResponse](message-types/interfaces/privacy-iframe-storage-message-response.md)
+
+<HorizontalLine />
+
+### PRIVACY\_IFRAME\_STORAGE\_MESSAGE\_TYPE
+
+Re-exports [PRIVACY_IFRAME_STORAGE_MESSAGE_TYPE](message-types/variables/privacy-iframe-storage-message-type.md)
 
 <HorizontalLine />
 

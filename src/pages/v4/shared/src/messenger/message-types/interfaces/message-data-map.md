@@ -27,3 +27,4 @@ hideEditInGitHub: true
 | `CLIENT_AUTH_DETAILS` | [`ClientAuthDetailsMessage`](client-auth-details-message.md) |
 | `SWITCH_EMBED_ACTION` | [`SwitchEmbedActionMessage`](switch-embed-action-message.md) |
 | `TARGET_LOAD` | [`TargetLoadMessage`](target-load-message.md) |
+| `PRIVACY_IFRAME_STORAGE` | [`PrivacyIframeStorageMessageResponse`](privacy-iframe-storage-message-response.md) |

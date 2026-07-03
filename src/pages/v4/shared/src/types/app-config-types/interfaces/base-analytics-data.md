@@ -13,3 +13,4 @@ hideEditInGitHub: true
 | Property | Type | Description |
 | ------ | ------ | ------ |
 | `hostAppTrigger?` | `string` | The action within the host app that triggered the module. |
+| `entryPoint?` | [`EntryPoint`](../enumerations/entry-point.md) | Defines the entry point through which the user accessed the module experience. |

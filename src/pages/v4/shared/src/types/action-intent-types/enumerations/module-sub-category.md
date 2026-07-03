@@ -17,5 +17,7 @@ hideEditInGitHub: true
 | `TEXT_TO_IMAGE` | `"text-to-image"` |
 | `START_FROM_CONTENT` | `"start-from-content"` |
 | `EDIT_DESIGN` | `"edit-design"` |
+| `EDIT_DESIGN_V2` | `"edit-design-v2"` |
 | `DESIGN_VIEWER` | `"design-viewer"` |
 | `ANNOTATE_IMAGE` | `"annotate-image"` |
+| `GENERATE_IMAGE` | `"generate-image"` |

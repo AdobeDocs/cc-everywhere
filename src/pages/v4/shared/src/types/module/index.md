@@ -16,6 +16,18 @@ Re-exports [TextToImageAppVersion](app-config-types/enumerations/text-to-image-a
 
 <HorizontalLine />
 
+### GenerateImageInitialView
+
+Re-exports [GenerateImageInitialView](app-config-types/enumerations/generate-image-initial-view.md)
+
+<HorizontalLine />
+
+### ModelConfig
+
+Re-exports [ModelConfig](app-config-types/interfaces/model-config.md)
+
+<HorizontalLine />
+
 ### EditImageAppVersion
 
 Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-version.md)
@@ -25,6 +37,12 @@ Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-ve
 ### EditDesignAppVersion
 
 Re-exports [EditDesignAppVersion](app-config-types/enumerations/edit-design-app-version.md)
+
+<HorizontalLine />
+
+### StartFromContentAppVersion
+
+Re-exports [StartFromContentAppVersion](app-config-types/enumerations/start-from-content-app-version.md)
 
 <HorizontalLine />
 
@@ -85,6 +103,24 @@ Re-exports [PromptSafetyCheckResponse](app-config-types/interfaces/prompt-safety
 ### TextToImageAppConfig
 
 Re-exports [TextToImageAppConfig](app-config-types/interfaces/text-to-image-app-config.md)
+
+<HorizontalLine />
+
+### TemplatesHomeTab
+
+Re-exports [TemplatesHomeTab](app-config-types/type-aliases/templates-home-tab.md)
+
+<HorizontalLine />
+
+### CreateConfig
+
+Re-exports [CreateConfig](app-config-types/interfaces/create-config.md)
+
+<HorizontalLine />
+
+### TemplatesHomeConfig
+
+Re-exports [TemplatesHomeConfig](app-config-types/interfaces/templates-home-config.md)
 
 <HorizontalLine />
 
@@ -166,6 +202,12 @@ Re-exports [StartFromContentDesignConfig](design-config-types/interfaces/start-f
 
 <HorizontalLine />
 
+### FDEDesignConfig
+
+Re-exports [FDEDesignConfig](design-config-types/interfaces/fde-design-config.md)
+
+<HorizontalLine />
+
 ### WarmupDesignConfig
 
 Re-exports [WarmupDesignConfig](design-config-types/interfaces/warmup-design-config.md)
@@ -190,6 +232,12 @@ Re-exports [DesignViewerDesignConfig](design-config-types/interfaces/design-view
 
 <HorizontalLine />
 
+### GenerateImageDesignConfig
+
+Re-exports [GenerateImageDesignConfig](design-config-types/interfaces/generate-image-design-config.md)
+
+<HorizontalLine />
+
 ### EditImageIntent
 
 Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
@@ -205,6 +253,12 @@ Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-confi
 ### EditDesignDocConfig
 
 Re-exports [EditDesignDocConfig](doc-config-types/interfaces/edit-design-doc-config.md)
+
+<HorizontalLine />
+
+### FDEDocConfig
+
+Re-exports [FDEDocConfig](doc-config-types/interfaces/fde-doc-config.md)
 
 <HorizontalLine />
 

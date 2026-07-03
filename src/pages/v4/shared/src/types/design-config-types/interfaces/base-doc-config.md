@@ -15,6 +15,7 @@ hideEditInGitHub: true
 - [`EditDocConfig`](../../editor/doc-config-types/interfaces/edit-doc-config.md)
 - [`EditImageDocConfig`](../../module/doc-config-types/interfaces/edit-image-doc-config.md)
 - [`EditDesignDocConfig`](../../module/doc-config-types/interfaces/edit-design-doc-config.md)
+- [`FDEDocConfig`](../../module/doc-config-types/interfaces/fde-doc-config.md)
 - [`AnnotateImageDocConfig`](../../module/doc-config-types/interfaces/annotate-image-doc-config.md)
 - [`DesignViewerDocConfig`](../../module/doc-config-types/interfaces/design-viewer-doc-config.md)
 - [`DocConfig`](../../quick-action/doc-config-types/interfaces/doc-config.md)

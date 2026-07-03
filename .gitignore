@@ -16,4 +16,18 @@ package-lock.json
 linter-report.txt
 
 # Preserved from external contributors
+.nvmrc
+.cursorignore
+.cursorindexingignore
+.cursor/
+lerna-debug.log
 yalc.lock
+
+# DevEx
+temp/
+.yarn/
+.venv/
+.editorconfig
+.claude/
+*.bak
+npm-debug.log*

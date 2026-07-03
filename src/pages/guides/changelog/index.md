@@ -16,6 +16,10 @@ contributors:
 
 # Changelog
 
+## [4.48.12] 2026-06-16
+
+General improvements and bug fixes.
+
 ## [4.45.20] 2026-04-14
 
 ### Documentation

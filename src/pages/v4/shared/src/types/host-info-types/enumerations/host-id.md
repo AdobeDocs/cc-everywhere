@@ -29,9 +29,12 @@ hideEditInGitHub: true
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
 | `FIREFLY` | `"FIREFLY"` |
 | `GENSTUDIO` | `"GENSTUDIO"` |
+| `HALO` | `"HALO"` |
+| `HOMESCREEN` | `"HOMESCREEN"` |
 | `ILLUSTRATOR` | `"ILLUSTRATOR"` |
 | `INDESIGN` | `"INDESIGN"` |
 | `OTHER` | `"Other"` |
 | `PHOTOSHOP` | `"PHOTOSHOP"` |
 | `PREMIERE_PRO` | `"PREMIERE_PRO"` |
+| `PROJECT_X` | `"PROJECT_X"` |
 | `STOCK` | `"STOCK"` |
