@@ -16,5 +16,5 @@ hideEditInGitHub: true
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
-| `templateId?` | `string` | The ID of the template to be edited. |
+| `templateId?` | `string` | The ID of the template to be edited. **See** [TemplateId](../type-aliases/template-id.md) |
 | `docId?` | `string` | The ID of the document to be edited. |

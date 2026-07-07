@@ -16,6 +16,29 @@ hideEditInGitHub: true
 
 - [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md)
 
+## Constructors
+
+### Constructor
+
+```ts
+new ModuleWorkflow(actionManager, context): ModuleWorkflow;
+```
+
+#### Parameters
+
+| Parameter | Type |
+| ------ | ------ |
+| `actionManager` | `ActionManager` |
+| `context` | `SDKContext` |
+
+#### Returns
+
+`ModuleWorkflow`
+
+#### Inherited from
+
+[`BaseWorkflow`](../../../base-workflow/classes/base-workflow.md).[`constructor`](../../../base-workflow/classes/base-workflow.md#constructor)
+
 ## Methods
 
 ### editImage()

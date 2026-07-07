@@ -238,6 +238,12 @@ Re-exports [GenerateImageDesignConfig](design-config-types/interfaces/generate-i
 
 <HorizontalLine />
 
+### TemplateId
+
+Re-exports [TemplateId](doc-config-types/type-aliases/template-id.md)
+
+<HorizontalLine />
+
 ### EditImageIntent
 
 Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)

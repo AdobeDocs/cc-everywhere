@@ -16,7 +16,7 @@ contributors:
 
 # Changelog
 
-## 2026-07-15
+## [4.49.14] 2026-07-15
 
 ### Documentation
 

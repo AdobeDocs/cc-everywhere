@@ -188,6 +188,10 @@
               }
             ],
             "path": "/v4/sdk/src/feature-flags/local-feature-flag-service/index.md"
+          },
+          {
+            "title": "LocalFeatureFlagService.spec",
+            "path": "/v4/sdk/src/feature-flags/local-feature-flag-service-spec/index.md"
           }
         ],
         "path": "/v4/sdk/src/feature-flags/edit-image-feature-flag-overrides/index.md"
@@ -686,6 +690,10 @@
                 "title": "interfaces",
                 "pages": [
                   {
+                    "title": "CallbackRequestEventData",
+                    "path": "/v4/shared/src/messenger/message-data-types/interfaces/callback-request-event-data.md"
+                  },
+                  {
                     "title": "CustomHostEventData",
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
                   },
@@ -718,7 +726,7 @@
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/update-close-button-event-data.md"
                   }
                 ],
-                "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
+                "path": "/v4/shared/src/messenger/message-data-types/interfaces/callback-request-event-data.md"
               }
             ],
             "path": "/v4/shared/src/messenger/message-data-types/index.md"
@@ -2278,7 +2286,17 @@
                     "path": "/v4/shared/src/types/module/doc-config-types/interfaces/annotate-image-doc-config.md"
                   },
                   {
-                    "title": "EditImageIntent",
+                    "title": "type-aliases",
+                    "pages": [
+                      {
+                        "title": "EditImageIntent",
+                        "path": "/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent.md"
+                      },
+                      {
+                        "title": "TemplateId",
+                        "path": "/v4/shared/src/types/module/doc-config-types/type-aliases/template-id.md"
+                      }
+                    ],
                     "path": "/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent.md"
                   }
                 ],

@@ -27,6 +27,7 @@ hideEditInGitHub: true
 | `BRIDGE` | `"BRIDGE"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
+| `FALCO` | `"FALCO"` |
 | `FIREFLY` | `"FIREFLY"` |
 | `GENSTUDIO` | `"GENSTUDIO"` |
 | `HALO` | `"HALO"` |
