@@ -26,3 +26,4 @@ hideEditInGitHub: true
 | [URLInfoEventData](interfaces/url-info-event-data.md) | - |
 | [ExportInfoEventData](interfaces/export-info-event-data.md) | - |
 | [DownloadCompleteEventData](interfaces/download-complete-event-data.md) | - |
+| [CallbackRequestEventData](interfaces/callback-request-event-data.md) | - |

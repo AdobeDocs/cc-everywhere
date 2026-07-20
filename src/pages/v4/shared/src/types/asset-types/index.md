@@ -18,6 +18,7 @@ hideEditInGitHub: true
 | [ImageFileType](enumerations/image-file-type.md) | - |
 | [VideoFileType](enumerations/video-file-type.md) | - |
 | [PdfFileType](enumerations/pdf-file-type.md) | - |
+| [AudioFileType](enumerations/audio-file-type.md) | - |
 | [SubFileType](enumerations/sub-file-type.md) | - |
 
 ## Interfaces

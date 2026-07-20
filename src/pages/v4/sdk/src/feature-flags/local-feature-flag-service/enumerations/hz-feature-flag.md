@@ -46,3 +46,8 @@ Enum representing feature flags for HZ based target apps
 | `MTZN_MESSAGING_FOR_INSERT_OBJECT` | `"mtzn-messaging-for-insert-object"` |
 | `MTZN_MESSAGING_FOR_REMOVE_OBJECT` | `"mtzn-messaging-for-remove-object"` |
 | `MOBILE_ERASE_FEATURE` | `"mobile-erase-feature"` |
+| `AI_ASSISTANT` | `"ai-assistant"` |
+| `EDIT_IMAGE_ASSISTANT` | `"edit-image-assistant"` |
+| `ALLOWED_ADOBE_ENTERPRISE_USERS` | `"allowed-adobe-enterprise-users"` |
+| `EDIT_IMAGE_ASSISTANT_FLOATING_WINDOW` | `"edit-image-assistant-floating-window"` |
+| `FILTER_SHADOW` | `"filter-shadow"` |

@@ -34,9 +34,15 @@ Re-exports [EditImageAppVersion](app-config-types/enumerations/edit-image-app-ve
 
 <HorizontalLine />
 
-### EditDesignAppVersion
+### FDEAppVersion
 
-Re-exports [EditDesignAppVersion](app-config-types/enumerations/edit-design-app-version.md)
+Re-exports [FDEAppVersion](app-config-types/enumerations/fde-app-version.md)
+
+<HorizontalLine />
+
+### ExperienceVariant
+
+Re-exports [ExperienceVariant](app-config-types/enumerations/experience-variant.md)
 
 <HorizontalLine />
 
@@ -124,6 +130,42 @@ Re-exports [TemplatesHomeConfig](app-config-types/interfaces/templates-home-conf
 
 <HorizontalLine />
 
+### BrowseTemplateType
+
+Re-exports [BrowseTemplateType](app-config-types/enumerations/browse-template-type.md)
+
+<HorizontalLine />
+
+### TemplateFilters
+
+Re-exports [TemplateFilters](app-config-types/interfaces/template-filters.md)
+
+<HorizontalLine />
+
+### TemplateBrowserConfig
+
+Re-exports [TemplateBrowserConfig](app-config-types/interfaces/template-browser-config.md)
+
+<HorizontalLine />
+
+### FDEBaseAppConfig
+
+Re-exports [FDEBaseAppConfig](app-config-types/interfaces/fde-base-app-config.md)
+
+<HorizontalLine />
+
+### FDEEditDesignAppConfig
+
+Re-exports [FDEEditDesignAppConfig](app-config-types/interfaces/fde-edit-design-app-config.md)
+
+<HorizontalLine />
+
+### FDECreateDesignAppConfig
+
+Re-exports [FDECreateDesignAppConfig](app-config-types/interfaces/fde-create-design-app-config.md)
+
+<HorizontalLine />
+
 ### StartFromContentAppConfig
 
 Re-exports [StartFromContentAppConfig](app-config-types/interfaces/start-from-content-app-config.md)
@@ -202,9 +244,15 @@ Re-exports [StartFromContentDesignConfig](design-config-types/interfaces/start-f
 
 <HorizontalLine />
 
-### FDEDesignConfig
+### FDEEditDesignDesignConfig
 
-Re-exports [FDEDesignConfig](design-config-types/interfaces/fde-design-config.md)
+Re-exports [FDEEditDesignDesignConfig](design-config-types/interfaces/fde-edit-design-design-config.md)
+
+<HorizontalLine />
+
+### FDECreateDesignDesignConfig
+
+Re-exports [FDECreateDesignDesignConfig](design-config-types/interfaces/fde-create-design-design-config.md)
 
 <HorizontalLine />
 
@@ -214,9 +262,9 @@ Re-exports [WarmupDesignConfig](design-config-types/interfaces/warmup-design-con
 
 <HorizontalLine />
 
-### EditDesignDesignConfig
+### EditFromTemplateDesignConfig
 
-Re-exports [EditDesignDesignConfig](design-config-types/interfaces/edit-design-design-config.md)
+Re-exports [EditFromTemplateDesignConfig](design-config-types/interfaces/edit-from-template-design-config.md)
 
 <HorizontalLine />
 
@@ -238,6 +286,12 @@ Re-exports [GenerateImageDesignConfig](design-config-types/interfaces/generate-i
 
 <HorizontalLine />
 
+### TemplateId
+
+Re-exports [TemplateId](doc-config-types/type-aliases/template-id.md)
+
+<HorizontalLine />
+
 ### EditImageIntent
 
 Re-exports [EditImageIntent](doc-config-types/type-aliases/edit-image-intent.md)
@@ -250,15 +304,15 @@ Re-exports [EditImageDocConfig](doc-config-types/interfaces/edit-image-doc-confi
 
 <HorizontalLine />
 
-### EditDesignDocConfig
+### EditFromTemplateDocConfig
 
-Re-exports [EditDesignDocConfig](doc-config-types/interfaces/edit-design-doc-config.md)
+Re-exports [EditFromTemplateDocConfig](doc-config-types/interfaces/edit-from-template-doc-config.md)
 
 <HorizontalLine />
 
-### FDEDocConfig
+### FDEEditDesignDocConfig
 
-Re-exports [FDEDocConfig](doc-config-types/interfaces/fde-doc-config.md)
+Re-exports [FDEEditDesignDocConfig](doc-config-types/interfaces/fde-edit-design-doc-config.md)
 
 <HorizontalLine />
 

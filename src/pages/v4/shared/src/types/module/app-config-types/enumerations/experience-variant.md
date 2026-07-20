@@ -6,10 +6,13 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Enumeration: EditDesignAppVersion
+# Enumeration: ExperienceVariant
+
+Specifies the experience variant to use when launching the module.
 
 ## Enumeration Members
 
 | Enumeration Member | Value |
 | ------ | ------ |
-| `V1` | `"1"` |
+| `DEFAULT` | `"default"` |
+| `PRINT` | `"print"` |

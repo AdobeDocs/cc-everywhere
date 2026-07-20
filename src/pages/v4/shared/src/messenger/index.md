@@ -238,6 +238,12 @@ Re-exports [DownloadCompleteEventData](message-data-types/interfaces/download-co
 
 <HorizontalLine />
 
+### CallbackRequestEventData
+
+Re-exports [CallbackRequestEventData](message-data-types/interfaces/callback-request-event-data.md)
+
+<HorizontalLine />
+
 ### ProtocolVersion
 
 Re-exports [ProtocolVersion](protocol-types/enumerations/protocol-version.md)

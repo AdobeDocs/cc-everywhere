@@ -16,6 +16,7 @@ hideEditInGitHub: true
 | [ModuleIntent](enumerations/module-intent.md) | - |
 | [ImageQuickActionIntent](enumerations/image-quick-action-intent.md) | - |
 | [VideoQuickActionIntent](enumerations/video-quick-action-intent.md) | - |
+| [AudioQuickActionIntent](enumerations/audio-quick-action-intent.md) | - |
 | [PdfQuickActionIntent](enumerations/pdf-quick-action-intent.md) | - |
 | [GenStudioQuickActionIntent](enumerations/gen-studio-quick-action-intent.md) | - |
 | [WarmupIntent](enumerations/warmup-intent.md) | - |
@@ -26,5 +27,5 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [QuickActionIntent](type-aliases/quick-action-intent.md) | Intent type used for quick action workflows. It includes [ImageQuickActionIntent](enumerations/image-quick-action-intent.md) for image operations, [VideoQuickActionIntent](enumerations/video-quick-action-intent.md) for video operations, [PdfQuickActionIntent](enumerations/pdf-quick-action-intent.md) for PDF operations, and [GenStudioQuickActionIntent](enumerations/gen-studio-quick-action-intent.md) for GenStudio workflows. |
+| [QuickActionIntent](type-aliases/quick-action-intent.md) | Intent type used for quick action workflows. It includes [ImageQuickActionIntent](enumerations/image-quick-action-intent.md) for image operations, [VideoQuickActionIntent](enumerations/video-quick-action-intent.md) for video operations, [AudioQuickActionIntent](enumerations/audio-quick-action-intent.md) for audio operations, [PdfQuickActionIntent](enumerations/pdf-quick-action-intent.md) for PDF operations, and [GenStudioQuickActionIntent](enumerations/gen-studio-quick-action-intent.md) for GenStudio workflows. |
 | [ActionIntent](type-aliases/action-intent.md) | Intent type used to specify the action for SDK workflows. It includes [EditorIntent](enumerations/editor-intent.md) for editor operations, [ModuleIntent](enumerations/module-intent.md) for module operations, [QuickActionIntent](type-aliases/quick-action-intent.md) for quick actions, and [WarmupIntent](enumerations/warmup-intent.md) for warmup operations. |

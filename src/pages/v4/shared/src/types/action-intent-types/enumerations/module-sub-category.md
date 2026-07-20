@@ -16,8 +16,9 @@ hideEditInGitHub: true
 | `IMAGE_V2` | `"image-v2"` |
 | `TEXT_TO_IMAGE` | `"text-to-image"` |
 | `START_FROM_CONTENT` | `"start-from-content"` |
+| `EDIT_FROM_TEMPLATE` | `"edit-design-from-template"` |
 | `EDIT_DESIGN` | `"edit-design"` |
-| `EDIT_DESIGN_V2` | `"edit-design-v2"` |
+| `CREATE_DESIGN` | `"create-design"` |
 | `DESIGN_VIEWER` | `"design-viewer"` |
 | `ANNOTATE_IMAGE` | `"annotate-image"` |
 | `GENERATE_IMAGE` | `"generate-image"` |

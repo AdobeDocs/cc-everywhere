@@ -25,3 +25,15 @@ Re-exports [EditImageAppConfig](app-config-types/interfaces/edit-image-app-confi
 ### DesignViewerAppConfig
 
 Re-exports [DesignViewerAppConfig](app-config-types/interfaces/design-viewer-app-config.md)
+
+<HorizontalLine />
+
+### FDECreateDesignAppConfig
+
+Re-exports [FDECreateDesignAppConfig](app-config-types/interfaces/fde-create-design-app-config.md)
+
+<HorizontalLine />
+
+### FDEEditDesignAppConfig
+
+Re-exports [FDEEditDesignAppConfig](app-config-types/interfaces/fde-edit-design-app-config.md)

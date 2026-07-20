@@ -14,6 +14,6 @@ hideEditInGitHub: true
 
 ## Properties
 
-| Property | Type |
-| ------ | ------ |
-| `templateId` | `string` |
+| Property | Type | Description |
+| ------ | ------ | ------ |
+| `templateId` | `string` | **See** [TemplateId](../../../module/doc-config-types/type-aliases/template-id.md) |

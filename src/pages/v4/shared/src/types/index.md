@@ -34,6 +34,12 @@ Re-exports [VideoQuickActionIntent](action-intent-types/enumerations/video-quick
 
 <HorizontalLine />
 
+### AudioQuickActionIntent
+
+Re-exports [AudioQuickActionIntent](action-intent-types/enumerations/audio-quick-action-intent.md)
+
+<HorizontalLine />
+
 ### PdfQuickActionIntent
 
 Re-exports [PdfQuickActionIntent](action-intent-types/enumerations/pdf-quick-action-intent.md)
@@ -199,6 +205,12 @@ Re-exports [VideoFileType](asset-types/enumerations/video-file-type.md)
 ### PdfFileType
 
 Re-exports [PdfFileType](asset-types/enumerations/pdf-file-type.md)
+
+<HorizontalLine />
+
+### AudioFileType
+
+Re-exports [AudioFileType](asset-types/enumerations/audio-file-type.md)
 
 <HorizontalLine />
 
@@ -1183,3 +1195,21 @@ Renames and re-exports [shared/src/types/editor](editor/index.md)
 ### QuickAction
 
 Renames and re-exports [shared/src/types/quick-action](quick-action/index.md)
+
+<HorizontalLine />
+
+### BrowseTemplateType
+
+Re-exports [BrowseTemplateType](module/app-config-types/enumerations/browse-template-type.md)
+
+<HorizontalLine />
+
+### TemplateBrowserConfig
+
+Re-exports [TemplateBrowserConfig](module/app-config-types/interfaces/template-browser-config.md)
+
+<HorizontalLine />
+
+### TemplateFilters
+
+Re-exports [TemplateFilters](module/app-config-types/interfaces/template-filters.md)
