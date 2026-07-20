@@ -20,6 +20,7 @@ hideEditInGitHub: true
 - [`URLInfoEventData`](url-info-event-data.md)
 - [`ExportInfoEventData`](export-info-event-data.md)
 - [`DownloadCompleteEventData`](download-complete-event-data.md)
+- [`CallbackRequestEventData`](callback-request-event-data.md)
 
 ## Properties
 

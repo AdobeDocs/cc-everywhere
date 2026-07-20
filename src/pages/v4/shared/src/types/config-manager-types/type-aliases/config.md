@@ -120,6 +120,7 @@ CLIENTS: object;
 | `CCX.FOCUSED_DESIGN_EDITOR.BASE` | `string` |
 | `CCX.FOCUSED_DESIGN_EDITOR.PATHS` | `object` |
 | `CCX.FOCUSED_DESIGN_EDITOR.PATHS.EDITOR` | `string` |
+| `CCX.FOCUSED_DESIGN_EDITOR.PATHS.TEMPLATES` | `string` |
 | `CCX.FOCUSED_DESIGN_EDITOR.CLIENT_ID` | `string` |
 | `IMS` | `object` |
 | `IMS.BASE` | `string` |
@@ -202,10 +203,14 @@ CLIENTS: object;
 | `AFTER_EFFECTS.CLIENT_ID` | `string` |
 | `BRIDGE` | `object` |
 | `BRIDGE.CLIENT_ID` | `string` |
+| `BRIDGEWAY` | `object` |
+| `BRIDGEWAY.CLIENT_ID` | `string` |
 | `CCD` | `object` |
 | `CCD.CLIENT_ID_PREFIX` | `string` |
 | `CONTENT_CAL` | `object` |
 | `CONTENT_CAL.CLIENT_ID` | `string` |
+| `FALCO` | `object` |
+| `FALCO.CLIENT_ID` | `string` |
 | `FIREFLY` | `object` |
 | `FIREFLY.CLIENT_ID` | `string` |
 | `GENSTUDIO` | `object` |

@@ -14,5 +14,6 @@ hideEditInGitHub: true
 | ------ | ------ |
 | `IMAGE` | `"Edit Image"` |
 | `VIDEO` | `"Edit Video"` |
+| `AUDIO` | `"Edit Audio"` |
 | `PDF` | `"Edit Document"` |
 | `GENSTUDIO` | `"GenStudio"` |

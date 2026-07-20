@@ -15,3 +15,5 @@ hideEditInGitHub: true
 | [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | App config for 3P. |
 | [EditImageAppConfig](interfaces/edit-image-app-config.md) | App config for 3P. |
 | [DesignViewerAppConfig](interfaces/design-viewer-app-config.md) | App config for 3P. |
+| [FDECreateDesignAppConfig](interfaces/fde-create-design-app-config.md) | App config for 3P. |
+| [FDEEditDesignAppConfig](interfaces/fde-edit-design-app-config.md) | App config for 3P. |

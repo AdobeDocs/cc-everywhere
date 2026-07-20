@@ -13,7 +13,10 @@ const FileType: (
   | JPEG
   | PNG
   | PDF
-  | MP4)[];
+  | MP4
+  | MP3
+  | M4A
+  | WAV)[];
 ```
 
 All supported export mime types.
@@ -23,3 +26,4 @@ All supported export mime types.
  - [ImageFileType](../enumerations/image-file-type.md)
  - [VideoFileType](../enumerations/video-file-type.md)
  - [PdfFileType](../enumerations/pdf-file-type.md)
+ - [AudioFileType](../enumerations/audio-file-type.md)

@@ -28,3 +28,4 @@ hideEditInGitHub: true
 | `appVersion?` | [`EditImageAppVersion`](../enumerations/edit-image-app-version.md) | Specifies the version of the Edit Image experience to be enabled. **Default** `V1` | - |
 | `inlineTOUConsent?` | `boolean` | Property to configure whether inline Terms Of User consent will be displayed | - |
 | `desktopFocusedMode?` | `boolean` | Enables the desktop focused-mode experience for Edit Image. **Default** `false` | - |
+| `desktopAssistantMode?` | `boolean` | Enables the beta version of AI assistant prompt bar in the Edit Image QA experience. **Default** `false` | - |

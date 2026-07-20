@@ -188,6 +188,10 @@
               }
             ],
             "path": "/v4/sdk/src/feature-flags/local-feature-flag-service/index.md"
+          },
+          {
+            "title": "LocalFeatureFlagService.spec",
+            "path": "/v4/sdk/src/feature-flags/local-feature-flag-service-spec/index.md"
           }
         ],
         "path": "/v4/sdk/src/feature-flags/edit-image-feature-flag-overrides/index.md"
@@ -686,6 +690,10 @@
                 "title": "interfaces",
                 "pages": [
                   {
+                    "title": "CallbackRequestEventData",
+                    "path": "/v4/shared/src/messenger/message-data-types/interfaces/callback-request-event-data.md"
+                  },
+                  {
                     "title": "CustomHostEventData",
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
                   },
@@ -718,7 +726,7 @@
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/update-close-button-event-data.md"
                   }
                 ],
-                "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
+                "path": "/v4/shared/src/messenger/message-data-types/interfaces/callback-request-event-data.md"
               }
             ],
             "path": "/v4/shared/src/messenger/message-data-types/index.md"
@@ -864,6 +872,14 @@
                             "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/edit-image-app-config.md"
                           },
                           {
+                            "title": "FDECreateDesignAppConfig",
+                            "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md"
+                          },
+                          {
+                            "title": "FDEEditDesignAppConfig",
+                            "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md"
+                          },
+                          {
                             "title": "TextToImageAppConfig",
                             "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/text-to-image-app-config.md"
                           }
@@ -885,6 +901,10 @@
               {
                 "title": "enumerations",
                 "pages": [
+                  {
+                    "title": "AudioQuickActionIntent",
+                    "path": "/v4/shared/src/types/action-intent-types/enumerations/audio-quick-action-intent.md"
+                  },
                   {
                     "title": "EditorIntent",
                     "path": "/v4/shared/src/types/action-intent-types/enumerations/editor-intent.md"
@@ -922,7 +942,7 @@
                     "path": "/v4/shared/src/types/action-intent-types/enumerations/warmup-intent.md"
                   }
                 ],
-                "path": "/v4/shared/src/types/action-intent-types/enumerations/editor-intent.md"
+                "path": "/v4/shared/src/types/action-intent-types/enumerations/audio-quick-action-intent.md"
               },
               {
                 "title": "type-aliases",
@@ -1014,6 +1034,10 @@
                   {
                     "title": "AssetType",
                     "path": "/v4/shared/src/types/asset-types/enumerations/asset-type.md"
+                  },
+                  {
+                    "title": "AudioFileType",
+                    "path": "/v4/shared/src/types/asset-types/enumerations/audio-file-type.md"
                   },
                   {
                     "title": "ImageFileType",
@@ -2063,12 +2087,20 @@
                     "title": "enumerations",
                     "pages": [
                       {
-                        "title": "EditDesignAppVersion",
-                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-design-app-version.md"
+                        "title": "BrowseTemplateType",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/browse-template-type.md"
                       },
                       {
                         "title": "EditImageAppVersion",
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version.md"
+                      },
+                      {
+                        "title": "ExperienceVariant",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/experience-variant.md"
+                      },
+                      {
+                        "title": "FDEAppVersion",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/fde-app-version.md"
                       },
                       {
                         "title": "GenerateImageInitialView",
@@ -2095,7 +2127,7 @@
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/thumbnail-option.md"
                       }
                     ],
-                    "path": "/v4/shared/src/types/module/app-config-types/enumerations/edit-design-app-version.md"
+                    "path": "/v4/shared/src/types/module/app-config-types/enumerations/browse-template-type.md"
                   },
                   {
                     "title": "interfaces",
@@ -2141,6 +2173,18 @@
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md"
                       },
                       {
+                        "title": "FDEBaseAppConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/fde-base-app-config.md"
+                      },
+                      {
+                        "title": "FDECreateDesignAppConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/fde-create-design-app-config.md"
+                      },
+                      {
+                        "title": "FDEEditDesignAppConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/fde-edit-design-app-config.md"
+                      },
+                      {
                         "title": "FastModeConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/fast-mode-config.md"
                       },
@@ -2167,6 +2211,14 @@
                       {
                         "title": "StartFromContentAppConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/start-from-content-app-config.md"
+                      },
+                      {
+                        "title": "TemplateBrowserConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/template-browser-config.md"
+                      },
+                      {
+                        "title": "TemplateFilters",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/template-filters.md"
                       },
                       {
                         "title": "TemplatesHomeConfig",
@@ -2215,16 +2267,20 @@
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config.md"
                       },
                       {
-                        "title": "EditDesignDesignConfig",
-                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-design-design-config.md"
+                        "title": "EditFromTemplateDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-from-template-design-config.md"
                       },
                       {
                         "title": "EditImageDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config.md"
                       },
                       {
-                        "title": "FDEDesignConfig",
-                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/fde-design-config.md"
+                        "title": "FDECreateDesignDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/fde-create-design-design-config.md"
+                      },
+                      {
+                        "title": "FDEEditDesignDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/fde-edit-design-design-config.md"
                       },
                       {
                         "title": "GenerateImageDesignConfig",
@@ -2263,22 +2319,32 @@
                         "path": "/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md"
                       },
                       {
-                        "title": "EditDesignDocConfig",
-                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-design-doc-config.md"
+                        "title": "EditFromTemplateDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-from-template-doc-config.md"
                       },
                       {
                         "title": "EditImageDocConfig",
                         "path": "/v4/shared/src/types/module/doc-config-types/interfaces/edit-image-doc-config.md"
                       },
                       {
-                        "title": "FDEDocConfig",
-                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/fde-doc-config.md"
+                        "title": "FDEEditDesignDocConfig",
+                        "path": "/v4/shared/src/types/module/doc-config-types/interfaces/fde-edit-design-doc-config.md"
                       }
                     ],
                     "path": "/v4/shared/src/types/module/doc-config-types/interfaces/annotate-image-doc-config.md"
                   },
                   {
-                    "title": "EditImageIntent",
+                    "title": "type-aliases",
+                    "pages": [
+                      {
+                        "title": "EditImageIntent",
+                        "path": "/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent.md"
+                      },
+                      {
+                        "title": "TemplateId",
+                        "path": "/v4/shared/src/types/module/doc-config-types/type-aliases/template-id.md"
+                      }
+                    ],
                     "path": "/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent.md"
                   }
                 ],
