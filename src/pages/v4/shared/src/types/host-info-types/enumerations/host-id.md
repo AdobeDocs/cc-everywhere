@@ -25,6 +25,7 @@ hideEditInGitHub: true
 | `AFTER_EFFECTS` | `"AFTER_EFFECTS"` |
 | `A_DOT_COM` | `"A_DOT_COM"` |
 | `BRIDGE` | `"BRIDGE"` |
+| `BRIDGEWAY` | `"BRIDGEWAY"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
 | `FALCO` | `"FALCO"` |

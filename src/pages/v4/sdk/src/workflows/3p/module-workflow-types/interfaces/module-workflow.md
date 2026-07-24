@@ -83,6 +83,58 @@ Open the Start From Content module.
 
 <HorizontalLine />
 
+### createDesign()
+
+```ts
+createDesign(
+   appConfig?, 
+   exportConfig?, 
+   containerConfig?): void;
+```
+
+Create a new design. Open template gallery as the default entry experience.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `appConfig?` | [`FDECreateDesignAppConfig`](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md) | properties to configure the template browser and FDE session |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+
+#### Returns
+
+`void`
+
+<HorizontalLine />
+
+### editDesign()
+
+```ts
+editDesign(
+   docConfig?, 
+   appConfig?, 
+   exportConfig?, 
+   containerConfig?): void;
+```
+
+Edit and customize a template or document in the Focused Design Editor (FDE).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `docConfig?` | [`FDEEditDesignDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/fde-edit-design-doc-config.md) | pass template configuration including docId or templateId |
+| `appConfig?` | [`FDEEditDesignAppConfig`](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md) | properties to configure the Focused Design Editor. See [ThirdParty.Module.FDEEditDesignAppConfig](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md). |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+
+#### Returns
+
+`void`
+
+<HorizontalLine />
+
 ### viewDesign()
 
 ```ts

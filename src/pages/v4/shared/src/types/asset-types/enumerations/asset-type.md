@@ -16,5 +16,6 @@ File format supported for design operations
 | ------ | ------ |
 | `IMAGE` | `"image"` |
 | `VIDEO` | `"video"` |
+| `AUDIO` | `"audio"` |
 | `PDF` | `"pdf"` |
 | `PSD` | `"psd"` |

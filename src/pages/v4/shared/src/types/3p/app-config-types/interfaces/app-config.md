@@ -23,6 +23,8 @@ App config for 3P.
 - [`TextToImageAppConfig`](../../module/app-config-types/interfaces/text-to-image-app-config.md)
 - [`EditImageAppConfig`](../../module/app-config-types/interfaces/edit-image-app-config.md)
 - [`DesignViewerAppConfig`](../../module/app-config-types/interfaces/design-viewer-app-config.md)
+- [`FDECreateDesignAppConfig`](../../module/app-config-types/interfaces/fde-create-design-app-config.md)
+- [`FDEEditDesignAppConfig`](../../module/app-config-types/interfaces/fde-edit-design-app-config.md)
 
 ## Properties
 

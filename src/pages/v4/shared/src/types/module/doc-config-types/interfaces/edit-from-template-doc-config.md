@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Interface: FDEDocConfig
+# Interface: EditFromTemplateDocConfig
 
 ## Extends
 
