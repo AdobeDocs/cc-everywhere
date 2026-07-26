@@ -1,7 +1,7 @@
 {
-  "total": 535,
+  "total": 536,
   "offset": 0,
-  "limit": 535,
+  "limit": 536,
   "data": [
     {
       "page": "/config",
@@ -10,7 +10,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/24/2026"
     },
     {
       "page": "/guides/",
@@ -28,7 +28,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "7/24/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -110,7 +110,14 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "6/27/2026"
+      "lastUpdated": "7/1/2026"
+    },
+    {
+      "page": "/guides/concepts/template-browser-v2",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "7/1/2026"
     },
     {
       "page": "/guides/concepts/tethering",
@@ -200,13 +207,12 @@
     {
       "page": "/guides/troubleshooting/faq/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/271147551?v=4",
-        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/273075299?v=4",
+        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "7/3/2026"
+      "lastUpdated": "6/27/2026"
     },
     {
       "page": "/guides/tutorials/",
@@ -523,7 +529,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/sdk/src/3p/cc-everywhere/variables/default",
@@ -547,7 +553,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/sdk/src/context/3p/editor-context/",
@@ -687,7 +693,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/sdk/src/feature-flags/local-feature-flag-service/",
@@ -823,7 +829,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/module-workflow-types/",
@@ -887,7 +893,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/base-workflow/",
@@ -903,7 +909,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/error/cc-everywhere-error-types/",
@@ -1113,7 +1119,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/messenger/channel-message-listener/",
@@ -1129,7 +1135,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/messenger/channel-message-listener/type-aliases/listener",
@@ -1249,7 +1255,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-data-types/enumerations/host-event-type",
@@ -1264,7 +1270,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data",
@@ -1296,7 +1302,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-data-types/interfaces/intent-change-event-data",
@@ -2410,7 +2416,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "6/27/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/callbacks",
@@ -2658,7 +2664,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/design-config-types/interfaces/base-app-config",
@@ -2690,7 +2696,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/editor/",
@@ -2802,7 +2808,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/editor/doc-config-types/interfaces/edit-doc-config",
@@ -3249,7 +3255,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "6/27/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/interfaces/device-info",
@@ -3391,7 +3397,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/24/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/fde-app-version",
@@ -3637,7 +3643,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/type-aliases/templates-home-tab",
@@ -3673,7 +3679,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/24/2026"
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/edit-image-design-config",
@@ -3785,7 +3791,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "7/7/2026"
     },
     {
       "page": "/v4/shared/src/types/network-types/",

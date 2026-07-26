@@ -12,7 +12,7 @@ Specifies the experience variant to use when launching the module.
 
 ## Enumeration Members
 
-| Enumeration Member | Value |
-| ------ | ------ |
-| `DEFAULT` | `"default"` |
-| `PRINT` | `"print"` |
+| Enumeration Member | Value       |
+| ------------------ | ----------- |
+| `DEFAULT`          | `"default"` |
+| `PRINT`            | `"print"`   |
