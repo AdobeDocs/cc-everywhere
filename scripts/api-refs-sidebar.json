@@ -56,6 +56,16 @@
             "path": "/v4/sdk/src/context/3p/editor-context/index.md"
           },
           {
+            "title": "RequestResponseWorkflowContext",
+            "pages": [
+              {
+                "title": "RequestResponseWorkflowContext",
+                "path": "/v4/sdk/src/context/request-response-workflow-context/classes/request-response-workflow-context.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/request-response-workflow-context/index.md"
+          },
+          {
             "title": "WorkflowContext",
             "pages": [
               {
@@ -696,6 +706,10 @@
                   {
                     "title": "CustomHostEventData",
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
+                  },
+                  {
+                    "title": "DocumentSavedEventData",
+                    "path": "/v4/shared/src/messenger/message-data-types/interfaces/document-saved-event-data.md"
                   },
                   {
                     "title": "DownloadCompleteEventData",
@@ -1460,6 +1474,10 @@
                   {
                     "title": "BaseDocConfig",
                     "path": "/v4/shared/src/types/design-config-types/interfaces/base-doc-config.md"
+                  },
+                  {
+                    "title": "ColorThemeAppConfig",
+                    "path": "/v4/shared/src/types/design-config-types/interfaces/color-theme-app-config.md"
                   },
                   {
                     "title": "DesignConfig",

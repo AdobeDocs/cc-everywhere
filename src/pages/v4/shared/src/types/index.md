@@ -592,6 +592,12 @@ Re-exports [BaseAppConfig](design-config-types/interfaces/base-app-config.md)
 
 <HorizontalLine />
 
+### ColorThemeAppConfig
+
+Re-exports [ColorThemeAppConfig](design-config-types/interfaces/color-theme-app-config.md)
+
+<HorizontalLine />
+
 ### DesignConfig
 
 Re-exports [DesignConfig](design-config-types/interfaces/design-config.md)

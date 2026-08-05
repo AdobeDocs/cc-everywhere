@@ -27,3 +27,4 @@ hideEditInGitHub: true
 | [ExportInfoEventData](interfaces/export-info-event-data.md) | - |
 | [DownloadCompleteEventData](interfaces/download-complete-event-data.md) | - |
 | [CallbackRequestEventData](interfaces/callback-request-event-data.md) | - |
+| [DocumentSavedEventData](interfaces/document-saved-event-data.md) | - |

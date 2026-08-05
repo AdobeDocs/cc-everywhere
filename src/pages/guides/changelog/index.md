@@ -16,6 +16,13 @@ contributors:
 
 # Changelog
 
+## [4.51.14] 2026-08-05
+
+### Added
+
+- [`CCEverywhere.DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md): Adding support to Design Viewer to accept multiple assets in the `docConfig`.
+- [`CCEverywhere.EditorAppConfig.editorMode`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties): Added a new optional `editorMode` property to the Full Editor `appConfig`. When set to `'assistant'`, the editor opens with the AI Assistant panel active, giving users immediate access to AI-powered editing features without any extra clicks.
+
 ## [4.50.23] 2026-07-24
 
 ### Added

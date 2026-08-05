@@ -21,6 +21,7 @@ hideEditInGitHub: true
 - [`ExportInfoEventData`](export-info-event-data.md)
 - [`DownloadCompleteEventData`](download-complete-event-data.md)
 - [`CallbackRequestEventData`](callback-request-event-data.md)
+- [`DocumentSavedEventData`](document-saved-event-data.md)
 
 ## Properties
 

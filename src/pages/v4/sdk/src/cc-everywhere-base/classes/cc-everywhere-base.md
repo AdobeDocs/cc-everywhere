@@ -30,7 +30,9 @@ new CCEverywhereBase(
    configParams, 
    authProvider, 
    clientAuthProvider, 
-   piipStatus): CCEverywhereBase;
+   piipStatus, 
+   hzEventSink?, 
+   hzEventBuilderFactory?): CCEverywhereBase;
 ```
 
 Constructor to initialize CCEverywhere object.
@@ -46,6 +48,8 @@ Constructor to initialize CCEverywhere object.
 | `authProvider` | `AuthProvider` | `undefined` | - |
 | `clientAuthProvider` | [`ClientAuthProvider`](../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | `undefined` | - |
 | `piipStatus` | [`PIIPStatus`](../../../../shared/src/types/host-info-types/enumerations/piip-status.md) | `PIIPStatus.OPTED_IN` | - |
+| `hzEventSink?` | `HzEventSink` | `undefined` | - |
+| `hzEventBuilderFactory?` | `HzEventBuilderFactory` | `undefined` | - |
 
 #### Returns
 

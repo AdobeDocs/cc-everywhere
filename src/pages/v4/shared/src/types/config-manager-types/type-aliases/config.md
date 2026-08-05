@@ -167,6 +167,9 @@ CLIENTS: object;
 | `INGEST.QUERY_PARAMS` | `object` |
 | `INGEST.QUERY_PARAMS.KEYS` | `object` |
 | `INGEST.QUERY_PARAMS.KEYS.API_KEY` | `string` |
+| `HZ_ANALYTICS` | `object` |
+| `HZ_ANALYTICS.X_API_KEY` | `string` |
+| `HZ_ANALYTICS.PROJECT` | `string` |
 | `INVITATIONS` | `object` |
 | `INVITATIONS.BASE` | `string` |
 | `CONTENT_SEARCH_SERVICE` | `object` |
@@ -209,6 +212,8 @@ CLIENTS: object;
 | `CCD.CLIENT_ID_PREFIX` | `string` |
 | `CONTENT_CAL` | `object` |
 | `CONTENT_CAL.CLIENT_ID` | `string` |
+| `EXPRESS_MCP_CLIENT` | `object` |
+| `EXPRESS_MCP_CLIENT.CLIENT_ID` | `string` |
 | `FALCO` | `object` |
 | `FALCO.CLIENT_ID` | `string` |
 | `FIREFLY` | `object` |
