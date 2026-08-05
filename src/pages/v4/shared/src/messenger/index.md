@@ -244,6 +244,12 @@ Re-exports [CallbackRequestEventData](message-data-types/interfaces/callback-req
 
 <HorizontalLine />
 
+### DocumentSavedEventData
+
+Re-exports [DocumentSavedEventData](message-data-types/interfaces/document-saved-event-data.md)
+
+<HorizontalLine />
+
 ### ProtocolVersion
 
 Re-exports [ProtocolVersion](protocol-types/enumerations/protocol-version.md)

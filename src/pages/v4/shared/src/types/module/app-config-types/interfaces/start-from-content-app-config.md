@@ -12,7 +12,7 @@ StartFromContentAppConfig is the app config for the Start From Content module.
 
 ## Extends
 
-- [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`TemplateBrowserConfig`](template-browser-config.md)
+- [`BaseAppConfig`](../../../design-config-types/interfaces/base-app-config.md).[`TemplateBrowserConfig`](template-browser-config.md).[`ColorThemeAppConfig`](../../../design-config-types/interfaces/color-theme-app-config.md)
 
 ## Properties
 

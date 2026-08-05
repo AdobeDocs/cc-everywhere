@@ -16,4 +16,4 @@ hideEditInGitHub: true
 
 | Property | Type |
 | ------ | ------ |
-| `asset` | [`Asset`](../../../asset-types/type-aliases/asset.md) |
+| `asset` | \| [`Asset`](../../../asset-types/type-aliases/asset.md) \| [`Asset`](../../../asset-types/type-aliases/asset.md)[] |

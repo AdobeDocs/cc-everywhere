@@ -28,6 +28,7 @@ hideEditInGitHub: true
 | `BRIDGEWAY` | `"BRIDGEWAY"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
+| `EXPRESS_MCP_CLIENT` | `"EXPRESS_MCP_CLIENT"` |
 | `FALCO` | `"FALCO"` |
 | `FIREFLY` | `"FIREFLY"` |
 | `GENSTUDIO` | `"GENSTUDIO"` |

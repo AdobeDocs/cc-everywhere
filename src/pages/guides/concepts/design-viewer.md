@@ -96,6 +96,24 @@ const docConfig = {
 };
 ```
 
+<InlineAlert slots="header, text, text2, text3" variant="info" />
+
+#### Multiple assets support
+
+The `docConfig.asset` property can also be an array of assets. In that case, the first asset in the array is displayed in the viewer, with navigation controls to switch between assets.
+
+```js
+const docConfig = {
+  asset: [
+    { type: "image" /* ... */ },
+    { type: "image" /* ... */ },
+    { type: "image" /* ... */ },
+  ],
+};
+```
+
+![Design Viewer with multiple assets](./img/design-viewer--hero-multiple.png)
+
 If you have a local image URL—for example, resolved by a bundler like Vite—you can use the `FileReader` API to **convert it to a Base64** data URL before passing it to the SDK.
 
 <Details slots="list" repeat="1" summary="Expand to see the code"/>
@@ -214,6 +232,10 @@ The Design Viewer provides two CTAs for desktop and mobile devices:
 
 While on Desktop the download action is immediate, on Mobile devices you would need to handle the asset's sharing via iOS/Android native widgets.
 
+<InlineAlert slots="text" variant="info" />
+
+When multiple assets are passed to the Design Viewer, on Desktop users will download a `.zip` file.
+
 ### Mobile sharing with the Web Share API
 
 On mobile, the Design Viewer **Share** control does not open the system share sheet by itself. Your app should use the browser **[Web Share API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Share_API)** (`navigator.share` / `navigator.canShare`) so the user gets the native iOS or Android share UI (Messages, Mail, installed apps, and so on).
@@ -281,6 +303,44 @@ const callbacks = {
 };
 ```
 
+<InlineAlert slots="header, text, text2, text3" variant="info" />
+
+#### Sharing multiple files
+
+Since [`docConfig.asset`](#the-asset-to-view) can be an array of assets, `publishParams.asset` is likewise an array. To share **all** of them in a single operation, convert each asset to a `File` and pass the resulting array to the Web Share API instead of a single-element array.
+
+Always guard with **`navigator.canShare({ files })`** before calling **`navigator.share({ files })`**: browsers limit how many files—and which MIME types—can be shared at once, and `canShare` returns `false` when the set is unsupported so you can fall back to your own UX.
+
+```javascript
+// Share every published asset at once using the native Share sheet
+async function shareImages(assets) {
+  const files = assets.map((asset) => dataUrlToFile(asset.data));
+
+  if (navigator.canShare && navigator.canShare({ files })) {
+    try {
+      await navigator.share({ files });
+      console.log("Shared successfully");
+    } catch (err) {
+      if (err.name !== "AbortError") {
+        console.error("Share failed:", err);
+      }
+    }
+  } else {
+    console.warn("Web Share API multi-file sharing not supported");
+  }
+}
+
+// In your onPublish callback, pass the whole asset array instead of asset[0]
+const callbacks = {
+  onPublish: (intent, publishParams) => {
+    if (publishParams.exportButtonId !== "shareToHostApp") {
+      return;
+    }
+    shareImages(publishParams.asset); // 👈 share all assets, not just the first
+  },
+};
+```
+
 ## Example
 
 The following example mirrors the pattern from the [Embed SDK View Design sample application](https://github.com/AdobeDocs/embed-sdk-samples/tree/main/code-samples/tutorials). It accepts either a pre-loaded image or a user-uploaded file, converts it to Base64, and launches the Design Viewer. It also includes the [Web Share API](#mobile-sharing-with-the-web-share-api) helpers and an `onPublish` handler that shares only when `publishParams.exportButtonId` is `"shareToHostApp"` (the **Share** control on mobile).
@@ -294,7 +354,7 @@ await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
 
 const { module } = await window.CCEverywhere.initialize(
   { clientId: "your-client-id", appName: "your-app-name" },
-  { loginMode: "delayed" }
+  { loginMode: "delayed" },
 );
 
 function dataUrlToFile(dataUrl, filename = "design.png") {
@@ -390,39 +450,57 @@ document.getElementById("fileInput").onchange = async (event) => {
 ```html
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <title>Embed SDK Sample</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Embed SDK Sample</title>
-</head>
+  <body>
+    <sp-theme
+      scale="medium"
+      color="light"
+      system="express"
+    >
+      <div class="container">
+        <header>
+          <h1>Adobe Express Embed SDK</h1>
+          <sp-divider size="l"></sp-divider>
+          <h2>Design Viewer Sample</h2>
+          <p>
+            The <b>View Design</b> button launches a design viewer instance.<br />
+            Upload your own image using the
+            <b>Upload Image &amp; View Design</b> button.
+          </p>
+        </header>
+        <main>
+          <img
+            id="savedImage"
+            src="./img/fantasy-golf.png"
+            alt="Your design will appear here."
+          />
+          <sp-button-group>
+            <sp-button id="viewBtn">View Design</sp-button>
+            <sp-button id="uploadBtn">Upload Image &amp; View Design</sp-button>
+          </sp-button-group>
+          <input
+            type="file"
+            id="fileInput"
+            accept="image/*"
+            style="display: none;"
+          />
+        </main>
+      </div>
+    </sp-theme>
 
-<body>
-  <sp-theme scale="medium" color="light" system="express">
-    <div class="container">
-      <header>
-        <h1>Adobe Express Embed SDK</h1>
-        <sp-divider size="l"></sp-divider>
-        <h2>Design Viewer Sample</h2>
-        <p>
-          The <b>View Design</b> button launches a design viewer instance.<br />
-          Upload your own image using the <b>Upload Image &amp; View Design</b> button.
-        </p>
-      </header>
-      <main>
-        <img id="savedImage" src="./img/fantasy-golf.png" alt="Your design will appear here." />
-        <sp-button-group>
-          <sp-button id="viewBtn">View Design</sp-button>
-          <sp-button id="uploadBtn">Upload Image &amp; View Design</sp-button>
-        </sp-button-group>
-        <input type="file" id="fileInput" accept="image/*" style="display: none;" />
-      </main>
-    </div>
-  </sp-theme>
-
-  <script type="module" src="./main.js"></script>
-</body>
-
+    <script
+      type="module"
+      src="./main.js"
+    ></script>
+  </body>
 </html>
 ```
 
