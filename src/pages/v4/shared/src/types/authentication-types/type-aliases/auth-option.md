@@ -13,7 +13,8 @@ type AuthOption =
   | UpfrontAuthOption
   | DelayedAuthOption
   | ImsJumpAuthOption
-  | PreSignedInAuthOption;
+  | PreSignedInAuthOption
+  | PartnerAssertionAuthOption;
 ```
 
 Authentication option for SDK initialization.
@@ -23,6 +24,7 @@ This union type includes:
 - [DelayedAuthOption](../interfaces/delayed-auth-option.md) - Auth deferred until needed
 - [ImsJumpAuthOption](../interfaces/ims-jump-auth-option.md) - IMS jump (e.g. SSO) with token
 - [PreSignedInAuthOption](../interfaces/pre-signed-in-auth-option.md) - User already signed in
+- [PartnerAssertionAuthOption](../interfaces/partner-assertion-auth-option.md) - Auth using partner-issued signed identity assertions
 
 ## See
 

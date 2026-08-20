@@ -30,7 +30,7 @@ Re-exports [HostInfo](host-info-types/type-aliases/host-info.md)
 
 ### ConfigParams
 
-Re-exports [ConfigParams](host-info-types/type-aliases/config-params.md)
+Re-exports [ConfigParams](host-info-types/interfaces/config-params.md)
 
 <HorizontalLine />
 

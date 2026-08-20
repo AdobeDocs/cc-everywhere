@@ -28,3 +28,4 @@ hideEditInGitHub: true
 | [DownloadCompleteEventData](interfaces/download-complete-event-data.md) | - |
 | [CallbackRequestEventData](interfaces/callback-request-event-data.md) | - |
 | [DocumentSavedEventData](interfaces/document-saved-event-data.md) | - |
+| [DocumentUpdatedEventData](interfaces/document-updated-event-data.md) | - |

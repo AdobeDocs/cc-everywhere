@@ -32,6 +32,7 @@ hideEditInGitHub: true
 | [LinkStyle](interfaces/link-style.md) | Style for a link-style export option (no button chrome). |
 | [BaseAction](interfaces/base-action.md) | - |
 | [PublishAction](interfaces/publish-action.md) | Action for publishing content to the host application. |
+| [AssetPreviewConfig](interfaces/asset-preview-config.md) | Configuration for generating an additional preview of the exported asset alongside the primary export. |
 | [DownloadAction](interfaces/download-action.md) | Action for downloading content to the user's device. |
 | [EditFurtherAction](interfaces/edit-further-action.md) | Action for continuing to edit content in another application (Express or Image module). |
 | [CallBackAction](interfaces/call-back-action.md) | Action for invoking a host callback without publishing assets. |

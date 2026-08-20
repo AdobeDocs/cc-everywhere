@@ -14,6 +14,7 @@ hideEditInGitHub: true
 - [`DelayedAuthOption`](delayed-auth-option.md)
 - [`PreSignedInAuthOption`](pre-signed-in-auth-option.md)
 - [`ImsJumpAuthOption`](ims-jump-auth-option.md)
+- [`PartnerAssertionAuthOption`](partner-assertion-auth-option.md)
 
 ## Properties
 

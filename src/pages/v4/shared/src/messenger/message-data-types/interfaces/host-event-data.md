@@ -22,6 +22,7 @@ hideEditInGitHub: true
 - [`DownloadCompleteEventData`](download-complete-event-data.md)
 - [`CallbackRequestEventData`](callback-request-event-data.md)
 - [`DocumentSavedEventData`](document-saved-event-data.md)
+- [`DocumentUpdatedEventData`](document-updated-event-data.md)
 
 ## Properties
 

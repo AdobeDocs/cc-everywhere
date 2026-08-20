@@ -18,3 +18,4 @@ Enum representing different authentication modes.
 | `DELAYED` | `"delayed"` | Authentication is delayed. |
 | `PRE_SIGNED_IN` | `"pre-signed-in"` | User is pre-signed in. |
 | `IMS_JUMP` | `"ims-jump"` | Authentication is through IMS jump. |
+| `PARTNER_ASSERTION` | `"partner-assertion"` | Auth using partner-issued signed identity assertions |

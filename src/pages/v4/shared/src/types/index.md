@@ -352,6 +352,36 @@ Re-exports [ImsJumpAuthOption](authentication-types/interfaces/ims-jump-auth-opt
 
 <HorizontalLine />
 
+### GuestAssertionConfig
+
+Re-exports [GuestAssertionConfig](authentication-types/interfaces/guest-assertion-config.md)
+
+<HorizontalLine />
+
+### UserAssertionConfig
+
+Re-exports [UserAssertionConfig](authentication-types/interfaces/user-assertion-config.md)
+
+<HorizontalLine />
+
+### TransitionAssertionConfig
+
+Re-exports [TransitionAssertionConfig](authentication-types/interfaces/transition-assertion-config.md)
+
+<HorizontalLine />
+
+### PartnerAssertionAuthConfig
+
+Re-exports [PartnerAssertionAuthConfig](authentication-types/type-aliases/partner-assertion-auth-config.md)
+
+<HorizontalLine />
+
+### PartnerAssertionAuthOption
+
+Re-exports [PartnerAssertionAuthOption](authentication-types/interfaces/partner-assertion-auth-option.md)
+
+<HorizontalLine />
+
 ### AuthOption
 
 Re-exports [AuthOption](authentication-types/type-aliases/auth-option.md)
@@ -733,6 +763,12 @@ Re-exports [BaseAction](export-config-types/interfaces/base-action.md)
 ### PublishAction
 
 Re-exports [PublishAction](export-config-types/interfaces/publish-action.md)
+
+<HorizontalLine />
+
+### AssetPreviewConfig
+
+Re-exports [AssetPreviewConfig](export-config-types/interfaces/asset-preview-config.md)
 
 <HorizontalLine />
 
