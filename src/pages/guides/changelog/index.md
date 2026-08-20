@@ -16,6 +16,13 @@ contributors:
 
 # Changelog
 
+## [4.53.3] 2026-08-13
+
+### Added
+
+- [`PartnerAssertionAuthConfig`](../../v4/shared/src/types/authentication-types/index.md#type-aliases): Added a new `PartnerAssertionAuthConfig` interface to support partner assertion authentication in the SDK. This allows host applications to provide a partner assertion token for authentication purposes (guest, signed-in, or guest-to-user transition), enabling seamless integration with partner systems.
+- [`PublishAction.previewConfig`](../../v4/shared/src/types/export-config-types/interfaces/publish-action.md#properties): Added a new `previewConfig` property of type [`AssetPreviewConfig`](../../v4/shared/src/types/export-config-types/interfaces/asset-preview-config.md) to the `PublishAction` interface, allowing host applications to configure an additional image as the output preview of the exported asset.
+
 ## [4.51.14] 2026-08-05
 
 ### Added

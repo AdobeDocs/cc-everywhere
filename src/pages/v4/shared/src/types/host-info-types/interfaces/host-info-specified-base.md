@@ -19,3 +19,4 @@ This interface describes the properties provided by client.
 | `appVersion?` | [`Version`](../../version-types/interfaces/version.md) | Client's current version. |
 | `platformCategory?` | [`PlatformCategory`](../enumerations/platform-category.md) | Client's application type. |
 | `coiEnabled?` | `boolean` | Indicates if COI is enabled for client. |
+| `orgId?` | `string` | Organization ID of the partner. |

@@ -37,6 +37,7 @@ hideEditInGitHub: true
 | [ParamsResponseMessage](interfaces/params-response-message.md) | - |
 | [WorkflowMessage](interfaces/workflow-message.md) | - |
 | [ClientAuthDetailsMessage](interfaces/client-auth-details-message.md) | - |
+| [AuthOptionRefreshResponseMessage](interfaces/auth-option-refresh-response-message.md) | - |
 | [SwitchEmbedActionMessage](interfaces/switch-embed-action-message.md) | - |
 | [TargetLoadMessage](interfaces/target-load-message.md) | - |
 | [PrivacyIframeStorageMessageResponse](interfaces/privacy-iframe-storage-message-response.md) | - |

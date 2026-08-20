@@ -32,6 +32,7 @@ hideEditInGitHub: true
 | `FALCO` | `"FALCO"` |
 | `FIREFLY` | `"FIREFLY"` |
 | `GENSTUDIO` | `"GENSTUDIO"` |
+| `GENSTUDIO_CMN` | `"GENSTUDIO_CMN"` |
 | `HALO` | `"HALO"` |
 | `HOMESCREEN` | `"HOMESCREEN"` |
 | `ILLUSTRATOR` | `"ILLUSTRATOR"` |

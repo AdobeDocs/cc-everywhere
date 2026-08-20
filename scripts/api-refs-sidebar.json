@@ -228,6 +228,20 @@
               }
             ],
             "path": "/v4/sdk/src/types/cc-everywhere-types/index.md"
+          },
+          {
+            "title": "adobe-alloy",
+            "pages": [
+              {
+                "title": "createInstance",
+                "path": "/v4/sdk/src/types/adobe-alloy/functions/create-instance.md"
+              },
+              {
+                "title": "AlloyInstance",
+                "path": "/v4/sdk/src/types/adobe-alloy/type-aliases/alloy-instance.md"
+              }
+            ],
+            "path": "/v4/sdk/src/types/adobe-alloy/index.md"
           }
         ],
         "path": "/v4/sdk/src/types/index.md"
@@ -594,6 +608,10 @@
                 "title": "interfaces",
                 "pages": [
                   {
+                    "title": "AuthOptionRefreshResponseMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/auth-option-refresh-response-message.md"
+                  },
+                  {
                     "title": "CancelMessage",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/cancel-message.md"
                   },
@@ -654,7 +672,7 @@
                     "path": "/v4/shared/src/messenger/message-types/interfaces/workflow-message.md"
                   }
                 ],
-                "path": "/v4/shared/src/messenger/message-types/interfaces/cancel-message.md"
+                "path": "/v4/shared/src/messenger/message-types/interfaces/auth-option-refresh-response-message.md"
               },
               {
                 "title": "type-aliases",
@@ -710,6 +728,10 @@
                   {
                     "title": "DocumentSavedEventData",
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/document-saved-event-data.md"
+                  },
+                  {
+                    "title": "DocumentUpdatedEventData",
+                    "path": "/v4/shared/src/messenger/message-data-types/interfaces/document-updated-event-data.md"
                   },
                   {
                     "title": "DownloadCompleteEventData",
@@ -808,18 +830,12 @@
                 "title": "HostInfo.types",
                 "pages": [
                   {
-                    "title": "type-aliases",
-                    "pages": [
-                      {
-                        "title": "ConfigParams",
-                        "path": "/v4/shared/src/types/3p/host-info-types/type-aliases/config-params.md"
-                      },
-                      {
-                        "title": "HostInfo",
-                        "path": "/v4/shared/src/types/3p/host-info-types/type-aliases/host-info.md"
-                      }
-                    ],
-                    "path": "/v4/shared/src/types/3p/host-info-types/type-aliases/config-params.md"
+                    "title": "ConfigParams",
+                    "path": "/v4/shared/src/types/3p/host-info-types/interfaces/config-params.md"
+                  },
+                  {
+                    "title": "HostInfo",
+                    "path": "/v4/shared/src/types/3p/host-info-types/type-aliases/host-info.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/3p/host-info-types/index.md"
@@ -1198,12 +1214,20 @@
                     "path": "/v4/shared/src/types/authentication-types/interfaces/delayed-auth-option.md"
                   },
                   {
+                    "title": "GuestAssertionConfig",
+                    "path": "/v4/shared/src/types/authentication-types/interfaces/guest-assertion-config.md"
+                  },
+                  {
                     "title": "IMSAuthConfig",
                     "path": "/v4/shared/src/types/authentication-types/interfaces/ims-auth-config.md"
                   },
                   {
                     "title": "ImsJumpAuthOption",
                     "path": "/v4/shared/src/types/authentication-types/interfaces/ims-jump-auth-option.md"
+                  },
+                  {
+                    "title": "PartnerAssertionAuthOption",
+                    "path": "/v4/shared/src/types/authentication-types/interfaces/partner-assertion-auth-option.md"
                   },
                   {
                     "title": "PreSignedInAuthConfig",
@@ -1214,8 +1238,16 @@
                     "path": "/v4/shared/src/types/authentication-types/interfaces/pre-signed-in-auth-option.md"
                   },
                   {
+                    "title": "TransitionAssertionConfig",
+                    "path": "/v4/shared/src/types/authentication-types/interfaces/transition-assertion-config.md"
+                  },
+                  {
                     "title": "UpfrontAuthOption",
                     "path": "/v4/shared/src/types/authentication-types/interfaces/upfront-auth-option.md"
+                  },
+                  {
+                    "title": "UserAssertionConfig",
+                    "path": "/v4/shared/src/types/authentication-types/interfaces/user-assertion-config.md"
                   },
                   {
                     "title": "UserInfo",
@@ -1225,7 +1257,17 @@
                 "path": "/v4/shared/src/types/authentication-types/interfaces/auth-config.md"
               },
               {
-                "title": "AuthOption",
+                "title": "type-aliases",
+                "pages": [
+                  {
+                    "title": "AuthOption",
+                    "path": "/v4/shared/src/types/authentication-types/type-aliases/auth-option.md"
+                  },
+                  {
+                    "title": "PartnerAssertionAuthConfig",
+                    "path": "/v4/shared/src/types/authentication-types/type-aliases/partner-assertion-auth-config.md"
+                  }
+                ],
                 "path": "/v4/shared/src/types/authentication-types/type-aliases/auth-option.md"
               },
               {
@@ -1534,6 +1576,10 @@
                 "title": "interfaces",
                 "pages": [
                   {
+                    "title": "AssetPreviewConfig",
+                    "path": "/v4/shared/src/types/export-config-types/interfaces/asset-preview-config.md"
+                  },
+                  {
                     "title": "BaseAction",
                     "path": "/v4/shared/src/types/export-config-types/interfaces/base-action.md"
                   },
@@ -1618,7 +1664,7 @@
                     "path": "/v4/shared/src/types/export-config-types/interfaces/style.md"
                   }
                 ],
-                "path": "/v4/shared/src/types/export-config-types/interfaces/base-action.md"
+                "path": "/v4/shared/src/types/export-config-types/interfaces/asset-preview-config.md"
               },
               {
                 "title": "type-aliases",

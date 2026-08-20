@@ -31,6 +31,7 @@ hideEditInGitHub: true
 | `SET_TOU_STATE` | `"SET_TOU_STATE"` | - |
 | `CLEAR_TOU_STATE` | `"CLEAR_TOU_STATE"` | - |
 | `CLIENT_AUTH_DETAILS_REQUEST` | `"CLIENT_AUTH_DETAILS_REQUEST"` | - |
+| `AUTH_OPTION_REFRESH_REQUEST` | `"AUTH_OPTION_REFRESH_REQUEST"` | - |
 | `DOCUMENT_ACCESS_DENIED` | `"DOCUMENT_ACCESS_DENIED"` | - |
 | `CUSTOM_EVENT` | `"CUSTOM_EVENT"` | - |
 | `CALLBACK_REQUEST` | `"CALLBACK_REQUEST"` | - |
@@ -38,3 +39,4 @@ hideEditInGitHub: true
 | `MOBILE_TOOLBAR_OPTION_SELECTED` | `"MOBILE_TOOLBAR_OPTION_SELECTED"` | - |
 | `CONTEXTUAL_RECOMMENDATIONS` | `"CONTEXTUAL_RECOMMENDATIONS"` | - |
 | `DOCUMENT_SAVED` | `"DOCUMENT_SAVED"` | Fired by the editor whenever the document has been successfully autosaved to the server. |
+| `DOCUMENT_UPDATED` | `"DOCUMENT_UPDATED"` | Fired by the editor whenever the active document's id changes. |

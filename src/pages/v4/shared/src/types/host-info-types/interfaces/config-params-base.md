@@ -10,6 +10,10 @@ hideEditInGitHub: true
 
 Params to configure the application.
 
+## Extended by
+
+- [`ConfigParams`](../../3p/host-info-types/interfaces/config-params.md)
+
 ## Properties
 
 | Property                   | Type                                            | Description                                                         |

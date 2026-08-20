@@ -22,3 +22,4 @@ Asset related information received with onPublish callback.
 | `asset` | [`OutputAsset`](../../asset-types/interfaces/output-asset.md)[] | Asset which is exported |
 | `exportButtonId` | `string` | id of the export option clicked |
 | `documentId?` | `string` | Unique identifier for the assets created/edited. |
+| `assetPreview?` | [`OutputAsset`](../../asset-types/interfaces/output-asset.md)[] | Additional preview assets generated during export, alongside the primary export, if requested via PublishAction.previewConfig. |

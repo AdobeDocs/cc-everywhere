@@ -25,6 +25,7 @@ hideEditInGitHub: true
 | `CLOSE_STATUS` | [`CloseStatusMessage`](close-status-message.md) |
 | `PROMPT_SAFETY_CHECK_RESPONSE` | [`PromptSafetyCheckResponse`](../../../types/module/app-config-types/interfaces/prompt-safety-check-response.md) |
 | `CLIENT_AUTH_DETAILS` | [`ClientAuthDetailsMessage`](client-auth-details-message.md) |
+| `AUTH_OPTION_REFRESH_RESPONSE` | [`AuthOptionRefreshResponseMessage`](auth-option-refresh-response-message.md) |
 | `SWITCH_EMBED_ACTION` | [`SwitchEmbedActionMessage`](switch-embed-action-message.md) |
 | `TARGET_LOAD` | [`TargetLoadMessage`](target-load-message.md) |
 | `PRIVACY_IFRAME_STORAGE` | [`PrivacyIframeStorageMessageResponse`](privacy-iframe-storage-message-response.md) |

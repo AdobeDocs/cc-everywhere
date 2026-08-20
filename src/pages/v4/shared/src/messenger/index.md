@@ -160,6 +160,12 @@ Re-exports [ClientAuthDetailsMessage](message-types/interfaces/client-auth-detai
 
 <HorizontalLine />
 
+### AuthOptionRefreshResponseMessage
+
+Re-exports [AuthOptionRefreshResponseMessage](message-types/interfaces/auth-option-refresh-response-message.md)
+
+<HorizontalLine />
+
 ### SwitchEmbedActionMessage
 
 Re-exports [SwitchEmbedActionMessage](message-types/interfaces/switch-embed-action-message.md)
@@ -247,6 +253,12 @@ Re-exports [CallbackRequestEventData](message-data-types/interfaces/callback-req
 ### DocumentSavedEventData
 
 Re-exports [DocumentSavedEventData](message-data-types/interfaces/document-saved-event-data.md)
+
+<HorizontalLine />
+
+### DocumentUpdatedEventData
+
+Re-exports [DocumentUpdatedEventData](message-data-types/interfaces/document-updated-event-data.md)
 
 <HorizontalLine />
 

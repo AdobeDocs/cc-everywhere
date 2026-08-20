@@ -37,7 +37,7 @@ new CCEverywhere(
 | ------ | ------ |
 | `validator` | `Validator` |
 | `hostInfo` | [`HostInfoSpecifiedBase`](../../../../../shared/src/types/host-info-types/interfaces/host-info-specified-base.md) |
-| `configParams` | [`ConfigParamsBase`](../../../../../shared/src/types/host-info-types/interfaces/config-params-base.md) |
+| `configParams` | [`ConfigParams`](../../../../../shared/src/types/3p/host-info-types/interfaces/config-params.md) |
 | `authProvider` | `AuthProvider` |
 | `clientAuthProvider` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) |
 
