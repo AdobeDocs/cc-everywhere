@@ -13,6 +13,7 @@ This should be extended by all the workflow contexts like EditorContext, GenStud
 
 ## Extended by
 
+- [`DesignViewerContext`](../../3p/design-viewer-context/classes/design-viewer-context.md)
 - [`EditorContext`](../../3p/editor-context/classes/editor-context.md)
 - [`RequestResponseWorkflowContext`](../../request-response-workflow-context/classes/request-response-workflow-context.md)
 

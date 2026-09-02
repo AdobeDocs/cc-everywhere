@@ -23,6 +23,7 @@ hideEditInGitHub: true
 - [`CallbackRequestEventData`](callback-request-event-data.md)
 - [`DocumentSavedEventData`](document-saved-event-data.md)
 - [`DocumentUpdatedEventData`](document-updated-event-data.md)
+- [`DocumentSaveInitiatedEventData`](document-save-initiated-event-data.md)
 
 ## Properties
 

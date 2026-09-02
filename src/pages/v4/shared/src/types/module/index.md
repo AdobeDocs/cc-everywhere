@@ -46,6 +46,12 @@ Re-exports [ExperienceVariant](app-config-types/enumerations/experience-variant.
 
 <HorizontalLine />
 
+### PdfPrintCmykColorProfile
+
+Re-exports [PdfPrintCmykColorProfile](app-config-types/enumerations/pdf-print-cmyk-color-profile.md)
+
+<HorizontalLine />
+
 ### StartFromContentAppVersion
 
 Re-exports [StartFromContentAppVersion](app-config-types/enumerations/start-from-content-app-version.md)
@@ -151,6 +157,24 @@ Re-exports [TemplateBrowserConfig](app-config-types/interfaces/template-browser-
 ### FDEBaseAppConfig
 
 Re-exports [FDEBaseAppConfig](app-config-types/interfaces/fde-base-app-config.md)
+
+<HorizontalLine />
+
+### PdfPrintColorMode
+
+Re-exports [PdfPrintColorMode](app-config-types/enumerations/pdf-print-color-mode.md)
+
+<HorizontalLine />
+
+### PdfPrintConfig
+
+Re-exports [PdfPrintConfig](app-config-types/interfaces/pdf-print-config.md)
+
+<HorizontalLine />
+
+### EditorGuideConfig
+
+Re-exports [EditorGuideConfig](app-config-types/interfaces/editor-guide-config.md)
 
 <HorizontalLine />
 

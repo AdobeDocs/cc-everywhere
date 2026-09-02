@@ -46,14 +46,34 @@
         "title": "context",
         "pages": [
           {
-            "title": "EditorContext",
+            "title": "3p",
             "pages": [
               {
+                "title": "DesignViewerContext",
+                "pages": [
+                  {
+                    "title": "DesignViewerContext",
+                    "path": "/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context.md"
+                  },
+                  {
+                    "title": "IDesignViewerContext",
+                    "path": "/v4/sdk/src/context/3p/design-viewer-context/interfaces/i-design-viewer-context.md"
+                  }
+                ],
+                "path": "/v4/sdk/src/context/3p/design-viewer-context/index.md"
+              },
+              {
                 "title": "EditorContext",
-                "path": "/v4/sdk/src/context/3p/editor-context/classes/editor-context.md"
+                "pages": [
+                  {
+                    "title": "EditorContext",
+                    "path": "/v4/sdk/src/context/3p/editor-context/classes/editor-context.md"
+                  }
+                ],
+                "path": "/v4/sdk/src/context/3p/editor-context/index.md"
               }
             ],
-            "path": "/v4/sdk/src/context/3p/editor-context/index.md"
+            "path": "/v4/sdk/src/context/3p/design-viewer-context/index.md"
           },
           {
             "title": "RequestResponseWorkflowContext",
@@ -76,7 +96,7 @@
             "path": "/v4/sdk/src/context/workflow-context/index.md"
           }
         ],
-        "path": "/v4/sdk/src/context/3p/editor-context/index.md"
+        "path": "/v4/sdk/src/context/3p/design-viewer-context/index.md"
       },
       {
         "title": "error",
@@ -578,6 +598,10 @@
                     "path": "/v4/shared/src/messenger/message-types/enumerations/close-status.md"
                   },
                   {
+                    "title": "CtaLocation",
+                    "path": "/v4/shared/src/messenger/message-types/enumerations/cta-location.md"
+                  },
+                  {
                     "title": "CustomMessageAction",
                     "path": "/v4/shared/src/messenger/message-types/enumerations/custom-message-action.md"
                   },
@@ -610,6 +634,10 @@
                   {
                     "title": "AuthOptionRefreshResponseMessage",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/auth-option-refresh-response-message.md"
+                  },
+                  {
+                    "title": "CancelCTA",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/cancel-cta.md"
                   },
                   {
                     "title": "CancelMessage",
@@ -662,6 +690,10 @@
                   {
                     "title": "TokenResponseMessage",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/token-response-message.md"
+                  },
+                  {
+                    "title": "UpdateDocumentIdMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/update-document-id-message.md"
                   },
                   {
                     "title": "WillPublishMessage",
@@ -724,6 +756,10 @@
                   {
                     "title": "CustomHostEventData",
                     "path": "/v4/shared/src/messenger/message-data-types/interfaces/custom-host-event-data.md"
+                  },
+                  {
+                    "title": "DocumentSaveInitiatedEventData",
+                    "path": "/v4/shared/src/messenger/message-data-types/interfaces/document-save-initiated-event-data.md"
                   },
                   {
                     "title": "DocumentSavedEventData",
@@ -2171,6 +2207,14 @@
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/generate-image-initial-view.md"
                       },
                       {
+                        "title": "PdfPrintCmykColorProfile",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/pdf-print-cmyk-color-profile.md"
+                      },
+                      {
+                        "title": "PdfPrintColorMode",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/pdf-print-color-mode.md"
+                      },
+                      {
                         "title": "PromptSafetyCategory",
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/prompt-safety-category.md"
                       },
@@ -2237,6 +2281,10 @@
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md"
                       },
                       {
+                        "title": "EditorGuideConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config.md"
+                      },
+                      {
                         "title": "FDEBaseAppConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/fde-base-app-config.md"
                       },
@@ -2255,6 +2303,10 @@
                       {
                         "title": "ModelConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/model-config.md"
+                      },
+                      {
+                        "title": "PdfPrintConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config.md"
                       },
                       {
                         "title": "PreviewModeConfig",

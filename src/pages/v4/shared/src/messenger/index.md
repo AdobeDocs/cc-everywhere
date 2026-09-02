@@ -34,6 +34,18 @@ Re-exports [CancelReason](message-types/enumerations/cancel-reason.md)
 
 <HorizontalLine />
 
+### CtaLocation
+
+Re-exports [CtaLocation](message-types/enumerations/cta-location.md)
+
+<HorizontalLine />
+
+### CancelCTA
+
+Re-exports [CancelCTA](message-types/interfaces/cancel-cta.md)
+
+<HorizontalLine />
+
 ### WorkflowLoadCompleted
 
 Re-exports [WorkflowLoadCompleted](message-types/enumerations/workflow-load-completed.md)
@@ -184,6 +196,12 @@ Re-exports [PrivacyIframeStorageMessageResponse](message-types/interfaces/privac
 
 <HorizontalLine />
 
+### UpdateDocumentIdMessage
+
+Re-exports [UpdateDocumentIdMessage](message-types/interfaces/update-document-id-message.md)
+
+<HorizontalLine />
+
 ### PRIVACY\_IFRAME\_STORAGE\_MESSAGE\_TYPE
 
 Re-exports [PRIVACY_IFRAME_STORAGE_MESSAGE_TYPE](message-types/variables/privacy-iframe-storage-message-type.md)
@@ -259,6 +277,12 @@ Re-exports [DocumentSavedEventData](message-data-types/interfaces/document-saved
 ### DocumentUpdatedEventData
 
 Re-exports [DocumentUpdatedEventData](message-data-types/interfaces/document-updated-event-data.md)
+
+<HorizontalLine />
+
+### DocumentSaveInitiatedEventData
+
+Re-exports [DocumentSaveInitiatedEventData](message-data-types/interfaces/document-save-initiated-event-data.md)
 
 <HorizontalLine />
 
