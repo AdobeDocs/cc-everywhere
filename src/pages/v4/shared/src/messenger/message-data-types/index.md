@@ -29,3 +29,4 @@ hideEditInGitHub: true
 | [CallbackRequestEventData](interfaces/callback-request-event-data.md) | - |
 | [DocumentSavedEventData](interfaces/document-saved-event-data.md) | - |
 | [DocumentUpdatedEventData](interfaces/document-updated-event-data.md) | - |
+| [DocumentSaveInitiatedEventData](interfaces/document-save-initiated-event-data.md) | - |

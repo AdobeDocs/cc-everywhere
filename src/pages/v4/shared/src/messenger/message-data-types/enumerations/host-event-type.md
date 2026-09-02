@@ -40,3 +40,4 @@ hideEditInGitHub: true
 | `CONTEXTUAL_RECOMMENDATIONS` | `"CONTEXTUAL_RECOMMENDATIONS"` | - |
 | `DOCUMENT_SAVED` | `"DOCUMENT_SAVED"` | Fired by the editor whenever the document has been successfully autosaved to the server. |
 | `DOCUMENT_UPDATED` | `"DOCUMENT_UPDATED"` | Fired by the editor whenever the active document's id changes. |
+| `DOCUMENT_SAVE_INITIATED` | `"DOCUMENT_SAVE_INITIATED"` | Fired as soon as a local edit is detected, before it's confirmed saved. Hosts should wait for a subsequent DOCUMENT_SAVED/DOCUMENT_UPDATED before closing rather than closing immediately. |

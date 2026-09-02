@@ -29,3 +29,5 @@ hideEditInGitHub: true
 | `SWITCH_EMBED_ACTION` | [`SwitchEmbedActionMessage`](switch-embed-action-message.md) |
 | `TARGET_LOAD` | [`TargetLoadMessage`](target-load-message.md) |
 | `PRIVACY_IFRAME_STORAGE` | [`PrivacyIframeStorageMessageResponse`](privacy-iframe-storage-message-response.md) |
+| `INVOKE_CLOSE` | [`CancelCTA`](cancel-cta.md) \| `undefined` |
+| `UPDATE_DOCUMENT_ID` | [`UpdateDocumentIdMessage`](update-document-id-message.md) |

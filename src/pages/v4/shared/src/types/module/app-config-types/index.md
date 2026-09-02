@@ -17,11 +17,13 @@ hideEditInGitHub: true
 | [EditImageAppVersion](enumerations/edit-image-app-version.md) | - |
 | [FDEAppVersion](enumerations/fde-app-version.md) | FDE experience version shared by [FDECreateDesignAppConfig](interfaces/fde-create-design-app-config.md) and [FDEEditDesignAppConfig](interfaces/fde-edit-design-app-config.md). |
 | [ExperienceVariant](enumerations/experience-variant.md) | Specifies the experience variant to use when launching the module. |
+| [PdfPrintCmykColorProfile](enumerations/pdf-print-cmyk-color-profile.md) | CMYK ICC color profile used for print PDF export. |
 | [StartFromContentAppVersion](enumerations/start-from-content-app-version.md) | - |
 | [ThumbnailOption](enumerations/thumbnail-option.md) | - |
 | [TextToImageFeature](enumerations/text-to-image-feature.md) | - |
 | [PromptSafetyCategory](enumerations/prompt-safety-category.md) | Categories for prompt safety assessment. This enum can be extended as new safety categories are identified. |
 | [BrowseTemplateType](enumerations/browse-template-type.md) | Template task ids supported for browse gallery filtering (kebab-case). Values align with Inspire `pages.task.name` / Express task ids where applicable. |
+| [PdfPrintColorMode](enumerations/pdf-print-color-mode.md) | Color mode for PDF print export. |
 
 ## Interfaces
 
@@ -41,6 +43,8 @@ hideEditInGitHub: true
 | [TemplateFilters](interfaces/template-filters.md) | - |
 | [TemplateBrowserConfig](interfaces/template-browser-config.md) | Chrome fields shared by template browse surfaces (`createDesign`, `startFromContent`). Does not include `contentBrowseConfig` — each surface types that property independently (FDE browse-only; SFC browse-or-preview union). |
 | [FDEBaseAppConfig](interfaces/fde-base-app-config.md) | FDE session fields shared by createDesign and editDesign (FDE path). Lives in the shared module package (not 1P-only). |
+| [PdfPrintConfig](interfaces/pdf-print-config.md) | Settings applied to the print-ready PDF export in the Focused Design Editor. Only takes effect when a Publish action's [PublishAction.publishSubFileType](../../export-config-types/interfaces/publish-action.md#publishsubfiletype) is [SubFileType.pdfPrint](../../asset-types/enumerations/sub-file-type.md#pdfprint) — if it is [SubFileType.pdf](../../asset-types/enumerations/sub-file-type.md#pdf) (or unset), these settings are ignored and the export stays plain PDF. |
+| [EditorGuideConfig](interfaces/editor-guide-config.md) | Settings controlling the guides displayed in the editor canvas. |
 | [FDEEditDesignAppConfig](interfaces/fde-edit-design-app-config.md) | App config for editDesign (FDE MXP editor entry). |
 | [FDECreateDesignAppConfig](interfaces/fde-create-design-app-config.md) | App config for createDesign (FDE MXP — template browser entry). `contentBrowseConfig` is browse-only (no preview mode on the FDE template browser). |
 | [StartFromContentAppConfig](interfaces/start-from-content-app-config.md) | StartFromContentAppConfig is the app config for the Start From Content module. |

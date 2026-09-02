@@ -6,11 +6,10 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Interface: CancelMessage
+# Interface: CancelCTA
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `reason` | [`CancelReason`](../enumerations/cancel-reason.md) |
-| `cancelCTA?` | [`CancelCTA`](cancel-cta.md) |
+| `location` | [`CtaLocation`](../enumerations/cta-location.md) |

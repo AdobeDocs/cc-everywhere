@@ -6,11 +6,10 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Interface: CancelMessage
+# Interface: UpdateDocumentIdMessage
 
 ## Properties
 
 | Property | Type |
 | ------ | ------ |
-| `reason` | [`CancelReason`](../enumerations/cancel-reason.md) |
-| `cancelCTA?` | [`CancelCTA`](cancel-cta.md) |
+| `documentId` | `string` |

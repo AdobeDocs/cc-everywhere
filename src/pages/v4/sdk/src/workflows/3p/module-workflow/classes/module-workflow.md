@@ -199,7 +199,7 @@ viewDesign(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+containerConfig?): Promise<IDesignViewerContext>;
 ```
 
 Launches the design viewer for a personalized design.
@@ -215,7 +215,9 @@ Launches the design viewer for a personalized design.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`IDesignViewerContext`](../../../../context/3p/design-viewer-context/interfaces/i-design-viewer-context.md)&gt;
+
+Promise that resolves with the DesignViewerContext when the workflow is loaded. Use it to push a new docConfig to the open viewer.
 
 #### Implementation of
 

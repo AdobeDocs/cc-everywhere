@@ -34,3 +34,4 @@ Extends base config with browse-specific properties like search and filters.
 | `shortcutPillTerms?` | `string`[] | Property to set the shortcut search terms. These terms will be displayed as a list of suggestions below the search bar. **Default** `empty array` | - |
 | `templateFilters?` | [`TemplateFilters`](template-filters.md) | Optional. Restricts the template gallery to the host product context. | - |
 | `showCreateNew?` | `boolean` | When `true`, keep the template gallery and add a create-from-scratch control that opens the editor with a blank canvas using the same context as `templateFilters`. | - |
+| `hideMoreLikeThis?` | `boolean` | Property to hide the "More like this" section in the template preview. When `true`, the "More like this" row will not be displayed. **Default** `false` | - |

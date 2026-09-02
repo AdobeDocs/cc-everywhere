@@ -16,6 +16,7 @@ hideEditInGitHub: true
 | [PublishCallbackStatus](enumerations/publish-callback-status.md) | - |
 | [LoadStatus](enumerations/load-status.md) | - |
 | [CancelReason](enumerations/cancel-reason.md) | - |
+| [CtaLocation](enumerations/cta-location.md) | - |
 | [WorkflowLoadCompleted](enumerations/workflow-load-completed.md) | - |
 | [MessageType](enumerations/message-type.md) | - |
 | [CloseStatus](enumerations/close-status.md) | - |
@@ -25,6 +26,7 @@ hideEditInGitHub: true
 
 | Interface | Description |
 | ------ | ------ |
+| [CancelCTA](interfaces/cancel-cta.md) | - |
 | [MessageDataMap](interfaces/message-data-map.md) | - |
 | [WillPublishMessage](interfaces/will-publish-message.md) | Optional payload for WILL_PUBLISH when sent via [MessageCompat](type-aliases/message-compat.md) (e.g. agent includes `exportButtonId`). Default WILL_PUBLISH on the wire remains type-only, same as historically. |
 | [CancelMessage](interfaces/cancel-message.md) | - |
@@ -41,6 +43,7 @@ hideEditInGitHub: true
 | [SwitchEmbedActionMessage](interfaces/switch-embed-action-message.md) | - |
 | [TargetLoadMessage](interfaces/target-load-message.md) | - |
 | [PrivacyIframeStorageMessageResponse](interfaces/privacy-iframe-storage-message-response.md) | - |
+| [UpdateDocumentIdMessage](interfaces/update-document-id-message.md) | - |
 
 ## Type Aliases
 
