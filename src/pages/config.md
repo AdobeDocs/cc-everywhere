@@ -34,6 +34,7 @@
             - [In the Browser](/guides/concepts/mobile-web-support-browser.md)
             - [In a WebView](/guides/concepts/mobile-web-support-webview.md)
         - [Editor Customization](/guides/concepts/appconfig.md)
+        - [Analytics](/guides/concepts/host-app-trigger.md)
         - [V3 to V4 Migration guide](/guides/concepts/migration-v3-v4.md)
         - [Error handling](/guides/concepts/error-handling.md)
     - [Tutorials](/guides/tutorials/index.md)
