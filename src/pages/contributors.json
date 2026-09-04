@@ -1,16 +1,17 @@
 {
-  "total": 562,
+  "total": 563,
   "offset": 0,
-  "limit": 562,
+  "limit": 563,
   "data": [
     {
       "page": "/config",
       "avatars": [
+        "https://avatars.githubusercontent.com/u/270928274?v=4",
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "9/2/2026"
+      "lastUpdated": "9/4/2026"
     },
     {
       "page": "/guides/",
@@ -76,6 +77,13 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
       "lastUpdated": "12/10/2025"
+    },
+    {
+      "page": "/guides/concepts/host-app-trigger",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/270928274?v=4"
+      ],
+      "lastUpdated": "9/4/2026"
     },
     {
       "page": "/guides/concepts/migration-v3-v4",
