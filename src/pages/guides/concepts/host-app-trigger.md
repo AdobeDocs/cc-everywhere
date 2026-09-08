@@ -13,9 +13,11 @@ contributors:
 
 # Analytics
 
-Use `hostAppTrigger` to identify the action in your application that launched an Adobe Express Embed SDK workflow. This gives Adobe consistent launch attribution and gives your team a clear mapping between host-app entry points and Adobe Express workflows when reviewing your own analytics. Add it to `appConfig.analyticsData` before calling the workflow method.
+Use `hostAppTrigger` to identify the action in your application that launched an Adobe Express Embed SDK workflow. This gives Adobe consistent launch attribution and gives your team a clear mapping between your app's entry points and Adobe Express workflows when reviewing analytics.
 
 ## Add `hostAppTrigger` to your integration
+
+Add it to `appConfig.analyticsData` before calling the workflow method.
 
 ### 1. Choose an example trigger value
 
