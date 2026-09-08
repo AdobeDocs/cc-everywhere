@@ -13,29 +13,31 @@ contributors:
 
 # Analytics
 
-Use `hostAppTrigger` to identify the action in your application that launched an Adobe Express Embed SDK workflow. Add it to `appConfig.analyticsData` before calling the workflow method.
-
-<InlineAlert variant="info" slots="header, text1" />
-
-#### Launch metadata, not an analytics callback
-
-`hostAppTrigger` sends launch context into the Embed SDK. It does not report user activity back to your application or replace your own analytics events or the SDK's [callbacks](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md).
-
-Use Adobe Express Embed SDK v4.26.5 or later.
+Use `hostAppTrigger` to identify the action in your application that launched an Adobe Express Embed SDK workflow. This gives Adobe consistent launch attribution and gives your team a clear mapping between host-app entry points and Adobe Express workflows when reviewing your own analytics. Add it to `appConfig.analyticsData` before calling the workflow method.
 
 ## Add `hostAppTrigger` to your integration
 
-### 1. Choose a trigger value
+### 1. Choose an example trigger value
 
-Use the value that matches the action in your application:
+The table shows example host-app actions and their corresponding values. Use the value that matches the action in your application:
 
-| Host-app action | `hostAppTrigger` value |
+| Example host-app action | `hostAppTrigger` value |
 | --- | --- |
 | Add or create an image | `"add-image"` |
 | Replace or edit an existing image | `"replace-image"` |
 | Launch a workflow from selected text | `"text-selected"` |
 
 These values are defined in the [`HostAppTrigger`](../../v4/shared/src/types/app-config-types/enumerations/host-app-trigger.md) enumeration.
+
+#### Examples
+
+The **Create with Adobe Express** action below is an example of an `"add-image"` entry point:
+
+![Create with Adobe Express action for adding an image](./img/generate-image--demo-app.png)
+
+The **Edit Image** action below is an example of a `"replace-image"` entry point:
+
+![Edit Image action for replacing or editing an image](./img/editimage_demo-app.png)
 
 ### 2. Add the value to `appConfig` and launch the workflow
 
@@ -60,11 +62,9 @@ module.createDesign(appConfig, exportConfig, containerConfig);
 
 Use the same structure with other workflows and select the appropriate value from the table above.
 
-### Full Editor and TypeScript
+### TypeScript
 
-Full Editor workflows use the same `appConfig` structure with `editor.create()` and `editor.edit()`.
-
-When using Full Editor with TypeScript, typecast `appConfig` because `analyticsData` is not yet included in the Full Editor type definition. JavaScript integrations can omit the cast.
+If TypeScript reports that `analyticsData` is not part of an `appConfig` type, typecast `appConfig`. JavaScript integrations do not need the cast.
 
 ```typescript
 const appConfig = {
@@ -72,19 +72,7 @@ const appConfig = {
     hostAppTrigger: "add-image",
   },
 } as any;
-
-editor.create(docConfig, appConfig, exportConfig, containerConfig);
 ```
-
-Use `"replace-image"` when launching `editor.edit()` for an existing design.
-
-### 3. Verify the value
-
-Test each entry point in your application:
-
-1. Set a breakpoint immediately before the SDK workflow call.
-2. Inspect `appConfig.analyticsData.hostAppTrigger`.
-3. Confirm the value matches the action that launched the workflow.
 
 ## Troubleshooting
 
@@ -92,7 +80,7 @@ Test each entry point in your application:
 | --- | --- |
 | The trigger value is missing | Verify the nesting is `appConfig.analyticsData.hostAppTrigger`. |
 | The wrong action is attributed | Confirm the value matches the table above for that entry point. |
-| TypeScript rejects Full Editor `analyticsData` | Typecast the Full Editor `appConfig` as shown above. |
+| TypeScript rejects `analyticsData` | Typecast `appConfig` as shown above. |
 
 ## Related resources
 
