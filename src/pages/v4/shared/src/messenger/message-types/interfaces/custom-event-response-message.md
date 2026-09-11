@@ -19,5 +19,5 @@ hideEditInGitHub: true
 | Property | Type |
 | ------ | ------ |
 | `data` | `object` |
-| `data.type` | [`CUSTOM_EVENT`](../../message-data-types/enumerations/host-event-type.md#custom_event) |
+| `data.type` | [`CUSTOM_EVENT`](../../message-data-types/enumerations/host-event-type.md#enumeration-member-custom_event) |
 | `data.data` | [`CustomEventResponsePayload`](custom-event-response-payload.md)&lt;`T`&gt; |

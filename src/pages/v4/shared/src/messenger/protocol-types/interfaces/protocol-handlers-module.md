@@ -16,7 +16,8 @@ hideEditInGitHub: true
 handleMessage(
    message, 
    sourceVersion, 
-   targetVersion): unknown;
+   targetVersion
+): unknown;
 ```
 
 #### Parameters

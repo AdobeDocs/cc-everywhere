@@ -23,4 +23,4 @@ Style for a link-style export option (no button chrome).
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `uiType` | [`LINK`](../enumerations/export-option-ui.md#link) | [`Style`](style.md).[`uiType`](style.md#uitype) |
+| `uiType` | [`LINK`](../enumerations/export-option-ui.md#enumeration-member-link) | [`Style`](style.md).[`uiType`](style.md#property-uitype) |

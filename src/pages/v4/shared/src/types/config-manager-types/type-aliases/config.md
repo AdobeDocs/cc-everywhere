@@ -120,7 +120,9 @@ CLIENTS: object;
 | `CCX.FOCUSED_DESIGN_EDITOR.BASE` | `string` | - |
 | `CCX.FOCUSED_DESIGN_EDITOR.PATHS` | `object` | - |
 | `CCX.FOCUSED_DESIGN_EDITOR.PATHS.EDITOR` | `string` | - |
+| `CCX.FOCUSED_DESIGN_EDITOR.PATHS.IDLE` | `string` | - |
 | `CCX.FOCUSED_DESIGN_EDITOR.PATHS.TEMPLATES` | `string` | - |
+| `CCX.FOCUSED_DESIGN_EDITOR.PATHS.ASSET_MIGRATION` | `string` | - |
 | `CCX.FOCUSED_DESIGN_EDITOR.CLIENT_ID` | `string` | - |
 | `IMS` | `object` | - |
 | `IMS.BASE` | `string` | - |

@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: AlloyInstance()
+# Type Alias: AlloyInstance
 
 ```ts
 type AlloyInstance = (command, options?) => Promise<unknown>;

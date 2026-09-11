@@ -23,5 +23,5 @@ Auth option for IMS jump (e.g. SSO); requires access token and userId in config.
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`IMS_JUMP`](../enumerations/auth-mode.md#ims_jump) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`IMS_JUMP`](../enumerations/auth-mode.md#enumeration-member-ims_jump) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#property-mode) |
 | `config` | [`IMSAuthConfig`](ims-auth-config.md) | - |

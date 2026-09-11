@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: IntentChangeCallback()
+# Type Alias: IntentChangeCallback
 
 ```ts
 type IntentChangeCallback = (oldIntent, newIntent) => IntentChangeConfig | undefined;

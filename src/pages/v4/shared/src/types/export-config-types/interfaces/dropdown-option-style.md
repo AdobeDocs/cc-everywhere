@@ -28,6 +28,6 @@ Style for a dropdown export option, with optional icon and custom content.
 
 | Property | Type | Description | Overrides |
 | ------ | ------ | ------ | ------ |
-| `uiType` | [`DROPDOWN`](../enumerations/export-option-ui.md#dropdown) | The UI type for the dropdown option. | [`Style`](style.md).[`uiType`](style.md#uitype) |
+| `uiType` | [`DROPDOWN`](../enumerations/export-option-ui.md#enumeration-member-dropdown) | The UI type for the dropdown option. | [`Style`](style.md).[`uiType`](style.md#property-uitype) |
 | `icon?` | `string` | The optional icon URL for the dropdown option. | - |
 | `customContent?` | [`CustomContentConfig`](custom-content-config.md) | The optional custom content configuration for the dropdown option. | - |

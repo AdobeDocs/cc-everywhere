@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: Listener()
+# Type Alias: Listener
 
 ```ts
 type Listener = <T>(message) => void;

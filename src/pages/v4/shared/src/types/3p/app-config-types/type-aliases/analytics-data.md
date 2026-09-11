@@ -17,4 +17,4 @@ Analytics data type for 3P; aliases the base analytics data from shared AppConfi
 ## See
 
  - [BaseAnalyticsData](../../../app-config-types/interfaces/base-analytics-data.md) for the full definition
- - [AppConfig.analyticsData](../interfaces/app-config.md#analyticsdata) for usage in 3P app config
+ - [AppConfig.analyticsData](../interfaces/app-config.md#property-analyticsdata) for usage in 3P app config

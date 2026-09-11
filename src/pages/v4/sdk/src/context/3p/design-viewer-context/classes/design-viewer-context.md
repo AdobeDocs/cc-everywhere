@@ -44,24 +44,25 @@ new DesignViewerContext(context): DesignViewerContext;
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `context` | `public` | `ActionContext` | [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`context`](../../../workflow-context/classes/workflow-context.md#context) |
+| `context` | `public` | `ActionContext` | [`WorkflowContext`](../../../workflow-context/classes/workflow-context.md).[`context`](../../../workflow-context/classes/workflow-context.md#property-context) |
 
 ## Methods
 
-### updateDocConfig()
+### updateDesignAssets()
 
 ```ts
-updateDocConfig(docConfig): void;
+updateDesignAssets(assets): void;
 ```
 
-Pushes a new docConfig to an already-open viewer, re-rendering it with the new asset.
+Updates the design asset(s) rendered in an already-open design viewer, re-rendering it in place
+with the new [Asset](../../../../../../shared/src/types/asset-types/type-aliases/asset.md)(s).
 Fire-and-forget: the message is dispatched to the agent and this returns immediately.
 
 #### Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`DesignViewerDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md) | The new document configuration to render in the open viewer |
+| `assets` | [`Asset`](../../../../../../shared/src/types/asset-types/type-aliases/asset.md)[] | The new [Asset](../../../../../../shared/src/types/asset-types/type-aliases/asset.md) (or array of assets) to render in the open viewer |
 
 #### Returns
 
@@ -69,7 +70,7 @@ Fire-and-forget: the message is dispatched to the agent and this returns immedia
 
 #### Implementation of
 
-[`IDesignViewerContext`](../interfaces/i-design-viewer-context.md).[`updateDocConfig`](../interfaces/i-design-viewer-context.md#updatedocconfig)
+[`IDesignViewerContext`](../interfaces/i-design-viewer-context.md).[`updateDesignAssets`](../interfaces/i-design-viewer-context.md#updatedesignassets)
 
 <HorizontalLine />
 

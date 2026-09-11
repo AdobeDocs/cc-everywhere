@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: PublishCallback()
+# Type Alias: PublishCallback
 
 ```ts
 type PublishCallback = (intent, publishParams) => void | Promise<PublishStatus>;
