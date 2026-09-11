@@ -10,7 +10,7 @@ hideEditInGitHub: true
 
 V2 tabbed browser configuration for the Start From Content module.
 Controls which tabs appear, their order, and the Create button behavior.
-Only used when [StartFromContentAppConfig.appVersion](start-from-content-app-config.md#appversion) is `2`.
+Only used when [StartFromContentAppConfig.appVersion](start-from-content-app-config.md#property-appversion) is `2`.
 
 ## Properties
 

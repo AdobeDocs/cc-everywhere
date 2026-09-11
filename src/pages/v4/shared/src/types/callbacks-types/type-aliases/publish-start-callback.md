@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: PublishStartCallback()
+# Type Alias: PublishStartCallback
 
 ```ts
 type PublishStartCallback = (exportButtonId?) => void;

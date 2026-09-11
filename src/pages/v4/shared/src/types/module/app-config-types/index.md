@@ -39,11 +39,11 @@ hideEditInGitHub: true
 | [PromptSafetyCheckResponse](interfaces/prompt-safety-check-response.md) | Represents the safety status of a prompt |
 | [TextToImageAppConfig](interfaces/text-to-image-app-config.md) | - |
 | [CreateConfig](interfaces/create-config.md) | Configuration for the Create button in the Your Stuff tab. |
-| [TemplatesHomeConfig](interfaces/templates-home-config.md) | V2 tabbed browser configuration for the Start From Content module. Controls which tabs appear, their order, and the Create button behavior. Only used when [StartFromContentAppConfig.appVersion](interfaces/start-from-content-app-config.md#appversion) is `2`. |
+| [TemplatesHomeConfig](interfaces/templates-home-config.md) | V2 tabbed browser configuration for the Start From Content module. Controls which tabs appear, their order, and the Create button behavior. Only used when [StartFromContentAppConfig.appVersion](interfaces/start-from-content-app-config.md#property-appversion) is `2`. |
 | [TemplateFilters](interfaces/template-filters.md) | - |
 | [TemplateBrowserConfig](interfaces/template-browser-config.md) | Chrome fields shared by template browse surfaces (`createDesign`, `startFromContent`). Does not include `contentBrowseConfig` — each surface types that property independently (FDE browse-only; SFC browse-or-preview union). |
 | [FDEBaseAppConfig](interfaces/fde-base-app-config.md) | FDE session fields shared by createDesign and editDesign (FDE path). Lives in the shared module package (not 1P-only). |
-| [PdfPrintConfig](interfaces/pdf-print-config.md) | Settings applied to the print-ready PDF export in the Focused Design Editor. Only takes effect when a Publish action's [PublishAction.publishSubFileType](../../export-config-types/interfaces/publish-action.md#publishsubfiletype) is [SubFileType.pdfPrint](../../asset-types/enumerations/sub-file-type.md#pdfprint) — if it is [SubFileType.pdf](../../asset-types/enumerations/sub-file-type.md#pdf) (or unset), these settings are ignored and the export stays plain PDF. |
+| [PdfPrintConfig](interfaces/pdf-print-config.md) | Settings applied to the print-ready PDF export in the Focused Design Editor. Only takes effect when a Publish action's [PublishAction.publishSubFileType](../../export-config-types/interfaces/publish-action.md#property-publishsubfiletype) is [SubFileType.pdfPrint](../../asset-types/enumerations/sub-file-type.md#enumeration-member-pdfprint) — if it is [SubFileType.pdf](../../asset-types/enumerations/sub-file-type.md#enumeration-member-pdf) (or unset), these settings are ignored and the export stays plain PDF. |
 | [EditorGuideConfig](interfaces/editor-guide-config.md) | Settings controlling the guides displayed in the editor canvas. |
 | [FDEEditDesignAppConfig](interfaces/fde-edit-design-app-config.md) | App config for editDesign (FDE MXP editor entry). |
 | [FDECreateDesignAppConfig](interfaces/fde-create-design-app-config.md) | App config for createDesign (FDE MXP — template browser entry). `contentBrowseConfig` is browse-only (no preview mode on the FDE template browser). |
@@ -61,5 +61,5 @@ hideEditInGitHub: true
 
 | Type Alias | Description |
 | ------ | ------ |
-| [TemplatesHomeTab](type-aliases/templates-home-tab.md) | Identifies a tab in the Template Browser V2 experience. Array order in [TemplatesHomeConfig.tabs](interfaces/templates-home-config.md#tabs) determines display order. Omit a value to hide that tab. |
+| [TemplatesHomeTab](type-aliases/templates-home-tab.md) | Identifies a tab in the Template Browser V2 experience. Array order in [TemplatesHomeConfig.tabs](interfaces/templates-home-config.md#property-tabs) determines display order. Omit a value to hide that tab. |
 | [ContentBrowseConfig](type-aliases/content-browse-config.md) | Content browse configuration using discriminated union for type-safe launch modes. |

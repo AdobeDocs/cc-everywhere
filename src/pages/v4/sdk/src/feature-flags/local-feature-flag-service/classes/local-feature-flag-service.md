@@ -19,7 +19,7 @@ Service class for managing feature flags
 ### Constructor
 
 ```ts
-new LocalFeatureFlagService(_config): LocalFeatureFlagService;
+new LocalFeatureFlagService(_config?): LocalFeatureFlagService;
 ```
 
 #### Parameters
@@ -45,7 +45,8 @@ getFeatureFlagsParams(
    intent, 
    hostInfo, 
    appConfig?, 
-   featureFlagOverridesProvider?): URLSearchParams;
+   featureFlagOverridesProvider?
+): URLSearchParams;
 ```
 
 Generates URL-encoded feature flag parameters for a specific client and intent

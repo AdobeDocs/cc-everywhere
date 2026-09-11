@@ -20,6 +20,7 @@ hideEditInGitHub: true
 - [`AnnotateImageDesignConfig`](../../module/design-config-types/interfaces/annotate-image-design-config.md)
 - [`DesignViewerDesignConfig`](../../module/design-config-types/interfaces/design-viewer-design-config.md)
 - [`GenerateImageDesignConfig`](../../module/design-config-types/interfaces/generate-image-design-config.md)
+- [`MigrateAssetsDesignConfig`](../../module/migrate-assets-types/interfaces/migrate-assets-design-config.md)
 - [`BaseDesignConfig`](../../quick-action/design-config-types/interfaces/base-design-config.md)
 
 ## Properties

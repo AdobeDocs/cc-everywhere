@@ -26,7 +26,8 @@ Should be used instead of default Blob type.
 slice(
    start?, 
    end?, 
-   contentType?): Blob;
+   contentType?
+): Blob;
 ```
 
 #### Parameters

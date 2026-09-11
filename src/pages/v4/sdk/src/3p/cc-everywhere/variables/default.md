@@ -14,7 +14,7 @@ default: object;
 
 ## Type Declaration
 
-### initialize()
+### initialize
 
 ```ts
 initialize: (hostInfo, configParams?, authOption?, clientAuthProvider?, authProvider?) => Promise<CCEverywhere>;
@@ -27,8 +27,8 @@ Please ensure to call this API only once.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `hostInfo` | [`HostInfo`](../../../../../shared/src/types/host-info-types/type-aliases/host-info.md) |  |
-| `configParams?` | [`ConfigParams`](../../../../../shared/src/types/3p/host-info-types/interfaces/config-params.md) |  |
+| `hostInfo` | [`HostInfo`](../../../../../shared/src/types/host-info-types/type-aliases/host-info.md) | - |
+| `configParams?` | [`ConfigParams`](../../../../../shared/src/types/3p/host-info-types/interfaces/config-params.md) | - |
 | `authOption?` | [`AuthOption`](../../../../../shared/src/types/authentication-types/type-aliases/auth-option.md) | authentication configuration |
 | `clientAuthProvider?` | [`ClientAuthProvider`](../../../../../shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) | client authentication provider for fetching client authentication details. |
 | `authProvider?` | `AuthProvider` | authentication provider for managing authentication |
@@ -39,7 +39,7 @@ Please ensure to call this API only once.
 
 Promise with CCEverywhere object which can be used to call other APIs of SDK.
 
-### terminate()
+### terminate
 
 ```ts
 terminate: () => boolean;

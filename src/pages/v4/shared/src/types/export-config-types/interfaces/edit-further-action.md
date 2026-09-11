@@ -24,6 +24,6 @@ Action for continuing to edit content in another application (Express or Image m
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`EditFurtherTarget`](../enumerations/edit-further-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
+| `target` | [`EditFurtherTarget`](../enumerations/edit-further-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#property-target) |
 | `intent?` | [`EditFurtherIntent`](../enumerations/edit-further-intent.md) | - |
 | `context?` | [`ExportContext`](../type-aliases/export-context.md) | - |

@@ -16,6 +16,6 @@ hideEditInGitHub: true
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `type` | [`DOCUMENT_SAVED`](../enumerations/host-event-type.md#document_saved) | [`HostEventData`](host-event-data.md).[`type`](host-event-data.md#type) |
-| `data` | `object` | [`HostEventData`](host-event-data.md).[`data`](host-event-data.md#data) |
+| `type` | [`DOCUMENT_SAVED`](../enumerations/host-event-type.md#enumeration-member-document_saved) | [`HostEventData`](host-event-data.md).[`type`](host-event-data.md#property-type) |
+| `data` | `object` | [`HostEventData`](host-event-data.md).[`data`](host-event-data.md#property-data) |
 | `data.documentId` | `string` | - |

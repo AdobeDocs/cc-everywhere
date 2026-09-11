@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: MessageFilter()
+# Type Alias: MessageFilter
 
 ```ts
 type MessageFilter = <T>(message) => boolean;

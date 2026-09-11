@@ -23,5 +23,5 @@ Action for downloading content to the user's device.
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`DownloadTarget`](../enumerations/download-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
+| `target` | [`DownloadTarget`](../enumerations/download-target.md) | [`BaseAction`](base-action.md).[`target`](base-action.md#property-target) |
 | `closeTargetOnExport?` | `boolean` | - |

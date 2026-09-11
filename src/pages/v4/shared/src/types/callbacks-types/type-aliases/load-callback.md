@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: LoadCallback()
+# Type Alias: LoadCallback
 
 ```ts
 type LoadCallback = () => void;
