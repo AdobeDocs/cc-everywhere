@@ -35,7 +35,8 @@ getFeatureFlagsParams(
    intent, 
    hostInfo, 
    appConfig?, 
-   featureFlagOverridesProvider?): URLSearchParams;
+   featureFlagOverridesProvider?
+): URLSearchParams;
 ```
 
 Generates URL-encoded feature flag parameters for a specific client and intent

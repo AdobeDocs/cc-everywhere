@@ -48,7 +48,7 @@ new RequestResponseWorkflowContext<T>(context): RequestResponseWorkflowContext<T
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `context` | `public` | `T` | [`WorkflowContext`](../../workflow-context/classes/workflow-context.md).[`context`](../../workflow-context/classes/workflow-context.md#context) |
+| `context` | `public` | `T` | [`WorkflowContext`](../../workflow-context/classes/workflow-context.md).[`context`](../../workflow-context/classes/workflow-context.md#property-context) |
 
 ## Methods
 

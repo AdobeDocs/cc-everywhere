@@ -48,7 +48,8 @@ convertToJPEG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Lower your file size by changing your PNG images into JPG files.
@@ -79,7 +80,8 @@ convertToPNG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Save your images as PNG files to improve file quality.
@@ -110,7 +112,8 @@ convertToSVG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Drag and drop a JPG or PNG image file to convert to SVG.
@@ -141,7 +144,8 @@ cropImage(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Transform your image into the perfect shape or size in seconds.
@@ -172,7 +176,8 @@ resizeImage(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Change the dimensions of any photo.
@@ -203,7 +208,8 @@ removeBackground(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Easily remove the background of your photos.
@@ -234,7 +240,8 @@ generateQRCode(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Generate a QR Code for a URL.
@@ -265,7 +272,8 @@ convertToGIF(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Convert a video asset to GIF format.
@@ -296,7 +304,8 @@ convertToMP4(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Convert a video asset to MP4 format.
@@ -327,7 +336,8 @@ cropVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Transform your video into the perfect shape or size in seconds.
@@ -358,7 +368,8 @@ mergeVideos(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Collate multiple video/photo into a single video.
@@ -389,7 +400,8 @@ resizeVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Change the dimensions of any video.
@@ -420,7 +432,8 @@ trimVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Trim a video to a desired length.
@@ -451,7 +464,8 @@ animateFromAudio(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Create an animated video from an audio.
@@ -482,7 +496,8 @@ captionVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Add captions to any video.

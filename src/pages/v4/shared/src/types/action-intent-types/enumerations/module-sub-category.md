@@ -22,3 +22,4 @@ hideEditInGitHub: true
 | `DESIGN_VIEWER` | `"design-viewer"` |
 | `ANNOTATE_IMAGE` | `"annotate-image"` |
 | `GENERATE_IMAGE` | `"generate-image"` |
+| `MIGRATE_ASSETS` | `"migrate-assets"` |

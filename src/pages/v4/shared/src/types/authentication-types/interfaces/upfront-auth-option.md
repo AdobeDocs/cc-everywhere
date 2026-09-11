@@ -23,5 +23,5 @@ Auth option for upfront sign-in; optional prefilled auth identifier.
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`UPFRONT`](../enumerations/auth-mode.md#upfront) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`UPFRONT`](../enumerations/auth-mode.md#enumeration-member-upfront) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#property-mode) |
 | `config?` | [`AuthConfig`](auth-config.md) | - |

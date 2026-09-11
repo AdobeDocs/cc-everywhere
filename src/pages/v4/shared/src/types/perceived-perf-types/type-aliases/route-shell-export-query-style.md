@@ -17,7 +17,7 @@ type RouteShellExportQueryStyle = object;
 ### variant?
 
 ```ts
-optional variant: RouteShellButtonVariant;
+optional variant?: RouteShellButtonVariant;
 ```
 
 <HorizontalLine />
@@ -25,5 +25,5 @@ optional variant: RouteShellButtonVariant;
 ### treatment?
 
 ```ts
-optional treatment: RouteShellButtonTreatment;
+optional treatment?: RouteShellButtonTreatment;
 ```

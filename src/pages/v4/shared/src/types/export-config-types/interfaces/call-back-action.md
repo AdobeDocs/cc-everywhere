@@ -23,5 +23,5 @@ Action for invoking a host callback without publishing assets.
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `target` | [`CALLBACK`](../enumerations/call-back-target.md#callback) | [`BaseAction`](base-action.md).[`target`](base-action.md#target) |
+| `target` | [`CALLBACK`](../enumerations/call-back-target.md#enumeration-member-callback) | [`BaseAction`](base-action.md).[`target`](base-action.md#property-target) |
 | `enableByDefault?` | `boolean` | - |

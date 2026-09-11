@@ -25,7 +25,7 @@ sourceChannel: MessageChannel;
 ### requestId?
 
 ```ts
-optional requestId: string;
+optional requestId?: string;
 ```
 
 <HorizontalLine />

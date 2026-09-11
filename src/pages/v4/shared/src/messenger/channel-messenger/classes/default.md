@@ -18,7 +18,8 @@ new default(
    _sourceChannel, 
    _sourceProtocolVersion, 
    _targetProtocolVersion, 
-   _protocolHandlersModule?): ChannelMessenger;
+   _protocolHandlersModule?
+): ChannelMessenger;
 ```
 
 #### Parameters
@@ -119,7 +120,8 @@ getTarget(targetChannel):
 sendMessage<T>(
    targetChannel, 
    message, 
-   requestId?): boolean;
+   requestId?
+): boolean;
 ```
 
 #### Type Parameters

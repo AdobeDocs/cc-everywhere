@@ -16,6 +16,6 @@ hideEditInGitHub: true
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `type` | [`URL_INFO`](../enumerations/host-event-type.md#url_info) | [`HostEventData`](host-event-data.md).[`type`](host-event-data.md#type) |
-| `data` | `object` | [`HostEventData`](host-event-data.md).[`data`](host-event-data.md#data) |
+| `type` | [`URL_INFO`](../enumerations/host-event-type.md#enumeration-member-url_info) | [`HostEventData`](host-event-data.md).[`type`](host-event-data.md#property-type) |
+| `data` | `object` | [`HostEventData`](host-event-data.md).[`data`](host-event-data.md#property-data) |
 | `data.url` | `string` | - |

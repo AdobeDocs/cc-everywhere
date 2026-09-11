@@ -50,4 +50,5 @@ Enum representing feature flags for HZ based target apps
 | `EDIT_IMAGE_ASSISTANT` | `"edit-image-assistant"` | - |
 | `ALLOWED_ADOBE_ENTERPRISE_USERS` | `"allowed-adobe-enterprise-users"` | - |
 | `FILTER_SHADOW` | `"filter-shadow"` | - |
+| `EDIT_IMAGE_LEAN_AUTHORING` | `"edit-image-lean-authoring"` | - |
 | `EMBED_THEME_QUERY_PARAM_ENABLED` | `"embed-theme-query-param-enabled"` | When enabled in HZ via `enabledFFs`, honor the `theme` URL query param (CCEX-298596). |

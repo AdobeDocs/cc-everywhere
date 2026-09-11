@@ -30,9 +30,10 @@ new CCEverywhereBase(
    configParams, 
    authProvider, 
    clientAuthProvider, 
-   piipStatus, 
+   piipStatus?, 
    hzEventSink?, 
-   hzEventBuilderFactory?): CCEverywhereBase;
+   hzEventBuilderFactory?
+): CCEverywhereBase;
 ```
 
 Constructor to initialize CCEverywhere object.

@@ -23,7 +23,7 @@ Base for a single export option: id, style, and action.
 
 | Property | Type | Overrides | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#id) |
-| `style` | [`DropdownOptionStyle`](dropdown-option-style.md) | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#style) |
-| `action` | [`ContinueEditingAction`](../type-aliases/continue-editing-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#action) | - |
+| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#property-id) |
+| `style` | [`DropdownOptionStyle`](dropdown-option-style.md) | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#property-style) |
+| `action` | [`ContinueEditingAction`](../type-aliases/continue-editing-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#property-action) | - |
 | `label?` | `string` | - | - |

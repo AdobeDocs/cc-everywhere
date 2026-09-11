@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: CancelCallback()
+# Type Alias: CancelCallback
 
 ```ts
 type CancelCallback = (isEscapePressed) => void;
