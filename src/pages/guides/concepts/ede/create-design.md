@@ -38,7 +38,7 @@ All parameters are optional and **positional**—to skip one, pass `undefined` i
 
 The heart of Create Design is [`contentBrowseConfig`](../../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config.md)—it defines the **Template Browser** experience: for example, [`categoriesConfig`](../../../v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union.md) specifies which collection users browse, [`templateFilters`](../../../v4/shared/src/types/module/app-config-types/interfaces/template-filters.md) controls how templates are filtered, and [`showCreateNew`](../../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config.md#properties) determines whether to show a CTA that allows users to start from a blank document of the provided size.
 
-```javascript-data-line="2,4,8,14"
+```javascript-data-line="2,4,8,14,22"
 const appConfig = {
   contentBrowseConfig: {
     // The curated collection to browse
@@ -59,6 +59,8 @@ const appConfig = {
     hideSearchBar: true,
     hideFilters: true,
     disablePremiumContent: true,
+    // Keep users within the curated set (suppress "more like this")
+    hideMoreLikeThis: true,
   },
   // Specify the list of file types that the user can publish
   allowedFileTypes: ["application/pdf", "image/jpeg", "image/png"],
@@ -72,7 +74,7 @@ const appConfig = {
 module.createDesign(appConfig, exportConfig, containerConfig);
 ```
 
-Content browsing is a capability in its own right, with its own set of collection, filtering, and layout options. For the full picture, see the [Template Browser](../template-browser.md) concept guide—Create Design surfaces that same experience as the entry point to designing.
+Embedded browsing is deliberately **curated**, not open-ended discovery: standalone Express recommends templates broadly to help users explore, but inside your app the host already supplies the product and intent, so the browser stays within the collection you configure—and a 1-up **preview** lets users confirm a template before a new document is created. `hideMoreLikeThis` reinforces that boundary by suppressing "more like this" recommendations. Content browsing is a capability in its own right, with its own collection, filtering, and layout options—see the [Template Browser](../template-browser.md) concept guide; Create Design surfaces that same experience as the entry point to designing.
 
 ## Tailoring the experience with variants
 

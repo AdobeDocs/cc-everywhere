@@ -56,7 +56,7 @@ Getting an API key and calling `initialize()` are common to every Embed SDK inte
 
 ## Experience variants
 
-A **variant** tailors the whole experience to a class of workflow. You set it through the `variant` property on a workflow's `appConfig`, and it determines **which creative tools the editor surfaces**—text, shapes, media, elements, templates, and so on—so the UI matches the task instead of exposing everything Express can do. Variants are how you build _experience-focused_ UIs.
+A **variant** tailors the whole experience to a class of workflow. You set it through the `variant` property on a workflow's `appConfig`, and it determines **which creative tools the editor surfaces**—text, images, shapes, icons, and other design elements—so the UI matches the task instead of exposing everything Express can do. Variants are how you build _experience-focused_ UIs.
 
 | `variant`   | Experience                                                                                                                                                                        |
 | ----------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
