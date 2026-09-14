@@ -17,7 +17,7 @@ contributors:
 
 # Edit Design
 
-The **Edit Design** workflow opens an **existing** document in a focused editor so users can refine it—and, for print workflows, control exactly how it's exported.
+The Edit Design workflow opens an _existing document_ in a focused editor, where users can refine the design and, for print workflows, configure how the final document is exported.
 
 TODO: Add Screenshot The Edit Design editor with an existing document loaded and on-canvas print guides (bleed, margins, rulers) visible.
 
@@ -34,17 +34,17 @@ module.editDesign(
 ): void;
 ```
 
-Unlike [Create Design](./create-design.md), `docConfig` is **required**—it tells the editor which document to open. The remaining parameters are optional and **positional** (pass `undefined` to skip one). `exportConfig`, `containerConfig`, and the shared `callbacks` are covered in [Shared configuration](./index.md#shared-configuration).
+Unlike [Create Design](./create-design.md), the `docConfig` parameter is **required**—it tells the editor which document to open. The remaining parameters are optional and **positional** (pass `undefined` to skip one). `exportConfig`, `containerConfig`, and the shared `appConfig.callbacks` are covered in [Shared configuration](./index.md#shared-configuration).
 
 ## Choosing what to open
 
-`docConfig` (`FDEEditDesignDocConfig`) identifies the document to load. Provide **exactly one** of the following:
+The `docConfig` parameter (of type [ `FDEEditDesignDocConfig` ](../../../v4/shared/src/types/module/doc-config-types/interfaces/fde-edit-design-doc-config.md)) identifies the document to load. Provide **exactly one** of the following:
 
-| Property | Opens |
-| --- | --- |
-| `docId` | an existing saved document—typically the `docId` returned by [Create Design](./create-design.md)'s `onPublish` |
-| `templateId` | a specific template |
-| `asset` | an image asset placed onto the canvas |
+| Property     | Opens                                                                                                          |
+| ------------ | -------------------------------------------------------------------------------------------------------------- |
+| `docId`      | an existing saved document—typically the `docId` returned by [Create Design](./create-design.md)'s `onPublish` |
+| `templateId` | a specific template                                                                                            |
+| `asset`      | an image asset placed onto the canvas                                                                          |
 
 ```javascript
 const docConfig = { docId: "urn:aaid:sc:VA6C2:..." };
@@ -52,11 +52,13 @@ const docConfig = { docId: "urn:aaid:sc:VA6C2:..." };
 module.editDesign(docConfig, appConfig, exportConfig, containerConfig);
 ```
 
+Please note that, by using the `templateId`, you can bypass the Template Browser and directly open a specific template in the editor.
+
 ## Configuring the editor
 
-Edit Design's `appConfig` ([`FDEEditDesignAppConfig`](../../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md)) adds **output controls** that Create Design doesn't have yet:
+Edit Design's `appConfig` ([`FDEEditDesignAppConfig`](../../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md)) adds **output controls** that Create Design doesn't have _yet_:
 
-```javascript
+```javascript-data-line="5-9,12-17"
 const appConfig = {
   variant: "print",
 
@@ -82,7 +84,7 @@ const appConfig = {
 - **`editorGuideConfig`** shows print guides—bleed, margins, and rulers—on the canvas.
 - **`pdfPrintConfig`** controls the exported PDF: crop marks, bleed, and CMYK color with a chosen ICC color profile. The profile is one of the SDK's supported print profiles.
 
-When `variant` is `"print"`, print-oriented guides and defaults are enabled automatically; these options let you set them explicitly. This is the key contrast with [Create Design](./create-design.md#output-configuration-today), which cannot pass these output settings yet.
+When `variant` is `"print"`, print-oriented guides and defaults can be enabled; this is the key contrast with [Create Design](./create-design.md#output-configuration-today), which cannot pass these output settings _yet_.
 
 ## Handling the result
 

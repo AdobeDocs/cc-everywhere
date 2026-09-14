@@ -16,7 +16,7 @@ contributors:
 
 # Create Design
 
-The **Create Design** workflow lets users start something new: they browse a curated set of templates (or begin from a blank canvas), pick one, and design from it in a focused editor. It pairs a **Template Browser** with a **Design Editor**—choose a template, then create or *remix* it into a finished asset.
+The Create Design workflow lets users start something new: they can browse a curated set of templates (or begin from a blank canvas), pick one, and design from it in a focused editor. It pairs a _Template Browser_ with a _Design Editor_—choose a template, then remix it into a finished asset.
 
 TODO: Add Screenshot The Create Design template browser (curated templates in a grid), and the focused editor after a template is selected.
 
@@ -32,26 +32,41 @@ module.createDesign(
 ): void;
 ```
 
-All parameters are optional and **positional**—to skip one, pass `undefined` in its place. `exportConfig`, `containerConfig`, and the shared `callbacks` are covered in [Shared configuration](./index.md#shared-configuration); the rest of this page is about what's specific to Create Design, configured through `appConfig` ([`FDECreateDesignAppConfig`](../../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md)).
+All parameters are optional and **positional**—to skip one, pass `undefined` in its place. `exportConfig` and `containerConfig` are covered in [Shared configuration](./index.md#shared-configuration); the rest of this page is about what's specific to Create Design, configured through `appConfig` (of type [`FDECreateDesignAppConfig`](../../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md)).
 
 ## Browsing and choosing content
 
-The heart of Create Design is `contentBrowseConfig`—it defines the **Template Browser**: which collection users browse, how templates are filtered, and whether they can start from scratch.
+The heart of Create Design is [`contentBrowseConfig`](../../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config.md)—it defines the **Template Browser** experience: for example, [`categoriesConfig`](../../../v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union.md) specifies which collection users browse, [`templateFilters`](../../../v4/shared/src/types/module/app-config-types/interfaces/template-filters.md) controls how templates are filtered, and [`showCreateNew`](../../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config.md#properties) determines whether to show a CTA that allows users to start from a blank document of the provided size.
 
-```javascript
+```javascript-data-line="2,4,8,14"
 const appConfig = {
   contentBrowseConfig: {
     // The curated collection to browse
     categoriesConfig: [
       { category: "templates", collectionId: "urn:aaid:sc:VA6C2:..." },
     ],
+    // Additional filtering based on number of pages, dimensions, template type
+    templateFilters: {
+      behaviors: ["still"],
+      dimensions: { width: 3.5, height: 2, unit: "in" },
+      templateType: "business-card",
+    },
     // Offer a "start from a blank canvas" option
     showCreateNew: true,
     // Title shown above the browser
     headerText: "Choose a template",
+    // UI configuration options for the Template Browser
+    hideSearchBar: true,
+    hideFilters: true,
+    disablePremiumContent: true,
   },
-  variant: "print",
+  // Specify the list of file types that the user can publish
   allowedFileTypes: ["application/pdf", "image/jpeg", "image/png"],
+  // EDE variant to tailor the editor experience
+  variant: "print",
+  callbacks: {
+    /* ... */
+  },
 };
 
 module.createDesign(appConfig, exportConfig, containerConfig);
@@ -61,19 +76,21 @@ Content browsing is a capability in its own right, with its own set of collectio
 
 ## Tailoring the experience with variants
 
-Create Design honors the shared `variant` option (see [Experience variants](./index.md#experience-variants)). Setting `variant: "print"`, for example, gives users a print-oriented toolset and enables print-friendly defaults automatically, so the experience matches a print workflow end to end.
+Create Design honors the shared `variant` option (see [Experience variants](./index.md#experience-variants)). Setting `variant: "print"`, for example, gives users a print-oriented toolset and enables print-friendly defaults automatically, so the experience matches a print workflow end to end; for instance, the Express editor won't surface timeline-dependent tools that are relevant only for video.
+
+**TODO**: Screenshot of the different tools for the print & default variants
 
 ## Output configuration today
 
-There's an asymmetry between the two workflows worth understanding. [Edit Design](./edit-design.md) lets you pass explicit **output controls**—for print, that includes PDF settings such as CMYK color mode and an ICC color profile (its `pdfPrintConfig`). **Create Design does not accept those output configs yet.**
+There's an asymmetry between the two workflows worth understanding. [Edit Design](./edit-design.md) lets you pass explicit **output controls**. For example, including PDF settings such as CMYK color mode and an ICC color profile (its `pdfPrintConfig`) is possible for the `print` variant. **Create Design does not accept those output configs yet.**
 
-For the `print` variant, Create Design falls back to sensible print defaults—CMYK color with a standard coated ICC profile (for example, `Coated GRACoL 2006 (ISO 12647-2:2004)`)—so print output is correct out of the box even though you can't set it explicitly here.
+Create Design falls back to sensible defaults—CMYK color with a standard coated ICC profile (`Coated GRACoL 2006 (ISO 12647-2:2004)`) and bleed enabled—so output is correct out of the box even though you can't set it explicitly here.
 
-This gap is expected to close in the future through the `onIntentChange` callback: as a user moves from *browsing* a template into *editing* it, `onIntentChange` will let you pass configuration—including output settings—into that next step. Until then, if you need precise output control at creation time, plan around these defaults, or route users into [Edit Design](./edit-design.md), where the output controls are available today.
+This gap is _expected to close_ in the future through the `onIntentChange` callback: as a user moves from _browsing_ a template into _editing_ it, `onIntentChange` will let you pass configuration—including output settings—into that next step. Until then, if you need precise output control at creation time, plan around these defaults, or route users into [Edit Design](./edit-design.md), where the output controls are available today.
 
 ## Handling the result
 
-When the user finishes and exports, the shared `onPublish` callback fires with the exported asset and its metadata; return a publish status to confirm or deny. See [Shared configuration](./index.md#shared-configuration).
+When the user finishes and exports, EDE behaves like a standard Embed SDK module: the `onPublish` callback fires with the exported asset and its metadata; return a publish status to confirm or deny. See [Shared configuration](./index.md#shared-configuration).
 
 ## Related
 
