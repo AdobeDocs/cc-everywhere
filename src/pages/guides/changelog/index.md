@@ -16,7 +16,7 @@ contributors:
 
 # Changelog
 
-## [v4.55.8] 2026-09-15
+## [v4.55.8] 2026-09-16
 
 ### Added
 
@@ -30,6 +30,10 @@ contributors:
 
 - [`editorGuideConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config.md): Added a new property to configure the visibility of Bleed, Margins, and Rulers in the Edit Design module's UI.
 - [`pdfPrintConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config.md): Added a new property to configure the print-ready PDF export in the Edit Design module (`"print"` variant), including Crop Marks, Bleed, Color Mode, and ICC Profile.
+
+### Fixed
+
+- `createDesign()` with `"print"` variant now correctly displays bleed in the editor preview.
 
 ### Documentation
 
