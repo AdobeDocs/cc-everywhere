@@ -16,7 +16,7 @@ contributors:
 
 # Changelog
 
-## [v4.55.8] 2026-09-15
+## [v4.55.8] 2026-09-16
 
 ### Added
 
