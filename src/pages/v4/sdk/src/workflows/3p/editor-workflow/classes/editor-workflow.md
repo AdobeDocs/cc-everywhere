@@ -48,7 +48,8 @@ create(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Start the editor workflow with an empty canvas
@@ -79,7 +80,8 @@ createWithAsset(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Start the editor workflow by passing an image asset
@@ -110,7 +112,8 @@ createWithTemplate(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Start the editor workflow by passing an Express Template ID
@@ -141,7 +144,8 @@ edit(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Start the editor workflow by passing an Express Document ID

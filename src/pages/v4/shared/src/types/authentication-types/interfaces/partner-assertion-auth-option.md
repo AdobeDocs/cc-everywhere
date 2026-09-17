@@ -23,5 +23,5 @@ Authentication using partner-issued signed identity assertions.
 
 | Property | Type | Description | Overrides |
 | ------ | ------ | ------ | ------ |
-| `mode` | [`PARTNER_ASSERTION`](../enumerations/auth-mode.md#partner_assertion) | - | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`PARTNER_ASSERTION`](../enumerations/auth-mode.md#enumeration-member-partner_assertion) | - | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#property-mode) |
 | `config` | [`PartnerAssertionAuthConfig`](../type-aliases/partner-assertion-auth-config.md) | Authentication configuration for the partner assertion. | - |

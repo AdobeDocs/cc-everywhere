@@ -20,7 +20,7 @@ It takes the size of the image in pixels along with the aspect ratio.
 ### size?
 
 ```ts
-optional size: PixelSize;
+optional size?: PixelSize;
 ```
 
 The size of the image in pixels.

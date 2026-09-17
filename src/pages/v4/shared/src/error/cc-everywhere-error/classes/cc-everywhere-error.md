@@ -27,7 +27,8 @@ new CCEverywhereError<T>(
    code, 
    message?, 
    subError?, 
-customData?): CCEverywhereError<T>;
+   customData?
+): CCEverywhereError<T>;
 ```
 
 Constructor
@@ -75,7 +76,8 @@ getter code
 static create<T>(
    errorCodeMessage, 
    subError?, 
-customData?): CCEverywhereError<T>;
+   customData?
+): CCEverywhereError<T>;
 ```
 
 #### Type Parameters

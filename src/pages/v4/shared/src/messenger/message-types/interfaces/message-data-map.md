@@ -12,7 +12,7 @@ hideEditInGitHub: true
 
 | Property | Type |
 | ------ | ------ |
-| `DID_TARGET_LOAD` | \| \{ `status`: [`SUCCESS`](../enumerations/load-status.md#success); `loadTime`: `number`; `url`: `string`; \} \| \{ `status`: [`FAILURE`](../enumerations/load-status.md#failure); `loadTime`: `number`; `url`: `string`; `error?`: [`ErrorCode`](../../../error/error-codes/enumerations/error-code.md); `errorDesc?`: `string`; \} |
+| `DID_TARGET_LOAD` | \| \{ `status`: [`SUCCESS`](../enumerations/load-status.md#enumeration-member-success); `loadTime`: `number`; `url`: `string`; \} \| \{ `status`: [`FAILURE`](../enumerations/load-status.md#enumeration-member-failure); `loadTime`: `number`; `url`: `string`; `error?`: [`ErrorCode`](../../../error/error-codes/enumerations/error-code.md); `errorDesc?`: `string`; \} |
 | `DID_PUBLISH` | [`PublishParams`](../../../types/publish-params-types/interfaces/publish-params.md) |
 | `CANCEL` | [`CancelMessage`](cancel-message.md) |
 | `TOKEN_RESPONSE` | [`TokenResponseMessage`](token-response-message.md) |
@@ -31,3 +31,4 @@ hideEditInGitHub: true
 | `PRIVACY_IFRAME_STORAGE` | [`PrivacyIframeStorageMessageResponse`](privacy-iframe-storage-message-response.md) |
 | `INVOKE_CLOSE` | [`CancelCTA`](cancel-cta.md) \| `undefined` |
 | `UPDATE_DOCUMENT_ID` | [`UpdateDocumentIdMessage`](update-document-id-message.md) |
+| `MIGRATE_ASSETS_COMPLETE` | [`MigrateAssetsCompleteData`](../../../types/module/migrate-assets-types/type-aliases/migrate-assets-complete-data.md) |

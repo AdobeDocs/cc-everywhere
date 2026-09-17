@@ -23,5 +23,5 @@ Auth option for delayed sign-in; optional prefilled auth identifier.
 
 | Property | Type | Overrides |
 | ------ | ------ | ------ |
-| `mode` | [`DELAYED`](../enumerations/auth-mode.md#delayed) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#mode) |
+| `mode` | [`DELAYED`](../enumerations/auth-mode.md#enumeration-member-delayed) | [`BaseAuthOption`](base-auth-option.md).[`mode`](base-auth-option.md#property-mode) |
 | `config?` | [`AuthConfig`](auth-config.md) | - |

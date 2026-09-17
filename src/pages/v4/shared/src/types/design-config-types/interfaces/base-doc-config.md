@@ -18,5 +18,6 @@ hideEditInGitHub: true
 - [`FDEEditDesignDocConfig`](../../module/doc-config-types/interfaces/fde-edit-design-doc-config.md)
 - [`AnnotateImageDocConfig`](../../module/doc-config-types/interfaces/annotate-image-doc-config.md)
 - [`DesignViewerDocConfig`](../../module/doc-config-types/interfaces/design-viewer-doc-config.md)
+- [`MigrateAssetsDocConfig`](../../module/migrate-assets-types/interfaces/migrate-assets-doc-config.md)
 - [`DocConfig`](../../quick-action/doc-config-types/interfaces/doc-config.md)
 - [`MergeVideoDocConfig`](../../quick-action/doc-config-types/interfaces/merge-video-doc-config.md)

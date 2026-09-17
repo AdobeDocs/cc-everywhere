@@ -31,5 +31,5 @@ type: T;
 ### data?
 
 ```ts
-optional data: unknown;
+optional data?: unknown;
 ```

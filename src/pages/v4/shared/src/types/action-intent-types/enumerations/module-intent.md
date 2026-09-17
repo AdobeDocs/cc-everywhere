@@ -23,3 +23,4 @@ hideEditInGitHub: true
 | `ANNOTATE_IMAGE` | `"annotate-image"` | - |
 | `VIEW_DESIGN` | `"view-design"` | - |
 | `GENERATE_IMAGE` | `"generate-image"` | - |
+| `MIGRATE_ASSETS` | `"migrate-assets"` | Headless FDE partner-transition asset migration (`module.migrateAssets()`). |

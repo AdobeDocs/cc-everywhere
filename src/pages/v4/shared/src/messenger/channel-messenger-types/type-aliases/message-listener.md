@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: MessageListener()
+# Type Alias: MessageListener
 
 ```ts
 type MessageListener = <T>(event) => void;

@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: FeatureFlagOverridesProvider()
+# Type Alias: FeatureFlagOverridesProvider
 
 ```ts
 type FeatureFlagOverridesProvider = (featureFlags) => void;

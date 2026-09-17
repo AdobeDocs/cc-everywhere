@@ -349,3 +349,33 @@ Re-exports [AnnotateImageDocConfig](doc-config-types/interfaces/annotate-image-d
 ### DesignViewerDocConfig
 
 Re-exports [DesignViewerDocConfig](doc-config-types/interfaces/design-viewer-doc-config.md)
+
+<HorizontalLine />
+
+### MigrateAssetsDocConfig
+
+Re-exports [MigrateAssetsDocConfig](migrate-assets-types/interfaces/migrate-assets-doc-config.md)
+
+<HorizontalLine />
+
+### MigrateAssetsDesignConfig
+
+Re-exports [MigrateAssetsDesignConfig](migrate-assets-types/interfaces/migrate-assets-design-config.md)
+
+<HorizontalLine />
+
+### MigrateAssetsMapping
+
+Re-exports [MigrateAssetsMapping](migrate-assets-types/interfaces/migrate-assets-mapping.md)
+
+<HorizontalLine />
+
+### MigrateAssetsResult
+
+Re-exports [MigrateAssetsResult](migrate-assets-types/interfaces/migrate-assets-result.md)
+
+<HorizontalLine />
+
+### MigrateAssetsCompleteData
+
+Re-exports [MigrateAssetsCompleteData](migrate-assets-types/type-aliases/migrate-assets-complete-data.md)

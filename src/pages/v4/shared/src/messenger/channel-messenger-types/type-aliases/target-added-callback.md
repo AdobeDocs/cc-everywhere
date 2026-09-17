@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: TargetAddedCallback()
+# Type Alias: TargetAddedCallback
 
 ```ts
 type TargetAddedCallback = () => void;

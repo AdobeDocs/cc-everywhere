@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: MessageSender()
+# Type Alias: MessageSender
 
 ```ts
 type MessageSender = (messagePayload) => void;

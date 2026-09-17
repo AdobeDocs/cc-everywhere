@@ -17,7 +17,8 @@ create(
    docConfig?, 
    appConfig?, 
    outputParams?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -42,7 +43,8 @@ createWithAsset(
    docConfig, 
    appConfig?, 
    outputParams?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -67,7 +69,8 @@ createWithTemplate(
    docConfig, 
    appConfig?, 
    outputParams?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -92,7 +95,8 @@ edit(
    docConfig, 
    appConfig?, 
    outputParams?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters

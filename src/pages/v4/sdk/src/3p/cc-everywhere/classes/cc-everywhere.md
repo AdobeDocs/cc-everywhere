@@ -28,7 +28,8 @@ new CCEverywhere(
    hostInfo, 
    configParams, 
    authProvider, 
-   clientAuthProvider): CCEverywhere;
+   clientAuthProvider
+): CCEverywhere;
 ```
 
 #### Parameters

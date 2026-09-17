@@ -48,7 +48,8 @@ editImage(
    docConfig, 
    appConfig?, 
    exportConfig?, 
-containerConfig?): Promise<EditImageContext>;
+   containerConfig?
+): Promise<EditImageContext>;
 ```
 
 Perform editing tasks on any image.
@@ -80,7 +81,8 @@ Promise that resolves with EditImageContext when the workflow is loaded
 createImageFromText(
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Generate images by just passing a text prompt.
@@ -109,7 +111,8 @@ Generate images by just passing a text prompt.
 startFromContent(
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Open the Start From Content module.
@@ -138,7 +141,8 @@ Open the Start From Content module.
 createDesign(
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Create a new design. Open template gallery as the default entry experience.
@@ -168,7 +172,8 @@ editDesign(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 Edit and customize a template or document in the Focused Design Editor (FDE).
@@ -196,10 +201,11 @@ Edit and customize a template or document in the Focused Design Editor (FDE).
 
 ```ts
 viewDesign(
-   docConfig, 
+   docConfig?, 
    appConfig?, 
    exportConfig?, 
-containerConfig?): Promise<IDesignViewerContext>;
+   containerConfig?
+): Promise<IDesignViewerContext>;
 ```
 
 Launches the design viewer for a personalized design.
@@ -208,7 +214,7 @@ Launches the design viewer for a personalized design.
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig` | [`DesignViewerDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md) | pass an asset to preload on to the viewer. |
+| `docConfig?` | [`DesignViewerDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md) | pass an asset to preload on to the viewer. |
 | `appConfig?` | [`DesignViewerAppConfig`](../../../../../../shared/src/types/module/app-config-types/interfaces/design-viewer-app-config.md) | properties to configure the Design Viewer module |
 | `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
 | `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
@@ -217,8 +223,40 @@ Launches the design viewer for a personalized design.
 
 `Promise`&lt;[`IDesignViewerContext`](../../../../context/3p/design-viewer-context/interfaces/i-design-viewer-context.md)&gt;
 
-Promise that resolves with the DesignViewerContext when the workflow is loaded. Use it to push a new docConfig to the open viewer.
+Promise that resolves with the DesignViewerContext when the workflow is loaded. Call [IDesignViewerContext.updateDesignAssets](../../../../context/3p/design-viewer-context/interfaces/i-design-viewer-context.md#updatedesignassets) on it to update the asset(s) rendered in the open viewer.
 
 #### Implementation of
 
 [`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`viewDesign`](../../module-workflow-types/interfaces/module-workflow.md#viewdesign)
+
+<HorizontalLine />
+
+### migrateAssets()
+
+```ts
+migrateAssets(documentIds): Promise<MigrateAssetsResult>;
+```
+
+Migrate a transitioning user's guest documents to their newly signed-in account.
+
+Requires the SDK to be initialized with a PartnerAssertionAuthOption
+whose config is a TransitionAssertionConfig (both guest and user
+assertions present). Runs headlessly (no UI) in the Focused Design Editor.
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `documentIds` | `string`[] | non-empty array of non-empty guest document ids to migrate. Delivered to the FDE app via the SDK message channel (never in the URL). |
+
+#### Returns
+
+`Promise`&lt;[`MigrateAssetsResult`](../../../../../../shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-result.md)&gt;
+
+Promise resolving with a [Module.MigrateAssetsResult](../../../../../../shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-result.md) mapping each
+  input document id to its migrated output id; rejects on migration error or after a
+  180-second timeout.
+
+#### Implementation of
+
+[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`migrateAssets`](../../module-workflow-types/interfaces/module-workflow.md#migrateassets)

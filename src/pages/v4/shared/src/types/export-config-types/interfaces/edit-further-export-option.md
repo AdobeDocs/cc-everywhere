@@ -29,7 +29,7 @@ Export option for continuing to edit content in other applications.
 
 | Property | Type | Overrides | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#id) |
-| `style` | `U` | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#style) |
-| `action` | [`EditFurtherAction`](edit-further-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#action) | - |
+| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#property-id) |
+| `style` | `U` | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#property-style) |
+| `action` | [`EditFurtherAction`](edit-further-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#property-action) | - |
 | `label?` | `string` | - | - |

@@ -19,9 +19,10 @@ hideEditInGitHub: true
 ```ts
 new ChannelMessageListener(
    sourceChannel, 
-   targetProtocolVersion, 
-   _filterRequestIdMismatch, 
-   protocolHandlersModule?): ChannelMessageListener;
+   targetProtocolVersion?, 
+   _filterRequestIdMismatch?, 
+   protocolHandlersModule?
+): ChannelMessageListener;
 ```
 
 #### Parameters
@@ -76,7 +77,7 @@ didGetMessage<T>(message, requestId?): void;
 
 #### Implementation of
 
-[`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).[`didGetMessage`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md#didgetmessage)
+[`IChannelMessengerDelegate`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md).[`didGetMessage`](../../channel-messenger-types/interfaces/i-channel-messenger-delegate.md#property-didgetmessage)
 
 <HorizontalLine />
 
@@ -218,7 +219,7 @@ Sends a message using a message channel that is compatible with older version of
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) |  |
+| `targetChannel` | [`MessageChannel`](../../channel-messenger-types/enumerations/message-channel.md) | - |
 | `message` | [`MessageCompat`](../../message-types/type-aliases/message-compat.md)&lt;`T`&gt; | The message to send. |
 
 #### Returns
@@ -235,7 +236,8 @@ Sends a message using a message channel that is compatible with older version of
 addListener(
    messageType, 
    listener, 
-   messageFilter?): void;
+   messageFilter?
+): void;
 ```
 
 #### Parameters

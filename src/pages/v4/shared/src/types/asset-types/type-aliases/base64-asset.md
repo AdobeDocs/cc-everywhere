@@ -17,4 +17,4 @@ Represents an Asset object containing Base64 encoded data.
 ## See
 
  - [AssetBase](../interfaces/asset-base.md) for the base asset interface
- - [AssetDataType.BASE64](../enumerations/asset-data-type.md#base64) for the data type
+ - [AssetDataType.BASE64](../enumerations/asset-data-type.md#enumeration-member-base64) for the data type

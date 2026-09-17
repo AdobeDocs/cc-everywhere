@@ -2465,6 +2465,38 @@
                   }
                 ],
                 "path": "/v4/shared/src/types/module/doc-config-types/index.md"
+              },
+              {
+                "title": "MigrateAssets.types",
+                "pages": [
+                  {
+                    "title": "interfaces",
+                    "pages": [
+                      {
+                        "title": "MigrateAssetsDesignConfig",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-design-config.md"
+                      },
+                      {
+                        "title": "MigrateAssetsDocConfig",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-doc-config.md"
+                      },
+                      {
+                        "title": "MigrateAssetsMapping",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-mapping.md"
+                      },
+                      {
+                        "title": "MigrateAssetsResult",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-result.md"
+                      }
+                    ],
+                    "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-design-config.md"
+                  },
+                  {
+                    "title": "MigrateAssetsCompleteData",
+                    "path": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-complete-data.md"
+                  }
+                ],
+                "path": "/v4/shared/src/types/module/migrate-assets-types/index.md"
               }
             ],
             "path": "/v4/shared/src/types/module/index.md"

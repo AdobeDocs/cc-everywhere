@@ -17,7 +17,8 @@ convertToJPEG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -42,7 +43,8 @@ convertToPNG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -67,7 +69,8 @@ convertToSVG(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -92,7 +95,8 @@ cropImage(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -117,7 +121,8 @@ resizeImage(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -142,7 +147,8 @@ removeBackground(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -167,7 +173,8 @@ generateQRCode(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -192,7 +199,8 @@ convertToGIF(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -217,7 +225,8 @@ convertToMP4(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -242,7 +251,8 @@ cropVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -267,7 +277,8 @@ mergeVideos(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -292,7 +303,8 @@ resizeVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -317,7 +329,8 @@ trimVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -342,7 +355,8 @@ animateFromAudio(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters
@@ -367,7 +381,8 @@ captionVideo(
    docConfig?, 
    appConfig?, 
    exportConfig?, 
-   containerConfig?): void;
+   containerConfig?
+): void;
 ```
 
 #### Parameters

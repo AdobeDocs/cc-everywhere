@@ -6,7 +6,7 @@ hideEditInGitHub: true
 
 <HorizontalLine />
 
-# Type Alias: EventCallback()
+# Type Alias: EventCallback
 
 ```ts
 type EventCallback = (message) => void;
