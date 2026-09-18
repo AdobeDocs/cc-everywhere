@@ -19,7 +19,7 @@ contributors:
 
 The Embedded Design Editor (EDE) is Adobe's architecture for delivering purpose-built creation experiences inside your application. Instead of embedding the full Adobe Express editor, EDE gives you a _focused, configurable surface_ built around specific workflows.
 
-**TODO:** Add Screenshot An EDE-powered focused editor embedded in a partner application: a template/content panel on the left, a design canvas on the right.
+![EDE-powered focused editor](./img/ede--hero.png)
 
 The shift EDE represents is from **bespoke integrations toward a shared, scalable platform**; it separates the underlying creative capabilities from the experience presented to end users, so the same platform can power very different user journeys through **variants** rather than duplicated engineering. EDE also improves the user experience by means of **faster loading times**, **seamless workflow transitions** (e.g., moving from template selection to design editing without a full app reload), and **better resilience** against Adobe Express feature changes and updates.
 
@@ -33,12 +33,12 @@ EDE is a key development priority for the Embed SDK, with ongoing improvements a
 
 EDE experiences run as **modules**; so far, there are two entry points:
 
-| Workflow                            | Entry point             | Users start from                                            | Use it to                                                 |
-| ----------------------------------- | ----------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
-| [Create Design](./create-design.md) | `module.createDesign()` | A template collection or a blank canvas                     | Let users browse and pick a starting point to design from |
-| [Edit Design](./edit-design.md)     | `module.editDesign()`   | An existing document (`docId`, `templateId`, or an `asset`) | Reopen and refine a design                                |
+| Workflow                                | Entry point             | Users start from                                            | Use it to                                                 |
+| --------------------------------------- | ----------------------- | ----------------------------------------------------------- | --------------------------------------------------------- |
+| [Create Design](./ede-create-design.md) | `module.createDesign()` | A template collection or a blank canvas                     | Let users browse and pick a starting point to design from |
+| [Edit Design](./ede-edit-design.md)     | `module.editDesign()`   | An existing document (`docId`, `templateId`, or an `asset`) | Reopen and refine a design                                |
 
-You launch the experiences from the `module` object returned by the SDK's [`initialize()`](../../quickstart/index.md) call.
+You launch the experiences from the `module` object returned by the SDK's [`initialize()`](../quickstart/index.md) call.
 
 ```javascript-data-line="3,8-9"
 await import("https://cc-embed.adobe.com/sdk/v4/CCEverywhere.js");
@@ -52,7 +52,7 @@ module.createDesign(/* ... */); // start a new design
 module.editDesign(/* ... */); // edit an existing one
 ```
 
-Getting an API key and calling `initialize()` are common to every Embed SDK integration—see the [Quickstart](../../quickstart/index.md) and [Get Credentials](../../credential/index.md). This guide focuses on what's specific to EDE.
+Getting an API key and calling `initialize()` are common to every Embed SDK integration—see the [Quickstart](../quickstart/index.md) and [Get Credentials](../credential/index.md). This guide focuses on what's specific to EDE.
 
 ## Experience variants
 
@@ -97,20 +97,20 @@ ccEverywhere.module.editDesign(
 
 You'll see the prefix `FDE` in some SDK type names such as `FDECreateDesignAppConfig`. It refers to the same Embedded Design Editor described here, and may change in the future to match the current naming convention.
 
-- **`appConfig`**: the per-workflow options; the parts unique to each are covered on the [Create Design](./create-design.md) and [Edit Design](./edit-design.md) pages.
-- **`exportConfig`**: the export/publish options (buttons, file types, output shape). See the [`ExportConfig` reference](../../../v4/shared/src/types/export-config-types/type-aliases/export-config.md).
-- **`containerConfig`**: how the SDK iframe is presented (fill, inline, or modal). See the [`ContainerConfig` reference](../../../v4/shared/src/types/container-config-types/type-aliases/container-config.md).
-- **`appConfig.callbacks`**: lifecycle and event callbacks such as [`onPublish`](../../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md), [`onError`](../../../v4/shared/src/error/cc-everywhere-error-types/type-aliases/error-callback.md), and [`onCancel`](../../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback.md). See the [`Callbacks` reference](../../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md).
+- **`appConfig`**: the per-workflow options; the parts unique to each are covered on the [Create Design](./ede-create-design.md) and [Edit Design](./ede-edit-design.md) pages.
+- **`exportConfig`**: the export/publish options (buttons, file types, output shape). See the [`ExportConfig` reference](../../v4/shared/src/types/export-config-types/type-aliases/export-config.md).
+- **`containerConfig`**: how the SDK iframe is presented (fill, inline, or modal). See the [`ContainerConfig` reference](../../v4/shared/src/types/container-config-types/type-aliases/container-config.md).
+- **`appConfig.callbacks`**: lifecycle and event callbacks such as [`onPublish`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md), [`onError`](../../v4/shared/src/error/cc-everywhere-error-types/type-aliases/error-callback.md), and [`onCancel`](../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback.md). See the [`Callbacks` reference](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md).
 
 <InlineAlert slots="header, text" variant="warning"/>
 
 #### Intent change
 
-The `onIntentChange()` callback is not operational for EDE workflows today. It is expected to become relevant in the future—for example, to carry configuration forward as one workflow _tethers_ into another. See [Create Design → Output configuration today](./create-design.md#output-configuration-today) for where this will matter.
+The `onIntentChange()` callback is not operational for EDE workflows today. It is expected to become relevant in the future—for example, to carry configuration forward as one workflow _tethers_ into another. See [Create Design → Output configuration today](./ede-create-design.md#output-configuration-today) for where this will matter.
 
 ## Related
 
-- [Create Design](./create-design.md) — browse a template and design from it
-- [Edit Design](./edit-design.md) — open and refine an existing document
-- [Template Browser](../template-browser.md) — the content-browsing experience Create Design builds on
-- SDK reference: [`FDECreateDesignAppConfig`](../../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md), [`FDEEditDesignAppConfig`](../../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md)
+- [Create Design](./ede-create-design.md) — browse a template and design from it
+- [Edit Design](./ede-edit-design.md) — open and refine an existing document
+- [Template Browser](./template-browser.md) — the content-browsing experience Create Design builds on
+- SDK reference: [`FDECreateDesignAppConfig`](../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md), [`FDEEditDesignAppConfig`](../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md)
