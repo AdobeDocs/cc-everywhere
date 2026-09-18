@@ -16,8 +16,8 @@ This page contains a collection of tutorials to help you get started with the Ad
 
 Each tutorial provides step-by-step instructions on integrating the SDK into your web application and customizing its features. New tutorials will be added regularly, so be sure to check back for updates.
 
-1. [Building a Create and Edit Design Flow with the Embedded Design Editor (EDE)](./embedded-design-editor.md): How to implement the EDE Create Design and Edit Design workflows.
-2. [Getting Started with the Adobe Express Embed SDK](./getting-started.md): A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
+1. [Getting Started with the Adobe Express Embed SDK](./getting-started.md): A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
+2. [Building a Create and Edit Design Flow with the Embedded Design Editor (EDE)](./embedded-design-editor.md): How to implement the EDE Create Design and Edit Design workflows.
 3. [Building a Custom Image Editor with the Full Editor Module](./full-editor.md): How to implement Adobe Express Full Editor.
 4. [Generating Images with the Generate Image v2 Module](./generate-image.md): How to implement Adobe Express Generate Image v2.
 5. [Editing Images with the Edit Image v2 Module](./edit-image.md): How to implement Adobe Express Edit Image v2.

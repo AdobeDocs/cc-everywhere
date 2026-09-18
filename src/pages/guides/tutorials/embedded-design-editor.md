@@ -23,18 +23,16 @@ contributors:
 
 # Embed SDK Embedded Design Editor tutorial
 
-Learn how to build a focused **Create Design → Edit Design** flow with the Embedded Design Editor (EDE) using the Adobe Express Embed SDK.
+Learn how to build a focused Create Design to Edit Design flow with the Embedded Design Editor (EDE) using the Adobe Express Embed SDK.
 
 ## Introduction
 
-Welcome! In this hands-on tutorial, we'll build a small web application around the **Embedded Design Editor (EDE)**—Adobe's focused, configurable design surface embedded through the Embed SDK. Instead of launching the full Adobe Express editor, we'll wire up two purpose-built workflows and tether them together:
+Welcome! In this hands-on tutorial, we'll build a small web application around the **Embedded Design Editor (EDE)**—Adobe's new focused, configurable design surface. Instead of launching the full Adobe Express editor, we'll wire up two purpose-built workflows:
 
-- **Create Design** launches a curated **Template Browser** that flows straight into a focused editor. The user picks a template, previews it, designs, and saves.
+- **Create Design** launches a curated **Template Browser** that flows straight into a focused editor. The user picks a template, previews it, remixes it in the new EDE experience, and saves/exports.
 - **Edit Design** re-opens that saved design later, so the user can keep refining it—complete with print-ready output options.
 
-By the end, clicking **Create Design** will let a user browse a template collection, design from it, and save; the saved preview replaces a placeholder image on your page, and the (previously disabled) **Edit Design** button lights up so they can re-open the very same document.
-
-**[TODO: Add image—the finished sample's initial state: the "Adobe Express Embed SDK / Embedded Design Editor (EDE) Sample" heading, the dashed placeholder image, and the Create Design + disabled Edit Design buttons.]**
+![Embedded Design Editor Tutorial](./images/ede--hero.png)
 
 ### What you'll learn
 
@@ -43,7 +41,7 @@ By completing this tutorial, you'll gain practical skills in:
 - Launching the EDE **Create Design** workflow with `module.createDesign()` and a curated Template Browser.
 - Configuring a focused editor with an **experience variant** (`print`) and print-ready PDF output.
 - Handling the export result in the **`onPublish`** callback—capturing the document ID and a preview image.
-- Re-opening a saved design with **`module.editDesign()`** by passing the stored document ID.
+- Launching the EDE **Edit Design** workflow with **`module.createDesign()`**.
 
 ### What you'll build
 
@@ -51,7 +49,7 @@ A single-page web app with a placeholder image and two buttons—**Create Design
 
 ## Prerequisites
 
-<InlineAlert variant="warning" slots="text1, text2" />
+<InlineAlert variant="info" slots="text1" />
 
 This tutorial builds on the EDE concepts. Before starting, we recommend reading the **[Embedded Design Editor guide](../concepts/ede.md)** and its two workflow pages—**[Create Design](../concepts/ede-create-design.md)** and **[Edit Design](../concepts/ede-edit-design.md)**—so the configuration objects below feel familiar.
 
@@ -105,17 +103,21 @@ The web application will be served at `localhost:5555` on a secure HTTPS connect
 
 Here's the flow you'll build:
 
-1. Click **Create Design**. A **Template Browser** opens with a curated collection of print templates. Pick one—you can preview it 1-up before committing—and the focused editor opens with your chosen template.
+1. Click **Create Design**. A **Template Browser** opens with a curated collection of print templates.
 
-   **[TODO: Add image—the Create Design Template Browser showing the curated print/business-card collection.]**
+![Template Browser](./images/ede--template-browser.png)
 
-2. Design your document, then use the export buttons (**Save PDF** / **Save Image**) to save it. The design's preview replaces the placeholder image on the page, and the **Edit Design** button—disabled until now—becomes enabled.
+2.  Pick one—you can preview it 1-up before committing.
 
-   **[TODO: Add image—the saved design's preview shown in place of the placeholder, with Edit Design now enabled.]**
+![Template Preview](./images/ede--template-preview.png)
 
-3. Click **Edit Design**. The same document re-opens in a print-configured editor, with bleed, margins, and rulers on the canvas, ready for further edits and print-ready PDF export.
+3. Customize the template in the EDE print-configured experience (with bleed, margins, and rulers on the canvas), then use the export buttons (**Save PDF** / **Save Image**) to save it.
 
-   **[TODO: Add image—the Edit Design editor reopening the saved document with print guides visible.]**
+![EDE - Text editor](./images/ede--editor-text.png)
+
+4. The design's preview replaces the placeholder image on the page, and the **Edit Design** button—disabled until now—becomes enabled. Click **Edit Design**. The same document re-opens in the editor like it was before.
+
+![Embedded Design Editor Tutorial](./images/ede--hero.png)
 
 <InlineAlert variant="error" slots="header, text1" />
 
@@ -192,7 +194,7 @@ module.createDesign(
 
 All three parameters are optional and **positional**—to skip one, pass `undefined` in its place. Let's build them up one at a time.
 
-### 3.1 Configure the Template Browser (appConfig)
+### 3.1 Configure the Template Browser
 
 The heart of Create Design is [`contentBrowseConfig`](../concepts/ede-create-design.md#browsing-and-choosing-content), which defines the Template Browser experience. Here we point it at a curated print collection, constrain it to business-card dimensions, and keep the UI focused:
 
@@ -230,7 +232,7 @@ const createDesignAppConfig = {
 };
 ```
 
-A couple of things worth calling out:
+A couple of properties of [`appConfig`](../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-create-design-app-config.md) worth calling out:
 
 - **`variant: "print"`** tailors the focused editor to a print workflow—a print-oriented toolset with print-friendly defaults. See [Experience variants](../concepts/ede.md#experience-variants) for the full list; setting `"default"` gives a general-purpose editor instead.
 - **`categoriesConfig`** points the browser at the collection you want users to design from. Swap in your own collection's URN.
@@ -308,9 +310,7 @@ document.getElementById("createBtn").onclick = async () => {
 };
 ```
 
-**[TODO: Add image—the focused editor open on a chosen template, with the Save PDF / Save Image buttons visible.]**
-
-## 4. Handle the result with onPublish
+## 4. Handle the result
 
 When the user saves, EDE behaves like any Embed SDK module: the [`onPublish`](../../v4/shared/src/types/callbacks-types/type-aliases/publish-callback.md) callback fires with the export `intent` and a `publishParams` object. This is where the two halves of the flow connect. We need to:
 
@@ -342,9 +342,7 @@ const callbacks = {
 
 <InlineAlert variant="info" slots="text1" />
 
-`publishParams` carries **both** a full-resolution asset (the PDF URL or PNG blob you configured in `exportConfig`, under `publishParams.asset`) **and** the small base64 `assetPreview`. Here we only need the lightweight preview to update the page; you'd use `asset` to download or upload the final file. Note both are **arrays**—we take the first item.
-
-**[TODO: Add image—the saved preview displayed in the page and the Edit Design button now enabled.]**
+`publishParams` carries **both** a full-resolution asset (the PDF URL or PNG blob you configured in `exportConfig`, under `publishParams.asset`) **and** the small base64 [`assetPreview`](../../v4/shared/src/types/publish-params-types/interfaces/publish-params.md#properties). Here we only need the lightweight preview to update the page; you'd use `asset` to download or upload the final file. Note both are **arrays**—we take the first item.
 
 ## 5. Reopen the design with Edit Design
 
@@ -359,7 +357,7 @@ module.editDesign(
 );
 ```
 
-### 5.1 Configure the print editor (appConfig)
+### 5.1 Configure the print editor
 
 Unlike Create Design, Edit Design accepts explicit **output controls**. Because this is a print workflow, we turn on the on-canvas print guides and configure a print-ready PDF export:
 
@@ -409,8 +407,6 @@ document.getElementById("editBtn").onclick = async () => {
 ```
 
 Because the **Edit Design** button starts out `disabled` and is only enabled inside `onPublish`, `existingDocumentId` is guaranteed to hold a real ID by the time this handler can run. Edit Design reuses the same `onPublish` callback, so saving again updates the preview just as before.
-
-**[TODO: Add image—the reopened design in the print editor with bleed, margins, and rulers visible.]**
 
 ## Troubleshooting
 
