@@ -41,7 +41,7 @@ By completing this tutorial, you'll gain practical skills in:
 - Launching the EDE **Create Design** workflow with `module.createDesign()` and a curated Template Browser.
 - Configuring a focused editor with an **experience variant** (`print`) and print-ready PDF output.
 - Handling the export result in the **`onPublish`** callback—capturing the document ID and a preview image.
-- Launching the EDE **Edit Design** workflow with **`module.createDesign()`**.
+- Launching the EDE **Edit Design** workflow with **`module.editDesign()`**.
 
 ### What you'll build
 
@@ -105,19 +105,19 @@ Here's the flow you'll build:
 
 1. Click **Create Design**. A **Template Browser** opens with a curated collection of print templates.
 
-![Template Browser](./images/ede--template-browser.png)
+   ![Template Browser](./images/ede--template-browser.png)
 
-2.  Pick one—you can preview it 1-up before committing.
+2. Pick one—you can preview it 1-up before committing.
 
-![Template Preview](./images/ede--template-preview.png)
+   ![Template preview](./images/ede--template-preview.png)
 
 3. Customize the template in the EDE print-configured experience (with bleed, margins, and rulers on the canvas), then use the export buttons (**Save PDF** / **Save Image**) to save it.
 
-![EDE - Text editor](./images/ede--editor-text.png)
+   ![Editing the template in the focused editor](./images/ede--editor-text.png)
 
-4. The design's preview replaces the placeholder image on the page, and the **Edit Design** button—disabled until now—becomes enabled. Click **Edit Design**. The same document re-opens in the editor like it was before.
+4. The design's preview replaces the placeholder image on the page, and the **Edit Design** button—disabled until now—becomes enabled. Click **Edit Design**, and the same document re-opens in the editor, ready for further edits.
 
-![Embedded Design Editor Tutorial](./images/ede--hero.png)
+   ![The saved design reopened in the editor](./images/ede--hero.png)
 
 <InlineAlert variant="error" slots="header, text1" />
 
@@ -131,7 +131,7 @@ Open the project in your code editor of choice. The HTML is a simple Spectrum We
 
 At the top, we import the Spectrum styles and components used by the page, then the Embed SDK itself:
 
-```javascript
+```javascript-data-line="15-16"
 import "./style.css";
 
 // Importing theme and typography styles from Spectrum Web Components
@@ -156,7 +156,7 @@ There are several ways to import `CCEverywhere.js`; for more information, please
 
 Now we initialize the SDK. EDE experiences run as **modules**, so we destructure the [`module`](../concepts/ede.md#how-ede-fits-into-the-embed-sdk) object from the `initialize()` call (unlike the [Full Editor tutorial](./full-editor.md), which uses `editor`):
 
-```javascript
+```javascript-data-line="11"
 // Parameters for initializing the Adobe Express Embed SDK
 const hostInfo = {
   clientId: import.meta.env.VITE_API_KEY,
@@ -172,7 +172,7 @@ const { module } = await window.CCEverywhere.initialize(hostInfo, configParams);
 
 The [`hostInfo`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base.md) object is required: `clientId` holds your API Key (retrieved by Vite from the `.env` file) and `appName` must match the Public App Name in the Developer Console. The `module` object is the entry point for both EDE workflows—`module.createDesign()` and `module.editDesign()`.
 
-We'll also keep two small pieces of state at the top of the file: a reference to the placeholder `<img>`, and a variable to remember the saved document's ID (we'll see why in [Section 4](#4-handle-the-result-with-onpublish)).
+We'll also keep two small pieces of state at the top of the file: a reference to the placeholder `<img>`, and a variable to remember the saved document's ID (we'll see why in [Section 4](#4-handle-the-result)).
 
 ```javascript
 // Will hold the project ID when a document is saved on Adobe Express
@@ -198,7 +198,7 @@ All three parameters are optional and **positional**—to skip one, pass `undefi
 
 The heart of Create Design is [`contentBrowseConfig`](../concepts/ede-create-design.md#browsing-and-choosing-content), which defines the Template Browser experience. Here we point it at a curated print collection, constrain it to business-card dimensions, and keep the UI focused:
 
-```javascript
+```javascript-data-line="7-8,29"
 const createDesignAppConfig = {
   contentBrowseConfig: {
     // The curated collection to browse
@@ -245,7 +245,7 @@ Embedded browsing is deliberately **curated**, not open-ended discovery. Everyth
 
 The `exportConfig` array defines the **save buttons** the user sees in the editor. We offer two—one for a print-ready PDF, one for a PNG image—and both request a small **base64 preview** alongside the full-resolution asset (that preview is what we'll display on the page):
 
-```javascript
+```javascript-data-line="14,31"
 const sharedExportConfig = [
   {
     id: "save-asset-pdf",
@@ -287,7 +287,7 @@ const sharedExportConfig = [
 
 The `containerConfig` controls how the SDK surface is presented. We'll let it fill the viewport:
 
-```javascript
+```javascript-data-line="2"
 const sharedContainerConfig = {
   mode: "fill", // 👈 or "inline", "modal"
   hideCloseButton: false,
@@ -361,7 +361,7 @@ module.editDesign(
 
 Unlike Create Design, Edit Design accepts explicit **output controls**. Because this is a print workflow, we turn on the on-canvas print guides and configure a print-ready PDF export:
 
-```javascript
+```javascript-data-line="5-9,12-17"
 const editDesignAppConfig = {
   variant: "print",
 
