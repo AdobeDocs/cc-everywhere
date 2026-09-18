@@ -110,6 +110,7 @@ The `onIntentChange()` callback is not operational for EDE workflows today. It i
 
 ## Related
 
+- **[Embed SDK Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md)**: build a Create Design → Edit Design flow step by step
 - [Create Design](./ede-create-design.md) — browse a template and design from it
 - [Edit Design](./ede-edit-design.md) — open and refine an existing document
 - [Template Browser](./template-browser.md) — the content-browsing experience Create Design builds on

@@ -100,6 +100,7 @@ When the user finishes and exports, EDE behaves like a standard Embed SDK module
 
 ## Related
 
+- **[Embed SDK Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md)**: build the Create Design workflow step by step
 - [Edit Design](./ede-edit-design.md) — the companion workflow, with output controls
 - [Embedded Design Editor](./ede.md) — the shared concepts and configuration
 - [Template Browser](./template-browser.md) — the content-browsing experience Create Design builds on

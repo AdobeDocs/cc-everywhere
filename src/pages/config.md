@@ -42,6 +42,7 @@
         - [V3 to V4 Migration guide](/guides/concepts/migration-v3-v4.md)
         - [Error handling](/guides/concepts/error-handling.md)
     - [Tutorials](/guides/tutorials/index.md)
+        - [Embedded Design Editor](/guides/tutorials/embedded-design-editor.md)
         - [Embed SDK integration](/guides/tutorials/getting-started.md)
         - [Full Editor](/guides/tutorials/full-editor.md)
         - [Generate Image](/guides/tutorials/generate-image.md)

@@ -92,6 +92,7 @@ Edit Design uses the same shared `onPublish` callback as Create Design—it fire
 
 ## Related
 
+- **[Embed SDK Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md)**: reopen and edit a saved design step by step
 - [Create Design](./ede-create-design.md) — the companion workflow, for starting from a template
 - [Embedded Design Editor](./ede.md) — the shared concepts and configuration
 - SDK reference: [`FDEEditDesignAppConfig`](../../v4/shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md)
