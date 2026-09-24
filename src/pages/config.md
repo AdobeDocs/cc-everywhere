@@ -22,7 +22,7 @@
             - [Edit existing project](/guides/full_editor/edit_project/index.md)
         - [Modules](/guides/modules/index.md)
         - [Quick actions](/guides/quick_actions/index.md)
-    - [Concepts](/guides/concepts/generate-image-v2.md)
+    - [Concepts](/guides/concepts/ede.md)
         - [Embedded Design Editor](/guides/concepts/ede.md)
             - [Overview](/guides/concepts/ede.md)
             - [Create Design](/guides/concepts/ede-create-design.md)
