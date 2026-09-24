@@ -16,6 +16,13 @@ contributors:
 
 # Changelog
 
+## [v4.55.8] 2026-09-24
+
+### Documentation
+
+- Added a new [Embedded Design Editor (EDE) concept guide](../concepts/ede.md) that introduces EDE's configurable, focused creation experiences, along with companion [Create Design](../concepts/ede-create-design.md) and [Edit Design](../concepts/ede-edit-design.md) guides.
+- Added a new [Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md) that walks through building a Create Design → Edit Design flow step by step.
+
 ## [v4.55.8] 2026-09-16
 
 ### Added

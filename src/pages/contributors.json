@@ -1,7 +1,7 @@
 {
-  "total": 569,
+  "total": 573,
   "offset": 0,
-  "limit": 569,
+  "limit": 573,
   "data": [
     {
       "page": "/config",
@@ -11,7 +11,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/24/2026"
     },
     {
       "page": "/guides/",
@@ -30,7 +30,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/24/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -54,6 +54,27 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
       "lastUpdated": "8/5/2026"
+    },
+    {
+      "page": "/guides/concepts/ede",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/18/2026"
+    },
+    {
+      "page": "/guides/concepts/ede-create-design",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/18/2026"
+    },
+    {
+      "page": "/guides/concepts/ede-edit-design",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/guides/concepts/edit-image-v2",
@@ -231,7 +252,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "2/26/2026"
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/guides/tutorials/edit-image",
@@ -241,6 +262,13 @@
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
       "lastUpdated": "2/26/2026"
+    },
+    {
+      "page": "/guides/tutorials/embedded-design-editor",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/18/2026"
     },
     {
       "page": "/guides/tutorials/full-editor",
