@@ -33,3 +33,5 @@ Hosts implement the callbacks they need; all are optional.
 | `onError?` | [`ErrorCallback`](../../../error/cc-everywhere-error-types/type-aliases/error-callback.md)&lt;`unknown`&gt; | Callback maybe invoked in case of error scenarios. |
 | `onEvent?` | [`EventCallback`](../type-aliases/event-callback.md) | Callback maybe invoked in case of some event like information events. |
 | `onIntentChange?` | [`IntentChangeCallback`](../type-aliases/intent-change-callback.md) | Callback invoked when user navigates from one design workflow to another For example: Quick action to Express. |
+| `onSignInRequired?` | [`SignInRequiredCallback`](../type-aliases/sign-in-required-callback.md) | Invoked when the anonymous embedded session needs the user signed in mid-session ("jump on trigger"). 1P only — see [SignInRequiredCallback](../type-aliases/sign-in-required-callback.md). |
+| `onSignInFailed?` | [`SignInFailedCallback`](../type-aliases/sign-in-failed-callback.md) | See [SignInFailedCallback](../type-aliases/sign-in-failed-callback.md). |

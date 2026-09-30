@@ -22,11 +22,13 @@ hideEditInGitHub: true
 | [AuthConfig](interfaces/auth-config.md) | - |
 | [PreSignedInAuthConfig](interfaces/pre-signed-in-auth-config.md) | - |
 | [IMSAuthConfig](interfaces/ims-auth-config.md) | - |
+| [SignInCredentials](interfaces/sign-in-credentials.md) | Credentials the host hands back from Callbacks.onSignInRequired for the SDK to complete an IMS jump with, under [AuthMode.IMS\_JUMP\_ON\_REQUEST](enumerations/auth-mode.md#enumeration-member-ims_jump_on_request). |
 | [BaseAuthOption](interfaces/base-auth-option.md) | - |
 | [UpfrontAuthOption](interfaces/upfront-auth-option.md) | Auth option for upfront sign-in; optional prefilled auth identifier. |
 | [DelayedAuthOption](interfaces/delayed-auth-option.md) | Auth option for delayed sign-in; optional prefilled auth identifier. |
 | [PreSignedInAuthOption](interfaces/pre-signed-in-auth-option.md) | Auth option when the user is already signed in (no token required; optional PII/userId). |
 | [ImsJumpAuthOption](interfaces/ims-jump-auth-option.md) | Auth option for IMS jump (e.g. SSO); requires access token and userId in config. |
+| [ImsJumpOnRequestAuthOption](interfaces/ims-jump-on-request-auth-option.md) | Auth option for IMS jump on request ("jump on trigger"); optional prefilled auth identifier. |
 | [GuestAssertionConfig](interfaces/guest-assertion-config.md) | Guest user authentication configuration. Use when the end user is anonymous on the partner platform. |
 | [UserAssertionConfig](interfaces/user-assertion-config.md) | Signed-in user authentication configuration. Use when the end user is authenticated on the partner platform. |
 | [TransitionAssertionConfig](interfaces/transition-assertion-config.md) | Transition authentication configuration. Use when a guest user signs in and transitions to an authenticated user within the same session. |
