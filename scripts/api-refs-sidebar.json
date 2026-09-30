@@ -680,6 +680,10 @@
                     "path": "/v4/shared/src/messenger/message-types/interfaces/publish-status-message.md"
                   },
                   {
+                    "title": "SignInRequiredMessage",
+                    "path": "/v4/shared/src/messenger/message-types/interfaces/sign-in-required-message.md"
+                  },
+                  {
                     "title": "SwitchEmbedActionMessage",
                     "path": "/v4/shared/src/messenger/message-types/interfaces/switch-embed-action-message.md"
                   },
@@ -1262,6 +1266,10 @@
                     "path": "/v4/shared/src/types/authentication-types/interfaces/ims-jump-auth-option.md"
                   },
                   {
+                    "title": "ImsJumpOnRequestAuthOption",
+                    "path": "/v4/shared/src/types/authentication-types/interfaces/ims-jump-on-request-auth-option.md"
+                  },
+                  {
                     "title": "PartnerAssertionAuthOption",
                     "path": "/v4/shared/src/types/authentication-types/interfaces/partner-assertion-auth-option.md"
                   },
@@ -1272,6 +1280,10 @@
                   {
                     "title": "PreSignedInAuthOption",
                     "path": "/v4/shared/src/types/authentication-types/interfaces/pre-signed-in-auth-option.md"
+                  },
+                  {
+                    "title": "SignInCredentials",
+                    "path": "/v4/shared/src/types/authentication-types/interfaces/sign-in-credentials.md"
                   },
                   {
                     "title": "TransitionAssertionConfig",
@@ -1430,6 +1442,14 @@
                   {
                     "title": "PublishStartCallback",
                     "path": "/v4/shared/src/types/callbacks-types/type-aliases/publish-start-callback.md"
+                  },
+                  {
+                    "title": "SignInFailedCallback",
+                    "path": "/v4/shared/src/types/callbacks-types/type-aliases/sign-in-failed-callback.md"
+                  },
+                  {
+                    "title": "SignInRequiredCallback",
+                    "path": "/v4/shared/src/types/callbacks-types/type-aliases/sign-in-required-callback.md"
                   }
                 ],
                 "path": "/v4/shared/src/types/callbacks-types/type-aliases/cancel-callback.md"
@@ -2481,10 +2501,6 @@
                         "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-doc-config.md"
                       },
                       {
-                        "title": "MigrateAssetsMapping",
-                        "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-mapping.md"
-                      },
-                      {
                         "title": "MigrateAssetsResult",
                         "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-result.md"
                       }
@@ -2492,7 +2508,21 @@
                     "path": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-design-config.md"
                   },
                   {
-                    "title": "MigrateAssetsCompleteData",
+                    "title": "type-aliases",
+                    "pages": [
+                      {
+                        "title": "MigrateAssetsCompleteData",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-complete-data.md"
+                      },
+                      {
+                        "title": "MigrateAssetsMapping",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-mapping.md"
+                      },
+                      {
+                        "title": "MigrateAssetsStatus",
+                        "path": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-status.md"
+                      }
+                    ],
                     "path": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-complete-data.md"
                   }
                 ],

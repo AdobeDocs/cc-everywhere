@@ -13,6 +13,7 @@ type AuthOption =
   | UpfrontAuthOption
   | DelayedAuthOption
   | ImsJumpAuthOption
+  | ImsJumpOnRequestAuthOption
   | PreSignedInAuthOption
   | PartnerAssertionAuthOption;
 ```
@@ -23,6 +24,7 @@ This union type includes:
 - [UpfrontAuthOption](../interfaces/upfront-auth-option.md) - User signs in upfront
 - [DelayedAuthOption](../interfaces/delayed-auth-option.md) - Auth deferred until needed
 - [ImsJumpAuthOption](../interfaces/ims-jump-auth-option.md) - IMS jump (e.g. SSO) with token
+- [ImsJumpOnRequestAuthOption](../interfaces/ims-jump-on-request-auth-option.md) - Anonymous start, IMS jump when the app requests sign-in
 - [PreSignedInAuthOption](../interfaces/pre-signed-in-auth-option.md) - User already signed in
 - [PartnerAssertionAuthOption](../interfaces/partner-assertion-auth-option.md) - Auth using partner-issued signed identity assertions
 

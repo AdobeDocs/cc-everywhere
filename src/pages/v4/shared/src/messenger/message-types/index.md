@@ -43,6 +43,7 @@ hideEditInGitHub: true
 | [SwitchEmbedActionMessage](interfaces/switch-embed-action-message.md) | - |
 | [TargetLoadMessage](interfaces/target-load-message.md) | - |
 | [PrivacyIframeStorageMessageResponse](interfaces/privacy-iframe-storage-message-response.md) | - |
+| [SignInRequiredMessage](interfaces/sign-in-required-message.md) | Payload for [MessageType.SIGN\_IN\_REQUIRED](enumerations/message-type.md#enumeration-member-sign_in_required). `reason` is telemetry-only context — do not branch on its value. |
 | [UpdateDocumentIdMessage](interfaces/update-document-id-message.md) | - |
 
 ## Type Aliases

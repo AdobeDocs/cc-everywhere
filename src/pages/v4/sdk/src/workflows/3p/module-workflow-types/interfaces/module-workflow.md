@@ -158,7 +158,7 @@ Launches the design viewer for a personalized design.
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
 | `docConfig?` | [`DesignViewerDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md) | pass an asset to preload on to the viewer. |
-| `appConfig?` | [`DesignViewerAppConfig`](../../../../../../shared/src/types/module/app-config-types/interfaces/design-viewer-app-config.md) | properties to configure the Design Viewer module |
+| `appConfig?` | [`DesignViewerAppConfig`](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config.md) | properties to configure the Design Viewer module |
 | `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
 | `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
 

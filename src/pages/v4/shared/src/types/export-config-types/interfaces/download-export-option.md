@@ -27,9 +27,10 @@ Export option for downloading content to the user's device.
 
 ## Properties
 
-| Property | Type | Overrides | Inherited from |
-| ------ | ------ | ------ | ------ |
-| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#property-id) |
-| `style` | `U` | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#property-style) |
-| `action` | [`DownloadAction`](download-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#property-action) | - |
-| `label?` | `string` | - | - |
+| Property | Type | Description | Overrides | Inherited from |
+| ------ | ------ | ------ | ------ | ------ |
+| `id` | `string` | - | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#property-id) |
+| `style` | `U` | - | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#property-style) |
+| `action` | [`DownloadAction`](download-action.md) | - | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#property-action) | - |
+| `label?` | `string` | - | - | - |
+| `tooltip?` | `string` | The optional tooltip text shown on hover for the button. | - | - |

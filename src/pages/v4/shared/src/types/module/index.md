@@ -364,9 +364,15 @@ Re-exports [MigrateAssetsDesignConfig](migrate-assets-types/interfaces/migrate-a
 
 <HorizontalLine />
 
+### MigrateAssetsStatus
+
+Re-exports [MigrateAssetsStatus](migrate-assets-types/type-aliases/migrate-assets-status.md)
+
+<HorizontalLine />
+
 ### MigrateAssetsMapping
 
-Re-exports [MigrateAssetsMapping](migrate-assets-types/interfaces/migrate-assets-mapping.md)
+Re-exports [MigrateAssetsMapping](migrate-assets-types/type-aliases/migrate-assets-mapping.md)
 
 <HorizontalLine />
 

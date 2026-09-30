@@ -1,7 +1,7 @@
 {
-  "total": 573,
+  "total": 579,
   "offset": 0,
-  "limit": 573,
+  "limit": 579,
   "data": [
     {
       "page": "/config",
@@ -11,7 +11,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "9/24/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/guides/",
@@ -30,7 +30,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "9/24/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -698,7 +698,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/5/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/sdk/src/error/error-codes/variables/error-code-messages",
@@ -939,7 +939,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/module-workflow/",
@@ -955,7 +955,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/quick-action-workflow-types/",
@@ -1083,7 +1083,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/error/error-codes/variables/error-code-messages",
@@ -1213,7 +1213,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/2/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/messenger/channel-message-listener/",
@@ -1457,7 +1457,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/2/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/enumerations/cancel-reason",
@@ -1504,7 +1504,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/enumerations/publish-callback-status",
@@ -1596,7 +1596,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/params-response-message",
@@ -1620,6 +1620,13 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
       "lastUpdated": "1/30/2026"
+    },
+    {
+      "page": "/v4/shared/src/messenger/message-types/interfaces/sign-in-required-message",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/switch-embed-action-message",
@@ -1671,7 +1678,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/type-aliases/did-target-load-message",
@@ -1774,7 +1781,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/",
@@ -2087,7 +2094,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "6/16/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/app-config-types/enumerations/host-app-trigger",
@@ -2367,7 +2374,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/authentication-types/enumerations/auth-mode",
@@ -2375,7 +2382,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/authentication-types/enumerations/validate-token-error",
@@ -2399,7 +2406,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/authentication-types/interfaces/delayed-auth-option",
@@ -2433,6 +2440,13 @@
       "lastUpdated": "9/11/2026"
     },
     {
+      "page": "/v4/shared/src/types/authentication-types/interfaces/ims-jump-on-request-auth-option",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
+    },
+    {
       "page": "/v4/shared/src/types/authentication-types/interfaces/partner-assertion-auth-option",
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
@@ -2454,6 +2468,13 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
       "lastUpdated": "9/11/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/authentication-types/interfaces/sign-in-credentials",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/authentication-types/interfaces/transition-assertion-config",
@@ -2491,7 +2512,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/authentication-types/type-aliases/partner-assertion-auth-config",
@@ -2553,7 +2574,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union",
@@ -2593,7 +2614,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "6/27/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/callbacks",
@@ -2601,7 +2622,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "3/19/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/intent-change-config",
@@ -2682,6 +2703,20 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
       "lastUpdated": "9/11/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/callbacks-types/type-aliases/sign-in-failed-callback",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/callbacks-types/type-aliases/sign-in-required-callback",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/client-authentication-types/",
@@ -3151,7 +3186,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/export-config-types/interfaces/dropdown-option-style",
@@ -3231,7 +3266,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/export-config-types/interfaces/style",
@@ -3446,7 +3481,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/interfaces/device-info",
@@ -3558,7 +3593,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/",
@@ -3573,7 +3608,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/edit-image-app-version",
@@ -3891,7 +3926,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/edit-from-template-design-config",
@@ -4017,7 +4052,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-design-config",
@@ -4034,25 +4069,32 @@
       "lastUpdated": "9/11/2026"
     },
     {
-      "page": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-mapping",
-      "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4"
-      ],
-      "lastUpdated": "9/11/2026"
-    },
-    {
       "page": "/v4/shared/src/types/module/migrate-assets-types/interfaces/migrate-assets-result",
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-complete-data",
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "9/30/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-mapping",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/module/migrate-assets-types/type-aliases/migrate-assets-status",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "9/30/2026"
     },
     {
       "page": "/v4/shared/src/types/network-types/",
