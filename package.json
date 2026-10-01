@@ -30,6 +30,7 @@
     "devex:sync-docs": "node scripts/import-docs.js",
     "devex:eds-sanitize": "node scripts/renameFiles.js && node scripts/normalizeLinks.js",
     "devex:generate-sidebar": "node scripts/update-config.js",
+    "devex:generate-rss": "node scripts/generate-feed.js",
     "devex:build-api-reference": "npm run devex:sync-docs && npm run devex:eds-sanitize && npm run devex:generate-sidebar",
     "buildSiteMetadata": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildSiteMetadata -v",
     "buildContributors": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildContributorsV2 -v",
