@@ -27,9 +27,10 @@ Export option for publishing content to various targets.
 
 ## Properties
 
-| Property | Type | Overrides | Inherited from |
-| ------ | ------ | ------ | ------ |
-| `id` | `string` | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#property-id) |
-| `style` | `U` | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#property-style) |
-| `action` | [`PublishAction`](publish-action.md) | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#property-action) | - |
-| `label` | `string` | - | - |
+| Property | Type | Description | Overrides | Inherited from |
+| ------ | ------ | ------ | ------ | ------ |
+| `id` | `string` | - | - | [`BaseExportOption`](base-export-option.md).[`id`](base-export-option.md#property-id) |
+| `style` | `U` | - | - | [`BaseExportOption`](base-export-option.md).[`style`](base-export-option.md#property-style) |
+| `action` | [`PublishAction`](publish-action.md) | - | [`BaseExportOption`](base-export-option.md).[`action`](base-export-option.md#property-action) | - |
+| `label` | `string` | - | - | - |
+| `tooltip?` | `string` | The optional tooltip text shown on hover for the button. | - | - |

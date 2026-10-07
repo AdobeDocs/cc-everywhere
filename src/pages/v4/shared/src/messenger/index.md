@@ -196,6 +196,12 @@ Re-exports [PrivacyIframeStorageMessageResponse](message-types/interfaces/privac
 
 <HorizontalLine />
 
+### SignInRequiredMessage
+
+Re-exports [SignInRequiredMessage](message-types/interfaces/sign-in-required-message.md)
+
+<HorizontalLine />
+
 ### UpdateDocumentIdMessage
 
 Re-exports [UpdateDocumentIdMessage](message-types/interfaces/update-document-id-message.md)

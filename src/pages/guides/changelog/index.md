@@ -16,6 +16,13 @@ contributors:
 
 # Changelog
 
+## [v4.56.21] 2026-09-30
+
+### Added
+
+- Added per-document success/failure status to the [migrateAssets()](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#migrateassets) `MigrateAssetsResult`.
+- Added optional `tooltip` field to [`PublishExportOption`](../../v4/shared/src/types/export-config-types/interfaces/publish-export-option.md#properties) in `ExportConfig`, letting hosts customize the hover tooltip text on publish-target export buttons.
+
 ## [v4.55.8] 2026-09-24
 
 ### Documentation

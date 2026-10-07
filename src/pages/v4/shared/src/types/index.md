@@ -322,6 +322,12 @@ Re-exports [IMSAuthConfig](authentication-types/interfaces/ims-auth-config.md)
 
 <HorizontalLine />
 
+### SignInCredentials
+
+Re-exports [SignInCredentials](authentication-types/interfaces/sign-in-credentials.md)
+
+<HorizontalLine />
+
 ### BaseAuthOption
 
 Re-exports [BaseAuthOption](authentication-types/interfaces/base-auth-option.md)
@@ -349,6 +355,12 @@ Re-exports [PreSignedInAuthOption](authentication-types/interfaces/pre-signed-in
 ### ImsJumpAuthOption
 
 Re-exports [ImsJumpAuthOption](authentication-types/interfaces/ims-jump-auth-option.md)
+
+<HorizontalLine />
+
+### ImsJumpOnRequestAuthOption
+
+Re-exports [ImsJumpOnRequestAuthOption](authentication-types/interfaces/ims-jump-on-request-auth-option.md)
 
 <HorizontalLine />
 
@@ -499,6 +511,18 @@ Re-exports [PublishCallback](callbacks-types/type-aliases/publish-callback.md)
 ### EventCallback
 
 Re-exports [EventCallback](callbacks-types/type-aliases/event-callback.md)
+
+<HorizontalLine />
+
+### SignInRequiredCallback
+
+Re-exports [SignInRequiredCallback](callbacks-types/type-aliases/sign-in-required-callback.md)
+
+<HorizontalLine />
+
+### SignInFailedCallback
+
+Re-exports [SignInFailedCallback](callbacks-types/type-aliases/sign-in-failed-callback.md)
 
 <HorizontalLine />
 

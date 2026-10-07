@@ -30,5 +30,6 @@ hideEditInGitHub: true
 | `TARGET_LOAD` | [`TargetLoadMessage`](target-load-message.md) |
 | `PRIVACY_IFRAME_STORAGE` | [`PrivacyIframeStorageMessageResponse`](privacy-iframe-storage-message-response.md) |
 | `INVOKE_CLOSE` | [`CancelCTA`](cancel-cta.md) \| `undefined` |
+| `SIGN_IN_REQUIRED` | [`SignInRequiredMessage`](sign-in-required-message.md) |
 | `UPDATE_DOCUMENT_ID` | [`UpdateDocumentIdMessage`](update-document-id-message.md) |
 | `MIGRATE_ASSETS_COMPLETE` | [`MigrateAssetsCompleteData`](../../../types/module/migrate-assets-types/type-aliases/migrate-assets-complete-data.md) |
