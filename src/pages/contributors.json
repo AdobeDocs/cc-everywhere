@@ -1,7 +1,7 @@
 {
-  "total": 579,
+  "total": 591,
   "offset": 0,
-  "limit": 579,
+  "limit": 591,
   "data": [
     {
       "page": "/config",
@@ -11,7 +11,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/guides/",
@@ -30,7 +30,7 @@
         "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -182,6 +182,13 @@
       "page": "/guides/full_editor/edit_project/",
       "avatars": [],
       "lastUpdated": "3/12/2024"
+    },
+    {
+      "page": "/guides/mobile/airtel",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/guides/modules/",
@@ -631,6 +638,62 @@
       "lastUpdated": "9/11/2026"
     },
     {
+      "page": "/v4/sdk/src/context/action-workflow-context/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/action-workflow-context/classes/action-workflow-context",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/modules/design-context/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/modules/design-context/classes/design-context-impl",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/modules/design-context/interfaces/design-context",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/quick-action-context/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/quick-action-context/classes/quick-action-context-impl",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/quick-action-context/interfaces/quick-action-context",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
       "page": "/v4/sdk/src/context/request-response-workflow-context/",
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
@@ -642,7 +705,28 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/toast-capability/",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/toast-capability/interfaces/toast-capability",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
+    },
+    {
+      "page": "/v4/sdk/src/context/toast-capability/type-aliases/toast-type",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/sdk/src/context/workflow-context/",
@@ -658,7 +742,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/2/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/sdk/src/error/error-codes/",
@@ -939,7 +1023,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/module-workflow/",
@@ -955,7 +1039,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/quick-action-workflow-types/",
@@ -971,7 +1055,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/quick-action-workflow/",
@@ -987,7 +1071,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/base-workflow/",
@@ -1588,7 +1672,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "2/26/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/shared/src/messenger/message-types/interfaces/message-data-map",
@@ -2796,7 +2880,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/shared/src/types/config-manager-types/variables/sdk-cdn-base",
@@ -3067,7 +3151,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "3/19/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/shared/src/types/export-config-types/enumerations/edit-further-target",
@@ -3441,7 +3525,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/enumerations/host-type",
@@ -3623,7 +3707,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/2/2026"
+      "lastUpdated": "10/8/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/fde-app-version",

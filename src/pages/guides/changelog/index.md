@@ -16,6 +16,13 @@ contributors:
 
 # Changelog
 
+## [v4.57.22] 2026-10-08
+
+### Added
+
+- Added [`EditFurtherIntent.ERASE`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) to the starting intent for Edit Image.
+- Various performance improvements and fixes.
+
 ## [v4.56.21] 2026-09-30
 
 ### Added

@@ -18,7 +18,7 @@ convertToJPEG(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -32,7 +32,7 @@ convertToJPEG(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -44,7 +44,7 @@ convertToPNG(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -58,7 +58,7 @@ convertToPNG(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -70,7 +70,7 @@ convertToSVG(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -84,7 +84,7 @@ convertToSVG(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -96,7 +96,7 @@ cropImage(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -110,7 +110,7 @@ cropImage(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -122,7 +122,7 @@ resizeImage(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -136,7 +136,7 @@ resizeImage(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -148,7 +148,7 @@ removeBackground(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -162,7 +162,7 @@ removeBackground(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -174,7 +174,7 @@ generateQRCode(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -188,7 +188,7 @@ generateQRCode(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -200,7 +200,7 @@ convertToGIF(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -214,7 +214,7 @@ convertToGIF(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -226,7 +226,7 @@ convertToMP4(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -240,7 +240,7 @@ convertToMP4(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -252,7 +252,7 @@ cropVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -266,7 +266,7 @@ cropVideo(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -278,7 +278,7 @@ mergeVideos(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -292,7 +292,7 @@ mergeVideos(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -304,7 +304,7 @@ resizeVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -318,7 +318,7 @@ resizeVideo(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -330,7 +330,7 @@ trimVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -344,7 +344,7 @@ trimVideo(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -356,7 +356,7 @@ animateFromAudio(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -370,7 +370,7 @@ animateFromAudio(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 <HorizontalLine />
 
@@ -382,7 +382,7 @@ captionVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 #### Parameters
@@ -396,4 +396,4 @@ captionVideo(
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;

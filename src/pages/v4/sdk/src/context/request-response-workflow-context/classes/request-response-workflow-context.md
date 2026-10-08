@@ -14,7 +14,7 @@ guard, per-call requestId matching, timeout, listener registration, and cleanup.
 
 ## Extends
 
-- [`WorkflowContext`](../../workflow-context/classes/workflow-context.md)&lt;`T`&gt;
+- [`ActionWorkflowContext`](../../action-workflow-context/classes/action-workflow-context.md)&lt;`T`&gt;
 
 ## Type Parameters
 
@@ -42,13 +42,13 @@ new RequestResponseWorkflowContext<T>(context): RequestResponseWorkflowContext<T
 
 #### Inherited from
 
-[`WorkflowContext`](../../workflow-context/classes/workflow-context.md).[`constructor`](../../workflow-context/classes/workflow-context.md#constructor)
+[`ActionWorkflowContext`](../../action-workflow-context/classes/action-workflow-context.md).[`constructor`](../../action-workflow-context/classes/action-workflow-context.md#constructor)
 
 ## Properties
 
 | Property | Modifier | Type | Inherited from |
 | ------ | ------ | ------ | ------ |
-| `context` | `public` | `T` | [`WorkflowContext`](../../workflow-context/classes/workflow-context.md).[`context`](../../workflow-context/classes/workflow-context.md#property-context) |
+| `context` | `public` | `T` | [`ActionWorkflowContext`](../../action-workflow-context/classes/action-workflow-context.md).[`context`](../../action-workflow-context/classes/action-workflow-context.md#property-context) |
 
 ## Methods
 
@@ -72,4 +72,4 @@ Sends a message to the SDK Agent to update the state of current running  workflo
 
 #### Inherited from
 
-[`WorkflowContext`](../../workflow-context/classes/workflow-context.md).[`sendCustomMessage`](../../workflow-context/classes/workflow-context.md#sendcustommessage)
+[`ActionWorkflowContext`](../../action-workflow-context/classes/action-workflow-context.md).[`sendCustomMessage`](../../action-workflow-context/classes/action-workflow-context.md#sendcustommessage)
