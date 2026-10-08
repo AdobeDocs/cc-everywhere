@@ -76,6 +76,30 @@
             "path": "/v4/sdk/src/context/3p/design-viewer-context/index.md"
           },
           {
+            "title": "ActionWorkflowContext",
+            "pages": [
+              {
+                "title": "ActionWorkflowContext",
+                "path": "/v4/sdk/src/context/action-workflow-context/classes/action-workflow-context.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/action-workflow-context/index.md"
+          },
+          {
+            "title": "QuickActionContext",
+            "pages": [
+              {
+                "title": "QuickActionContextImpl",
+                "path": "/v4/sdk/src/context/quick-action-context/classes/quick-action-context-impl.md"
+              },
+              {
+                "title": "QuickActionContext",
+                "path": "/v4/sdk/src/context/quick-action-context/interfaces/quick-action-context.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/quick-action-context/index.md"
+          },
+          {
             "title": "RequestResponseWorkflowContext",
             "pages": [
               {
@@ -86,6 +110,20 @@
             "path": "/v4/sdk/src/context/request-response-workflow-context/index.md"
           },
           {
+            "title": "ToastCapability",
+            "pages": [
+              {
+                "title": "ToastCapability",
+                "path": "/v4/sdk/src/context/toast-capability/interfaces/toast-capability.md"
+              },
+              {
+                "title": "ToastType",
+                "path": "/v4/sdk/src/context/toast-capability/type-aliases/toast-type.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/toast-capability/index.md"
+          },
+          {
             "title": "WorkflowContext",
             "pages": [
               {
@@ -94,6 +132,20 @@
               }
             ],
             "path": "/v4/sdk/src/context/workflow-context/index.md"
+          },
+          {
+            "title": "DesignContext",
+            "pages": [
+              {
+                "title": "DesignContextImpl",
+                "path": "/v4/sdk/src/context/modules/design-context/classes/design-context-impl.md"
+              },
+              {
+                "title": "DesignContext",
+                "path": "/v4/sdk/src/context/modules/design-context/interfaces/design-context.md"
+              }
+            ],
+            "path": "/v4/sdk/src/context/modules/design-context/index.md"
           }
         ],
         "path": "/v4/sdk/src/context/3p/design-viewer-context/index.md"

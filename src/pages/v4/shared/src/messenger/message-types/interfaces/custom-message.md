@@ -15,5 +15,5 @@ hideEditInGitHub: true
 | `instanceId` | `string` |
 | `requestId` | `string` |
 | `action` | [`CustomMessageAction`](../enumerations/custom-message-action.md) |
-| `intent` | [`ModuleIntent`](../../../types/action-intent-types/enumerations/module-intent.md) |
+| `intent` | [`ActionIntent`](../../../types/action-intent-types/type-aliases/action-intent.md) |
 | `data?` | `unknown` |

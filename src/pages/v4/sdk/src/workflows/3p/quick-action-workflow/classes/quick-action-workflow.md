@@ -49,7 +49,7 @@ convertToJPEG(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Lower your file size by changing your PNG images into JPG files.
@@ -65,7 +65,7 @@ Lower your file size by changing your PNG images into JPG files.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -81,7 +81,7 @@ convertToPNG(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Save your images as PNG files to improve file quality.
@@ -97,7 +97,7 @@ Save your images as PNG files to improve file quality.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -113,7 +113,7 @@ convertToSVG(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Drag and drop a JPG or PNG image file to convert to SVG.
@@ -129,7 +129,7 @@ Drag and drop a JPG or PNG image file to convert to SVG.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -145,7 +145,7 @@ cropImage(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Transform your image into the perfect shape or size in seconds.
@@ -161,7 +161,7 @@ Transform your image into the perfect shape or size in seconds.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -177,7 +177,7 @@ resizeImage(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Change the dimensions of any photo.
@@ -193,7 +193,7 @@ Change the dimensions of any photo.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -209,7 +209,7 @@ removeBackground(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Easily remove the background of your photos.
@@ -225,7 +225,7 @@ Easily remove the background of your photos.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -241,7 +241,7 @@ generateQRCode(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Generate a QR Code for a URL.
@@ -257,7 +257,7 @@ Generate a QR Code for a URL.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -273,7 +273,7 @@ convertToGIF(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Convert a video asset to GIF format.
@@ -289,7 +289,7 @@ Convert a video asset to GIF format.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -305,7 +305,7 @@ convertToMP4(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Convert a video asset to MP4 format.
@@ -321,7 +321,7 @@ Convert a video asset to MP4 format.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -337,7 +337,7 @@ cropVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Transform your video into the perfect shape or size in seconds.
@@ -353,7 +353,7 @@ Transform your video into the perfect shape or size in seconds.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -369,7 +369,7 @@ mergeVideos(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Collate multiple video/photo into a single video.
@@ -385,7 +385,7 @@ Collate multiple video/photo into a single video.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -401,7 +401,7 @@ resizeVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Change the dimensions of any video.
@@ -417,7 +417,7 @@ Change the dimensions of any video.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -433,7 +433,7 @@ trimVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Trim a video to a desired length.
@@ -449,7 +449,7 @@ Trim a video to a desired length.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -465,7 +465,7 @@ animateFromAudio(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Create an animated video from an audio.
@@ -481,7 +481,7 @@ Create an animated video from an audio.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
@@ -497,7 +497,7 @@ captionVideo(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<QuickActionContext>;
 ```
 
 Add captions to any video.
@@ -513,7 +513,7 @@ Add captions to any video.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`QuickActionContext`](../../../../context/quick-action-context/interfaces/quick-action-context.md)&gt;
 
 #### Implementation of
 
