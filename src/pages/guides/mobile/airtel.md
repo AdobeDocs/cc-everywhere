@@ -26,13 +26,13 @@ The Android Mobile SDK gives your app a Kotlin API for launching Adobe Express e
 
 Your host and the SDK have different responsibilities:
 
-| Part of the flow | SDK responsibility | Your host responsibility |
-| --- | --- | --- |
-| Initialization | Create the SDK interface from the supplied configuration | Supply your application identity and retain the returned instance |
-| Browse | Present categories and templates in the returned Fragment | Mount that Fragment in an AppCompat Activity |
-| Template selection | Open the selected template in the editor | Keep the hosting Activity available; don't launch a second editor |
-| Publish | Apply the export configuration and deliver callback data | Select an asset, validate and decode it, and update your UI |
-| Dismiss | Notify the host through the workflow callbacks | Remove the host-mounted browse Fragment at a lifecycle-safe point |
+| Part of the flow   | SDK responsibility                                        | Your host responsibility                                          |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------- |
+| Initialization     | Create the SDK interface from the supplied configuration  | Supply your application identity and retain the returned instance |
+| Browse             | Present categories and templates in the returned Fragment | Mount that Fragment in an AppCompat Activity                      |
+| Template selection | Open the selected template in the editor                  | Keep the hosting Activity available; don't launch a second editor |
+| Publish            | Apply the export configuration and deliver callback data  | Select an asset, validate and decode it, and update your UI       |
+| Dismiss            | Notify the host through the workflow callbacks            | Remove the host-mounted browse Fragment at a lifecycle-safe point |
 
 The distinction matters most at the end of the flow: receiving an image and dismissing a screen are separate operations. You'll handle both, without removing the editor from the publish callback.
 
@@ -42,15 +42,15 @@ Prepare a Kotlin Android app in Android Studio, access to the partner-provided S
 
 Use these settings for the tutorial host:
 
-| Requirement | Setting or preparation |
-| --- | --- |
-| Android runtime | Android 9 / API 28 or later; set `minSdk` to `28` |
-| Host Activity | Extend `androidx.appcompat.app.AppCompatActivity` and use `supportFragmentManager` |
-| Compile SDK | Use `compileSdk = 36`, matching the integration sample; install Android SDK Platform 36 |
-| Android libraries | Include compatible AppCompat, Fragment, and lifecycle coroutine dependencies for the host UI |
-| WebView | Ensure an Android WebView provider is available; SDK initialization checks for it |
-| Network | Allow access to the configured Adobe services; the SDK AAR declares `INTERNET` and `ACCESS_NETWORK_STATE` permissions |
-| Provisioning | Obtain the SDK repository location, any repository credentials, and the application client ID separately |
+| Requirement       | Setting or preparation                                                                                                |
+| ----------------- | --------------------------------------------------------------------------------------------------------------------- |
+| Android runtime   | Android 9 / API 28 or later; set `minSdk` to `28`                                                                     |
+| Host Activity     | Extend `androidx.appcompat.app.AppCompatActivity` and use `supportFragmentManager`                                    |
+| Compile SDK       | Use `compileSdk = 36`, matching the integration sample; install Android SDK Platform 36                               |
+| Android libraries | Include compatible AppCompat, Fragment, and lifecycle coroutine dependencies for the host UI                          |
+| WebView           | Ensure an Android WebView provider is available; SDK initialization checks for it                                     |
+| Network           | Allow access to the configured Adobe services; the SDK AAR declares `INTERNET` and `ACCESS_NETWORK_STATE` permissions |
+| Provisioning      | Obtain the SDK repository location, any repository credentials, and the application client ID separately              |
 
 Don't confuse the device API level with the compile SDK. The SDK's own compile setting is 35, and the transitive dependency set used for this recipe requires up to compile SDK 35. This tutorial uses 36 as the sample's consumer setting, not as a claim that every SDK integration requires 36. Your app's full dependency graph determines its final compile requirements.
 
@@ -81,25 +81,24 @@ The public README doesn't name a repository or promise unauthenticated artifact 
 
 Keep the two kinds of identity separate:
 
-| Value | Used for | Not a replacement for |
-| --- | --- | --- |
+| Value                        | Used for                                                                  | Not a replacement for                                  |
+| ---------------------------- | ------------------------------------------------------------------------- | ------------------------------------------------------ |
 | Maven repository credentials | Download the SDK and its dependency metadata during dependency resolution | Your application client ID or a user's sign-in session |
-| Application client ID | Identify the host in `HostInfo` when initializing the SDK | Maven credentials, a bearer token, or an SDK version |
+| Application client ID        | Identify the host in `HostInfo` when initializing the SDK                 | Maven credentials, a bearer token, or an SDK version   |
 
 ### Add the module dependency and sync
 
 1. Open your app module's `build.gradle.kts`.
 2. Add the SDK to its `dependencies` block using the Kotlin DSL entry for this recipe:
 
-<!-- atlas-non-sdk: gradle-sdk-dependency -->
 ```kotlin
 dependencies {
     implementation("com.adobe.express.embed:embedsdk:PR-2062")
 }
 ```
 
-3. Sync the project in Android Studio so Gradle resolves the SDK and its transitive dependencies.
-4. Confirm that the `com.adobe.express.embedsdk.ExpressEmbedSdk` import resolves in your Kotlin source. The initialization example in Step 3 includes this import.
+1. Sync the project in Android Studio so Gradle resolves the SDK and its transitive dependencies.
+2. Confirm that the `com.adobe.express.embedsdk.ExpressEmbedSdk` import resolves in your Kotlin source. The initialization example in Step 3 includes this import.
 
 The README expresses the dependency as `com.adobe.express.embed:embedsdk:x.y.z` and directs general SDK consumers to [GitHub Releases](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release/releases) for a release version. Here, `PR-2062` replaces `x.y.z` because this guide covers that prerelease's Wishes and Greetings API. It isn't a general recommendation to use a prerelease for unrelated SDK features.
 
@@ -113,16 +112,15 @@ Initialization connects your app's identity and configuration to the SDK interfa
 
 The helper uses these inputs:
 
-| Input | What you supply in this recipe |
-| --- | --- |
-| `hostInfo` | Your provisioned client ID, host application name, and host version |
-| `configParams` | Explicit `Environment.STAGE` and locale `en_US` |
-| `authProvider` | An `AuthOption` selecting `AuthMode.DELAYED` |
-| `appContext` | The Android application context, not a retained Activity |
+| Input          | What you supply in this recipe                                      |
+| -------------- | ------------------------------------------------------------------- |
+| `hostInfo`     | Your provisioned client ID, host application name, and host version |
+| `configParams` | Explicit `Environment.STAGE` and locale `en_US`                     |
+| `authProvider` | An `AuthOption` selecting `AuthMode.DELAYED`                        |
+| `appContext`   | The Android application context, not a retained Activity            |
 
 Add the public initialization helper to your host's SDK integration code:
 
-<!-- atlas-snippet: initialize-public -->
 ```kt-data-line="14-17"
 import android.content.Context
 import com.adobe.express.embedsdk.AuthMode
@@ -163,13 +161,13 @@ Before launching, create the `Callbacks` object that connects the SDK session to
 
 Use these hooks for this integration:
 
-| Hook | Host behavior |
-| --- | --- |
-| `onLoadInit` | Provide the load-initialization callback required by the callback object; a no-op is sufficient for this host |
-| `onCancel` | Report that the session was cancelled rather than treating it as an image export |
-| `onError` | Show an actionable failure message and retain useful diagnostic details |
-| `onPublish` | Record receipt of the publish event, select an image, and start host-side decoding |
-| `onSessionFinished` | After a publish event, request dismissal of the browse surface so the host result screen is revealed |
+| Hook                | Host behavior                                                                                                 |
+| ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| `onLoadInit`        | Provide the load-initialization callback required by the callback object; a no-op is sufficient for this host |
+| `onCancel`          | Report that the session was cancelled rather than treating it as an image export                              |
+| `onError`           | Show an actionable failure message and retain useful diagnostic details                                       |
+| `onPublish`         | Record receipt of the publish event, select an image, and start host-side decoding                            |
+| `onSessionFinished` | After a publish event, request dismissal of the browse surface so the host result screen is revealed          |
 
 The sample maintains a host-owned `publishReceived` flag. It resets that flag before launch, sets it when `onPublish` arrives, and uses it in `onSessionFinished` to decide whether to dismiss the browser. This flag records a publish event, not successful image decoding. A missing or invalid image still needs a visible error message.
 
@@ -181,12 +179,12 @@ The workflow entry point is `sdk.module.wishesAndGreetingsNative`. It returns an
 
 The arguments divide the configuration into four concerns:
 
-| Argument | Purpose in this flow |
-| --- | --- |
-| `wishesAndGreetingsNativeDocConfig` | Initial browse configuration; the default leaves `initialCategoryId` unset |
-| `wishesAndGreetingsNativeAppConfig` | Your callbacks and required `onDismiss` handler |
-| `exportConfig` | The editor's **Use image** PNG export action |
-| `containerConfig` | Editor hosting options; leave it unset for the default editor-over-browser path used here |
+| Argument                            | Purpose in this flow                                                                      |
+| ----------------------------------- | ----------------------------------------------------------------------------------------- |
+| `wishesAndGreetingsNativeDocConfig` | Initial browse configuration; the default leaves `initialCategoryId` unset                |
+| `wishesAndGreetingsNativeAppConfig` | Your callbacks and required `onDismiss` handler                                           |
+| `exportConfig`                      | The editor's **Use image** PNG export action                                              |
+| `containerConfig`                   | Editor hosting options; leave it unset for the default editor-over-browser path used here |
 
 You don't need a category identifier to start. The default `WishesAndGreetingsNativeDocConfig()` uses `initialCategoryId = null`. If your integration later needs a preselected category, use an identifier supplied for that catalog rather than inventing one from its display label.
 
@@ -194,7 +192,6 @@ The app configuration also supports `colorTheme`, `metaData`, `analyticsData`, a
 
 Add the launch helper to your Activity integration code:
 
-<!-- atlas-snippet: launch-public -->
 ```kt-data-line="19,23-25,29,39-42"
 import androidx.appcompat.app.AppCompatActivity
 import com.adobe.express.embedsdk.AssetDataType
@@ -274,22 +271,21 @@ With `containerConfig` unset, the editor opens over the browse surface using the
 
 The launch helper defines one export option. Its outer fields identify the UI action, and `PublishAction` defines the returned data:
 
-| Field | Value in the helper | Meaning |
-| --- | --- | --- |
-| `id` | `returnImage` | Identifier for this export option |
-| `label` | `Use image` | Button text shown for the action |
-| `style` | `ButtonStyle()` | Button presentation using the default style |
-| `target` | `publish` | Deliver the result through the publish flow |
-| `publishFileType` | `image/png` | Request PNG output |
-| `outputType` | `AssetDataType.BASE64` | Request the image data as Base64 |
-| `closeTargetOnExport` | `true` | Request editor close after export |
-| `enableByDefault` | `true` | Enable the export action without requiring a first edit |
+| Field                 | Value in the helper    | Meaning                                                 |
+| --------------------- | ---------------------- | ------------------------------------------------------- |
+| `id`                  | `returnImage`          | Identifier for this export option                       |
+| `label`               | `Use image`            | Button text shown for the action                        |
+| `style`               | `ButtonStyle()`        | Button presentation using the default style             |
+| `target`              | `publish`              | Deliver the result through the publish flow             |
+| `publishFileType`     | `image/png`            | Request PNG output                                      |
+| `outputType`          | `AssetDataType.BASE64` | Request the image data as Base64                        |
+| `closeTargetOnExport` | `true`                 | Request editor close after export                       |
+| `enableByDefault`     | `true`                 | Enable the export action without requiring a first edit |
 
 Select **Use image** in the editor. The `onPublish` callback receives the intent and `PublishParams`. The payload contains a nullable `asset` list; it can also include `exportButtonId` and `documentId`. The export event is not itself a `Bitmap`.
 
 Use the public selection helper inside `onPublish` to find a nonempty payload:
 
-<!-- atlas-snippet: select-published-image -->
 ```kt-data-line="8-9"
 import com.adobe.express.embedsdk.AssetDataType
 import com.adobe.express.embedsdk.OutputAsset
@@ -328,14 +324,14 @@ Follow its bounded PNG path:
 
 The sample applies these limits; they are host safeguards, not SDK export guarantees:
 
-| Check | Sample behavior |
-| --- | --- |
-| Encoded Base64 length | Reject input longer than 11,000,000 characters, checking both the input and extracted encoded data |
-| Decoded or streamed bytes | Accept no more than 8 MiB and require enough bytes for the PNG signature |
-| File format | Require the PNG signature; don't interpret a different format as PNG |
-| Source dimensions | Require positive width and height, each no greater than 32,768 pixels |
-| Display sampling | Increase the sample size by powers of two until the calculated width and height are each at most 2,048 |
-| URI scheme | Accept local `content://` only; reject HTTP and HTTPS |
+| Check                     | Sample behavior                                                                                        |
+| ------------------------- | ------------------------------------------------------------------------------------------------------ |
+| Encoded Base64 length     | Reject input longer than 11,000,000 characters, checking both the input and extracted encoded data     |
+| Decoded or streamed bytes | Accept no more than 8 MiB and require enough bytes for the PNG signature                               |
+| File format               | Require the PNG signature; don't interpret a different format as PNG                                   |
+| Source dimensions         | Require positive width and height, each no greater than 32,768 pixels                                  |
+| Display sampling          | Increase the sample size by powers of two until the calculated width and height are each at most 2,048 |
+| URI scheme                | Accept local `content://` only; reject HTTP and HTTPS                                                  |
 
 The selected asset can therefore still fail to display: its payload might be malformed, exceed a host limit, refer to unavailable local content, or fail bitmap decoding. Show a host-side message such as **Returned image could not be displayed; try publishing again.** Preserve coroutine cancellation by rethrowing `CancellationException` rather than converting it into an image error.
 
@@ -364,19 +360,19 @@ After a successful publish, decode, and return to the host, you should see the e
 
 Use the failing boundary to decide what to inspect:
 
-| Symptom | What to check |
-| --- | --- |
-| Gradle can't resolve the SDK dependency | Confirm the provisioned Maven repository, credentials, and exact coordinate. The generic public README doesn't establish repository access. |
-| `ExpressEmbedSdk` or Wishes configuration types don't resolve | Confirm that the dependency is in the app module and that the selected SDK version includes this prerelease API. Updating an SDK source checkout isn't a consumer dependency update. |
-| Initialization reports `WEB_VIEW_NOT_AVAILABLE` | Check that the Android environment has an available WebView provider. This check occurs before the SDK interface is returned. |
-| Initialization reports `SDK_INITIALIZATION_IN_PROGRESS` | Ensure startup has one initialization owner and that another Activity or event handler isn't initializing concurrently. |
-| The launch button doesn't open a screen after a lifecycle transition | Check the host's saved-state guard. A skipped launch needs a host-managed retry at a safe point; it isn't automatically queued by the helper. |
-| A direct editor call reports `UNSUPPORTED_API` | Use the Wishes workflow's SDK-owned template transition instead of adding a direct third-party `editDesign` call. |
-| Browse opens but editor loading reports a service error | Capture the actual `onError` details and confirm the provisioned environment and application configuration with your Adobe partner contact. An `AccessDenied` response alone doesn't establish its cause. |
-| Publish returns no displayable data | Handle a null or empty asset list, a missing supported data type, and blank `getData()` values before decoding. |
-| The host rejects a URL-typed image | Check its scheme. This decoder accepts local `content://` data only and doesn't support remote-image fetching. |
-| An image is selected but decoding fails | Check PNG format, encoded and byte sizes, dimensions, and local content availability against the host decoder's limits. |
-| The browser remains after export | Check your `onSessionFinished` handling, `onDismiss` back-stack tag, and pending-dismiss behavior when state is saved. Don't infer successful UI removal solely from the session notification. |
+| Symptom                                                              | What to check                                                                                                                                                                                             |
+| -------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Gradle can't resolve the SDK dependency                              | Confirm the provisioned Maven repository, credentials, and exact coordinate. The generic public README doesn't establish repository access.                                                               |
+| `ExpressEmbedSdk` or Wishes configuration types don't resolve        | Confirm that the dependency is in the app module and that the selected SDK version includes this prerelease API. Updating an SDK source checkout isn't a consumer dependency update.                      |
+| Initialization reports `WEB_VIEW_NOT_AVAILABLE`                      | Check that the Android environment has an available WebView provider. This check occurs before the SDK interface is returned.                                                                             |
+| Initialization reports `SDK_INITIALIZATION_IN_PROGRESS`              | Ensure startup has one initialization owner and that another Activity or event handler isn't initializing concurrently.                                                                                   |
+| The launch button doesn't open a screen after a lifecycle transition | Check the host's saved-state guard. A skipped launch needs a host-managed retry at a safe point; it isn't automatically queued by the helper.                                                             |
+| A direct editor call reports `UNSUPPORTED_API`                       | Use the Wishes workflow's SDK-owned template transition instead of adding a direct third-party `editDesign` call.                                                                                         |
+| Browse opens but editor loading reports a service error              | Capture the actual `onError` details and confirm the provisioned environment and application configuration with your Adobe partner contact. An `AccessDenied` response alone doesn't establish its cause. |
+| Publish returns no displayable data                                  | Handle a null or empty asset list, a missing supported data type, and blank `getData()` values before decoding.                                                                                           |
+| The host rejects a URL-typed image                                   | Check its scheme. This decoder accepts local `content://` data only and doesn't support remote-image fetching.                                                                                            |
+| An image is selected but decoding fails                              | Check PNG format, encoded and byte sizes, dimensions, and local content availability against the host decoder's limits.                                                                                   |
+| The browser remains after export                                     | Check your `onSessionFinished` handling, `onDismiss` back-stack tag, and pending-dismiss behavior when state is saved. Don't infer successful UI removal solely from the session notification.            |
 
 When escalating a service failure, provide the SDK version, development environment, failing step, and sanitized callback error details through your approved partner support channel. Don't send Maven passwords, bearer tokens, or exported image payloads as diagnostic logs, and don't substitute another app's client identity to work around an unexplained failure.
 
