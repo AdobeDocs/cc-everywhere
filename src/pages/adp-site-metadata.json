@@ -3,18 +3,13 @@
   "offset": 0,
   "limit": 4,
   "data": [
-    {
-      "key": "contributors",
-      "value": "src/pages/contributors.json"
-    },
+    { "key": "contributors", "value": "src/pages/contributors.json" },
     {
       "key": "get-credentials",
       "value": "src/pages/credential/getcredential.json"
     },
-    {
-      "key": "code-playground",
-      "value": null
-    }
+    { "key": "site-wide-banner", "value": null },
+    { "key": "code-playground", "value": null }
   ],
   ":type": "sheet"
 }
