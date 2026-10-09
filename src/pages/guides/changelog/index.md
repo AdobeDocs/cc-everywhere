@@ -22,7 +22,7 @@ Updated the Embed SDK section in the changelog.\<br>\<br>\<a href="https://raw.g
 
 ### Test
 
-- Subscribe test changelog
+- Subscribe test 2 changelog
 
 ## [v4.57.22] 2026-10-08
 
