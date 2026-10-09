@@ -16,7 +16,9 @@ contributors:
 
 # Changelog
 
-## testing
+## [v9.57.22] 2026-10-09
+
+### Testing
 
 - Subscribe test changelog
 
