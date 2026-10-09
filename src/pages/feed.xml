@@ -6,7 +6,67 @@
     <atom:link href="https://developer.adobe.com/express/embed-sdk/docs/feed.xml" rel="self" type="application/rss+xml" />
     <description>Release notes for the Adobe Express Embed SDK.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 06:40:15 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 07:37:05 GMT</lastBuildDate>
+    <item>
+      <title>v4.58.20</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-58-20-2026-10-09</link>
+      <guid isPermaLink="false">4.58.20-2026-10-09</guid>
+      <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Testing</h3>
+
+<ul>
+<li>Subscribe test changelog</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.57.22</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-57-22-2026-10-08</link>
+      <guid isPermaLink="false">4.57.22-2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/">`EditFurtherIntent.ERASE`</a> to the starting intent for Edit Image.</li>
+<li>Various performance improvements and fixes.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.56.21</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-56-21-2026-09-30</link>
+      <guid isPermaLink="false">4.56.21-2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added per-document success/failure status to the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets">migrateAssets()</a> `MigrateAssetsResult`.</li>
+<li>Added optional `tooltip` field to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-export-option#properties">`PublishExportOption`</a> in `ExportConfig`, letting hosts customize the hover tooltip text on publish-target export buttons.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.55.8</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-55-8-2026-09-24</link>
+      <guid isPermaLink="false">4.55.8-2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/ede/">Embedded Design Editor (EDE) concept guide</a> that introduces EDE's configurable, focused creation experiences, along with companion <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/ede-create-design/">Create Design</a> and <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/ede-edit-design/">Edit Design</a> guides.</li>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/embedded-design-editor/">Embedded Design Editor tutorial</a> that walks through building a Create Design → Edit Design flow step by step.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.55.8</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-55-8-2026-09-16</link>
+      <guid isPermaLink="false">4.55.8-2026-09-16</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets">`migrateAssets()`</a>: Added support for asset migration (guest to logged-in user) in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#interfaces">Partner Assertion</a> workflow.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context/">`DesignViewerContext`</a>: Added support for accessing the context of the Design Viewer, allowing host applications to provide additional assets after the initial load via the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context#updatedesignassets">`updateDesignAssets`</a> method.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config#properties">`hideTemplatePreview`</a>: Added a configuration option to hide Template Preview, allowing clients to navigate directly to the editor after selecting a template.</li></ul>
+]]></description>
+    </item>
     <item>
       <title>v4.54.18</title>
       <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-54-18-2026-09-02</link>

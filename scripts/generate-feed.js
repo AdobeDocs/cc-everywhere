@@ -18,8 +18,8 @@ const CHANGELOG_FILE = path.join(
 );
 const FEED_FILE = path.join(ROOT_DIR, "src", "pages", "feed.xml");
 
-// Matches "## [4.54.18] 2026-09-02", "## [4.16.11] - 2024-11-18", and bare "## 2025-11-14"
-const HEADING_RE = /^## (?:\[([\d.]+)\]\s*-?\s*)?(\d{4}-\d{2}-\d{2})\s*$/;
+// Matches "## [v4.57.22] 2026-10-08", "## [4.54.18] 2026-09-02", "## [4.16.11] - 2024-11-18", and bare "## 2025-11-14"
+const HEADING_RE = /^## (?:\[\s*v?([\d.]+)\s*\]\s*-?\s*)?(\d{4}-\d{2}-\d{2})\s*$/i;
 
 function stripFrontmatter(markdown) {
   return markdown.replace(/^---\n[\s\S]*?\n---\n/, "");
@@ -38,8 +38,9 @@ function parseReleases(markdown) {
     const match = line.match(HEADING_RE);
     if (match) {
       if (current) releases.push(current);
-      const [, version, date] = match;
-      current = { version: version || null, date, bodyLines: [] };
+      const [, rawVersion, date] = match;
+      const version = rawVersion ? rawVersion.replace(/^v/i, "").trim() : null;
+      current = { version, date, bodyLines: [] };
     } else if (current) {
       current.bodyLines.push(line);
     }
