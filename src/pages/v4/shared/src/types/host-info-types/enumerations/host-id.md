@@ -26,6 +26,7 @@ hideEditInGitHub: true
 | `A_DOT_COM` | `"A_DOT_COM"` |
 | `BRIDGE` | `"BRIDGE"` |
 | `BRIDGEWAY` | `"BRIDGEWAY"` |
+| `CAPTIVATE` | `"CAPTIVATE"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
 | `EXPRESS_MCP_CLIENT` | `"EXPRESS_MCP_CLIENT"` |

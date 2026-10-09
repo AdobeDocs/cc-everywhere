@@ -93,7 +93,7 @@ createDesign(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<DesignContext>;
 ```
 
 Create a new design. Open template gallery as the default entry experience.
@@ -108,7 +108,9 @@ Create a new design. Open template gallery as the default entry experience.
 
 #### Returns
 
-`void`
+`Promise`&lt;[`DesignContext`](../../../../context/modules/design-context/interfaces/design-context.md)&gt;
+
+Promise resolving with DesignContext when loaded; rejects on failure or cancellation.
 
 <HorizontalLine />
 
@@ -120,7 +122,7 @@ editDesign(
    appConfig?, 
    exportConfig?, 
    containerConfig?
-): void;
+): Promise<DesignContext>;
 ```
 
 Edit and customize a template or document in the Focused Design Editor (FDE).
@@ -136,7 +138,9 @@ Edit and customize a template or document in the Focused Design Editor (FDE).
 
 #### Returns
 
-`void`
+`Promise`&lt;[`DesignContext`](../../../../context/modules/design-context/interfaces/design-context.md)&gt;
+
+Promise resolving with DesignContext when loaded; rejects on failure or cancellation.
 
 <HorizontalLine />
 

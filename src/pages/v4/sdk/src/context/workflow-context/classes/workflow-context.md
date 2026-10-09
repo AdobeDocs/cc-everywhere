@@ -15,7 +15,7 @@ This should be extended by all the workflow contexts like EditorContext, GenStud
 
 - [`DesignViewerContext`](../../3p/design-viewer-context/classes/design-viewer-context.md)
 - [`EditorContext`](../../3p/editor-context/classes/editor-context.md)
-- [`RequestResponseWorkflowContext`](../../request-response-workflow-context/classes/request-response-workflow-context.md)
+- [`ActionWorkflowContext`](../../action-workflow-context/classes/action-workflow-context.md)
 
 ## Type Parameters
 

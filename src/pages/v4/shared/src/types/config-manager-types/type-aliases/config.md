@@ -211,6 +211,8 @@ CLIENTS: object;
 | `BRIDGE.CLIENT_ID` | `string` | - |
 | `BRIDGEWAY` | `object` | - |
 | `BRIDGEWAY.CLIENT_ID` | `string` | - |
+| `CAPTIVATE` | `object` | - |
+| `CAPTIVATE.CLIENT_ID` | `string` | - |
 | `CCD` | `object` | - |
 | `CCD.CLIENT_ID_PREFIX` | `string` | - |
 | `CONTENT_CAL` | `object` | - |
