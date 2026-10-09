@@ -1,10 +1,6 @@
 - pathPrefix:
     - /express/embed-sdk/docs/
 
-- buttons:
-    - [🟠RSS](https://raw.githubusercontent.com/AdobeDocs/cc-everywhere/refs/heads/feedgeneratexml/src/pages/feed.xml?aio_external)
-    - [Console](https://developer.adobe.com/console/)
-
 - pages:
     - [Adobe Express Embed SDK](https://developer.adobe.com/express/embed-sdk)
     - [Guides](/guides/index.md)
