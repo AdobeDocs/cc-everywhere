@@ -6,13 +6,13 @@
     <atom:link href="https://developer.adobe.com/express/embed-sdk/docs/feed.xml" rel="self" type="application/rss+xml" />
     <description>Release notes for the Adobe Express Embed SDK.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 07:37:05 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 09:24:04 GMT</lastBuildDate>
     <item>
       <title>v4.58.20</title>
       <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-58-20-2026-10-09</link>
       <guid isPermaLink="false">4.58.20-2026-10-09</guid>
       <pubDate>Fri, 09 Oct 2026 00:00:00 GMT</pubDate>
-      <description><![CDATA[<h3>Testing</h3>
+      <description><![CDATA[<h3>Test</h3>
 
 <ul>
 <li>Subscribe test changelog</li></ul>
