@@ -6,7 +6,7 @@
     <atom:link href="https://developer.adobe.com/express/embed-sdk/docs/feed.xml" rel="self" type="application/rss+xml" />
     <description>Release notes for the Adobe Express Embed SDK.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 09 Oct 2026 11:07:31 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2026 13:25:11 GMT</lastBuildDate>
     <item>
       <title>v4.58.20</title>
       <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-58-20-2026-10-09</link>
@@ -15,7 +15,7 @@
       <description><![CDATA[<h3>Test</h3>
 
 <ul>
-<li>Subscribe test changelog</li></ul>
+<li>Subscribe test 2 changelog</li></ul>
 ]]></description>
     </item>
     <item>
@@ -26,7 +26,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/">`EditFurtherIntent.ERASE`</a> to the starting intent for Edit Image.</li>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/"><code>EditFurtherIntent.ERASE</code></a> to the starting intent for Edit Image.</li>
 <li>Various performance improvements and fixes.</li></ul>
 ]]></description>
     </item>
@@ -38,8 +38,8 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>Added per-document success/failure status to the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets">migrateAssets()</a> `MigrateAssetsResult`.</li>
-<li>Added optional `tooltip` field to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-export-option#properties">`PublishExportOption`</a> in `ExportConfig`, letting hosts customize the hover tooltip text on publish-target export buttons.</li></ul>
+<li>Added per-document success/failure status to the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets">migrateAssets()</a> <code>MigrateAssetsResult</code>.</li>
+<li>Added optional <code>tooltip</code> field to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-export-option#properties"><code>PublishExportOption</code></a> in <code>ExportConfig</code>, letting hosts customize the hover tooltip text on publish-target export buttons.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -62,9 +62,9 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets">`migrateAssets()`</a>: Added support for asset migration (guest to logged-in user) in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#interfaces">Partner Assertion</a> workflow.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context/">`DesignViewerContext`</a>: Added support for accessing the context of the Design Viewer, allowing host applications to provide additional assets after the initial load via the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context#updatedesignassets">`updateDesignAssets`</a> method.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config#properties">`hideTemplatePreview`</a>: Added a configuration option to hide Template Preview, allowing clients to navigate directly to the editor after selecting a template.</li></ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets"><code>migrateAssets()</code></a>: Added support for asset migration (guest to logged-in user) in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#interfaces">Partner Assertion</a> workflow.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context/"><code>DesignViewerContext</code></a>: Added support for accessing the context of the Design Viewer, allowing host applications to provide additional assets after the initial load via the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context#updatedesignassets"><code>updateDesignAssets</code></a> method.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config#properties"><code>hideTemplatePreview</code></a>: Added a configuration option to hide Template Preview, allowing clients to navigate directly to the editor after selecting a template.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -75,14 +75,14 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config/">`editorGuideConfig`</a>: Added a new property to configure the visibility of Bleed, Margins, and Rulers in the Edit Design module's UI.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config/">`pdfPrintConfig`</a>: Added a new property to configure the print-ready PDF export in the Edit Design module (`"print"` variant), including Crop Marks, Bleed, Color Mode, and ICC Profile.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config/"><code>editorGuideConfig</code></a>: Added a new property to configure the visibility of Bleed, Margins, and Rulers in the Edit Design module's UI.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config/"><code>pdfPrintConfig</code></a>: Added a new property to configure the print-ready PDF export in the Edit Design module (<code>"print"</code> variant), including Crop Marks, Bleed, Color Mode, and ICC Profile.</li>
 </ul>
 
 <h3>Fixed</h3>
 
 <ul>
-<li>`createDesign()` with `"print"` variant now correctly displays bleed in the editor preview.</li>
+<li><code>createDesign()</code> with <code>"print"</code> variant now correctly displays bleed in the editor preview.</li>
 </ul>
 
 <h3>Documentation</h3>
@@ -99,8 +99,8 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#type-aliases">`PartnerAssertionAuthConfig`</a>: Added a new `PartnerAssertionAuthConfig` interface to support partner assertion authentication in the SDK. This allows host applications to provide a partner assertion token for authentication purposes (guest, signed-in, or guest-to-user transition), enabling seamless integration with partner systems.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-action#properties">`PublishAction.previewConfig`</a>: Added a new `previewConfig` property of type <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/asset-preview-config/">`AssetPreviewConfig`</a> to the `PublishAction` interface, allowing host applications to configure an additional image as the output preview of the exported asset.</li></ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#type-aliases"><code>PartnerAssertionAuthConfig</code></a>: Added a new <code>PartnerAssertionAuthConfig</code> interface to support partner assertion authentication in the SDK. This allows host applications to provide a partner assertion token for authentication purposes (guest, signed-in, or guest-to-user transition), enabling seamless integration with partner systems.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-action#properties"><code>PublishAction.previewConfig</code></a>: Added a new <code>previewConfig</code> property of type <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/asset-preview-config/"><code>AssetPreviewConfig</code></a> to the <code>PublishAction</code> interface, allowing host applications to configure an additional image as the output preview of the exported asset.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -111,8 +111,8 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config/">`CCEverywhere.DesignViewerDocConfig`</a>: Adding support to Design Viewer to accept multiple assets in the `docConfig`.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">`CCEverywhere.EditorAppConfig.editorMode`</a>: Added a new optional `editorMode` property to the Full Editor `appConfig`. When set to `'assistant'`, the editor opens with the AI Assistant panel active, giving users immediate access to AI-powered editing features without any extra clicks.</li></ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config/"><code>CCEverywhere.DesignViewerDocConfig</code></a>: Adding support to Design Viewer to accept multiple assets in the <code>docConfig</code>.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.EditorAppConfig.editorMode</code></a>: Added a new optional <code>editorMode</code> property to the Full Editor <code>appConfig</code>. When set to <code>'assistant'</code>, the editor opens with the AI Assistant panel active, giving users immediate access to AI-powered editing features without any extra clicks.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -123,7 +123,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/template-browser-v2/">Template Browser v2 concept guide</a> that covers the implementation details of the **new tabbed Template Browser experience for authenticated users**. This version coexists with the existing Template Browser v1, which remains unchanged and available.</li></ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/template-browser-v2/">Template Browser v2 concept guide</a> that covers the implementation details of the <strong>new tabbed Template Browser experience for authenticated users</strong>. This version coexists with the existing Template Browser v1, which remains unchanged and available.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -152,7 +152,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#viewdesign">`CCEverywhere.viewDesign`</a>**: Added a new Design Viewer module to the SDK, alongside with a dedicated <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config/">`DesignViewerAppConfig`</a> interface to configure the module and a <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config/">`DesignViewerDocConfig`</a> interface to pass the document configuration.</li></ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#viewdesign"><code>CCEverywhere.viewDesign</code></a></strong>: Added a new Design Viewer module to the SDK, alongside with a dedicated <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config/"><code>DesignViewerAppConfig</code></a> interface to configure the module and a <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config/"><code>DesignViewerDocConfig</code></a> interface to pass the document configuration.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -163,12 +163,10 @@
       <description><![CDATA[<h3>Documentation</h3>
 
 <ul>
-<li>Expanded the **Mobile Web Concept Guide** to cover all the implementation details:</li>
-</ul>
-<p>  - New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-overview/">Overview</a> with a clear comparison between Mobile Web and Mobile SDKs.</p>
-<p>  - New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-webview/">Mobile Web in a WebView</a> concept guide that covers the implementation details of the experience for iOS and Android apps.</p>
-<p>  - Improved information architecture for the Mobile Web section.</p>
-<ul>
+<li>Expanded the <strong>Mobile Web Concept Guide</strong> to cover all the implementation details:</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-overview/">Overview</a> with a clear comparison between Mobile Web and Mobile SDKs.</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-webview/">Mobile Web in a WebView</a> concept guide that covers the implementation details of the experience for iOS and Android apps.</li>
+<li>Improved information architecture for the Mobile Web section.</li>
 <li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/mobile-web/">Mobile Web tutorial</a> with a Fantasy Sports themed, badge creation end-to-end example with working sample projects for Web (client and server), Android and iOS.</li></ul>
 ]]></description>
     </item>
@@ -180,8 +178,8 @@
       <description><![CDATA[<h3>API Enhancement</h3>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-action/">`CCEverywhere.PublishAction.outputType`</a>**: Added an option to change the output file type as Blob for Quick Actions and Module Workflows.</li>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/publish-config#properties">`CCEverywhere.PublishConfig.outputType`</a>**: Added a new asset data type to account for the Blob output type.</li></ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-action/"><code>CCEverywhere.PublishAction.outputType</code></a></strong>: Added an option to change the output file type as Blob for Quick Actions and Module Workflows.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/publish-config#properties"><code>CCEverywhere.PublishConfig.outputType</code></a></strong>: Added a new asset data type to account for the Blob output type.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -192,7 +190,7 @@
       <description><![CDATA[<h3>API Enhancement</h3>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/design-config-types/interfaces/base-app-config#properties">`CCEverywhere.BaseAppConfig.metaData`</a>**: Enabled metadata support, allowing custom key-value pairs to be passed across all workflows.</li></ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/design-config-types/interfaces/base-app-config#properties"><code>CCEverywhere.BaseAppConfig.metaData</code></a></strong>: Enabled metadata support, allowing custom key-value pairs to be passed across all workflows.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -221,21 +219,19 @@
       <description><![CDATA[<h3>API Enhancement</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/design-config-types/interfaces/base-app-config#properties">`CCEverywhere.BaseAppConfig.useClientAuth`</a>: Added a new feature to enable no consumption of credits for Generative AI workflows. This configuration can only be used for Generate Image and Edit Image workflows for selected enabled partners.</li>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/call-back-target#callback">`CCEverywhere.CallBackTarget.CALLBACK`</a>**: Added a new callback export target to trigger callback actions without publishing or downloading assets.</li>
-<li>**Custom Message Workflow**:</li>
-</ul>
-<p>  - Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/enumerations/message-type#workflow_context">`WORKFLOW_CONTEXT`</a> message type for module-specific communication.</p>
-<p>  - New <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/interfaces/custom-message/">`CustomMessage`</a> interface includes instance ID, request ID, action, intent, and optional data.</p>
-<p>  - Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/enumerations/custom-message-action/">`CustomMessageAction`</a> enum with actions for notifying unsaved changes and requesting assets.</p>
-<ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/container-config-types/interfaces/modal-container-config#properties">`CCEverywhere.ModalContainerConfig.showExpressIconWithText`</a>**: the new default loading experience will include the Express logo plus text.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/design-config-types/interfaces/base-app-config#properties"><code>CCEverywhere.BaseAppConfig.useClientAuth</code></a>: Added a new feature to enable no consumption of credits for Generative AI workflows. This configuration can only be used for Generate Image and Edit Image workflows for selected enabled partners.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/call-back-target#callback"><code>CCEverywhere.CallBackTarget.CALLBACK</code></a></strong>: Added a new callback export target to trigger callback actions without publishing or downloading assets.</li>
+<li><strong>Custom Message Workflow</strong>:</li>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/enumerations/message-type#workflow_context"><code>WORKFLOW_CONTEXT</code></a> message type for module-specific communication.</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/interfaces/custom-message/"><code>CustomMessage</code></a> interface includes instance ID, request ID, action, intent, and optional data.</li>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/enumerations/custom-message-action/"><code>CustomMessageAction</code></a> enum with actions for notifying unsaved changes and requesting assets.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/container-config-types/interfaces/modal-container-config#properties"><code>CCEverywhere.ModalContainerConfig.showExpressIconWithText</code></a></strong>: the new default loading experience will include the Express logo plus text.</li>
 </ul>
 
 <h3>Tech Enhancement</h3>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor</a>**: Added support to configure the canvas background color (String in the `RRGGBBAA` HEX format).</li></ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor</a></strong>: Added support to configure the canvas background color (String in the <code>RRGGBBAA</code> HEX format).</li></ul>
 ]]></description>
     </item>
     <item>
@@ -246,15 +242,15 @@
       <description><![CDATA[<h3>API Enhancement</h3>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/callbacks-types/type-aliases/cancel-callback/">`CCEverywhere.ModuleWorkflow.CancelCallback`</a>**: Added optional parameter `isEscapePressed` as part of `onCancel` callback which is `true` if the cancel was triggered by escape key press during loading.</li>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/host-info-types/interfaces/host-info-specified-base#properties">`CCEverywhere.HostInfo.coiEnabled`</a>**: Added property in `HostInfo` to indicate if COI (Cross-Origin Isolation) is enabled for client.</li>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/container-config-types/interfaces/base-container-config#properties">`CCEverywhere.BaseContainerConfig.iframeTitle`</a>**: Added support to configure iframe title for accessibility.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/callbacks-types/type-aliases/cancel-callback/"><code>CCEverywhere.ModuleWorkflow.CancelCallback</code></a></strong>: Added optional parameter <code>isEscapePressed</code> as part of <code>onCancel</code> callback which is <code>true</code> if the cancel was triggered by escape key press during loading.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/host-info-types/interfaces/host-info-specified-base#properties"><code>CCEverywhere.HostInfo.coiEnabled</code></a></strong>: Added property in <code>HostInfo</code> to indicate if COI (Cross-Origin Isolation) is enabled for client.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/container-config-types/interfaces/base-container-config#properties"><code>CCEverywhere.BaseContainerConfig.iframeTitle</code></a></strong>: Added support to configure iframe title for accessibility.</li>
 </ul>
 
 <h3>Tech Enhancement</h3>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config#properties">`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`</a>**: Added support to surface collections other than Express collections.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config#properties"><code>CCEverywhere.BrowseSearchBaseConfig.rootCollectionId</code></a></strong>: Added support to surface collections other than Express collections.</li>
 </ul>
 
 <h3>Documentation</h3>
@@ -271,7 +267,7 @@
       <description><![CDATA[<h3>Documentation</h3>
 
 <ul>
-<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/tethering/">Concept guide</a> that covers the **Workflow Tethering** details—the possibility to chain multiple workflows together to create a more complex experience.</li>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/tethering/">Concept guide</a> that covers the <strong>Workflow Tethering</strong> details—the possibility to chain multiple workflows together to create a more complex experience.</li>
 <li>Added a new comprehensive <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/workflow-tethering/">Workflow Tethering tutorial</a> which builds on the Concept guide and provides a more practical example of how to implement two of the most common workflow tethering patterns: Generate Image → Edit Image and Edit Image → Full Editor.</li></ul>
 ]]></description>
     </item>
@@ -283,7 +279,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>**`AUTO` content type**: Added the `AUTO` option to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/">`ImageContentType`</a> that allows the system to automatically determine the most appropriate content type based on the prompt and context.</li></ul>
+<li><strong><code>AUTO</code> content type</strong>: Added the <code>AUTO</code> option to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/"><code>ImageContentType</code></a> that allows the system to automatically determine the most appropriate content type based on the prompt and context.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -294,7 +290,7 @@
       <description><![CDATA[<h3>Fixed</h3>
 
 <ul>
-<li>Removed the `ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` enumerations from the `CCEverywhere.TextToImageAppConfig.panelSettings` property.</li>
+<li>Removed the <code>ImageColorStyle</code>, <code>ImageCompositionStyle</code>, and <code>ImageLightingStyle</code> enumerations from the <code>CCEverywhere.TextToImageAppConfig.panelSettings</code> property.</li>
 </ul>
 
 <h3>Documentation</h3>
@@ -313,15 +309,13 @@
 <p>#### Enhanced Panel Settings for Generate Image</p>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#panelsettings">`CCEverywhere.TextToImageAppConfig.panelSettings`</a>**: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:</li>
-</ul>
-<p>  - <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/panel-settings/">`PanelSettings`</a>: Container interface for all panel settings.</p>
-<p>  - <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/style-setting/">`StyleSetting`</a>: Configuration for artistic styles with support for multiple style categories.</p>
-<p>  - <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/content-type-setting/">`ContentTypeSetting`</a>: Setting for content type selection (photo, graphic, art).</p>
-<ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#hidefeedbackmenu">`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`</a>**: Added option to hide feedback menu in header bar.</li>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#ispromptsafe">`CCEverywhere.TextToImageAppConfig.isPromptSafe`</a>**: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic.</li>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#promptinputplaceholder">`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`</a>**: Added placeholder text configuration for prompt input field (Generate Image v2 only).</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#panelsettings"><code>CCEverywhere.TextToImageAppConfig.panelSettings</code></a></strong>: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/panel-settings/"><code>PanelSettings</code></a>: Container interface for all panel settings.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/style-setting/"><code>StyleSetting</code></a>: Configuration for artistic styles with support for multiple style categories.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/content-type-setting/"><code>ContentTypeSetting</code></a>: Setting for content type selection (photo, graphic, art).</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#hidefeedbackmenu"><code>CCEverywhere.TextToImageAppConfig.hideFeedbackMenu</code></a></strong>: Added option to hide feedback menu in header bar.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#ispromptsafe"><code>CCEverywhere.TextToImageAppConfig.isPromptSafe</code></a></strong>: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#promptinputplaceholder"><code>CCEverywhere.TextToImageAppConfig.promptInputPlaceholder</code></a></strong>: Added placeholder text configuration for prompt input field (Generate Image v2 only).</li>
 </ul>
 
 <p>Both the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/generate-image/">Generate Image tutorial</a> and the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/generate-image-v2/">Concept Guide</a> have been updated to reflect the new updates.</p>
@@ -331,29 +325,29 @@
 <p>Added comprehensive style enumerations to provide granular control over image generation aesthetics:</p>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/">`ImageContentType`</a>: Primary content types (photo, graphic, art)</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style/">`ImageThemeStyle`</a>: 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-technique-style/">`ImageTechniqueStyle`</a>: 12 artistic techniques from painting and sketching to watercolor and linocut</li>
-<li>`ImageLightingStyle`: five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting</li>
-<li>`ImageCompositionStyle`: seven composition styles for camera angles and framing</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style/">`ImageEffectStyle`</a>: nine visual effects including bokeh, fisheye, neon, and bioluminescent</li>
-<li>`ImageColorStyle`: six color palette options from black & white to vibrant and pastel colors</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-movement-style/">`ImageMovementStyle`</a>: 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-material-style/">`ImageMaterialStyle`</a>: nine material simulations from claymation to marble sculpture</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style/">`ImageConceptStyle`</a>: six conceptual moods for emotional tone</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/type-aliases/image-style-id/">`ImageStyleId`</a>: Union type combining all available style options</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/"><code>ImageContentType</code></a>: Primary content types (photo, graphic, art)</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style/"><code>ImageThemeStyle</code></a>: 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-technique-style/"><code>ImageTechniqueStyle</code></a>: 12 artistic techniques from painting and sketching to watercolor and linocut</li>
+<li><code>ImageLightingStyle</code>: five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting</li>
+<li><code>ImageCompositionStyle</code>: seven composition styles for camera angles and framing</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style/"><code>ImageEffectStyle</code></a>: nine visual effects including bokeh, fisheye, neon, and bioluminescent</li>
+<li><code>ImageColorStyle</code>: six color palette options from black & white to vibrant and pastel colors</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-movement-style/"><code>ImageMovementStyle</code></a>: 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-material-style/"><code>ImageMaterialStyle</code></a>: nine material simulations from claymation to marble sculpture</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style/"><code>ImageConceptStyle</code></a>: six conceptual moods for emotional tone</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/type-aliases/image-style-id/"><code>ImageStyleId</code></a>: Union type combining all available style options</li>
 </ul>
 
 <p>#### Enhanced User Experience Features</p>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#inlinetouconsent">`CCEverywhere.EditImageAppConfig.inlineTOUConsent`</a>**: Added inline Terms of Use consent configuration.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#inlinetouconsent"><code>CCEverywhere.EditImageAppConfig.inlineTOUConsent</code></a></strong>: Added inline Terms of Use consent configuration.</li>
 </ul>
 
 <p>#### Export Configuration Enhancements</p>
 
 <ul>
-<li>**<a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-button-group/">`PublishButtonGroup`</a>**: New publish button group interface for better export organization.</li></ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-button-group/"><code>PublishButtonGroup</code></a></strong>: New publish button group interface for better export organization.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -370,7 +364,7 @@
 <h3>Enhancements</h3>
 
 <ul>
-<li>The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/type-aliases/asset/">`Asset`</a>)</li></ul>
+<li>The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/type-aliases/asset/"><code>Asset</code></a>)</li></ul>
 ]]></description>
     </item>
     <item>
@@ -390,20 +384,22 @@
 <p>#### Unlocked new Edit Image v2 experience</p>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow/">**`CCEverywhere.module.editImage()`**</a>: Introduced a <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/edit-image-v2/">new Edit Image v2 experience</a>, rearchitected to deliver significantly improved performance and a better user experience.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow/"><strong><code>CCEverywhere.module.editImage()</code></strong></a>: Introduced a <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/edit-image-v2/">new Edit Image v2 experience</a>, rearchitected to deliver significantly improved performance and a better user experience.</li>
 </ul>
 
-<p>  **Key Features:**</p>
-<p>  - **Reduced load times** in the range of 35% to 50%.</p>
-<p>  - **Reduced memory consumption** by 35%.</p>
-<p>  - **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.</p>
+<p>  <strong>Key Features:</strong></p>
+<ul>
+<li><strong>Reduced load times</strong> in the range of 35% to 50%.</li>
+<li><strong>Reduced memory consumption</strong> by 35%.</li>
+<li><strong>New modular UI</strong> with improved user experience and implementation of the new Adobe Spectrum 2 design system.</li>
+</ul>
 
 <p>  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/edit-image-v2/">Edit Image v2</a> page to learn more.</p>
 
 <p>#### Custom Community Wall</p>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">**`CCEverywhere.TextToImageAppConfig.communityWallConfig`**</a>: Added a new `communityWallConfig` property to allow host applications to **populate the Community Wall with custom images** instead of Firefly's default assets.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><strong><code>CCEverywhere.TextToImageAppConfig.communityWallConfig</code></strong></a>: Added a new <code>communityWallConfig</code> property to allow host applications to <strong>populate the Community Wall with custom images</strong> instead of Firefly's default assets.</li>
 </ul>
 
 <p>  Please refer to the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/generate-image-v2#custom-community-wall">this section</a> of the Generate Image v2 page for the implementation details.</p>
@@ -411,18 +407,16 @@
 <p>#### New APIs</p>
 
 <ul>
-<li>Two new properties to the `AppConfig` object to control "Show margins" and "Show bleed" behavior have been added:</li>
-</ul>
-<p>  - <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">`CCEverywhere.EditorAppConfig.showPageMargin`</a></p>
-<p>  - <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">`CCEverywhere.EditorAppConfig.showBleedArea`</a></p>
-<ul>
-<li>The PDF file type has been deprecated in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#properties">`AppConfig.allowedFileTypes`</a> property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.</li>
+<li>Two new properties to the <code>AppConfig</code> object to control "Show margins" and "Show bleed" behavior have been added:</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.EditorAppConfig.showPageMargin</code></a></li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.EditorAppConfig.showBleedArea</code></a></li>
+<li>The PDF file type has been deprecated in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#properties"><code>AppConfig.allowedFileTypes</code></a> property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.</li>
 </ul>
 
 <h3>Documentation</h3>
 
 <ul>
-<li>Enhanced <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/appconfig/">Editor Customization</a> concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance.</li></ul>
+<li>Enhanced <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/appconfig/">Editor Customization</a> concept guide with configuration options (<code>assetCollection</code>, <code>showPageMargin</code>, <code>showBleedArea</code>), improved structure, comprehensive use cases and examples, and implementation guidance.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -433,8 +427,8 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">`CCEverywhere.BaseEditorAppConfig.assetCollection`</a>: A new optional `assetCollection` property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/callbacks-types/interfaces/callbacks#properties">`CCEverywhere.Callbacks.onIntentChange`</a>: A new optional `onIntentChange` callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.BaseEditorAppConfig.assetCollection</code></a>: A new optional <code>assetCollection</code> property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/callbacks-types/interfaces/callbacks#properties"><code>CCEverywhere.Callbacks.onIntentChange</code></a>: A new optional <code>onIntentChange</code> callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.</li>
 <li>Performance improvements and bug fixes.</li></ul>
 ]]></description>
     </item>
@@ -446,8 +440,8 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`CCEverywhere.BaseEditorAppConfig.analyticsData`</a>: A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.).</li>
-<li>Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.BaseEditorAppConfig.analyticsData</code></a>: A new optional <code>analyticsData</code> property has been added to the <code>AppConfig</code> interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the <code>hostAppTrigger</code> value to indicate the user action within the host application that launched the module (e.g., <code>add-image</code>, <code>replace-image</code>, <code>gmail</code>, etc.).</li>
+<li>Added <code>clientCtaLocation</code> and <code>workflowLoadCompleted</code> optional property as part of Cancel event from the SDK.</li>
 <li>Various performance improvements and bug fixes.</li></ul>
 ]]></description>
     </item>
@@ -472,30 +466,30 @@
 <p>#### Unlocked new Generate Image V2 experience</p>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">**`CCEverywhere.TextToImageAppConfig.appVersion`**</a>: Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.</li>
-</ul>
-<p>  - When set to `"2"`, users can access the updated interface and features.</p>
-<p>  - By default, this property is set to `"1"`, displaying the older experience.</p>
-
-<p>**Key Features:**</p>
-
-<ul>
-<li>**Enhanced User Interface**: Redesigned with a new Carousel and Grid view.</li>
-<li>**Community Wall**: An endless collection of generated images with prompts for users to select from.</li>
-<li>**Fast Mode**: Generates images faster with lesser details, suitable for simple topics, backgrounds, illustrations, and close portraits.</li>
-<li>**Improved Prompt Bar**: Includes prompt suggestions for a better user experience.</li>
-<li>**Rich Previews**: Provides a more interactive and engaging preview experience.</li>
-<li>**And more!**</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><strong><code>CCEverywhere.TextToImageAppConfig.appVersion</code></strong></a>: Introduced a new enhanced UI in the Generate Image Module, configurable using <code>appVersion</code> in <code>AppConfig</code>.</li>
+<li>When set to <code>"2"</code>, users can access the updated interface and features.</li>
+<li>By default, this property is set to <code>"1"</code>, displaying the older experience.</li>
 </ul>
 
-<p>**Configurations available in `CCEverywhere` after enabling the new UI:**</p>
+<p><strong>Key Features:</strong></p>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`TextToImageAppConfig.thumbnailOptions`</a>: Options to be displayed on the thumbnail.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`TextToImageAppConfig.editDropdownOptions`</a>: Options for the Edit dropdown.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`TextToImageAppConfig.publishConfig`</a>: Configuration for the Publish action.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`TextToImageAppConfig.fastModeConfig`</a>: Configuration for enabling or disabling fast mode default state.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`TextToImageAppConfig.featureConfig`</a>: Configuration for enabling or disabling specific features.</li>
+<li><strong>Enhanced User Interface</strong>: Redesigned with a new Carousel and Grid view.</li>
+<li><strong>Community Wall</strong>: An endless collection of generated images with prompts for users to select from.</li>
+<li><strong>Fast Mode</strong>: Generates images faster with lesser details, suitable for simple topics, backgrounds, illustrations, and close portraits.</li>
+<li><strong>Improved Prompt Bar</strong>: Includes prompt suggestions for a better user experience.</li>
+<li><strong>Rich Previews</strong>: Provides a more interactive and engaging preview experience.</li>
+<li><strong>And more!</strong></li>
+</ul>
+
+<p><strong>Configurations available in <code>CCEverywhere</code> after enabling the new UI:</strong></p>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.thumbnailOptions</code></a>: Options to be displayed on the thumbnail.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.editDropdownOptions</code></a>: Options for the Edit dropdown.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.publishConfig</code></a>: Configuration for the Publish action.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.fastModeConfig</code></a>: Configuration for enabling or disabling fast mode default state.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.featureConfig</code></a>: Configuration for enabling or disabling specific features.</li>
 </ul>
 
 <p>#### Concept guide for Generate Image V2</p>
@@ -507,20 +501,20 @@
 <p>Updated the <a href="https://demo.expressembed.com/">Demo App</a> to showcase the Generate Image V2 feature. To use the new feature:</p>
 
 <ul>
-<li>Navigate to **Generative** -> **Generate image** -> **Next**</li>
+<li>Navigate to <strong>Generative</strong> -> <strong>Generate image</strong> -> <strong>Next</strong></li>
 <li>In the Configuration options, Select generate image version as V2.</li>
 </ul>
 
 <p><a href="https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/images/demo-app.png">![Demo App</a>](https://demo.expressembed.com/)</p>
 
 <ul>
-<li>Select all the options you need and click **Create with Adobe Express**</li>
+<li>Select all the options you need and click <strong>Create with Adobe Express</strong></li>
 </ul>
 
-<p>#### Support for `pdfPrint`</p>
+<p>#### Support for <code>pdfPrint</code></p>
 
 <ul>
-<li>Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig` in addition to the existing `allowedFileTypes`.</li>
+<li>Added support for <code>pdfPrint</code> in <code>allowedExportFileTypes</code> to <code>appConfig</code> in addition to the existing <code>allowedFileTypes</code>.</li>
 </ul>
 
 <h3>Bug Fixes</h3>
@@ -535,8 +529,8 @@
       <description><![CDATA[<h3>Bug Fixes</h3>
 
 <ul>
-<li>Fixed the support for Video `blob` and `base64` asset inputs for the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow#createwithasset">`Editor.createWithAsset()`</a> method.</li>
-<li>**Temporary Revert**: we are temporarily removing support for presigned <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/type-aliases/url-asset/">`URL`</a> as the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/enumerations/asset-data-type/">`datatype`</a> for a video <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/interfaces/asset-base/">`asset`</a> in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented.</li></ul>
+<li>Fixed the support for Video <code>blob</code> and <code>base64</code> asset inputs for the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow#createwithasset"><code>Editor.createWithAsset()</code></a> method.</li>
+<li><strong>Temporary Revert</strong>: we are temporarily removing support for presigned <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/type-aliases/url-asset/"><code>URL</code></a> as the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/enumerations/asset-data-type/"><code>datatype</code></a> for a video <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/interfaces/asset-base/"><code>asset</code></a> in <code>createWithAsset()</code> due to an internal issue. We will update the changelog once a fix is implemented.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -555,7 +549,7 @@
 <h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/">`CCEverywhere.ExportConfig.EditFurtherIntent`</a>: Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/"><code>CCEverywhere.ExportConfig.EditFurtherIntent</code></a>: Added two new intents in the Edit Image module, <code>INSERT_OBJECT</code> and <code>REMOVE_OBJECT</code>. Either can be preconfigured to run automatically when the module loads.</li>
 <li>Added coverage for the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/index/">Asset</a> type.</li>
 <li>Various performance improvements and bug fixes.</li></ul>
 ]]></description>
@@ -568,7 +562,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params/">`CCEverywhere.TextToImagePublishParams.prompt`</a>: in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback.</li></ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params/"><code>CCEverywhere.TextToImagePublishParams.prompt</code></a>: in a <code>createImageFromText()</code> module, the prompt used to generate the image is now available in the <code>onPublish</code> callback.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -585,7 +579,7 @@
 <h3>Added</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`CCEverywhere.appConfig.imageDimensions`</a>: in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`.</li></ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.appConfig.imageDimensions</code></a>: in a <code>createImageFromText()</code> module, the aspect ratio with which assets are generated and exported can be passed as a parameter via <code>appConfig</code>.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -596,8 +590,8 @@
       <description><![CDATA[<h3>Enhancements</h3>
 
 <ul>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`CCEverywhere.appConfig.imageStyleReference`</a>: in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`.</li>
-<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties">`CCEverywhere.appConfig.imageCompositionReference`</a>: in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.appConfig.imageStyleReference</code></a>: in a <code>createImageFromText()</code> module, assets can be passed as style reference from host application via <code>appConfig</code>.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.appConfig.imageCompositionReference</code></a>: in a <code>createImageFromText()</code> module, assets can be passed as composition reference from host application via <code>appConfig</code>.</li>
 </ul>
 
 <h3>Bug Fixes</h3>
@@ -621,9 +615,9 @@
 <h3>Added</h3>
 
 <ul>
-<li>`CCEverywhere.ExportConfig.ENABLED_BUTTON`: Added a new style in export option, any button can be made always enabled from the launch of the iframe by passing `uiType:enabled-button`</li>
-<li>`CCEverywhere.ExportConfig.DOWNLOAD_ALL`: Added Export options target as `"Download_all"` to download all the images, applicable only for text to image.</li>
-<li>`CCEverywhere.createImageFromText.appConfig.imageDimensions`: In the `appConfig` of `createImageFromText`, included `imageDimensions` to define the dimensions for the images users can generate. This parameter accepts the size in pixels and the corresponding aspect ratio. When specified, users will be limited to generating images to the provided aspect ratio.</li></ul>
+<li><code>CCEverywhere.ExportConfig.ENABLED_BUTTON</code>: Added a new style in export option, any button can be made always enabled from the launch of the iframe by passing <code>uiType:enabled-button</code></li>
+<li><code>CCEverywhere.ExportConfig.DOWNLOAD_ALL</code>: Added Export options target as <code>"Download_all"</code> to download all the images, applicable only for text to image.</li>
+<li><code>CCEverywhere.createImageFromText.appConfig.imageDimensions</code>: In the <code>appConfig</code> of <code>createImageFromText</code>, included <code>imageDimensions</code> to define the dimensions for the images users can generate. This parameter accepts the size in pixels and the corresponding aspect ratio. When specified, users will be limited to generating images to the provided aspect ratio.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -647,7 +641,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>Added support for Blobs to the list of supported data types for an Asset in `DocConfig`. Clients can now pass a blob or file object in place of `base64` or `url`.</li></ul>
+<li>Added support for Blobs to the list of supported data types for an Asset in <code>DocConfig</code>. Clients can now pass a blob or file object in place of <code>base64</code> or <code>url</code>.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -658,7 +652,7 @@
       <description><![CDATA[<h3>Added</h3>
 
 <ul>
-<li>`CCEverywhere.terminate`: We have added the terminate API to SDK v4. Once it is called, performing any action should fail with error SDK_NOT_INITIALIZED unless SDK is initialized again.</li>
+<li><code>CCEverywhere.terminate</code>: We have added the terminate API to SDK v4. Once it is called, performing any action should fail with error SDK_NOT_INITIALIZED unless SDK is initialized again.</li>
 <li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/reference/types/index#containerconfig">z-index</a> support for the root container.</li></ul>
 ]]></description>
     </item>
@@ -670,8 +664,8 @@
       <description><![CDATA[<h3>Breaking Changes</h3>
 
 <ul>
-<li>`callbacks` are no longer set in the `initialize` method</li>
-<li>Every API now accepts `appConfig`. Callbacks are now part of `appConfig`.</li></ul>
+<li><code>callbacks</code> are no longer set in the <code>initialize</code> method</li>
+<li>Every API now accepts <code>appConfig</code>. Callbacks are now part of <code>appConfig</code>.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -682,21 +676,19 @@
       <description><![CDATA[<h3>Breaking Changes</h3>
 
 <ul>
-<li>`callbacks` are now set in the `initialize` method</li>
-<li>`ExportOptions` has changed and new "continue editing" buttons are available</li>
-<li>`ccEverywhere.createDesign()` has now been broken into `ccEverywhere.editor.create()` and `ccEverywhere.editor.createWithAsset()`</li>
-<li>`ccEverywhere.editDesign()` is now `ccEverywhere.editor.edit()`</li>
-<li>`ccEverywhere.openQuickAction()` is now `ccEverywhere.quickAction.convertToJPEG()` (each of the different actions has its own API now)</li>
+<li><code>callbacks</code> are now set in the <code>initialize</code> method</li>
+<li><code>ExportOptions</code> has changed and new "continue editing" buttons are available</li>
+<li><code>ccEverywhere.createDesign()</code> has now been broken into <code>ccEverywhere.editor.create()</code> and <code>ccEverywhere.editor.createWithAsset()</code></li>
+<li><code>ccEverywhere.editDesign()</code> is now <code>ccEverywhere.editor.edit()</code></li>
+<li><code>ccEverywhere.openQuickAction()</code> is now <code>ccEverywhere.quickAction.convertToJPEG()</code> (each of the different actions has its own API now)</li>
 </ul>
 
 <h3>Added</h3>
 
 <ul>
 <li>We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:</li>
-</ul>
-<p>  - Generate Image module: `ccEverywhere.module.createImageFromText()`</p>
-<p>  - Edit Image module: `ccEverywhere.module.editImage()`</p>
-<ul>
+<li>Generate Image module: <code>ccEverywhere.module.createImageFromText()</code></li>
+<li>Edit Image module: <code>ccEverywhere.module.editImage()</code></li>
 <li>Delayed login is now available.</li></ul>
 ]]></description>
     </item>
@@ -708,21 +700,25 @@
       <description><![CDATA[<h3>Enhancements</h3>
 
 <p>1. <a href="https://developer.adobe.com/express/embed-sdk/docs/reference/types/index#canvasaspectid">CreateInputParams.canvasSize</a>: Added support for new layouts.</p>
-<p>   - NoteHeaderImage</p>
-<p>   - LineAdSmall</p>
-<p>   - LineAdSquare</p>
-<p>   - LineAdVertical</p>
-<p>   - LineRichMenuLarge</p>
-<p>   - LineRichMenuSmall</p>
-<p>   - LineRichMessage</p>
+<ul>
+<li>NoteHeaderImage</li>
+<li>LineAdSmall</li>
+<li>LineAdSquare</li>
+<li>LineAdVertical</li>
+<li>LineRichMenuLarge</li>
+<li>LineRichMenuSmall</li>
+<li>LineRichMessage</li>
+</ul>
 <p>2. <a href="https://developer.adobe.com/express/embed-sdk/docs/reference/types/index#templatetype">CreateInputParams.templateType</a>: Added support for some template types.</p>
-<p>   - note-header-image</p>
-<p>   - line-ad-small</p>
-<p>   - line-ad-square</p>
-<p>   - line-ad-vertical</p>
-<p>   - line-rich-menu-large</p>
-<p>   - line-rich-menu-small</p>
-<p>   - line-rich-message</p>
+<ul>
+<li>note-header-image</li>
+<li>line-ad-small</li>
+<li>line-ad-square</li>
+<li>line-ad-vertical</li>
+<li>line-rich-menu-large</li>
+<li>line-rich-menu-small</li>
+<li>line-rich-message</li>
+</ul>
 
 <h3>Added</h3>
 
@@ -739,7 +735,7 @@
       <description><![CDATA[<h3>Enhancements</h3>
 
 <ul>
-<li>`ConfigParams.skipBrowserSupportCheck`: By default, this property is set to false and users will encounter an "Unsupported Browser" page when launching a design flow. When this property is configured to true and the browser is not supported, calling `initialize()` will **not** result in an error.</li></ul>
+<li><code>ConfigParams.skipBrowserSupportCheck</code>: By default, this property is set to false and users will encounter an "Unsupported Browser" page when launching a design flow. When this property is configured to true and the browser is not supported, calling <code>initialize()</code> will <strong>not</strong> result in an error.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -789,18 +785,18 @@
 
 <ul>
 <li>Browser compatibility checker: Now the SDK will check for browser compatibility during initialization.</li>
-<li>New default method `terminate()` allows you to terminate an active instance of CCEverywhere. This method will return false if there is no active CCEverywhere instance.</li>
+<li>New default method <code>terminate()</code> allows you to terminate an active instance of CCEverywhere. This method will return false if there is no active CCEverywhere instance.</li>
 <li>Google YOLO will work for both the full editor and quick actions. If the user is not signed in, the YOLO prompt will be shown to users. If the user has multiple Google accounts, they can select from a list.</li>
+<li>If the user has an Adobe account associated with Google ID, the user is signed in.</li>
+<li>If the user does not have an Adobe account associated with the Google ID, a new Adobe account will be created for the user using their Google ID.</li>
+<li>User can choose to dismiss the YOLO modal and continue with delayed login.</li>
+<li>Redirect URI is no longer being used.</li>
 </ul>
-<p>  - If the user has an Adobe account associated with Google ID, the user is signed in.</p>
-<p>  - If the user does not have an Adobe account associated with the Google ID, a new Adobe account will be created for the user using their Google ID.</p>
-<p>  - User can choose to dismiss the YOLO modal and continue with delayed login.</p>
-<p>  - Redirect URI is no longer being used.</p>
 
 <h3>Breaking Changes</h3>
 
 <ul>
-<li>`initialize()` method is now async. This is the main API used for initializing the SDK. It will return a promise with a CCEverywhere object which can be used to call other APIs in the SDK.</li></ul>
+<li><code>initialize()</code> method is now async. This is the main API used for initializing the SDK. It will return a promise with a CCEverywhere object which can be used to call other APIs in the SDK.</li></ul>
 ]]></description>
     </item>
     <item>
@@ -836,12 +832,10 @@
 
 <ul>
 <li>Delayed Login experience in the full editor.</li>
-</ul>
-<p>  - With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Adobe Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.</p>
-<ul>
+<li>With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Adobe Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.</li>
 <li>"Create from Image" workflow.</li>
-</ul>
-<p>  - Users can now create from an image instead of a blank canvas. This workflow works with the delayed login experience. To use this workflow, partners will need to enable the host application to use it.</p>]]></description>
+<li>Users can now create from an image instead of a blank canvas. This workflow works with the delayed login experience. To use this workflow, partners will need to enable the host application to use it.</li></ul>
+]]></description>
     </item>
     <item>
       <title>v1.3.11</title>
@@ -879,7 +873,7 @@
 <ul>
 <li>Scrim view background color is now configurable.</li>
 <li>Redirect URI can now be provided as input during initialization.</li>
-<li>`appVersion` and `platformCategory` are now optional arguments.</li>
+<li><code>appVersion</code> and <code>platformCategory</code> are now optional arguments.</li>
 <li>In dev environments, SDK is now able to read and override the base URL from the client's window object.</li>
 <li>API provided to easily identify the SDK version running in browser or host apps.</li>
 <li>Update Content will now be displayed in 100% of the area of the client div, instead of appearing with scrollbars.</li>
@@ -889,7 +883,7 @@
 <h3>Bug Fixes</h3>
 
 <ul>
-<li>When `parentElementId` is supplied, the dimensions of the parent container display Scrim view instead of Viewport.</li>
+<li>When <code>parentElementId</code> is supplied, the dimensions of the parent container display Scrim view instead of Viewport.</li>
 <li>QA loader screen can be now set to the darkest theme.</li>
 <li>iFrame now loads successfully on Safari even if pop-up blocker settings are enabled.</li>
 <li>Enhanced error handling for failure to launch iFrame for quick action and full editor.</li>

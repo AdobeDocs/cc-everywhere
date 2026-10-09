@@ -75,24 +75,36 @@ function escapeXml(text) {
     .replace(/>/g, "&gt;");
 }
 
+function formatInline(text) {
+  // 1. Inline code: `code` -> <code>code</code>
+  let formatted = text.replace(/`([^`]+)`/g, (_, code) => `<code>${escapeXml(code)}</code>`);
+
+  // 2. Links: [text](href) -> <a href="...">text</a>
+  formatted = formatted.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    (_, linkText, href) => `<a href="${escapeXml(resolveRelativeLink(href))}">${linkText}</a>`
+  );
+
+  // 3. Bold: **text** or __text__ -> <strong>text</strong>
+  formatted = formatted.replace(/\*\*([^*]+)\*\*/g, (_, boldText) => `<strong>${boldText}</strong>`);
+  formatted = formatted.replace(/__([^_]+)__/g, (_, boldText) => `<strong>${boldText}</strong>`);
+
+  return formatted;
+}
+
 function bodyToHtml(bodyLines) {
   const body = bodyLines.join("\n").trim();
   if (!body) return "";
 
-  const withLinks = body.replace(
-    /\[([^\]]+)\]\(([^)]+)\)/g,
-    (_, text, href) => `<a href="${escapeXml(resolveRelativeLink(href))}">${escapeXml(text)}</a>`
-  );
-
-  const html = withLinks
+  const html = body
     .split("\n")
     .map((line) => {
       const heading = line.match(/^###\s+(.*)$/);
-      if (heading) return `<h3>${escapeXml(heading[1])}</h3>`;
-      const bullet = line.match(/^-\s+(.*)$/);
-      if (bullet) return `<li>${bullet[1]}</li>`;
+      if (heading) return `<h3>${formatInline(heading[1])}</h3>`;
+      const bullet = line.match(/^\s*-\s+(.*)$/);
+      if (bullet) return `<li>${formatInline(bullet[1])}</li>`;
       if (!line.trim()) return "";
-      return `<p>${line}</p>`;
+      return `<p>${formatInline(line)}</p>`;
     })
     .join("\n");
 
