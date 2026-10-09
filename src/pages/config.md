@@ -10,7 +10,6 @@
     - [Community](https://developer.adobe.com/express/community?aio_external)
     - [Get Credentials](/guides/credential/index.md)
 
-
 - subPages:
     - [Overview](/guides/index.md)
     - [Getting Started](/guides/quickstart/index.md)

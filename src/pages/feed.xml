@@ -1,0 +1,883 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Adobe Express Embed SDK Changelog</title>
+    <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/</link>
+    <atom:link href="https://developer.adobe.com/express/embed-sdk/docs/feed.xml" rel="self" type="application/rss+xml" />
+    <description>Release notes for the Adobe Express Embed SDK.</description>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 09 Oct 2026 13:41:07 GMT</lastBuildDate>
+    <item>
+      <title>v4.57.22</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-57-22-2026-10-08</link>
+      <guid isPermaLink="false">4.57.22-2026-10-08</guid>
+      <pubDate>Thu, 08 Oct 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/"><code>EditFurtherIntent.ERASE</code></a> to the starting intent for Edit Image.</li>
+<li>Various performance improvements and fixes.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.56.21</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-56-21-2026-09-30</link>
+      <guid isPermaLink="false">4.56.21-2026-09-30</guid>
+      <pubDate>Wed, 30 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added per-document success/failure status to the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets">migrateAssets()</a> <code>MigrateAssetsResult</code>.</li>
+<li>Added optional <code>tooltip</code> field to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-export-option#properties"><code>PublishExportOption</code></a> in <code>ExportConfig</code>, letting hosts customize the hover tooltip text on publish-target export buttons.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.55.8</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-55-8-2026-09-24</link>
+      <guid isPermaLink="false">4.55.8-2026-09-24</guid>
+      <pubDate>Thu, 24 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/ede/">Embedded Design Editor (EDE) concept guide</a> that introduces EDE's configurable, focused creation experiences, along with companion <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/ede-create-design/">Create Design</a> and <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/ede-edit-design/">Edit Design</a> guides.</li>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/embedded-design-editor/">Embedded Design Editor tutorial</a> that walks through building a Create Design → Edit Design flow step by step.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.55.8</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-55-8-2026-09-16</link>
+      <guid isPermaLink="false">4.55.8-2026-09-16</guid>
+      <pubDate>Wed, 16 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets"><code>migrateAssets()</code></a>: Added support for asset migration (guest to logged-in user) in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#interfaces">Partner Assertion</a> workflow.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context/"><code>DesignViewerContext</code></a>: Added support for accessing the context of the Design Viewer, allowing host applications to provide additional assets after the initial load via the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context#updatedesignassets"><code>updateDesignAssets</code></a> method.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config#properties"><code>hideTemplatePreview</code></a>: Added a configuration option to hide Template Preview, allowing clients to navigate directly to the editor after selecting a template.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.54.18</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-54-18-2026-09-02</link>
+      <guid isPermaLink="false">4.54.18-2026-09-02</guid>
+      <pubDate>Wed, 02 Sep 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config/"><code>editorGuideConfig</code></a>: Added a new property to configure the visibility of Bleed, Margins, and Rulers in the Edit Design module's UI.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config/"><code>pdfPrintConfig</code></a>: Added a new property to configure the print-ready PDF export in the Edit Design module (<code>"print"</code> variant), including Crop Marks, Bleed, Color Mode, and ICC Profile.</li>
+</ul>
+
+<h3>Fixed</h3>
+
+<ul>
+<li><code>createDesign()</code> with <code>"print"</code> variant now correctly displays bleed in the editor preview.</li>
+</ul>
+
+<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/host-app-trigger/">Analytics concept guide</a> that explains how partners can configure the required analytics data to provide consistent launch attribution for Embed SDK workflows.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.53.3</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-53-3-2026-08-13</link>
+      <guid isPermaLink="false">4.53.3-2026-08-13</guid>
+      <pubDate>Thu, 13 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/authentication-types/index#type-aliases"><code>PartnerAssertionAuthConfig</code></a>: Added a new <code>PartnerAssertionAuthConfig</code> interface to support partner assertion authentication in the SDK. This allows host applications to provide a partner assertion token for authentication purposes (guest, signed-in, or guest-to-user transition), enabling seamless integration with partner systems.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-action#properties"><code>PublishAction.previewConfig</code></a>: Added a new <code>previewConfig</code> property of type <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/asset-preview-config/"><code>AssetPreviewConfig</code></a> to the <code>PublishAction</code> interface, allowing host applications to configure an additional image as the output preview of the exported asset.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.51.14</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-51-14-2026-08-05</link>
+      <guid isPermaLink="false">4.51.14-2026-08-05</guid>
+      <pubDate>Wed, 05 Aug 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config/"><code>CCEverywhere.DesignViewerDocConfig</code></a>: Adding support to Design Viewer to accept multiple assets in the <code>docConfig</code>.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.EditorAppConfig.editorMode</code></a>: Added a new optional <code>editorMode</code> property to the Full Editor <code>appConfig</code>. When set to <code>'assistant'</code>, the editor opens with the AI Assistant panel active, giving users immediate access to AI-powered editing features without any extra clicks.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.50.23</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-50-23-2026-07-24</link>
+      <guid isPermaLink="false">4.50.23-2026-07-24</guid>
+      <pubDate>Fri, 24 Jul 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/template-browser-v2/">Template Browser v2 concept guide</a> that covers the implementation details of the <strong>new tabbed Template Browser experience for authenticated users</strong>. This version coexists with the existing Template Browser v1, which remains unchanged and available.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.48.12</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-48-12-2026-06-16</link>
+      <guid isPermaLink="false">4.48.12-2026-06-16</guid>
+      <pubDate>Tue, 16 Jun 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<p>General improvements and bug fixes.</p>]]></description>
+    </item>
+    <item>
+      <title>v4.45.20</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-45-20-2026-04-14</link>
+      <guid isPermaLink="false">4.45.20-2026-04-14</guid>
+      <pubDate>Tue, 14 Apr 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/design-viewer/">Design Viewer concept guide</a> that covers the implementation details of the Design Viewer module.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.44.14</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-44-14-2026-03-19</link>
+      <guid isPermaLink="false">4.44.14-2026-03-19</guid>
+      <pubDate>Thu, 19 Mar 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#viewdesign"><code>CCEverywhere.viewDesign</code></a></strong>: Added a new Design Viewer module to the SDK, alongside with a dedicated <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config/"><code>DesignViewerAppConfig</code></a> interface to configure the module and a <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config/"><code>DesignViewerDocConfig</code></a> interface to pass the document configuration.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.43.13</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-43-13-2026-03-10</link>
+      <guid isPermaLink="false">4.43.13-2026-03-10</guid>
+      <pubDate>Tue, 10 Mar 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Expanded the <strong>Mobile Web Concept Guide</strong> to cover all the implementation details:</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-overview/">Overview</a> with a clear comparison between Mobile Web and Mobile SDKs.</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-webview/">Mobile Web in a WebView</a> concept guide that covers the implementation details of the experience for iOS and Android apps.</li>
+<li>Improved information architecture for the Mobile Web section.</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/mobile-web/">Mobile Web tutorial</a> with a Fantasy Sports themed, badge creation end-to-end example with working sample projects for Web (client and server), Android and iOS.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.41.14</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-41-14-2026-01-30</link>
+      <guid isPermaLink="false">4.41.14-2026-01-30</guid>
+      <pubDate>Fri, 30 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>API Enhancement</h3>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-action/"><code>CCEverywhere.PublishAction.outputType</code></a></strong>: Added an option to change the output file type as Blob for Quick Actions and Module Workflows.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/publish-config#properties"><code>CCEverywhere.PublishConfig.outputType</code></a></strong>: Added a new asset data type to account for the Blob output type.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.40.30</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-40-30-2026-01-09</link>
+      <guid isPermaLink="false">4.40.30-2026-01-09</guid>
+      <pubDate>Fri, 09 Jan 2026 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>API Enhancement</h3>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/design-config-types/interfaces/base-app-config#properties"><code>CCEverywhere.BaseAppConfig.metaData</code></a></strong>: Enabled metadata support, allowing custom key-value pairs to be passed across all workflows.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.39.13</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-39-13-2025-11-24</link>
+      <guid isPermaLink="false">4.39.13-2025-11-24</guid>
+      <pubDate>Mon, 24 Nov 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Maintenance release</h3>]]></description>
+    </item>
+    <item>
+      <title>2025-11-14</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#2025-11-14</link>
+      <guid isPermaLink="false">2025-11-14</guid>
+      <pubDate>Fri, 14 Nov 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/template-browser/">Template Browser concept guide</a> that covers the implementation details of the new Template Browser experience.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.38.19</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-38-19-2025-11-10</link>
+      <guid isPermaLink="false">4.38.19-2025-11-10</guid>
+      <pubDate>Mon, 10 Nov 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>API Enhancement</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/design-config-types/interfaces/base-app-config#properties"><code>CCEverywhere.BaseAppConfig.useClientAuth</code></a>: Added a new feature to enable no consumption of credits for Generative AI workflows. This configuration can only be used for Generate Image and Edit Image workflows for selected enabled partners.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/call-back-target#callback"><code>CCEverywhere.CallBackTarget.CALLBACK</code></a></strong>: Added a new callback export target to trigger callback actions without publishing or downloading assets.</li>
+<li><strong>Custom Message Workflow</strong>:</li>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/enumerations/message-type#workflow_context"><code>WORKFLOW_CONTEXT</code></a> message type for module-specific communication.</li>
+<li>New <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/interfaces/custom-message/"><code>CustomMessage</code></a> interface includes instance ID, request ID, action, intent, and optional data.</li>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/messenger/message-types/enumerations/custom-message-action/"><code>CustomMessageAction</code></a> enum with actions for notifying unsaved changes and requesting assets.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/container-config-types/interfaces/modal-container-config#properties"><code>CCEverywhere.ModalContainerConfig.showExpressIconWithText</code></a></strong>: the new default loading experience will include the Express logo plus text.</li>
+</ul>
+
+<h3>Tech Enhancement</h3>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties">CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor</a></strong>: Added support to configure the canvas background color (String in the <code>RRGGBBAA</code> HEX format).</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.36.26</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-36-26-2025-10-08</link>
+      <guid isPermaLink="false">4.36.26-2025-10-08</guid>
+      <pubDate>Wed, 08 Oct 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>API Enhancement</h3>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/callbacks-types/type-aliases/cancel-callback/"><code>CCEverywhere.ModuleWorkflow.CancelCallback</code></a></strong>: Added optional parameter <code>isEscapePressed</code> as part of <code>onCancel</code> callback which is <code>true</code> if the cancel was triggered by escape key press during loading.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/host-info-types/interfaces/host-info-specified-base#properties"><code>CCEverywhere.HostInfo.coiEnabled</code></a></strong>: Added property in <code>HostInfo</code> to indicate if COI (Cross-Origin Isolation) is enabled for client.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/container-config-types/interfaces/base-container-config#properties"><code>CCEverywhere.BaseContainerConfig.iframeTitle</code></a></strong>: Added support to configure iframe title for accessibility.</li>
+</ul>
+
+<h3>Tech Enhancement</h3>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config#properties"><code>CCEverywhere.BrowseSearchBaseConfig.rootCollectionId</code></a></strong>: Added support to surface collections other than Express collections.</li>
+</ul>
+
+<h3>Documentation</h3>
+
+<ul>
+<li>Added a new comprehensive <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/mobile-web-support-overview/">Mobile Web Support Overview</a> concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.35.15</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-35-15-2025-09-18</link>
+      <guid isPermaLink="false">4.35.15-2025-09-18</guid>
+      <pubDate>Thu, 18 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/tethering/">Concept guide</a> that covers the <strong>Workflow Tethering</strong> details—the possibility to chain multiple workflows together to create a more complex experience.</li>
+<li>Added a new comprehensive <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/workflow-tethering/">Workflow Tethering tutorial</a> which builds on the Concept guide and provides a more practical example of how to implement two of the most common workflow tethering patterns: Generate Image → Edit Image and Edit Image → Full Editor.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.34.27</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-34-27-2025-09-01</link>
+      <guid isPermaLink="false">4.34.27-2025-09-01</guid>
+      <pubDate>Mon, 01 Sep 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><strong><code>AUTO</code> content type</strong>: Added the <code>AUTO</code> option to <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/"><code>ImageContentType</code></a> that allows the system to automatically determine the most appropriate content type based on the prompt and context.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.34.26</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-34-26-2025-08-28</link>
+      <guid isPermaLink="false">4.34.26-2025-08-28</guid>
+      <pubDate>Thu, 28 Aug 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Fixed</h3>
+
+<ul>
+<li>Removed the <code>ImageColorStyle</code>, <code>ImageCompositionStyle</code>, and <code>ImageLightingStyle</code> enumerations from the <code>CCEverywhere.TextToImageAppConfig.panelSettings</code> property.</li>
+</ul>
+
+<h3>Documentation</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/edit-image/">Edit Image tutorial</a> that covers the implementation details of the new Edit Image v2 features.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.32.26</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-32-26-2025-08-07</link>
+      <guid isPermaLink="false">4.32.26-2025-08-07</guid>
+      <pubDate>Thu, 07 Aug 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<p>#### Enhanced Panel Settings for Generate Image</p>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#panelsettings"><code>CCEverywhere.TextToImageAppConfig.panelSettings</code></a></strong>: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/panel-settings/"><code>PanelSettings</code></a>: Container interface for all panel settings.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/style-setting/"><code>StyleSetting</code></a>: Configuration for artistic styles with support for multiple style categories.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/interfaces/content-type-setting/"><code>ContentTypeSetting</code></a>: Setting for content type selection (photo, graphic, art).</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#hidefeedbackmenu"><code>CCEverywhere.TextToImageAppConfig.hideFeedbackMenu</code></a></strong>: Added option to hide feedback menu in header bar.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#ispromptsafe"><code>CCEverywhere.TextToImageAppConfig.isPromptSafe</code></a></strong>: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic.</li>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#promptinputplaceholder"><code>CCEverywhere.TextToImageAppConfig.promptInputPlaceholder</code></a></strong>: Added placeholder text configuration for prompt input field (Generate Image v2 only).</li>
+</ul>
+
+<p>Both the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/generate-image/">Generate Image tutorial</a> and the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/generate-image-v2/">Concept Guide</a> have been updated to reflect the new updates.</p>
+
+<p>#### New Style Enumerations for Advanced Image Customization</p>
+
+<p>Added comprehensive style enumerations to provide granular control over image generation aesthetics:</p>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-content-type/"><code>ImageContentType</code></a>: Primary content types (photo, graphic, art)</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-theme-style/"><code>ImageThemeStyle</code></a>: 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-technique-style/"><code>ImageTechniqueStyle</code></a>: 12 artistic techniques from painting and sketching to watercolor and linocut</li>
+<li><code>ImageLightingStyle</code>: five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting</li>
+<li><code>ImageCompositionStyle</code>: seven composition styles for camera angles and framing</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-effect-style/"><code>ImageEffectStyle</code></a>: nine visual effects including bokeh, fisheye, neon, and bioluminescent</li>
+<li><code>ImageColorStyle</code>: six color palette options from black & white to vibrant and pastel colors</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-movement-style/"><code>ImageMovementStyle</code></a>: 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-material-style/"><code>ImageMaterialStyle</code></a>: nine material simulations from claymation to marble sculpture</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/enumerations/image-concept-style/"><code>ImageConceptStyle</code></a>: six conceptual moods for emotional tone</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/panel-settings-types/type-aliases/image-style-id/"><code>ImageStyleId</code></a>: Union type combining all available style options</li>
+</ul>
+
+<p>#### Enhanced User Experience Features</p>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#inlinetouconsent"><code>CCEverywhere.EditImageAppConfig.inlineTOUConsent</code></a></strong>: Added inline Terms of Use consent configuration.</li>
+</ul>
+
+<p>#### Export Configuration Enhancements</p>
+
+<ul>
+<li><strong><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/interfaces/publish-button-group/"><code>PublishButtonGroup</code></a></strong>: New publish button group interface for better export organization.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>2025-07-11</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#2025-07-11</link>
+      <guid isPermaLink="false">2025-07-11</guid>
+      <pubDate>Fri, 11 Jul 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Documentation</h3>
+
+<ul>
+<li>Added a new comprehensive <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/generate-image/">Generate Image tutorial</a> that covers the implementation details of the new Generate Image v2 features, including the Custom Community Wall.</li>
+</ul>
+
+<h3>Enhancements</h3>
+
+<ul>
+<li>The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/type-aliases/asset/"><code>Asset</code></a>)</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.30.13</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-30-13-2025-06-20</link>
+      <guid isPermaLink="false">4.30.13-2025-06-20</guid>
+      <pubDate>Fri, 20 Jun 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Maintenance release</h3>]]></description>
+    </item>
+    <item>
+      <title>v4.29.22</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-29-22-2025-05-28</link>
+      <guid isPermaLink="false">4.29.22-2025-05-28</guid>
+      <pubDate>Wed, 28 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<p>#### Unlocked new Edit Image v2 experience</p>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow/"><strong><code>CCEverywhere.module.editImage()</code></strong></a>: Introduced a <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/edit-image-v2/">new Edit Image v2 experience</a>, rearchitected to deliver significantly improved performance and a better user experience.</li>
+</ul>
+
+<p>  <strong>Key Features:</strong></p>
+<ul>
+<li><strong>Reduced load times</strong> in the range of 35% to 50%.</li>
+<li><strong>Reduced memory consumption</strong> by 35%.</li>
+<li><strong>New modular UI</strong> with improved user experience and implementation of the new Adobe Spectrum 2 design system.</li>
+</ul>
+
+<p>  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/edit-image-v2/">Edit Image v2</a> page to learn more.</p>
+
+<p>#### Custom Community Wall</p>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><strong><code>CCEverywhere.TextToImageAppConfig.communityWallConfig</code></strong></a>: Added a new <code>communityWallConfig</code> property to allow host applications to <strong>populate the Community Wall with custom images</strong> instead of Firefly's default assets.</li>
+</ul>
+
+<p>  Please refer to the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/generate-image-v2#custom-community-wall">this section</a> of the Generate Image v2 page for the implementation details.</p>
+
+<p>#### New APIs</p>
+
+<ul>
+<li>Two new properties to the <code>AppConfig</code> object to control "Show margins" and "Show bleed" behavior have been added:</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.EditorAppConfig.showPageMargin</code></a></li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.EditorAppConfig.showBleedArea</code></a></li>
+<li>The PDF file type has been deprecated in the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#properties"><code>AppConfig.allowedFileTypes</code></a> property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG.</li>
+</ul>
+
+<h3>Documentation</h3>
+
+<ul>
+<li>Enhanced <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/appconfig/">Editor Customization</a> concept guide with configuration options (<code>assetCollection</code>, <code>showPageMargin</code>, <code>showBleedArea</code>), improved structure, comprehensive use cases and examples, and implementation guidance.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.28.19</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-28-19-2025-05-05</link>
+      <guid isPermaLink="false">4.28.19-2025-05-05</guid>
+      <pubDate>Mon, 05 May 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties"><code>CCEverywhere.BaseEditorAppConfig.assetCollection</code></a>: A new optional <code>assetCollection</code> property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/callbacks-types/interfaces/callbacks#properties"><code>CCEverywhere.Callbacks.onIntentChange</code></a>: A new optional <code>onIntentChange</code> callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another.</li>
+<li>Performance improvements and bug fixes.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.26.5</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-26-5-2025-04-11</link>
+      <guid isPermaLink="false">4.26.5-2025-04-11</guid>
+      <pubDate>Fri, 11 Apr 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.BaseEditorAppConfig.analyticsData</code></a>: A new optional <code>analyticsData</code> property has been added to the <code>AppConfig</code> interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the <code>hostAppTrigger</code> value to indicate the user action within the host application that launched the module (e.g., <code>add-image</code>, <code>replace-image</code>, <code>gmail</code>, etc.).</li>
+<li>Added <code>clientCtaLocation</code> and <code>workflowLoadCompleted</code> optional property as part of Cancel event from the SDK.</li>
+<li>Various performance improvements and bug fixes.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.22.9</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-22-9-2025-03-12</link>
+      <guid isPermaLink="false">4.22.9-2025-03-12</guid>
+      <pubDate>Wed, 12 Mar 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added support for <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/generate-image-v2#custom-firefly-models">Firefly Custom Models</a> in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.21.17</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-21-17-2025-02-27</link>
+      <guid isPermaLink="false">4.21.17-2025-02-27</guid>
+      <pubDate>Thu, 27 Feb 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<p>#### Unlocked new Generate Image V2 experience</p>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><strong><code>CCEverywhere.TextToImageAppConfig.appVersion</code></strong></a>: Introduced a new enhanced UI in the Generate Image Module, configurable using <code>appVersion</code> in <code>AppConfig</code>.</li>
+<li>When set to <code>"2"</code>, users can access the updated interface and features.</li>
+<li>By default, this property is set to <code>"1"</code>, displaying the older experience.</li>
+</ul>
+
+<p><strong>Key Features:</strong></p>
+
+<ul>
+<li><strong>Enhanced User Interface</strong>: Redesigned with a new Carousel and Grid view.</li>
+<li><strong>Community Wall</strong>: An endless collection of generated images with prompts for users to select from.</li>
+<li><strong>Fast Mode</strong>: Generates images faster with lesser details, suitable for simple topics, backgrounds, illustrations, and close portraits.</li>
+<li><strong>Improved Prompt Bar</strong>: Includes prompt suggestions for a better user experience.</li>
+<li><strong>Rich Previews</strong>: Provides a more interactive and engaging preview experience.</li>
+<li><strong>And more!</strong></li>
+</ul>
+
+<p><strong>Configurations available in <code>CCEverywhere</code> after enabling the new UI:</strong></p>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.thumbnailOptions</code></a>: Options to be displayed on the thumbnail.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.editDropdownOptions</code></a>: Options for the Edit dropdown.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.publishConfig</code></a>: Configuration for the Publish action.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.fastModeConfig</code></a>: Configuration for enabling or disabling fast mode default state.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>TextToImageAppConfig.featureConfig</code></a>: Configuration for enabling or disabling specific features.</li>
+</ul>
+
+<p>#### Concept guide for Generate Image V2</p>
+
+<p>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/generate-image-v2/">Concept Guide</a> for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature.</p>
+
+<p>#### Demo app updates for Generate Image V2</p>
+
+<p>Updated the <a href="https://demo.expressembed.com/">Demo App</a> to showcase the Generate Image V2 feature. To use the new feature:</p>
+
+<ul>
+<li>Navigate to <strong>Generative</strong> -> <strong>Generate image</strong> -> <strong>Next</strong></li>
+<li>In the Configuration options, Select generate image version as V2.</li>
+</ul>
+
+<p><a href="https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/images/demo-app.png">![Demo App</a>](https://demo.expressembed.com/)</p>
+
+<ul>
+<li>Select all the options you need and click <strong>Create with Adobe Express</strong></li>
+</ul>
+
+<p>#### Support for <code>pdfPrint</code></p>
+
+<ul>
+<li>Added support for <code>pdfPrint</code> in <code>allowedExportFileTypes</code> to <code>appConfig</code> in addition to the existing <code>allowedFileTypes</code>.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<p>Fixed loader CSS for frictionless experience.</p>]]></description>
+    </item>
+    <item>
+      <title>v4.20.46</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-20-46-2025-02-18</link>
+      <guid isPermaLink="false">4.20.46-2025-02-18</guid>
+      <pubDate>Tue, 18 Feb 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Bug Fixes</h3>
+
+<ul>
+<li>Fixed the support for Video <code>blob</code> and <code>base64</code> asset inputs for the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow#createwithasset"><code>Editor.createWithAsset()</code></a> method.</li>
+<li><strong>Temporary Revert</strong>: we are temporarily removing support for presigned <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/type-aliases/url-asset/"><code>URL</code></a> as the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/enumerations/asset-data-type/"><code>datatype</code></a> for a video <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/interfaces/asset-base/"><code>asset</code></a> in <code>createWithAsset()</code> due to an internal issue. We will update the changelog once a fix is implemented.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.19.22</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-19-22-2025-01-31</link>
+      <guid isPermaLink="false">4.19.22-2025-01-31</guid>
+      <pubDate>Fri, 31 Jan 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/index#embed-sdk-developer-journey">Embed SDK Developer Journey</a> map to help developers navigate the resources available at different stages of their integration.</li>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/troubleshooting/express-unavailable-error/">Troubleshooting</a> guide to help developers fix the "Adobe Express is Unavailable" error, also covering the "Missing Referrer Header" error and the proper use of wildcards for domain's allow-listing.</li>
+<li>Various small improvements and fixes across the documentation.</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/export-config-types/enumerations/edit-further-intent/"><code>CCEverywhere.ExportConfig.EditFurtherIntent</code></a>: Added two new intents in the Edit Image module, <code>INSERT_OBJECT</code> and <code>REMOVE_OBJECT</code>. Either can be preconfigured to run automatically when the module loads.</li>
+<li>Added coverage for the <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/asset-types/index/">Asset</a> type.</li>
+<li>Various performance improvements and bug fixes.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.18.14</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-18-14-2025-01-09</link>
+      <guid isPermaLink="false">4.18.14-2025-01-09</guid>
+      <pubDate>Thu, 09 Jan 2025 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params/"><code>CCEverywhere.TextToImagePublishParams.prompt</code></a>: in a <code>createImageFromText()</code> module, the prompt used to generate the image is now available in the <code>onPublish</code> callback.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.17.33</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-17-33-2024-12-16</link>
+      <guid isPermaLink="false">4.17.33-2024-12-16</guid>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li>Added a comprehensive <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/error-handling/">error code guide</a> for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively.</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.appConfig.imageDimensions</code></a>: in a <code>createImageFromText()</code> module, the aspect ratio with which assets are generated and exported can be passed as a parameter via <code>appConfig</code>.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.16.11</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-16-11-2024-11-18</link>
+      <guid isPermaLink="false">4.16.11-2024-11-18</guid>
+      <pubDate>Mon, 18 Nov 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.appConfig.imageStyleReference</code></a>: in a <code>createImageFromText()</code> module, assets can be passed as style reference from host application via <code>appConfig</code>.</li>
+<li><a href="https://developer.adobe.com/express/embed-sdk/docs/v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties"><code>CCEverywhere.appConfig.imageCompositionReference</code></a>: in a <code>createImageFromText()</code> module, assets can be passed as composition reference from host application via <code>appConfig</code>.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>Video Quick Action: Animate from Audio Iframe was not allowing microphone access.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.15.19</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-15-19-2024-10-09</link>
+      <guid isPermaLink="false">4.15.19-2024-10-09</guid>
+      <pubDate>Wed, 09 Oct 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li>Redesigned the entire <a href="https://developer.adobe.com/express/embed-sdk/docs/v4/index/">SDK Reference</a> section, providing full APIs coverage.</li>
+<li>Added a V3 to V4 <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/concepts/migration-v3-v4/">Migration Guide</a>.</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li><code>CCEverywhere.ExportConfig.ENABLED_BUTTON</code>: Added a new style in export option, any button can be made always enabled from the launch of the iframe by passing <code>uiType:enabled-button</code></li>
+<li><code>CCEverywhere.ExportConfig.DOWNLOAD_ALL</code>: Added Export options target as <code>"Download_all"</code> to download all the images, applicable only for text to image.</li>
+<li><code>CCEverywhere.createImageFromText.appConfig.imageDimensions</code>: In the <code>appConfig</code> of <code>createImageFromText</code>, included <code>imageDimensions</code> to define the dimensions for the images users can generate. This parameter accepts the size in pixels and the corresponding aspect ratio. When specified, users will be limited to generating images to the provided aspect ratio.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.14.23</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-14-23-2024-09-23</link>
+      <guid isPermaLink="false">4.14.23-2024-09-23</guid>
+      <pubDate>Mon, 23 Sep 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li>Redesigned the Information Architecture, to make it easier for developers to find the information they need.</li>
+<li>Updated the <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/review/index/">Submission and Review</a> and <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/quickstart/index/">Quickstart</a> Guides.</li>
+<li>Added a new <a href="https://developer.adobe.com/express/embed-sdk/docs/guides/tutorials/index/">Tutorials</a> section with two tutorials.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.14.23</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-14-23-2024-09-05</link>
+      <guid isPermaLink="false">4.14.23-2024-09-05</guid>
+      <pubDate>Thu, 05 Sep 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Added support for Blobs to the list of supported data types for an Asset in <code>DocConfig</code>. Clients can now pass a blob or file object in place of <code>base64</code> or <code>url</code>.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.4.15</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-4-15-2024-04-02</link>
+      <guid isPermaLink="false">4.4.15-2024-04-02</guid>
+      <pubDate>Tue, 02 Apr 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li><code>CCEverywhere.terminate</code>: We have added the terminate API to SDK v4. Once it is called, performing any action should fail with error SDK_NOT_INITIALIZED unless SDK is initialized again.</li>
+<li>Added <a href="https://developer.adobe.com/express/embed-sdk/docs/reference/types/index#containerconfig">z-index</a> support for the root container.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.2.30</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-2-30-2024-03-14</link>
+      <guid isPermaLink="false">4.2.30-2024-03-14</guid>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Breaking Changes</h3>
+
+<ul>
+<li><code>callbacks</code> are no longer set in the <code>initialize</code> method</li>
+<li>Every API now accepts <code>appConfig</code>. Callbacks are now part of <code>appConfig</code>.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v4.2.29</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#4-2-29-2024-03-14</link>
+      <guid isPermaLink="false">4.2.29-2024-03-14</guid>
+      <pubDate>Thu, 14 Mar 2024 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Breaking Changes</h3>
+
+<ul>
+<li><code>callbacks</code> are now set in the <code>initialize</code> method</li>
+<li><code>ExportOptions</code> has changed and new "continue editing" buttons are available</li>
+<li><code>ccEverywhere.createDesign()</code> has now been broken into <code>ccEverywhere.editor.create()</code> and <code>ccEverywhere.editor.createWithAsset()</code></li>
+<li><code>ccEverywhere.editDesign()</code> is now <code>ccEverywhere.editor.edit()</code></li>
+<li><code>ccEverywhere.openQuickAction()</code> is now <code>ccEverywhere.quickAction.convertToJPEG()</code> (each of the different actions has its own API now)</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li>We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:</li>
+<li>Generate Image module: <code>ccEverywhere.module.createImageFromText()</code></li>
+<li>Edit Image module: <code>ccEverywhere.module.editImage()</code></li>
+<li>Delayed login is now available.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v3.10.13</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#3-10-13-2023-11-06</link>
+      <guid isPermaLink="false">3.10.13-2023-11-06</guid>
+      <pubDate>Mon, 06 Nov 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<p>1. <a href="https://developer.adobe.com/express/embed-sdk/docs/reference/types/index#canvasaspectid">CreateInputParams.canvasSize</a>: Added support for new layouts.</p>
+<ul>
+<li>NoteHeaderImage</li>
+<li>LineAdSmall</li>
+<li>LineAdSquare</li>
+<li>LineAdVertical</li>
+<li>LineRichMenuLarge</li>
+<li>LineRichMenuSmall</li>
+<li>LineRichMessage</li>
+</ul>
+<p>2. <a href="https://developer.adobe.com/express/embed-sdk/docs/reference/types/index#templatetype">CreateInputParams.templateType</a>: Added support for some template types.</p>
+<ul>
+<li>note-header-image</li>
+<li>line-ad-small</li>
+<li>line-ad-square</li>
+<li>line-ad-vertical</li>
+<li>line-rich-menu-large</li>
+<li>line-rich-menu-small</li>
+<li>line-rich-message</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li>Generate QR Code: This new image quick action allows users to create custom QR code for any given URL. The quick action id for this is 'generate-qr-code'. We support Save to Host and Download options for the asset.</li>
+<li>Caption With Video: This new video quick action allows users to add captions to their videos. Users can upload videos with audio tracks and captions will be generated by Adobe Express. Does not work on videos which do not have any voiceover. The quick action id for this is 'caption-video'.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v3.8.11</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#3-8-11-2023-08-25</link>
+      <guid isPermaLink="false">3.8.11-2023-08-25</guid>
+      <pubDate>Fri, 25 Aug 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li><code>ConfigParams.skipBrowserSupportCheck</code>: By default, this property is set to false and users will encounter an "Unsupported Browser" page when launching a design flow. When this property is configured to true and the browser is not supported, calling <code>initialize()</code> will <strong>not</strong> result in an error.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v3.7.14</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#3-7-14-2023-08-15</link>
+      <guid isPermaLink="false">3.7.14-2023-08-15</guid>
+      <pubDate>Tue, 15 Aug 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>ExportButton.accent: The variant option 'cta' has been replaced with 'accent'. Both 'cta' and 'accent' work the same but the support for 'cta' is deprecated as per Spectrum guidelines.</li>
+<li>We will not support the following two quick actions: Reverse Video and Change Speed</li>
+<li>Added a new video quick action: Animate From Audio. This allows users to create a character animation by choosing a character from the given list of characters, adding a backdrop and then recording a speech.</li>
+</ul>
+
+<h3>Breaking Changes</h3>
+
+<ul>
+<li>ExportButton.id is now a required property on native buttons</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v3.6.16</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#3-6-16-2023-08-06</link>
+      <guid isPermaLink="false">3.6.16-2023-08-06</guid>
+      <pubDate>Sun, 06 Aug 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li>CreateOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media.</li>
+<li>EditOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media.</li>
+</ul>
+
+<h3>Added</h3>
+
+<ul>
+<li>Video Export: Users will now be able to export assets as MP4 files. In order to do this, there must be a video asset added in the canvas to see the option in the export options dropdown for custom buttons. Pass video/mp4 option in allowedFileTypes.</li>
+<li>Mixed Media Support: Users will be able to download mixed media assets. In case they have added an image in one page and video in another, they will now be able to see JPG + MP4 or PNG + MP4 in the export options dropdown for custom buttons.Pass image/jpeg, image/png and video/mp4 option in allowedFileTypes.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v2.0.8</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#2-0-8-2023-02-02</link>
+      <guid isPermaLink="false">2.0.8-2023-02-02</guid>
+      <pubDate>Thu, 02 Feb 2023 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Browser compatibility checker: Now the SDK will check for browser compatibility during initialization.</li>
+<li>New default method <code>terminate()</code> allows you to terminate an active instance of CCEverywhere. This method will return false if there is no active CCEverywhere instance.</li>
+<li>Google YOLO will work for both the full editor and quick actions. If the user is not signed in, the YOLO prompt will be shown to users. If the user has multiple Google accounts, they can select from a list.</li>
+<li>If the user has an Adobe account associated with Google ID, the user is signed in.</li>
+<li>If the user does not have an Adobe account associated with the Google ID, a new Adobe account will be created for the user using their Google ID.</li>
+<li>User can choose to dismiss the YOLO modal and continue with delayed login.</li>
+<li>Redirect URI is no longer being used.</li>
+</ul>
+
+<h3>Breaking Changes</h3>
+
+<ul>
+<li><code>initialize()</code> method is now async. This is the main API used for initializing the SDK. It will return a promise with a CCEverywhere object which can be used to call other APIs in the SDK.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v1.5.4</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#1-5-4-2022-12-16</link>
+      <guid isPermaLink="false">1.5.4-2022-12-16</guid>
+      <pubDate>Fri, 16 Dec 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Enabled "Logged Out" experience for image and video quick actions</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>Fixed the problem with the editor iFrame not auto-closing post publish (for the scenario when the editor is launched from image quick actions via "Customize in Express" workflow)</li>
+<li>Fixed an issue related to pre-caching of resources for the editor</li>
+</ul>
+
+<h3>Known Issues</h3>
+
+<ul>
+<li>Currently, the "Customize in Express" workflow from the "Remove Background" image quick action is not working. The fix will be deployed in a future version.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v1.4.10</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#1-4-10-2022-11-14</link>
+      <guid isPermaLink="false">1.4.10-2022-11-14</guid>
+      <pubDate>Mon, 14 Nov 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>Delayed Login experience in the full editor.</li>
+<li>With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Adobe Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.</li>
+<li>"Create from Image" workflow.</li>
+<li>Users can now create from an image instead of a blank canvas. This workflow works with the delayed login experience. To use this workflow, partners will need to enable the host application to use it.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v1.3.11</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#1-3-11-2022-08-24</link>
+      <guid isPermaLink="false">1.3.11-2022-08-24</guid>
+      <pubDate>Wed, 24 Aug 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Added</h3>
+
+<ul>
+<li>SDK bundled for browsers, hosted on Adobe CDN.</li>
+<li>Welcome Screen before the Single User Sign In screen appears.</li>
+<li>Ability to log out from the full editor loaded in the iFrame.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>Signing-in from the welcome screen, subsequent to a sign-out, successfully launches the full editor iFrame.</li>
+</ul>
+
+<h3>Known Issues</h3>
+
+<ul>
+<li>Opening asset in the full editor, subsequent to performing an image quick action, and saving the asset doesn't close the iFrame automatically. This will be fixed in the next release.</li>
+<li>When a quick action is performed and the resulting asset is opened in a full editor: after the user makes changes and saves it the asset is saved outside of the designated project folder in the user's Adobe Express account.</li></ul>
+]]></description>
+    </item>
+    <item>
+      <title>v1.1.0</title>
+      <link>https://developer.adobe.com/express/embed-sdk/docs/guides/changelog/#1-1-0-2022-04-09</link>
+      <guid isPermaLink="false">1.1.0-2022-04-09</guid>
+      <pubDate>Sat, 09 Apr 2022 00:00:00 GMT</pubDate>
+      <description><![CDATA[<h3>Enhancements</h3>
+
+<ul>
+<li>Scrim view background color is now configurable.</li>
+<li>Redirect URI can now be provided as input during initialization.</li>
+<li><code>appVersion</code> and <code>platformCategory</code> are now optional arguments.</li>
+<li>In dev environments, SDK is now able to read and override the base URL from the client's window object.</li>
+<li>API provided to easily identify the SDK version running in browser or host apps.</li>
+<li>Update Content will now be displayed in 100% of the area of the client div, instead of appearing with scrollbars.</li>
+<li>Adobe IMS related enhancements.</li>
+</ul>
+
+<h3>Bug Fixes</h3>
+
+<ul>
+<li>When <code>parentElementId</code> is supplied, the dimensions of the parent container display Scrim view instead of Viewport.</li>
+<li>QA loader screen can be now set to the darkest theme.</li>
+<li>iFrame now loads successfully on Safari even if pop-up blocker settings are enabled.</li>
+<li>Enhanced error handling for failure to launch iFrame for quick action and full editor.</li>
+<li>Full editor iFrame now honoring 0 border radius value.</li></ul>
+]]></description>
+    </item>
+  </channel>
+</rss>
