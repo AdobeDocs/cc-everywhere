@@ -1,44 +1,35 @@
 ---
-title: Build an Android Wishes and Greetings integration
-description: Integrate the Adobe Express Embed SDK for Android, open Wishes and Greetings, and return a published PNG to your host app.
+title: Build a Wishes and Greetings integration with the Android Mobile SDK
+description: Build a Wishes and Greetings integration with the Android Mobile SDK
 keywords:
   - Adobe Express Embed SDK
   - Android
+  - Mobile SDK
   - Wishes and Greetings
   - wishesAndGreetingsNative
   - PublishExportOption
 robots: noindex, nofollow
 ---
 
-# Build an Android Wishes and Greetings integration
+# Build a Wishes and Greetings integration with the Android Mobile SDK
 
-This guide is for Android developers adding Adobe Express creation tools to a partner app. You'll install the Android Mobile SDK, initialize it with your application's identity, open the Wishes and Greetings module, and display a published PNG in your own screen. You need basic Kotlin and Android Activity knowledge; you don't need a previous Embed SDK integration.
+This guide is for Android developers integrating the Wishes and Greetings module from the Embed Mobile SDK, which allows users to browse a collection of available templates, select and personalize one, and export it as an image back to your mobile app for sharing.
 
-You'll build one flow: **open Wishes and Greetings → choose a template → personalize it in the editor → select Use image → display the PNG in your app**. The examples use an AppCompat host, a third-party development configuration, and Base64 image output. This guide doesn't cover other SDK workflows or an iOS integration.
-
-<InlineAlert slots="text" variant="warning" />
-
-This Wishes and Greetings recipe uses the `PR-2062` prerelease and a partner-approved `STAGE` client configuration. Don't substitute the latest general SDK release without confirming that it includes this module, or treat the development configuration as production access. Obtain the SDK distribution details and client provisioning for your integration from your Adobe partner contact.
-
-## Understand the SDK and host boundary
-
-The Android Mobile SDK gives your app a Kotlin API for launching Adobe Express experiences. Wishes and Greetings provides a native template browser. Selecting a template opens the SDK's editor, which uses Android WebView. You don't build a separate web application or implement a WebView message bridge for this recipe.
-
-Your host and the SDK have different responsibilities:
-
-| Part of the flow   | SDK responsibility                                        | Your host responsibility                                          |
-| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------- |
-| Initialization     | Create the SDK interface from the supplied configuration  | Supply your application identity and retain the returned instance |
-| Browse             | Present categories and templates in the returned Fragment | Mount that Fragment in an AppCompat Activity                      |
-| Template selection | Open the selected template in the editor                  | Keep the hosting Activity available; don't launch a second editor |
-| Publish            | Apply the export configuration and deliver callback data  | Select an asset, validate and decode it, and update your UI       |
-| Dismiss            | Notify the host through the workflow callbacks            | Remove the host-mounted browse Fragment at a lifecycle-safe point |
-
-The distinction matters most at the end of the flow: receiving an image and dismissing a screen are separate operations. You'll handle both, without removing the editor from the publish callback.
+![Wishes and Greetings Integration](./img/airtel-mobile-wishes-and-greetings--hero.png)
 
 ## Before you begin
 
-Prepare a Kotlin Android app in Android Studio, access to the partner-provided SDK Maven distribution, and a client ID approved for this development integration.
+### Prerequisites
+
+This guide assumes you have a **good understanding of Android development and Kotlin programming**. You'll need to build a Kotlin Android app in Android Studio, and have access to the partner-provided SDK Maven distribution alongside a client ID approved for this development integration.
+
+<InlineAlert slots="text" variant="warning" />
+
+Please obtain the SDK distribution details and client provisioning for your integration from your Adobe partner contact. Specifically, make sure you have a valid **client ID** and **application ID**.
+
+### Demo application
+
+We have prepared an **Android demo application** that demonstrates the integration of the Wishes and Greetings module, whose screens and code will be used throughout this guide: you can access it [on GitHub here](https://github.com/AdobeDocs/embed-sdk-samples/tree/devex/airtel/code-samples/tutorials/mobile-sdk-wishes-and-greetings).
 
 Use these settings for the tutorial host:
 
@@ -52,11 +43,25 @@ Use these settings for the tutorial host:
 | Network           | Allow access to the configured Adobe services; the SDK AAR declares `INTERNET` and `ACCESS_NETWORK_STATE` permissions |
 | Provisioning      | Obtain the SDK repository location, any repository credentials, and the application client ID separately              |
 
-Don't confuse the device API level with the compile SDK. The SDK's own compile setting is 35, and the transitive dependency set used for this recipe requires up to compile SDK 35. This tutorial uses 36 as the sample's consumer setting, not as a claim that every SDK integration requires 36. Your app's full dependency graph determines its final compile requirements.
+### Understand the SDK and host boundary
 
-## Step 1 — Prepare the host screen
+The [Android Mobile SDK](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release) gives your existing app a Kotlin API for launching the Wishes and Greetings experience. Your host and the SDK have different responsibilities:
 
-Start with the screen that should launch Wishes and Greetings and receive the result. Keep the host UI small so you can follow the integration boundary.
+| Part of the flow   | SDK responsibility                                        | Your host responsibility                                          |
+| ------------------ | --------------------------------------------------------- | ----------------------------------------------------------------- |
+| Initialization     | Create the SDK interface from the supplied configuration  | Supply your application identity and retain the returned instance |
+| Browse             | Present categories and templates in the returned Fragment | Mount that Fragment in an AppCompat Activity                      |
+| Template selection | Open the selected template in the editor                  | Keep the hosting Activity available; don't launch a second editor |
+| Publish            | Apply the export configuration and deliver callback data  | Select an asset, validate and decode it, and update your UI       |
+| Dismiss            | Notify the host through the workflow callbacks            | Remove the host-mounted browse Fragment at a lifecycle-safe point |
+
+The distinction matters most at the end of the flow, as receiving an image and dismissing a screen are separate operations. You'll handle both without removing the editor from the publish callback.
+
+## 1. Prepare the host screen
+
+For the demo app, we've started with a simple screen that launches the Wishes and Greetings module and receives the result. We've kept the host UI small, although in real world scenarios you'll call the SDK from various points in your app.
+
+![Launch screen](./img/airtel-mobile-wishes-and-greetings--launch-screen.png)
 
 1. Use an `AppCompatActivity` for the screen that owns the workflow.
 2. Add a launch button, a status `TextView`, and a result `ImageView` to its content view.
@@ -67,7 +72,7 @@ The launch helper later in this guide replaces `android.R.id.content` and adds t
 
 **Checkpoint:** you have a host screen with a place to launch the workflow, report failures, and display the returned image. No SDK screen is open yet.
 
-## Step 2 — Install the Android SDK dependency
+## 2. Install the Android SDK dependency
 
 The [Android SDK installation README](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release) describes the consumer installation pattern: add the Maven dependency to your app module, choose a version, sync Gradle, and import `ExpressEmbedSdk`. Apply those steps to the version provisioned for this module.
 
@@ -77,7 +82,85 @@ The [Android SDK installation README](https://github.com/AdobeDocs/express-embed
 2. Add that repository to your project's dependency-resolution configuration, normally in `settings.gradle.kts` under `dependencyResolutionManagement.repositories`.
 3. Load repository credentials from your approved local or CI secret mechanism rather than committing them in a build file.
 
-The public README doesn't name a repository or promise unauthenticated artifact access. Don't assume that adding the coordinate to Maven Central is sufficient. Repository values such as `SDK_MAVEN_REPOSITORY_URL`, `SDK_MAVEN_USERNAME`, and `SDK_MAVEN_TOKEN` represent your provisioned settings, not SDK API parameters or required SDK-defined variable names.
+Repository values such as `SDK_MAVEN_REPOSITORY_URL`, `SDK_MAVEN_USERNAME`, and `SDK_MAVEN_TOKEN` (in the demo app) represent your provisioned settings, not SDK API parameters or required SDK-defined variable names.
+
+<CodeBlock slots="heading, code" repeat="3" />
+
+#### settings.gradle.kts
+
+```kotlin-data-line="9,15,16"
+// ...
+
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        // The SDK and its POM/transitive dependencies must come from an authorized distributor.
+        // The URL and optional credentials are operator-local; never commit them to this sample.
+        val sdkMavenUrl = providers.gradleProperty("embedSdkMavenUrl").orNull
+            ?: System.getenv("EMBED_SDK_MAVEN_URL")
+        require(!sdkMavenUrl.isNullOrBlank()) {
+            "Set EMBED_SDK_MAVEN_URL to your approved SDK Maven repository."
+        }
+        maven {
+            url = uri(sdkMavenUrl)
+            val user = System.getenv("EMBED_SDK_MAVEN_USER")
+            val token = System.getenv("EMBED_SDK_MAVEN_TOKEN")
+            if (!user.isNullOrBlank() && !token.isNullOrBlank()) {
+                credentials {
+                    username = user
+                    password = token
+                }
+            }
+            content { includeGroup("com.adobe.express.embed") }
+        }
+    }
+}
+```
+
+#### app/build.gradle.kts
+
+```kotlin-data-line="9"
+// ...
+
+android {
+    namespace = "com.example.wishesdemo"
+    compileSdk = 36
+
+    defaultConfig {
+        // Allow-listed application ID.
+        applicationId = "com.embedsdk.testapp"
+        minSdk = 28
+        targetSdk = 35
+        versionCode = 1
+        versionName = "1.0"
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+    }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+    testOptions { animationsDisabled = true }
+}
+```
+
+#### src/main/java/com.example.wishesdemo/WishesSdk.kt
+
+```kotlin-data-line="9"
+package com.example.wishesdemo
+
+// ...
+
+internal object WishesSdk {
+    // Client ID provided by the Adobe for your integration
+    private const val CLIENT_ID = "your-client-id"
+
+    private var instance: CCEverywhereInterface? = null
+
+    // ...
+}
+```
 
 Keep the two kinds of identity separate:
 
@@ -93,20 +176,18 @@ Keep the two kinds of identity separate:
 
 ```kotlin
 dependencies {
-    implementation("com.adobe.express.embed:embedsdk:PR-2062")
+    implementation("com.adobe.express.embed:embedsdk:1.0.16")
 }
 ```
 
 1. Sync the project in Android Studio so Gradle resolves the SDK and its transitive dependencies.
 2. Confirm that the `com.adobe.express.embedsdk.ExpressEmbedSdk` import resolves in your Kotlin source. The initialization example in Step 3 includes this import.
 
-The README expresses the dependency as `com.adobe.express.embed:embedsdk:x.y.z` and directs general SDK consumers to [GitHub Releases](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release/releases) for a release version. Here, `PR-2062` replaces `x.y.z` because this guide covers that prerelease's Wishes and Greetings API. It isn't a general recommendation to use a prerelease for unrelated SDK features.
-
-The dependency installs a compiled Android library and its dependency model. Cloning or updating an SDK Git source repository doesn't change the Maven artifact selected by your app. Likewise, an engineering test-app APK is an application, not the SDK dependency you add to your host. Keep the provisioned artifact version fixed while integrating this flow; prerelease artifacts can change without a new release-style version number.
+The dependency is expressed as `com.adobe.express.embed:embedsdk:x.y.z` and directs to [GitHub Releases](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release/releases) for a release version; it installs a compiled Android library and its dependency model.
 
 **Checkpoint:** Gradle recognizes the SDK dependency, and your source can import `ExpressEmbedSdk`. If dependency resolution fails, address repository access or the supplied coordinate before writing launch code.
 
-## Step 3 — Initialize and retain the SDK
+## 3. Initialize and retain the SDK
 
 Initialization connects your app's identity and configuration to the SDK interface. The public entry point is `ExpressEmbedSdk.initialize`, which returns a `CCEverywhereInterface` synchronously. It isn't a JavaScript-style SDK loader or an initialization promise.
 
@@ -121,25 +202,24 @@ The helper uses these inputs:
 
 Add the public initialization helper to your host's SDK integration code:
 
-```kt-data-line="14-17"
-import android.content.Context
-import com.adobe.express.embedsdk.AuthMode
-import com.adobe.express.embedsdk.AuthOption
-import com.adobe.express.embedsdk.CCEverywhereInterface
-import com.adobe.express.embedsdk.ConfigParams
-import com.adobe.express.embedsdk.Environment
-import com.adobe.express.embedsdk.ExpressEmbedSdk
-import com.adobe.express.embedsdk.HostInfo
-import com.adobe.express.embedsdk.Version
+<CodeBlock slots="heading, code" repeat="1" />
 
-// Call once per process. Supply the client ID approved for your STAGE integration.
-fun initializeWishesSdk(context: Context, clientId: String): CCEverywhereInterface =
-    ExpressEmbedSdk.initialize(
-        hostInfo = HostInfo(clientId, "Wishes demo", Version(1, 0, 0)),
+#### src/main/java/com.example.wishesdemo/WishesSdk.kt
+
+```kotlin-data-line="4-8"
+// ...
+
+fun get(context: Context): CCEverywhereInterface =
+    instance ?: ExpressEmbedSdk.initialize(
+        hostInfo = HostInfo(CLIENT_ID, "Test-App", Version(1, 1, 1, 40042, "Test", "Beta")),
         configParams = ConfigParams(env = Environment.STAGE, locale = "en_US"),
         authProvider = { AuthOption(mode = AuthMode.DELAYED.value) },
         appContext = context.applicationContext,
-    )
+    ).also { sdk ->
+        // The test app's internalSetup() always turns SDK logging on.
+        sdk.internal?.enableLogs(true)
+        instance = sdk
+    }
 ```
 
 Pass the client ID approved for your app as `clientId`. `Wishes demo` and `Version(1, 0, 0)` are example host metadata, not the SDK's name or version. `HostInfo` uses the mobile platform category by default.
@@ -149,13 +229,9 @@ Pass the client ID approved for your app as `clientId`. `Wishes demo` and `Versi
 3. Catch initialization exceptions and report them in the host status view.
 4. Enable the launch button only after the instance is available.
 
-The helper itself doesn't cache an instance; your holder does. Don't initialize on every button tap or every Activity recreation. Reinitializing can close an existing SDK session, and concurrent initialization can fail.
-
-This recipe explicitly selects delayed authentication for the third-party path. It doesn't pass a pre-signed-in user token or borrow an Adobe first-party sign-in handler. Delayed authentication isn't a promise that every editor operation needs no authentication, and selecting `STAGE` doesn't grant service entitlement. Keep this development setup aligned with your partner provisioning; production configuration is a separate agreement.
-
 **Checkpoint:** the host retains one SDK interface and can report initialization failure without opening a broken workflow.
 
-## Step 4 — Connect the workflow callbacks
+## 4. Connect the workflow callbacks
 
 Before launching, create the `Callbacks` object that connects the SDK session to your host UI. Pass it to the launch helper in Step 5. The existing host wiring implements callback properties on a `Callbacks` object; it doesn't introduce a separate host editor workflow.
 
@@ -166,14 +242,14 @@ Use these hooks for this integration:
 | `onLoadInit`        | Provide the load-initialization callback required by the callback object; a no-op is sufficient for this host |
 | `onCancel`          | Report that the session was cancelled rather than treating it as an image export                              |
 | `onError`           | Show an actionable failure message and retain useful diagnostic details                                       |
-| `onPublish`         | Record receipt of the publish event, select an image, and start host-side decoding                            |
+| `onPublish`         | Record receipt of the publish event and start host-side decoding                                              |
 | `onSessionFinished` | After a publish event, request dismissal of the browse surface so the host result screen is revealed          |
 
 The sample maintains a host-owned `publishReceived` flag. It resets that flag before launch, sets it when `onPublish` arrives, and uses it in `onSessionFinished` to decide whether to dismiss the browser. This flag records a publish event, not successful image decoding. A missing or invalid image still needs a visible error message.
 
-Dispatch view updates and FragmentManager operations to the main thread. Start decoding through the Activity's lifecycle coroutine scope and move the expensive work to an I/O dispatcher, as described in Step 8.
+Dispatch view updates and FragmentManager operations to the main thread. Start decoding through the Activity's lifecycle coroutine scope and move the expensive work to an I/O dispatcher, as described in Step 9.
 
-## Step 5 — Configure and mount Wishes and Greetings
+## 5. Configure and mount Wishes and Greetings
 
 The workflow entry point is `sdk.module.wishesAndGreetingsNative`. It returns an `EmbedSdkWishesAndGreetingsNativeFragment`; your host mounts that Fragment.
 
@@ -257,17 +333,27 @@ The saved-state guard intentionally returns without launching if `FragmentManage
 
 After a successful launch, you should see the Wishes and Greetings template browser in place of the host screen. The host remains its back-stack return destination.
 
-## Step 6 — Open a template in the SDK editor
+## 6. Open a template in the SDK editor
 
-Select a template in the browser. The SDK carries the selected template identifier into its editor and forwards the export configuration you supplied at launch.
+When users select a template in the browser, the SDK carries the selected template identifier into its editor and forwards the export configuration you supplied at launch—this transition is part of the Wishes and Greetings workflow.
 
-This transition is part of the Wishes and Greetings workflow. Your partner app doesn't handle a public `onTemplateSelected` callback or call `editDesign` to open a second editor. In this prerelease, the composed Wishes workflow supports the third-party path, while calling `editDesign` directly as a third-party client remains unsupported.
+![Template loading](./img/airtel-mobile-wishes-and-greetings--template-loading.png)
 
 With `containerConfig` unset, the editor opens over the browse surface using the default content container. Keep the hosting Activity alive while the editor is active. The normal close path returns to the browser; your dismiss handling determines when to return from the browser to your own screen.
 
 **Checkpoint:** selecting a template should open that design in the editor. You can personalize it there before returning the image to your host.
 
-## Step 7 — Receive the published PNG
+## 7. Edit the template
+
+In the editor, your users can remix the template with the power and precision of Adobe Express' editing tools. They can add new text and media, or change text, images, colors, and other design elements provided by the template.
+
+![Template editing](./img/airtel-mobile-wishes-and-greetings--template-editing.png)
+
+Additional tools may be introduced in future versions of the module. Currently, users can add or modify text and media, as well as customize the template’s color theme. For both new and existing elements, the editor provides a rich set of controls to fine-tune the design, such as font selection, size, format, color and style adjustment, layout, background removal, and much more!
+
+Once they are satisfied with their edits, they can proceed clicking the "Use image" button, which triggers the `onPublish` callback.
+
+## 8. Receive the published PNG
 
 The launch helper defines one export option. Its outer fields identify the UI action, and `PublishAction` defines the returned data:
 
@@ -282,7 +368,7 @@ The launch helper defines one export option. Its outer fields identify the UI ac
 | `closeTargetOnExport` | `true`                 | Request editor close after export                       |
 | `enableByDefault`     | `true`                 | Enable the export action without requiring a first edit |
 
-Select **Use image** in the editor. The `onPublish` callback receives the intent and `PublishParams`. The payload contains a nullable `asset` list; it can also include `exportButtonId` and `documentId`. The export event is not itself a `Bitmap`.
+When users select **Use image** in the editor, the `onPublish` callback receives the intent and `PublishParams`. The payload contains a nullable `asset` list; it can also include `exportButtonId` and `documentId`. The export event is not itself a `Bitmap`.
 
 Use the public selection helper inside `onPublish` to find a nonempty payload:
 
@@ -308,7 +394,7 @@ The helper prefers a nonempty Base64 asset and then a nonempty URL-typed asset. 
 
 For this flow, route `BASE64` data to the decoder's Base64 input. A `URL` asset is acceptable to the sample decoder only when its data is a local `content://` URI. The SDK's URL data type doesn't mean that every returned value is local, and the host decoder doesn't fetch HTTP or HTTPS images.
 
-## Step 8 — Decode and display the image in your host
+## 9. Decode and display the image in your host
 
 Keep image handling in the host rather than embedding it in SDK navigation. The integration sample separates the payload from decoding with an `ExportImageInput` value, whose type is either `BASE64` or `LOCAL_URI`, and passes that value to `ExportImageDecoder`.
 
@@ -335,9 +421,11 @@ The sample applies these limits; they are host safeguards, not SDK export guaran
 
 The selected asset can therefore still fail to display: its payload might be malformed, exceed a host limit, refer to unavailable local content, or fail bitmap decoding. Show a host-side message such as **Returned image could not be displayed; try publishing again.** Preserve coroutine cancellation by rethrowing `CancellationException` rather than converting it into an image error.
 
+![Rendered image](./img/airtel-mobile-wishes-and-greetings--image-received.png)
+
 You can start decoding when the publish callback arrives even though the editor still covers the host screen. The image becomes visible when the workflow returns to that screen; decoding and screen dismissal don't have to happen in the same callback.
 
-## Step 9 — Finish the session without racing navigation
+## 10. Finish the session without racing navigation
 
 Handle the end of the workflow in this order:
 
@@ -346,9 +434,9 @@ Handle the end of the workflow in this order:
 3. In `onSessionFinished`, use the host's publish-received state to request dismissal of the browse surface.
 4. In the app configuration's `onDismiss` handler, pop the host-mounted browser's tagged back-stack entry when FragmentManager state isn't saved.
 
-`onPublish` precedes SDK teardown. `onSessionFinished` is a session/cleanup notification, not unconditional proof that every editor Fragment was successfully removed. Keep the AppCompat host and your own navigation state consistent rather than treating that notification as a universal cleanup guarantee.
+`onPublish` precedes SDK teardown. `onSessionFinished` is a session/cleanup notification. Keep the AppCompat host and your own navigation state consistent rather than treating that notification as a universal cleanup guarantee.
 
-The browse context's `close()` also delegates to the host's `onDismiss` handler. Your host must implement that handler; a close request doesn't independently remove the Fragment you mounted.
+The browse context's `close()` also delegates to the host's `onDismiss` handler—which means the host is responsible for handling the dismissal.
 
 The launch helper guards both launch and dismiss transactions with `isStateSaved`. Its dismiss branch skips the pop if state is saved and doesn't implement a deferred retry. For a host that can move to the background during the flow, record pending dismissal and apply it when the Activity can safely transact again. Make that host action idempotent so a repeated notification doesn't pop unrelated navigation entries.
 
@@ -388,4 +476,4 @@ You now have the integration boundaries for one complete Android flow:
 
 Keep the three public Kotlin helpers separate from your host's UI, callback object, and decoder implementation. They demonstrate SDK calls; the surrounding host wiring owns the complete integration.
 
-For further lookup, use the [Android SDK API reference](https://adobedocs.github.io/express-embed-mobile-sdk-android-release/) for public classes, configuration, and callbacks, and the [Android SDK release list](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release/releases) for general release information. Confirm prerelease-to-release module availability with your partner contact before changing the version used by this guide.
+For further lookup, use the [Android SDK API reference](https://adobedocs.github.io/express-embed-mobile-sdk-android-release/) for public classes, configuration, and callbacks, and the [Android SDK release list](https://github.com/AdobeDocs/express-embed-mobile-sdk-android-release/releases) for general release information.
