@@ -159,7 +159,7 @@ The SDK should only be initialized **once on each page**.
 ### HostInfo
 
 - `CLIENT_ID` (string): API key from Developer Console
-- `APP_NAME` (string): Name of your integration/app. This name corresponds with the project folder created for your end users in Adobe Express.
+- `APP_NAME` (string): Name of your integration/app. This name corresponds with the Public app name in the Developer Console.
 
 ```js
 (async () => {
