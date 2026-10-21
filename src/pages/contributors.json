@@ -1,17 +1,17 @@
 {
-  "total": 591,
+  "total": 595,
   "offset": 0,
-  "limit": 591,
+  "limit": 595,
   "data": [
     {
       "page": "/config",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/5939127?v=4",
+        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/270928274?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "10/9/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/guides/",
@@ -25,12 +25,12 @@
     {
       "page": "/guides/changelog/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/5939127?v=4",
+        "https://avatars.githubusercontent.com/u/113968869?v=4",
         "https://avatars.githubusercontent.com/u/270928274?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "10/12/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -1023,7 +1023,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/module-workflow/",
@@ -1039,7 +1039,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/sdk/src/workflows/3p/quick-action-workflow-types/",
@@ -1889,7 +1889,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/app-config-types/type-aliases/analytics-data",
@@ -1976,7 +1976,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/host-info-types/type-aliases/host-info",
@@ -1992,7 +1992,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/module/app-config-types/",
@@ -2000,7 +2000,14 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "10/21/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/3p/module/app-config-types/interfaces/create-guided-design-app-config",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config",
@@ -2084,7 +2091,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/action-intent-types/enumerations/module-sub-category",
@@ -2092,7 +2099,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/action-intent-types/enumerations/pdf-quick-action-intent",
@@ -2178,7 +2185,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/app-config-types/enumerations/host-app-trigger",
@@ -2658,7 +2665,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union",
@@ -2698,7 +2705,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/callbacks",
@@ -2880,7 +2887,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/config-manager-types/variables/sdk-cdn-base",
@@ -2991,7 +2998,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/design-config-types/interfaces/target-doc-config",
@@ -3565,7 +3572,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/interfaces/device-info",
@@ -3677,7 +3684,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/30/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/",
@@ -3685,7 +3692,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/browse-template-type",
@@ -3707,7 +3714,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/fde-app-version",
@@ -3722,6 +3729,13 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
       "lastUpdated": "6/16/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/module/app-config-types/enumerations/guided-workflow-variant",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/pdf-print-cmyk-color-profile",
@@ -3829,6 +3843,13 @@
       "lastUpdated": "6/16/2026"
     },
     {
+      "page": "/v4/shared/src/types/module/app-config-types/interfaces/create-guided-design-app-config",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/21/2026"
+    },
+    {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config",
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
@@ -3871,7 +3892,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/fde-create-design-app-config",
@@ -3996,7 +4017,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/annotate-image-design-config",
@@ -4004,6 +4025,13 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
       "lastUpdated": "9/11/2026"
+    },
+    {
+      "page": "/v4/shared/src/types/module/design-config-types/interfaces/create-guided-design-design-config",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/5939127?v=4"
+      ],
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/design-config-types/interfaces/design-viewer-design-config",
@@ -4078,7 +4106,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/doc-config-types/interfaces/annotate-image-doc-config",
@@ -4114,7 +4142,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "7/20/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent",
@@ -4402,7 +4430,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "8/20/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/publish-params-types/interfaces/quick-action-publish-params",
@@ -4410,7 +4438,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params",
@@ -4418,7 +4446,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/21/2026"
     },
     {
       "page": "/v4/shared/src/types/publish-params-types/type-aliases/editor-publish-params",
