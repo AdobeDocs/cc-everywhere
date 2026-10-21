@@ -46,6 +46,12 @@ Re-exports [ExperienceVariant](app-config-types/enumerations/experience-variant.
 
 <HorizontalLine />
 
+### GuidedWorkflowVariant
+
+Re-exports [GuidedWorkflowVariant](app-config-types/enumerations/guided-workflow-variant.md)
+
+<HorizontalLine />
+
 ### PdfPrintCmykColorProfile
 
 Re-exports [PdfPrintCmykColorProfile](app-config-types/enumerations/pdf-print-cmyk-color-profile.md)
@@ -190,6 +196,12 @@ Re-exports [FDECreateDesignAppConfig](app-config-types/interfaces/fde-create-des
 
 <HorizontalLine />
 
+### CreateGuidedDesignAppConfig
+
+Re-exports [CreateGuidedDesignAppConfig](app-config-types/interfaces/create-guided-design-app-config.md)
+
+<HorizontalLine />
+
 ### StartFromContentAppConfig
 
 Re-exports [StartFromContentAppConfig](app-config-types/interfaces/start-from-content-app-config.md)
@@ -277,6 +289,12 @@ Re-exports [FDEEditDesignDesignConfig](design-config-types/interfaces/fde-edit-d
 ### FDECreateDesignDesignConfig
 
 Re-exports [FDECreateDesignDesignConfig](design-config-types/interfaces/fde-create-design-design-config.md)
+
+<HorizontalLine />
+
+### CreateGuidedDesignDesignConfig
+
+Re-exports [CreateGuidedDesignDesignConfig](design-config-types/interfaces/create-guided-design-design-config.md)
 
 <HorizontalLine />
 

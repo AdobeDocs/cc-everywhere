@@ -22,5 +22,6 @@ Asset related information received with onPublish callback.
 | `exportButtonId` | `string` | id of the export option clicked | [`PublishParams`](publish-params.md).[`exportButtonId`](publish-params.md#property-exportbuttonid) |
 | `documentId?` | `string` | Unique identifier for the assets created/edited. | [`PublishParams`](publish-params.md).[`documentId`](publish-params.md#property-documentid) |
 | `assetPreview?` | [`OutputAsset`](../../asset-types/interfaces/output-asset.md)[] | Additional preview assets generated during export, alongside the primary export, if requested via PublishAction.previewConfig. | [`PublishParams`](publish-params.md).[`assetPreview`](publish-params.md#property-assetpreview) |
+| `metaData?` | `Record`&lt;`string`, `string`&gt; | Property to pass metadata to the host. | [`PublishParams`](publish-params.md).[`metaData`](publish-params.md#property-metadata) |
 | `prompt` | `string` | prompt used to generate the image. | - |
 | `currentScreen?` | `TextToImageScreen` | current screen where the publish action was initiated. | - |

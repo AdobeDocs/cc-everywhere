@@ -15,6 +15,7 @@ hideEditInGitHub: true
 - [`StartFromContentDesignConfig`](../../module/design-config-types/interfaces/start-from-content-design-config.md)
 - [`FDEEditDesignDesignConfig`](../../module/design-config-types/interfaces/fde-edit-design-design-config.md)
 - [`FDECreateDesignDesignConfig`](../../module/design-config-types/interfaces/fde-create-design-design-config.md)
+- [`CreateGuidedDesignDesignConfig`](../../module/design-config-types/interfaces/create-guided-design-design-config.md)
 - [`WarmupDesignConfig`](../../module/design-config-types/interfaces/warmup-design-config.md)
 - [`EditFromTemplateDesignConfig`](../../module/design-config-types/interfaces/edit-from-template-design-config.md)
 - [`AnnotateImageDesignConfig`](../../module/design-config-types/interfaces/annotate-image-design-config.md)
