@@ -167,6 +167,36 @@ Promise resolving with DesignContext when loaded; rejects on failure or cancella
 
 <HorizontalLine />
 
+### createGuidedDesign()
+
+```ts
+createGuidedDesign(
+   appConfig?, 
+   exportConfig?, 
+   containerConfig?
+): void;
+```
+
+Launches a guided design creation flow in the Focused Design Editor (FDE).
+
+#### Parameters
+
+| Parameter | Type | Description |
+| ------ | ------ | ------ |
+| `appConfig?` | [`CreateGuidedDesignAppConfig`](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/create-guided-design-app-config.md) | properties to configure the guided design creation experience |
+| `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
+| `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |
+
+#### Returns
+
+`void`
+
+#### Implementation of
+
+[`ModuleWorkflow`](../../module-workflow-types/interfaces/module-workflow.md).[`createGuidedDesign`](../../module-workflow-types/interfaces/module-workflow.md#createguideddesign)
+
+<HorizontalLine />
+
 ### editDesign()
 
 ```ts
@@ -184,7 +214,7 @@ Edit and customize a template or document in the Focused Design Editor (FDE).
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `docConfig?` | [`FDEEditDesignDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/fde-edit-design-doc-config.md) | pass template configuration including docId or templateId |
+| `docConfig?` | [`FDEEditDesignDocConfig`](../../../../../../shared/src/types/module/doc-config-types/interfaces/fde-edit-design-doc-config.md) | pass `templateId`, `docId`, a standalone `asset`, or `documentUrl` paired with `asset` |
 | `appConfig?` | [`FDEEditDesignAppConfig`](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md) | properties to configure the Focused Design Editor. See [ThirdParty.Module.FDEEditDesignAppConfig](../../../../../../shared/src/types/3p/module/app-config-types/interfaces/fde-edit-design-app-config.md). |
 | `exportConfig?` | [`ExportOptions`](../../../../../../shared/src/types/export-config-types/type-aliases/export-options.md) | properties to configure the export options |
 | `containerConfig?` | [`ContainerConfig`](../../../../../../shared/src/types/container-config-types/type-aliases/container-config.md) | properties to configure the SDK container |

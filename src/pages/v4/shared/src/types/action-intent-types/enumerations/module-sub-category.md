@@ -19,6 +19,7 @@ hideEditInGitHub: true
 | `EDIT_FROM_TEMPLATE` | `"edit-design-from-template"` |
 | `EDIT_DESIGN` | `"edit-design"` |
 | `CREATE_DESIGN` | `"create-design"` |
+| `CREATE_GUIDED_DESIGN` | `"create-guided-design"` |
 | `DESIGN_VIEWER` | `"design-viewer"` |
 | `ANNOTATE_IMAGE` | `"annotate-image"` |
 | `GENERATE_IMAGE` | `"generate-image"` |

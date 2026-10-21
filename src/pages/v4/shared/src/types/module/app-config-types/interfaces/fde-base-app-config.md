@@ -15,6 +15,7 @@ Lives in the shared module package (not 1P-only).
 
 - [`FDEEditDesignAppConfig`](fde-edit-design-app-config.md)
 - [`FDECreateDesignAppConfig`](fde-create-design-app-config.md)
+- [`CreateGuidedDesignAppConfig`](create-guided-design-app-config.md)
 
 ## Properties
 

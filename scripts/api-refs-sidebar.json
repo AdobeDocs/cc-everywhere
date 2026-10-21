@@ -986,6 +986,10 @@
                         "title": "interfaces",
                         "pages": [
                           {
+                            "title": "CreateGuidedDesignAppConfig",
+                            "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/create-guided-design-app-config.md"
+                          },
+                          {
                             "title": "DesignViewerAppConfig",
                             "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config.md"
                           },
@@ -1006,7 +1010,7 @@
                             "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/text-to-image-app-config.md"
                           }
                         ],
-                        "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/design-viewer-app-config.md"
+                        "path": "/v4/shared/src/types/3p/module/app-config-types/interfaces/create-guided-design-app-config.md"
                       }
                     ],
                     "path": "/v4/shared/src/types/3p/module/app-config-types/index.md"
@@ -2279,6 +2283,10 @@
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/generate-image-initial-view.md"
                       },
                       {
+                        "title": "GuidedWorkflowVariant",
+                        "path": "/v4/shared/src/types/module/app-config-types/enumerations/guided-workflow-variant.md"
+                      },
+                      {
                         "title": "PdfPrintCmykColorProfile",
                         "path": "/v4/shared/src/types/module/app-config-types/enumerations/pdf-print-cmyk-color-profile.md"
                       },
@@ -2339,6 +2347,10 @@
                       {
                         "title": "CreateConfig",
                         "path": "/v4/shared/src/types/module/app-config-types/interfaces/create-config.md"
+                      },
+                      {
+                        "title": "CreateGuidedDesignAppConfig",
+                        "path": "/v4/shared/src/types/module/app-config-types/interfaces/create-guided-design-app-config.md"
                       },
                       {
                         "title": "DesignViewerAppConfig",
@@ -2449,6 +2461,10 @@
                       {
                         "title": "AnnotateImageDesignConfig",
                         "path": "/v4/shared/src/types/module/design-config-types/interfaces/annotate-image-design-config.md"
+                      },
+                      {
+                        "title": "CreateGuidedDesignDesignConfig",
+                        "path": "/v4/shared/src/types/module/design-config-types/interfaces/create-guided-design-design-config.md"
                       },
                       {
                         "title": "DesignViewerDesignConfig",

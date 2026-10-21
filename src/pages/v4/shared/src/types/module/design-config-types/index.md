@@ -17,6 +17,7 @@ hideEditInGitHub: true
 | [StartFromContentDesignConfig](interfaces/start-from-content-design-config.md) | StartFromContentDesignConfig is the design config for the Start From Content module. |
 | [FDEEditDesignDesignConfig](interfaces/fde-edit-design-design-config.md) | - |
 | [FDECreateDesignDesignConfig](interfaces/fde-create-design-design-config.md) | - |
+| [CreateGuidedDesignDesignConfig](interfaces/create-guided-design-design-config.md) | - |
 | [WarmupDesignConfig](interfaces/warmup-design-config.md) | - |
 | [EditFromTemplateDesignConfig](interfaces/edit-from-template-design-config.md) | - |
 | [AnnotateImageDesignConfig](interfaces/annotate-image-design-config.md) | - |

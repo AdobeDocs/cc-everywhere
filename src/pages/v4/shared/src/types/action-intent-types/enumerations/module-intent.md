@@ -20,6 +20,7 @@ hideEditInGitHub: true
 | `EDIT_FROM_TEMPLATE` | `"edit-design-from-template"` | Legacy Quick Action card-maker (`module.editFromTemplate()`). |
 | `EDIT_DESIGN` | `"edit-design"` | FDE editor (`module.editDesign()`). |
 | `CREATE_DESIGN` | `"create-design"` | - |
+| `CREATE_GUIDED_DESIGN` | `"create-guided-design"` | FDE guided design creation (`module.createGuidedDesign()`). |
 | `ANNOTATE_IMAGE` | `"annotate-image"` | - |
 | `VIEW_DESIGN` | `"view-design"` | - |
 | `GENERATE_IMAGE` | `"generate-image"` | - |

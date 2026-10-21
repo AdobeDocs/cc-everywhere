@@ -17,6 +17,7 @@ hideEditInGitHub: true
 | [EditImageAppVersion](enumerations/edit-image-app-version.md) | - |
 | [FDEAppVersion](enumerations/fde-app-version.md) | FDE experience version shared by [FDECreateDesignAppConfig](interfaces/fde-create-design-app-config.md) and [FDEEditDesignAppConfig](interfaces/fde-edit-design-app-config.md). |
 | [ExperienceVariant](enumerations/experience-variant.md) | Specifies the experience variant to use when launching the module. |
+| [GuidedWorkflowVariant](enumerations/guided-workflow-variant.md) | Specifies which guided-creation experience variant to launch within the Focused Design Editor's guided design flow. |
 | [PdfPrintCmykColorProfile](enumerations/pdf-print-cmyk-color-profile.md) | CMYK ICC color profile used for print PDF export. |
 | [StartFromContentAppVersion](enumerations/start-from-content-app-version.md) | - |
 | [ThumbnailOption](enumerations/thumbnail-option.md) | - |
@@ -47,6 +48,7 @@ hideEditInGitHub: true
 | [EditorGuideConfig](interfaces/editor-guide-config.md) | Settings controlling the guides displayed in the editor canvas. |
 | [FDEEditDesignAppConfig](interfaces/fde-edit-design-app-config.md) | App config for editDesign (FDE MXP editor entry). |
 | [FDECreateDesignAppConfig](interfaces/fde-create-design-app-config.md) | App config for createDesign (FDE MXP — template browser entry). `contentBrowseConfig` is browse-only (no preview mode on the FDE template browser). |
+| [CreateGuidedDesignAppConfig](interfaces/create-guided-design-app-config.md) | App config for createGuidedDesign (FDE MXP — guided design creation entry). |
 | [StartFromContentAppConfig](interfaces/start-from-content-app-config.md) | StartFromContentAppConfig is the app config for the Start From Content module. |
 | [ContentBrowseBaseConfig](interfaces/content-browse-base-config.md) | Base configuration properties shared across all launch modes. Contains common properties available in both browse and preview modes. |
 | [BrowseModeConfig](interfaces/browse-mode-config.md) | Configuration for browse mode - the default workflow where users see template gallery first. This is the standard flow where users browse templates and then select one to preview. Extends base config with browse-specific properties like search and filters. |

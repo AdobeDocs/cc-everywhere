@@ -34,6 +34,12 @@ Re-exports [FDECreateDesignAppConfig](app-config-types/interfaces/fde-create-des
 
 <HorizontalLine />
 
+### CreateGuidedDesignAppConfig
+
+Re-exports [CreateGuidedDesignAppConfig](app-config-types/interfaces/create-guided-design-app-config.md)
+
+<HorizontalLine />
+
 ### FDEEditDesignAppConfig
 
 Re-exports [FDEEditDesignAppConfig](app-config-types/interfaces/fde-edit-design-app-config.md)

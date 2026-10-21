@@ -24,6 +24,7 @@ App config for 3P.
 - [`EditImageAppConfig`](../../module/app-config-types/interfaces/edit-image-app-config.md)
 - [`DesignViewerAppConfig`](../../module/app-config-types/interfaces/design-viewer-app-config.md)
 - [`FDECreateDesignAppConfig`](../../module/app-config-types/interfaces/fde-create-design-app-config.md)
+- [`CreateGuidedDesignAppConfig`](../../module/app-config-types/interfaces/create-guided-design-app-config.md)
 - [`FDEEditDesignAppConfig`](../../module/app-config-types/interfaces/fde-edit-design-app-config.md)
 
 ## Properties

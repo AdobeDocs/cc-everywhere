@@ -12,8 +12,9 @@ Specifies the experience variant to use when launching the module.
 
 ## Enumeration Members
 
-| Enumeration Member | Value       | Description |
-| ------------------ | ----------- | ----------- |
-| `DEFAULT`          | `"default"` | -           |
-| `PRINT`            | `"print"`   | -           |
-| `ACROBAT`          | `"acrobat"` | **Hidden**  |
+| Enumeration Member | Value | Description |
+| ------ | ------ | ------ |
+| `DEFAULT` | `"default"` | - |
+| `PRINT` | `"print"` | - |
+| `ACROBAT` | `"acrobat"` | **Hidden** |
+| `VARSITY` | `"varsity"` | - |
