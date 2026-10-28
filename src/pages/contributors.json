@@ -1,7 +1,7 @@
 {
-  "total": 595,
+  "total": 596,
   "offset": 0,
-  "limit": 595,
+  "limit": 596,
   "data": [
     {
       "page": "/config",
@@ -31,6 +31,13 @@
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
       "lastUpdated": "10/21/2026"
+    },
+    {
+      "page": "/guides/changelog/changelog-comp",
+      "avatars": [
+        "https://avatars.githubusercontent.com/u/113968869?v=4"
+      ],
+      "lastUpdated": "10/28/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
