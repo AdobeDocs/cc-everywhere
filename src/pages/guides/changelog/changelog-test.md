@@ -1,0 +1,1 @@
+<Changelog path="https://raw.githubusercontent.com/AdobeDocs/cc-everywhere/refs/heads/main/src/pages/feed.xml" />
