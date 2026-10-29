@@ -187,6 +187,8 @@ CLIENTS: object;
 | `ACROBAT.WEB.CLIENT_ID_REGEX` | `RegExp` | - |
 | `ACROBAT.DESKTOP` | `object` | - |
 | `ACROBAT.DESKTOP.CLIENT_ID` | `string` | - |
+| `ACROBAT_STUDY_SPACE` | `object` | - |
+| `ACROBAT_STUDY_SPACE.CLIENT_ID` | `string` | - |
 | `ACROBAT_EMBED_VIEWER` | `object` | - |
 | `ACROBAT_EMBED_VIEWER.CLIENT_ID` | `string` | - |
 | `ACROBAT_EXT` | `object` | - |
@@ -214,6 +216,8 @@ CLIENTS: object;
 | `BRIDGEWAY.CLIENT_ID` | `string` | - |
 | `CAPTIVATE` | `object` | - |
 | `CAPTIVATE.CLIENT_ID` | `string` | - |
+| `CAPTIVATE_WEB` | `object` | - |
+| `CAPTIVATE_WEB.CLIENT_ID` | `string` | - |
 | `CCD` | `object` | - |
 | `CCD.CLIENT_ID_PREFIX` | `string` | - |
 | `CONTENT_CAL` | `object` | - |

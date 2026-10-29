@@ -27,6 +27,7 @@ hideEditInGitHub: true
 | `BRIDGE` | `"BRIDGE"` |
 | `BRIDGEWAY` | `"BRIDGEWAY"` |
 | `CAPTIVATE` | `"CAPTIVATE"` |
+| `CAPTIVATE_WEB` | `"CAPTIVATE_WEB"` |
 | `CCD` | `"CCD"` |
 | `CONTENT_CAL` | `"CONTENT_CAL"` |
 | `EXPRESS_MCP_CLIENT` | `"EXPRESS_MCP_CLIENT"` |
