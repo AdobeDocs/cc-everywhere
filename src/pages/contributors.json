@@ -30,7 +30,7 @@
         "https://avatars.githubusercontent.com/u/270928274?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -874,7 +874,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/sdk/src/feature-flags/local-feature-flag-service/interfaces/feature-flag-config",
@@ -1976,7 +1976,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/host-info-types/type-aliases/host-info",
@@ -2036,7 +2036,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/3p/module/app-config-types/interfaces/text-to-image-app-config",
@@ -2665,7 +2665,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/browse-search-config-types/type-aliases/browse-search-config-union",
@@ -2705,7 +2705,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/callbacks",
@@ -2887,7 +2887,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/config-manager-types/variables/sdk-cdn-base",
@@ -2990,7 +2990,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "8/5/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/design-config-types/interfaces/design-config",
@@ -3532,7 +3532,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/8/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/enumerations/host-type",
@@ -3572,7 +3572,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/interfaces/device-info",
@@ -3714,7 +3714,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/enumerations/fde-app-version",
@@ -3906,7 +3906,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "10/29/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/model-config",
