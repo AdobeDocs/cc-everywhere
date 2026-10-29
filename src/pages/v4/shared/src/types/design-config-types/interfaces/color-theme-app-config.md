@@ -13,6 +13,7 @@ Extend on workflow-specific AppConfig types; SDK reads via getColorThemeFromAppC
 
 ## Extended by
 
+- [`FDEEditDesignAppConfig`](../../module/app-config-types/interfaces/fde-edit-design-app-config.md)
 - [`StartFromContentAppConfig`](../../module/app-config-types/interfaces/start-from-content-app-config.md)
 - [`AppConfig`](../../quick-action/app-config-types/interfaces/app-config.md)
 
