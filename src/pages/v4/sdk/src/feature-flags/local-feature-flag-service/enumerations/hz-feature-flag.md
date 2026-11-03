@@ -52,3 +52,7 @@ Enum representing feature flags for HZ based target apps
 | `FILTER_SHADOW` | `"filter-shadow"` | - |
 | `EDIT_IMAGE_LEAN_AUTHORING` | `"edit-image-lean-authoring"` | - |
 | `EMBED_THEME_QUERY_PARAM_ENABLED` | `"embed-theme-query-param-enabled"` | When enabled in HZ via `enabledFFs`, honor the `theme` URL query param (CCEX-298596). |
+| `EDIT_IMAGE_ASSISTANT_COMPACT_PROMPT_BAR` | `"edit-image-assistant-compact-prompt-bar"` | - |
+| `EDIT_IMAGE_ASSISTANT_SIGNED_IN_ONLY` | `"edit-image-assistant-signed-in-only"` | - |
+| `EDIT_IMAGE_ARP_JS` | `"edit-image-arp-js"` | - |
+| `ENABLE_MOSAIC_METERING` | `"enable-mosaic-metering"` | - |

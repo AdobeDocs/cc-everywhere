@@ -12,7 +12,7 @@ App config for editDesign (FDE MXP editor entry).
 
 ## Extends
 
-- [`FDEBaseAppConfig`](fde-base-app-config.md)
+- [`FDEBaseAppConfig`](fde-base-app-config.md).[`ColorThemeAppConfig`](../../../design-config-types/interfaces/color-theme-app-config.md)
 
 ## Extended by
 
@@ -22,6 +22,7 @@ App config for editDesign (FDE MXP editor entry).
 
 | Property | Type | Description | Inherited from |
 | ------ | ------ | ------ | ------ |
+| `colorTheme?` | [`ColorTheme`](../../../app-config-types/enumerations/color-theme.md) | - | [`ColorThemeAppConfig`](../../../design-config-types/interfaces/color-theme-app-config.md).[`colorTheme`](../../../design-config-types/interfaces/color-theme-app-config.md#property-colortheme) |
 | `appVersion?` | [`V1`](../enumerations/fde-app-version.md#enumeration-member-v1) | FDE experience version for template browser and editor surfaces. **Default** `FDEAppVersion.V1` | [`FDEBaseAppConfig`](fde-base-app-config.md).[`appVersion`](fde-base-app-config.md#property-appversion) |
 | `allowedFileTypes?` | ( \| [`JPEG`](../../../asset-types/enumerations/image-file-type.md#enumeration-member-jpeg) \| [`PNG`](../../../asset-types/enumerations/image-file-type.md#enumeration-member-png) \| [`PDF`](../../../asset-types/enumerations/pdf-file-type.md#enumeration-member-pdf))[] | Specify the list of file types that the user can publish. **Default** `Enable all formats (PNG, JPEG and PDF)` | [`FDEBaseAppConfig`](fde-base-app-config.md).[`allowedFileTypes`](fde-base-app-config.md#property-allowedfiletypes) |
 | `variant?` | [`ExperienceVariant`](../enumerations/experience-variant.md) | Specifies the experience variant to use when launching the module. **Default** `ExperienceVariant.DEFAULT` | [`FDEBaseAppConfig`](fde-base-app-config.md).[`variant`](fde-base-app-config.md#property-variant) |

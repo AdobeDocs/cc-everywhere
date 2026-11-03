@@ -18,3 +18,4 @@ Specifies the experience variant to use when launching the module.
 | `PRINT` | `"print"` | - |
 | `ACROBAT` | `"acrobat"` | **Hidden** |
 | `VARSITY` | `"varsity"` | - |
+| `ANNOTATE_IMAGE` | `"annotate-image"` | **Hidden** |
