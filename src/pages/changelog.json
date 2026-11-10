@@ -204,7 +204,7 @@
                 "modules": [
                   "ede"
                 ],
-                "text": "New [Embedded Design Editor concept guide](../concepts/ede.md), with companion [Create Design](../concepts/ede-create-design.md) and [Edit Design](../concepts/ede-edit-design.md) guides, plus a new [Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md)."
+                "text": "New [Embedded Design Editor concept guide](../concepts/ede), with companion [Create Design](../concepts/ede-create-design) and [Edit Design](../concepts/ede-edit-design) guides, plus a new [Embedded Design Editor tutorial](../tutorials/embedded-design-editor)."
               }
             ]
           },
@@ -268,7 +268,7 @@
                 "modules": [
                   "core"
                 ],
-                "text": "New [Analytics guide](../concepts/host-app-trigger.md)."
+                "text": "New [Analytics guide](../concepts/host-app-trigger)."
               }
             ]
           },
@@ -730,7 +730,7 @@
                 "modules": [
                   "core"
                 ],
-                "text": "`analyticsData.hostAppTrigger`. See the [Analytics guide](../concepts/host-app-trigger.md)."
+                "text": "`analyticsData.hostAppTrigger`. See the [Analytics guide](../concepts/host-app-trigger)."
               },
               {
                 "type": "improved",
@@ -1030,7 +1030,7 @@
                   "editor"
                 ],
                 "text": "`createDesign` is now `editor.create` / `editor.createWithAsset`; `editDesign` is now `editor.edit`.",
-                "action": "Rename the calls. See the [migration guide](../concepts/migration-v3-v4.md)."
+                "action": "Rename the calls. See the [migration guide](../concepts/migration-v3-v4)."
               },
               {
                 "type": "breaking",

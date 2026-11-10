@@ -451,6 +451,47 @@ function parseYaml(yamlContent) {
   return parseNode(context, 0, context.tokens[0].indent).value;
 }
 
+function stripMdExtension(url) {
+  if (/^https?:\/\//i.test(url)) {
+    try {
+      const parsed = new URL(url);
+      if (parsed.hostname !== "developer.adobe.com") return url;
+    } catch {
+      return url;
+    }
+  }
+  return url.replace(/(?:^|\/)index\.md(?=[?#]|$)|\.md(?=[?#]|$)/i, (match) => {
+    if (match.toLowerCase().endsWith("index.md")) {
+      return match.startsWith("/") ? "/" : "./";
+    }
+    return "";
+  });
+}
+
+function normalizeStringLinks(value) {
+  const updated = value.replace(
+    /(\[[^\]]*\]\()([^)\s]+)((?:\s+"[^"]*")?\))/g,
+    (_, prefix, url, suffix) => `${prefix}${stripMdExtension(url)}${suffix}`
+  );
+  if (/^[^\s]+\.md(?:[?#].*)?$/i.test(updated)) {
+    return stripMdExtension(updated);
+  }
+  return updated;
+}
+
+function normalizeLinksDeep(node) {
+  if (typeof node === "string") return normalizeStringLinks(node);
+  if (Array.isArray(node)) return node.map(normalizeLinksDeep);
+  if (node && typeof node === "object") {
+    const out = {};
+    for (const [key, val] of Object.entries(node)) {
+      out[key] = normalizeLinksDeep(val);
+    }
+    return out;
+  }
+  return node;
+}
+
 function buildChangelogSheet(settings, data) {
   return {
     total: 1,
@@ -458,8 +499,8 @@ function buildChangelogSheet(settings, data) {
     limit: 1,
     data: [
       {
-        settings,
-        data,
+        settings: normalizeLinksDeep(settings),
+        data: normalizeLinksDeep(data),
       },
     ],
     ":type": "sheet",
