@@ -31,8 +31,9 @@
     "devex:eds-sanitize": "node scripts/renameFiles.js && node scripts/normalizeLinks.js",
     "devex:generate-sidebar": "node scripts/update-config.js",
     "devex:generate-rss": "node scripts/generate-feed.js",
+    "devex:generate-changelog": "node scripts/generate-changelog.js",
     "devex:build-api-reference": "npm run devex:sync-docs && npm run devex:eds-sanitize && npm run devex:generate-sidebar",
-    "buildSiteMetadata": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils#update-releases-sitemetadata buildSiteMetadata -v",
+    "buildSiteMetadata": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildSiteMetadata -v",
     "buildContributors": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils buildContributorsV2 -v",
     "link:externalLinkOnly": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --external-links-only -v",
     "link:checkAllLinks": "npx --yes --prefer-online github:AdobeDocs/adp-devsite-utils runLint --internal-links-only --external-links-only -v"

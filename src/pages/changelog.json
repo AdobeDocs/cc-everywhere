@@ -1,0 +1,1135 @@
+{
+  "total": 1,
+  "offset": 0,
+  "limit": 1,
+  "data": [
+    {
+      "settings": {
+        "page": {
+          "title": "Changelog",
+          "description": "Adobe Express Embed SDK releases and documentation updates",
+          "url": "https://raw.githubusercontent.com/AdobeDocs/cc-everywhere/refs/heads/main/src/pages/feed.xml"
+        },
+        "kinds": {
+          "sdk": "SDK release",
+          "docs": "Docs update",
+          "maintenance": "Maintenance"
+        },
+        "archive": {
+          "enabled": true,
+          "label": "Older releases",
+          "description": "Previously released versions",
+          "groups": [
+            {
+              "id": "sdk-v1-v3",
+              "label": "SDK v1–v3",
+              "applies_to": {
+                "kind": "sdk",
+                "version_range": "<4.0.0"
+              },
+              "hint": "Releases before v4 aren't tagged by module or type."
+            },
+            {
+              "id": "old-maintenance",
+              "label": "Older maintenance releases",
+              "applies_to": {
+                "kind": "maintenance",
+                "version_range": "<2.0.0"
+              },
+              "hint": "Historical maintenance releases."
+            }
+          ]
+        },
+        "filters": [
+          {
+            "id": "module",
+            "label": "Module",
+            "control": "select",
+            "allLabel": "All modules",
+            "field": "areas",
+            "options": [
+              {
+                "id": "editor",
+                "label": "Full Editor"
+              },
+              {
+                "id": "ede",
+                "label": "Embedded Design Editor"
+              },
+              {
+                "id": "templates",
+                "label": "Template Browser"
+              },
+              {
+                "id": "generate",
+                "label": "Generate Image"
+              },
+              {
+                "id": "editimage",
+                "label": "Edit Image"
+              },
+              {
+                "id": "viewer",
+                "label": "Design Viewer"
+              },
+              {
+                "id": "qa",
+                "label": "Quick Actions"
+              },
+              {
+                "id": "auth",
+                "label": "Authentication"
+              },
+              {
+                "id": "export",
+                "label": "Export & publish"
+              },
+              {
+                "id": "core",
+                "label": "SDK core & config"
+              }
+            ]
+          },
+          {
+            "id": "year",
+            "label": "Year",
+            "allLabel": "All years",
+            "options": [
+              "2026",
+              "2025",
+              "2024"
+            ]
+          },
+          {
+            "id": "month",
+            "label": "Month",
+            "allLabel": "All months",
+            "optionsByYear": {
+              "2024": [
+                "December",
+                "November",
+                "October",
+                "September",
+                "April",
+                "March"
+              ],
+              "2025": [
+                "November",
+                "October",
+                "September",
+                "August",
+                "June",
+                "May",
+                "April",
+                "March",
+                "February",
+                "January"
+              ],
+              "2026": [
+                "October",
+                "September",
+                "August",
+                "July",
+                "June",
+                "April",
+                "March",
+                "January"
+              ]
+            }
+          }
+        ]
+      },
+      "data": {
+        "modules": {
+          "editor": "Full Editor",
+          "ede": "Embedded Design Editor",
+          "templates": "Template Browser",
+          "generate": "Generate Image",
+          "editimage": "Edit Image",
+          "viewer": "Design Viewer",
+          "qa": "Quick Actions",
+          "auth": "Authentication",
+          "export": "Export & publish",
+          "core": "SDK core & config"
+        },
+        "releases": [
+          {
+            "version": "4.57.22",
+            "date": "2026-10-08",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "`ERASE` intent added to `EditFurtherIntent`, so users can continue into object erase."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "core"
+                ],
+                "text": "Performance improvements."
+              }
+            ]
+          },
+          {
+            "version": "4.56.21",
+            "date": "2026-09-30",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "improved",
+                "modules": [
+                  "auth"
+                ],
+                "text": "`migrateAssets` returns a result per document, so you can retry only the failures."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "export"
+                ],
+                "text": "`PublishExportOption` accepts a `tooltip`."
+              }
+            ]
+          },
+          {
+            "date": "2026-09-24",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "ede"
+                ],
+                "text": "New [Embedded Design Editor concept guide](../concepts/ede.md), with companion [Create Design](../concepts/ede-create-design.md) and [Edit Design](../concepts/ede-edit-design.md) guides, plus a new [Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md)."
+              }
+            ]
+          },
+          {
+            "version": "4.55.8",
+            "date": "2026-09-16",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "auth"
+                ],
+                "text": "`migrateAssets` works with Partner Assertion auth."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "viewer"
+                ],
+                "text": "`DesignViewerContext.updateDesignAssets` swaps assets in an open viewer."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "templates"
+                ],
+                "text": "`hideTemplatePreview` skips the preview step."
+              }
+            ]
+          },
+          {
+            "version": "4.54.18",
+            "date": "2026-09-02",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "ede"
+                ],
+                "text": "`editorGuideConfig` controls guides in the editor."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "ede",
+                  "export"
+                ],
+                "text": "`pdfPrintConfig` sets print options for PDF export."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "ede"
+                ],
+                "text": "Print bleed now shows correctly in preview."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "New [Analytics guide](../concepts/host-app-trigger.md)."
+              }
+            ]
+          },
+          {
+            "version": "4.53.3",
+            "date": "2026-08-13",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "auth"
+                ],
+                "text": "`PartnerAssertionAuthConfig` for partner assertion sign-in."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "export"
+                ],
+                "text": "`PublishAction.previewConfig` with `AssetPreviewConfig`."
+              }
+            ]
+          },
+          {
+            "version": "4.51.14",
+            "date": "2026-08-05",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "viewer"
+                ],
+                "text": "`DesignViewerDocConfig` accepts multiple assets."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "editor"
+                ],
+                "text": "`editorMode: 'assistant'` opens the editor in assistant mode."
+              }
+            ]
+          },
+          {
+            "version": "4.50.23",
+            "date": "2026-07-24",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "templates"
+                ],
+                "text": "New Template Browser v2 guide."
+              }
+            ]
+          },
+          {
+            "version": "4.48.12",
+            "date": "2026-06-16",
+            "kind": "maintenance"
+          },
+          {
+            "version": "4.45.20",
+            "date": "2026-04-14",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "viewer"
+                ],
+                "text": "New Design Viewer guide."
+              }
+            ]
+          },
+          {
+            "version": "4.44.14",
+            "date": "2026-03-19",
+            "kind": "sdk",
+            "title": "Design Viewer",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "viewer"
+                ],
+                "text": "Design Viewer module: `viewDesign`, `DesignViewerAppConfig`, and `DesignViewerDocConfig`."
+              }
+            ]
+          },
+          {
+            "version": "4.43.13",
+            "date": "2026-03-10",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Mobile Web overview and WebView guides, plus a Mobile Web tutorial."
+              }
+            ]
+          },
+          {
+            "version": "4.41.14",
+            "date": "2026-01-30",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "export",
+                  "qa"
+                ],
+                "text": "`PublishAction.outputType` can return a `Blob`."
+              },
+              {
+                "type": "improved",
+                "modules": [
+                  "export"
+                ],
+                "text": "`PublishConfig.outputType` documented with examples."
+              }
+            ]
+          },
+          {
+            "version": "4.40.30",
+            "date": "2026-01-09",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`BaseAppConfig.metaData` passes your metadata through to callbacks."
+              }
+            ]
+          },
+          {
+            "version": "4.39.13",
+            "date": "2025-11-24",
+            "kind": "maintenance"
+          },
+          {
+            "date": "2025-11-14",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "templates"
+                ],
+                "text": "New Template Browser guide."
+              }
+            ]
+          },
+          {
+            "version": "4.38.19",
+            "date": "2025-11-10",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate",
+                  "editimage"
+                ],
+                "text": "`useClientAuth`, for enabled partners."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "export"
+                ],
+                "text": "`CALLBACK` publish target."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`WORKFLOW_CONTEXT`, `CustomMessage`, and `CustomMessageAction`."
+              },
+              {
+                "type": "improved",
+                "modules": [
+                  "core"
+                ],
+                "text": "Default loading screen uses `showExpressIconWithText`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "editor"
+                ],
+                "text": "`canvasBackgroundColor`."
+              }
+            ]
+          },
+          {
+            "version": "4.36.26",
+            "date": "2025-10-08",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "improved",
+                "modules": [
+                  "core"
+                ],
+                "text": "`onCancel` reports `isEscapePressed`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`HostInfo.coiEnabled`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`iframeTitle` sets the iframe’s accessible title."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "templates"
+                ],
+                "text": "`rootCollectionId` opens the browser at a collection."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "New Mobile Web Support overview."
+              }
+            ]
+          },
+          {
+            "version": "4.35.15",
+            "date": "2025-09-18",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "editor",
+                  "generate",
+                  "editimage"
+                ],
+                "text": "New Workflow Tethering guide and tutorial."
+              }
+            ]
+          },
+          {
+            "version": "4.34.27",
+            "date": "2025-09-01",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`AUTO` image content type."
+              }
+            ]
+          },
+          {
+            "version": "4.34.26",
+            "date": "2025-08-28",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "removed",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` are no longer accepted in `panelSettings`.",
+                "action": "Remove these values from your `panelSettings` configuration."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "New Edit Image tutorial."
+              }
+            ]
+          },
+          {
+            "version": "4.32.26",
+            "date": "2025-08-07",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`panelSettings` with `PanelSettings`, `StyleSetting`, and `ContentTypeSetting`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "Style enums and `ImageStyleId`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`hideFeedbackMenu`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`isPromptSafe`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`promptInputPlaceholder` (v2 only)."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "`inlineTOUConsent`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "export"
+                ],
+                "text": "`PublishButtonGroup`."
+              }
+            ]
+          },
+          {
+            "date": "2025-07-11",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "generate"
+                ],
+                "text": "New Generate Image tutorial."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Asset type aliases documented."
+              }
+            ]
+          },
+          {
+            "version": "4.30.13",
+            "date": "2025-06-20",
+            "kind": "maintenance"
+          },
+          {
+            "version": "4.29.22",
+            "date": "2025-05-28",
+            "kind": "sdk",
+            "title": "Edit Image v2",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "Edit Image v2: 35–50% faster loads, 35% less memory, Spectrum 2. No config changes needed."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`communityWallConfig`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "editor"
+                ],
+                "text": "`showPageMargin` and `showBleedArea`."
+              },
+              {
+                "type": "deprecated",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "PDF in `allowedFileTypes`. PDFs are now converted to PNG.",
+                "action": "Drop PDF from Edit Image `allowedFileTypes`, or expect PNG output."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "editor"
+                ],
+                "text": "New Editor Customization guide."
+              }
+            ]
+          },
+          {
+            "version": "4.28.19",
+            "date": "2025-05-05",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "editor"
+                ],
+                "text": "`assetCollection`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "editor"
+                ],
+                "text": "`onIntentChange` callback."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "core"
+                ],
+                "text": "Bug fixes."
+              }
+            ]
+          },
+          {
+            "version": "4.26.5",
+            "date": "2025-04-11",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`analyticsData.hostAppTrigger`. See the [Analytics guide](../concepts/host-app-trigger.md)."
+              },
+              {
+                "type": "improved",
+                "modules": [
+                  "core"
+                ],
+                "text": "Cancel events add `clientCtaLocation` and `workflowLoadCompleted`."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "core"
+                ],
+                "text": "Bug fixes."
+              }
+            ]
+          },
+          {
+            "version": "4.22.9",
+            "date": "2025-03-12",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "Firefly Custom Models (Enterprise)."
+              }
+            ]
+          },
+          {
+            "version": "4.21.17",
+            "date": "2025-02-27",
+            "kind": "sdk",
+            "title": "Generate Image v2",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "Opt in to v2 with `appVersion: \"2\"`. Default stays `\"1\"`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "v2 config options."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "export"
+                ],
+                "text": "`pdfPrint` in `allowedExportFileTypes`."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "generate"
+                ],
+                "text": "Generate Image v2 concept guide and demo app."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "core"
+                ],
+                "text": "Loader CSS."
+              }
+            ]
+          },
+          {
+            "version": "4.20.46",
+            "date": "2025-02-18",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "fixed",
+                "modules": [
+                  "editor"
+                ],
+                "text": "Video passed as `blob` or `base64` in `createWithAsset`."
+              },
+              {
+                "type": "removed",
+                "modules": [
+                  "editor"
+                ],
+                "text": "Presigned URL video in `createWithAsset` is temporarily unsupported.",
+                "action": "Pass video as `blob` or `base64` until support returns.",
+                "open": true
+              }
+            ]
+          },
+          {
+            "version": "4.19.22",
+            "date": "2025-01-31",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "`INSERT_OBJECT` and `REMOVE_OBJECT` intents."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Asset type coverage."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Developer journey map and “Adobe Express is unavailable” troubleshooting guide."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "core"
+                ],
+                "text": "Bug fixes."
+              }
+            ]
+          },
+          {
+            "version": "4.18.14",
+            "date": "2025-01-09",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`onPublish` returns the prompt in `TextToImagePublishParams.prompt`."
+              }
+            ]
+          },
+          {
+            "version": "4.17.33",
+            "date": "2024-12-16",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`imageDimensions` aspect ratio."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Error code guide."
+              }
+            ]
+          },
+          {
+            "version": "4.16.11",
+            "date": "2024-11-18",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`imageStyleReference` and `imageCompositionReference`."
+              },
+              {
+                "type": "fixed",
+                "modules": [
+                  "qa"
+                ],
+                "text": "Animate from Audio microphone input."
+              }
+            ]
+          },
+          {
+            "version": "4.15.19",
+            "date": "2024-10-09",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "export"
+                ],
+                "text": "Enabled state for export buttons."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate",
+                  "export"
+                ],
+                "text": "`DOWNLOAD_ALL` export option."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "`imageDimensions`."
+              },
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Redesigned SDK reference and migration guide."
+              }
+            ]
+          },
+          {
+            "date": "2024-09-23",
+            "kind": "docs",
+            "changes": [
+              {
+                "type": "docs",
+                "modules": [
+                  "core"
+                ],
+                "text": "Reorganized docs: Submission and Review, Quickstart, and Tutorials."
+              }
+            ]
+          },
+          {
+            "version": "4.14.23",
+            "date": "2024-09-05",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`DocConfig` accepts `Blob` and `File` assets."
+              }
+            ]
+          },
+          {
+            "version": "4.4.15",
+            "date": "2024-04-02",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "`terminate()`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "core"
+                ],
+                "text": "Root container `z-index` setting."
+              }
+            ]
+          },
+          {
+            "version": "4.2.30",
+            "date": "2024-03-14",
+            "kind": "sdk",
+            "changes": [
+              {
+                "type": "breaking",
+                "modules": [
+                  "core"
+                ],
+                "text": "Callbacks move from `initialize()` to each call’s `appConfig`.",
+                "action": "Move callbacks from `initialize()` into the `appConfig` of each call."
+              }
+            ]
+          },
+          {
+            "version": "4.2.29",
+            "date": "2024-03-14",
+            "kind": "sdk",
+            "title": "SDK v4",
+            "changes": [
+              {
+                "type": "breaking",
+                "modules": [
+                  "editor"
+                ],
+                "text": "`createDesign` is now `editor.create` / `editor.createWithAsset`; `editDesign` is now `editor.edit`.",
+                "action": "Rename the calls. See the [migration guide](../concepts/migration-v3-v4.md)."
+              },
+              {
+                "type": "breaking",
+                "modules": [
+                  "qa"
+                ],
+                "text": "`openQuickAction` is replaced by one method per action.",
+                "action": "Call the per-action methods instead."
+              },
+              {
+                "type": "breaking",
+                "modules": [
+                  "export"
+                ],
+                "text": "`ExportOptions` changed shape.",
+                "action": "Update `ExportOptions` to the v4 types."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "generate"
+                ],
+                "text": "Generate Image module: `createImageFromText`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "editimage"
+                ],
+                "text": "Edit Image module: `editImage`."
+              },
+              {
+                "type": "new",
+                "modules": [
+                  "auth"
+                ],
+                "text": "Delayed login."
+              }
+            ]
+          },
+          {
+            "version": "3.10.13",
+            "date": "2023-11-06",
+            "kind": "sdk",
+            "summary": "LINE and note layouts; QR Code and Caption Video quick actions."
+          },
+          {
+            "version": "3.8.11",
+            "date": "2023-08-25",
+            "kind": "sdk",
+            "summary": "`skipBrowserSupportCheck` option."
+          },
+          {
+            "version": "3.7.14",
+            "date": "2023-08-15",
+            "kind": "sdk",
+            "summary": "`ExportButton.id` is required; `cta` variant renamed `accent`; Animate From Audio added; Reverse Video and Change Speed retired.",
+            "breaking": true
+          },
+          {
+            "version": "3.6.16",
+            "date": "2023-08-06",
+            "kind": "sdk",
+            "summary": "MP4 export, mixed media, and `allowedFileTypes`."
+          },
+          {
+            "version": "2.0.8",
+            "date": "2023-02-02",
+            "kind": "sdk",
+            "summary": "`initialize()` is async; browser support check; `terminate()`; Google One Tap sign-in.",
+            "breaking": true
+          },
+          {
+            "version": "1.5.4",
+            "date": "2022-12-16",
+            "kind": "sdk",
+            "summary": "Quick actions work logged out; bug fixes."
+          },
+          {
+            "version": "1.4.10",
+            "date": "2022-11-14",
+            "kind": "sdk",
+            "summary": "Delayed login; Create from Image."
+          },
+          {
+            "version": "1.3.11",
+            "date": "2022-08-24",
+            "kind": "sdk",
+            "summary": "CDN bundle, welcome screen, and sign-out."
+          },
+          {
+            "version": "1.1.0",
+            "date": "2022-04-09",
+            "kind": "sdk",
+            "summary": "Configurable scrim and redirect URI; `appVersion` and `platformCategory` optional."
+          }
+        ]
+      }
+    }
+  ],
+  ":type": "sheet"
+}
