@@ -33,16 +33,24 @@ modules:
 
 releases:
 
+  - version: 4.58.15
+    date: 2026-10-21
+    kind: sdk
+    changes:
+      - type: new
+        modules: [ede]
+        text: "[`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createguideddesign) module that launches a guided design creation flow in EDE."
+
   - version: 4.57.22
     date: 2026-10-08
     kind: sdk
     changes:
       - type: new
         modules: [editimage]
-        text: "`ERASE` intent added to `EditFurtherIntent`, so users can continue into object erase."
+        text: "[`EditFurtherIntent.ERASE`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) starting intent for Edit Image, so users can continue into object erase."
       - type: fixed
         modules: [core]
-        text: "Performance improvements."
+        text: "Various performance improvements and fixes."
 
   - version: 4.56.21
     date: 2026-09-30
@@ -50,17 +58,21 @@ releases:
     changes:
       - type: improved
         modules: [auth]
-        text: "`migrateAssets` returns a result per document, so you can retry only the failures."
+        text: "Per-document success/failure status in [`migrateAssets()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#migrateassets) `MigrateAssetsResult`."
       - type: new
         modules: [export]
-        text: "`PublishExportOption` accepts a `tooltip`."
+        text: "Optional `tooltip` field on [`PublishExportOption`](../../v4/shared/src/types/export-config-types/interfaces/publish-export-option.md#properties) in `ExportConfig`, letting hosts customize hover tooltip text on publish-target export buttons."
 
-  - date: 2026-09-24
+  - version: 4.55.8
+    date: 2026-09-24
     kind: docs
     changes:
       - type: docs
         modules: [ede]
-        text: "New [Embedded Design Editor concept guide](../concepts/ede.md), with companion [Create Design](../concepts/ede-create-design.md) and [Edit Design](../concepts/ede-edit-design.md) guides, plus a new [Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md)."
+        text: "[Embedded Design Editor (EDE) concept guide](../concepts/ede.md) introducing EDE's configurable, focused creation experiences, along with companion [Create Design](../concepts/ede-create-design.md) and [Edit Design](../concepts/ede-edit-design.md) guides."
+      - type: docs
+        modules: [ede]
+        text: "[Embedded Design Editor tutorial](../tutorials/embedded-design-editor.md) walking through building a Create Design → Edit Design flow step by step."
 
   - version: 4.55.8
     date: 2026-09-16
@@ -68,13 +80,13 @@ releases:
     changes:
       - type: new
         modules: [auth]
-        text: "`migrateAssets` works with Partner Assertion auth."
+        text: "[`migrateAssets()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#migrateassets) support for asset migration (guest to logged-in user) in the [Partner Assertion](../../v4/shared/src/types/authentication-types/index.md#interfaces) workflow."
       - type: new
         modules: [viewer]
-        text: "`DesignViewerContext.updateDesignAssets` swaps assets in an open viewer."
+        text: "[`DesignViewerContext`](../../v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context.md) access for Design Viewer, allowing host applications to provide additional assets after initial load via [`updateDesignAssets`](../../v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context.md#updatedesignassets)."
       - type: new
         modules: [templates]
-        text: "`hideTemplatePreview` skips the preview step."
+        text: "[`hideTemplatePreview`](../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config.md#properties) option to hide Template Preview, navigating directly to the editor after selecting a template."
 
   - version: 4.54.18
     date: 2026-09-02
@@ -82,16 +94,16 @@ releases:
     changes:
       - type: new
         modules: [ede]
-        text: "`editorGuideConfig` controls guides in the editor."
+        text: "[`editorGuideConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config.md) property to configure visibility of Bleed, Margins, and Rulers in the Edit Design module UI."
       - type: new
         modules: [ede, export]
-        text: "`pdfPrintConfig` sets print options for PDF export."
+        text: "[`pdfPrintConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config.md) property to configure print-ready PDF export in the Edit Design module (`\"print\"` variant), including Crop Marks, Bleed, Color Mode, and ICC Profile."
       - type: fixed
         modules: [ede]
-        text: "Print bleed now shows correctly in preview."
+        text: "`createDesign()` with `\"print\"` variant now correctly displays bleed in the editor preview."
       - type: docs
         modules: [core]
-        text: "New [Analytics guide](../concepts/host-app-trigger.md)."
+        text: "[Analytics concept guide](../concepts/host-app-trigger.md) explaining how to configure required analytics data for consistent launch attribution across Embed SDK workflows."
 
   - version: 4.53.3
     date: 2026-08-13
@@ -99,10 +111,10 @@ releases:
     changes:
       - type: new
         modules: [auth]
-        text: "`PartnerAssertionAuthConfig` for partner assertion sign-in."
+        text: "[`PartnerAssertionAuthConfig`](../../v4/shared/src/types/authentication-types/index.md#type-aliases) interface for partner assertion authentication (guest, signed-in, or guest-to-user transition)."
       - type: new
         modules: [export]
-        text: "`PublishAction.previewConfig` with `AssetPreviewConfig`."
+        text: "[`PublishAction.previewConfig`](../../v4/shared/src/types/export-config-types/interfaces/publish-action.md#properties) property of type [`AssetPreviewConfig`](../../v4/shared/src/types/export-config-types/interfaces/asset-preview-config.md) to configure an additional output preview image."
 
   - version: 4.51.14
     date: 2026-08-05
@@ -110,10 +122,10 @@ releases:
     changes:
       - type: new
         modules: [viewer]
-        text: "`DesignViewerDocConfig` accepts multiple assets."
+        text: "[`CCEverywhere.DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md) accepts multiple assets in `docConfig`."
       - type: new
         modules: [editor]
-        text: "`editorMode: 'assistant'` opens the editor in assistant mode."
+        text: "[`CCEverywhere.EditorAppConfig.editorMode`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties) optional property on Full Editor `appConfig`; setting `'assistant'` opens the editor with the AI Assistant panel active."
 
   - version: 4.50.23
     date: 2026-07-24
@@ -121,11 +133,15 @@ releases:
     changes:
       - type: docs
         modules: [templates]
-        text: "New Template Browser v2 guide."
+        text: "[Template Browser v2 concept guide](../concepts/template-browser-v2.md) covering the new tabbed Template Browser experience for authenticated users (coexists with Template Browser v1)."
 
   - version: 4.48.12
     date: 2026-06-16
     kind: maintenance
+    changes:
+      - type: fixed
+        modules: [core]
+        text: "General improvements and bug fixes."
 
   - version: 4.45.20
     date: 2026-04-14
@@ -133,7 +149,7 @@ releases:
     changes:
       - type: docs
         modules: [viewer]
-        text: "New Design Viewer guide."
+        text: "[Design Viewer concept guide](../concepts/design-viewer.md) covering implementation details of the Design Viewer module."
 
   - version: 4.44.14
     date: 2026-03-19
@@ -142,7 +158,7 @@ releases:
     changes:
       - type: new
         modules: [viewer]
-        text: "Design Viewer module: `viewDesign`, `DesignViewerAppConfig`, and `DesignViewerDocConfig`."
+        text: "[`CCEverywhere.viewDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#viewdesign) Design Viewer module, configured via [`DesignViewerAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config.md) and [`DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config.md)."
 
   - version: 4.43.13
     date: 2026-03-10
@@ -150,7 +166,10 @@ releases:
     changes:
       - type: docs
         modules: [core]
-        text: "Mobile Web overview and WebView guides, plus a Mobile Web tutorial."
+        text: "Expanded **Mobile Web Concept Guide**: [Overview](../concepts/mobile-web-support-overview.md) comparing Mobile Web and Mobile SDKs, [Mobile Web in a WebView](../concepts/mobile-web-support-webview.md) for iOS and Android apps, and improved information architecture."
+      - type: docs
+        modules: [core]
+        text: "[Mobile Web tutorial](../tutorials/mobile-web.md) with a Fantasy Sports badge creation end-to-end example and working samples for Web (client and server), Android, and iOS."
 
   - version: 4.41.14
     date: 2026-01-30
@@ -158,10 +177,10 @@ releases:
     changes:
       - type: new
         modules: [export, qa]
-        text: "`PublishAction.outputType` can return a `Blob`."
+        text: "[`CCEverywhere.PublishAction.outputType`](../../v4/shared/src/types/export-config-types/interfaces/publish-action.md) option to return output files as `Blob` for Quick Actions and Module Workflows."
       - type: improved
         modules: [export]
-        text: "`PublishConfig.outputType` documented with examples."
+        text: "[`CCEverywhere.PublishConfig.outputType`](../../v4/shared/src/types/module/app-config-types/interfaces/publish-config.md#properties) asset data type updated for `Blob` output."
 
   - version: 4.40.30
     date: 2026-01-09
@@ -169,7 +188,7 @@ releases:
     changes:
       - type: new
         modules: [core]
-        text: "`BaseAppConfig.metaData` passes your metadata through to callbacks."
+        text: "[`CCEverywhere.BaseAppConfig.metaData`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md#properties) support for passing custom key-value metadata across all workflows."
 
   - version: 4.39.13
     date: 2025-11-24
@@ -180,7 +199,7 @@ releases:
     changes:
       - type: docs
         modules: [templates]
-        text: "New Template Browser guide."
+        text: "[Template Browser concept guide](../concepts/template-browser.md) covering implementation details of the Template Browser experience."
 
   - version: 4.38.19
     date: 2025-11-10
@@ -188,19 +207,19 @@ releases:
     changes:
       - type: new
         modules: [generate, editimage]
-        text: "`useClientAuth`, for enabled partners."
+        text: "[`CCEverywhere.BaseAppConfig.useClientAuth`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config.md#properties) option for credit-free Generative AI workflows in Generate Image and Edit Image (enabled partners only)."
       - type: new
         modules: [export]
-        text: "`CALLBACK` publish target."
+        text: "[`CCEverywhere.CallBackTarget.CALLBACK`](../../v4/shared/src/types/export-config-types/enumerations/call-back-target.md#callback) export target to trigger callback actions without publishing or downloading assets."
       - type: new
         modules: [core]
-        text: "`WORKFLOW_CONTEXT`, `CustomMessage`, and `CustomMessageAction`."
+        text: "**Custom Message Workflow**: [`WORKFLOW_CONTEXT`](../../v4/shared/src/messenger/message-types/enumerations/message-type.md#workflow_context) message type, [`CustomMessage`](../../v4/shared/src/messenger/message-types/interfaces/custom-message.md) interface (instance ID, request ID, action, intent, and optional data), and [`CustomMessageAction`](../../v4/shared/src/messenger/message-types/enumerations/custom-message-action.md) enum for unsaved changes and asset requests."
       - type: improved
         modules: [core]
-        text: "Default loading screen uses `showExpressIconWithText`."
+        text: "[`CCEverywhere.ModalContainerConfig.showExpressIconWithText`](../../v4/shared/src/types/container-config-types/interfaces/modal-container-config.md#properties) default loading screen includes the Express logo and text."
       - type: new
         modules: [editor]
-        text: "`canvasBackgroundColor`."
+        text: "[`CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties) option to configure canvas background color in `RRGGBBAA` HEX format."
 
   - version: 4.36.26
     date: 2025-10-08
@@ -208,19 +227,19 @@ releases:
     changes:
       - type: improved
         modules: [core]
-        text: "`onCancel` reports `isEscapePressed`."
+        text: "[`CCEverywhere.ModuleWorkflow.CancelCallback`](../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback.md) `onCancel` reports optional `isEscapePressed` (`true` when canceled via Escape during loading)."
       - type: new
         modules: [core]
-        text: "`HostInfo.coiEnabled`."
+        text: "[`CCEverywhere.HostInfo.coiEnabled`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base.md#properties) property on `HostInfo` indicating whether COI (Cross-Origin Isolation) is enabled."
       - type: new
         modules: [core]
-        text: "`iframeTitle` sets the iframe’s accessible title."
+        text: "[`CCEverywhere.BaseContainerConfig.iframeTitle`](../../v4/shared/src/types/container-config-types/interfaces/base-container-config.md#properties) property to configure the iframe's accessible title."
       - type: new
         modules: [templates]
-        text: "`rootCollectionId` opens the browser at a collection."
+        text: "[`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`](../../v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config.md#properties) option to surface non-Express collections in the browser."
       - type: docs
         modules: [core]
-        text: "New Mobile Web Support overview."
+        text: "[Mobile Web Support Overview](../concepts/mobile-web-support-overview.md) concept guide covering mobile creative workflows, configuration options, best practices, and troubleshooting."
 
   - version: 4.35.15
     date: 2025-09-18
@@ -228,7 +247,7 @@ releases:
     changes:
       - type: docs
         modules: [editor, generate, editimage]
-        text: "New Workflow Tethering guide and tutorial."
+        text: "[Workflow Tethering concept guide](../concepts/tethering.md) and [Workflow Tethering tutorial](../tutorials/workflow-tethering.md) covering chained workflows (Generate Image → Edit Image and Edit Image → Full Editor)."
 
   - version: 4.34.27
     date: 2025-09-01
@@ -236,7 +255,7 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "`AUTO` image content type."
+        text: "`AUTO` content type on [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md) to automatically determine content type from the prompt and context."
 
   - version: 4.34.26
     date: 2025-08-28
@@ -244,11 +263,11 @@ releases:
     changes:
       - type: removed
         modules: [generate]
-        text: "`ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` are no longer accepted in `panelSettings`."
+        text: "`ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` enumerations are no longer accepted in `CCEverywhere.TextToImageAppConfig.panelSettings`."
         action: "Remove these values from your `panelSettings` configuration."
       - type: docs
         modules: [editimage]
-        text: "New Edit Image tutorial."
+        text: "[Edit Image tutorial](../tutorials/edit-image.md) covering implementation details of Edit Image v2 features."
 
   - version: 4.32.26
     date: 2025-08-07
@@ -256,35 +275,38 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "`panelSettings` with `PanelSettings`, `StyleSetting`, and `ContentTypeSetting`."
+        text: "[`CCEverywhere.TextToImageAppConfig.panelSettings`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#panelsettings) configuration for Generate Image v1 and v2, including [`PanelSettings`](../../v4/shared/src/types/panel-settings-types/interfaces/panel-settings.md), [`StyleSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/style-setting.md), and [`ContentTypeSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/content-type-setting.md)."
       - type: new
         modules: [generate]
-        text: "Style enums and `ImageStyleId`."
+        text: "Style enumerations and [`ImageStyleId`](../../v4/shared/src/types/panel-settings-types/type-aliases/image-style-id.md): [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type.md), [`ImageThemeStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-theme-style.md), [`ImageTechniqueStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-technique-style.md), `ImageLightingStyle`, `ImageCompositionStyle`, [`ImageEffectStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-effect-style.md), `ImageColorStyle`, [`ImageMovementStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-movement-style.md), [`ImageMaterialStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-material-style.md), and [`ImageConceptStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-concept-style.md)."
       - type: new
         modules: [generate]
-        text: "`hideFeedbackMenu`."
+        text: "[`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#hidefeedbackmenu) option to hide the feedback menu in the header bar."
       - type: new
         modules: [generate]
-        text: "`isPromptSafe`."
+        text: "[`CCEverywhere.TextToImageAppConfig.isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#ispromptsafe) callback for custom prompt moderation."
       - type: new
         modules: [generate]
-        text: "`promptInputPlaceholder` (v2 only)."
+        text: "[`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#promptinputplaceholder) placeholder text configuration for the prompt input field (Generate Image v2 only)."
+      - type: docs
+        modules: [generate]
+        text: "Updated [Generate Image tutorial](../tutorials/generate-image.md) and [Concept Guide](../concepts/generate-image-v2.md) for the new panel settings options."
       - type: new
         modules: [editimage]
-        text: "`inlineTOUConsent`."
+        text: "[`CCEverywhere.EditImageAppConfig.inlineTOUConsent`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#inlinetouconsent) inline Terms of Use consent configuration."
       - type: new
         modules: [export]
-        text: "`PublishButtonGroup`."
+        text: "[`PublishButtonGroup`](../../v4/shared/src/types/export-config-types/interfaces/publish-button-group.md) interface for organizing export buttons."
 
   - date: 2025-07-11
     kind: docs
     changes:
       - type: docs
         modules: [generate]
-        text: "New Generate Image tutorial."
+        text: "[Generate Image tutorial](../tutorials/generate-image.md) covering Generate Image v2 features, including the Custom Community Wall."
       - type: docs
         modules: [core]
-        text: "Asset type aliases documented."
+        text: "Improved API Reference (v4) documentation for Type Aliases such as [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset.md)."
 
   - version: 4.30.13
     date: 2025-06-20
@@ -297,20 +319,20 @@ releases:
     changes:
       - type: new
         modules: [editimage]
-        text: "Edit Image v2: 35–50% faster loads, 35% less memory, Spectrum 2. No config changes needed."
+        text: "[`CCEverywhere.module.editImage()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md) [Edit Image v2 experience](../concepts/edit-image-v2.md): 35–50% faster loads, 35% less memory, Adobe Spectrum 2 UI. No config changes needed."
       - type: new
         modules: [generate]
-        text: "`communityWallConfig`."
+        text: "[`CCEverywhere.TextToImageAppConfig.communityWallConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) to populate the Community Wall with custom images (see [Custom Community Wall](../concepts/generate-image-v2.md#custom-community-wall))."
       - type: new
         modules: [editor]
-        text: "`showPageMargin` and `showBleedArea`."
+        text: "[`CCEverywhere.EditorAppConfig.showPageMargin`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties) and [`CCEverywhere.EditorAppConfig.showBleedArea`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties) options to control margins and bleed visibility."
       - type: deprecated
         modules: [editimage]
-        text: "PDF in `allowedFileTypes`. PDFs are now converted to PNG."
+        text: "PDF in [`AppConfig.allowedFileTypes`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config.md#properties) for Edit Image v2; PDFs are converted to PNG."
         action: "Drop PDF from Edit Image `allowedFileTypes`, or expect PNG output."
       - type: docs
         modules: [editor]
-        text: "New Editor Customization guide."
+        text: "Enhanced [Editor Customization](../concepts/appconfig.md) concept guide with `assetCollection`, `showPageMargin`, and `showBleedArea` options, use cases, and examples."
 
   - version: 4.28.19
     date: 2025-05-05
@@ -318,13 +340,13 @@ releases:
     changes:
       - type: new
         modules: [editor]
-        text: "`assetCollection`."
+        text: "[`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config.md#properties) optional property (collection URN) for asset collection filtering in the Editor."
       - type: new
         modules: [editor]
-        text: "`onIntentChange` callback."
+        text: "[`CCEverywhere.Callbacks.onIntentChange`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks.md#properties) optional callback for intent change events in the Editor."
       - type: fixed
         modules: [core]
-        text: "Bug fixes."
+        text: "Performance improvements and bug fixes."
 
   - version: 4.26.5
     date: 2025-04-11
@@ -332,13 +354,13 @@ releases:
     changes:
       - type: new
         modules: [core]
-        text: "`analyticsData.hostAppTrigger`. See the [Analytics guide](../concepts/host-app-trigger.md)."
+        text: "[`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) (`hostAppTrigger`). See the [Analytics guide](../concepts/host-app-trigger.md)."
       - type: improved
         modules: [core]
-        text: "Cancel events add `clientCtaLocation` and `workflowLoadCompleted`."
+        text: "Cancel events include optional `clientCtaLocation` and `workflowLoadCompleted` properties."
       - type: fixed
         modules: [core]
-        text: "Bug fixes."
+        text: "Various performance improvements and bug fixes."
 
   - version: 4.22.9
     date: 2025-03-12
@@ -346,7 +368,7 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "Firefly Custom Models (Enterprise)."
+        text: "[Firefly Custom Models](../concepts/generate-image-v2.md#custom-firefly-models) support in Generate Image V2 (Enterprise users only)."
 
   - version: 4.21.17
     date: 2025-02-27
@@ -355,19 +377,19 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "Opt in to v2 with `appVersion: \"2\"`. Default stays `\"1\"`."
+        text: "[`CCEverywhere.TextToImageAppConfig.appVersion`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) option to opt in to Generate Image V2 with `appVersion: \"2\"` (default stays `\"1\"`)."
       - type: new
         modules: [generate]
-        text: "v2 config options."
+        text: "v2 config options: [`thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties), [`editDropdownOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties), [`publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties), [`fastModeConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties), and [`featureConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties)."
       - type: new
         modules: [export]
-        text: "`pdfPrint` in `allowedExportFileTypes`."
+        text: "`pdfPrint` support in `allowedExportFileTypes` on `appConfig`."
       - type: docs
         modules: [generate]
-        text: "Generate Image v2 concept guide and demo app."
+        text: "[Concept Guide](../concepts/generate-image-v2.md) for Generate Image V2 and updated [Demo App](https://demo.expressembed.com/)."
       - type: fixed
         modules: [core]
-        text: "Loader CSS."
+        text: "Loader CSS for frictionless experience."
 
   - version: 4.20.46
     date: 2025-02-18
@@ -375,10 +397,10 @@ releases:
     changes:
       - type: fixed
         modules: [editor]
-        text: "Video passed as `blob` or `base64` in `createWithAsset`."
+        text: "Video `blob` and `base64` asset inputs for [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow.md#createwithasset)."
       - type: removed
         modules: [editor]
-        text: "Presigned URL video in `createWithAsset` is temporarily unsupported."
+        text: "Presigned [`URL`](../../v4/shared/src/types/asset-types/type-aliases/url-asset.md) as the [`datatype`](../../v4/shared/src/types/asset-types/enumerations/asset-data-type.md) for video [`asset`](../../v4/shared/src/types/asset-types/interfaces/asset-base.md) inputs in `createWithAsset()` is temporarily unsupported."
         action: "Pass video as `blob` or `base64` until support returns."
         open: true
 
@@ -388,16 +410,16 @@ releases:
     changes:
       - type: new
         modules: [editimage]
-        text: "`INSERT_OBJECT` and `REMOVE_OBJECT` intents."
+        text: "[`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) intents `INSERT_OBJECT` and `REMOVE_OBJECT` in Edit Image."
       - type: docs
         modules: [core]
-        text: "Asset type coverage."
+        text: "[Asset](../../v4/shared/src/types/asset-types/index.md) type documentation coverage."
       - type: docs
         modules: [core]
-        text: "Developer journey map and “Adobe Express is unavailable” troubleshooting guide."
+        text: "[Embed SDK Developer Journey](../index.md#embed-sdk-developer-journey) map and [Troubleshooting](../troubleshooting/express-unavailable-error.md) guide for \"Adobe Express is Unavailable\" and \"Missing Referrer Header\" errors."
       - type: fixed
         modules: [core]
-        text: "Bug fixes."
+        text: "Various performance improvements and bug fixes."
 
   - version: 4.18.14
     date: 2025-01-09
@@ -405,7 +427,7 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "`onPublish` returns the prompt in `TextToImagePublishParams.prompt`."
+        text: "[`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params.md) returns the prompt in `onPublish`."
 
   - version: 4.17.33
     date: 2024-12-16
@@ -413,10 +435,10 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "`imageDimensions` aspect ratio."
+        text: "[`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) aspect ratio parameter in `createImageFromText()`."
       - type: docs
         modules: [core]
-        text: "Error code guide."
+        text: "[Error code guide](../concepts/error-handling.md) for managing errors."
 
   - version: 4.16.11
     date: 2024-11-18
@@ -424,7 +446,7 @@ releases:
     changes:
       - type: new
         modules: [generate]
-        text: "`imageStyleReference` and `imageCompositionReference`."
+        text: "[`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) and [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config.md#properties) in `createImageFromText()`."
       - type: fixed
         modules: [qa]
         text: "Animate from Audio microphone input."
@@ -435,23 +457,24 @@ releases:
     changes:
       - type: new
         modules: [export]
-        text: "Enabled state for export buttons."
+        text: "Enabled state for export buttons (`CCEverywhere.ExportConfig.ENABLED_BUTTON`)."
       - type: new
         modules: [generate, export]
-        text: "`DOWNLOAD_ALL` export option."
+        text: "`CCEverywhere.ExportConfig.DOWNLOAD_ALL` export option."
       - type: new
         modules: [generate]
-        text: "`imageDimensions`."
+        text: "`CCEverywhere.createImageFromText.appConfig.imageDimensions` parameter."
       - type: docs
         modules: [core]
-        text: "Redesigned SDK reference and migration guide."
+        text: "Redesigned [SDK Reference](../../v4/index.md) section and V3 to V4 [Migration Guide](../concepts/migration-v3-v4.md)."
 
-  - date: 2024-09-23
+  - version: 4.14.23
+    date: 2024-09-23
     kind: docs
     changes:
       - type: docs
         modules: [core]
-        text: "Reorganized docs: Submission and Review, Quickstart, and Tutorials."
+        text: "Reorganized docs: updated [Submission and Review](../review/index.md) and [Quickstart](../quickstart/index.md) guides, and new [Tutorials](../tutorials/index.md) section."
 
   - version: 4.14.23
     date: 2024-09-05
@@ -467,10 +490,10 @@ releases:
     changes:
       - type: new
         modules: [core]
-        text: "`terminate()`."
+        text: "`CCEverywhere.terminate()`."
       - type: new
         modules: [core]
-        text: "Root container `z-index` setting."
+        text: "[z-index](../../reference/types/index.md#containerconfig) support for the root container."
 
   - version: 4.2.30
     date: 2024-03-14
@@ -513,7 +536,7 @@ releases:
   - version: 3.10.13
     date: 2023-11-06
     kind: sdk
-    summary: "LINE and note layouts; QR Code and Caption Video quick actions."
+    summary: "LINE and note layouts ([CreateInputParams.canvasSize](../../reference/types/index.md#canvasaspectid)) and template types ([CreateInputParams.templateType](../../reference/types/index.md#templatetype)); QR Code and Caption Video quick actions."
 
   - version: 3.8.11
     date: 2023-08-25

@@ -1,54 +1,24 @@
 const path = require("path");
 const fs = require("node:fs");
 
-// Define root directory relative to this script (scripts/generate-feed.js -> ../)
 const ROOT_DIR = path.resolve(__dirname, "..");
 
 const SITE_BASE = "https://developer.adobe.com/express/embed-sdk/docs";
 const CHANGELOG_PATH = "guides/changelog";
 const CHANGELOG_URL = `${SITE_BASE}/${CHANGELOG_PATH}/`;
 const FEED_URL = `${SITE_BASE}/feed.xml`;
-const CHANGELOG_FILE = path.join(
-  ROOT_DIR,
-  "src",
-  "pages",
-  "guides",
-  "changelog",
-  "index.md"
-);
+const CHANGELOG_JSON_FILE = path.join(ROOT_DIR, "src", "pages", "changelog.json");
 const FEED_FILE = path.join(ROOT_DIR, "src", "pages", "feed.xml");
 
-// Matches "## [v4.57.22] 2026-10-08", "## [4.54.18] 2026-09-02", "## [4.16.11] - 2024-11-18", and bare "## 2025-11-14"
-const HEADING_RE = /^## (?:\[\s*v?([\d.]+)\s*\]\s*-?\s*)?(\d{4}-\d{2}-\d{2})\s*$/i;
-
-function stripFrontmatter(markdown) {
-  return markdown.replace(/^---\n[\s\S]*?\n---\n/, "");
-}
-
-function normalizeLineEndings(markdown) {
-  return markdown.replace(/\r\n/g, "\n");
-}
-
-function parseReleases(markdown) {
-  const lines = stripFrontmatter(normalizeLineEndings(markdown)).split("\n");
-  const releases = [];
-  let current = null;
-
-  for (const line of lines) {
-    const match = line.match(HEADING_RE);
-    if (match) {
-      if (current) releases.push(current);
-      const [, rawVersion, date] = match;
-      const version = rawVersion ? rawVersion.replace(/^v/i, "").trim() : null;
-      current = { version, date, bodyLines: [] };
-    } else if (current) {
-      current.bodyLines.push(line);
-    }
-  }
-  if (current) releases.push(current);
-
-  return releases;
-}
+const TYPE_HEADINGS = {
+  breaking: "Breaking Changes",
+  removed: "Removed",
+  deprecated: "Deprecated",
+  new: "Added",
+  improved: "Improved",
+  fixed: "Fixed",
+  docs: "Documentation",
+};
 
 function slugify(text) {
   return text
@@ -59,65 +29,125 @@ function slugify(text) {
 }
 
 function resolveRelativeLink(href) {
-  if (/^https?:\/\//.test(href) || href.startsWith("#")) return href;
-  // Relative markdown links in the changelog are relative to guides/changelog/,
-  // e.g. "../../v4/shared/.../foo.md" or "../concepts/bar.md".
-  const resolved = path
-    .posix.normalize(path.posix.join(CHANGELOG_PATH, href))
-    .replace(/\.md(#.*)?$/, (m, hash) => hash || "/");
-  return `${SITE_BASE}/${resolved}`;
+  if (/^https?:\/\//i.test(href) || href.startsWith("#")) {
+    return href;
+  }
+
+  const normalizedHref = href.replace(
+    /(?:^|\/)index\.md(?=[?#]|$)|\.md(?=[?#]|$)/i,
+    (matchedSegment) => (matchedSegment.startsWith("/") ? "/" : "")
+  );
+
+  if (normalizedHref.startsWith("/")) {
+    return `${SITE_BASE}${normalizedHref}`;
+  }
+
+  // Relative links in changelog.json are relative to guides/changelog/
+  const resolvedPath = path.posix.normalize(path.posix.join(CHANGELOG_PATH, normalizedHref));
+  return `${SITE_BASE}/${resolvedPath}`;
 }
 
 function escapeXml(text) {
-  return text
+  return String(text)
     .replace(/&/g, "&amp;")
     .replace(/</g, "&lt;")
     .replace(/>/g, "&gt;");
 }
 
 function formatInline(text) {
-  // 1. Inline code: `code` -> <code>code</code>
   let formatted = text.replace(/`([^`]+)`/g, (_, code) => `<code>${escapeXml(code)}</code>`);
 
-  // 2. Links: [text](href) -> <a href="...">text</a>
   formatted = formatted.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
     (_, linkText, href) => `<a href="${escapeXml(resolveRelativeLink(href))}">${linkText}</a>`
   );
 
-  // 3. Bold: **text** or __text__ -> <strong>text</strong>
   formatted = formatted.replace(/\*\*([^*]+)\*\*/g, (_, boldText) => `<strong>${boldText}</strong>`);
   formatted = formatted.replace(/__([^_]+)__/g, (_, boldText) => `<strong>${boldText}</strong>`);
 
   return formatted;
 }
 
-function bodyToHtml(bodyLines) {
-  const body = bodyLines.join("\n").trim();
-  if (!body) return "";
+function formatTypeHeading(rawType) {
+  const parts = String(rawType || "")
+    .split(",")
+    .map((part) => part.trim())
+    .filter(Boolean);
 
-  const html = body
-    .split("\n")
-    .map((line) => {
-      const heading = line.match(/^###\s+(.*)$/);
-      if (heading) return `<h3>${formatInline(heading[1])}</h3>`;
-      const bullet = line.match(/^\s*-\s+(.*)$/);
-      if (bullet) return `<li>${formatInline(bullet[1])}</li>`;
-      if (!line.trim()) return "";
-      return `<p>${formatInline(line)}</p>`;
+  if (parts.length === 0) return "Updates";
+
+  return parts
+    .map((part) => {
+      const mapped = TYPE_HEADINGS[part.toLowerCase()];
+      if (mapped) return mapped;
+      return part.replace(/\b\w+/g, (word) =>
+        word.toLowerCase() === "api"
+          ? "API"
+          : word.charAt(0).toUpperCase() + word.slice(1)
+      );
     })
-    .join("\n");
-
-  // Wrap consecutive <li> lines in <ul>
-  return html.replace(/(<li>[\s\S]*?<\/li>\n?)+/g, (match) => `<ul>\n${match}</ul>\n`);
+    .join(", ");
 }
 
-function toRfc822(dateStr) {
-  const date = new Date(`${dateStr}T00:00:00Z`);
+function formatChangeItem(change) {
+  let html = formatInline(change.text || "");
+  if (change.action) {
+    html += ` <strong>Action:</strong> ${formatInline(change.action)}`;
+  }
+  if (change.open) {
+    html += " <em>(Still open)</em>";
+  }
+  return `<li>${html}</li>`;
+}
+
+function buildChangesHtml(changes) {
+  const groupedChanges = new Map();
+
+  for (const change of changes) {
+    const heading = formatTypeHeading(change.type);
+    if (!groupedChanges.has(heading)) {
+      groupedChanges.set(heading, []);
+    }
+    groupedChanges.get(heading).push(change);
+  }
+
+  const sections = [];
+  for (const [heading, items] of groupedChanges.entries()) {
+    const listItems = items.map(formatChangeItem).join("\n");
+    sections.push(`<h3>${escapeXml(heading)}</h3>\n\n<ul>\n${listItems}\n</ul>`);
+  }
+
+  return `${sections.join("\n\n")}\n`;
+}
+
+function buildDescriptionHtml(release, kinds = {}) {
+  const blocks = [];
+
+  if (release.title) {
+    blocks.push(`<p><strong>${escapeXml(release.title)}</strong></p>`);
+  }
+
+  if (Array.isArray(release.changes) && release.changes.length > 0) {
+    blocks.push(buildChangesHtml(release.changes).trimEnd());
+  } else if (release.summary) {
+    if (release.breaking) {
+      blocks.push("<h3>Breaking Changes</h3>");
+    }
+    blocks.push(`<p>${formatInline(release.summary)}</p>`);
+  } else {
+    const kindLabel = kinds[release.kind] || "Maintenance";
+    blocks.push(`<p>${escapeXml(kindLabel)} release.</p>`);
+  }
+
+  return blocks.join("\n");
+}
+
+function toRfc822(dateString) {
+  const date = new Date(`${dateString}T00:00:00Z`);
   return date.toUTCString();
 }
 
-function buildItem(release) {
+function buildItem(release, kinds) {
   const title = release.version ? `v${release.version}` : release.date;
   const headingText = release.version
     ? `${release.version} ${release.date}`
@@ -127,7 +157,7 @@ function buildItem(release) {
     ? `${release.version}-${release.date}`
     : release.date;
   const link = `${CHANGELOG_URL}#${anchor}`;
-  const description = bodyToHtml(release.bodyLines);
+  const description = buildDescriptionHtml(release, kinds);
 
   return `    <item>
       <title>${escapeXml(title)}</title>
@@ -138,11 +168,14 @@ function buildItem(release) {
     </item>`;
 }
 
-function buildFeed(releases) {
-  const sorted = [...releases].sort(
+function buildFeed(releases, settings = {}) {
+  const sortedReleases = [...releases].sort(
     (a, b) => new Date(b.date) - new Date(a.date)
   );
-  const items = sorted.map(buildItem).join("\n");
+  const kinds = settings.kinds || {};
+  const description =
+    settings.page?.description || "Release notes for the Adobe Express Embed SDK.";
+  const items = sortedReleases.map((release) => buildItem(release, kinds)).join("\n");
   const lastBuildDate = new Date().toUTCString();
 
   return `<?xml version="1.0" encoding="UTF-8"?>
@@ -151,7 +184,7 @@ function buildFeed(releases) {
     <title>Adobe Express Embed SDK Changelog</title>
     <link>${CHANGELOG_URL}</link>
     <atom:link href="${FEED_URL}" rel="self" type="application/rss+xml" />
-    <description>Release notes for the Adobe Express Embed SDK.</description>
+    <description>${escapeXml(description)}</description>
     <language>en-us</language>
     <lastBuildDate>${lastBuildDate}</lastBuildDate>
 ${items}
@@ -160,11 +193,25 @@ ${items}
 `;
 }
 
+function loadChangelogJson(filePath) {
+  const rawContent = fs.readFileSync(filePath, "utf8");
+  const parsed = JSON.parse(rawContent);
+  const sheetRow = parsed?.data?.[0];
+
+  if (!sheetRow || !Array.isArray(sheetRow.data?.releases)) {
+    throw new Error(`Invalid changelog sheet structure in ${path.relative(ROOT_DIR, filePath)}`);
+  }
+
+  return {
+    settings: sheetRow.settings || {},
+    releases: sheetRow.data.releases,
+  };
+}
+
 function main() {
-  const markdown = fs.readFileSync(CHANGELOG_FILE, "utf8");
-  const releases = parseReleases(markdown);
-  const feed = buildFeed(releases);
-  fs.writeFileSync(FEED_FILE, feed, "utf-8");
+  const { settings, releases } = loadChangelogJson(CHANGELOG_JSON_FILE);
+  const feedXml = buildFeed(releases, settings);
+  fs.writeFileSync(FEED_FILE, feedXml, "utf8");
   console.log(`Wrote ${releases.length} releases to ${path.relative(ROOT_DIR, FEED_FILE)}`);
 }
 

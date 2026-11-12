@@ -1,11 +1,11 @@
-# releases-metadata.yml
+# changelog-settings.yml
 # Manually maintained metadata for the Adobe Express Embed SDK changelog.
 # Keep year, month, and version options synchronized with releases.yml.
 # Add only options that have matching release data; remove stale options.
 
 page:
   title: "Changelog"
-  description: "Adobe Express Embed SDK releases and documentation updates"
+  description: "Release notes for the Adobe Express Embed SDK, with the newest release first."
   url: "https://raw.githubusercontent.com/AdobeDocs/cc-everywhere/refs/heads/main/src/pages/feed.xml"
 
 kinds:
@@ -88,6 +88,7 @@ filters:
         - "October"
         - "September"
         - "August"
+        - "July"
         - "June"
         - "May"
         - "April"

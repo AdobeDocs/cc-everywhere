@@ -6,253 +6,216 @@ const SETTINGS_FILE = path.join(ROOT_DIR, "src", "pages", "changelog-settings.ym
 const DATA_FILE = path.join(ROOT_DIR, "src", "pages", "changelog-data.yml");
 const OUTPUT_FILE = path.join(ROOT_DIR, "src", "pages", "changelog.json");
 
+const DOUBLE_QUOTED_ESCAPES = {
+  "\\": "\\",
+  '"': '"',
+  "/": "/",
+  b: "\b",
+  f: "\f",
+  n: "\n",
+  r: "\r",
+  t: "\t",
+};
+
 /**
- * Strip YAML comments (`# ...`) outside of single/double quotes.
- * In YAML, an inline comment requires `#` at start of text or preceded by whitespace.
+ * Walk characters outside single/double quotes and invoke `onUnquotedChar`.
+ * Stops early if `onUnquotedChar` returns a defined value.
  */
-function stripComment(line) {
-  let inSingle = false;
-  let inDouble = false;
+function scanUnquotedText(text, onUnquotedChar) {
+  let isInDoubleQuotes = false;
+  let isInSingleQuotes = false;
+  let bracketDepth = 0;
+  let braceDepth = 0;
 
-  for (let i = 0; i < line.length; i += 1) {
-    const ch = line[i];
+  for (let index = 0; index < text.length; index += 1) {
+    const character = text[index];
 
-    if (inDouble) {
-      if (ch === "\\" && i + 1 < line.length) {
-        i += 1;
-      } else if (ch === '"') {
-        inDouble = false;
+    if (isInDoubleQuotes) {
+      if (character === "\\" && index + 1 < text.length) {
+        index += 1;
+      } else if (character === '"') {
+        isInDoubleQuotes = false;
       }
       continue;
     }
 
-    if (inSingle) {
-      if (ch === "'" && line[i + 1] === "'") {
-        i += 1;
-      } else if (ch === "'") {
-        inSingle = false;
+    if (isInSingleQuotes) {
+      if (character === "'" && text[index + 1] === "'") {
+        index += 1;
+      } else if (character === "'") {
+        isInSingleQuotes = false;
       }
       continue;
     }
 
-    if (ch === '"') {
-      inDouble = true;
-    } else if (ch === "'") {
-      inSingle = true;
-    } else if (ch === "#" && (i === 0 || /\s/.test(line[i - 1]))) {
-      return line.slice(0, i).trimEnd();
+    if (character === '"') {
+      isInDoubleQuotes = true;
+      continue;
     }
+
+    if (character === "'") {
+      isInSingleQuotes = true;
+      continue;
+    }
+
+    if (character === "]" || character === "}") {
+      if (character === "]") bracketDepth -= 1;
+      else braceDepth -= 1;
+    }
+
+    const isTopLevel = bracketDepth === 0 && braceDepth === 0;
+    const result = onUnquotedChar(character, index, isTopLevel);
+    if (result !== undefined) {
+      return result;
+    }
+
+    if (character === "[") bracketDepth += 1;
+    else if (character === "{") braceDepth += 1;
   }
 
-  return line.trimEnd();
+  return undefined;
 }
 
-function unescapeDoubleQuoted(str) {
-  return str.replace(
+function stripComment(line) {
+  const commentIndex = scanUnquotedText(line, (character, index) => {
+    const isCommentStart = index === 0 || /\s/.test(line[index - 1]);
+    if (character === "#" && isCommentStart) {
+      return index;
+    }
+  });
+
+  const withoutComment = commentIndex === undefined ? line : line.slice(0, commentIndex);
+  return withoutComment.trimEnd();
+}
+
+function unescapeDoubleQuoted(quotedText) {
+  return quotedText.replace(
     /\\(\\|"|\/|b|f|n|r|t|u([0-9a-fA-F]{4}))/g,
-    (_, esc, hex) => {
-      switch (esc[0]) {
-        case "\\":
-          return "\\";
-        case '"':
-          return '"';
-        case "/":
-          return "/";
-        case "b":
-          return "\b";
-        case "f":
-          return "\f";
-        case "n":
-          return "\n";
-        case "r":
-          return "\r";
-        case "t":
-          return "\t";
-        case "u":
-          return String.fromCharCode(parseInt(hex, 16));
-        default:
-          return esc;
+    (fullMatch, escapeCode, hexCode) => {
+      if (escapeCode.startsWith("u")) {
+        return String.fromCharCode(parseInt(hexCode, 16));
       }
+      return DOUBLE_QUOTED_ESCAPES[escapeCode] ?? fullMatch;
     }
   );
 }
 
-/**
- * Split a comma-separated flow sequence/map body respecting nested brackets and quotes.
- */
 function splitTopLevel(content, delimiter = ",") {
   const parts = [];
-  let current = "";
-  let inSingle = false;
-  let inDouble = false;
-  let bracketDepth = 0;
-  let braceDepth = 0;
+  let segmentStart = 0;
 
-  for (let i = 0; i < content.length; i += 1) {
-    const ch = content[i];
-
-    if (inDouble) {
-      current += ch;
-      if (ch === "\\" && i + 1 < content.length) {
-        current += content[i + 1];
-        i += 1;
-      } else if (ch === '"') {
-        inDouble = false;
-      }
-      continue;
+  scanUnquotedText(content, (character, index, isTopLevel) => {
+    if (character === delimiter && isTopLevel) {
+      parts.push(content.slice(segmentStart, index).trim());
+      segmentStart = index + 1;
     }
+  });
 
-    if (inSingle) {
-      current += ch;
-      if (ch === "'" && content[i + 1] === "'") {
-        current += "'";
-        i += 1;
-      } else if (ch === "'") {
-        inSingle = false;
-      }
-      continue;
-    }
-
-    if (ch === '"') {
-      inDouble = true;
-      current += ch;
-    } else if (ch === "'") {
-      inSingle = true;
-      current += ch;
-    } else if (ch === "[") {
-      bracketDepth += 1;
-      current += ch;
-    } else if (ch === "]") {
-      bracketDepth -= 1;
-      current += ch;
-    } else if (ch === "{") {
-      braceDepth += 1;
-      current += ch;
-    } else if (ch === "}") {
-      braceDepth -= 1;
-      current += ch;
-    } else if (ch === delimiter && bracketDepth === 0 && braceDepth === 0) {
-      parts.push(current.trim());
-      current = "";
-    } else {
-      current += ch;
-    }
-  }
-
-  if (current.trim().length > 0) {
-    parts.push(current.trim());
+  const trailingSegment = content.slice(segmentStart).trim();
+  if (trailingSegment.length > 0) {
+    parts.push(trailingSegment);
   }
 
   return parts;
 }
 
 function splitKeyValue(text) {
-  let inSingle = false;
-  let inDouble = false;
-  let bracketDepth = 0;
-  let braceDepth = 0;
-
-  for (let i = 0; i < text.length; i += 1) {
-    const ch = text[i];
-
-    if (inDouble) {
-      if (ch === "\\" && i + 1 < text.length) {
-        i += 1;
-      } else if (ch === '"') {
-        inDouble = false;
-      }
-      continue;
+  const colonIndex = scanUnquotedText(text, (character, index, isTopLevel) => {
+    const hasTrailingWhitespace = index + 1 === text.length || /\s/.test(text[index + 1]);
+    if (character === ":" && isTopLevel && hasTrailingWhitespace) {
+      return index;
     }
+  });
 
-    if (inSingle) {
-      if (ch === "'" && text[i + 1] === "'") {
-        i += 1;
-      } else if (ch === "'") {
-        inSingle = false;
-      }
-      continue;
-    }
+  if (colonIndex === undefined) return null;
 
-    if (ch === '"') {
-      inDouble = true;
-    } else if (ch === "'") {
-      inSingle = true;
-    } else if (ch === "[") {
-      bracketDepth += 1;
-    } else if (ch === "]") {
-      bracketDepth -= 1;
-    } else if (ch === "{") {
-      braceDepth += 1;
-    } else if (ch === "}") {
-      braceDepth -= 1;
-    } else if (
-      ch === ":" &&
-      bracketDepth === 0 &&
-      braceDepth === 0 &&
-      (i + 1 === text.length || /\s/.test(text[i + 1]))
-    ) {
-      const rawKey = text.slice(0, i).trim();
-      const rawValue = text.slice(i + 1).trim();
-      return {
-        key: String(parseScalar(rawKey)),
-        rawValue,
-      };
-    }
-  }
+  const rawKey = text.slice(0, colonIndex).trim();
+  const rawValue = text.slice(colonIndex + 1).trim();
 
-  return null;
+  return {
+    key: String(parseScalar(rawKey)),
+    rawValue,
+  };
 }
 
-function parseScalar(raw) {
-  const trimmed = raw.trim();
-  if (!trimmed || trimmed === "null" || trimmed === "~") return null;
+function parseScalar(rawValue) {
+  const trimmedValue = rawValue.trim();
+  if (!trimmedValue || trimmedValue === "null" || trimmedValue === "~") return null;
 
-  if (trimmed.startsWith('"') && trimmed.endsWith('"') && trimmed.length >= 2) {
-    return unescapeDoubleQuoted(trimmed.slice(1, -1));
+  if (trimmedValue.startsWith('"') && trimmedValue.endsWith('"') && trimmedValue.length >= 2) {
+    return unescapeDoubleQuoted(trimmedValue.slice(1, -1));
   }
 
-  if (trimmed.startsWith("'") && trimmed.endsWith("'") && trimmed.length >= 2) {
-    return trimmed.slice(1, -1).replace(/''/g, "'");
+  if (trimmedValue.startsWith("'") && trimmedValue.endsWith("'") && trimmedValue.length >= 2) {
+    return trimmedValue.slice(1, -1).replace(/''/g, "'");
   }
 
-  if (trimmed.startsWith("[") && trimmed.endsWith("]")) {
-    const inner = trimmed.slice(1, -1).trim();
-    if (!inner) return [];
-    return splitTopLevel(inner).map(parseScalar);
+  if (trimmedValue.startsWith("[") && trimmedValue.endsWith("]")) {
+    const innerContent = trimmedValue.slice(1, -1).trim();
+    return innerContent ? splitTopLevel(innerContent).map(parseScalar) : [];
   }
 
-  if (trimmed.startsWith("{") && trimmed.endsWith("}")) {
-    const inner = trimmed.slice(1, -1).trim();
-    if (!inner) return {};
-    const obj = {};
-    for (const entry of splitTopLevel(inner)) {
-      const kv = splitKeyValue(entry);
-      if (kv) {
-        obj[kv.key] = parseScalar(kv.rawValue);
+  if (trimmedValue.startsWith("{") && trimmedValue.endsWith("}")) {
+    const innerContent = trimmedValue.slice(1, -1).trim();
+    if (!innerContent) return {};
+
+    const flowMapping = {};
+    for (const entry of splitTopLevel(innerContent)) {
+      const keyValue = splitKeyValue(entry);
+      if (keyValue) {
+        flowMapping[keyValue.key] = parseScalar(keyValue.rawValue);
       }
     }
-    return obj;
+    return flowMapping;
   }
 
-  if (trimmed === "true") return true;
-  if (trimmed === "false") return false;
-  if (/^-?(?:0|[1-9]\d*)(?:\.\d+)?$/.test(trimmed)) return Number(trimmed);
+  if (trimmedValue === "true") return true;
+  if (trimmedValue === "false") return false;
+  if (/^-?(?:0|[1-9]\d*)(?:\.\d+)?$/.test(trimmedValue)) return Number(trimmedValue);
 
-  return trimmed;
+  return trimmedValue;
 }
 
-function parseBlockScalar(lines, startIndex, parentIndent, indicator) {
-  const style = indicator[0]; // '|' or '>'
-  const chomp = indicator.slice(1); // '', '-', or '+'
-  const collected = [];
+function isBlockScalarIndicator(rawValue) {
+  return rawValue === "|" || rawValue === ">" || /^[|>][+-]$/.test(rawValue);
+}
+
+function foldBlockLines(lines) {
+  const paragraphs = [];
+  let currentParagraph = [];
+
+  for (const line of lines) {
+    if (line === "") {
+      if (currentParagraph.length > 0) {
+        paragraphs.push(currentParagraph.join(" "));
+        currentParagraph = [];
+      } else {
+        paragraphs.push("");
+      }
+    } else {
+      currentParagraph.push(line);
+    }
+  }
+
+  if (currentParagraph.length > 0) {
+    paragraphs.push(currentParagraph.join(" "));
+  }
+
+  return paragraphs.join("\n");
+}
+
+function parseBlockScalar(rawLines, startLineIndex, parentIndent, indicator) {
+  const blockStyle = indicator[0];
+  const chompingIndicator = indicator.slice(1);
+  const collectedLines = [];
   let blockIndent = null;
-  let index = startIndex;
+  let lineIndex = startLineIndex;
 
-  while (index < lines.length) {
-    const line = lines[index];
+  while (lineIndex < rawLines.length) {
+    const line = rawLines[lineIndex];
     if (line.trim() === "") {
-      collected.push("");
-      index += 1;
+      collectedLines.push("");
+      lineIndex += 1;
       continue;
     }
 
@@ -264,55 +227,38 @@ function parseBlockScalar(lines, startIndex, parentIndent, indicator) {
       break;
     }
 
-    collected.push(line.slice(blockIndent));
-    index += 1;
+    collectedLines.push(line.slice(blockIndent));
+    lineIndex += 1;
   }
 
-  while (collected.length > 0 && collected[collected.length - 1] === "" && chomp !== "+") {
-    collected.pop();
+  while (
+    collectedLines.length > 0 &&
+    collectedLines[collectedLines.length - 1] === "" &&
+    chompingIndicator !== "+"
+  ) {
+    collectedLines.pop();
   }
 
-  let text;
-  if (style === ">") {
-    const paragraphs = [];
-    let current = [];
-    for (const line of collected) {
-      if (line === "") {
-        if (current.length > 0) {
-          paragraphs.push(current.join(" "));
-          current = [];
-        } else {
-          paragraphs.push("");
-        }
-      } else {
-        current.push(line);
-      }
-    }
-    if (current.length > 0) paragraphs.push(current.join(" "));
-    text = paragraphs.join("\n");
-  } else {
-    text = collected.join("\n");
+  let blockText = blockStyle === ">" ? foldBlockLines(collectedLines) : collectedLines.join("\n");
+  if (chompingIndicator !== "-" && blockText.length > 0) {
+    blockText += "\n";
   }
 
-  if (chomp !== "-" && text.length > 0) {
-    text += "\n";
-  }
-
-  return { value: text, nextIndex: index };
+  return { value: blockText, nextLineIndex: lineIndex };
 }
 
 function tokenizeLines(yamlContent) {
   const rawLines = yamlContent.replace(/\r\n/g, "\n").split("\n");
   const tokens = [];
 
-  for (let i = 0; i < rawLines.length; i += 1) {
-    const cleaned = stripComment(rawLines[i]);
-    if (!cleaned.trim()) continue;
-    const indent = cleaned.search(/\S/);
+  for (let lineIndex = 0; lineIndex < rawLines.length; lineIndex += 1) {
+    const cleanedLine = stripComment(rawLines[lineIndex]);
+    if (!cleanedLine.trim()) continue;
+
     tokens.push({
-      indent,
-      text: cleaned.trim(),
-      rawIndex: i,
+      indent: cleanedLine.search(/\S/),
+      text: cleanedLine.trim(),
+      rawLineIndex: lineIndex,
     });
   }
 
@@ -323,118 +269,118 @@ function isSequenceItem(text) {
   return text === "-" || text.startsWith("- ");
 }
 
-function parseSequence(context, startIndex, seqIndent) {
+function resolveFieldValue(context, tokenIndex, rawValue, containerIndent) {
   const { tokens, rawLines } = context;
-  const items = [];
-  let index = startIndex;
+  const currentToken = tokens[tokenIndex];
 
-  while (index < tokens.length) {
-    const token = tokens[index];
-    if (token.indent < seqIndent) break;
-    if (token.indent > seqIndent || !isSequenceItem(token.text)) break;
+  if (isBlockScalarIndicator(rawValue)) {
+    const block = parseBlockScalar(
+      rawLines,
+      currentToken.rawLineIndex + 1,
+      currentToken.indent,
+      rawValue
+    );
 
-    const afterDash = token.text.slice(1).trim();
-
-    if (!afterDash) {
-      // Nested block directly below '-'
-      const next = tokens[index + 1];
-      if (!next || next.indent <= seqIndent) {
-        items.push(null);
-        index += 1;
-      } else {
-        const parsed = parseNode(context, index + 1, next.indent);
-        items.push(parsed.value);
-        index = parsed.nextIndex;
-      }
-      continue;
+    let nextTokenIndex = tokenIndex + 1;
+    while (nextTokenIndex < tokens.length && tokens[nextTokenIndex].rawLineIndex < block.nextLineIndex) {
+      nextTokenIndex += 1;
     }
-
-    const kv = splitKeyValue(afterDash);
-    if (kv) {
-      // Inline mapping item starting on the '-' line; subsequent lines at itemIndent belong to this map
-      const itemIndent = token.indent + 2;
-      const obj = {};
-
-      if (kv.rawValue === "|" || kv.rawValue === ">" || /^[|>][+-]$/.test(kv.rawValue)) {
-        const block = parseBlockScalar(rawLines, token.rawIndex + 1, token.indent, kv.rawValue);
-        obj[kv.key] = block.value;
-        index += 1;
-        while (index < tokens.length && tokens[index].rawIndex < block.nextIndex) {
-          index += 1;
-        }
-      } else if (kv.rawValue === "") {
-        const next = tokens[index + 1];
-        if (!next || next.indent <= itemIndent) {
-          obj[kv.key] = null;
-          index += 1;
-        } else {
-          const nested = parseNode(context, index + 1, next.indent);
-          obj[kv.key] = nested.value;
-          index = nested.nextIndex;
-        }
-      } else {
-        obj[kv.key] = parseScalar(kv.rawValue);
-        index += 1;
-      }
-
-      if (index < tokens.length && tokens[index].indent >= itemIndent && !isSequenceItem(tokens[index].text)) {
-        const rest = parseMapping(context, index, tokens[index].indent, obj);
-        index = rest.nextIndex;
-      }
-
-      items.push(obj);
-      continue;
-    }
-
-    items.push(parseScalar(afterDash));
-    index += 1;
+    return { value: block.value, nextIndex: nextTokenIndex };
   }
 
-  return { value: items, nextIndex: index };
+  if (rawValue === "") {
+    const nextToken = tokens[tokenIndex + 1];
+    const hasNestedBlock =
+      nextToken &&
+      (nextToken.indent > containerIndent ||
+        (nextToken.indent === containerIndent && isSequenceItem(nextToken.text)));
+
+    if (!hasNestedBlock) {
+      return { value: null, nextIndex: tokenIndex + 1 };
+    }
+    return parseNode(context, tokenIndex + 1, nextToken.indent);
+  }
+
+  return { value: parseScalar(rawValue), nextIndex: tokenIndex + 1 };
 }
 
-function parseMapping(context, startIndex, mapIndent, target = {}) {
-  const { tokens, rawLines } = context;
-  let index = startIndex;
+function parseSequence(context, startIndex, sequenceIndent) {
+  const { tokens } = context;
+  const items = [];
+  let tokenIndex = startIndex;
 
-  while (index < tokens.length) {
-    const token = tokens[index];
-    if (token.indent < mapIndent) break;
-    if (token.indent > mapIndent || isSequenceItem(token.text)) break;
+  while (tokenIndex < tokens.length) {
+    const token = tokens[tokenIndex];
+    if (token.indent !== sequenceIndent || !isSequenceItem(token.text)) break;
 
-    const kv = splitKeyValue(token.text);
-    if (!kv) {
-      throw new Error(`Invalid YAML mapping at line ${token.rawIndex + 1}: "${token.text}"`);
-    }
+    const itemContent = token.text.slice(1).trim();
 
-    if (kv.rawValue === "|" || kv.rawValue === ">" || /^[|>][+-]$/.test(kv.rawValue)) {
-      const block = parseBlockScalar(rawLines, token.rawIndex + 1, mapIndent, kv.rawValue);
-      target[kv.key] = block.value;
-      index += 1;
-      while (index < tokens.length && tokens[index].rawIndex < block.nextIndex) {
-        index += 1;
-      }
-      continue;
-    }
-
-    if (kv.rawValue === "") {
-      const next = tokens[index + 1];
-      if (!next || next.indent < mapIndent || (next.indent === mapIndent && !isSequenceItem(next.text))) {
-        target[kv.key] = null;
-        index += 1;
+    if (!itemContent) {
+      const nextToken = tokens[tokenIndex + 1];
+      if (!nextToken || nextToken.indent <= sequenceIndent) {
+        items.push(null);
+        tokenIndex += 1;
       } else {
-        const nested = parseNode(context, index + 1, next.indent);
-        target[kv.key] = nested.value;
-        index = nested.nextIndex;
+        const nested = parseNode(context, tokenIndex + 1, nextToken.indent);
+        items.push(nested.value);
+        tokenIndex = nested.nextIndex;
       }
       continue;
     }
 
-    target[kv.key] = parseScalar(kv.rawValue);
-    index += 1;
+    const keyValue = splitKeyValue(itemContent);
+    if (keyValue) {
+      const itemIndent = token.indent + 2;
+      const itemMapping = {};
+
+      const resolved = resolveFieldValue(context, tokenIndex, keyValue.rawValue, itemIndent);
+      itemMapping[keyValue.key] = resolved.value;
+      tokenIndex = resolved.nextIndex;
+
+      if (
+        tokenIndex < tokens.length &&
+        tokens[tokenIndex].indent >= itemIndent &&
+        !isSequenceItem(tokens[tokenIndex].text)
+      ) {
+        const remainingFields = parseMapping(
+          context,
+          tokenIndex,
+          tokens[tokenIndex].indent,
+          itemMapping
+        );
+        tokenIndex = remainingFields.nextIndex;
+      }
+
+      items.push(itemMapping);
+      continue;
+    }
+
+    items.push(parseScalar(itemContent));
+    tokenIndex += 1;
   }
 
-  return { value: target, nextIndex: index };
+  return { value: items, nextIndex: tokenIndex };
+}
+
+function parseMapping(context, startIndex, mappingIndent, targetMapping = {}) {
+  const { tokens } = context;
+  let tokenIndex = startIndex;
+
+  while (tokenIndex < tokens.length) {
+    const token = tokens[tokenIndex];
+    if (token.indent !== mappingIndent || isSequenceItem(token.text)) break;
+
+    const keyValue = splitKeyValue(token.text);
+    if (!keyValue) {
+      throw new Error(`Invalid YAML mapping at line ${token.rawLineIndex + 1}: "${token.text}"`);
+    }
+
+    const resolved = resolveFieldValue(context, tokenIndex, keyValue.rawValue, mappingIndent);
+    targetMapping[keyValue.key] = resolved.value;
+    tokenIndex = resolved.nextIndex;
+  }
+
+  return { value: targetMapping, nextIndex: tokenIndex };
 }
 
 function parseNode(context, startIndex, indent) {
@@ -451,44 +397,45 @@ function parseYaml(yamlContent) {
   return parseNode(context, 0, context.tokens[0].indent).value;
 }
 
-function stripMdExtension(url) {
-  if (/^https?:\/\//i.test(url)) {
-    try {
-      const parsed = new URL(url);
-      if (parsed.hostname !== "developer.adobe.com") return url;
-    } catch {
-      return url;
-    }
+function stripMarkdownExtension(url) {
+  // Keep external URLs (e.g., GitHub README.md links) and anchor-only links untouched
+  if (/^https?:\/\//i.test(url) || url.startsWith("#")) {
+    return url;
   }
-  return url.replace(/(?:^|\/)index\.md(?=[?#]|$)|\.md(?=[?#]|$)/i, (match) => {
-    if (match.toLowerCase().endsWith("index.md")) {
-      return match.startsWith("/") ? "/" : "./";
+
+  return url.replace(/(?:^|\/)index\.md(?=[?#]|$)|\.md(?=[?#]|$)/i, (matchedSegment) => {
+    if (matchedSegment.toLowerCase().endsWith("index.md")) {
+      return matchedSegment.startsWith("/") ? "/" : "./";
     }
     return "";
   });
 }
 
-function normalizeStringLinks(value) {
-  const updated = value.replace(
+function normalizeLinksInText(text) {
+  const updatedText = text.replace(
     /(\[[^\]]*\]\()([^)\s]+)((?:\s+"[^"]*")?\))/g,
-    (_, prefix, url, suffix) => `${prefix}${stripMdExtension(url)}${suffix}`
+    (_, linkPrefix, url, linkSuffix) => `${linkPrefix}${stripMarkdownExtension(url)}${linkSuffix}`
   );
-  if (/^[^\s]+\.md(?:[?#].*)?$/i.test(updated)) {
-    return stripMdExtension(updated);
+
+  if (/^[^\s]+\.md(?:[?#].*)?$/i.test(updatedText)) {
+    return stripMarkdownExtension(updatedText);
   }
-  return updated;
+
+  return updatedText;
 }
 
 function normalizeLinksDeep(node) {
-  if (typeof node === "string") return normalizeStringLinks(node);
+  if (typeof node === "string") return normalizeLinksInText(node);
   if (Array.isArray(node)) return node.map(normalizeLinksDeep);
+
   if (node && typeof node === "object") {
-    const out = {};
-    for (const [key, val] of Object.entries(node)) {
-      out[key] = normalizeLinksDeep(val);
+    const normalizedObject = {};
+    for (const [propertyKey, propertyValue] of Object.entries(node)) {
+      normalizedObject[propertyKey] = normalizeLinksDeep(propertyValue);
     }
-    return out;
+    return normalizedObject;
   }
+
   return node;
 }
 
@@ -521,13 +468,11 @@ function main() {
     throw new Error(`Expected object root in ${path.relative(ROOT_DIR, DATA_FILE)}`);
   }
 
-  const sheet = buildChangelogSheet(settings, data);
-  fs.writeFileSync(OUTPUT_FILE, `${JSON.stringify(sheet, null, 2)}\n`, "utf8");
+  const changelogSheet = buildChangelogSheet(settings, data);
+  fs.writeFileSync(OUTPUT_FILE, `${JSON.stringify(changelogSheet, null, 2)}\n`, "utf8");
 
   const releaseCount = Array.isArray(data.releases) ? data.releases.length : 0;
-  console.log(
-    `Generated ${path.relative(ROOT_DIR, OUTPUT_FILE)} with ${releaseCount} releases.`
-  );
+  console.log(`Generated ${path.relative(ROOT_DIR, OUTPUT_FILE)} with ${releaseCount} releases.`);
 }
 
 main();
