@@ -27,6 +27,7 @@ If none of the above are provided, the Focused Design Editor opens with a blank 
 
 | Property | Type | Description |
 | ------ | ------ | ------ |
+| `canvasSize?` | [`Size`](../../../asset-types/interfaces/size.md) | Initial canvas dimensions, expressed as a [Size](../../../asset-types/interfaces/size.md). Supported for blank-canvas and standalone [Asset](../../../asset-types/type-aliases/asset.md) launches only. Cannot be combined with `templateId`, `docId`, or `documentUrl`. Width and height must be finite, positive numbers, with an explicit unit. When omitted, the existing canvas sizing behavior is preserved. |
 | `templateId?` | `string` | The ID of the template to be edited. Mutually exclusive with `docId` and `asset`. **See** [TemplateId](../type-aliases/template-id.md) |
 | `docId?` | `string` | The ID of the document to be edited. Mutually exclusive with `templateId` and `asset`. |
 | `asset?` | [`Asset`](../../../asset-types/type-aliases/asset.md) | An image asset to open the editor with. When provided, the Focused Design Editor starts with this image placed on the canvas. Mutually exclusive with `templateId` and `docId`. |
