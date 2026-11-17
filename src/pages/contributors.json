@@ -30,7 +30,7 @@
         "https://avatars.githubusercontent.com/u/270928274?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "10/29/2026"
+      "lastUpdated": "11/16/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -2705,7 +2705,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/29/2026"
+      "lastUpdated": "11/16/2026"
     },
     {
       "page": "/v4/shared/src/types/callbacks-types/interfaces/callbacks",
@@ -3572,7 +3572,7 @@
         "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "10/29/2026"
+      "lastUpdated": "11/16/2026"
     },
     {
       "page": "/v4/shared/src/types/host-info-types/interfaces/device-info",
@@ -3920,7 +3920,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "9/11/2026"
+      "lastUpdated": "11/16/2026"
     },
     {
       "page": "/v4/shared/src/types/module/app-config-types/interfaces/preview-mode-config",
@@ -4142,7 +4142,7 @@
       "avatars": [
         "https://avatars.githubusercontent.com/u/5939127?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "11/16/2026"
     },
     {
       "page": "/v4/shared/src/types/module/doc-config-types/type-aliases/edit-image-intent",
