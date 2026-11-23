@@ -1,1 +1,1 @@
-<Changelog metadata="./changelog-settings.yaml" content="./changelog.md" />
+<Changelog metadata="./changelog-settings.yaml" content="./changelog-data.yaml" />
