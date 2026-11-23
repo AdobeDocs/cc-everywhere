@@ -22,7 +22,11 @@ Release notes for the Adobe Express Embed SDK, with the newest release first.\<b
 
 ### Added
 
-- [`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createguideddesign): added a new module that launches a guided design creation flow in EDE.
+- [`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createguideddesign): added a new module that launches a guided design creation flow in EDE. **bold** *italictest*
+  - list1
+  - list2
+  - list3
+  - list3
 
 ## [v4.57.22] 2026-10-08
 
@@ -30,6 +34,12 @@ Release notes for the Adobe Express Embed SDK, with the newest release first.\<b
 
 - Added [`EditFurtherIntent.ERASE`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) to the starting intent for Edit Image.
 - Various performance improvements and fixes.
+```js
+await import(CDN_URL);
+const ccEverywhere = await window.CCEverywhere.initialize(
+  initializeParams, configParams
+);
+```
 
 ## [v4.56.21] 2026-09-30
 

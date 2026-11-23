@@ -1,0 +1,1 @@
+<Changelog metadata="./changelog-settings.yaml" content="./changelog.md" />

@@ -19,26 +19,16 @@ archive:
   description: "Previously released versions"
 
   groups:
-    - id: "sdk-v1-v3"
+    - id: "pre-2024"
       label: "SDK v1–v3"
       applies_to:
-        kind: sdk
-        version_range: "<4.0.0"
+        before_year: 2024
       hint: "Releases before v4 aren't tagged by module or type."
-
-    - id: "old-maintenance"
-      label: "Older maintenance releases"
-      applies_to:
-        kind: maintenance
-        version_range: "<2.0.0"
-      hint: "Historical maintenance releases."
 
 filters:
   - id: module
     label: "Module"
-    control: select
     allLabel: "All modules"
-    field: areas
     options:
       - id: editor
         label: "Full Editor"
@@ -61,44 +51,30 @@ filters:
       - id: core
         label: "SDK core & config"
 
-  - id: year
-    label: "Year"
-    allLabel: "All years"
+  - id: type
+    label: "Type of change"
+    control: pills
+    allLabel: "All types"
+    field: type
     options:
-      - "2026"
-      - "2025"
-      - "2024"
-
-  - id: month
-    label: "Month"
-    allLabel: "All months"
-    # Month names are listed directly; include only months with releases for that year.
-    optionsByYear:
-      "2026":
-        - "October"
-        - "September"
-        - "August"
-        - "July"
-        - "June"
-        - "April"
-        - "March"
-        - "January"
-      "2025":
-        - "November"
-        - "October"
-        - "September"
-        - "August"
-        - "July"
-        - "June"
-        - "May"
-        - "April"
-        - "March"
-        - "February"
-        - "January"
-      "2024":
-        - "December"
-        - "November"
-        - "October"
-        - "September"
-        - "April"
-        - "March"
+      - id: breaking
+        label: "Breaking"
+        color: "#D31510"
+      - id: removed
+        label: "Removed"
+        color: "#D31510"
+      - id: deprecated
+        label: "Deprecated"
+        color: "#E68619"
+      - id: new
+        label: "New"
+        color: "#0265DC"
+      - id: improved
+        label: "Improved"
+        color: "#0265DC"
+      - id: fixed
+        label: "Fixed"
+        color: "#0A7C52"
+      - id: docs
+        label: "Docs"
+        color: "#6E6E6E"

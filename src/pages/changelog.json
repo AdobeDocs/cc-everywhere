@@ -21,22 +21,12 @@
           "description": "Previously released versions",
           "groups": [
             {
-              "id": "sdk-v1-v3",
+              "id": "pre-2024",
               "label": "SDK v1–v3",
               "applies_to": {
-                "kind": "sdk",
-                "version_range": "<4.0.0"
+                "before_year": 2024
               },
               "hint": "Releases before v4 aren't tagged by module or type."
-            },
-            {
-              "id": "old-maintenance",
-              "label": "Older maintenance releases",
-              "applies_to": {
-                "kind": "maintenance",
-                "version_range": "<2.0.0"
-              },
-              "hint": "Historical maintenance releases."
             }
           ]
         },
@@ -44,9 +34,7 @@
           {
             "id": "module",
             "label": "Module",
-            "control": "select",
             "allLabel": "All modules",
-            "field": "areas",
             "options": [
               {
                 "id": "editor",
@@ -91,276 +79,169 @@
             ]
           },
           {
-            "id": "year",
-            "label": "Year",
-            "allLabel": "All years",
+            "id": "type",
+            "label": "Type of change",
+            "control": "pills",
+            "allLabel": "All types",
+            "field": "type",
             "options": [
-              "2026",
-              "2025",
-              "2024"
+              {
+                "id": "breaking",
+                "label": "Breaking",
+                "color": "#D31510"
+              },
+              {
+                "id": "removed",
+                "label": "Removed",
+                "color": "#D31510"
+              },
+              {
+                "id": "deprecated",
+                "label": "Deprecated",
+                "color": "#E68619"
+              },
+              {
+                "id": "new",
+                "label": "New",
+                "color": "#0265DC"
+              },
+              {
+                "id": "improved",
+                "label": "Improved",
+                "color": "#0265DC"
+              },
+              {
+                "id": "fixed",
+                "label": "Fixed",
+                "color": "#0A7C52"
+              },
+              {
+                "id": "docs",
+                "label": "Docs",
+                "color": "#6E6E6E"
+              }
             ]
-          },
-          {
-            "id": "month",
-            "label": "Month",
-            "allLabel": "All months",
-            "optionsByYear": {
-              "2024": [
-                "December",
-                "November",
-                "October",
-                "September",
-                "April",
-                "March"
-              ],
-              "2025": [
-                "November",
-                "October",
-                "September",
-                "August",
-                "July",
-                "June",
-                "May",
-                "April",
-                "March",
-                "February",
-                "January"
-              ],
-              "2026": [
-                "October",
-                "September",
-                "August",
-                "July",
-                "June",
-                "April",
-                "March",
-                "January"
-              ]
-            }
           }
         ]
       },
       "data": {
-        "modules": {
-          "editor": "Full Editor",
-          "ede": "Embedded Design Editor",
-          "templates": "Template Browser",
-          "generate": "Generate Image",
-          "editimage": "Edit Image",
-          "viewer": "Design Viewer",
-          "qa": "Quick Actions",
-          "auth": "Authentication",
-          "export": "Export & publish",
-          "core": "SDK core & config"
-        },
         "releases": [
           {
             "version": "4.58.15",
             "date": "2026-10-21",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "ede"
-                ],
-                "text": "[`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#createguideddesign) module that launches a guided design creation flow in EDE."
+                "text": "[`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#createguideddesign): added a new module that launches a guided design creation flow in EDE. **bold** *italictest*\n  - list1\n  - list2\n  - list3\n  - list3\n"
               }
             ]
           },
           {
             "version": "4.57.22",
             "date": "2026-10-08",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "[`EditFurtherIntent.ERASE`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent) starting intent for Edit Image, so users can continue into object erase."
+                "text": "Added [`EditFurtherIntent.ERASE`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent) to the starting intent for Edit Image."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "core"
-                ],
-                "text": "Various performance improvements and fixes."
+                "text": "Various performance improvements and fixes.\n```js\nawait import(CDN_URL);\nconst ccEverywhere = await window.CCEverywhere.initialize(\n  initializeParams, configParams\n);\n```\n"
               }
             ]
           },
           {
             "version": "4.56.21",
             "date": "2026-09-30",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "improved",
-                "modules": [
-                  "auth"
-                ],
-                "text": "Per-document success/failure status in [`migrateAssets()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets) `MigrateAssetsResult`."
+                "text": "Added per-document success/failure status to the [migrateAssets()](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets) `MigrateAssetsResult`."
               },
               {
-                "type": "new",
-                "modules": [
-                  "export"
-                ],
-                "text": "Optional `tooltip` field on [`PublishExportOption`](../../v4/shared/src/types/export-config-types/interfaces/publish-export-option#properties) in `ExportConfig`, letting hosts customize hover tooltip text on publish-target export buttons."
+                "text": "Added optional `tooltip` field to [`PublishExportOption`](../../v4/shared/src/types/export-config-types/interfaces/publish-export-option#properties) in `ExportConfig`, letting hosts customize the hover tooltip text on publish-target export buttons."
               }
             ]
           },
           {
             "version": "4.55.8",
             "date": "2026-09-24",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "ede"
-                ],
-                "text": "[Embedded Design Editor (EDE) concept guide](../concepts/ede) introducing EDE's configurable, focused creation experiences, along with companion [Create Design](../concepts/ede-create-design) and [Edit Design](../concepts/ede-edit-design) guides."
+                "text": "Added a new [Embedded Design Editor (EDE) concept guide](../concepts/ede) that introduces EDE's configurable, focused creation experiences, along with companion [Create Design](../concepts/ede-create-design) and [Edit Design](../concepts/ede-edit-design) guides."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "ede"
-                ],
-                "text": "[Embedded Design Editor tutorial](../tutorials/embedded-design-editor) walking through building a Create Design → Edit Design flow step by step."
+                "text": "Added a new [Embedded Design Editor tutorial](../tutorials/embedded-design-editor) that walks through building a Create Design → Edit Design flow step by step."
               }
             ]
           },
           {
             "version": "4.55.8",
             "date": "2026-09-16",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "auth"
-                ],
-                "text": "[`migrateAssets()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets) support for asset migration (guest to logged-in user) in the [Partner Assertion](../../v4/shared/src/types/authentication-types/#interfaces) workflow."
+                "text": "[`migrateAssets()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#migrateassets): Added support for asset migration (guest to logged-in user) in the [Partner Assertion](../../v4/shared/src/types/authentication-types/#interfaces) workflow."
               },
               {
-                "type": "new",
-                "modules": [
-                  "viewer"
-                ],
-                "text": "[`DesignViewerContext`](../../v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context) access for Design Viewer, allowing host applications to provide additional assets after initial load via [`updateDesignAssets`](../../v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context#updatedesignassets)."
+                "text": "[`DesignViewerContext`](../../v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context): Added support for accessing the context of the Design Viewer, allowing host applications to provide additional assets after the initial load via the [`updateDesignAssets`](../../v4/sdk/src/context/3p/design-viewer-context/classes/design-viewer-context#updatedesignassets) method."
               },
               {
-                "type": "new",
-                "modules": [
-                  "templates"
-                ],
-                "text": "[`hideTemplatePreview`](../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config#properties) option to hide Template Preview, navigating directly to the editor after selecting a template."
+                "text": "[`hideTemplatePreview`](../../v4/shared/src/types/module/app-config-types/interfaces/browse-mode-config#properties): Added a configuration option to hide Template Preview, allowing clients to navigate directly to the editor after selecting a template."
               }
             ]
           },
           {
             "version": "4.54.18",
             "date": "2026-09-02",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "ede"
-                ],
-                "text": "[`editorGuideConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config) property to configure visibility of Bleed, Margins, and Rulers in the Edit Design module UI."
+                "text": "[`editorGuideConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/editor-guide-config): Added a new property to configure the visibility of Bleed, Margins, and Rulers in the Edit Design module's UI."
               },
               {
-                "type": "new",
-                "modules": [
-                  "ede",
-                  "export"
-                ],
-                "text": "[`pdfPrintConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config) property to configure print-ready PDF export in the Edit Design module (`\"print\"` variant), including Crop Marks, Bleed, Color Mode, and ICC Profile."
+                "text": "[`pdfPrintConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/pdf-print-config): Added a new property to configure the print-ready PDF export in the Edit Design module (`\"print\"` variant), including Crop Marks, Bleed, Color Mode, and ICC Profile."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "ede"
-                ],
                 "text": "`createDesign()` with `\"print\"` variant now correctly displays bleed in the editor preview."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "[Analytics concept guide](../concepts/host-app-trigger) explaining how to configure required analytics data for consistent launch attribution across Embed SDK workflows."
+                "text": "Added a new [Analytics concept guide](../concepts/host-app-trigger) that explains how partners can configure the required analytics data to provide consistent launch attribution for Embed SDK workflows."
               }
             ]
           },
           {
             "version": "4.53.3",
             "date": "2026-08-13",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "auth"
-                ],
-                "text": "[`PartnerAssertionAuthConfig`](../../v4/shared/src/types/authentication-types/#type-aliases) interface for partner assertion authentication (guest, signed-in, or guest-to-user transition)."
+                "text": "[`PartnerAssertionAuthConfig`](../../v4/shared/src/types/authentication-types/#type-aliases): Added a new `PartnerAssertionAuthConfig` interface to support partner assertion authentication in the SDK. This allows host applications to provide a partner assertion token for authentication purposes (guest, signed-in, or guest-to-user transition), enabling seamless integration with partner systems."
               },
               {
-                "type": "new",
-                "modules": [
-                  "export"
-                ],
-                "text": "[`PublishAction.previewConfig`](../../v4/shared/src/types/export-config-types/interfaces/publish-action#properties) property of type [`AssetPreviewConfig`](../../v4/shared/src/types/export-config-types/interfaces/asset-preview-config) to configure an additional output preview image."
+                "text": "[`PublishAction.previewConfig`](../../v4/shared/src/types/export-config-types/interfaces/publish-action#properties): Added a new `previewConfig` property of type [`AssetPreviewConfig`](../../v4/shared/src/types/export-config-types/interfaces/asset-preview-config) to the `PublishAction` interface, allowing host applications to configure an additional image as the output preview of the exported asset."
               }
             ]
           },
           {
             "version": "4.51.14",
             "date": "2026-08-05",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "viewer"
-                ],
-                "text": "[`CCEverywhere.DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config) accepts multiple assets in `docConfig`."
+                "text": "[`CCEverywhere.DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config): Adding support to Design Viewer to accept multiple assets in the `docConfig`."
               },
               {
-                "type": "new",
-                "modules": [
-                  "editor"
-                ],
-                "text": "[`CCEverywhere.EditorAppConfig.editorMode`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties) optional property on Full Editor `appConfig`; setting `'assistant'` opens the editor with the AI Assistant panel active."
+                "text": "[`CCEverywhere.EditorAppConfig.editorMode`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties): Added a new optional `editorMode` property to the Full Editor `appConfig`. When set to `'assistant'`, the editor opens with the AI Assistant panel active, giving users immediate access to AI-powered editing features without any extra clicks."
               }
             ]
           },
           {
             "version": "4.50.23",
             "date": "2026-07-24",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "templates"
-                ],
-                "text": "[Template Browser v2 concept guide](../concepts/template-browser-v2) covering the new tabbed Template Browser experience for authenticated users (coexists with Template Browser v1)."
+                "text": "Added a new [Template Browser v2 concept guide](../concepts/template-browser-v2) that covers the implementation details of the **new tabbed Template Browser experience for authenticated users**. This version coexists with the existing Template Browser v1, which remains unchanged and available."
               }
             ]
           },
           {
             "version": "4.48.12",
             "date": "2026-06-16",
-            "kind": "maintenance",
             "changes": [
               {
-                "type": "fixed",
-                "modules": [
-                  "core"
-                ],
                 "text": "General improvements and bug fixes."
               }
             ]
@@ -368,400 +249,250 @@
           {
             "version": "4.45.20",
             "date": "2026-04-14",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "viewer"
-                ],
-                "text": "[Design Viewer concept guide](../concepts/design-viewer) covering implementation details of the Design Viewer module."
+                "text": "Added a new [Design Viewer concept guide](../concepts/design-viewer) that covers the implementation details of the Design Viewer module."
               }
             ]
           },
           {
             "version": "4.44.14",
             "date": "2026-03-19",
-            "kind": "sdk",
-            "title": "Design Viewer",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "viewer"
-                ],
-                "text": "[`CCEverywhere.viewDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#viewdesign) Design Viewer module, configured via [`DesignViewerAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config) and [`DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config)."
+                "text": "**[`CCEverywhere.viewDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow#viewdesign)**: Added a new Design Viewer module to the SDK, alongside with a dedicated [`DesignViewerAppConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/design-viewer-app-config) interface to configure the module and a [`DesignViewerDocConfig`](../../v4/shared/src/types/module/doc-config-types/interfaces/design-viewer-doc-config) interface to pass the document configuration."
               }
             ]
           },
           {
             "version": "4.43.13",
             "date": "2026-03-10",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "Expanded **Mobile Web Concept Guide**: [Overview](../concepts/mobile-web-support-overview) comparing Mobile Web and Mobile SDKs, [Mobile Web in a WebView](../concepts/mobile-web-support-webview) for iOS and Android apps, and improved information architecture."
+                "text": "Expanded the **Mobile Web Concept Guide** to cover all the implementation details:\n  - New [Overview](../concepts/mobile-web-support-overview) with a clear comparison between Mobile Web and Mobile SDKs.\n  - New [Mobile Web in a WebView](../concepts/mobile-web-support-webview) concept guide that covers the implementation details of the experience for iOS and Android apps.\n  - Improved information architecture for the Mobile Web section.\n"
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "[Mobile Web tutorial](../tutorials/mobile-web) with a Fantasy Sports badge creation end-to-end example and working samples for Web (client and server), Android, and iOS."
+                "text": "New [Mobile Web tutorial](../tutorials/mobile-web) with a Fantasy Sports themed, badge creation end-to-end example with working sample projects for Web (client and server), Android and iOS."
               }
             ]
           },
           {
             "version": "4.41.14",
             "date": "2026-01-30",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "export",
-                  "qa"
-                ],
-                "text": "[`CCEverywhere.PublishAction.outputType`](../../v4/shared/src/types/export-config-types/interfaces/publish-action) option to return output files as `Blob` for Quick Actions and Module Workflows."
+                "text": "**[`CCEverywhere.PublishAction.outputType`](../../v4/shared/src/types/export-config-types/interfaces/publish-action)**: Added an option to change the output file type as Blob for Quick Actions and Module Workflows."
               },
               {
-                "type": "improved",
-                "modules": [
-                  "export"
-                ],
-                "text": "[`CCEverywhere.PublishConfig.outputType`](../../v4/shared/src/types/module/app-config-types/interfaces/publish-config#properties) asset data type updated for `Blob` output."
+                "text": "**[`CCEverywhere.PublishConfig.outputType`](../../v4/shared/src/types/module/app-config-types/interfaces/publish-config#properties)**: Added a new asset data type to account for the Blob output type."
               }
             ]
           },
           {
             "version": "4.40.30",
             "date": "2026-01-09",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "[`CCEverywhere.BaseAppConfig.metaData`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config#properties) support for passing custom key-value metadata across all workflows."
+                "text": "**[`CCEverywhere.BaseAppConfig.metaData`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config#properties)**: Enabled metadata support, allowing custom key-value pairs to be passed across all workflows."
               }
             ]
           },
           {
             "version": "4.39.13",
             "date": "2025-11-24",
-            "kind": "maintenance"
+            "changes": []
           },
           {
             "date": "2025-11-14",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "templates"
-                ],
-                "text": "[Template Browser concept guide](../concepts/template-browser) covering implementation details of the Template Browser experience."
+                "text": "Added a new [Template Browser concept guide](../concepts/template-browser) that covers the implementation details of the new Template Browser experience."
               }
             ]
           },
           {
             "version": "4.38.19",
             "date": "2025-11-10",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate",
-                  "editimage"
-                ],
-                "text": "[`CCEverywhere.BaseAppConfig.useClientAuth`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config#properties) option for credit-free Generative AI workflows in Generate Image and Edit Image (enabled partners only)."
+                "text": "[`CCEverywhere.BaseAppConfig.useClientAuth`](../../v4/shared/src/types/design-config-types/interfaces/base-app-config#properties): Added a new feature to enable no consumption of credits for Generative AI workflows. This configuration can only be used for Generate Image and Edit Image workflows for selected enabled partners."
               },
               {
-                "type": "new",
-                "modules": [
-                  "export"
-                ],
-                "text": "[`CCEverywhere.CallBackTarget.CALLBACK`](../../v4/shared/src/types/export-config-types/enumerations/call-back-target#callback) export target to trigger callback actions without publishing or downloading assets."
+                "text": "**[`CCEverywhere.CallBackTarget.CALLBACK`](../../v4/shared/src/types/export-config-types/enumerations/call-back-target#callback)**: Added a new callback export target to trigger callback actions without publishing or downloading assets."
               },
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "**Custom Message Workflow**: [`WORKFLOW_CONTEXT`](../../v4/shared/src/messenger/message-types/enumerations/message-type#workflow_context) message type, [`CustomMessage`](../../v4/shared/src/messenger/message-types/interfaces/custom-message) interface (instance ID, request ID, action, intent, and optional data), and [`CustomMessageAction`](../../v4/shared/src/messenger/message-types/enumerations/custom-message-action) enum for unsaved changes and asset requests."
+                "text": "**Custom Message Workflow**:\n  - Added [`WORKFLOW_CONTEXT`](../../v4/shared/src/messenger/message-types/enumerations/message-type#workflow_context) message type for module-specific communication.\n  - New [`CustomMessage`](../../v4/shared/src/messenger/message-types/interfaces/custom-message) interface includes instance ID, request ID, action, intent, and optional data.\n  - Added [`CustomMessageAction`](../../v4/shared/src/messenger/message-types/enumerations/custom-message-action) enum with actions for notifying unsaved changes and requesting assets.\n"
               },
               {
-                "type": "improved",
-                "modules": [
-                  "core"
-                ],
-                "text": "[`CCEverywhere.ModalContainerConfig.showExpressIconWithText`](../../v4/shared/src/types/container-config-types/interfaces/modal-container-config#properties) default loading screen includes the Express logo and text."
+                "text": "**[`CCEverywhere.ModalContainerConfig.showExpressIconWithText`](../../v4/shared/src/types/container-config-types/interfaces/modal-container-config#properties)**: the new default loading experience will include the Express logo plus text."
               },
               {
-                "type": "new",
-                "modules": [
-                  "editor"
-                ],
-                "text": "[`CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties) option to configure canvas background color in `RRGGBBAA` HEX format."
+                "text": "**[CCEverywhere.BaseEditorAppConfig.canvasBackgroundColor](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties)**: Added support to configure the canvas background color (String in the `RRGGBBAA` HEX format)."
               }
             ]
           },
           {
             "version": "4.36.26",
             "date": "2025-10-08",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "improved",
-                "modules": [
-                  "core"
-                ],
-                "text": "[`CCEverywhere.ModuleWorkflow.CancelCallback`](../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback) `onCancel` reports optional `isEscapePressed` (`true` when canceled via Escape during loading)."
+                "text": "**[`CCEverywhere.ModuleWorkflow.CancelCallback`](../../v4/shared/src/types/callbacks-types/type-aliases/cancel-callback)**: Added optional parameter `isEscapePressed` as part of `onCancel` callback which is `true` if the cancel was triggered by escape key press during loading."
               },
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "[`CCEverywhere.HostInfo.coiEnabled`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base#properties) property on `HostInfo` indicating whether COI (Cross-Origin Isolation) is enabled."
+                "text": "**[`CCEverywhere.HostInfo.coiEnabled`](../../v4/shared/src/types/host-info-types/interfaces/host-info-specified-base#properties)**: Added property in `HostInfo` to indicate if COI (Cross-Origin Isolation) is enabled for client."
               },
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "[`CCEverywhere.BaseContainerConfig.iframeTitle`](../../v4/shared/src/types/container-config-types/interfaces/base-container-config#properties) property to configure the iframe's accessible title."
+                "text": "**[`CCEverywhere.BaseContainerConfig.iframeTitle`](../../v4/shared/src/types/container-config-types/interfaces/base-container-config#properties)**: Added support to configure iframe title for accessibility."
               },
               {
-                "type": "new",
-                "modules": [
-                  "templates"
-                ],
-                "text": "[`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`](../../v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config#properties) option to surface non-Express collections in the browser."
+                "text": "**[`CCEverywhere.BrowseSearchBaseConfig.rootCollectionId`](../../v4/shared/src/types/browse-search-config-types/interfaces/browse-search-base-config#properties)**: Added support to surface collections other than Express collections."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "[Mobile Web Support Overview](../concepts/mobile-web-support-overview) concept guide covering mobile creative workflows, configuration options, best practices, and troubleshooting."
+                "text": "Added a new comprehensive [Mobile Web Support Overview](../concepts/mobile-web-support-overview) concept guide that covers implementing creative workflows on mobile devices, including configuration options, best practices, and troubleshooting guidance for cross-platform compatibility."
               }
             ]
           },
           {
             "version": "4.35.15",
             "date": "2025-09-18",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "editor",
-                  "generate",
-                  "editimage"
-                ],
-                "text": "[Workflow Tethering concept guide](../concepts/tethering) and [Workflow Tethering tutorial](../tutorials/workflow-tethering) covering chained workflows (Generate Image → Edit Image and Edit Image → Full Editor)."
+                "text": "Added a new [Concept guide](../concepts/tethering) that covers the **Workflow Tethering** details—the possibility to chain multiple workflows together to create a more complex experience."
+              },
+              {
+                "text": "Added a new comprehensive [Workflow Tethering tutorial](../tutorials/workflow-tethering) which builds on the Concept guide and provides a more practical example of how to implement two of the most common workflow tethering patterns: Generate Image → Edit Image and Edit Image → Full Editor."
               }
             ]
           },
           {
             "version": "4.34.27",
             "date": "2025-09-01",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "`AUTO` content type on [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type) to automatically determine content type from the prompt and context."
+                "text": "**`AUTO` content type**: Added the `AUTO` option to [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type) that allows the system to automatically determine the most appropriate content type based on the prompt and context."
               }
             ]
           },
           {
             "version": "4.34.26",
             "date": "2025-08-28",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "removed",
-                "modules": [
-                  "generate"
-                ],
-                "text": "`ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` enumerations are no longer accepted in `CCEverywhere.TextToImageAppConfig.panelSettings`.",
-                "action": "Remove these values from your `panelSettings` configuration."
+                "text": "Removed the `ImageColorStyle`, `ImageCompositionStyle`, and `ImageLightingStyle` enumerations from the `CCEverywhere.TextToImageAppConfig.panelSettings` property."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "[Edit Image tutorial](../tutorials/edit-image) covering implementation details of Edit Image v2 features."
+                "text": "Added a new [Edit Image tutorial](../tutorials/edit-image) that covers the implementation details of the new Edit Image v2 features."
               }
             ]
           },
           {
             "version": "4.32.26",
             "date": "2025-08-07",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImageAppConfig.panelSettings`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#panelsettings) configuration for Generate Image v1 and v2, including [`PanelSettings`](../../v4/shared/src/types/panel-settings-types/interfaces/panel-settings), [`StyleSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/style-setting), and [`ContentTypeSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/content-type-setting)."
+                "text": "**[`CCEverywhere.TextToImageAppConfig.panelSettings`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#panelsettings)**: Added comprehensive panel settings configuration to allow fine-grained control over image generation parameters. They are available for both Generate Image v1 and v2 and include:\n  - [`PanelSettings`](../../v4/shared/src/types/panel-settings-types/interfaces/panel-settings): Container interface for all panel settings.\n  - [`StyleSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/style-setting): Configuration for artistic styles with support for multiple style categories.\n  - [`ContentTypeSetting`](../../v4/shared/src/types/panel-settings-types/interfaces/content-type-setting): Setting for content type selection (photo, graphic, art).\n"
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "Style enumerations and [`ImageStyleId`](../../v4/shared/src/types/panel-settings-types/type-aliases/image-style-id): [`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type), [`ImageThemeStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-theme-style), [`ImageTechniqueStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-technique-style), `ImageLightingStyle`, `ImageCompositionStyle`, [`ImageEffectStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-effect-style), `ImageColorStyle`, [`ImageMovementStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-movement-style), [`ImageMaterialStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-material-style), and [`ImageConceptStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-concept-style)."
+                "text": "**[`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#hidefeedbackmenu)**: Added option to hide feedback menu in header bar."
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImageAppConfig.hideFeedbackMenu`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#hidefeedbackmenu) option to hide the feedback menu in the header bar."
+                "text": "**[`CCEverywhere.TextToImageAppConfig.isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#ispromptsafe)**: Added a callback to check if a prompt is safe for image generation. This allows developers to implement their own additional prompt moderation logic."
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImageAppConfig.isPromptSafe`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#ispromptsafe) callback for custom prompt moderation."
+                "text": "**[`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#promptinputplaceholder)**: Added placeholder text configuration for prompt input field (Generate Image v2 only).\n\nBoth the [Generate Image tutorial](../tutorials/generate-image) and the [Concept Guide](../concepts/generate-image-v2) have been updated to reflect the new updates.\n"
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImageAppConfig.promptInputPlaceholder`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#promptinputplaceholder) placeholder text configuration for the prompt input field (Generate Image v2 only)."
+                "text": "Added comprehensive style enumerations to provide granular control over image generation aesthetics:"
               },
               {
-                "type": "docs",
-                "modules": [
-                  "generate"
-                ],
-                "text": "Updated [Generate Image tutorial](../tutorials/generate-image) and [Concept Guide](../concepts/generate-image-v2) for the new panel settings options."
+                "text": "[`ImageContentType`](../../v4/shared/src/types/panel-settings-types/enumerations/image-content-type): Primary content types (photo, graphic, art)"
               },
               {
-                "type": "new",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "[`CCEverywhere.EditImageAppConfig.inlineTOUConsent`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#inlinetouconsent) inline Terms of Use consent configuration."
+                "text": "[`ImageThemeStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-theme-style): 15 artistic themes including concept art, pixel art, 3D, hyper-realistic, cartoon, and more"
               },
               {
-                "type": "new",
-                "modules": [
-                  "export"
-                ],
-                "text": "[`PublishButtonGroup`](../../v4/shared/src/types/export-config-types/interfaces/publish-button-group) interface for organizing export buttons."
+                "text": "[`ImageTechniqueStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-technique-style): 12 artistic techniques from painting and sketching to watercolor and linocut"
+              },
+              {
+                "text": "`ImageLightingStyle`: five lighting options including backlighting, dramatic light, golden hour, studio light, and low lighting"
+              },
+              {
+                "text": "`ImageCompositionStyle`: seven composition styles for camera angles and framing"
+              },
+              {
+                "text": "[`ImageEffectStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-effect-style): nine visual effects including bokeh, fisheye, neon, and bioluminescent"
+              },
+              {
+                "text": "`ImageColorStyle`: six color palette options from black & white to vibrant and pastel colors"
+              },
+              {
+                "text": "[`ImageMovementStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-movement-style): 12 artistic movements including steampunk, synthwave, cyberpunk, and baroque"
+              },
+              {
+                "text": "[`ImageMaterialStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-material-style): nine material simulations from claymation to marble sculpture"
+              },
+              {
+                "text": "[`ImageConceptStyle`](../../v4/shared/src/types/panel-settings-types/enumerations/image-concept-style): six conceptual moods for emotional tone"
+              },
+              {
+                "text": "[`ImageStyleId`](../../v4/shared/src/types/panel-settings-types/type-aliases/image-style-id): Union type combining all available style options"
+              },
+              {
+                "text": "**[`CCEverywhere.EditImageAppConfig.inlineTOUConsent`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#inlinetouconsent)**: Added inline Terms of Use consent configuration."
+              },
+              {
+                "text": "**[`PublishButtonGroup`](../../v4/shared/src/types/export-config-types/interfaces/publish-button-group)**: New publish button group interface for better export organization."
               }
             ]
           },
           {
             "date": "2025-07-11",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[Generate Image tutorial](../tutorials/generate-image) covering Generate Image v2 features, including the Custom Community Wall."
+                "text": "Added a new comprehensive [Generate Image tutorial](../tutorials/generate-image) that covers the implementation details of the new Generate Image v2 features, including the Custom Community Wall."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "Improved API Reference (v4) documentation for Type Aliases such as [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset)."
+                "text": "The API Reference (v4) has been improved to better document some Type Aliases that were notoriously difficult to find (for example, the [`Asset`](../../v4/shared/src/types/asset-types/type-aliases/asset))"
               }
             ]
           },
           {
             "version": "4.30.13",
             "date": "2025-06-20",
-            "kind": "maintenance"
+            "changes": []
           },
           {
             "version": "4.29.22",
             "date": "2025-05-28",
-            "kind": "sdk",
-            "title": "Edit Image v2",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "[`CCEverywhere.module.editImage()`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow) [Edit Image v2 experience](../concepts/edit-image-v2): 35–50% faster loads, 35% less memory, Adobe Spectrum 2 UI. No config changes needed."
+                "text": "[**`CCEverywhere.module.editImage()`**](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow): Introduced a [new Edit Image v2 experience](../concepts/edit-image-v2), rearchitected to deliver significantly improved performance and a better user experience.\n\n  **Key Features:**\n  - **Reduced load times** in the range of 35% to 50%.\n  - **Reduced memory consumption** by 35%.\n  - **New modular UI** with improved user experience and implementation of the new Adobe Spectrum 2 design system.\n\n  The new Edit Image v2 experience is available now, with no additional configuration required. Check out our [Edit Image v2](../concepts/edit-image-v2) page to learn more.\n"
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImageAppConfig.communityWallConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties) to populate the Community Wall with custom images (see [Custom Community Wall](../concepts/generate-image-v2#custom-community-wall))."
+                "text": "[**`CCEverywhere.TextToImageAppConfig.communityWallConfig`**](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Added a new `communityWallConfig` property to allow host applications to **populate the Community Wall with custom images** instead of Firefly's default assets.\n\n  Please refer to the [this section](../concepts/generate-image-v2#custom-community-wall) of the Generate Image v2 page for the implementation details.\n"
               },
               {
-                "type": "new",
-                "modules": [
-                  "editor"
-                ],
-                "text": "[`CCEverywhere.EditorAppConfig.showPageMargin`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties) and [`CCEverywhere.EditorAppConfig.showBleedArea`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties) options to control margins and bleed visibility."
+                "text": "Two new properties to the `AppConfig` object to control \"Show margins\" and \"Show bleed\" behavior have been added:\n  - [`CCEverywhere.EditorAppConfig.showPageMargin`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties)\n  - [`CCEverywhere.EditorAppConfig.showBleedArea`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties)\n"
               },
               {
-                "type": "deprecated",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "PDF in [`AppConfig.allowedFileTypes`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#properties) for Edit Image v2; PDFs are converted to PNG.",
-                "action": "Drop PDF from Edit Image `allowedFileTypes`, or expect PNG output."
+                "text": "The PDF file type has been deprecated in the [`AppConfig.allowedFileTypes`](../../v4/shared/src/types/module/app-config-types/interfaces/edit-image-app-config#properties) property for the Edit Image v2 experience. If a PDF is passed anyway, it's converted to a PNG."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "editor"
-                ],
-                "text": "Enhanced [Editor Customization](../concepts/appconfig) concept guide with `assetCollection`, `showPageMargin`, and `showBleedArea` options, use cases, and examples."
+                "text": "Enhanced [Editor Customization](../concepts/appconfig) concept guide with configuration options (`assetCollection`, `showPageMargin`, `showBleedArea`), improved structure, comprehensive use cases and examples, and implementation guidance."
               }
             ]
           },
           {
             "version": "4.28.19",
             "date": "2025-05-05",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "editor"
-                ],
-                "text": "[`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties) optional property (collection URN) for asset collection filtering in the Editor."
+                "text": "[`CCEverywhere.BaseEditorAppConfig.assetCollection`](../../v4/shared/src/types/editor/app-config-types/interfaces/base-editor-app-config#properties): A new optional `assetCollection` property (string, the collection's URN) has been added to allow asset collection to filtering support in the Editor."
               },
               {
-                "type": "new",
-                "modules": [
-                  "editor"
-                ],
-                "text": "[`CCEverywhere.Callbacks.onIntentChange`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks#properties) optional callback for intent change events in the Editor."
+                "text": "[`CCEverywhere.Callbacks.onIntentChange`](../../v4/shared/src/types/callbacks-types/interfaces/callbacks#properties): A new optional `onIntentChange` callback has been added to allow host applications to listen to the intent change event in the Editor; for example, when user navigates from one design workflow to another."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "core"
-                ],
                 "text": "Performance improvements and bug fixes."
               }
             ]
@@ -769,27 +500,14 @@
           {
             "version": "4.26.5",
             "date": "2025-04-11",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "[`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties) (`hostAppTrigger`). See the [Analytics guide](../concepts/host-app-trigger)."
+                "text": "[`CCEverywhere.BaseEditorAppConfig.analyticsData`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): A new optional `analyticsData` property has been added to the `AppConfig` interface. This enables host applications to supply analytics-related information to the module. In particular, clients can specify the `hostAppTrigger` value to indicate the user action within the host application that launched the module (e.g., `add-image`, `replace-image`, `gmail`, etc.)."
               },
               {
-                "type": "improved",
-                "modules": [
-                  "core"
-                ],
-                "text": "Cancel events include optional `clientCtaLocation` and `workflowLoadCompleted` properties."
+                "text": "Added `clientCtaLocation` and `workflowLoadCompleted` optional property as part of Cancel event from the SDK."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "core"
-                ],
                 "text": "Various performance improvements and bug fixes."
               }
             ]
@@ -797,114 +515,107 @@
           {
             "version": "4.22.9",
             "date": "2025-03-12",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[Firefly Custom Models](../concepts/generate-image-v2#custom-firefly-models) support in Generate Image V2 (Enterprise users only)."
+                "text": "Added support for [Firefly Custom Models](../concepts/generate-image-v2#custom-firefly-models) in the new Generate Image V2 experience (Enterprise users only). When enabled, a Custom Firefly Models dropdown will appear above all other generation options, allowing you to select the desired model."
               }
             ]
           },
           {
             "version": "4.21.17",
             "date": "2025-02-27",
-            "kind": "sdk",
-            "title": "Generate Image v2",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImageAppConfig.appVersion`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties) option to opt in to Generate Image V2 with `appVersion: \"2\"` (default stays `\"1\"`)."
+                "text": "[**`CCEverywhere.TextToImageAppConfig.appVersion`**](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Introduced a new enhanced UI in the Generate Image Module, configurable using `appVersion` in `AppConfig`.\n  - When set to `\"2\"`, users can access the updated interface and features.\n  - By default, this property is set to `\"1\"`, displaying the older experience.\n\n**Key Features:**\n"
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "v2 config options: [`thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties), [`editDropdownOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties), [`publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties), [`fastModeConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties), and [`featureConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties)."
+                "text": "**Enhanced User Interface**: Redesigned with a new Carousel and Grid view."
               },
               {
-                "type": "new",
-                "modules": [
-                  "export"
-                ],
-                "text": "`pdfPrint` support in `allowedExportFileTypes` on `appConfig`."
+                "text": "**Community Wall**: An endless collection of generated images with prompts for users to select from."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[Concept Guide](../concepts/generate-image-v2) for Generate Image V2 and updated [Demo App](https://demo.expressembed.com/)."
+                "text": "**Fast Mode**: Generates images faster with lesser details, suitable for simple topics, backgrounds, illustrations, and close portraits."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "core"
-                ],
-                "text": "Loader CSS for frictionless experience."
+                "text": "**Improved Prompt Bar**: Includes prompt suggestions for a better user experience."
+              },
+              {
+                "text": "**Rich Previews**: Provides a more interactive and engaging preview experience."
+              },
+              {
+                "text": "**And more!**\n\n**Configurations available in `CCEverywhere` after enabling the new UI:**\n"
+              },
+              {
+                "text": "[`TextToImageAppConfig.thumbnailOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Options to be displayed on the thumbnail."
+              },
+              {
+                "text": "[`TextToImageAppConfig.editDropdownOptions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Options for the Edit dropdown."
+              },
+              {
+                "text": "[`TextToImageAppConfig.publishConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Configuration for the Publish action."
+              },
+              {
+                "text": "[`TextToImageAppConfig.fastModeConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Configuration for enabling or disabling fast mode default state."
+              },
+              {
+                "text": "[`TextToImageAppConfig.featureConfig`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): Configuration for enabling or disabling specific features."
+              },
+              {
+                "text": "Added a new [Concept Guide](../concepts/generate-image-v2) for Generate Image V2, detailing all the features of the new version and providing examples on how to enable each feature."
+              },
+              {
+                "text": "Updated the [Demo App](https://demo.expressembed.com/) to showcase the Generate Image V2 feature. To use the new feature:"
+              },
+              {
+                "text": "Navigate to **Generative** -> **Generate image** -> **Next**"
+              },
+              {
+                "text": "In the Configuration options, Select generate image version as V2.\n\n[![Demo App](./images/demo-app.png)](https://demo.expressembed.com/)\n"
+              },
+              {
+                "text": "Select all the options you need and click **Create with Adobe Express**"
+              },
+              {
+                "text": "Added support for `pdfPrint` in `allowedExportFileTypes` to `appConfig` in addition to the existing `allowedFileTypes`."
+              },
+              {
+                "text": "Fixed loader CSS for frictionless experience."
               }
             ]
           },
           {
             "version": "4.20.46",
             "date": "2025-02-18",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "fixed",
-                "modules": [
-                  "editor"
-                ],
-                "text": "Video `blob` and `base64` asset inputs for [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow#createwithasset)."
+                "text": "Fixed the support for Video `blob` and `base64` asset inputs for the [`Editor.createWithAsset()`](../../v4/sdk/src/workflows/3p/editor-workflow/classes/editor-workflow#createwithasset) method."
               },
               {
-                "type": "removed",
-                "modules": [
-                  "editor"
-                ],
-                "text": "Presigned [`URL`](../../v4/shared/src/types/asset-types/type-aliases/url-asset) as the [`datatype`](../../v4/shared/src/types/asset-types/enumerations/asset-data-type) for video [`asset`](../../v4/shared/src/types/asset-types/interfaces/asset-base) inputs in `createWithAsset()` is temporarily unsupported.",
-                "action": "Pass video as `blob` or `base64` until support returns.",
-                "open": true
+                "text": "**Temporary Revert**: we are temporarily removing support for presigned [`URL`](../../v4/shared/src/types/asset-types/type-aliases/url-asset) as the [`datatype`](../../v4/shared/src/types/asset-types/enumerations/asset-data-type) for a video [`asset`](../../v4/shared/src/types/asset-types/interfaces/asset-base) in `createWithAsset()` due to an internal issue. We will update the changelog once a fix is implemented."
               }
             ]
           },
           {
             "version": "4.19.22",
             "date": "2025-01-31",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "[`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent) intents `INSERT_OBJECT` and `REMOVE_OBJECT` in Edit Image."
+                "text": "Added a new [Embed SDK Developer Journey](../#embed-sdk-developer-journey) map to help developers navigate the resources available at different stages of their integration."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "[Asset](../../v4/shared/src/types/asset-types/) type documentation coverage."
+                "text": "Added a new [Troubleshooting](../troubleshooting/express-unavailable-error) guide to help developers fix the \"Adobe Express is Unavailable\" error, also covering the \"Missing Referrer Header\" error and the proper use of wildcards for domain's allow-listing."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "[Embed SDK Developer Journey](../#embed-sdk-developer-journey) map and [Troubleshooting](../troubleshooting/express-unavailable-error) guide for \"Adobe Express is Unavailable\" and \"Missing Referrer Header\" errors."
+                "text": "Various small improvements and fixes across the documentation."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "core"
-                ],
+                "text": "[`CCEverywhere.ExportConfig.EditFurtherIntent`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent): Added two new intents in the Edit Image module, `INSERT_OBJECT` and `REMOVE_OBJECT`. Either can be preconfigured to run automatically when the module loads."
+              },
+              {
+                "text": "Added coverage for the [Asset](../../v4/shared/src/types/asset-types/) type."
+              },
+              {
                 "text": "Various performance improvements and bug fixes."
               }
             ]
@@ -912,267 +623,311 @@
           {
             "version": "4.18.14",
             "date": "2025-01-09",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params) returns the prompt in `onPublish`."
+                "text": "[`CCEverywhere.TextToImagePublishParams.prompt`](../../v4/shared/src/types/publish-params-types/interfaces/text-to-image-publish-params): in a `createImageFromText()` module, the prompt used to generate the image is now available in the `onPublish` callback."
               }
             ]
           },
           {
             "version": "4.17.33",
             "date": "2024-12-16",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties) aspect ratio parameter in `createImageFromText()`."
+                "text": "Added a comprehensive [error code guide](../concepts/error-handling) for managing errors, ensuring the host application developers and end-users can navigate issues efficiently and effectively."
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "[Error code guide](../concepts/error-handling) for managing errors."
+                "text": "[`CCEverywhere.appConfig.imageDimensions`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): in a `createImageFromText()` module, the aspect ratio with which assets are generated and exported can be passed as a parameter via `appConfig`."
               }
             ]
           },
           {
             "version": "4.16.11",
             "date": "2024-11-18",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "[`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties) and [`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties) in `createImageFromText()`."
+                "text": "[`CCEverywhere.appConfig.imageStyleReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): in a `createImageFromText()` module, assets can be passed as style reference from host application via `appConfig`."
               },
               {
-                "type": "fixed",
-                "modules": [
-                  "qa"
-                ],
-                "text": "Animate from Audio microphone input."
+                "text": "[`CCEverywhere.appConfig.imageCompositionReference`](../../v4/shared/src/types/module/app-config-types/interfaces/text-to-image-app-config#properties): in a `createImageFromText()` module, assets can be passed as composition reference from host application via `appConfig`."
+              },
+              {
+                "text": "Video Quick Action: Animate from Audio Iframe was not allowing microphone access."
               }
             ]
           },
           {
             "version": "4.15.19",
             "date": "2024-10-09",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "export"
-                ],
-                "text": "Enabled state for export buttons (`CCEverywhere.ExportConfig.ENABLED_BUTTON`)."
+                "text": "Redesigned the entire [SDK Reference](../../v4/) section, providing full APIs coverage."
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate",
-                  "export"
-                ],
-                "text": "`CCEverywhere.ExportConfig.DOWNLOAD_ALL` export option."
+                "text": "Added a V3 to V4 [Migration Guide](../concepts/migration-v3-v4)."
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "`CCEverywhere.createImageFromText.appConfig.imageDimensions` parameter."
+                "text": "`CCEverywhere.ExportConfig.ENABLED_BUTTON`: Added a new style in export option, any button can be made always enabled from the launch of the iframe by passing `uiType:enabled-button`"
               },
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "Redesigned [SDK Reference](../../v4/) section and V3 to V4 [Migration Guide](../concepts/migration-v3-v4)."
+                "text": "`CCEverywhere.ExportConfig.DOWNLOAD_ALL`: Added Export options target as `\"Download_all\"` to download all the images, applicable only for text to image."
+              },
+              {
+                "text": "`CCEverywhere.createImageFromText.appConfig.imageDimensions`: In the `appConfig` of `createImageFromText`, included `imageDimensions` to define the dimensions for the images users can generate. This parameter accepts the size in pixels and the corresponding aspect ratio. When specified, users will be limited to generating images to the provided aspect ratio."
               }
             ]
           },
           {
             "version": "4.14.23",
             "date": "2024-09-23",
-            "kind": "docs",
             "changes": [
               {
-                "type": "docs",
-                "modules": [
-                  "core"
-                ],
-                "text": "Reorganized docs: updated [Submission and Review](../review/) and [Quickstart](../quickstart/) guides, and new [Tutorials](../tutorials/) section."
+                "text": "Redesigned the Information Architecture, to make it easier for developers to find the information they need."
+              },
+              {
+                "text": "Updated the [Submission and Review](../review/) and [Quickstart](../quickstart/) Guides."
+              },
+              {
+                "text": "Added a new [Tutorials](../tutorials/) section with two tutorials."
               }
             ]
           },
           {
             "version": "4.14.23",
             "date": "2024-09-05",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "`DocConfig` accepts `Blob` and `File` assets."
+                "text": "Added support for Blobs to the list of supported data types for an Asset in `DocConfig`. Clients can now pass a blob or file object in place of `base64` or `url`."
               }
             ]
           },
           {
             "version": "4.4.15",
             "date": "2024-04-02",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "`CCEverywhere.terminate()`."
+                "text": "`CCEverywhere.terminate`: We have added the terminate API to SDK v4. Once it is called, performing any action should fail with error SDK_NOT_INITIALIZED unless SDK is initialized again."
               },
               {
-                "type": "new",
-                "modules": [
-                  "core"
-                ],
-                "text": "[z-index](../../reference/types/#containerconfig) support for the root container."
+                "text": "Added [z-index](../../reference/types/#containerconfig) support for the root container."
               }
             ]
           },
           {
             "version": "4.2.30",
             "date": "2024-03-14",
-            "kind": "sdk",
             "changes": [
               {
-                "type": "breaking",
-                "modules": [
-                  "core"
-                ],
-                "text": "Callbacks move from `initialize()` to each call’s `appConfig`.",
-                "action": "Move callbacks from `initialize()` into the `appConfig` of each call."
+                "text": "`callbacks` are no longer set in the `initialize` method"
+              },
+              {
+                "text": "Every API now accepts `appConfig`. Callbacks are now part of `appConfig`."
               }
             ]
           },
           {
             "version": "4.2.29",
             "date": "2024-03-14",
-            "kind": "sdk",
-            "title": "SDK v4",
             "changes": [
               {
-                "type": "breaking",
-                "modules": [
-                  "editor"
-                ],
-                "text": "`createDesign` is now `editor.create` / `editor.createWithAsset`; `editDesign` is now `editor.edit`.",
-                "action": "Rename the calls. See the [migration guide](../concepts/migration-v3-v4)."
+                "text": "`callbacks` are now set in the `initialize` method"
               },
               {
-                "type": "breaking",
-                "modules": [
-                  "qa"
-                ],
-                "text": "`openQuickAction` is replaced by one method per action.",
-                "action": "Call the per-action methods instead."
+                "text": "`ExportOptions` has changed and new \"continue editing\" buttons are available"
               },
               {
-                "type": "breaking",
-                "modules": [
-                  "export"
-                ],
-                "text": "`ExportOptions` changed shape.",
-                "action": "Update `ExportOptions` to the v4 types."
+                "text": "`ccEverywhere.createDesign()` has now been broken into `ccEverywhere.editor.create()` and `ccEverywhere.editor.createWithAsset()`"
               },
               {
-                "type": "new",
-                "modules": [
-                  "generate"
-                ],
-                "text": "Generate Image module: `createImageFromText`."
+                "text": "`ccEverywhere.editDesign()` is now `ccEverywhere.editor.edit()`"
               },
               {
-                "type": "new",
-                "modules": [
-                  "editimage"
-                ],
-                "text": "Edit Image module: `editImage`."
+                "text": "`ccEverywhere.openQuickAction()` is now `ccEverywhere.quickAction.convertToJPEG()` (each of the different actions has its own API now)"
               },
               {
-                "type": "new",
-                "modules": [
-                  "auth"
-                ],
-                "text": "Delayed login."
+                "text": "We have added modules to the SDK. Modules are contextual mini-editing experiences. We currently offer:\n  - Generate Image module: `ccEverywhere.module.createImageFromText()`\n  - Edit Image module: `ccEverywhere.module.editImage()`\n"
+              },
+              {
+                "text": "Delayed login is now available."
               }
             ]
           },
           {
             "version": "3.10.13",
             "date": "2023-11-06",
-            "kind": "sdk",
-            "summary": "LINE and note layouts ([CreateInputParams.canvasSize](../../reference/types/#canvasaspectid)) and template types ([CreateInputParams.templateType](../../reference/types/#templatetype)); QR Code and Caption Video quick actions."
+            "changes": [
+              {
+                "text": "[CreateInputParams.canvasSize](../../reference/types/#canvasaspectid): Added support for new layouts.\n   - NoteHeaderImage\n   - LineAdSmall\n   - LineAdSquare\n   - LineAdVertical\n   - LineRichMenuLarge\n   - LineRichMenuSmall\n   - LineRichMessage\n"
+              },
+              {
+                "text": "[CreateInputParams.templateType](../../reference/types/#templatetype): Added support for some template types.\n   - note-header-image\n   - line-ad-small\n   - line-ad-square\n   - line-ad-vertical\n   - line-rich-menu-large\n   - line-rich-menu-small\n   - line-rich-message\n"
+              },
+              {
+                "text": "Generate QR Code: This new image quick action allows users to create custom QR code for any given URL. The quick action id for this is 'generate-qr-code'. We support Save to Host and Download options for the asset."
+              },
+              {
+                "text": "Caption With Video: This new video quick action allows users to add captions to their videos. Users can upload videos with audio tracks and captions will be generated by Adobe Express. Does not work on videos which do not have any voiceover. The quick action id for this is 'caption-video'."
+              }
+            ]
           },
           {
             "version": "3.8.11",
             "date": "2023-08-25",
-            "kind": "sdk",
-            "summary": "`skipBrowserSupportCheck` option."
+            "changes": [
+              {
+                "text": "`ConfigParams.skipBrowserSupportCheck`: By default, this property is set to false and users will encounter an \"Unsupported Browser\" page when launching a design flow. When this property is configured to true and the browser is not supported, calling `initialize()` will **not** result in an error."
+              }
+            ]
           },
           {
             "version": "3.7.14",
             "date": "2023-08-15",
-            "kind": "sdk",
-            "summary": "`ExportButton.id` is required; `cta` variant renamed `accent`; Animate From Audio added; Reverse Video and Change Speed retired.",
-            "breaking": true
+            "changes": [
+              {
+                "text": "ExportButton.accent: The variant option 'cta' has been replaced with 'accent'. Both 'cta' and 'accent' work the same but the support for 'cta' is deprecated as per Spectrum guidelines."
+              },
+              {
+                "text": "We will not support the following two quick actions: Reverse Video and Change Speed"
+              },
+              {
+                "text": "Added a new video quick action: Animate From Audio. This allows users to create a character animation by choosing a character from the given list of characters, adding a backdrop and then recording a speech."
+              },
+              {
+                "text": "ExportButton.id is now a required property on native buttons"
+              }
+            ]
           },
           {
             "version": "3.6.16",
             "date": "2023-08-06",
-            "kind": "sdk",
-            "summary": "MP4 export, mixed media, and `allowedFileTypes`."
+            "changes": [
+              {
+                "text": "CreateOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media."
+              },
+              {
+                "text": "EditOutputParams.allowedFileTypes: We now support the following four file types: image/png, image/jpeg, application/pdf and video/mp4. Client apps will now be able to restrict the export options shown to end users by passing the relevant file type in allowedFileTypes property. This is also relevant of mixed media."
+              },
+              {
+                "text": "Video Export: Users will now be able to export assets as MP4 files. In order to do this, there must be a video asset added in the canvas to see the option in the export options dropdown for custom buttons. Pass video/mp4 option in allowedFileTypes."
+              },
+              {
+                "text": "Mixed Media Support: Users will be able to download mixed media assets. In case they have added an image in one page and video in another, they will now be able to see JPG + MP4 or PNG + MP4 in the export options dropdown for custom buttons.Pass image/jpeg, image/png and video/mp4 option in allowedFileTypes."
+              }
+            ]
           },
           {
             "version": "2.0.8",
             "date": "2023-02-02",
-            "kind": "sdk",
-            "summary": "`initialize()` is async; browser support check; `terminate()`; Google One Tap sign-in.",
-            "breaking": true
+            "changes": [
+              {
+                "text": "Browser compatibility checker: Now the SDK will check for browser compatibility during initialization."
+              },
+              {
+                "text": "New default method `terminate()` allows you to terminate an active instance of CCEverywhere. This method will return false if there is no active CCEverywhere instance."
+              },
+              {
+                "text": "Google YOLO will work for both the full editor and quick actions. If the user is not signed in, the YOLO prompt will be shown to users. If the user has multiple Google accounts, they can select from a list.\n  - If the user has an Adobe account associated with Google ID, the user is signed in.\n  - If the user does not have an Adobe account associated with the Google ID, a new Adobe account will be created for the user using their Google ID.\n  - User can choose to dismiss the YOLO modal and continue with delayed login.\n  - Redirect URI is no longer being used.\n"
+              },
+              {
+                "text": "`initialize()` method is now async. This is the main API used for initializing the SDK. It will return a promise with a CCEverywhere object which can be used to call other APIs in the SDK."
+              }
+            ]
           },
           {
             "version": "1.5.4",
             "date": "2022-12-16",
-            "kind": "sdk",
-            "summary": "Quick actions work logged out; bug fixes."
+            "changes": [
+              {
+                "text": "Enabled \"Logged Out\" experience for image and video quick actions"
+              },
+              {
+                "text": "Fixed the problem with the editor iFrame not auto-closing post publish (for the scenario when the editor is launched from image quick actions via \"Customize in Express\" workflow)"
+              },
+              {
+                "text": "Fixed an issue related to pre-caching of resources for the editor"
+              },
+              {
+                "text": "Currently, the \"Customize in Express\" workflow from the \"Remove Background\" image quick action is not working. The fix will be deployed in a future version."
+              }
+            ]
           },
           {
             "version": "1.4.10",
             "date": "2022-11-14",
-            "kind": "sdk",
-            "summary": "Delayed login; Create from Image."
+            "changes": [
+              {
+                "text": "Delayed Login experience in the full editor.\n  - With this release of the SDK, we are enabling users to launch the full editor without having to log in first. The user can sign in 1) once the Adobe Express iFrame launches, or 2) continue to work on the document until they decide to publish/save -- at which point they would be prompted to sign in. The delayed login experience is available out-of-the-box with this version of the SDK and developers do not have to make any changes to enable this experience.\n"
+              },
+              {
+                "text": "\"Create from Image\" workflow.\n  - Users can now create from an image instead of a blank canvas. This workflow works with the delayed login experience. To use this workflow, partners will need to enable the host application to use it.\n"
+              }
+            ]
           },
           {
             "version": "1.3.11",
             "date": "2022-08-24",
-            "kind": "sdk",
-            "summary": "CDN bundle, welcome screen, and sign-out."
+            "changes": [
+              {
+                "text": "SDK bundled for browsers, hosted on Adobe CDN."
+              },
+              {
+                "text": "Welcome Screen before the Single User Sign In screen appears."
+              },
+              {
+                "text": "Ability to log out from the full editor loaded in the iFrame."
+              },
+              {
+                "text": "Signing-in from the welcome screen, subsequent to a sign-out, successfully launches the full editor iFrame."
+              },
+              {
+                "text": "Opening asset in the full editor, subsequent to performing an image quick action, and saving the asset doesn't close the iFrame automatically. This will be fixed in the next release."
+              },
+              {
+                "text": "When a quick action is performed and the resulting asset is opened in a full editor: after the user makes changes and saves it the asset is saved outside of the designated project folder in the user's Adobe Express account."
+              }
+            ]
           },
           {
             "version": "1.1.0",
             "date": "2022-04-09",
-            "kind": "sdk",
-            "summary": "Configurable scrim and redirect URI; `appVersion` and `platformCategory` optional."
+            "changes": [
+              {
+                "text": "Scrim view background color is now configurable."
+              },
+              {
+                "text": "Redirect URI can now be provided as input during initialization."
+              },
+              {
+                "text": "`appVersion` and `platformCategory` are now optional arguments."
+              },
+              {
+                "text": "In dev environments, SDK is now able to read and override the base URL from the client's window object."
+              },
+              {
+                "text": "API provided to easily identify the SDK version running in browser or host apps."
+              },
+              {
+                "text": "Update Content will now be displayed in 100% of the area of the client div, instead of appearing with scrollbars."
+              },
+              {
+                "text": "Adobe IMS related enhancements."
+              },
+              {
+                "text": "When `parentElementId` is supplied, the dimensions of the parent container display Scrim view instead of Viewport."
+              },
+              {
+                "text": "QA loader screen can be now set to the darkest theme."
+              },
+              {
+                "text": "iFrame now loads successfully on Safari even if pop-up blocker settings are enabled."
+              },
+              {
+                "text": "Enhanced error handling for failure to launch iFrame for quick action and full editor."
+              },
+              {
+                "text": "Full editor iFrame now honoring 0 border radius value."
+              }
+            ]
           }
         ]
       }
