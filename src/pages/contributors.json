@@ -25,19 +25,19 @@
     {
       "page": "/guides/changelog/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4",
+        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/270928274?v=4",
         "https://avatars.githubusercontent.com/u/77717258?v=4"
       ],
-      "lastUpdated": "10/21/2026"
+      "lastUpdated": "11/23/2026"
     },
     {
       "page": "/guides/changelog/changelog-comp",
       "avatars": [
         "https://avatars.githubusercontent.com/u/113968869?v=4"
       ],
-      "lastUpdated": "11/6/2026"
+      "lastUpdated": "11/23/2026"
     },
     {
       "page": "/guides/concepts/appconfig",
@@ -1283,11 +1283,11 @@
     {
       "page": "/v4/shared/src/error/messages/",
       "avatars": [
-        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/113968869?v=4",
+        "https://avatars.githubusercontent.com/u/5939127?v=4",
         "https://avatars.githubusercontent.com/u/14320591?v=4"
       ],
-      "lastUpdated": "2/26/2026"
+      "lastUpdated": "11/23/2026"
     },
     {
       "page": "/v4/shared/src/error/messages/variables/messages",
