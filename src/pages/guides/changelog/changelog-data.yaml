@@ -40,7 +40,12 @@ releases:
       - type: new
         modules: [ede]
         text: "[`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createguideddesign) module that launches a guided design creation flow in EDE."
-
+        list : |
+          list1
+          list2
+          list3
+          list4
+          
   - version: 4.57.22
     date: 2026-10-08
     kind: sdk
@@ -51,6 +56,13 @@ releases:
       - type: fixed
         modules: [core]
         text: "Various performance improvements and fixes."
+        code: |
+          (async () => {
+            const ccEverywhere = await window.CCEverywhere.initialize({
+              clientId: <CLIENT_ID>,
+              appName: <APP_NAME>,
+            });
+          })();
 
   - version: 4.56.21
     date: 2026-09-30
