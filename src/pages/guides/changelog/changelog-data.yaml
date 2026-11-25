@@ -23,7 +23,7 @@ releases:
       - type: new
         modules: [ede]
         text: "[`module.createGuidedDesign`](../../v4/sdk/src/workflows/3p/module-workflow/classes/module-workflow.md#createguideddesign) module that launches a guided design creation flow in EDE."
-        list : |
+        list: |
           list1
           list2
           list3
