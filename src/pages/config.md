@@ -43,6 +43,7 @@
     - [Tutorials](/guides/tutorials/index.md)
         - [First integration](/guides/tutorials/getting-started.md)
         - [Embedded Design Editor](/guides/tutorials/embedded-design-editor.md)
+        - [Client auth provider](/guides/tutorials/client-auth-provider.md)
         - [Full Editor](/guides/tutorials/full-editor.md)
         - [Generate Image](/guides/tutorials/generate-image.md)
         - [Edit Image](/guides/tutorials/edit-image.md)
