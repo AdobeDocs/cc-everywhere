@@ -1,24 +1,23 @@
-# Changelog System Documentation
+# Changelog Component Documentation
 
-This document explains the architecture, file schemas, and authoring rules for the Adobe Express Embed SDK Changelog system powered by Adobe Edge Delivery Services (Franklin).
+This document explains the architecture, file schemas, authoring guidelines, and configuration options for the **Changelog Component**.
 
 ---
 
 ## 1. Architecture Overview
 
-The Changelog system consists of three key pieces:
+The Changelog system decouples presentation from data using three key files:
 
 ```
-src/pages/guides/changelog/
-├── changelog-comp.md          # 1. Component Page (Hosts the <Changelog /> block)
-├── changelog-data.yaml        # 2. Release Content (Source of truth for releases & changes)
-└── changelog-settings.yaml    # 3. Settings & Filters (Archive, kinds, and UI configuration)
+├── changelog-comp.md          # 1. Component Page (Markdown page hosting the <Changelog /> block)
+├── changelog-data.yaml        # 2. Release Content (Source of truth for releases & change items)
+└── changelog-settings.yaml    # 3. Global Settings (Archive rules, kind labels, filter config)
 ```
 
 ```
 ┌─────────────────────────┐     ┌───────────────────────────┐
 │  changelog-data.yaml    │     │  changelog-settings.yaml  │
-│  (Releases, Dates, Text)│     │  (Archive, Filters, Kinds)│
+│ (Releases, Dates, Types)│     │(Archive, Filters,Metadata)│
 └────────────┬────────────┘     └─────────────┬─────────────┘
              │                                │
              └───────────────┬────────────────┘
@@ -31,8 +30,10 @@ src/pages/guides/changelog/
                              ▼
               ┌─────────────────────────────┐
               │    changelog.js Decorator   │
-              │  (Year/Month/Type Filters,  │
-              │   Search, Release Cards)    │
+              │  • Dynamic Year/Month filter│
+              │  • Type pills & Module menu │
+              │  • Real-time search & cards │
+              │  • Collapsible archive      │
               └─────────────────────────────┘
 ```
 
@@ -46,194 +47,205 @@ src/pages/guides/changelog/
 
 > [!IMPORTANT]
 > **The mandatory fields are `version`, `date`, `type`, and `text`.**
-> All other fields (`modules`, `code`, `language`, `action`, `kind`, `title`, `summary`, `open`) are optional and can be omitted if not needed.
+> All other fields (`modules`, `code`, `language`, `action`, `kind`, `title`, `summary`, `open`, `breaking`) are optional and can be omitted.
 
 | Field | Level | Type | Mandatory? | Description |
 | :--- | :--- | :--- | :---: | :--- |
-| **`version`** | Release | string | **YES** | SDK version string (e.g. `4.58.15`). |
-| **`date`** | Release | string (`YYYY-MM-DD`) | **YES** | Release date (e.g. `2026-10-21`). Powers timeline sorting, Year & Month filtering. |
+| **`version`** | Release | string | **YES** | Version identifier (e.g. `2.4.0`, `1.0.0`). Used for release headers and URL anchor IDs. |
+| **`date`** | Release | string (`YYYY-MM-DD`) | **YES** | Release date (e.g. `2026-10-21`). Powers chronological sorting, Year and Month filters. |
 | **`changes`** | Release | array | **YES** | List of change items under this release. |
-| **`type`** | Change | string | **YES** | Type of change: `new` \| `improved` \| `fixed` \| `docs` \| `breaking` \| `deprecated` \| `removed`. Powers the type badge and type filter pills. |
-| **`text`** | Change | string (Markdown) | **YES** | The description of what changed. Supports Markdown links, formatting, and sub-bullets. |
-| `kind` | Release | string | No | `sdk` (default) \| `docs` \| `maintenance`. Shows a tag badge next to the version. |
-| `title` | Release | string | No | Optional major headline for the release (e.g. `"Design Viewer"`). |
-| `summary` | Release | string | No | One-line summary (used for maintenance or archived pre-v4 releases). |
-| `breaking`| Release | boolean | No | `true` if the release contains breaking changes. |
-| `modules` | Change | array of strings | No | Associated SDK modules (e.g. `[ede]`, `[core]`). **Completely optional.** |
-| `code` | Change | string (multiline `\|`) | No | Code sample accompanying the change. |
-| `language`| Change | string | No | Language for syntax highlighting (e.g. `js`, `html`). Default: `js`. |
-| `action` | Change | string | No | Action required by partners/hosts (e.g. for breaking or deprecation items). |
+| **`type`** | Change | string | **YES** | Category of change: `new` \| `improved` \| `fixed` \| `docs` \| `breaking` \| `deprecated` \| `removed`. Powers change badges and Type filter pills. |
+| **`text`** | Change | string (Markdown) | **YES** | Description of the change. Supports Markdown links, bold, italics, and sub-bullets. |
+| `kind` | Release | string | No | Optional badge tag next to version (e.g. `release`, `docs`, `maintenance`). Default: `release`. |
+| `title` | Release | string | No | Optional headline title for major milestones (e.g. `"Summer 2026 Release"`). |
+| `summary` | Release | string | No | One-line summary (used for quick announcements or legacy archived releases). |
+| `breaking`| Release | boolean | No | `true` flags the release as containing breaking changes. |
+| `modules` | Change | array of strings | No | Feature or module tags (e.g. `[auth]`, `[dashboard]`). **Completely optional.** |
+| `code` | Change | string (multiline `\|`) | No | Code snippet accompanying the change. |
+| `language`| Change | string | No | Language for syntax highlighting (e.g. `js`, `html`, `json`). Default: `js`. |
+| `action` | Change | string | No | Action required by users or developers (e.g. migration steps for breaking changes). |
 | `open` | Change | boolean | No | `true` displays an orange *(Still open)* known issue pill. |
 
 ---
 
 ### Minimal Example (Mandatory Fields Only)
 
-You **only** need to provide `version`, `date`, `type`, and `text`. Everything else is optional:
+When authoring a release with only the required fields, your YAML is simple and clean:
 
 ```yaml
 releases:
-  - version: 4.58.15
+  - version: 1.2.0
     date: 2026-10-21
     changes:
       - type: new
-        text: "Added support for guided design creation in EDE."
+        text: "Added dark mode support across the main user dashboard."
       - type: fixed
-        text: "Resolved an issue where bleed was not displayed in the print editor preview."
+        text: "Resolved an issue where session tokens expired prematurely during uploads."
 ```
 
 ---
 
-### Full Example (With Optional Fields)
+### Comprehensive Example (With Optional Fields)
 
 ```yaml
 releases:
-  - version: 4.57.22
+  - version: 2.0.0
     date: 2026-10-08
-    kind: sdk
+    kind: release
+    title: "Major Platform Update"
     changes:
       - type: new
-        modules: [editimage]
-        text: "[`EditFurtherIntent.ERASE`](../../v4/shared/src/types/export-config-types/enumerations/edit-further-intent.md) starting intent for Edit Image."
+        modules: [auth]
+        text: "Introduced OAuth 2.0 single sign-on integration."
 
       - type: fixed
-        modules: [core]
-        text: "Various performance improvements and initialization bug fixes."
+        modules: [api]
+        text: "Performance optimizations and connection retry fixes."
         language: js
         code: |
-          (async () => {
-            const ccEverywhere = await window.CCEverywhere.initialize({
-              clientId: <CLIENT_ID>,
-              appName: <APP_NAME>,
-            });
-          })();
+          import { initClient } from '@example/library';
+
+          const client = await initClient({
+            apiKey: '<API_KEY>',
+            environment: 'production',
+          });
 
       - type: breaking
-        text: "Deprecated legacy parameter `hostOption` in initialization."
-        action: "Migrate host configuration to `hostInfo`."
+        text: "Removed deprecated `v1` endpoint methods."
+        action: "Update all API requests to use the `/v2` endpoints."
 ```
 
 ---
 
 ### Multi-line Code Authoring Rule
 
-When adding `code: |`, YAML requires strict indentation:
-- No space before the colon (`code: |`, not `code : |`).
-- **Every line of the code block must be indented at least 2 spaces deeper than the `code:` line.**
-- If `code:` has 8 spaces of indentation, the code lines must start at **10 spaces**.
+When adding multi-line code via `code: |`, YAML enforces strict indentation rules:
+
+1. **No space before the colon**:
+   - ❌ `code : |`
+   - ✅ `code: |`
+
+2. **Indentation must be strictly deeper than `code:`**:
+   - If `code:` has 8 spaces of indentation, the code lines must start at **10 spaces** (2 spaces deeper).
+   - If any line drops below the base indentation level, YAML stops reading the code block and throws an `Invalid YAML mapping` error.
 
 ```yaml
       - type: fixed
-        text: "Initialization code sample."
+        text: "Code example illustrating initialization."
         language: js
         code: |
-          await import(CDN_URL);
-          const ccEverywhere = await window.CCEverywhere.initialize(
-            initializeParams, configParams
-          );
+          const app = await initializeApp({
+            apiKey: '<API_KEY>',
+            timeout: 5000,
+          });
 ```
 
 ---
 
 ## 3. How Modules Work (Non-Mandatory)
 
-> [!IMPORTANT]
-> **You do NOT need to implement or specify `modules`.**
-> If your releases or change items do not need module categorization, simply leave `modules` out of `changelog-data.yaml`.
+> [!TIP]
+> **Modules are 100% optional.**
+> If your project does not need feature or product module tagging, simply omit `modules` from `changelog-data.yaml`.
 
-- If **no `modules`** are defined in `changelog-data.yaml`:
-  - No module badges appear on the release cards.
+- **When `modules` is omitted**:
+  - No module tags appear on the cards.
   - The **Module filter dropdown is automatically hidden** from the UI.
-  - The component continues to work cleanly with Year, Month, Type, and Search filters.
-- If **`modules` are provided**:
-  - The module badges are rendered on the respective change item.
-  - The **Module** filter dropdown appears automatically, populated with the defined modules.
+  - The component functions seamlessly with Year, Month, Type pills, and Search.
+- **When `modules` is provided**:
+  - Module badges are rendered on the respective change items.
+  - The **Module** filter dropdown automatically appears in the filter bar.
 
 ---
 
 ## 4. How Year & Month Filters Work
 
 > [!IMPORTANT]
-> **Year and Month are automatically derived from the mandatory `date` (`YYYY-MM-DD`).**
+> **Year and Month filters are dynamically generated from the mandatory `date` (`YYYY-MM-DD`).**
 
 - **Automatic Extraction**:
-  - The component parses `date: 2026-10-21` and extracts `year: "2026"` and `month: "October"`.
-  - The **Year** and **Month** filters in the filter bar are populated dynamically from the content.
-- **Zero Configuration Needed**:
-  - Authors do **not** need to maintain year or month lists in `changelog-settings.yaml`. As soon as a release with a new year or month is added to `changelog-data.yaml`, it automatically appears in the filter controls.
+  - The component parses `date: 2026-10-21` and extracts `Year: 2026` and `Month: October`.
+  - Available options in the Year and Month dropdowns are derived directly from the content.
+- **Zero Manual Configuration**:
+  - Authors do **not** need to maintain year or month lists in `changelog-settings.yaml`. When a release with a new year or month is published, it automatically appears in the filters.
 - **Why `version` and `date` are mandatory**:
-  - `date` enables chronological sorting (newest first), Year/Month filtering, and Archive grouping.
-  - `version` creates unique anchor IDs for direct URL linking (e.g. `#4-58-15`).
+  - `date` enables chronological sorting (newest first), Year and Month filtering, and the Archive cutoff.
+  - `version` generates clean, unique DOM IDs for direct URL anchor linking (e.g. `#1-2-0`).
 
 ---
 
-## 5. `changelog-settings.yaml` (Configuration)
+## 5. `changelog-settings.yaml` (Global Settings)
 
-`changelog-settings.yaml` contains global metadata, archive section rules, kind labels, and filter definitions.
+`changelog-settings.yaml` defines global configuration such as feed details, category labels, archive thresholds, and optional filters.
 
-### Key Sections:
+```yaml
+# Page metadata and RSS feed URL
+page:
+  title: "Changelog"
+  description: "Product release notes with the newest release first."
+  url: "https://example.com/feed.xml"
 
-1. **`page`**:
-   Sets the feed URL for RSS syndication.
-   ```yaml
-   page:
-     title: "Changelog"
-     description: "Release notes for the Adobe Express Embed SDK, with the newest release first."
-     url: "https://raw.githubusercontent.com/AdobeDocs/cc-everywhere/refs/heads/main/src/pages/feed.xml"
-   ```
+# Friendly labels for release kinds (optional badges next to version)
+kinds:
+  release: "Product release"
+  docs: "Documentation"
+  maintenance: "Maintenance"
 
-2. **`kinds`**:
-   Maps release `kind` values to human-friendly badge labels:
-   ```yaml
-   kinds:
-     sdk: "SDK release"
-     docs: "Docs update"
-     maintenance: "Maintenance"
-   ```
+# Collapsible archive section for older or legacy versions
+archive:
+  enabled: true
+  label: "Older releases"
+  description: "Previously released versions"
+  groups:
+    - id: "legacy"
+      label: "v1.x Legacy"
+      applies_to:
+        before_year: 2024
+      hint: "Releases before 2024."
 
-3. **`archive`**:
-   Configures the collapsible archive accordion for older versions (e.g. pre-v4 releases):
-   ```yaml
-   archive:
-     enabled: true
-     label: "Older releases"
-     description: "Previously released versions"
-     groups:
-       - id: "pre-2024"
-         label: "SDK v1–v3"
-         applies_to:
-           before_year: 2024
-         hint: "Releases before v4 aren't tagged by module or type."
-   ```
-
-4. **`filters`**:
-   Controls which filter dropdowns / pills are displayed:
-   - `id: module`: Optional module dropdown.
-   - `id: type`: Change type pills (Breaking, New, Fixed, Improved, Docs).
-   - *(Year and Month are enabled by default automatically).*
+# Filter controls configuration (Year and Month are enabled automatically)
+filters:
+  - id: type
+    label: "Type of change"
+    control: pills
+    allLabel: "All types"
+    options:
+      - id: breaking
+        label: "Breaking"
+        color: "#D31510"
+      - id: new
+        label: "New"
+        color: "#0265DC"
+      - id: improved
+        label: "Improved"
+        color: "#0265DC"
+      - id: fixed
+        label: "Fixed"
+        color: "#0A7C52"
+      - id: docs
+        label: "Docs"
+        color: "#6E6E6E"
+```
 
 ---
 
-## 6. `changelog-comp.md` (The `<Changelog />` Component)
+## 6. `changelog-comp.md` (The `<Changelog />` Block)
 
-`changelog-comp.md` is the Markdown page authored for Edge Delivery Services. It contains **one single component tag**:
+In Edge Delivery Services, the page that displays the changelog is authored using a single component block tag:
 
 ```markdown
 <Changelog metadata="./changelog-settings.yaml" content="./changelog-data.yaml" />
 ```
 
 ### Attributes:
-- **`metadata`**: Relative or absolute path to the settings file (`changelog-settings.yaml`).
-- **`content`**: Relative or absolute path to the data file (`changelog-data.yaml`).
+- **`metadata`**: Path to the configuration file (`changelog-settings.yaml`).
+- **`content`**: Path to the release content file (`changelog-data.yaml`).
 
-### How the Decorator Works:
-1. `decorate(block)` reads `data-metadata` and `data-content`.
-2. It fetches and parses both YAML files asynchronously in the browser.
-3. It extracts years and months directly from `date` fields.
-4. It builds the interactive Spectrum UI:
-   - Filter bar (Year, Month, Type pills, Module dropdown if present)
-   - Real-time search input
-   - Release cards grouped by Year and Month
-   - Collapsible Archive accordion for historical releases
-   - Code snippet syntax highlighting (Prism.js)
-   - RSS feed subscription link
+### Component Features:
+1. **Dynamic Year & Month Filtering**: Automatically extracted from dates in content.
+2. **Type Pills**: Color-coded filters for `new`, `fixed`, `improved`, `breaking`, etc.
+3. **Optional Module Dropdown**: Only appears if modules are defined in content.
+4. **Instant Client-side Search**: Searches across versions, dates, change text, and code snippets.
+5. **Timeline Grouping**: Releases are organized chronologically by Year and Month.
+6. **Code Highlighting**: Syntax highlights code snippets automatically.
+7. **Archive Accordion**: Keeps recent releases front-and-center while neatly tucking older versions into a collapsible section.
