@@ -1,0 +1,79 @@
+# changelog-settings.yml
+# Manually maintained metadata for the Adobe Express Embed SDK changelog.
+# Keep year, month, and version options synchronized with releases.yml.
+# Add only options that have matching release data; remove stale options.
+
+page:
+  title: "Changelog"
+  description: "Release notes for the Adobe Express Embed SDK, with the newest release first."
+
+kinds:
+  sdk: "SDK release"
+  docs: "Docs update"
+  maintenance: "Maintenance"
+
+archive:
+  enabled: true
+  label: "Older releases"
+  description: "Previously released versions"
+
+  groups:
+    - id: "pre-2024"
+      label: "SDK v1–v3"
+      applies_to:
+        before_year: 2024
+      hint: "Releases before v4 aren't tagged by module or type."
+
+filters:
+  - id: module
+    label: "Module"
+    allLabel: "All modules"
+    options:
+      - id: editor
+        label: "Full Editor"
+      - id: ede
+        label: "Embedded Design Editor"
+      - id: templates
+        label: "Template Browser"
+      - id: generate
+        label: "Generate Image"
+      - id: editimage
+        label: "Edit Image"
+      - id: viewer
+        label: "Design Viewer"
+      - id: qa
+        label: "Quick Actions"
+      - id: auth
+        label: "Authentication"
+      - id: export
+        label: "Export & publish"
+      - id: core
+        label: "SDK core & config"
+
+  - id: type
+    label: "Type of change"
+    control: pills
+    allLabel: "All types"
+    field: type
+    options:
+      - id: breaking
+        label: "Breaking"
+        color: "#D31510"
+      - id: removed
+        label: "Removed"
+        color: "#D31510"
+      - id: deprecated
+        label: "Deprecated"
+        color: "#E68619"
+      - id: new
+        label: "New"
+        color: "#0265DC"
+      - id: improved
+        label: "Improved"
+        color: "#0265DC"
+      - id: fixed
+        label: "Fixed"
+        color: "#0A7C52"
+      - id: docs
+        label: "Docs"
+        color: "#6E6E6E"
