@@ -7,50 +7,95 @@ keywords:
   - ClientAuthDetails
   - useClientAuth
   - Generative Credits
-  - Generate Image
-title: Embed SDK Partner Auth tutorial
-description: Add client-based authentication to Generate Image in the Adobe Express Embed SDK and confirm that your provider fetches a token on launch.
+title: Embed SDK Centralized Generative Credits tutorial
+description: Learn how to implement Partner Auth in the Adobe Express Embed SDK to centralize generative AI usage metering.
 contributors:
   - https://github.com/undavide
 ---
 
-# Embed SDK Partner Auth tutorial
+# Embed SDK Centralized Generative Credits tutorial
 
-Partner Auth is a client-based authentication in the Adobe Express Embed SDK. It centralizes metering for generative AI features: usage draws from the partner's Generative Credits budget instead of each user's individual credits.
+Learn how to implement Partner Auth in the Adobe Express Embed SDK to centralize generative AI usage metering and draw from your partner's Generative Credits budget.
 
 ## How Partner Auth changes metering
 
-When someone generates an image, the authentication model determines who signs in and whose credits are used:
+When users of your integration use AI features that consume Generative Credits (for example, Generate Image, or Replace Object), the authentication model determines whose credits are used. By default, each user draws from their own monthly quota, which differs depending on whether they have a free or paid subscription plan.
+
+With Partner Auth, the integration uses a client-based authentication model: usage draws from the partner's centralized Generative Credits budget, and not from the individual user's quota.
 
 | Authentication model                       | Adobe ID sign-in                                                                                                          | Generative Credits used                            |
 | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
 | Standard user-based authentication         | Each user signs in with their Adobe ID.                                                                                   | Each user draws from their own monthly quota.      |
 | Partner Auth (client-based authentication) | After Adobe enables Partner Auth for the integration, users don't sign in with an Adobe ID to use the enabled experience. | Usage draws from the partner's centralized budget. |
 
-Partner Auth may be restricted to selected customers. Work with your Adobe representative to arrange enablement and negotiate commercial terms with Adobe Sales.
+<InlineAlert slots="text" variant="warning"/>
 
-In this tutorial, you'll run a sample that adds Partner Auth to Generate Image. You'll follow the token from your backend to the SDK and confirm that launching the module triggers a token request. For the image-generation UI, customization, and export behavior, see the [Generate Image tutorial](./generate-image.md).
+**Please note:** Partner Auth may be restricted to selected customers.
 
-## How the SDK gets a client token
+## How Partner Auth works
+
+Implementing Partner Auth involves two parts: a **backend**, which mints and caches an access token from Adobe IMS using an OAuth server-to-server credential, and the **frontend** Embed SDK integration, which registers a callback to the backend and enables client authentication for the desired workflows
+
+![](./images/client-auth-provider--flow.svg)
 
 - **Your backend** keeps the client secret on the server. It exchanges the server-to-server credential for an Adobe IMS access token, caches the token, and supplies a stable identifier for the user from your own app.
 - **The SDK** calls your browser-side provider, which fetches the token details from your backend. The SDK checks the returned details and calls the provider again before the reported expiry.
 
 ## Prerequisites
 
+In this tutorial, you'll run a sample that adds Partner Auth to a Generate Image experience. You'll follow the token from your backend to the SDK and confirm that launching the module triggers a token request. For details on the image generation UI, customization, and export behavior, see the [Generate Image tutorial](./generate-image.md).
+
+<InlineAlert variant="info" slots="text" />
+
+Partner Auth works with the same mechanism outlined in this tutorial with other modules, including [Create Design](../concepts/ede-create-design.md) and [Edit Design](../concepts/ede-edit-design.md).
+
 Before you start, make sure you have:
 
 - Node.js 24.2 or later and basic JavaScript knowledge.
-- An [Embed SDK API key](../quickstart/index.md#step-1-get-an-api-key) with `localhost:5555` in its [allowed domains](../quickstart/index.md#edit-the-list-of-allowed-domains).
-- A separate Adobe IMS OAuth server-to-server credential with scopes approved for your integration.
+- An [Embed SDK API key](../quickstart/index.md#step-1-get-an-api-key) with `localhost:5555` in its [allowed domains](../quickstart/index.md#edit-the-list-of-allowed-domains). The API key and app name you pass in `hostInfo` are public and visible in the browser.
+- A separate Adobe IMS OAuth server-to-server credential (client ID and client secret) with scopes approved for your integration. **Use this credential only on your backend to mint client access tokens.** Never put this client ID or secret in browser code.
+- The required generative AI entitlements for your organization. Work with your Adobe representative to negotiate commercial terms. During onboarding, Adobe enables Partner Auth for your integration and provisions the entitlements for the technical account associated with your server-to-server credential.
 
 ## 1. Set up the sample project
 
-Clone the [Adobe Express Embed SDK samples repository](https://github.com/AdobeDocs/embed-sdk-samples), then open `code-samples/tutorials/embed-sdk-client-auth-provider` from the repository root in your terminal. The sample already contains the code you'll walk through.
+Clone the [Adobe Express Embed SDK samples repository](https://github.com/AdobeDocs/embed-sdk-samples), then open `code-samples/tutorials/embed-sdk-client-auth-provider` from the repository root.
 
-1. Copy `src/.env.example` to `src/.env`. Set `VITE_API_KEY` to your public Embed SDK API key and `VITE_APP_NAME` to the **Public App Name** in the Adobe Developer Console. Vite exposes `VITE_*` values to the browser, so keep secrets out of this file.
-2. Copy `server/.env.example` to `server/.env`. Set `IMS_CLIENT_ID` and `IMS_CLIENT_SECRET` for your server-to-server credential, and set `IMS_SCOPE` to the scopes approved for that credential. The template uses `openid,AdobeID,firefly_api,ff_apis` as an example. Set `DEMO_USER_GUID` to a hyphenated UUID with no personal information and keep it fixed for this demo.
+<InlineAlert slots="text" variant="success"/>
+
+The sample project contains both the frontend and backend code needed to demonstrate Partner Auth with the Embed SDK. The `src` directory holds the browser-side code, while the `server` directory contains the server-side logic for exchanging and caching IMS tokens.
+
+Add the secrets to the appropriate `.env` files as described below.
+
+1. `src/.env`: set `VITE_API_KEY` to your public Embed SDK API key and `VITE_APP_NAME` to the **Public App Name** in the Adobe Developer Console. Vite exposes `VITE_*` values to the browser, so keep secrets out of this file!
+2. `server/.env`: set `IMS_CLIENT_ID` and `IMS_CLIENT_SECRET` for your server-to-server credential, and set `IMS_SCOPE` to `openid,AdobeID,firefly_api,ff_apis`. `DEMO_USER_GUID` comes prepopulated for simplicity.
 3. Run `npm install` from the sample directory.
+
+To start the sample project, run `npm run dev` from the sample directory. This will start both the frontend and backend servers, allowing you to test the integration locally.
+
+```bash
+$ npm run dev
+
+> embed-sdk-client-auth-provider@1.0.0 dev
+> concurrently --kill-others --names token,web "npm:server" "npm:start"
+
+[token]
+[token] > embed-sdk-client-auth-provider@1.0.0 server
+[token] > node --env-file=server/.env server/server.js
+[token]
+[web]
+[web] > embed-sdk-client-auth-provider@1.0.0 start
+[web] > vite
+[web]
+[token] Token server listening on http://127.0.0.1:3000
+[web]
+[web]   VITE v8.4.0  ready in 197 ms
+[web]
+[web]   ➜  Local:   https://localhost:5555/
+```
+
+You can access the sample project browsing to the URL `https://localhost:5555/`.
+
+![](./images/client-auth-provider--generate-image.png)
 
 ## 2. Exchange and cache the IMS token on your server
 
@@ -223,7 +268,9 @@ export function initializeClientAuth(CCEverywhere, hostInfo) {
 
 ## 5. Opt Generate Image into client authentication
 
-Registering the provider doesn't opt the module in. Open `src/launch-text-to-image.js` and find `useClientAuth: true` in `appConfig`, the first argument to `module.createImageFromText()`. The highlighted lines show where to set the flag and pass that configuration to the module:
+Registering the provider alone doesn't enable client authentication for a workflow. You also need to set `useClientAuth: true` in that workflow's `appConfig`. If you set the flag without registering a provider, the SDK reports `CLIENT_AUTH_PROVIDER_ERROR` when it tries to fetch the client authentication details, not during `initialize()`.
+
+Open `src/launch-text-to-image.js` and find `useClientAuth: true` in `appConfig`, the first argument to `module.createImageFromText()`. The highlighted lines show where to set the flag and pass that configuration to the module:
 
 &lt;!-- atlas-snippet: launch-text-to-image --&gt;
 
@@ -281,7 +328,7 @@ export function bindTextToImage(button, sdk, preview, onError) {
 ## 6. Run the app and confirm the token request
 
 1. Make sure ports `5555` and `3000` are free, then run `npm run dev` from the sample directory. This one command starts both the Vite app and the Node.js token server. The terminal shows the Vite URL and the token server's listening message.
-2. Open `https://localhost:5555` in your browser. The sample uses a local development certificate. If your browser shows a certificate warning, confirm the address is `https://localhost:5555` before using the browser's option to proceed with the self-signed certificate Vite generates in `.dev-certs/`. When the SDK initializes, the page shows **Ready to open Generate Image.** and enables the Spectrum **Generate Image** button.
+2. Open `https://localhost:5555` in your browser. The sample uses a local development certificate. The sample serves HTTPS with a local development certificate from `vite-plugin-mkcert`. On first run, it might prompt for your OS password to trust a local development certificate authority (CA). After that, your browser trusts `https://localhost:5555`. When the SDK initializes, the page shows **Ready to open Generate Image.** and enables the Spectrum **Generate Image** button.
 3. Open the **Network** panel in your browser's developer tools.
 4. Click **Generate Image** on the sample page to launch the module. Look for the same-origin `GET /api/token` request. Check the status without copying the response body, which contains an access token.
 
@@ -293,6 +340,12 @@ You should see HTTP `200` for `/api/token` after launch. This confirms your prov
 
 If the browser reports a `frame-ancestors` violation, confirm you're using `https://localhost:5555` and that `localhost:5555` is in your API key's allowed domains. The embedded module must allow your serving origin to frame it. A local certificate doesn't add the origin to the allowlist.
 
+## Secure your token endpoint
+
+Keep the client secret on your server. The client access token reaches the browser, so treat it as exposed. Keep the token's actual lifetime short; see the five-minute token guidance in [step 2](#2-exchange-and-cache-the-ims-token-on-your-server).
+
+In production, serve the token endpoint over HTTPS and protect it with your app's own authentication and authorization. Only users who are signed in to your app and using your embedded experience should be able to get tokens. The local demo endpoint doesn't perform these user checks.
+
 ## Next steps
 
-You've connected the token server, the browser provider, and the Generate Image launch. Before you adopt this pattern in production, replace the local demo endpoint with an HTTPS endpoint that authorizes requests through your app. Create a stable UUID with no personal information for each user, store it with their user record, and return the same UUID across sessions and token refreshes. The SDK checks the format; your integration keeps the identifier stable.
+You've connected the token server, the browser provider, and the Generate Image launch. Create a stable UUID with no personal information for each user, store it with their user record, and return the same UUID across sessions and token refreshes. The SDK checks the format; your integration keeps the identifier stable.
