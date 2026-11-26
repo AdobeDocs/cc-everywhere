@@ -23,10 +23,10 @@ When users of your integration use AI features that consume Generative Credits (
 
 With Partner Auth, the integration uses a client-based authentication model: usage draws from the partner's centralized Generative Credits budget, and not from the individual user's quota.
 
-| Authentication model                       | Adobe ID sign-in                                                                                                          | Generative Credits used                            |
-| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
-| Standard user-based authentication         | Each user signs in with their Adobe ID.                                                                                   | Each user draws from their own monthly quota.      |
-| Partner Auth (client-based authentication) | After Adobe enables Partner Auth for the integration, users don't sign in with an Adobe ID to use the enabled experience. | Usage draws from the partner's centralized budget. |
+| Authentication model                       | Adobe ID sign-in                                                                                         | Generative Credits used                            |
+| ------------------------------------------ | -------------------------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| Standard user-based authentication         | Each user signs in with their Adobe ID.                                                                  | Each user draws from their own monthly quota.      |
+| Partner Auth (client-based authentication) | After Adobe enables Partner Auth for the integration, users may optionally not sign in with an Adobe ID. | Usage draws from the partner's centralized budget. |
 
 <InlineAlert slots="text" variant="warning"/>
 
@@ -72,6 +72,8 @@ Add the secrets to the appropriate `.env` files as described below.
 
 To start the sample project, run `npm run dev` from the sample directory. This will start both the frontend and backend servers, allowing you to test the integration locally.
 
+&lt;!-- atlas-non-sdk: terminal output from npm run dev --&gt;
+
 ```bash
 $ npm run dev
 
@@ -99,7 +101,15 @@ You can access the sample project browsing to the URL `https://localhost:5555/`.
 
 ## 2. Exchange and cache the IMS token on your server
 
-Your backend returns JSON from `GET /api/token` in the shape of [`ClientAuthDetails`](../../v4/shared/src/types/client-authentication-types/interfaces/client-auth-details.md#properties). All three fields are required:
+You start at the server and work back to the launch button. At runtime, the order is reversed: the page registers the provider first, then your click opens the module and sets the token request in motion.
+
+Open `server/server.js`. After the module loads, the SDK calls your provider, and Vite forwards the provider's `GET /api/token` to the Node.js server. With an empty cache, the handler uses the `client_credentials` grant to exchange its server-side credentials for an Adobe IMS access token.
+
+<InlineAlert slots="text" variant="warning" />
+
+`expires_in` needs to be converted from seconds to milliseconds and should report the token’s expiration time, capped at four minutes from the start of the exchange.
+
+The handler sends JSON back to your provider in the shape of [`ClientAuthDetails`](../../v4/shared/src/types/client-authentication-types/interfaces/client-auth-details.md#properties). All three fields are required:
 
 | Field                    | Type     | Value                                                                                       |
 | ------------------------ | -------- | ------------------------------------------------------------------------------------------- |
@@ -107,9 +117,7 @@ Your backend returns JSON from `GET /api/token` in the shape of [`ClientAuthDeta
 | `tokenExpiryTimestampMs` | `number` | The reported expiry as an absolute Unix epoch timestamp in milliseconds, not a duration.    |
 | `userGuid`               | `string` | A hyphenated UUID for the user. The sample reads its fixed demo UUID from `DEMO_USER_GUID`. |
 
-The SDK rejects a reported expiry at or before its current time or more than five minutes ahead. IMS access tokens last 24 hours by default. For production, ask your Adobe representative for tokens that actually expire after five minutes. Reporting an earlier timestamp to the SDK doesn't shorten the lifetime of the token IMS issued.
-
-Open `server/server.js`. Follow the `client_credentials` exchange, the conversion of `expires_in` from seconds to milliseconds, and the reuse of the cached response:
+Follow the handler's call to `getDetails()` to see how it gets that response:
 
 &lt;!-- atlas-snippet: server-token-endpoint --&gt;
 
@@ -214,13 +222,19 @@ if (import.meta.main) {
 }
 ```
 
-The sample reports the earlier of the calculated IMS expiry and four minutes after the exchange started. The server reuses the result while more than 45 seconds remain before that reported expiry. When the result is no longer reusable, concurrent requests share one IMS exchange. The four-minute cap and 45-second margin are sample values, not requirements.
+Reuse an issued token instead of requesting a new one for every `/api/token` call. On each later request, the sample returns its in-memory cached response if more than 45 seconds remain before the reported expiry. Otherwise, it requests a fresh token, sharing one IMS exchange across concurrent requests. If that exchange fails or times out, the handler returns a generic HTTP `503` without exposing IMS details or retrying within the request. Please note, the cache, 45-second margin, and four-minute cap are sample choices, not SDK requirements.
 
-Reuse an issued token instead of requesting a new one for every `/api/token` call. This sample does that with the in-memory cache described above; the cache is the sample's policy, not an SDK requirement. If an exchange fails or times out, the sample returns a generic HTTP `503` without exposing IMS details or retrying within that request.
+<InlineAlert slots="text" variant="hearer, info"/>
+
+#### Token Expiry
+
+IMS access tokens last **24 hours** by default. For production, ask your Adobe representative to shorten the lifetime of tokens to **five minutes**. Please note: reporting an earlier timestamp to the SDK doesn't shorten the validity of the IMS token, and would represent a security risk.
 
 ## 3. Fetch the token from the browser
 
-Open `src/client-auth-provider.js`. A [`ClientAuthProvider`](../../v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) takes no arguments and returns a promise that resolves to `ClientAuthDetails`. The sample's callback fetches the same-origin `/api/token` route, which Vite proxies to the Node.js server. It returns the three fields or throws an error without including the response body:
+When the Generate Image module finishes loading, the SDK calls `clientAuthProvider()` to get the details it needs to pass to the module. Open `src/client-auth-provider.js`. A [`ClientAuthProvider`](../../v4/shared/src/types/client-authentication-types/interfaces/client-auth-provider.md) takes no arguments and returns a promise that resolves to `ClientAuthDetails`.
+
+On each call, your provider fetches the same-origin `/api/token` route. Vite proxies that request to the server from step 2 at `127.0.0.1:3000`. Follow the callback from the fetch to either the three returned fields or an error that leaves out the response body:
 
 &lt;!-- atlas-snippet: browser-client-auth-provider --&gt;
 
@@ -244,11 +258,15 @@ export async function clientAuthProvider() {
 }
 ```
 
-The SDK schedules refresh about 30 seconds before the reported expiry. This is separate from the server's 45-second cache margin. If the callback fails or returns invalid details, the SDK reports `CLIENT_AUTH_PROVIDER_ERROR`. For a failed scheduled refresh, the SDK retries after one minute and stops the refresh loop after three consecutive failures.
+The SDK validates the details before handing them to the module. It rejects a reported expiry at or before its current time or more than five minutes ahead. When Adobe has enabled Partner Auth for your integration, the module uses the token for generative features, with usage metered to the partner.
+
+With the module open, the SDK calls your provider again about 30 seconds before the reported expiry. If that token is still in the sample server's cache, the request falls inside the server's 45-second cache margin, so the server exchanges with IMS for a fresh token instead of reusing the expiring one.
+
+If the provider throws, rejects, or returns invalid details, the SDK reports `CLIENT_AUTH_PROVIDER_ERROR`. After a failed scheduled refresh, the SDK waits one minute before retrying and stops the refresh loop after three consecutive failures.
 
 ## 4. Register the provider with the SDK
 
-The sample loads the SDK from the Adobe CDN and builds `hostInfo` from your browser settings. Open `src/initialize-client-auth.js`. The third argument to [`initialize()`](../../v4/sdk/src/3p/cc-everywhere/variables/default.md#initialize) keeps user sign-in delayed; it doesn't turn sign-in off. The fourth argument registers the client token provider:
+On page load, `src/main.js` builds `hostInfo` from your browser settings, loads the SDK from the Adobe CDN, then calls `initializeClientAuth()`. Open `src/initialize-client-auth.js` to see what the helper passes to [`initialize()`](../../v4/sdk/src/3p/cc-everywhere/variables/default.md#initialize). The third argument keeps user sign-in delayed; it doesn't turn sign-in off. The fourth registers `clientAuthProvider` for later:
 
 &lt;!-- atlas-snippet: initialize-client-auth --&gt;
 
@@ -266,11 +284,13 @@ export function initializeClientAuth(CCEverywhere, hostInfo) {
 }
 ```
 
+The SDK stores your callback without calling it, so the page makes no `/api/token` request during setup. When `initialize()` resolves, `src/main.js` uses the SDK instance to bind the **Generate Image** button, then enables it. The sample repeats this setup when you reload the page.
+
 ## 5. Opt Generate Image into client authentication
 
-Registering the provider alone doesn't enable client authentication for a workflow. You also need to set `useClientAuth: true` in that workflow's `appConfig`. If you set the flag without registering a provider, the SDK reports `CLIENT_AUTH_PROVIDER_ERROR` when it tries to fetch the client authentication details, not during `initialize()`.
+After initialization, `src/main.js` calls `bindTextToImage()` to wire up the button. Open `src/launch-text-to-image.js`. Each time you click **Generate Image**, the handler opens the module by calling `module.createImageFromText()` with `appConfig` as its first argument. The `useClientAuth: true` flag opts this launch in: when the module loads, the SDK starts the refresh loop by calling the provider from step 3.
 
-Open `src/launch-text-to-image.js` and find `useClientAuth: true` in `appConfig`, the first argument to `module.createImageFromText()`. The highlighted lines show where to set the flag and pass that configuration to the module:
+Trace the highlighted lines from the opt-in flag to the launch call:
 
 &lt;!-- atlas-snippet: launch-text-to-image --&gt;
 
@@ -325,16 +345,22 @@ export function bindTextToImage(button, sdk, preview, onError) {
 }
 ```
 
+<InlineAlert slots="text" variant="warning"/>
+
+In order for the client authentication provider to function correctly, **you need both pieces.** Registering the provider alone doesn't opt Generate Image in: without the flag, the SDK doesn't start the refresh loop for this launch. If you set the flag but don't register a provider, the SDK reports `CLIENT_AUTH_PROVIDER_ERROR` when it tries to fetch the details, not during `initialize()`.
+
 ## 6. Run the app and confirm the token request
 
-1. Make sure ports `5555` and `3000` are free, then run `npm run dev` from the sample directory. This one command starts both the Vite app and the Node.js token server. The terminal shows the Vite URL and the token server's listening message.
-2. Open `https://localhost:5555` in your browser. The sample uses a local development certificate. The sample serves HTTPS with a local development certificate from `vite-plugin-mkcert`. On first run, it might prompt for your OS password to trust a local development certificate authority (CA). After that, your browser trusts `https://localhost:5555`. When the SDK initializes, the page shows **Ready to open Generate Image.** and enables the Spectrum **Generate Image** button.
-3. Open the **Network** panel in your browser's developer tools.
-4. Click **Generate Image** on the sample page to launch the module. Look for the same-origin `GET /api/token` request. Check the status without copying the response body, which contains an access token.
+1. If the servers from step 1 aren't running, make sure ports `5555` and `3000` are free, then run `npm run dev` from the sample directory. The command starts both the Vite app and the Node.js token server. In the terminal, look for the Vite URL and the token server's listening message.
+2. Open the **Network** panel in your browser's developer tools, then load `https://localhost:5555`. The sample serves HTTPS with a local development certificate from `vite-plugin-mkcert`. On first run, your OS might prompt for your password to trust the local development certificate authority (CA). After that, your browser trusts `https://localhost:5555`.
+3. As the page loads, look for the SDK assets from the CDN. There's no `/api/token` request yet. When `initialize()` resolves, the page shows **Ready to open Generate Image.** and enables the Spectrum **Generate Image** button.
+4. Click **Generate Image**. The module loads, then your provider sends a same-origin `GET /api/token` request. Check the status without copying the response body, which contains an access token.
 
 <InlineAlert slots="text" variant="success" />
 
-You should see HTTP `200` for `/api/token` after launch. This confirms your provider reached the token server. Stop the check there: it doesn't verify hosted sign-in behavior, image generation, export, token consumption, or credit metering.
+You should see HTTP `200` for `/api/token` after launch. This confirms your provider reached the token server. It doesn't verify hosted sign-in behavior, image generation, export, token consumption, or credit metering.
+
+If you leave the module open, you can also watch for the scheduled refresh. When the four-minute cap sets the reported expiry, the sample settings put the next scheduled `GET /api/token` roughly three and a half minutes after the first IMS exchange starts. That's the sample's cap minus the SDK's roughly 30-second lead time, not a fixed interval.
 
 <InlineAlert slots="text" variant="warning" />
 
@@ -344,7 +370,7 @@ If the browser reports a `frame-ancestors` violation, confirm you're using `http
 
 Keep the client secret on your server. The client access token reaches the browser, so treat it as exposed. Keep the token's actual lifetime short; see the five-minute token guidance in [step 2](#2-exchange-and-cache-the-ims-token-on-your-server).
 
-In production, serve the token endpoint over HTTPS and protect it with your app's own authentication and authorization. Only users who are signed in to your app and using your embedded experience should be able to get tokens. The local demo endpoint doesn't perform these user checks.
+In production, serve the token endpoint over HTTPS and protect it with your app's own authentication and authorization. Only users who are signed in to your app and using your embedded experience should be able to get tokens. For the sake of this tutorial, the local demo endpoint doesn't perform these user checks.
 
 ## Next steps
 
