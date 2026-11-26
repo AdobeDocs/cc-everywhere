@@ -18,8 +18,9 @@ Each tutorial provides step-by-step instructions on integrating the SDK into you
 
 1. [Getting Started with the Adobe Express Embed SDK](./getting-started.md): A step-by-step guide to setting up and integrating the Embed SDK into your web applications.
 2. [Building a Create and Edit Design Flow with the Embedded Design Editor (EDE)](./embedded-design-editor.md): How to implement the EDE Create Design and Edit Design workflows.
-3. [Building a Custom Image Editor with the Full Editor Module](./full-editor.md): How to implement Adobe Express Full Editor.
-4. [Generating Images with the Generate Image v2 Module](./generate-image.md): How to implement Adobe Express Generate Image v2.
-5. [Editing Images with the Edit Image v2 Module](./edit-image.md): How to implement Adobe Express Edit Image v2.
-6. [Workflow Tethering](./workflow-tethering.md): How to implement workflow tethering between Generate Image, Edit Image, and Full Editor modules.
-7. [Mobile Web](./mobile-web.md): How to implement the Embed SDK in a Mobile Web application (iOS and Android) via WebViews.
+3. [Centralized GenCredits metering](./client-auth-provider.md): How to implement Partner Auth to centralize generative AI usage metering and draw from your partner's Generative Credits budget.
+4. [Building a Custom Image Editor with the Full Editor Module](./full-editor.md): How to implement Adobe Express Full Editor.
+5. [Generating Images with the Generate Image v2 Module](./generate-image.md): How to implement Adobe Express Generate Image v2.
+6. [Editing Images with the Edit Image v2 Module](./edit-image.md): How to implement Adobe Express Edit Image v2.
+7. [Workflow Tethering](./workflow-tethering.md): How to implement workflow tethering between Generate Image, Edit Image, and Full Editor modules.
+8. [Mobile Web](./mobile-web.md): How to implement the Embed SDK in a Mobile Web application (iOS and Android) via WebViews.
